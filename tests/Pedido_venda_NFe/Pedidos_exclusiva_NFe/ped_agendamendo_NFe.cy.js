@@ -12,6 +12,7 @@ import { ProductExclusiva } from '../../../../pages/produtos/prd_exclusiva.js'
 import { GeneralOrder } from '../../../../pages/para_pedidos/gerais_pedidos.js'
 import { ValidateBalance } from '../../../../pages/para_pedidos/saldo/validar_saldo.js'
 import { Service } from '../../../../pages/para_pedidos/servicos/apenas_servicos.js'
+import { CommandsGeneral } from '../../../../pages/commands..js'
 
 //Para testarmos esses cenários, é necessário mudar para a versão da exclusiva e criar um agendamento na filial que está sendo usada
 describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {

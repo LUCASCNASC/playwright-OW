@@ -10,6 +10,7 @@ import { GeneralPayment } from '../../../../pages/para_pedidos/pagamento/geral_p
 import { ChooseInstallmentReceipt } from '../../../../pages/para_pedidos/pagamento/parcelas.js'
 import { GroupReceipt } from '../../../../pages/para_pedidos/pagamento/agrupar_recebimento.js'
 import { Receipt } from '../../../../pages/para_pedidos/processos/processo_recebimento.js'
+import { CommandsGeneral } from '../../../../pages/commands..js'
 
 describe('Gerar pedido com mais de uma forma de pagamento', () => {
 

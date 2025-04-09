@@ -10,6 +10,7 @@ import { ChooseInstallmentReceipt } from '../../../../pages/para_pedidos/pagamen
 import { GeneralPayment } from '../../../../pages/para_pedidos/pagamento/geral_pagamento.js'
 import { Receipt } from '../../../../pages/para_pedidos/processos/processo_recebimento.js'
 import { GeneralOrder } from '../../../../pages/para_pedidos/gerais_pedidos.js'
+import { CommandsGeneral } from '../../../../pages/commands..js'
 
 describe('Gerar pedido normal', () => {
 

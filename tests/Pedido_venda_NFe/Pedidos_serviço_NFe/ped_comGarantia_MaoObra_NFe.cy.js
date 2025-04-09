@@ -11,6 +11,7 @@ import { ChooseInstallmentReceipt } from '../../../../pages/para_pedidos/pagamen
 import { Receipt } from '../../../../pages/para_pedidos/processos/processo_recebimento.js'
 import { Service } from '../../../../pages/para_pedidos/servicos/apenas_servicos.js'
 import { ValidateService } from '../../../../pages/para_pedidos/servicos/valida_servicos_adicionados.js'
+import { CommandsGeneral } from '../../../../pages/commands..js'
 
 describe('Gerar pedidos com Garantia e Mão de Obra', () => {
 

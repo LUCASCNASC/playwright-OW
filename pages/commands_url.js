@@ -6,46 +6,55 @@ export class ValidateURL {
 
     async urlDepartamentos (selector) {
 
-        cy.url().should('include', '/#!/departamentos//')
+        // Verifica se a URL inclui a string especificada
+        await expect(page).toHaveURL(/\/#!\/departamentos\/\//);
     }
 
     async urlServicos (selector) {
 
-        cy.url().should('include', '/#!/servicos')
+        // Verifica se a URL inclui a string especificada
+        await expect(page).toHaveURL(/\/#!\/servicos/);
     }
 
     async urlPedidosPendentes (selector) {
 
-        cy.url().should('include', '/#!/vendedor/pedidos')
+        // Verifica se a URL inclui a string especificada
+        await expect(page).toHaveURL(/\/#!\/vendedor\/pedidos/);
     }
 
     async urlCliente (selector) {
 
-        cy.url().should('include', '/#!/cliente/cliente-cadastro')
+        // Verifica se a URL inclui a string especificada
+        await expect(page).toHaveURL(/\/#!\/cliente\/cliente-cadastro/);
     }
 
     async urlClienteCompleto (selector) {
 
-        cy.url().should('include', '/#!/clienteCompleto')
+        // Verifica se a URL inclui a string especificada
+        await expect(page).toHaveURL(/\/#!\/clienteCompleto/);
     }
 
     async urlPosVenda (selector) {
 
-        cy.url().should('include', '/#!/posvenda')
+        // Verifica se a URL inclui a string especificada
+        await expect(page).toHaveURL(/\/#!\/posvenda/);
     }
 
     async urlIntencaoCompra (selector) {
 
-        cy.url().should('include', '/#!/intencoescompra')
+        // Verifica se a URL inclui a string especificada
+        await expect(page).toHaveURL(/\/#!\/intencoescompra/);
     }
 
     async urlConfiguracoes (selector) {
 
-        cy.url().should('include', '/#!/customizacao')
+        // Verifica se a URL inclui a string especificada
+        await expect(page).toHaveURL(/\/#!\/customizacao/);
     }
 
     async urlMinhaPerformance (selector) {
 
-        cy.url().should('include', '/#!/vendedor')
+        // Verifica se a URL inclui a string especificada
+        await expect(page).toHaveURL(/\/#!\/vendedor/);
     }
 }

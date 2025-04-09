@@ -10,6 +10,7 @@ import { GeneralPayment } from '../../../../pages/para_pedidos/pagamento/geral_p
 import { EscolherParcelaReceb } from '../../../../pages/para_pedidos/pagamento/parcelas.js'
 import { Receipt } from '../../../../pages/para_pedidos/processos/processo_recebimento.js'
 import { Service } from '../../../../pages/para_pedidos/servicos/apenas_servicos.js'
+import { CommandsGeneral } from '../../../../pages/commands..js'
 
 describe('Gerar pedidos com Mão de obra e com entrega', () => {
 

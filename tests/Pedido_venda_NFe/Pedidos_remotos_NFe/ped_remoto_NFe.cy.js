@@ -9,6 +9,7 @@ import { Receipt } from '../../../../pages/para_pedidos/processos/processo_receb
 import { GeneralOrder } from '../../../../pages/para_pedidos/gerais_pedidos.js'
 import { GeneralPayment } from '../../../../pages/para_pedidos/pagamento/geral_pagamento.js'
 import { ChooseInstallmentReceipt } from '../../../../pages/para_pedidos/pagamento/parcelas.js'
+import { CommandsGeneral } from '../../../../pages/commands..js'
 
 //verificar todos
 describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâmetro 139 = 4 - Trial 653 não configurado', () => {

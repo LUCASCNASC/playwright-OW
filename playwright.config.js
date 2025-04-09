@@ -77,3 +77,8 @@ module.exports = defineConfig({
   // },
 });
 
+export default defineConfig({
+  use: {
+    baseURL: 'https://sua-url-padrao.com', // Defina sua URL padrão aqui
+  },
+});

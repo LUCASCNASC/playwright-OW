@@ -8,6 +8,7 @@ import { ChooseInstallmentReceipt } from '../../../../pages/para_pedidos/pagamen
 import { Receipt } from '../../../../pages/para_pedidos/processos/processo_recebimento.js'
 import { OrderServiceLoose } from '../../../../pages/para_pedidos/para_servicos_avulsos.js'
 import { Service } from '../../../../pages/para_pedidos/servicos/apenas_servicos.js'
+import { CommandsGeneral } from '../../../../pages/commands..js'
 
 
 describe('Venda de serviço avulso, com pedido do produto já baixado', () => {

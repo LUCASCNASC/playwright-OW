@@ -11,6 +11,7 @@ import { ChooseInstallmentReceipt } from '../../../../pages/para_pedidos/pagamen
 import { Receipt } from '../../../../pages/para_pedidos/processos/processo_recebimento.js'
 import { ReceiptPromotion } from '../../../../pages/para_pedidos/processos/processo_recebimento_promo.js'
 import { Promotion } from '../../../../pages/para_pedidos/promocao/promocao.js'
+import { CommandsGeneral } from '../../../../pages/commands..js'
 
 describe('Gerar pedidos com promoção', () => {
 

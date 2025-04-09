@@ -12,6 +12,7 @@ import { TicketPrestamista } from '../../../../pages/para_pedidos/validar_tela/p
 import { ValidateService } from '../../../../pages/para_pedidos/servicos/valida_servicos_adicionados.js'
 import { Receipt } from '../../../../pages/para_pedidos/processos/processo_recebimento.js'
 import { Promotion } from '../../../../pages/para_pedidos/promocao/promocao.js'
+import { CommandsGeneral } from '../../../../pages/commands..js'
 
 describe('Gerar pedidos com promoção e serviços com isenção de juros', () => {
 
