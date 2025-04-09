@@ -1,3 +1,4 @@
+import { defineConfig } from '@playwright/test';
 import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
 import { ChooseClient } from '../../../../pages/para_pedidos/cliente/cliente.js'
 import { Service } from '../../../../pages/para_pedidos/servicos/valida_servicos_adicionados.js'
