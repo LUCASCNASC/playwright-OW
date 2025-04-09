@@ -19,11 +19,9 @@ import { CommandsGeneral } from '../../../../pages/commands..js'
 describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
 
     beforeEach(() => {
-        cy.visit('/')
-        cy.clearAllSessionStorage()
-        cy.login()
-        cy.urlAposLogin()
-        cy.tituloPagina()
+        CommandsGeneral.login()
+        CommandsGeneral.urlAposLogin()
+        CommandsGeneral.tituloPagina()
         ProcessSale.NFe()
         ChooseClient.withRoute()
     })

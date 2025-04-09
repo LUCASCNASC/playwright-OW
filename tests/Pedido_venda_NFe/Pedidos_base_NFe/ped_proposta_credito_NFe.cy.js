@@ -15,11 +15,9 @@ import { CommandsGeneral } from '../../../../pages/commands..js'
 describe('Gerar pedido com proposta de crédito', () => {
 
     beforeEach(() => {
-        cy.visit('/')
-        cy.clearAllSessionStorage()
-        cy.login()
-        cy.urlAposLogin()
-        cy.tituloPagina()
+        CommandsGeneral.login()
+        CommandsGeneral.urlAposLogin()
+        CommandsGeneral.tituloPagina()
         ProcessSale.NFe()
         ChooseClient.withRoute()
         Product.fisrt() //PRODUTO

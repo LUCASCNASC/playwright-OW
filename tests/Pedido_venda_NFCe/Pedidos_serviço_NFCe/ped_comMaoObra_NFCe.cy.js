@@ -16,11 +16,9 @@ import { CommandsGeneral } from '../../../../pages/commands..js'
 describe('Gerar pedidos com Mão de obra e com entrega', () => {
 
     beforeEach(() => {
-        cy.visit('/')
-        cy.clearAllSessionStorage()
-        cy.login()
-        cy.urlAposLogin()
-        cy.tituloPagina()
+        CommandsGeneral.login()
+        CommandsGeneral.urlAposLogin()
+        CommandsGeneral.tituloPagina()
         ProcessSale.NFCe()
         ChooseClient.withRoute()
         Product.fisrt() //PRODUTO

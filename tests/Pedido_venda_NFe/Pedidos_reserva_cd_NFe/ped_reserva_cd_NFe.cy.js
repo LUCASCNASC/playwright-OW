@@ -15,11 +15,9 @@ import { CommandsGeneral } from '../../../../pages/commands..js'
 describe('Gerar pedido com reserva no CD - Regra de saldo Parâmetro 36 = 4 - Parâmetro 139 = 4 - Trial 653 não configurado', () => {
 
     beforeEach(() => {
-        cy.visit('/')
-        cy.clearAllSessionStorage()
-        cy.login()
-        cy.urlAposLogin()
-        cy.tituloPagina() 
+        CommandsGeneral.login()
+        CommandsGeneral.urlAposLogin()
+        CommandsGeneral.tituloPagina()
         ProcessSale.NFe()
         ChooseClient.withRoute()
     })

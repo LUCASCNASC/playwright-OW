@@ -22,11 +22,9 @@ import { CommandsGeneral } from '../../../../../pages/commands..js'
 describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
 
     beforeEach(() => {
-        cy.visit('/')
-        cy.clearAllSessionStorage()
-        cy.login()
-        cy.urlAposLogin()
-        cy.tituloPagina() 
+        CommandsGeneral.login()
+        CommandsGeneral.urlAposLogin()
+        CommandsGeneral.tituloPagina()
         ProcessSale.NFe()
         ChooseClient.withRoute()
     })   

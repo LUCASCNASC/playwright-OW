@@ -13,11 +13,9 @@ import { CommandsGeneral } from '../../../../pages/commands..js'
 describe('Venda de serviço avulso Host - 104', () => {
 
     beforeEach(() => {
-        cy.visit('/')
-        cy.clearAllSessionStorage()
-        cy.login()
-        cy.urlAposLogin()
-        cy.tituloPagina()
+        CommandsGeneral.login()
+        CommandsGeneral.urlAposLogin()
+        CommandsGeneral.tituloPagina()
         ProcessSale.saleServiceLoose()
         ChooseClient.withRoute()
     })

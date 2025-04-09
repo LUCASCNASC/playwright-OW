@@ -15,11 +15,9 @@ import { CommandsGeneral } from '../../../../pages/commands..js'
 describe('Gerar pedido com financeiro na baixa com entrega', () => {
 
     beforeEach(() => {
-        cy.visit('/');
-        cy.clearAllSessionStorage();
-        cy.login();
-        cy.urlAposLogin()
-        cy.tituloPagina()
+        CommandsGeneral.login()
+        CommandsGeneral.urlAposLogin()
+        CommandsGeneral.tituloPagina()
         ProcessSale.financePaymentNFCe()
         ChooseClient.withRoute()
         Product.fisrt() //PRODUTO

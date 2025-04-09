@@ -18,11 +18,9 @@ import { CommandsGeneral } from '../../../../pages/commands..js'
 describe('Gerar pedidos com promoção e serviços com isenção de juros', () => {
 
     beforeEach(() => {
-        cy.visit('/')
-        cy.clearAllSessionStorage()
-        cy.login()
-        cy.urlAposLogin()
-        cy.tituloPagina()
+        CommandsGeneral.login()
+        CommandsGeneral.urlAposLogin()
+        CommandsGeneral.tituloPagina()
         ProcessSale.NFe()
         ChooseClient.withRoute()
     })
