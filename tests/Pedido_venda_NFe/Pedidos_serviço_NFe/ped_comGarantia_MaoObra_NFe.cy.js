@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
 import { ChooseClient } from '../../../../pages/para_pedidos/cliente/cliente.js'
 import { ValidateBalance } from '../../../../pages/para_pedidos/saldo/validar_saldo.js'
@@ -14,9 +14,9 @@ import { Service } from '../../../../pages/para_pedidos/servicos/apenas_servicos
 import { ValidateService } from '../../../../pages/para_pedidos/servicos/valida_servicos_adicionados.js'
 import { CommandsGeneral } from '../../../../pages/commands..js'
 
-describe('Gerar pedidos com Garantia e Mão de Obra', () => {
+test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
 
-    beforeEach(() => {
+    test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
@@ -32,7 +32,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
 
     context('Sem entrega/processo 9860 - caminho feliz', () => {
     
-        it('1. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra que destaca e não separa)', () => {
+        test('1. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra que destaca e não separa)',  async ({ page }) => {
             
             Service.maoObraNaoDestSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
             Service.garantiaNaoSep() //Marcar Mão de Obra "T.A. MO Destaca e Não Separa"
@@ -49,7 +49,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('2. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra que destaca e não separa) e produto 1870 0 0 (sem serviço)', () => {
+        test('2. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra que destaca e não separa) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
 
             Service.maoObraNaoDestSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
             Service.garantiaNaoSep() //Marcar Mão de Obra "T.A. MO Destaca e Não Separa"
@@ -74,7 +74,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('3. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa no mesmo processo)', () => {
+        test('3. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa no mesmo processo)',  async ({ page }) => {
 
             Service.maoObraNaoDestSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
             Service.garantiaSepMesmoProc() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Mesmo Processo"
@@ -91,7 +91,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('4. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa no mesmo processo) e produto 1870 0 0 (sem serviço)', () => {
+        test('4. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa no mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
 
             Service.maoObraNaoDestSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
             Service.garantiaSepMesmoProc() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Mesmo Processo"
@@ -115,7 +115,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('5. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa em outro processo)', () => {
+        test('5. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa em outro processo)',  async ({ page }) => {
 
             Service.maoObraNaoDestSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
             Service.garantiaSepTituloProcDif() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Processo Diferente" 
@@ -132,7 +132,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('6. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa em outro processo) e produto 1870 0 0 (sem serviço)', () => {
+        test('6. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa em outro processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
 
             Service.maoObraNaoDestSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
             Service.garantiaSepTituloProcDif() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Processo Diferente" 
@@ -156,7 +156,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('7. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra que destaca e não separa)', () => {
+        test('7. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra que destaca e não separa)',  async ({ page }) => {
 
             Service.maoObraDestNãoSep() //Marcar garantia "T.A. Garantia Não Separa"
             Service.garantiaNaoSep()//Marcar Mão de Obra "T.A. MO Destaca e Não Separa"
@@ -173,7 +173,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('8. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra que destaca e não separa) e produto 1870 0 0 (sem serviço)', () => {
+        test('8. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra que destaca e não separa) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
 
             Service.maoObraDestNãoSep() //Marcar garantia "T.A. Garantia Não Separa"
             Service.garantiaNaoSep()//Marcar Mão de Obra "T.A. MO Destaca e Não Separa"
@@ -198,7 +198,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('9. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa no mesmo processo)', () => {
+        test('9. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa no mesmo processo)',  async ({ page }) => {
 
             Service.maoObraDestNãoSep() //Marcar garantia "T.A. Garantia Não Separa"
             Service.garantiaSepMesmoProc() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Mesmo Processo"
@@ -215,7 +215,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('10. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa no mesmo processo) e produto 1870 0 0 (sem serviço)', () => {
+        test('10. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa no mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
 
             Service.maoObraDestNãoSep() //Marcar garantia "T.A. Garantia Não Separa"
             Service.garantiaSepMesmoProc() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Mesmo Processo"
@@ -240,7 +240,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('11. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa em outro processo)', () => {
+        test('11. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa em outro processo)',  async ({ page }) => {
 
             Service.maoObraDestNãoSep() //Marcar garantia "T.A. Garantia Não Separa"
             Service.garantiaSepTituloProcDif() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Processo Diferente" 
@@ -257,7 +257,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('12. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa em outro processo) e produto 1870 0 0 (sem serviço)', () => {
+        test('12. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa em outro processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
 
             Service.maoObraDestNãoSep() //Marcar garantia "T.A. Garantia Não Separa"
             Service.garantiaSepTituloProcDif() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Processo Diferente" 
@@ -282,7 +282,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('13. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra que destaca e não separa)', () => {
+        test('13. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra que destaca e não separa)',  async ({ page }) => {
 
             Service.maoObraNaoDestSepaProcDif() //Marcar garantia "T.A. MO Não Destaca e Separa Processo Diferente"
             Service.garantiaNaoSep() //Marcar Mão de Obra "T.A. MO Destaca e Não Separa"
@@ -299,7 +299,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('14. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra que destaca e não separa) e produto 1870 0 0 (sem serviço)', () => {
+        test('14. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra que destaca e não separa) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
 
             Service.maoObraNaoDestSepaProcDif() //Marcar garantia "T.A. MO Não Destaca e Separa Processo Diferente"
             Service.garantiaNaoSep() //Marcar Mão de Obra "T.A. MO Destaca e Não Separa"
@@ -324,7 +324,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('15. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa no mesmo processo)', () => {
+        test('15. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa no mesmo processo)',  async ({ page }) => {
 
             Service.maoObraNaoDestSepaProcDif() //Marcar garantia "T.A. MO Não Destaca e Separa Processo Diferente"
             Service.garantiaSepMesmoProc() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Mesmo Processo"
@@ -341,7 +341,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('16. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa no mesmo processo) e produto 1870 0 0 (sem serviço)', () => {
+        test('16. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa no mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
 
             Service.maoObraNaoDestSepaProcDif() //Marcar garantia "T.A. MO Não Destaca e Separa Processo Diferente"
             Service.garantiaSepMesmoProc() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Mesmo Processo"
@@ -366,7 +366,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('17. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa em outro processo)', () => {
+        test('17. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa em outro processo)',  async ({ page }) => {
 
             Service.maoObraNaoDestSepaProcDif()//Marcar garantia "T.A. MO Não Destaca e Separa Processo Diferente"
             Service.garantiaSepTituloProcDif()
@@ -383,7 +383,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('18. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa em outro processo) e produto 1870 0 0 (sem serviço)', () => {
+        test('18. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa em outro processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
 
             Service.maoObraNaoDestSepaProcDif()//Marcar garantia "T.A. MO Não Destaca e Separa Processo Diferente"
             Service.garantiaSepTituloProcDif()
@@ -411,7 +411,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
 
     context('Com entrega/processo 9860 - caminho feliz', () => {
 
-        it('19. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra que destaca e não separa)', () => {
+        test('19. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra que destaca e não separa)',  async ({ page }) => {
 
             Service.maoObraNaoDestSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
             Service.garantiaNaoSep() //Marcar Mão de Obra "T.A. MO Destaca e Não Separa"
@@ -428,7 +428,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('20. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra que destaca e não separa) e produto 1870 0 0 (sem serviço)', () => {
+        test('20. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra que destaca e não separa) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
 
             Service.maoObraNaoDestSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
             Service.garantiaNaoSep() //Marcar Mão de Obra "T.A. MO Destaca e Não Separa"
@@ -452,7 +452,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('21. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa no mesmo processo)', () => {
+        test('21. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa no mesmo processo)',  async ({ page }) => {
 
             Service.maoObraNaoDestSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
             Service.garantiaSepMesmoProc() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Mesmo Processo"
@@ -469,7 +469,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('22. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa no mesmo processo) e produto 1870 0 0 (sem serviço)', () => {
+        test('22. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa no mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
 
             Service.maoObraNaoDestSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
             Service.garantiaSepMesmoProc() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Mesmo Processo"
@@ -493,7 +493,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('23. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa em outro processo)', () => {
+        test('23. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa em outro processo)',  async ({ page }) => {
 
             Service.maoObraNaoDestSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
             Service.garantiaSepTituloProcDif() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Processo Diferente" 
@@ -510,7 +510,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('24. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa em outro processo) e produto 1870 0 0 (sem serviço)', () => {
+        test('24. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa em outro processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
 
             Service.maoObraNaoDestSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
             Service.garantiaSepTituloProcDif() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Processo Diferente" 
@@ -534,7 +534,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('25. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra que destaca e não separa)', () => {
+        test('25. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra que destaca e não separa)',  async ({ page }) => {
 
             Service.maoObraDestNãoSep() //Marcar garantia "T.A. Garantia Não Separa"
             Service.garantiaNaoSep()//Marcar Mão de Obra "T.A. MO Destaca e Não Separa"
@@ -551,7 +551,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('26. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra que destaca e não separa) e produto 1870 0 0 (sem serviço)', () => {
+        test('26. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra que destaca e não separa) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
 
             Service.maoObraDestNãoSep() //Marcar garantia "T.A. Garantia Não Separa"
             Service.garantiaNaoSep()//Marcar Mão de Obra "T.A. MO Destaca e Não Separa"
@@ -575,7 +575,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('27. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa no mesmo processo)', () => {
+        test('27. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa no mesmo processo)',  async ({ page }) => {
 
             Service.maoObraDestNãoSep() //Marcar garantia "T.A. Garantia Não Separa"
             Service.garantiaSepMesmoProc() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Mesmo Processo"
@@ -592,7 +592,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('28. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa no mesmo processo) e produto 1870 0 0 (sem serviço)', () => {
+        test('28. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa no mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
 
             Service.maoObraDestNãoSep() //Marcar garantia "T.A. Garantia Não Separa"
             Service.garantiaSepMesmoProc() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Mesmo Processo"
@@ -616,7 +616,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('29. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa em outro processo)', () => {
+        test('29. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa em outro processo)',  async ({ page }) => {
 
             Service.maoObraDestNãoSep() //Marcar garantia "T.A. Garantia Não Separa"
             Service.garantiaSepTituloProcDif() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Processo Diferente" 
@@ -633,7 +633,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('30. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa em outro processo) e produto 1870 0 0 (sem serviço)', () => {
+        test('30. Ped venda: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa em outro processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
 
             Service.maoObraDestNãoSep() //Marcar garantia "T.A. Garantia Não Separa"
             Service.garantiaSepTituloProcDif() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Processo Diferente" 
@@ -657,7 +657,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('31. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra que destaca e não separa)', () => {
+        test('31. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra que destaca e não separa)',  async ({ page }) => {
 
             Service.maoObraNaoDestSepaProcDif() //Marcar garantia "T.A. MO Não Destaca e Separa Processo Diferente"
             Service.garantiaNaoSep() //Marcar Mão de Obra "T.A. MO Destaca e Não Separa"
@@ -674,7 +674,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('32. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra que destaca e não separa) e produto 1870 0 0 (sem serviço)', () => {
+        test('32. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra que destaca e não separa) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
 
             Service.maoObraNaoDestSepaProcDif() //Marcar garantia "T.A. MO Não Destaca e Separa Processo Diferente"
             Service.garantiaNaoSep() //Marcar Mão de Obra "T.A. MO Destaca e Não Separa"
@@ -697,7 +697,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('33. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa no mesmo processo)', () => {
+        test('33. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa no mesmo processo)',  async ({ page }) => {
 
             Service.maoObraNaoDestSepaProcDif() //Marcar garantia "T.A. MO Não Destaca e Separa Processo Diferente"
             Service.garantiaSepMesmoProc() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Mesmo Processo"
@@ -714,7 +714,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('34. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa no mesmo processo) e produto 1870 0 0 (sem serviço)', () => {
+        test('34. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa no mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
 
             Service.maoObraNaoDestSepaProcDif() //Marcar garantia "T.A. MO Não Destaca e Separa Processo Diferente"
             Service.garantiaSepMesmoProc() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Mesmo Processo"
@@ -738,7 +738,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('35. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa em outro processo)', () => {
+        test('35. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa em outro processo)',  async ({ page }) => {
 
             Service.maoObraNaoDestSepaProcDif() //Marcar garantia "T.A. MO Não Destaca e Separa Processo Diferente"
             Service.garantiaSepTituloProcDif()
@@ -755,7 +755,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             FinishOrder.validateOrderGenerated()
         })  
 
-        it('36. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa em outro processo) e produto 1870 0 0 (sem serviço)', () => {
+        test('36. Ped venda: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa em outro processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
 
             Service.maoObraNaoDestSepaProcDif()//Marcar garantia "T.A. MO Não Destaca e Separa Processo Diferente"
             Service.garantiaSepTituloProcDif()

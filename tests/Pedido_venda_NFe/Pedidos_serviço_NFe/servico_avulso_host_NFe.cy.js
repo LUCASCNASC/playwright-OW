@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
 import { ChooseClient } from '../../../../pages/para_pedidos/cliente/cliente.js'
 import { AdvanceNormal } from '../../../../pages/para_pedidos/botoes/avancar/avancar_normal.js'
@@ -10,9 +10,9 @@ import { OrderServiceLoose } from '../../../../pages/para_pedidos/para_servicos_
 import { CommandsGeneral } from '../../../../pages/commands..js'
 
 //Para este cenário, é necessário fazer update na coluna dataultimaatualizacao, da tabela glb.servicofaixavalorfixo
-describe('Venda de serviço avulso Host - 104', () => {
+test.describe('Venda de serviço avulso Host - 104', () => {
 
-    beforeEach(() => {
+    test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
@@ -22,7 +22,7 @@ describe('Venda de serviço avulso Host - 104', () => {
 
     context('Processo 9888 - caminho feliz', () => {
 
-        it.skip('1. Venda de Mão de obra - 144 (T.A. MO Não Destaca e Separa Processo Diferente)', () => {
+        test('1. Venda de Mão de obra - 144 (T.A. MO Não Destaca e Separa Processo Diferente)',  async ({ page }) => {
 
             OrderServiceLoose.iconMenuOptions()
             OrderServiceLoose.clickServiceMenu()

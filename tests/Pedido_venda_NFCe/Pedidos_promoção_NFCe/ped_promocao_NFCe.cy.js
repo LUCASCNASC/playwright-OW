@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
 import { ChooseClient } from '../../../../pages/para_pedidos/cliente/cliente.js'
 import { Product } from '../../../../pages/produtos/prd_normal.js'
@@ -12,9 +12,9 @@ import { RecebimentoPromo } from '../../../../pages/para_pedidos/processos/proce
 import { Promotion } from '../../../../pages/para_pedidos/promocao/promocao.js'
 import { CommandsGeneral } from '../../../../pages/commands..js'
 
-describe('Gerar pedidos com promoção com entrega', () => {
+test.describe('Gerar pedidos com promoção com entrega', () => {
 
-    beforeEach(() => {
+    test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
@@ -24,7 +24,7 @@ describe('Gerar pedidos com promoção com entrega', () => {
 
     context('Com entrega /com promoção/ processo 9890 - caminho feliz', () => {
 
-        it.skip('1. Ped venda com promoção partida (promoção 152): produto 1868 0 0', () => {
+        test('1. Ped venda com promoção partida (promoção 152): produto 1868 0 0',  async ({ page }) => {
     
             Product.promoMatch() //PRODUTO
             ValidateBalance.withBalance()
@@ -32,7 +32,7 @@ describe('Gerar pedidos com promoção com entrega', () => {
             Promotion.ticketPromotion() 
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             Promotion.selectFirstPromoProduct()
-            cy.clickAddProduct()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked() 
             AdvanceNormal.toTransporter()
@@ -51,7 +51,7 @@ describe('Gerar pedidos com promoção com entrega', () => {
             FinishOrder.validateOrderGenerated()
         })
     
-        it.skip('2. Ped venda com promoção a prazo com entrada (promoção 150): produto 1866 0 0', () => {
+        test('2. Ped venda com promoção a prazo com entrada (promoção 150): produto 1866 0 0',  async ({ page }) => {
     
             Product.promoDeadlineEntry() //PRODUTO
             ValidateBalance.withBalance()
@@ -59,7 +59,7 @@ describe('Gerar pedidos com promoção com entrega', () => {
             Promotion.ticketPromotion() 
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
-            cy.clickAddProduct()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
@@ -82,7 +82,7 @@ describe('Gerar pedidos com promoção com entrega', () => {
             // FinishOrder.validateOrderGenerated()
         })
 
-        it.skip('3. Ped venda com promoção a prazo parcelado (promoção 151): produto 1867 0 0', () => {
+        test('3. Ped venda com promoção a prazo parcelado (promoção 151): produto 1867 0 0',  async ({ page }) => {
     
             Product.promoDeadlineInstallment() //PRODUTO
             ValidateBalance.withBalance()
@@ -90,7 +90,7 @@ describe('Gerar pedidos com promoção com entrega', () => {
             Promotion.ticketPromotion()
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
-            cy.clickAddProduct()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()

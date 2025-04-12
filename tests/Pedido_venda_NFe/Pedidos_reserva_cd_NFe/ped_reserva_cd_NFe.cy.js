@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
 import { ChooseClient } from '../../../../pages/para_pedidos/cliente/cliente.js'
 import { ValidateBalance } from '../../../../pages/para_pedidos/saldo/validar_saldo.js'
@@ -12,9 +12,9 @@ import { ChooseInstallmentReceipt } from '../../../../pages/para_pedidos/pagamen
 import { Receipt } from '../../../../pages/para_pedidos/processos/processo_recebimento.js'
 import { CommandsGeneral } from '../../../../pages/commands..js'
 
-describe('Gerar pedido com reserva no CD - Regra de saldo Parâmetro 36 = 4 - Parâmetro 139 = 4 - Trial 653 não configurado', () => {
+test.describe('Gerar pedido com reserva no CD - Regra de saldo Parâmetro 36 = 4 - Parâmetro 139 = 4 - Trial 653 não configurado', () => {
 
-    beforeEach(() => {
+    test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
@@ -24,7 +24,7 @@ describe('Gerar pedido com reserva no CD - Regra de saldo Parâmetro 36 = 4 - Pa
 
     context('Sem entrega/ processo 9860 - caminho feliz', () => {
 
-        it('1. Ped venda: produto 1880 0 0 - (Venda local de produto com saldo só no CD - sem entrega)', () => {
+        test('1. Ped venda: produto 1880 0 0 - (Venda local de produto com saldo só no CD - sem entrega)',  async ({ page }) => {
 
             Product.cdFirst() //PRODUTO
             ValidateBalance.withBalance()
@@ -44,7 +44,7 @@ describe('Gerar pedido com reserva no CD - Regra de saldo Parâmetro 36 = 4 - Pa
             FinishOrder.validateOrderGenerated()
         })
 
-        it('2. Ped venda: produtos 1880 0 0 (reserva CD) e 1870 0 0 (saldo local) - (Venda local de 1 produto com saldo local + 1 produto com saldo no CD - sem entrega)', () => {
+        test('2. Ped venda: produtos 1880 0 0 (reserva CD) e 1870 0 0 (saldo local) - (Venda local de 1 produto com saldo local + 1 produto com saldo no CD - sem entrega)',  async ({ page }) => {
 
             Product.cdFirst() //PRODUTO
             ValidateBalance.withBalance()
@@ -75,7 +75,7 @@ describe('Gerar pedido com reserva no CD - Regra de saldo Parâmetro 36 = 4 - Pa
 
     context('Com entrega/ processo 9860 - caminho feliz', () => {
 
-        it('3. Ped venda: produto 1880 0 0 - (Venda local de produto com saldo só no CD - com entrega)', () => {
+        test('3. Ped venda: produto 1880 0 0 - (Venda local de produto com saldo só no CD - com entrega)',  async ({ page }) => {
             
             Product.cdFirst() //PRODUTO
             ValidateBalance.withBalance()
@@ -95,7 +95,7 @@ describe('Gerar pedido com reserva no CD - Regra de saldo Parâmetro 36 = 4 - Pa
             FinishOrder.validateOrderGenerated()
         })
 
-        it('4. Ped venda: produtos 1880 0 0 (reserva CD) e 1870 0 0 (saldo local) - (Venda local de 1 produto com saldo local + 1 produto com saldo no CD - com entrega)', () => {
+        test('4. Ped venda: produtos 1880 0 0 (reserva CD) e 1870 0 0 (saldo local) - (Venda local de 1 produto com saldo local + 1 produto com saldo no CD - com entrega)',  async ({ page }) => {
             
             Product.fisrt() //PRODUTO
             ValidateBalance.withBalance()

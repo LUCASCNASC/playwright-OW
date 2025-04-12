@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
 import { ChooseClient } from '../../../../pages/para_pedidos/cliente/cliente.js'
 import { Product } from '../../../../pages/produtos/prd_normal.js'
@@ -13,9 +13,9 @@ import { Receipt } from '../../../../pages/para_pedidos/processos/processo_receb
 import { OrderDiscount } from '../../../../pages/para_pedidos/para_pedido_desconto.js'
 import { CommandsGeneral } from '../../../../pages/commands..js'
 
-describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244 definidos no processo de inclusão', () => {
+test.describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244 definidos no processo de inclusão', () => {
 
-    beforeEach(() => {
+    test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
@@ -28,7 +28,7 @@ describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244 defi
 
     context('Sem entrega/ processo 9860 - caminho feliz - processo de inclusão 3860', () => {
 
-        it('1. Ped venda: produto 1860 0 0 - arredondar para baixo', () => {
+        test('1. Ped venda: produto 1860 0 0 - arredondar para baixo',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -49,7 +49,7 @@ describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244 defi
             FinishOrder.validateOrderGenerated()
         })
 
-        it('2. Ped venda: produtos 1860 0 0 - arredondar para cima', () => {
+        test('2. Ped venda: produtos 1860 0 0 - arredondar para cima',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho

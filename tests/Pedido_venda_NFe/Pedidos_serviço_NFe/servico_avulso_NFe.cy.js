@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
 import { ChooseClient } from '../../../../pages/para_pedidos/cliente/cliente.js'
 import { AdvanceNormal } from '../../../../pages/para_pedidos/botoes/avancar/avancar_normal.js'
@@ -9,9 +9,9 @@ import { Receipt } from '../../../../pages/para_pedidos/processos/processo_receb
 import { OrderServiceLoose } from '../../../../pages/para_pedidos/para_servicos_avulsos.js'
 import { CommandsGeneral } from '../../../../pages/commands..js'
 
-describe('Venda de serviço avulso', () => {
+test.describe('Venda de serviço avulso', () => {
 
-    beforeEach(() => {
+    test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
@@ -21,7 +21,7 @@ describe('Venda de serviço avulso', () => {
 
     context('Processo 9888 - caminho feliz', () => {
 
-        it('1. Venda de Mão de obra - 144 (T.A. MO Não Destaca e Separa Processo Diferente)', () => {
+        test('1. Venda de Mão de obra - 144 (T.A. MO Não Destaca e Separa Processo Diferente)',  async ({ page }) => {
 
             OrderServiceLoose.productServiceLoose() //PRODUTO
             OrderServiceLoose.chooseServiceSearch()

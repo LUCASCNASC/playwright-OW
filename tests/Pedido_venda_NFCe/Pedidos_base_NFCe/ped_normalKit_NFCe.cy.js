@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
 import { ChooseClient } from '../../../../pages/para_pedidos/cliente/cliente.js'
 import { Product } from '../../../../pages/produtos/prd_normal.js'
@@ -13,9 +13,9 @@ import { Receipt } from '../../../../pages/para_pedidos/processos/processo_receb
 import { GeneralOrder } from '../../../../pages/para_pedidos/gerais_pedidos.js'
 import { CommandsGeneral } from '../../../../pages/commands..js'
 
-describe('Gerar pedido normal com entrega', () => {
+test.describe('Gerar pedido normal com entrega', () => {
 
-    beforeEach(() => {
+    test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
@@ -28,7 +28,7 @@ describe('Gerar pedido normal com entrega', () => {
     
     context('Com entrega/processo 9890 - caminho feliz', () => {
         
-        it('1. Ped venda: kit 1862 0 0', () => {
+        test('1. Ped venda: kit 1862 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             GeneralOrder.compositionKit()

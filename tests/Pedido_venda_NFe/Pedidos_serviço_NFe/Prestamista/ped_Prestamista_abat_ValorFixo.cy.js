@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../../pages/para_pedidos/processos/processo_venda.js'
 import { ChooseClient } from '../../../../../pages/para_pedidos/cliente/cliente.js'
 import { ValidateBalance } from '../../../../../pages/para_pedidos/saldo/validar_saldo.js'
@@ -16,9 +16,9 @@ import { TicketPrestamista } from '../../../../../pages/para_pedidos/validar_tel
 import { GeneralOrder } from '../../../../pages/para_pedidos/gerais_pedidos.js'
 import { CommandsGeneral } from '../../../../../pages/commands..js'
 
-describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161)', () => {
+test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161)', () => {
 
-    beforeEach(() => {
+    test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
@@ -28,7 +28,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161)', (
 
     context('Com entrega / Produtos sem promoção - Prestamista com abatimento Valor Fixo', () => {
 
-        it('1. Ped venda: produto 1860 0 0, inclusão 3880, prestamista 161 (55,90), 4 parcelas no recebimento Futuro com juros.', () => {
+        test('1. Ped venda: produto 1860 0 0, inclusão 3880, prestamista 161 (55,90), 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
     
             Product.fisrt() //PRODUTO
             ValidateBalance.withBalance()
@@ -51,7 +51,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161)', (
             FinishOrder.validateOrderGenerated()
         })
 
-        it('2. Ped venda: produto 1860 0 0 e 1870 0 0, inclusão 3880, prestamista 161 (55,90), 4 parcelas no recebimento Futuro com juros.', () => {
+        test('2. Ped venda: produto 1860 0 0 e 1870 0 0, inclusão 3880, prestamista 161 (55,90), 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
     
             Product.fisrt() //PRODUTO
             ValidateBalance.withBalance()
@@ -85,7 +85,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161)', (
 
     context('Com entrega / Produtos com promoção - Prestamista com abatimento Valor Fixo', () => {
 
-        it('3. Ped venda: produto 1922 0 0 (promo a prazo 171), inclusão 3880 (outro recebimento 3860), prestamista 161, 4 parcelas no recebimento Futuro com juros', () => {
+        test('3. Ped venda: produto 1922 0 0 (promo a prazo 171), inclusão 3880 (outro recebimento 3860), prestamista 161, 4 parcelas no recebimento Futuro com juros',  async ({ page }) => {
     
             Product.termFisrtPrestAbatVF() //PRODUTO
             ValidateBalance.withBalance()
@@ -111,7 +111,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161)', (
             FinishOrder.validateOrderGenerated()
         })
 
-        it('4. Ped venda: produto 1923 0 0 + garantia Não separa (promo a prazo 172 - isentar juros serviços), inclusão 3880 (outro recebimento 3860), prestamista 161, 4 parcelas no recebimento Futuro com juros', () => {
+        test('4. Ped venda: produto 1923 0 0 + garantia Não separa (promo a prazo 172 - isentar juros serviços), inclusão 3880 (outro recebimento 3860), prestamista 161, 4 parcelas no recebimento Futuro com juros',  async ({ page }) => {
 
             Product.termSecondPrestAbatVF() //PRODUTO
             ValidateBalance.withBalance()
@@ -139,7 +139,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161)', (
             FinishOrder.validateOrderGenerated()
         })
 
-        it('5. Ped venda: produto 1924 0 0 + garantia Não separa (promo a prazo 173 - isentar juros garantia), inclusão 3880 (outro recebimento 3860), prestamista 161, 4 parcelas no recebimento Futuro com juros', () => {
+        test('5. Ped venda: produto 1924 0 0 + garantia Não separa (promo a prazo 173 - isentar juros garantia), inclusão 3880 (outro recebimento 3860), prestamista 161, 4 parcelas no recebimento Futuro com juros',  async ({ page }) => {
 
             Product.termThirdPrestAbatVF() //PRODUTO
             ValidateBalance.withBalance()
@@ -170,7 +170,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161)', (
 
     context('Com entrega / Produto sem promoção - Prestamista com abatimento Valor Fixo', () => {
 
-        it('6. Ped venda: produto 1860 0 0, inclusão 3878, prestamista 161 (55,90), 4 parcelas no recebimento Presente com juros.', () => {
+        test('6. Ped venda: produto 1860 0 0, inclusão 3878, prestamista 161 (55,90), 4 parcelas no recebimento Presente com juros.',  async ({ page }) => {
     
             Product.fisrt() //PRODUTO
             ValidateBalance.withBalance()

@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
 import { ChooseClient } from '../../../../pages/para_pedidos/cliente/cliente.js'
 import { Product } from '../../../../pages/produtos/prd_normal.js'
@@ -14,9 +14,9 @@ import { OrderDiscount } from '../../../../pages/para_pedidos/para_pedido_descon
 import { GeneralOrder } from '../../../../pages/para_pedidos/gerais_pedidos.js'
 import { CommandsGeneral } from '../../../../pages/commands..js'
 
-describe('Gerar pedido de venda Kit com desconto', () => {
+test.describe('Gerar pedido de venda Kit com desconto', () => {
 
-    beforeEach(() => {
+    test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
@@ -26,7 +26,7 @@ describe('Gerar pedido de venda Kit com desconto', () => {
   
     context('Sem entrega/ processo 9862 - caminho feliz', () => {
         
-        it('1. Ped venda: kit 1862 0 0 com desconto Sub (-) / VALOR FIXO', () => {
+        test('1. Ped venda: kit 1862 0 0 com desconto Sub (-) / VALOR FIXO',  async ({ page }) => {
     
             Product.kitDiscount() //PRODUTO
             ValidateBalance.withBalance()

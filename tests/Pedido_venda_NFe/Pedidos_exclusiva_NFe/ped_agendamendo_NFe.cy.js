@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
 import { ChooseClient } from '../../../../pages/para_pedidos/cliente/cliente.js'
 import { AdvanceNormal } from '../../../../pages/para_pedidos/botoes/avancar/avancar_normal.js'
@@ -16,9 +16,9 @@ import { Service } from '../../../../pages/para_pedidos/servicos/apenas_servicos
 import { CommandsGeneral } from '../../../../pages/commands..js'
 
 //Para testarmos esses cenários, é necessário mudar para a versão da exclusiva e criar um agendamento na filial que está sendo usada
-describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
+test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
 
-    beforeEach(() => {
+    test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
@@ -29,7 +29,7 @@ describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
     context('Configuração de processo - Exclusiva: 36 = 2; 139 = 6; 552= 5 dias', () => {
 
         //cenário dependente - não colocar no fluxo
-        it.skip('1. Vender um produto normal (com saldo e com entrega, 15 dias) e um kit remoto (2 composições, sem saldo e sem a receber, 20 dias).', () => {
+        test('1. Vender um produto normal (com saldo e com entrega, 15 dias) e um kit remoto (2 composições, sem saldo e sem a receber, 20 dias).',  async ({ page }) => {
 
             ProductExclusiva.firstNormal() //PRODUTO EXCLUSIVA
             ValidateBalance.withBalance()
@@ -58,7 +58,7 @@ describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
         })
 
         //cenário dependente - não colocar no fluxo
-        it.skip('2. Vender um produto normal (com saldo e com entrega) e um kit com composição 6 volumes (data atual + parametro 552/ 5 dias).', () => {
+        test('2. Vender um produto normal (com saldo e com entrega) e um kit com composição 6 volumes (data atual + parametro 552/ 5 dias).',  async ({ page }) => {
 
             ProductExclusiva.firstNormal() //PRODUTO
             ValidateBalance.withBalance()
@@ -89,7 +89,7 @@ describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
     context('Configuração de processo - Exclusiva: 36 = 2; 139 = 6; 552= 5 dias', () => {
 
         //cenário dependente - não colocar no fluxo
-        it.skip('3. Vender um produto (sem saldo e com saldo a receber para 10 dias, e com entrega), e ter um agendamento para a data de previsão.', () => {
+        test('3. Vender um produto (sem saldo e com saldo a receber para 10 dias, e com entrega), e ter um agendamento para a data de previsão.',  async ({ page }) => {
 
             ProductExclusiva.balanceReceive() //PRODUTO
             ValidateBalance.withBalance()
@@ -112,7 +112,7 @@ describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
         })
 
         //cenário dependente - não colocar no fluxo
-        it.skip('4. Vender um produto em duas linhas (um com 5 unidades a receber e 10 para solicitar compra), e ter um agendamento para a data de previsão para a receber.', () => {
+        test('4. Vender um produto em duas linhas (um com 5 unidades a receber e 10 para solicitar compra), e ter um agendamento para a data de previsão para a receber.',  async ({ page }) => {
 
             ProductExclusiva.balanceReceiveTwoLines() //PRODUTO
             PedExclusiva.balanceRemoteReceive()
@@ -130,7 +130,7 @@ describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
         })
 
         //cenário dependente - não colocar no fluxo
-        it.skip('5. Pedido de venda normal: produto 1896 0 0 (sem entrega)', () => {
+        test('5. Pedido de venda normal: produto 1896 0 0 (sem entrega)',  async ({ page }) => {
     
             ProductExclusiva.firstNormal() //PRODUTO EXCLUSIVA
             ValidateBalance.withBalance()

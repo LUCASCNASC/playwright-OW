@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
 import { ChooseClient } from '../../../../pages/para_pedidos/cliente/cliente.js'
 import { Product } from '../../../../pages/produtos/prd_normal.js'
@@ -12,9 +12,9 @@ import { ChooseInstallmentReceipt } from '../../../../pages/para_pedidos/pagamen
 import { Receipt } from '../../../../pages/para_pedidos/processos/processo_recebimento.js'
 import { CommandsGeneral } from '../../../../pages/commands..js'
 
-describe('Gerar pedido de entrega futura', () => {
+test.describe('Gerar pedido de entrega futura', () => {
 
-    beforeEach(() => {
+    test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
@@ -27,7 +27,7 @@ describe('Gerar pedido de entrega futura', () => {
 
     context('Sem entrega/ processo 9862 - caminho feliz', () => {
 
-        it('1. Ped venda: produto 1860 0 0', () => {
+        test('1. Ped venda: produto 1860 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -44,7 +44,7 @@ describe('Gerar pedido de entrega futura', () => {
             FinishOrder.validateOrderGenerated()
         })
         
-        it('2. Ped venda: produtos 1860 0 0 e 1870 0 0', () => {
+        test('2. Ped venda: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -72,7 +72,7 @@ describe('Gerar pedido de entrega futura', () => {
     
     context('Com entrega/ processo 9862 - caminho feliz', () => {
 
-        it('3. Ped venda: produto 1860 0 0', () => {
+        test('3. Ped venda: produto 1860 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -89,7 +89,7 @@ describe('Gerar pedido de entrega futura', () => {
             FinishOrder.validateOrderGenerated()
         })    
         
-        it('4. Ped venda: produtos 1860 0 0 e 1870 0 0', () => {
+        test('4. Ped venda: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho

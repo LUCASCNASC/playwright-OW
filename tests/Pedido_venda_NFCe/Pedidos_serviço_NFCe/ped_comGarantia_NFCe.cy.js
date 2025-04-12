@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
 import { ChooseClient } from '../../../../pages/para_pedidos/cliente/cliente.js'
 import { Product } from '../../../../pages/produtos/prd_normal.js'
@@ -13,9 +13,9 @@ import { Receipt } from '../../../../pages/para_pedidos/processos/processo_receb
 import { Service } from '../../../../pages/para_pedidos/servicos/apenas_servicos.js'
 import { CommandsGeneral } from '../../../../pages/commands..js'
 
-describe('Gerar pedidos com Garantia e com entrega', () => {
+test.describe('Gerar pedidos com Garantia e com entrega', () => {
 
-    beforeEach(() => {
+    test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
@@ -25,13 +25,13 @@ describe('Gerar pedidos com Garantia e com entrega', () => {
         ValidateBalance.withBalance()
         CommandsGeneral.selectProductSearch() //selecionar produto
         CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-        cy.clickAddProduct()
+        CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
         Service.validateModalServLinked() //SERVICOS
     })   
 
     context('Com entrega/processo 9890 - caminho feliz', () => {
 
-        it('1. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo)', () => {
+        test('1. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo)',  async ({ page }) => {
     
             Service.garantiaSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
             Service.clickOKServiceLinked()
@@ -48,7 +48,7 @@ describe('Gerar pedidos com Garantia e com entrega', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('2. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo) e produto 1870 0 0 (sem serviço)', () => {
+        test('2. Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
     
             Service.garantiaSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -56,7 +56,7 @@ describe('Gerar pedidos com Garantia e com entrega', () => {
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduct()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
@@ -72,7 +72,7 @@ describe('Gerar pedidos com Garantia e com entrega', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('3. Ped venda: produto 1860 0 0 (com Garantia que não separa título)', () => {
+        test('3. Ped venda: produto 1860 0 0 (com Garantia que não separa título)',  async ({ page }) => {
     
             Service.garantiaNaoSep() //Marcar garantia "T.A. Garantia Não Separa"
             Service.clickOKServiceLinked()
@@ -89,7 +89,7 @@ describe('Gerar pedidos com Garantia e com entrega', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('4. Ped venda: produto 1860 0 0 (com Garantia que não separa título) e produto 1870 0 0 (sem serviço)', () => {
+        test('4. Ped venda: produto 1860 0 0 (com Garantia que não separa título) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
     
             Service.garantiaNaoSep() //Marcar garantia "T.A. Garantia Não Separa"
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -97,7 +97,7 @@ describe('Gerar pedidos com Garantia e com entrega', () => {
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduct()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
@@ -113,7 +113,7 @@ describe('Gerar pedidos com Garantia e com entrega', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('5. Ped venda: produto 1860 0 0 (com Garantia que separa título em um processo diferente)', () => {
+        test('5. Ped venda: produto 1860 0 0 (com Garantia que separa título em um processo diferente)',  async ({ page }) => {
     
             Service.garantiaSepTituloProcDif() //Marcar Garantia separa titulo em um processo diferente
             Service.clickOKServiceLinked()
@@ -130,7 +130,7 @@ describe('Gerar pedidos com Garantia e com entrega', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('6. Ped venda: produto 1860 0 0 (com Garantia que separa título em um processo diferente) e produto 1870 0 0 (sem serviço)', () => {
+        test('6. Ped venda: produto 1860 0 0 (com Garantia que separa título em um processo diferente) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
     
             Service.garantiaSepTituloProcDif() //Marcar Garantia separa titulo em um processo diferente
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -138,7 +138,7 @@ describe('Gerar pedidos com Garantia e com entrega', () => {
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduct()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()

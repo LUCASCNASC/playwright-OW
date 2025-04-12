@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
 import { ChooseClient } from '../../../../pages/para_pedidos/cliente/cliente.js'
 import { ValidateBalance } from '../../../../pages/para_pedidos/saldo/validar_saldo.js'
@@ -12,10 +12,9 @@ import { GeneralPayment } from '../../../../pages/para_pedidos/pagamento/geral_p
 import { ChooseInstallmentReceipt } from '../../../../pages/para_pedidos/pagamento/parcelas.js'
 import { CommandsGeneral } from '../../../../pages/commands..js'
 
-//verificar todos
-describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâmetro 139 = 4 - Trial 653 não configurado', () => {
+test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâmetro 139 = 4 - Trial 653 não configurado', () => {
 
-    beforeEach(() => {
+    test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
@@ -26,7 +25,7 @@ describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâmetro 1
     context('Pedido de venda remoto normal', () => {
 
         //verificar
-        it.skip('1. Ped venda remota: produto 1860 0 0 - (Venda remota de produto com saldo na filial do faturamento )', () => {
+        test('1. Ped venda remota: produto 1860 0 0 - (Venda remota de produto com saldo na filial do faturamento )',  async ({ page }) => {
 
             Product.fisrt() //PRODUTO
             ValidateBalance.withBalance()
@@ -49,7 +48,7 @@ describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâmetro 1
         })
 
         //verificar
-        it.skip('2. Ped venda remota: produtos 1860 0 0 e 1870 0 0', () => {
+        test('2. Ped venda remota: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
 
             Product.fisrt() //PRODUTO
             ValidateBalance.withBalance()
@@ -81,7 +80,7 @@ describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâmetro 1
         })
         
         //verificar
-        it.skip('3. Ped venda remota: kit 1877 0 0', () => {
+        test('3. Ped venda remota: kit 1877 0 0',  async ({ page }) => {
 
             Product.kitRemote()
             ValidateBalance.withBalance()
@@ -108,7 +107,7 @@ describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâmetro 1
     context('Pedido de venda remoto sem saldo remoto, pegar CD', () => {
 
         //verificar
-        it.skip('4. Ped venda remoto - com saldo no CD (filial 1) - deve permitir fazer o pedido - (Venda remota de produto sem saldo na filial do faturamento, mas com saldo no CD do faturamento - com entrega)', () => {
+        test('4. Ped venda remoto - com saldo no CD (filial 1) - deve permitir fazer o pedido - (Venda remota de produto sem saldo na filial do faturamento, mas com saldo no CD do faturamento - com entrega)',  async ({ page }) => {
 
             Product.remoteWithCD() //PRODUTO
             ValidateBalance.withBalance()
@@ -131,7 +130,7 @@ describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâmetro 1
         })    
         
         //verificar
-        it.skip('5. Ped venda remoto - SEM saldo no CD (filial 1) - NÃO deve permitir fazer o pedido - (Venda remota de produto sem saldo na filial do faturamento, sem saldo da CD do faturamento)', () => {
+        test('5. Ped venda remoto - SEM saldo no CD (filial 1) - NÃO deve permitir fazer o pedido - (Venda remota de produto sem saldo na filial do faturamento, sem saldo da CD do faturamento)',  async ({ page }) => {
 
             Product.remoteWithoutCD() //PRODUTO
             ValidateBalance.withoutBalance()

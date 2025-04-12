@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
 import { ChooseClient } from '../../../../pages/para_pedidos/cliente/cliente.js'
 import { ValidateBalance } from '../../../../pages/para_pedidos/saldo/validar_saldo.js'
@@ -15,9 +15,9 @@ import { Receipt } from '../../../../pages/para_pedidos/processos/processo_receb
 import { Promotion } from '../../../../pages/para_pedidos/promocao/promocao.js'
 import { CommandsGeneral } from '../../../../pages/commands..js'
 
-describe('Gerar pedidos com promoção e serviços com isenção de juros', () => {
+test.describe('Gerar pedidos com promoção e serviços com isenção de juros', () => {
 
-    beforeEach(() => {
+    test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
@@ -27,7 +27,7 @@ describe('Gerar pedidos com promoção e serviços com isenção de juros', () =
   
     context('Sem entrega/ com promoção/ com serviço processo 9860 - caminho feliz', () => {
 
-        it('1. Ped venda com promoção a prazo/parcelas (promoção 159): produto 1891 0 0 com garantia (isenta de juros)', () => {
+        test('1. Ped venda com promoção a prazo/parcelas (promoção 159): produto 1891 0 0 com garantia (isenta de juros)',  async ({ page }) => {
     
             Product.firstInstallmentDeadline() //PRODUTO
             ValidateBalance.withBalance()
@@ -51,7 +51,7 @@ describe('Gerar pedidos com promoção e serviços com isenção de juros', () =
             FinishOrder.validateOrderGenerated()
         })
     
-        it('2. Ped venda com promoção a prazo/entrada + parcelas (promoção 158): produto 1895 0 0 com garantia (isenta de juros)', () => {
+        test('2. Ped venda com promoção a prazo/entrada + parcelas (promoção 158): produto 1895 0 0 com garantia (isenta de juros)',  async ({ page }) => {
     
             Product.secondInstallmentDeadline() //PRODUTO
             ValidateBalance.withBalance()
@@ -93,7 +93,7 @@ describe('Gerar pedidos com promoção e serviços com isenção de juros', () =
             FinishOrder.validateOrderGenerated()
         })
     
-        it('3. Ped venda com promoção a partida (promoção 161): produto 1893 0 0 com prestamista (isento de juros)', () => {
+        test('3. Ped venda com promoção a partida (promoção 161): produto 1893 0 0 com prestamista (isento de juros)',  async ({ page }) => {
     
             Product.thirdInstallmentDeadline() //PRODUTO
             ValidateBalance.withBalance()
@@ -118,7 +118,7 @@ describe('Gerar pedidos com promoção e serviços com isenção de juros', () =
             FinishOrder.validateOrderGenerated()
         })
 
-        it('4. Ped venda com promoção a prazo/parcelas (promoção 162): produto 1894 0 0 com garantia (isenta de juros) e prestamista (com juros)', () => {
+        test('4. Ped venda com promoção a prazo/parcelas (promoção 162): produto 1894 0 0 com garantia (isenta de juros) e prestamista (com juros)',  async ({ page }) => {
     
             Product.fourthInstallmentDeadline() //PRODUTO
             ValidateBalance.withBalance()

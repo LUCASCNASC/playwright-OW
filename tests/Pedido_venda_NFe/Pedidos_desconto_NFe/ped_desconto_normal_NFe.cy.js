@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
 import { ChooseClient } from '../../../../pages/para_pedidos/cliente/cliente.js'
 import { Product } from '../../../../pages/produtos/prd_normal.js'
@@ -13,9 +13,9 @@ import { Receipt } from '../../../../pages/para_pedidos/processos/processo_receb
 import { OrderDiscount } from '../../../../pages/para_pedidos/para_pedido_desconto.js'
 import { CommandsGeneral } from '../../../../pages/commands..js'
 
-describe('Gerar pedido de venda com desconto', () => {
+test.describe('Gerar pedido de venda com desconto', () => {
 
-    beforeEach(() => {
+    test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
@@ -23,9 +23,9 @@ describe('Gerar pedido de venda com desconto', () => {
         ChooseClient.withRoute()
     })
 
-    context('Sem entrega/ processo 9860 - caminho feliz', () => {
+    context('Sem entrega/ processo 9860 - caminho feliz',  async ({ page }) => {
 
-        it('1. Ped venda: produto 1912 0 0 com desconto Sub (-) / R$', () => {
+        test('1. Ped venda: produto 1912 0 0 com desconto Sub (-) / R$',  async ({ page }) => {
 
             Product.discountNumber() //PRODUTO
             ValidateBalance.withBalance()
@@ -48,7 +48,7 @@ describe('Gerar pedido de venda com desconto', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('2. Ped venda: produto 1913 0 0 com desconto Sub (-) / % (Porcentagem)', () => {
+        test('2. Ped venda: produto 1913 0 0 com desconto Sub (-) / % (Porcentagem)',  async ({ page }) => {
 
             Product.discountPercentage() //PRODUTO
             ValidateBalance.withBalance()
@@ -71,7 +71,7 @@ describe('Gerar pedido de venda com desconto', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        it('3. Ped venda: produto 1914 0 0 com desconto Sub (-) / VALOR FIXO', () => {
+        test('3. Ped venda: produto 1914 0 0 com desconto Sub (-) / VALOR FIXO',  async ({ page }) => {
 
             Product.discountValueFixed() //PRODUTO
             ValidateBalance.withBalance()

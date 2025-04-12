@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
 import { ChooseClient } from '../../../../pages/para_pedidos/cliente/cliente.js'
 import { Product } from '../../../../pages/produtos/prd_normal.js'
@@ -13,9 +13,9 @@ import { Receipt } from '../../../../pages/para_pedidos/processos/processo_receb
 import { ReceiptPromotion } from '../../../../pages/para_pedidos/processos/processo_recebimento_promo.js'
 import { CommandsGeneral } from '../../../../pages/commands..js'
 
-describe('Gerar pedido de entrega futura com entrega', () => {
+test.describe('Gerar pedido de entrega futura com entrega', () => {
 
-    beforeEach(() => {
+    test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
@@ -28,7 +28,7 @@ describe('Gerar pedido de entrega futura com entrega', () => {
     
     context('Com entrega/ processo 9891 - caminho feliz', () => {
 
-        it('1. Ped venda: produto 1860 0 0', () => {
+        test('1. Ped venda: produto 1860 0 0', async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -47,7 +47,7 @@ describe('Gerar pedido de entrega futura com entrega', () => {
             FinishOrder.validateOrderGenerated()
         })    
         
-        it('2. Ped venda: produtos 1860 0 0 e 1870 0 0', () => {
+        test('2. Ped venda: produtos 1860 0 0 e 1870 0 0', async ({ page }) => {
                       
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto

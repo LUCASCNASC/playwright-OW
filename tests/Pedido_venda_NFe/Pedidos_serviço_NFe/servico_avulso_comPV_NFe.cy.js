@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
 import { ChooseClient } from '../../../../pages/para_pedidos/cliente/cliente.js'
 import { Service } from '../../../../pages/para_pedidos/servicos/valida_servicos_adicionados.js'
@@ -12,9 +12,9 @@ import { Service } from '../../../../pages/para_pedidos/servicos/apenas_servicos
 import { CommandsGeneral } from '../../../../pages/commands..js'
 
 
-describe('Venda de serviço avulso, com pedido do produto já baixado', () => {
+test.describe('Venda de serviço avulso, com pedido do produto já baixado', () => {
 
-    beforeEach(() => {
+    test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
@@ -24,7 +24,7 @@ describe('Venda de serviço avulso, com pedido do produto já baixado', () => {
 
     context('Processo 9888 - caminho feliz', () => {
 
-        it.skip('1. Venda de garantia - 139 (T.A. Garantia Separa Mesmo Processo)', () => {
+        test('1. Venda de garantia - 139 (T.A. Garantia Separa Mesmo Processo)',  async ({ page }) => {
 
             const numero_pedido = '8605'
             
