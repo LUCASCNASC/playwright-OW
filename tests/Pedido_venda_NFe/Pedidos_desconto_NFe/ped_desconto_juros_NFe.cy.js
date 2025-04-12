@@ -31,7 +31,7 @@ describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244 defi
         it('1. Ped venda: produto 1860 0 0 - arredondar para baixo', () => {
 
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduc()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA
@@ -52,7 +52,7 @@ describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244 defi
         it('2. Ped venda: produtos 1860 0 0 - arredondar para cima', () => {
 
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduc()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA

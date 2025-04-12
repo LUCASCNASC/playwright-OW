@@ -35,15 +35,15 @@ describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduct()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             ProductExclusiva.kitWithoutBalanceScheduling() //PRODUTO KIT
             ValidateBalance.withoutBalance()
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduc()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             GeneralOrder.trocarFilialFaturamento()
-            cy.clickAddProduct()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             AdvanceNormal.toTransporter()
             GeneralDelivery.modalInconsApenasTransp()
             GeneralDelivery.escolherTransportadora()
@@ -64,14 +64,14 @@ describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduct()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             ProductExclusiva.kitVolumes() //PRODUTO KIT
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduct()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             AdvanceNormal.toTransporter()
             GeneralDelivery.modalInconsApenasTransp()
             GeneralDelivery.escolherTransportadora()
@@ -95,7 +95,7 @@ describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduct()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
@@ -117,14 +117,14 @@ describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             ProductExclusiva.balanceReceiveTwoLines() //PRODUTO
             PedExclusiva.balanceRemoteReceive()
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduc() 
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             GeneralOrder.trocarFilialFaturamento()
             PedExclusiva.increaseAmountSaleFive()
             CommandsGeneral.selectProductSearch() //selecionar produto
             ProductExclusiva.balanceReceiveTwoLines() //SEGUNDO PRODUTO
             PedExclusiva.balanceRemoteReceive()
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto 
-            cy.clickAddProduct()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             GeneralOrder.trocarFilialFaturamento()
             PedExclusiva.increaseAmountSaleTen()
         })
@@ -136,7 +136,7 @@ describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduct()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA

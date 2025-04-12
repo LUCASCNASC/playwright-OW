@@ -30,7 +30,7 @@ describe('Gerar pedido de entrega futura', () => {
         it('1. Ped venda: produto 1860 0 0', () => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduc()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA PRODUTO
@@ -47,7 +47,7 @@ describe('Gerar pedido de entrega futura', () => {
         it('2. Ped venda: produtos 1860 0 0 e 1870 0 0', () => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduc()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             clicarOKServVinServico.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA PRODUTO
@@ -55,7 +55,7 @@ describe('Gerar pedido de entrega futura', () => {
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduct()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
@@ -75,7 +75,7 @@ describe('Gerar pedido de entrega futura', () => {
         it('3. Ped venda: produto 1860 0 0', () => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduc()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
@@ -92,14 +92,14 @@ describe('Gerar pedido de entrega futura', () => {
         it('4. Ped venda: produtos 1860 0 0 e 1870 0 0', () => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduc()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduct()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter() //TRANSPORTADORA

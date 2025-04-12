@@ -30,7 +30,7 @@ describe('Gerar pedido normal com entrega', () => {
         it('1. Ped venda: produto 1860 0 0 - (Venda local de produto com saldo - com entrega)', () => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduc()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
@@ -49,14 +49,14 @@ describe('Gerar pedido normal com entrega', () => {
         it('2. Ped venda: produtos 1860 0 0 e 1870 0 0', () => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduc()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             Product.second() //PRODUTO //SEGUNDO PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduc()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
@@ -75,7 +75,7 @@ describe('Gerar pedido normal com entrega', () => {
         it('3. Ped venda: produto 1860 0 0 - (Pedido de venda com entrega. Com Entrada + parcelamento.)', () => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduc()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()

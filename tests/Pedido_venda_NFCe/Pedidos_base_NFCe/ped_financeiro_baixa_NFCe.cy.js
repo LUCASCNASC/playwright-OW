@@ -30,7 +30,7 @@ describe('Gerar pedido com financeiro na baixa com entrega', () => {
         it('1. Ped venda: produto 1860 0 0', () => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduct()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
@@ -49,13 +49,13 @@ describe('Gerar pedido com financeiro na baixa com entrega', () => {
         it('2. Ped venda: produtos 1860 0 0 e 1870 0 0', () => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduct()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             Product.second() //SEGUNDO PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduct()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             CommandsGeneral.selectProductSearch() //selecionar produto
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()

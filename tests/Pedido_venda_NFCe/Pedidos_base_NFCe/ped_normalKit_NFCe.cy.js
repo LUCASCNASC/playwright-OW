@@ -32,7 +32,7 @@ describe('Gerar pedido normal com entrega', () => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             GeneralOrder.compositionKit()
-            cy.clickAddProduc()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()

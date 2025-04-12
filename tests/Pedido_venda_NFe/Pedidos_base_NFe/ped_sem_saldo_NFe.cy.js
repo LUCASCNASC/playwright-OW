@@ -22,7 +22,7 @@ describe('Tentar gerar pedido de venda com produto sem saldo - Regra de saldo Pa
             Product.withoutBalance() //PRODUTO
             ValidarSaldo.comSaldo()
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            cy.clickAddProduc()
+            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
 
             //Validando mensagem "Este produto não possui saldo na filial selecionada."
             cy.get('[ng-if="semSaldoCD"][style=""] > p')
