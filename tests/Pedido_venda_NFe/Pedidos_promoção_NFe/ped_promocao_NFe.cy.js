@@ -31,6 +31,7 @@ describe('Gerar pedidos com promoção', () => {
     
             Product.promoMatch() //PRODUTO
             ValidateBalance.withBalance()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct() //PROMOCAO
@@ -52,6 +53,7 @@ describe('Gerar pedidos com promoção', () => {
     
             Product.promoDeadlineEntry() //PRODUTO
             ValidateBalance.withBalance()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
@@ -79,6 +81,7 @@ describe('Gerar pedidos com promoção', () => {
     
             Product.promoDeadlineInstallment() //PRODUTO
             ValidateBalance.withBalance()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
@@ -103,6 +106,7 @@ describe('Gerar pedidos com promoção', () => {
     
             Product.promoMatch() //PRODUTO
             ValidateBalance.withBalance()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
@@ -113,7 +117,7 @@ describe('Gerar pedidos com promoção', () => {
             ThrowDelivery.freightFirst() //ENTREGA
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
@@ -139,6 +143,7 @@ describe('Gerar pedidos com promoção', () => {
     
             Product.promoDeadlineEntry() //PRODUTO
             ValidateBalance.withBalance()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
@@ -149,7 +154,7 @@ describe('Gerar pedidos com promoção', () => {
             ThrowDelivery.freightFirst() //ENTREGA
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
@@ -175,6 +180,7 @@ describe('Gerar pedidos com promoção', () => {
     
             Product.promoMatch() //PRODUTO
             ValidateBalance.withBalance()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
@@ -200,6 +206,7 @@ describe('Gerar pedidos com promoção', () => {
     
             Product.promoDeadlineEntry() //PRODUTO
             ValidateBalance.withBalance()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct() //PROMOÇÃO

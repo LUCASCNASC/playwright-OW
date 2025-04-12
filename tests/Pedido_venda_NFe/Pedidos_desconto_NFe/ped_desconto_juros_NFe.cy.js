@@ -23,7 +23,7 @@ describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244 defi
         ChooseClient.withRoute()
         Product.roundUpDown() //PRODUTO
         ValidateBalance.withBalance()
-        cy.clickVoltageProduct()
+        CommandsGeneral.selectProductSearch() //selecionar produto
     })
 
     context('Sem entrega/ processo 9860 - caminho feliz - processo de inclusão 3860', () => {

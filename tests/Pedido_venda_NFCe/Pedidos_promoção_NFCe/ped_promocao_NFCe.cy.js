@@ -28,7 +28,8 @@ describe('Gerar pedidos com promoção com entrega', () => {
     
             Product.promoMatch() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch() ; Promotion.ticketPromotion() 
+            CommandsGeneral.selectProductSearch() //selecionar produto ; 
+            Promotion.ticketPromotion() 
             cy.clickVoltageProduct()
             Promotion.selectFirstPromoProduct()
             cy.clickAddProduct()
@@ -54,7 +55,8 @@ describe('Gerar pedidos com promoção com entrega', () => {
     
             Product.promoDeadlineEntry() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch() ; Promotion.ticketPromotion() 
+            CommandsGeneral.selectProductSearch() //selecionar produto ; 
+            Promotion.ticketPromotion() 
             cy.clickVoltageProduct()
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
             cy.clickAddProduct()
@@ -84,7 +86,8 @@ describe('Gerar pedidos com promoção com entrega', () => {
     
             Product.promoDeadlineInstallment() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch() ; Promotion.ticketPromotion()
+            CommandsGeneral.selectProductSearch() //selecionar produto ; 
+            Promotion.ticketPromotion()
             cy.clickVoltageProduct()
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
             cy.clickAddProduct()

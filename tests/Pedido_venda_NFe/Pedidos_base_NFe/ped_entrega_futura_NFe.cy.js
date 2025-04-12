@@ -22,7 +22,7 @@ describe('Gerar pedido de entrega futura', () => {
         ChooseClient.withRoute()
         Product.fisrt() //PRODUTO
         ValidateBalance.withBalance()
-        cy.clickVoltageProduct()
+        CommandsGeneral.selectProductSearch() //selecionar produto
     })
 
     context('Sem entrega/ processo 9862 - caminho feliz', () => {
@@ -53,7 +53,7 @@ describe('Gerar pedido de entrega futura', () => {
             ThrowDelivery.freightFirst() //ENTREGA PRODUTO
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
@@ -97,7 +97,7 @@ describe('Gerar pedido de entrega futura', () => {
             Service.clickOKServiceLinked()
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS

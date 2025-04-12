@@ -22,7 +22,7 @@ describe('Gerar pedido com proposta de crédito', () => {
         ChooseClient.withRoute()
         Product.fisrt() //PRODUTO
         ValidateBalance.withBalance()
-        cy.selectProductSearch()
+        CommandsGeneral.selectProductSearch() //selecionar produto
     })
 
     context('Sem entrega/ processo 9860 - caminho feliz', () => {

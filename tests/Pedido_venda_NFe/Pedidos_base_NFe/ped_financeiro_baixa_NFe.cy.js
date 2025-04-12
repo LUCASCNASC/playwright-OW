@@ -23,7 +23,7 @@ describe('Gerar pedido com financeiro na baixa', () => {
         ChooseClient.withRoute()
         Product.fisrt() //PRODUTO
         ValidateBalance.withBalance()
-        cy.clickVoltageProduct()
+        CommandsGeneral.selectProductSearch() //selecionar produto
     })
   
     context('Sem entrega/ processo 9863 - caminho feliz', () => {
@@ -54,7 +54,7 @@ describe('Gerar pedido com financeiro na baixa', () => {
             ThrowDelivery.freightFirst() //ENTREGA
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
@@ -98,7 +98,7 @@ describe('Gerar pedido com financeiro na baixa', () => {
             Service.clickOKServiceLinked()
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS

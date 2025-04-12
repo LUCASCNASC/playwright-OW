@@ -24,7 +24,7 @@ describe('Gerar pedidos com Mão de obra', () => {
         ChooseClient.withRoute()
         Product.fisrt() //PRODUTO
         ValidateBalance.withBalance()
-        cy.selectProductSearch()
+        CommandsGeneral.selectProductSearch() //selecionar produto
         cy.clickVoltageProduct()
         cy.clickAddProduct()
         Service.validateModalServLinked()
@@ -56,7 +56,7 @@ describe('Gerar pedidos com Mão de obra', () => {
             ThrowDelivery.freightFirst() //ENTREGA
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
@@ -96,7 +96,7 @@ describe('Gerar pedidos com Mão de obra', () => {
             ThrowDelivery.freightFirst() //ENTREGA
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
@@ -136,7 +136,7 @@ describe('Gerar pedidos com Mão de obra', () => {
             ThrowDelivery.freightFirst() //ENTREGA
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
@@ -178,7 +178,7 @@ describe('Gerar pedidos com Mão de obra', () => {
             ValidateService.servLinked() ; ValidateService.addMODestNãoSepara()
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
@@ -217,7 +217,7 @@ describe('Gerar pedidos com Mão de obra', () => {
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc()
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTP
@@ -256,7 +256,7 @@ describe('Gerar pedidos com Mão de obra', () => {
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepProcDif()
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO

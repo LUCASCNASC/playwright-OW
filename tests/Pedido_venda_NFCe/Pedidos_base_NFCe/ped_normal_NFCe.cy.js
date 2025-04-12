@@ -22,7 +22,7 @@ describe('Gerar pedido normal com entrega', () => {
         ChooseClient.withRoute()
         Product.fisrt() //PRODUTO
         ValidateBalance.withBalance()
-        cy.selectProductSearch()
+        CommandsGeneral.selectProductSearch() //selecionar produto
     })
 
     context('Com entrega/ processo 9890 - caminho feliz', () => {
@@ -54,7 +54,7 @@ describe('Gerar pedido normal com entrega', () => {
             Service.clickOKServiceLinked()
             Product.second() //PRODUTO //SEGUNDO PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduc()
             Service.validateModalServLinked() //SERVICOS

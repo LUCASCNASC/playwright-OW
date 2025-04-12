@@ -23,7 +23,7 @@ describe('Gerar pedidos com Garantia e com entrega', () => {
         ChooseClient.withRoute()
         Product.fisrt() //PRODUTO
         ValidateBalance.withBalance()
-        cy.selectProductSearch()
+        CommandsGeneral.selectProductSearch() //selecionar produto
         cy.clickVoltageProduct()
         cy.clickAddProduct()
         Service.validateModalServLinked() //SERVICOS
@@ -54,7 +54,7 @@ describe('Gerar pedidos com Garantia e com entrega', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
@@ -95,7 +95,7 @@ describe('Gerar pedidos com Garantia e com entrega', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
@@ -136,7 +136,7 @@ describe('Gerar pedidos com Garantia e com entrega', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS

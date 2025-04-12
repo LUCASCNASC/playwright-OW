@@ -31,6 +31,7 @@ describe('Gerar pedidos com promoção e serviços com isenção de juros', () =
     
             Product.firstInstallmentDeadline() //PRODUTO
             ValidateBalance.withBalance()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduc()
             Promotion.typeServiceFreeValidate()
@@ -54,6 +55,7 @@ describe('Gerar pedidos com promoção e serviços com isenção de juros', () =
     
             Product.secondInstallmentDeadline() //PRODUTO
             ValidateBalance.withBalance()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduc()
             Promotion.typeServiceFreeValidate()
@@ -95,6 +97,7 @@ describe('Gerar pedidos com promoção e serviços com isenção de juros', () =
     
             Product.thirdInstallmentDeadline() //PRODUTO
             ValidateBalance.withBalance()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
@@ -119,6 +122,7 @@ describe('Gerar pedidos com promoção e serviços com isenção de juros', () =
     
             Product.fourthInstallmentDeadline() //PRODUTO
             ValidateBalance.withBalance()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduc()
             Promotion.typeServiceFreeValidate()

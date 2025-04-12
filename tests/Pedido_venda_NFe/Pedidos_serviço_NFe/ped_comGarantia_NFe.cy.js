@@ -24,7 +24,7 @@ describe('Gerar pedidos com Garantia', () => {
         ChooseClient.withRoute()
         Product.fisrt() //PRODUTO
         ValidateBalance.withBalance()
-        cy.selectProductSearch()
+        CommandsGeneral.selectProductSearch() //selecionar produto
         cy.clickVoltageProduct()
         cy.clickAddProduct()
         Servico.validateModalServLinked()
@@ -56,7 +56,7 @@ describe('Gerar pedidos com Garantia', () => {
             ThrowDelivery.freightFirst() //ENTREGA
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
@@ -96,7 +96,7 @@ describe('Gerar pedidos com Garantia', () => {
             ThrowDelivery.freightFirst() //ENTREGA
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
@@ -136,7 +136,7 @@ describe('Gerar pedidos com Garantia', () => {
             ThrowDelivery.freightFirst() //ENTREGA
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
@@ -178,7 +178,7 @@ describe('Gerar pedidos com Garantia', () => {
             ValidateService.servLinked() ; ValidateService.AddGarantSepMesmoProc()
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
@@ -217,7 +217,7 @@ describe('Gerar pedidos com Garantia', () => {
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
@@ -256,7 +256,7 @@ describe('Gerar pedidos com Garantia', () => {
             ValidateService.servLinked() ; ValidateService.addGarantSepTituloProcDif()
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.clickOKServiceLinked() //SERVIÇOS

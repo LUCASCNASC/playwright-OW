@@ -23,7 +23,7 @@ describe('Gerar pedidos com Mão de obra e com entrega', () => {
         ChooseClient.withRoute()
         Product.fisrt() //PRODUTO
         ValidateBalance.withBalance()
-        cy.selectProductSearch()
+        CommandsGeneral.selectProductSearch() //selecionar produto
         cy.clickVoltageProduct()
         cy.clickAddProduct()
         Service.validateModalServLinked() //SERVICOS
@@ -54,7 +54,7 @@ describe('Gerar pedidos com Mão de obra e com entrega', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             Product.second() //SEGUNDO PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS //SERVIÇOS - SEGUNDO PRODUTO
@@ -95,7 +95,7 @@ describe('Gerar pedidos com Mão de obra e com entrega', () => {
             Service.clickOKServiceLinked()
             Product.second() //SEGUNDO PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
@@ -136,7 +136,7 @@ describe('Gerar pedidos com Mão de obra e com entrega', () => {
             Service.clickOKServiceLinked()
             Product.second() //SEGUNDO PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS

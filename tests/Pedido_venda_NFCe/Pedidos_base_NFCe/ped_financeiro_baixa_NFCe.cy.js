@@ -22,7 +22,7 @@ describe('Gerar pedido com financeiro na baixa com entrega', () => {
         ChooseClient.withRoute()
         Product.fisrt() //PRODUTO
         ValidateBalance.withBalance()
-        cy.selectProductSearch()
+        CommandsGeneral.selectProductSearch() //selecionar produto
     })
     
     context('Com entrega/ processo 9892 - caminho feliz', () => {
@@ -56,7 +56,7 @@ describe('Gerar pedido com financeiro na baixa com entrega', () => {
             ValidateBalance.withBalance()
             cy.clickVoltageProduct()
             cy.clickAddProduct()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter() 

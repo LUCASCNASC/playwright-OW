@@ -23,7 +23,7 @@ describe('Gerar pedido normal', () => {
         ChooseClient.withRoute()
         Product.kitFirst()
         ValidateBalance.withBalance()
-        cy.selectProductSearch()
+        CommandsGeneral.selectProductSearch() //selecionar produto
     })
   
     context('Sem entrega/ processo 9860 - caminho feliz', () => {

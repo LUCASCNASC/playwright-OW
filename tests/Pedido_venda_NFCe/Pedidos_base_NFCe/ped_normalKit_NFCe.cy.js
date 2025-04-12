@@ -23,7 +23,7 @@ describe('Gerar pedido normal com entrega', () => {
         ChooseClient.withRoute()
         Product.kitFirst()
         ValidateBalance.withBalance()
-        cy.selectProductSearch()
+        CommandsGeneral.selectProductSearch() //selecionar produto
     })
     
     context('Com entrega/processo 9890 - caminho feliz', () => {

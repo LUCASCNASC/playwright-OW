@@ -32,7 +32,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161)', (
     
             Product.fisrt() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
@@ -55,7 +55,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161)', (
     
             Product.fisrt() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked()
@@ -63,7 +63,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161)', (
             Service.clickOKServiceLinked() //SERVIÇOS
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
@@ -89,6 +89,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161)', (
     
             Product.termFisrtPrestAbatVF() //PRODUTO
             ValidateBalance.withBalance()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
@@ -114,6 +115,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161)', (
 
             Product.termSecondPrestAbatVF() //PRODUTO
             ValidateBalance.withBalance()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
@@ -141,6 +143,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161)', (
 
             Product.termThirdPrestAbatVF() //PRODUTO
             ValidateBalance.withBalance()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
@@ -171,7 +174,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161)', (
     
             Product.fisrt() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS

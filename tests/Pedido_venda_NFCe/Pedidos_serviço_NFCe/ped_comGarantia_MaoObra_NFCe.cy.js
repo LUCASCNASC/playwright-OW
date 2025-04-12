@@ -23,7 +23,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
         ChooseClient.withRoute()
         Product.fisrt() //PRODUTO
         ValidateBalance.withBalance()
-        cy.selectProductSearch()
+        CommandsGeneral.selectProductSearch() //selecionar produto
         cy.clickVoltageProduct()
         cy.clickAddProduct()
         Service.validateModalServLinked()
@@ -56,7 +56,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
@@ -99,7 +99,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
@@ -142,7 +142,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.withBalance()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
@@ -185,7 +185,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
@@ -228,7 +228,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
@@ -271,7 +271,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
@@ -314,7 +314,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
@@ -356,7 +356,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
@@ -399,7 +399,7 @@ describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             ServiServiceco.validateModalServLinked() //SERVICOS

@@ -33,7 +33,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo - Origem 
     
             Product.fisrt() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked()
@@ -56,7 +56,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo - Origem 
     
             Product.fisrt() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked()
@@ -64,7 +64,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo - Origem 
             Service.clickOKServiceLinked() //SERVIÇOS
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.selectProductSearch()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked()
@@ -90,6 +90,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo - Origem 
     
             Product.termFisrtPrestAbatVF() //PRODUTO
             ValidateBalance.withBalance()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
@@ -115,6 +116,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo - Origem 
 
             Product.termSecondPrestAbatVF() //PRODUTO
             ValidateBalance.withBalance()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
@@ -141,6 +143,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo - Origem 
 
             Product.prazoPrestTercAbatVF() //PRODUTO
             ValidateBalance.withBalance()
+            CommandsGeneral.selectProductSearch() //selecionar produto
             cy.clickVoltageProduct()
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
