@@ -30,7 +30,7 @@ describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244 defi
 
         it('1. Ped venda: produto 1860 0 0 - arredondar para baixo', () => {
 
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -51,7 +51,7 @@ describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244 defi
 
         it('2. Ped venda: produtos 1860 0 0 - arredondar para cima', () => {
 
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()

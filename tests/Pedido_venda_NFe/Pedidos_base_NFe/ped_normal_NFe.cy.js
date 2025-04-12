@@ -30,7 +30,7 @@ describe('Gerar pedido normal', () => {
 
         it('1. Ped venda: produto 1860 0 0 - (Venda local de produto com saldo - sem entrega)', () => {
 
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -47,7 +47,7 @@ describe('Gerar pedido normal', () => {
 
         it('2. Ped venda: produtos 1860 0 0 e 1870 0 0', () => {
                       
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -55,7 +55,7 @@ describe('Gerar pedido normal', () => {
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -72,7 +72,7 @@ describe('Gerar pedido normal', () => {
 
         it('3. Ped venda: produto 1860 0 0 - (Pedido de venda sem entrega. Com Entrada + parcelamento.)', () => {
 
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -94,7 +94,7 @@ describe('Gerar pedido normal', () => {
 
         it('4. Ped venda: produto 1860 0 0 - (Venda local de produto com saldo - com entrega)', () => {
                       
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -111,14 +111,14 @@ describe('Gerar pedido normal', () => {
 
         it('5. Ped venda: produtos 1860 0 0 e 1870 0 0', () => {
                       
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -135,7 +135,7 @@ describe('Gerar pedido normal', () => {
 
         it('6. Ped venda: produto 1860 0 0 - (Pedido de venda com entrega. Com Entrada + parcelamento.)', () => {
                       
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()

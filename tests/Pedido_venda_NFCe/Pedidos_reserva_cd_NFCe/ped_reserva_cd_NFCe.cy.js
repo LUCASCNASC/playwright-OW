@@ -29,7 +29,7 @@ describe('Gerar pedido com reserva no CD (com entrega) - Regra de saldo Parâmet
             Product.cdFirst() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -51,14 +51,14 @@ describe('Gerar pedido com reserva no CD (com entrega) - Regra de saldo Parâmet
             Product.fisrt() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             Product.second() //SEGUNDO PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()

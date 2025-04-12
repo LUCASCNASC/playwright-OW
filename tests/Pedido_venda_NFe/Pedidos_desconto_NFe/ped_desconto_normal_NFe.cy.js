@@ -30,7 +30,7 @@ describe('Gerar pedido de venda com desconto', () => {
             Product.discountNumber() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -53,7 +53,7 @@ describe('Gerar pedido de venda com desconto', () => {
             Product.discountPercentage() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -76,7 +76,7 @@ describe('Gerar pedido de venda com desconto', () => {
             Product.discountValueFixed() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()

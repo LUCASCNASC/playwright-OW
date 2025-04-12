@@ -31,7 +31,7 @@ describe('Gerar pedido de venda Kit com desconto', () => {
             Product.kitDiscount() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             GeneralOrder.compositionKit()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS

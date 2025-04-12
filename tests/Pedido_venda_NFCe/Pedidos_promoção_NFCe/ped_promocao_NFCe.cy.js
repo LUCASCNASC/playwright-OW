@@ -30,7 +30,7 @@ describe('Gerar pedidos com promoção com entrega', () => {
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto ; 
             Promotion.ticketPromotion() 
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             Promotion.selectFirstPromoProduct()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
@@ -57,7 +57,7 @@ describe('Gerar pedidos com promoção com entrega', () => {
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto ; 
             Promotion.ticketPromotion() 
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
@@ -88,7 +88,7 @@ describe('Gerar pedidos com promoção com entrega', () => {
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto ; 
             Promotion.ticketPromotion()
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS

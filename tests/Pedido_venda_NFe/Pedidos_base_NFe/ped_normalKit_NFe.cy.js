@@ -30,7 +30,7 @@ describe('Gerar pedido normal', () => {
         
         it('1. Ped venda: kit 1862 0 0', () => {
                       
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             GeneralOrder.compositionKit()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
@@ -51,7 +51,7 @@ describe('Gerar pedido normal', () => {
         
         it('2. Ped venda: kit 1862 0 0', () => {
                       
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             GeralPedido.compositionKit()
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS

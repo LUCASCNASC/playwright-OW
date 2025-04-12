@@ -34,13 +34,13 @@ describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             ProductExclusiva.firstNormal() //PRODUTO EXCLUSIVA
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             ProductExclusiva.kitWithoutBalanceScheduling() //PRODUTO KIT
             ValidateBalance.withoutBalance()
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             GeneralOrder.trocarFilialFaturamento()
             cy.clickAddProduct()
@@ -63,14 +63,14 @@ describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             ProductExclusiva.firstNormal() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             ProductExclusiva.kitVolumes() //PRODUTO KIT
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             AdvanceNormal.toTransporter()
             GeneralDelivery.modalInconsApenasTransp()
@@ -94,7 +94,7 @@ describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             ProductExclusiva.balanceReceive() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -116,14 +116,14 @@ describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
 
             ProductExclusiva.balanceReceiveTwoLines() //PRODUTO
             PedExclusiva.balanceRemoteReceive()
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc() 
             GeneralOrder.trocarFilialFaturamento()
             PedExclusiva.increaseAmountSaleFive()
             CommandsGeneral.selectProductSearch() //selecionar produto
             ProductExclusiva.balanceReceiveTwoLines() //SEGUNDO PRODUTO
             PedExclusiva.balanceRemoteReceive()
-            cy.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto 
             cy.clickAddProduct()
             GeneralOrder.trocarFilialFaturamento()
             PedExclusiva.increaseAmountSaleTen()
@@ -135,7 +135,7 @@ describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             ProductExclusiva.firstNormal() //PRODUTO EXCLUSIVA
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()

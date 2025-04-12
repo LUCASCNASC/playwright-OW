@@ -32,7 +32,7 @@ describe('Gerar pedidos com promoção e serviços com isenção de juros', () =
             Product.firstInstallmentDeadline() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Promotion.typeServiceFreeValidate()
             Promotion.selectFirstPromoProduct()
@@ -56,7 +56,7 @@ describe('Gerar pedidos com promoção e serviços com isenção de juros', () =
             Product.secondInstallmentDeadline() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Promotion.typeServiceFreeValidate()
             Promotion.selectFirstPromoProduct()
@@ -98,7 +98,7 @@ describe('Gerar pedidos com promoção e serviços com isenção de juros', () =
             Product.thirdInstallmentDeadline() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
             Receipt.withMoneylender()
@@ -123,7 +123,7 @@ describe('Gerar pedidos com promoção e serviços com isenção de juros', () =
             Product.fourthInstallmentDeadline() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Promotion.typeServiceFreeValidate()
             Promotion.selectFirstPromoProduct()

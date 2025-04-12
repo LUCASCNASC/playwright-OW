@@ -29,7 +29,7 @@ describe('Gerar pedido com proposta de crédito', () => {
 
         it('1. Ped venda: produto 1860 0 0 - (Pedido de venda sem entrega, com proposta de crédito.)', () => {
 
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()

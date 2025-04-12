@@ -29,7 +29,7 @@ describe('Remoto/processo 9890 - Regra de saldo Parâmetro 36 = 4 - Parâmetro 1
 
             Product.fisrt() //PRODUTO
             ValidateBalance.withBalance()
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             GeneralOrder.changeBranchInvoicing()
             cy.clickAddProduct()
@@ -51,7 +51,7 @@ describe('Remoto/processo 9890 - Regra de saldo Parâmetro 36 = 4 - Parâmetro 1
 
             Product.fisrt() //PRODUTO
             ValidateBalance.withBalance()
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             GeneralOrder.changeBranchInvoicing()
             cy.clickAddProduct()
@@ -59,7 +59,7 @@ describe('Remoto/processo 9890 - Regra de saldo Parâmetro 36 = 4 - Parâmetro 1
             Service.clickOKServiceLinked()
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             GeneralOrder.changeBranchInvoicing()
             cy.clickAddProduct()
@@ -81,7 +81,7 @@ describe('Remoto/processo 9890 - Regra de saldo Parâmetro 36 = 4 - Parâmetro 1
 
             Product.kitRemote() //PRODUTO
             ValidateBalance.withBalance()
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             GeneralOrder.changeBranchInvoicing()
             GeneralOrder.composicaoDesteKit()
@@ -107,7 +107,7 @@ describe('Remoto/processo 9890 - Regra de saldo Parâmetro 36 = 4 - Parâmetro 1
 
             Product.remoteWithCD() //PRODUTO
             ValidateBalance.withBalance()
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             GeneralOrder.changeBranchInvoicing()
             cy.clickAddProduct()
@@ -129,7 +129,7 @@ describe('Remoto/processo 9890 - Regra de saldo Parâmetro 36 = 4 - Parâmetro 1
 
             Product.remoteWithoutCD() //PRODUTO
             ValidateBalance.withBalance()
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             GeneralOrder.changeBranchInvoicing()
 

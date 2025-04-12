@@ -29,7 +29,7 @@ describe('Gerar pedido de entrega futura', () => {
 
         it('1. Ped venda: produto 1860 0 0', () => {
                       
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -46,7 +46,7 @@ describe('Gerar pedido de entrega futura', () => {
         
         it('2. Ped venda: produtos 1860 0 0 e 1870 0 0', () => {
                       
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Service.validateModalServLinked() //SERVICOS
             clicarOKServVinServico.clickOKServiceLinked()
@@ -54,7 +54,7 @@ describe('Gerar pedido de entrega futura', () => {
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -74,7 +74,7 @@ describe('Gerar pedido de entrega futura', () => {
 
         it('3. Ped venda: produto 1860 0 0', () => {
                       
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -91,14 +91,14 @@ describe('Gerar pedido de entrega futura', () => {
         
         it('4. Ped venda: produtos 1860 0 0 e 1870 0 0', () => {
                       
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()

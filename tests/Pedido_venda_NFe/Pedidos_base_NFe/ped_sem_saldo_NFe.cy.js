@@ -21,7 +21,7 @@ describe('Tentar gerar pedido de venda com produto sem saldo - Regra de saldo Pa
             
             Product.withoutBalance() //PRODUTO
             ValidarSaldo.comSaldo()
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
 
             //Validando mensagem "Este produto não possui saldo na filial selecionada."

@@ -36,7 +36,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.fisrt() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked()
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -44,7 +44,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked()
@@ -67,7 +67,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.fisrt() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -75,7 +75,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -101,14 +101,14 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.fisrt() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -131,7 +131,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.fisrt() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
@@ -140,7 +140,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -163,7 +163,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.fisrt() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
@@ -172,7 +172,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked()
@@ -195,7 +195,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.fisrt() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
@@ -204,7 +204,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked() //SERVICOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked()
@@ -230,7 +230,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.termInstallmentPrest() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
             ReceiptPromotion.termFutWithFeesPrest()
@@ -256,7 +256,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.termInstallmentPrest() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
             ReceiptPromotion.termFutWithoutFeesPrest()
@@ -282,7 +282,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.termInstallmentPrest() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
             ReceiptPromotion.termFutWithoutFeesPrest()
@@ -312,7 +312,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.termInstallmentPrest() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
             ReceiptPromotion.termFutWithoutFeesPrest()
@@ -344,7 +344,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.termInstallmentPrest() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
             ReceiptPromotion.termFutWithFeesPrest()
@@ -377,7 +377,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.termInstallmentPrest() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
             ReceiptPromotion.entryPresentPrest()
@@ -408,7 +408,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.termInstallmentPrest() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
             ReceiptPromotion.termFutWithFeesPrest()
@@ -419,7 +419,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked()
             Service.clickOKServiceLinked()
@@ -446,7 +446,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.termInstallmentPrest() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
             ReceiptPromotion.termFutWithFeesPrest()
@@ -457,7 +457,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked()
             Service.clickOKServiceLinked()
@@ -488,7 +488,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.termInstallmentPrest() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
             ReceiptPromotion.termFutWithoutFeesPrest()
@@ -499,7 +499,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked()
             Service.clickOKServiceLinked()
@@ -526,7 +526,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.termInstallmentPrest() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
             ReceiptPromotion.termFutWithoutFeesPrest()
@@ -537,7 +537,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked()
             Service.clickOKServiceLinked()
@@ -570,7 +570,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.termInstallmentPrest() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
             ReceiptPromotion.termFutWithFeesPrest()
@@ -599,7 +599,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.termInstallmentPrest() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
             ReceiptPromotion.termFutWithFeesPrest()
@@ -611,7 +611,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked()
             Service.clickOKServiceLinked()
@@ -640,7 +640,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.termInstallmentPrest() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
             ReceiptPromotion.termFutWithFeesPrest()
@@ -652,7 +652,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked()
             Service.clickOKServiceLinked()
@@ -686,7 +686,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.termInstallmentPrest() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
             ReceiptPromotion.termFutWithoutFeesPrest()
@@ -698,7 +698,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked()
             Service.clickOKServiceLinked()
@@ -727,7 +727,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.termInstallmentPrest() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
             ReceiptPromotion.termFutWithoutFeesPrest()
@@ -739,7 +739,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked()
             Service.clickOKServiceLinked()
@@ -773,7 +773,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.termInstallmentPrest() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
             ReceiptPromotion.entryPresentPrest()
@@ -785,7 +785,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.second() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
@@ -815,7 +815,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.termInstallmentPrest() //PRODUTO
             ValidateBalance.withBalance()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct()
             ReceiptPromotion.entryPresentPrest()
@@ -827,7 +827,7 @@ describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
             Product.second() //PRODUTO
             ValidateBalance.comSwithBalancealdo()
             CommandsGeneral.selectProductSearch() //selecionar produto
-            cy.clickVoltageProduct()
+            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduct()
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
