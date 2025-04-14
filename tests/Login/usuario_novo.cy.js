@@ -1,21 +1,22 @@
+import { test } from '@playwright/test';
 import { Login } from '../../../pages/para_logins/para_login'
 
 const usunovo = "testtest"; //494
 const senhausunovo = "!MV87gsp";
 const novasenha = "321@Teste";
-describe('Logar com novo usuário', () => {
 
-    beforeEach(() => {
-        cy.visit('/')
-        cy.clearAllSessionStorage()
-        cy.urlAposLogin()
-        cy.tituloPagina()
+test.describe('Logar com novo usuário', () => {
+
+    test.beforeEach(async ({ page }) => {
+        CommandsGeneral.login()
+        CommandsGeneral.urlAposLogin()
+        CommandsGeneral.tituloPagina()
         Login.logoEnterpriseLogin()
         Login.iconComputerLogin()
         Login.userTextIcon()
     })
 
-    it.skip('1. Novo usuário - clicar em Fechar, não alterando a senha', () => {
+    test('1. Novo usuário - clicar em Fechar, não alterando a senha',  async ({ page }) => {
     
         //Validando campo "informe seu usuário"
         cy.get('#txtusername')
@@ -206,7 +207,7 @@ describe('Logar com novo usuário', () => {
         Login.iconComputerLogin() //Validando que não entrou no sistema
     })
 
-    it.skip('2. Novo usuário - clicar em CONFIRMAR, alterando a senha', () => {
+    test('2. Novo usuário - clicar em CONFIRMAR, alterando a senha',  async ({ page }) => {
     
         //Validando campo "informe seu usuário"
         cy.get('#txtusername')

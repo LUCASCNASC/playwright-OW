@@ -1,21 +1,21 @@
+import { test } from '@playwright/test';
 import { Login } from '../../../pages/para_logins/para_login'
 
 const usuSabiumAutomacao = "usu.expiradosistema"; //usuário 496
 const senhaautomacao = "123.automacao";
 
-describe('Senha do usuário expirada', () => {
+test.describe('Senha do usuário expirada', () => {
 
-    beforeEach(() => {
-        cy.visit('/')
-        cy.clearAllSessionStorage()
-        cy.urlAposLogin()
-        cy.tituloPagina()
+    test.beforeEach(async ({ page }) => {
+        CommandsGeneral.login()
+        CommandsGeneral.urlAposLogin()
+        CommandsGeneral.tituloPagina()
         Login.logoEnterpriseLogin()
         Login.iconComputerLogin()
         Login.userTextIcon()
     })
 
-    it('1. Tentar logar com usuário com senha do usuário expirada', () => {
+    test('1. Tentar logar com usuário com senha do usuário expirada',  async ({ page }) => {
     
         //Validando campo "informe seu usuário"
         cy.get('#txtusername')

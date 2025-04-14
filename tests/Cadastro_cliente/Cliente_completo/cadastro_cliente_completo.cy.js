@@ -1,3 +1,4 @@
+import { test } from '@playwright/test';
 import { GeneralClientComplete } from '../../../../pages/para_cadastro_cliente/cliente_completo/geral_cliente_completo';
 import { ClickClientComplete } from '../../../../pages/para_cadastro_cliente/cliente_completo/clicar_cliente_completo';
 import { GeneralAnexo } from '../../../../pages/para_cadastro_cliente/cliente_completo/aba_Anexo/geral_anexo';
@@ -20,9 +21,9 @@ import { GeneralAdress } from '../../../../pages/para_cadastro_cliente/cliente_c
 import { FillAdress } from '../../../../pages/para_cadastro_cliente/cliente_completo/aba_endereco/preencher_endereco';
 
 
-describe('Cadastrar cliente completo', () => {
+test.describe('Cadastrar cliente completo', () => {
 
-    beforeEach(() => {
+    test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
@@ -30,7 +31,7 @@ describe('Cadastrar cliente completo', () => {
 
     context('Cadastro de cliente completo - básico ', () => {
 
-        it('1. Cliente completo CPF', () => {
+        test('1. Cliente completo CPF',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions() //PESSOA
             GeralClienteCoGeneralClientCompletempleto.optionClientComplete()
@@ -75,7 +76,7 @@ describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.messRegisterSaveSucess()
         })  
 
-        it('2. Cliente completo CPF - mensagem de campos obrigatórios', () => {
+        test('2. Cliente completo CPF - mensagem de campos obrigatórios',  async ({ page }) => {
     
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete()
@@ -128,7 +129,7 @@ describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.messRegisterSaveSucess()
         })  
 
-        it('3. Cliente completo CNPJ', () => {
+        test('3. Cliente completo CNPJ',  async ({ page }) => {
     
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete() 
@@ -178,7 +179,7 @@ describe('Cadastrar cliente completo', () => {
 
     context('Cadastro de cliente completo - incluindo anexo após salvar o cadastro de cliente', () => {
 
-        it('4. Cliente completo CPF - caminho feliz', () => {
+        test('4. Cliente completo CPF - caminho feliz',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete() 
@@ -239,7 +240,7 @@ describe('Cadastrar cliente completo', () => {
 
     context('Cadastro de cliente completo - incluindo referencia bancária', () => {
 
-        it('5. Cliente completo CPF - tipo de chave PIX Telefone correto', () => {
+        test('5. Cliente completo CPF - tipo de chave PIX Telefone correto',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete() 
@@ -310,7 +311,7 @@ describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.messRegisterSaveSucess()
         })  
 
-        it('6. Cliente completo CPF - tipo de chave PIX Email correto', () => {
+        test('6. Cliente completo CPF - tipo de chave PIX Email correto',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete() 
@@ -381,7 +382,7 @@ describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.messRegisterSaveSucess()
         }) 
 
-        it('7. Cliente completo CPF - tipo de chave PIX CPF CNPJ correto', () => {
+        test('7. Cliente completo CPF - tipo de chave PIX CPF CNPJ correto',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete() 
@@ -452,7 +453,7 @@ describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.messRegisterSaveSucess()
         }) 
 
-        it('8. Cliente completo CPF - tipo de chave PIX CPF CNPJ correto', () => {
+        test('8. Cliente completo CPF - tipo de chave PIX CPF CNPJ correto',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete() 
@@ -523,7 +524,7 @@ describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.messRegisterSaveSucess()
         }) 
 
-        it('9. Cliente completo CPF - validar tipo de chave PIX Telefone incorreto ', () => {
+        test('9. Cliente completo CPF - validar tipo de chave PIX Telefone incorreto ',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete()
@@ -593,7 +594,7 @@ describe('Cadastrar cliente completo', () => {
             GeneralRefBanking.messRefBankingKeyPixPhoneInvalid()
         })  
 
-        it('10. Cliente completo CPF - validar tipo de chave PIX Email incorreto ', () => {
+        test('10. Cliente completo CPF - validar tipo de chave PIX Email incorreto ',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete()
@@ -663,7 +664,7 @@ describe('Cadastrar cliente completo', () => {
             GeneralRefBanking.messRefBankingKeyPixEmailInvalid()
         })  
 
-        it('11.Cliente completo CPF - validar tipo de chave CPF CNPJ incorreto ', () => {
+        test('11.Cliente completo CPF - validar tipo de chave CPF CNPJ incorreto ',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete()
@@ -733,7 +734,7 @@ describe('Cadastrar cliente completo', () => {
             GeneralRefBanking.messRefBankingKeyPixCpfCnpjInvalid()
         })  
 
-        it('12.Cliente completo CPF - validar tipo de chave Aleatória incorreto ', () => {
+        test('12.Cliente completo CPF - validar tipo de chave Aleatória incorreto ',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete()
@@ -805,7 +806,7 @@ describe('Cadastrar cliente completo', () => {
 
     context('Cadastro de cliente completo - incluindo referencia pessoal', () => {
 
-        it('13. Cliente completo CPF - caminho feliz', () => {
+        test('13. Cliente completo CPF - caminho feliz',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete()
@@ -868,7 +869,7 @@ describe('Cadastrar cliente completo', () => {
 
     context('Cadastro de cliente completo - incluindo referencia comercial', () => {
 
-        it('14. Cliente completo CPF - caminho feliz', () => {
+        test('14. Cliente completo CPF - caminho feliz',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete()
@@ -932,7 +933,7 @@ describe('Cadastrar cliente completo', () => {
 
     context('Cadastro de cliente completo - incluindo referencia financeira', () => {
 
-        it('15. Cliente completo CPF - caminho feliz', () => {
+        test('15. Cliente completo CPF - caminho feliz',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete()
@@ -995,7 +996,7 @@ describe('Cadastrar cliente completo', () => {
 
     context('Cadastro de cliente completo - incluindo Empregatício', () => {
 
-        it('16. Cliente completo CPF - caminho feliz', () => {
+        test('16. Cliente completo CPF - caminho feliz',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete()

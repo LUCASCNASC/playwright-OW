@@ -1,8 +1,9 @@
+import { test } from '@playwright/test';
 import { SearchClient } from '../../../pages/para_cadastro_cliente/para_pesquisa_cliente'
 
-describe('Cadastrar cliente', () => {
+test.describe('Cadastrar cliente', () => {
 
-    beforeEach(() => {
+    test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
@@ -10,7 +11,7 @@ describe('Cadastrar cliente', () => {
 
     context('Pesquisa cliente por número', () => {
 
-        it('1-Pesquisa por número CPF', () => {
+        test('1-Pesquisa por número CPF',  async ({ page }) => {
     
             SearchClient.fillCPF()
             SearchClient.clickGlassSearchClient()
@@ -21,7 +22,7 @@ describe('Cadastrar cliente', () => {
             SearchClient.numberDescripCPFSearch()
         }) 
 
-        it('2-Pesquisa por número CNPJ', () => {
+        test('2-Pesquisa por número CNPJ',  async ({ page }) => {
 
             SearchClient.fillCNPJ()
             SearchClient.clickGlassSearchClient()
@@ -36,7 +37,7 @@ describe('Cadastrar cliente', () => {
 
     context('Pesquisa cliente por descrição', () => {
 
-        it('3-Pesquisa por descrição CPF', () => {
+        test('3-Pesquisa por descrição CPF',  async ({ page }) => {
 
             SearchClient.fillDescripCPF()
             SearchClient.clickGlassSearchClient()
@@ -47,7 +48,7 @@ describe('Cadastrar cliente', () => {
             SearchClient.numberDescripCPFSearch()
         }) 
 
-        it('4-Pesquisa por descrição CNPJ', () => {
+        test('4-Pesquisa por descrição CNPJ',  async ({ page }) => {
 
             SearchClient.typeAgainDescriptCNPJ()
             SearchClient.clickGlassSearchClient()

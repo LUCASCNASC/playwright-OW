@@ -1,15 +1,16 @@
+import { test } from '@playwright/test';
 import { Login } from '../../../pages/para_logins/para_login'
 
 const usuSabiumAutomacao = "usu.expiradosenha"; //usuário 415
 const senhaautomacao = "123.automacao";
 const novasenha = "123.novasenha";
-describe('Senha do usuário expirada', () => {
 
-    beforeEach(() => {
-        cy.visit('/')
-        cy.clearAllSessionStorage()
-        cy.urlAposLogin()
-        cy.tituloPagina()
+test.describe('Senha do usuário expirada', () => {
+
+    test.beforeEach(async ({ page }) => {
+        CommandsGeneral.login()
+        CommandsGeneral.urlAposLogin()
+        CommandsGeneral.tituloPagina()
         Login.logoEnterpriseLogin()
         Login.iconComputerLogin()
         Login.userTextIcon()
@@ -17,7 +18,7 @@ describe('Senha do usuário expirada', () => {
 
     context('Tentar login quando a senha já está expirada', () => {
 
-        it.skip('1. Tentar logar com usuário com senha do usuário expirada - clicar em SIM atualizar senha - clicar em Fechar a redefinição de senha', () => {
+        test('1. Tentar logar com usuário com senha do usuário expirada - clicar em SIM atualizar senha - clicar em Fechar a redefinição de senha',  async ({ page }) => {
         
             //Validando campo "informe seu usuário"
             cy.get('#txtusername')
@@ -141,7 +142,7 @@ describe('Senha do usuário expirada', () => {
                 .and('not.have.attr', 'disabled')
         })
 
-        it.skip('1. Tentar logar com usuário com senha do usuário expirada - clicar em NÃO atualizar senha - clicar em Fechar a redefinição de senha', () => {
+        test('1. Tentar logar com usuário com senha do usuário expirada - clicar em NÃO atualizar senha - clicar em Fechar a redefinição de senha',  async ({ page }) => {
         
             //Validando campo "informe seu usuário"
             cy.get('#txtusername')
@@ -279,7 +280,7 @@ describe('Senha do usuário expirada', () => {
 
     context('Login quando a senha foi trocada e falta 1 dia para expirar, como foi definido no grupo deste usuário', () => {
 
-        it.skip('Login - clicar em NÃO atualizar senha', () => {
+        test('Login - clicar em NÃO atualizar senha',  async ({ page }) => {
         
                 //Validando campo "informe seu usuário"
                 cy.get('#txtusername')
@@ -316,7 +317,7 @@ describe('Senha do usuário expirada', () => {
                     .should('be.visible')
         })
         
-        it.skip('Login - clicar em SIM atualizar senha - clicar em Fechar a redefinição de senha', () => {
+        test('Login - clicar em SIM atualizar senha - clicar em Fechar a redefinição de senha',  async ({ page }) => {
         
             //Validando campo "informe seu usuário"
             cy.get('#txtusername')
@@ -443,7 +444,7 @@ describe('Senha do usuário expirada', () => {
                 .and('not.have.attr', 'disabled')
         })
     
-        it.skip('Login - clicar em SIM atualizar senha - clicar em CONFIRMAR a redefinição de senha', () => {
+        test('Login - clicar em SIM atualizar senha - clicar em CONFIRMAR a redefinição de senha',  async ({ page }) => {
         
             //Validando campo "informe seu usuário"
             cy.get('#txtusername')

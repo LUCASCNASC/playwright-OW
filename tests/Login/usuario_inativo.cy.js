@@ -1,20 +1,21 @@
+import { test } from '@playwright/test';
 import { Login } from '../../../pages/para_logins/para_login'
 
 const usuSabiumAutomacao = "usu.inativo"; //usuário 416
 const senhaautomacao = "123.automacao";
-describe('Usuário inativo', () => {
 
-    beforeEach(() => {
-        cy.visit('/')
-        cy.clearAllSessionStorage()
-        cy.urlAposLogin()
-        cy.tituloPagina()
+test.describe('Usuário inativo', () => {
+
+    test.beforeEach(async ({ page }) => {
+        CommandsGeneral.login()
+        CommandsGeneral.urlAposLogin()
+        CommandsGeneral.tituloPagina()
         Login.logoEnterpriseLogin()
         Login.iconComputerLogin()
         Login.userTextIcon()
     })
 
-    it('1. Tentar logar com usuário inativo', () => {
+    test('1. Tentar logar com usuário inativo',  async ({ page }) => {
     
         //Validando campo "informe seu usuário"
         cy.get('#txtusername')
