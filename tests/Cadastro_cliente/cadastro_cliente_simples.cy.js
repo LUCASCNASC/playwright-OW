@@ -21,7 +21,7 @@ test.describe('Cadastrar cliente simples', () => {
 
             GeneralClientSimple.iconMenuOptions()
             GeneralClientSimple.optionClientSimple()
-            FillClientSimple.cpfClient()
+            FillClientSimple.cpfClient() //Preencher com CPF
             FillClientSimple.nameCompleteCPF()
             FillClientSimple.dateBirth()
             FillClientSimple.sexPersonPhysical()
@@ -36,7 +36,7 @@ test.describe('Cadastrar cliente simples', () => {
     
             GeneralClientSimple.iconMenuOptions()
             GeneralClientSimple.optionClientSimple()
-            FillClientSimple.cpfClient()
+            FillClientSimple.cpfClient() //Preencher com CPF
             FillClientSimple.nameCompleteCPF()
             FillClientSimple.dateBirth()
             FillClientSimple.sexPersonPhysical()
@@ -80,7 +80,7 @@ test.describe('Cadastrar cliente simples', () => {
     
             GeneralClientSimple.iconMenuOptions()
             GeneralClientSimple.optionClientSimple()
-            FillClientSimple.cpfClient()
+            FillClientSimple.cpfClient() //Preencher com CPF
             FillClientSimple.nameCompleteCPF()
             FillClientSimple.dateBirth()
             FillClientSimple.sexPersonPhysical()
@@ -252,7 +252,7 @@ test.describe('Cadastrar cliente simples', () => {
             GeneralClientSimple.iconMenuOptions()
             GeneralClientSimple.optionClientSimple()
             GeneralClientSimple.arrastarPessoaJuridica()
-            FillClientSimple.cnpjClient()
+            FillClientSimple.cnpjClient() //Preencher com CNPJ
             FillClientSimple.nameCompleteCNPJ()
             FillClientSimple.searchCEP()
             FillClientSimple.numberAdress()
@@ -266,7 +266,7 @@ test.describe('Cadastrar cliente simples', () => {
             GeneralClientSimple.iconMenuOptions()
             GeneralClientSimple.optionClientSimple()
             GeneralClientSimple.arrastarPessoaJuridica()
-            FillClientSimple.cnpjClient()
+            FillClientSimple.cnpjClient() //Preencher com CNPJ
             FillClientSimple.nameCompleteCNPJ()
             FillClientSimple.searchCEP()
             FillClientSimple.numberAdress()

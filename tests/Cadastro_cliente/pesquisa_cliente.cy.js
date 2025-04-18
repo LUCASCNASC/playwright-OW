@@ -13,7 +13,7 @@ test.describe('Cadastrar cliente', () => {
 
         test('1-Pesquisa por número CPF',  async ({ page }) => {
     
-            SearchClient.fillCPF()
+            SearchClient.fillCPF() //Preencher com CPF
             SearchClient.clickGlassSearchClient()
             SearchClient.cardClientValidate()
             SearchClient.typeAgainCPF()
@@ -24,7 +24,7 @@ test.describe('Cadastrar cliente', () => {
 
         test('2-Pesquisa por número CNPJ',  async ({ page }) => {
 
-            SearchClient.fillCNPJ()
+            SearchClient.fillCNPJ() //Preencher com CNPJ
             SearchClient.clickGlassSearchClient()
             SearchClient.cardClientValidate()
             SearchClient.typeAgainCNPJ()
@@ -39,7 +39,7 @@ test.describe('Cadastrar cliente', () => {
 
         test('3-Pesquisa por descrição CPF',  async ({ page }) => {
 
-            SearchClient.fillDescripCPF()
+            SearchClient.fillDescripCPF() //Preencher com DESCRIÇÃO CPF
             SearchClient.clickGlassSearchClient()
             SearchClient.cardClientValidate()
             SearchClient.typeAgainCPF()
@@ -50,7 +50,7 @@ test.describe('Cadastrar cliente', () => {
 
         test('4-Pesquisa por descrição CNPJ',  async ({ page }) => {
 
-            SearchClient.typeAgainDescriptCNPJ()
+            SearchClient.typeAgainDescriptCNPJ() //Preencher com DESCRIÇÃO CNPJ
             SearchClient.clickGlassSearchClient()
             SearchClient.cardClientValidate()
             SearchClient.typeAgainCNPJ()
