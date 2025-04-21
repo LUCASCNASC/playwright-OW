@@ -36,30 +36,30 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.iconMenuOptions() //PESSOA
             GeralClienteCoGeneralClientCompletempleto.optionClientComplete()
             FillPerson.cpfClient() //Preencher com CPF
-            FillPerson.nameComplete()
-            FillPerson.nameSocial()
-            FillPerson.dateBirth()
-            FillPerson.sexClient()
-            ClickClientComplete.saveClient()
+            FillPerson.nameComplete() //Preencher nome completo do cliente
+            FillPerson.nameSocial() //preencher nome social do cliente
+            FillPerson.dateBirth() //preencher data de nascimento do cliente
+            FillPerson.sexClient() //selecionar sexo do cliente
+            ClickClientComplete.saveClient() //clicar para salvar o cadastro de cliente
             
             GeneralClientComplete.messAlertAdressMandatory() //mensagem de endereço obrigatório após tentar salvar sem adicionar um endereço
 
             GeneralAdress.clickAbaAdress() //CADASTRAR ENDEREÇO
-            GeneralAdress.clickAddNewAdress()
-            GeneralAdress.modalAdressEmptyValidade()
-            GeneralAdress.clickOpenTypeAdress()
-            FillAdress.typeAdress()
-            FillAdress.cepAdress()
-            FillAdress.numberAdress()
-            GeneralAdress.clickSaveAdress()
-            GeneralAdress.infoAdressAdded()
+            GeneralAdress.clickAddNewAdress() //clicar para adicionar novo endereço
+            GeneralAdress.modalAdressEmptyValidade() 
+            GeneralAdress.clickOpenTypeAdress() //clicar para abrir o campo tipo de endereço
+            FillAdress.typeAdress() //clicar para selecionar o tipo de endereço
+            FillAdress.cepAdress() //preencher o cep
+            FillAdress.numberAdress() //preencher o númedo do endereço
+            GeneralAdress.clickSaveAdress() //clicar para salvar o endereço
+            GeneralAdress.infoAdressAdded() //validar informações inseridas no cadastro de endereço
 
             GeneralRefRoute.clickAbaRoute() //CADASTRAR ROTA
-            GeneralRefRoute.clickAddedNewRoute()
-            GeneralRefRoute.modalRouteEmptyValidade()
-            FillRefRoute.typeAdressRoute()
-            FillRefRoute.routaComplete()
-            FillRefRoute.infoRouteAdded()
+            GeneralRefRoute.clickAddedNewRoute()//clicar para adicionar nova rota
+            GeneralRefRoute.modalRouteEmptyValidade() 
+            FillRefRoute.typeAdressRoute() //clicar para selecionar o tipo de rota
+            FillRefRoute.routaComplete() //preencher rota
+            FillRefRoute.infoRouteAdded() 
 
             GeneralRefPhone.clickAbaPhone() //CADASTRAR TELEFONE
             GeneralRefPhone.clickAddedNewPhone()
