@@ -84,8 +84,8 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.messAlertAdressMandatory() //mensagem de endereço obrigatório após tentar salvar em adicionar um endereço
 
             FillPerson.cpfClient() //Preencher com CPF
-            FillPerson.nameComplete()
-            FillPerson.nameSocial()
+            FillPerson.nameComplete()  //Preencher nome completo do cliente
+            FillPerson.nameSocial() //preencher nome social do cliente
             FillPerson.dateBirth()
             FillPerson.sexClient()
 
@@ -184,8 +184,8 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete() 
             FillPerson.cpfClient() //Preencher com CPF
-            FillPerson.nameComplete()
-            FillPerson.nameSocial()
+            FillPerson.nameComplete() //Preencher nome completo do cliente
+            FillPerson.nameSocial() //preencher nome social do cliente
             FillPerson.dateBirth()
             FillPerson.sexClient()
             ClickClientComplete.saveClient()
@@ -245,8 +245,8 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete() 
             FillPerson.cpfClient() //Preencher com CPF
-            FillPerson.nameComplete()
-            FillPerson.nameSocial()
+            FillPerson.nameComplete() //Preencher nome completo do cliente
+            FillPerson.nameSocial() //preencher nome social do cliente
             FillPerson.dateBirth()
             FillPerson.sexClient()
             ClickClientComplete.saveClient()
@@ -316,8 +316,8 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete() 
             FillPerson.cpfClient() //Preencher com CPF
-            FillPerson.nameComplete()
-            FillPerson.nameSocial()
+            FillPerson.nameComplete() //Preencher nome completo do cliente
+            FillPerson.nameSocial() //preencher nome social do cliente
             FillPerson.dateBirth()
             FillPerson.sexClient()
             ClickClientComplete.saveClient()
@@ -387,8 +387,8 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete() 
             FillPerson.cpfClient() //Preencher com CPF
-            FillPerson.nameComplete()
-            FillPerson.nameSocial()
+            FillPerson.nameComplete() //Preencher nome completo do cliente
+            FillPerson.nameSocial() //preencher nome social do cliente
             FillPerson.dateBirth()
             FillPerson.sexClient()
             ClickClientComplete.saveClient()
@@ -458,8 +458,8 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete() 
             FillPerson.cpfClient() //Preencher com CNPJ
-            FillPerson.nameComplete()
-            FillPerson.nameSocial()
+            FillPerson.nameComplete() //Preencher nome completo do cliente
+            FillPerson.nameSocial() //preencher nome social do cliente
             FillPerson.dateBirth()
             FillPerson.sexClient()
             ClickClientComplete.saveClient()
@@ -529,8 +529,8 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete()
             FillPerson.cpfClient() //Preencher com CPF
-            FillPerson.nameComplete()
-            FillPerson.nameSocial()
+            FillPerson.nameComplete() //Preencher nome completo do cliente
+            FillPerson.nameSocial() //preencher nome social do cliente
             FillPerson.dateBirth()
             FillPerson.sexClient()
             ClickClientComplete.saveClient()
@@ -599,8 +599,8 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete()
             FillPerson.cpfClient() //Preencher com CPF
-            FillPerson.nameComplete()
-            FillPerson.nameSocial()
+            FillPerson.nameComplete() //Preencher nome completo do cliente
+            FillPerson.nameSocial() //preencher nome social do cliente
             FillPerson.dateBirth()
             FillPerson.sexClient()
             ClickClientComplete.saveClient()
@@ -669,8 +669,8 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete()
             FillPerson.cpfClient() //Preencher com CPF
-            FillPerson.nameComplete()
-            FillPerson.nameSocial()
+            FillPerson.nameComplete() //Preencher nome completo do cliente
+            FillPerson.nameSocial() //preencher nome social do cliente
             FillPerson.dateBirth()
             FillPerson.sexClient()
             ClickClientComplete.saveClient()
@@ -739,8 +739,8 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete()
             FillPerson.cpfClient() //Preencher com CPF
-            FillPerson.nameComplete()
-            FillPerson.nameSocial()
+            FillPerson.nameComplete() //Preencher nome completo do cliente
+            FillPerson.nameSocial() //preencher nome social do cliente
             FillPerson.dateBirth()
             FillPerson.sexClient()
             ClickClientComplete.saveClient()
@@ -811,8 +811,8 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete()
             FillPerson.cpfClient() //Preencher com CPF
-            FillPerson.nameComplete()
-            FillPerson.nameSocial()
+            FillPerson.nameComplete() //Preencher nome completo do cliente
+            FillPerson.nameSocial() //preencher nome social do cliente
             FillPerson.dateBirth()
             FillPerson.sexClient()
             ClickClientComplete.saveClient()
@@ -874,8 +874,8 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete()
             FillPerson.cpfClient() //Preencher com CPF
-            FillPerson.nameComplete()
-            FillPerson.nameSocial()
+            FillPerson.nameComplete() //Preencher nome completo do cliente
+            FillPerson.nameSocial() //preencher nome social do cliente
             FillPerson.dateBirth()
             FillPerson.sexClient()
             ClickClientComplete.saveClient()
@@ -938,8 +938,8 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete()
             FillPerson.cpfClient() //Preencher com CPF
-            FillPerson.nameComplete()
-            FillPerson.nameSocial()
+            FillPerson.nameComplete() //Preencher nome completo do cliente
+            FillPerson.nameSocial() //preencher nome social do cliente
             FillPerson.dataNascimento()
             FillPerson.sexClient()
             ClickClientComplete.saveClient()
@@ -1001,8 +1001,8 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete()
             FillPerson.cpfClient() //Preencher com CPF
-            FillPerson.nameComplete()
-            FillPerson.nameSocial()
+            FillPerson.nameComplete() //Preencher nome completo do cliente
+            FillPerson.nameSocial() //preencher nome social do cliente
             FillPerson.dateBirth()
             FillPerson.sexClient()
             ClickClientComplete.saveClient()
