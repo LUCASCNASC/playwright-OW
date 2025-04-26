@@ -29,7 +29,7 @@ test.describe('Gerar pedido de venda Kit com desconto', () => {
         test('1. Ped venda: kit 1862 0 0 com desconto Sub (-) / VALOR FIXO',  async ({ page }) => {
     
             Product.kitDiscount() //PRODUTO
-            ValidateBalance.withBalance()
+            ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             GeneralOrder.compositionKit()

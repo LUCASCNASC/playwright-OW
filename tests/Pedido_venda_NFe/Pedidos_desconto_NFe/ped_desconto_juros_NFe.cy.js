@@ -22,7 +22,7 @@ test.describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244
         ProcessSale.NFe()
         ChooseClient.withRoute()
         Product.roundUpDown() //PRODUTO
-        ValidateBalance.withBalance()
+        ValidateBalance.withBalance() //VALIDAR SALDO
         CommandsGeneral.selectProductSearch() //selecionar produto
     })
 

@@ -21,7 +21,7 @@ test.describe('Gerar pedido com financeiro na baixa com entrega', () => {
         ProcessSale.financePaymentNFCe()
         ChooseClient.withRoute()
         Product.fisrt() //PRODUTO
-        ValidateBalance.withBalance()
+        ValidateBalance.withBalance() //VALIDAR SALDO
         CommandsGeneral.selectProductSearch() //selecionar produto
     })
     
@@ -53,7 +53,7 @@ test.describe('Gerar pedido com financeiro na baixa com entrega', () => {
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             Product.second() //SEGUNDO PRODUTO
-            ValidateBalance.withBalance()
+            ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             CommandsGeneral.selectProductSearch() //selecionar produto

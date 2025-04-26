@@ -28,7 +28,7 @@ test.describe('Gerar pedido de venda com desconto', () => {
         test('1. Ped venda: produto 1912 0 0 com desconto Sub (-) / R$',  async ({ page }) => {
 
             Product.discountNumber() //PRODUTO
-            ValidateBalance.withBalance()
+            ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -51,7 +51,7 @@ test.describe('Gerar pedido de venda com desconto', () => {
         test('2. Ped venda: produto 1913 0 0 com desconto Sub (-) / % (Porcentagem)',  async ({ page }) => {
 
             Product.discountPercentage() //PRODUTO
-            ValidateBalance.withBalance()
+            ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -74,7 +74,7 @@ test.describe('Gerar pedido de venda com desconto', () => {
         test('3. Ped venda: produto 1914 0 0 com desconto Sub (-) / VALOR FIXO',  async ({ page }) => {
 
             Product.discountValueFixed() //PRODUTO
-            ValidateBalance.withBalance()
+            ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho

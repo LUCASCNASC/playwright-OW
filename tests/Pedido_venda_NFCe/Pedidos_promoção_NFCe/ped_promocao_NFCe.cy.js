@@ -27,7 +27,7 @@ test.describe('Gerar pedidos com promoção com entrega', () => {
         test('1. Ped venda com promoção partida (promoção 152): produto 1868 0 0',  async ({ page }) => {
     
             Product.promoMatch() //PRODUTO
-            ValidateBalance.withBalance()
+            ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto ; 
             Promotion.ticketPromotion() 
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -54,7 +54,7 @@ test.describe('Gerar pedidos com promoção com entrega', () => {
         test('2. Ped venda com promoção a prazo com entrada (promoção 150): produto 1866 0 0',  async ({ page }) => {
     
             Product.promoDeadlineEntry() //PRODUTO
-            ValidateBalance.withBalance()
+            ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto ; 
             Promotion.ticketPromotion() 
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -85,7 +85,7 @@ test.describe('Gerar pedidos com promoção com entrega', () => {
         test('3. Ped venda com promoção a prazo parcelado (promoção 151): produto 1867 0 0',  async ({ page }) => {
     
             Product.promoDeadlineInstallment() //PRODUTO
-            ValidateBalance.withBalance()
+            ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto ; 
             Promotion.ticketPromotion()
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto

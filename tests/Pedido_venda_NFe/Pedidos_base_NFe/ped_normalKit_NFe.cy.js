@@ -22,7 +22,7 @@ test.describe('Gerar pedido normal', () => {
         ProcessSale.NFe()
         ChooseClient.withRoute()
         Product.kitFirst()
-        ValidateBalance.withBalance()
+        ValidateBalance.withBalance() //VALIDAR SALDO
         CommandsGeneral.selectProductSearch() //selecionar produto
     })
   
