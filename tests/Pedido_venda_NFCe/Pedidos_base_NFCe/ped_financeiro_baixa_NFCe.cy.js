@@ -15,11 +15,11 @@ import { CommandsGeneral } from '../../../../pages/commands..js'
 test.describe('Gerar pedido com financeiro na baixa com entrega', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
-        ProcessSale.financePaymentNFCe()
-        ChooseClient.withRoute()
+        CommandsGeneral.login()//login
+        CommandsGeneral.urlAposLogin() //url após login
+        CommandsGeneral.tituloPagina() //título da página
+        ProcessSale.financePaymentNFCe() //processo de financeiro na baixa
+        ChooseClient.withRoute() //escolher cliente com rota
         Product.fisrt() //PRODUTO
         ValidateBalance.withBalance() //VALIDAR SALDO
         CommandsGeneral.selectProductSearch() //selecionar produto

@@ -16,11 +16,11 @@ import { CommandsGeneral } from '../../../../pages/commands..js'
 test.describe('Gerar pedido de entrega futura com entrega', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
-        ProcessSale.deliveryFutureNFCe()
-        ChooseClient.withRoute()
+        CommandsGeneral.login() //login
+        CommandsGeneral.urlAposLogin() //url após login
+        CommandsGeneral.tituloPagina() //título da página
+        ProcessSale.deliveryFutureNFCe() //processo de entrega futura
+        ChooseClient.withRoute() //escolher cliente com rota
         Product.fisrt() //PRODUTO
         ValidateBalance.withBalance() //VALIDAR SALDO
         CommandsGeneral.selectProductSearch() //selecionar produto

@@ -54,7 +54,7 @@ test.describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
-            Service.clickOKServiceLinked()
+            Service.clickOKServiceLinked() 
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments()
             GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
