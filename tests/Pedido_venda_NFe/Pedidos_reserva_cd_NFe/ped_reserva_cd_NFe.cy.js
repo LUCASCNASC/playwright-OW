@@ -40,7 +40,7 @@ test.describe('Gerar pedido com reserva no CD - Regra de saldo Parâmetro 36 = 4
             Receipt.main()
             ChooseInstallmentReceipt.duas()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -68,7 +68,7 @@ test.describe('Gerar pedido com reserva no CD - Regra de saldo Parâmetro 36 = 4
             Receipt.main()
             ChooseInstallmentReceipt.duas()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })
@@ -91,7 +91,7 @@ test.describe('Gerar pedido com reserva no CD - Regra de saldo Parâmetro 36 = 4
             Receipt.main()
             ChooseInstallmentReceipt.duas()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -118,7 +118,7 @@ test.describe('Gerar pedido com reserva no CD - Regra de saldo Parâmetro 36 = 4
             Receipt.main()
             ChooseInstallmentReceipt.duas()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })

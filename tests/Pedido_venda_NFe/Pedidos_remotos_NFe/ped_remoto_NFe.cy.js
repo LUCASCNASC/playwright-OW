@@ -42,7 +42,7 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
             Receipt.main()
             ChooseInstallmentReceipt.duas()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -73,7 +73,7 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
             Receipt.main()
             ChooseInstallmentReceipt.duas()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
         
@@ -96,7 +96,7 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
             Receipt.main()
             ChooseInstallmentReceipt.duas()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })
@@ -121,7 +121,7 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
             Receipt.main()
             ChooseInstallmentReceipt.duas()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })    
         

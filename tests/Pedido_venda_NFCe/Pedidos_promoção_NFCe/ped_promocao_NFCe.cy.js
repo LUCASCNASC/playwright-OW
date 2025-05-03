@@ -47,7 +47,7 @@ test.describe('Gerar pedidos com promoção com entrega', () => {
             cy.get('.active > md-collapsible-body > .layout-column > [style="position: relative"] > :nth-child(1) > div.ng-binding').click()
 
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     
@@ -78,7 +78,7 @@ test.describe('Gerar pedidos com promoção com entrega', () => {
             // Receipt.main()
             // ChooseInstallmentReceipt.two()
             // AdvanceNormal.final()
-            // FinishOrder.clickFinishOrder() //RESUMO
+            // FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             // FinishOrder.validateOrderGenerated()
         })
 
@@ -104,7 +104,7 @@ test.describe('Gerar pedidos com promoção com entrega', () => {
             //Escolher a forma de pagamento/parcelas
             cy.get('.active > md-collapsible-body > .layout-column > [style="position: relative"] > :nth-child(1) > div.ng-binding').click({force:true})
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })  
     })

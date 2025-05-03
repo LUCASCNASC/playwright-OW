@@ -48,7 +48,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo - Or
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -79,7 +79,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo - Or
             TicketPrestamista.added()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })
@@ -108,7 +108,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo - Or
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -135,7 +135,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo - Or
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -163,7 +163,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo - Or
             TicketPrestamista.pageFinal() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })

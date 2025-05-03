@@ -67,7 +67,7 @@ test.describe('Venda de serviço avulso, com pedido do produto já baixado', () 
             Receipt.main()
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })

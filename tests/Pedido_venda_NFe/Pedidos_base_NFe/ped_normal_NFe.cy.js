@@ -41,7 +41,7 @@ test.describe('Gerar pedido normal', () => {
             Receipt.main()
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -66,7 +66,7 @@ test.describe('Gerar pedido normal', () => {
             Receipt.main()
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -85,7 +85,7 @@ test.describe('Gerar pedido normal', () => {
             Receipt.main()
             ChooseInstallmentReceipt.one()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })
@@ -105,7 +105,7 @@ test.describe('Gerar pedido normal', () => {
             Receipt.main() 
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -129,7 +129,7 @@ test.describe('Gerar pedido normal', () => {
             Receipt.main() 
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -148,7 +148,7 @@ test.describe('Gerar pedido normal', () => {
             Receipt.main() 
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })

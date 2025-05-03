@@ -44,7 +44,7 @@ test.describe('Gerar pedidos com Garantia', () => {
             Receipt.main()
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -68,7 +68,7 @@ test.describe('Gerar pedidos com Garantia', () => {
             Receipt.main()
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     
@@ -84,7 +84,7 @@ test.describe('Gerar pedidos com Garantia', () => {
             Receipt.main()
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -108,7 +108,7 @@ test.describe('Gerar pedidos com Garantia', () => {
             Receipt.main()
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     
@@ -124,7 +124,7 @@ test.describe('Gerar pedidos com Garantia', () => {
             Receipt.main()
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -148,7 +148,7 @@ test.describe('Gerar pedidos com Garantia', () => {
             Receipt.main()
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })
@@ -167,7 +167,7 @@ test.describe('Gerar pedidos com Garantia', () => {
             Receipt.main()
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -190,7 +190,7 @@ test.describe('Gerar pedidos com Garantia', () => {
             Receipt.main()
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -206,7 +206,7 @@ test.describe('Gerar pedidos com Garantia', () => {
             Receipt.main()
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -229,7 +229,7 @@ test.describe('Gerar pedidos com Garantia', () => {
             Receipt.main()
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -245,7 +245,7 @@ test.describe('Gerar pedidos com Garantia', () => {
             Receipt.main()
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -267,7 +267,7 @@ test.describe('Gerar pedidos com Garantia', () => {
             Receipt.main()
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })

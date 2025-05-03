@@ -42,7 +42,7 @@ test.describe('Gerar pedido com reserva no CD (com entrega) - Regra de saldo Par
             Receipt.main()
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -71,7 +71,7 @@ test.describe('Gerar pedido com reserva no CD (com entrega) - Regra de saldo Par
             Receipt.main()
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })

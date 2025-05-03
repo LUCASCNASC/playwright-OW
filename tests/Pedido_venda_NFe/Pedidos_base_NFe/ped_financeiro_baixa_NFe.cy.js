@@ -41,7 +41,7 @@ test.describe('Gerar pedido com financeiro na baixa', () => {
             Receipt.main()
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -66,7 +66,7 @@ test.describe('Gerar pedido com financeiro na baixa', () => {
             Receipt.main()
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })
@@ -86,7 +86,7 @@ test.describe('Gerar pedido com financeiro na baixa', () => {
             Receipt.main()
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -110,7 +110,7 @@ test.describe('Gerar pedido com financeiro na baixa', () => {
             Receipt.main()
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })

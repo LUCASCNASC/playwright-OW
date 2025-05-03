@@ -46,7 +46,7 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             Receipt.main() //SEGUNDA FORMA DE PAGAMENTO
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -65,7 +65,7 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             Receipt.main() //SEGUNDA FORMA DE PAGAMENTO
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -88,7 +88,7 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             ChooseInstallmentReceipt.one()
             GroupReceipt.notGroupReleases()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -111,7 +111,7 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             ChooseInstallmentReceipt.one()
             GroupReceipt.groupReleases()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -136,7 +136,7 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             GroupReceipt.selectReleasesGroup()
             GroupReceipt.clickGroup()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })

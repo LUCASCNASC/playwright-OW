@@ -58,7 +58,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -89,7 +89,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })
@@ -122,7 +122,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -154,7 +154,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -186,7 +186,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -218,7 +218,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })
@@ -247,7 +247,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -273,7 +273,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -300,7 +300,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })
@@ -335,7 +335,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.finalarFinal()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -368,7 +368,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
         
@@ -396,7 +396,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })
@@ -437,7 +437,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ChooseInstallmentReceipt.one()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -479,7 +479,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             GeneralOrder.adicionadoRecebAgrupado()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -517,7 +517,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ChooseInstallmentReceipt.one()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -561,7 +561,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             GeneralOrder.adicionadoRecebAgrupado()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -587,7 +587,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })
@@ -631,7 +631,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ChooseInstallmentReceipt.one()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -677,7 +677,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             GeneralOrder.adicionadoRecebAgrupado()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -718,7 +718,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ChooseInstallmentReceipt.one()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -764,7 +764,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             GeneralOrder.adicionadoRecebAgrupado()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -806,7 +806,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ChooseInstallmentReceipt.one()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -853,7 +853,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             GeneralOrder.adicionadoRecebAgrupado()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })

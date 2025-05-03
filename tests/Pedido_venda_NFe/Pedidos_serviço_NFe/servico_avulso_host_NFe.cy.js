@@ -36,7 +36,7 @@ test.describe('Venda de serviço avulso Host - 104', () => {
             Receipt.main()
             ChooseInstallmentReceipt.one()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })

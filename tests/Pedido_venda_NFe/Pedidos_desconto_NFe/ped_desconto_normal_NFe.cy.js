@@ -44,7 +44,7 @@ test.describe('Gerar pedido de venda com desconto', () => {
             Receipt.main()
             ChooseInstallmentReceipt.one()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -67,7 +67,7 @@ test.describe('Gerar pedido de venda com desconto', () => {
             Receipt.main()
             ChooseInstallmentReceipt.one()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -90,7 +90,7 @@ test.describe('Gerar pedido de venda com desconto', () => {
             Receipt.main()
             ChooseInstallmentReceipt.one()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })

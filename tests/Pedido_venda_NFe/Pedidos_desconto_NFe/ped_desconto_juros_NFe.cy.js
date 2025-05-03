@@ -40,7 +40,7 @@ test.describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244
             GeneralPayment.loadingFormPayment()
             Receipt.main()
             ChooseInstallmentReceipt.one()
-            OrderDiscount.dragFormPayment() //DESCONTO
+            OrderDiscount.dragFormPayment() //FINALIZAR PEDIDO
             OrderDiscount.clickChangeValue()
             OrderDiscount.modalChangeValue()
             OrderDiscount.changeValueToLow()
@@ -66,7 +66,7 @@ test.describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244
             OrderDiscount.modalChangeValue()
             OrderDiscount.changeValueToTop()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })

@@ -44,7 +44,7 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             Receipt.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
         
@@ -68,7 +68,7 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             Receipt.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -85,7 +85,7 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             Receipt.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -109,7 +109,7 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             Receipt.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
 
@@ -126,7 +126,7 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             Receipt.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })   
 
@@ -150,7 +150,7 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             Receipt.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //RESUMO
+            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
         })
     })
