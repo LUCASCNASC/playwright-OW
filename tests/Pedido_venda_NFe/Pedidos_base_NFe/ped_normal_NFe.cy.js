@@ -24,7 +24,7 @@ test.describe('Gerar pedido normal', () => {
         Product.fisrt() //PRODUTO
         ValidateBalance.withBalance() //VALIDAR SALDO
         CommandsGeneral.selectProductSearch() //selecionar produto
-    })
+    }) 
 
     context('Sem entrega/ processo 9860 - caminho feliz', () => {
 
