@@ -45,7 +45,7 @@ test.describe('Gerar pedido normal com entrega', () => {
             ChooseInstallmentReceipt.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinishOrder.validateOrderGenerated() 
         })
     })
 })
