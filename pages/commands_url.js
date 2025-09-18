@@ -1,60 +1,49 @@
+import { expect, Page } from '@playwright/test';
+
+/**
+ * Classe utilitária para validação de URLs de rotas.
+ */
 export class ValidateURL {
+  /**
+   * @param {Page} page
+   */
+  constructor(page) {
+    this.page = page;
+  }
 
-    constructor(page) {
-        this.page = page
-    }
+  async urlDepartamentos() {
+    await expect(this.page).toHaveURL(/\/#!\/departamentos\//);
+  }
 
-    async urlDepartamentos (selector) {
+  async urlServicos() {
+    await expect(this.page).toHaveURL(/\/#!\/servicos/);
+  }
 
-        // Verifica se a URL inclui a string especificada
-        await expect(page).toHaveURL(/\/#!\/departamentos\/\//);
-    }
+  async urlPedidosPendentes() {
+    await expect(this.page).toHaveURL(/\/#!\/vendedor\/pedidos/);
+  }
 
-    async urlServicos (selector) {
+  async urlCliente() {
+    await expect(this.page).toHaveURL(/\/#!\/cliente\/cliente-cadastro/);
+  }
 
-        // Verifica se a URL inclui a string especificada
-        await expect(page).toHaveURL(/\/#!\/servicos/);
-    }
+  async urlClienteCompleto() {
+    await expect(this.page).toHaveURL(/\/#!\/clienteCompleto/);
+  }
 
-    async urlPedidosPendentes (selector) {
+  async urlPosVenda() {
+    await expect(this.page).toHaveURL(/\/#!\/posvenda/);
+  }
 
-        // Verifica se a URL inclui a string especificada
-        await expect(page).toHaveURL(/\/#!\/vendedor\/pedidos/);
-    }
+  async urlIntencaoCompra() {
+    await expect(this.page).toHaveURL(/\/#!\/intencoescompra/);
+  }
 
-    async urlCliente (selector) {
+  async urlConfiguracoes() {
+    await expect(this.page).toHaveURL(/\/#!\/customizacao/);
+  }
 
-        // Verifica se a URL inclui a string especificada
-        await expect(page).toHaveURL(/\/#!\/cliente\/cliente-cadastro/);
-    }
-
-    async urlClienteCompleto (selector) {
-
-        // Verifica se a URL inclui a string especificada
-        await expect(page).toHaveURL(/\/#!\/clienteCompleto/);
-    }
-
-    async urlPosVenda (selector) {
-
-        // Verifica se a URL inclui a string especificada
-        await expect(page).toHaveURL(/\/#!\/posvenda/);
-    }
-
-    async urlIntencaoCompra (selector) {
-
-        // Verifica se a URL inclui a string especificada
-        await expect(page).toHaveURL(/\/#!\/intencoescompra/);
-    }
-
-    async urlConfiguracoes (selector) {
-
-        // Verifica se a URL inclui a string especificada
-        await expect(page).toHaveURL(/\/#!\/customizacao/);
-    }
-
-    async urlMinhaPerformance (selector) {
-
-        // Verifica se a URL inclui a string especificada
-        await expect(page).toHaveURL(/\/#!\/vendedor/);
-    }
+  async urlMinhaPerformance() {
+    await expect(this.page).toHaveURL(/\/#!\/vendedor/);
+  }
 }
