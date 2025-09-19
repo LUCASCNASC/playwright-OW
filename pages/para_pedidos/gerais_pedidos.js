@@ -1,86 +1,87 @@
+import { expect, Page } from '@playwright/test';
+
+/**
+ * Page Object para ações gerais em pedidos.
+ */
 export class GeneralOrder {
+  /**
+   * @param {Page} page
+   */
+  constructor(page) {
+    this.page = page;
+  }
 
-    constructor(page) {
-        this.page = page
-    }
+  /**
+   * Troca a filial de faturamento de local para remota.
+   */
+  async changeBranchInvoicing() {
+    const filialLocal = '50 - PR - EMISSÃO NFe/NFCe';
+    const filialRemota = '6 - GAZIN - IND. E COM. DE MÓVEIS E ELETROD. LTDA.';
 
-    //Trocar filial de faturamento - faturamento remoto da filial 50 para 6
-    async changeBranchInvoicing (selector) {
+    const iconeFilialSaldo = this.page.locator('[ng-click="openModalFilial(itemClicado.grade, false);"] > .ng-binding');
+    await expect(iconeFilialSaldo).toBeVisible();
 
-        const filialLocal = '50 - PR - EMISSÃO NFe/NFCe';
-        const filialRemota = '6 - GAZIN - IND. E COM. DE MÓVEIS E ELETROD. LTDA.';
+    const botaoFilialFaturamento = this.page.locator('[ng-click="openModalFilial(itemClicado.grade, false);"]');
+    await expect(botaoFilialFaturamento).toBeVisible();
+    await expect(botaoFilialFaturamento).toContainText(filialLocal);
+    await botaoFilialFaturamento.click({ force: true });
 
-        // Ícone dentro do botão de filial de saldo
-        const iconeFilialSaldo = page.locator('[ng-click="openModalFilial(itemClicado.grade, false);"] > .ng-binding');
-        await expect(iconeFilialSaldo).toBeVisible();
+    const tituloFilial = this.page.locator('.md-dialog-fullscreen > .md-primary > .md-toolbar-tools > .flex');
+    await expect(tituloFilial).toBeVisible();
+    await expect(tituloFilial).toHaveText('Filial');
 
-        // Botão filial de faturamento
-        const botaoFilialFaturamento = page.locator('[ng-click="openModalFilial(itemClicado.grade, false);"]');
-        await expect(botaoFilialFaturamento).toBeVisible();
-        await expect(botaoFilialFaturamento).toContainText(filialLocal);
-        await botaoFilialFaturamento.click({ force: true });
+    const sairCardFilial = this.page.locator('.md-dialog-fullscreen > .md-primary > .md-toolbar-tools > .md-icon-button > .ng-binding');
+    await expect(sairCardFilial).toBeVisible();
 
-        // Card Filial de faturamento - título
-        const tituloFilial = page.locator('.md-dialog-fullscreen > .md-primary > .md-toolbar-tools > .flex');
-        await expect(tituloFilial).toBeVisible();
-        await expect(tituloFilial).toHaveText('Filial');
+    const filial50 = this.page.locator('p.ng-binding', { hasText: filialLocal });
+    await expect(filial50).toBeVisible();
+    await expect(filial50).not.toBeDisabled();
 
-        // Card Filial de faturamento - X para sair do card
-        const sairCardFilial = page.locator('.md-dialog-fullscreen > .md-primary > .md-toolbar-tools > .md-icon-button > .ng-binding');
-        await expect(sairCardFilial).toBeVisible();
+    const filial6 = this.page.locator('p.ng-binding', { hasText: filialRemota });
+    await expect(filial6).toBeVisible();
+    await expect(filial6).not.toBeDisabled();
 
-        // Card Filial de faturamento - filial 50
-        const filial50 = page.locator('p.ng-binding').withText(filialLocal);
-        await expect(filial50).toBeVisible();
-        await expect(filial50).not.toBeDisabled();
+    const clicarFilial6 = this.page.locator('.white > md-list.md-default-theme > :nth-child(2) > div.md-button > .md-no-style');
+    await clicarFilial6.click();
+  }
 
-        // Card Filial de faturamento - filial 6
-        const filial6 = page.locator('p.ng-binding').withText(filialRemota);
-        await expect(filial6).toBeVisible();
-        await expect(filial6).not.toBeDisabled();
+  /**
+   * Valida a composição do kit.
+   */
+  async compositionKit() {
+    const composicaoKitTitulo = this.page.locator('.is-expanded > v-pane-header.ng-scope > div');
+    await composicaoKitTitulo.scrollIntoViewIfNeeded();
+    await this.page.waitForTimeout(200);
+    await expect(composicaoKitTitulo).toBeVisible();
+    await expect(composicaoKitTitulo).toContainText('Composição deste KIT');
+  }
 
-        // Card Filial de faturamento - clicar na filial 6
-        const clicarFilial6 = page.locator('.white > md-list.md-default-theme > :nth-child(2) > div.md-button > .md-no-style');
-        await clicarFilial6.click();
-    }
+  /**
+   * Clica no botão de editar parcelas da forma de pagamento.
+   */
+  async clickEditInstallments() {
+    const iconeLapisEdicao = this.page.locator('.btn-remove-item-list > :nth-child(3) > .md-raised');
+    await iconeLapisEdicao.click({ force: true });
+  }
 
-    //validando composição deste KIT
-    async compositionKit (selector) {
+  /**
+   * Compara valores numéricos de Subtotal e Total Financeiro.
+   * @param {string} span1Selector
+   * @param {string} span2Selector
+   */
+  async compareSubtotalTotalFinancial(span1Selector, span2Selector) {
+    const locator1 = this.page.locator(span1Selector);
+    const locator2 = this.page.locator(span2Selector);
 
-        // Composição deste KIT - título
-        const composicaoKitTitulo = page.locator('.is-expanded > v-pane-header.ng-scope > div');
-        await composicaoKitTitulo.scrollIntoViewIfNeeded();
-        await page.waitForTimeout(200);
-        await expect(composicaoKitTitulo).toBeVisible();
-        await expect(composicaoKitTitulo).toContainText('Composição deste KIT');
-    }
+    const getNumericValue = async locator => {
+      const text = await locator.textContent();
+      const cleanedText = text.replace(/[^0-9,]/g, '').trim();
+      return parseFloat(cleanedText.replace(',', '.'));
+    };
 
-    //clicar no botão editar parcelas da forma de pagamento - quando já temos uma forma de pagamento escolhida
-    async clickEditInstallments (selector) {
+    const valor1Numerico = await getNumericValue(locator1);
+    const valor2Numerico = await getNumericValue(locator2);
 
-        // Ícone lápis para edição de parcelas da forma de pagamento
-        const iconeLapisEdicao = page.locator('.btn-remove-item-list > :nth-child(3) > .md-raised');
-        await iconeLapisEdicao.click({ force: true });
-    }
-
-    // valores Subtotal e Total Financeiro comparar eles
-    async compareSubtotalTotalFinancial (span1, span2) {
-        
-        const span1 = page.locator('span1');
-        const span2 = page.locator('span2');
-
-        const getNumericValue = async (locator) => {
-            const text = await locator.textContent();
-            // Limpar o texto, removendo 'R$', vírgulas e espaços
-            const cleanedText = text.replace(/[^0-9,]/g, '').trim();
-            // Converter para formato numérico, substituindo vírgula por ponto para considerar como decimal
-            return parseFloat(cleanedText.replace(',', '.'));
-        };
-
-        const valor1Numerico = await getNumericValue(span1);
-        const valor2Numerico = await getNumericValue(span2);
-
-        // Comparar os valores
-        expect(valor1Numerico).toEqual(valor2Numerico);
-    }
-} 
+    expect(valor1Numerico).toBe(valor2Numerico);
+  }
+}

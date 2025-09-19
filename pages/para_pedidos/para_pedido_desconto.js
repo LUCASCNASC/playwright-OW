@@ -1,253 +1,191 @@
+import { expect, Page } from '@playwright/test';
+
+/**
+ * Page Object para ações de desconto no pedido (Playwright).
+ */
 export class OrderExclusiva {
+  /**
+   * @param {Page} page
+   */
+  constructor(page) {
+    this.page = page;
+  }
 
-    constructor(page) {
-        this.page = page
-    }
+  /**
+   * Valida e clica no botão de desconto (%).
+   */
+  async clicarBotaoDesconto() {
+    const descontoBtn = this.page.locator('[ng-click="abrirModalDescontoProduto($index)"]');
+    await descontoBtn.scrollIntoViewIfNeeded();
+    await this.page.waitForTimeout(200);
+    await expect(descontoBtn).toBeVisible();
+    await expect(descontoBtn).not.toBeDisabled();
 
-//------------------- RELACIONADOS A DESCONTO ------
+    const descontoIcon = this.page.locator('[ng-click="abrirModalDescontoProduto($index)"] > .ng-scope');
+    await descontoIcon.scrollIntoViewIfNeeded();
+    await this.page.waitForTimeout(200);
+    await expect(descontoIcon).toBeVisible();
+    await expect(descontoIcon).not.toBeDisabled();
+    await descontoIcon.click({ force: true });
+  }
 
-    //validar e clicar botão % (desconto)
-    async clicarBotaoDesconto (selector) {
+  /**
+   * Valida o modal Sub/Sobre e opções de desconto.
+   */
+  async validateModalSub() {
+    const tituloSubSobre = this.page.locator('.md-transition-in > ._md > .md-toolbar-tools > .flex');
+    await expect(tituloSubSobre).toBeVisible();
+    await expect(tituloSubSobre).toHaveText('Sub/Sobre');
 
-        // validando botão
-        await page.locator('[ng-click="abrirModalDescontoProduto($index)"]')
-        .scrollIntoViewIfNeeded()
-        .waitForTimeout(200); // aguarda 200ms
-        expect(await page.locator('[ng-click="abrirModalDescontoProduto($index)"]').isVisible()).toBeTruthy();
-        expect(await page.locator('[ng-click="abrirModalDescontoProduto($index)"]').isDisabled()).toBeFalsy();
+    const botaoX = this.page.locator('.md-transition-in > ._md > .md-toolbar-tools > .md-icon-button > .ng-binding');
+    await expect(botaoX).toBeVisible();
+    await expect(botaoX).not.toBeDisabled();
 
-        // validando ícone do botão
-        await page.locator('[ng-click="abrirModalDescontoProduto($index)"] > .ng-scope')
-        .scrollIntoViewIfNeeded()
-        .waitForTimeout(200); // aguarda 200ms
-        expect(await page.locator('[ng-click="abrirModalDescontoProduto($index)"] > .ng-scope').isVisible()).toBeTruthy();
-        expect(await page.locator('[ng-click="abrirModalDescontoProduto($index)"] > .ng-scope').isDisabled()).toBeFalsy();
-        await page.locator('[ng-click="abrirModalDescontoProduto($index)"] > .ng-scope').click({ force: true });
-    }
+    const botaoArrasta = this.page.locator('.md-primary > .md-container > .md-bar');
+    await expect(botaoArrasta).toBeVisible();
+    await expect(botaoArrasta).not.toBeDisabled();
 
-    //validar Sub/Sobre - Sub R$
-    async validateModalSub (selector) {
+    await expect(this.page.locator('text=Sub (-)')).toBeVisible();
+    await expect(this.page.locator('text=(+) Sobre')).toBeVisible();
 
-        // validando título Sub/Sobre
-        const tituloSubSobre = page.locator('.md-transition-in > ._md > .md-toolbar-tools > .flex');
-        await expect(tituloSubSobre).toBeVisible();
-        await expect(tituloSubSobre).toHaveText('Sub/Sobre');
+    await expect(this.page.locator('button:has-text("R$")')).toBeVisible();
+    await expect(this.page.locator('button:has-text("R$")')).not.toBeDisabled();
 
-        // validando botão X
-        const botaoX = page.locator('.md-transition-in > ._md > .md-toolbar-tools > .md-icon-button > .ng-binding');
-        await expect(botaoX).toBeVisible();
-        await expect(botaoX).not.toBeDisabled();
+    await expect(this.page.locator('button:has-text("%")')).toBeVisible();
+    await expect(this.page.locator('button:has-text("%")')).not.toBeDisabled();
 
-        // validando botão arrasta
-        const botaoArrasta = page.locator('.md-primary > .md-container > .md-bar');
-        await expect(botaoArrasta).toBeVisible();
-        await expect(botaoArrasta).not.toBeDisabled();
+    await expect(this.page.locator('button:has-text("VALOR FIXO")')).toBeVisible();
+    await expect(this.page.locator('button:has-text("VALOR FIXO")')).not.toBeDisabled();
 
-        // validando texto "Sub (-)"
-        const textoSubMenos = page.locator('text=Sub (-)');
-        await expect(textoSubMenos).toBeVisible();
+    await expect(this.page.locator('md-icon')).toBeVisible();
 
-        // validando texto "(+) Sobre"
-        const textoMaisSobre = page.locator('text=(+) Sobre');
-        await expect(textoMaisSobre).toBeVisible();
+    const campoDesconto = this.page.locator('input.campoMoeda_desconto.md-input');
+    await expect(campoDesconto).toBeVisible();
+    await expect(campoDesconto).toHaveValue('0');
 
-        // validando botão R$
-        const botaoRS = page.locator('button:has-text("R$")');
-        await expect(botaoRS).toBeVisible();
-        await expect(botaoRS).not.toBeDisabled();
+    const botaoAplicar = this.page.locator('button[ng-click="aplicarSubSobre()"]');
+    await expect(botaoAplicar).toBeVisible();
+    await expect(botaoAplicar).toContainText('Aplicar');
+    await expect(botaoAplicar).not.toBeDisabled();
+  }
 
-        // validando botão %
-        const botaoPorcentagem = page.locator('button:has-text("%")');
-        await expect(botaoPorcentagem).toBeVisible();
-        await expect(botaoPorcentagem).not.toBeDisabled();
+  /**
+   * Arrasta a forma de pagamento escolhida para aparecer desconto.
+   */
+  async dragFormPayment() {
+    const dragTarget = this.page.locator('.md-whiteframe-2dp');
+    await dragTarget.dispatchEvent('mousedown', { button: 0 });
+    await dragTarget.dispatchEvent('mousemove', { clientX: 100, clientY: 0 });
+    await dragTarget.dispatchEvent('mouseup');
+  }
 
-        // validando botão VALOR FIXO
-        const botaoValorFixo = page.locator('button:has-text("VALOR FIXO")');
-        await expect(botaoValorFixo).toBeVisible();
-        await expect(botaoValorFixo).not.toBeDisabled();
+  /**
+   * Clica no botão R$ para desconto.
+   */
+  async clickChangeValue() {
+    const botaoCompleto = this.page.locator('.btn-remove-item-list > :nth-child(1) > .md-raised');
+    await expect(botaoCompleto).toBeVisible();
+    await expect(botaoCompleto).not.toBeDisabled();
 
-        // validando ícone R$
-        const iconeRS = page.locator('md-icon');
-        await expect(iconeRS).toBeVisible();
+    const iconeDentroBotao = this.page.locator('.btn-remove-item-list > :nth-child(1) > .md-raised > .ng-scope');
+    await expect(iconeDentroBotao).toBeVisible();
+    await expect(iconeDentroBotao).not.toBeDisabled();
+    await iconeDentroBotao.click({ force: true });
+  }
 
-        // validando campo para colocar desconto
-        const campoDesconto = page.locator('input.campoMoeda_desconto.md-input');
-        await expect(campoDesconto).toBeVisible();
-        await expect(campoDesconto).toHaveValue('0');
+  /**
+   * Valida o modal de alteração de valor.
+   */
+  async modalChangeValue() {
+    const tituloAlterarValor = this.page.locator('.md-transition-in > ._md > .md-toolbar-tools > .flex');
+    await expect(tituloAlterarValor).toBeVisible();
+    await expect(tituloAlterarValor).toHaveText('Alterar o valor');
 
-        // Botão APLICAR
-        const botaoAplicar = page.locator('button[ng-click="aplicarSubSobre()"]');
-        await expect(botaoAplicar).toBeVisible();
-        await expect(botaoAplicar).toContainText('Aplicar');
-        await expect(botaoAplicar).not.toBeDisabled();
-    } 
+    const botaoX = this.page.locator('.md-transition-in > ._md > .md-toolbar-tools > .md-icon-button > .ng-binding');
+    await expect(botaoX).toBeVisible();
+    await expect(botaoX).not.toBeDisabled();
 
-    //Desconto juros - arrastar forma de pagamento escolhida para aparecer desconto - AJUSTAR
-    async dragFormPayment (selector) {
-        
-        await page.locator('.md-whiteframe-2dp')
-            .dispatchEvent('mousedown', { button: 0 }) // Botão esquerdo do mouse
-            .dispatchEvent('mousemove', { clientX: 100, clientY: 0 }) // Ajuste clientX para a posição desejada
-            .dispatchEvent('mouseup');
-    }
+    await expect(this.page.locator('text=Valor da parcela')).toBeVisible();
+    await expect(this.page.locator('[ng-model="formaPgtoValor"]')).toBeVisible();
+    await expect(this.page.locator('[ng-model="formaPgtoValor"]')).toBeEnabled();
 
-    //Clicar no botão R$
-    async clickChangeValue (selector) {
+    await expect(this.page.locator('text=Numero de parcelas')).toBeVisible();
+    await expect(this.page.locator('[ng-model="formaPgtoQtdVezes"]')).toBeVisible();
+    await expect(this.page.locator('[ng-model="formaPgtoQtdVezes"]')).toBeDisabled();
 
-        // Validar botão como completo
-        const botaoCompleto = page.locator('.btn-remove-item-list > :nth-child(1) > .md-raised');
-        await expect(botaoCompleto).toBeVisible();
-        await expect(botaoCompleto).not.toBeDisabled();
+    await expect(this.page.locator('text=Subtotal')).toBeVisible();
+    await expect(this.page.locator('[ng-model="formaPgtoSubtotal"]')).toBeVisible();
+    await expect(this.page.locator('[ng-model="formaPgtoSubtotal"]')).toBeEnabled();
 
-        // Validar ícone dentro do botão
-        const iconeDentroBotao = page.locator('.btn-remove-item-list > :nth-child(1) > .md-raised > .ng-scope');
-        await expect(iconeDentroBotao).toBeVisible();
-        await expect(iconeDentroBotao).not.toBeDisabled();
-        await iconeDentroBotao.click({ force: true });
-    }
+    const botaoAplicar = this.page.locator('button.md-raised.md-primary');
+    await expect(botaoAplicar).toBeVisible();
+    await expect(botaoAplicar).toContainText(' Aplicar ');
+  }
 
-    //validar modal Alterar o valor
-    async modalChangeValue (selector) {
+  /**
+   * Altera valor para baixo (por exemplo: 136000).
+   */
+  async changeValueToLow() {
+    const campoValorParcela = this.page.locator('[ng-model="formaPgtoValor"]');
+    await campoValorParcela.fill('');
+    await this.page.waitForTimeout(200);
+    await campoValorParcela.type('136000');
 
-        // validando título "Alterar o valor"
-        const tituloAlterarValor = page.locator('.md-transition-in > ._md > .md-toolbar-tools > .flex');
-        await expect(tituloAlterarValor).toBeVisible();
-        await expect(tituloAlterarValor).toHaveText('Alterar o valor');
+    const campoSubtotal = this.page.locator('[ng-model="formaPgtoSubtotal"]');
+    await campoSubtotal.fill('');
+    await this.page.waitForTimeout(200);
+    await campoSubtotal.type('136000');
 
-        // validando botão X
-        const botaoX = page.locator('.md-transition-in > ._md > .md-toolbar-tools > .md-icon-button > .ng-binding');
-        await expect(botaoX).toBeVisible();
-        await expect(botaoX).not.toBeDisabled();
+    await this.page.locator('button[ng-click="aplicarAlterarValor()"]').click({ force: true });
+  }
 
-        // validando texto Valor da parcela
-        const textoValorParcela = page.locator('text=Valor da parcela');
-        await expect(textoValorParcela).toBeVisible();
+  /**
+   * Altera valor para cima (por exemplo: 137000).
+   */
+  async changeValueToTop() {
+    const campoValorParcela = this.page.locator('[ng-model="formaPgtoValor"]');
+    await campoValorParcela.fill('');
+    await this.page.waitForTimeout(200);
+    await campoValorParcela.type('137000');
 
-        // validando campo do Valor da parcela
-        const campoValorParcela = page.locator('[ng-model="formaPgtoValor"]');
-        await expect(campoValorParcela).toBeVisible();
-        await expect(campoValorParcela).toBeEnabled();
+    const campoSubtotal = this.page.locator('[ng-model="formaPgtoSubtotal"]');
+    await campoSubtotal.fill('');
+    await this.page.waitForTimeout(200);
+    await campoSubtotal.type('137000');
 
-        // validando texto Número de parcelas
-        const textoNumeroParcelas = page.locator('text=Numero de parcelas');
-        await expect(textoNumeroParcelas).toBeVisible();
+    await this.page.locator('button[ng-click="aplicarAlterarValor()"]').click({ force: true });
+  }
 
-        // validando campo do Número de parcelas
-        const campoNumeroParcelas = page.locator('[ng-model="formaPgtoQtdVezes"]');
-        await expect(campoNumeroParcelas).toBeVisible();
-        await expect(campoNumeroParcelas).toBeDisabled();
+  /**
+   * Aplica desconto Sub(-) com R$.
+   */
+  async applyDiscountR$() {
+    const valorDescontoRS = '1000';
+    await this.page.locator('button:has-text("R$")').click({ force: true });
+    await this.page.locator('#txtReajusteReal_0').type(valorDescontoRS);
+    await this.page.locator('button[ng-click="aplicarSubSobre()"]').click({ force: true });
+  }
 
-        // validando texto Subtotal
-        const textoSubtotal = page.locator('text=Subtotal');
-        await expect(textoSubtotal).toBeVisible();
+  /**
+   * Aplica desconto Sub(-) com %.
+   */
+  async applyDiscountPencentage() {
+    const valorDescontoPorcentagem = '2';
+    await this.page.locator('button:has-text("%")').click({ force: true });
+    await this.page.locator('#txtReajustePorc_0').type(valorDescontoPorcentagem);
+    await this.page.locator('button[ng-click="aplicarSubSobre()"]').click({ force: true });
+  }
 
-        // validando campo do Subtotal
-        const campoSubtotal = page.locator('[ng-model="formaPgtoSubtotal"]');
-        await expect(campoSubtotal).toBeVisible();
-        await expect(campoSubtotal).toBeEnabled();
-
-        // Botão APLICAR
-        const botaoAplicar = page.locator('button.md-raised.md-primary');
-        await expect(botaoAplicar).toBeVisible();
-        await expect(botaoAplicar).toContainText(' Aplicar ');
-    }
-
-    //alterar valor para baixo
-    async changeValueToLow (selector) {
-
-        // campo Valor da parcela
-        const campoValorParcela = page.locator('[ng-model="formaPgtoValor"]');
-        await campoValorParcela.fill(''); // Limpa o campo
-        await page.waitForTimeout(200); // Aguarda 200ms
-        await campoValorParcela.type('136000');
-
-        // campo Subtotal
-        const campoSubtotal = page.locator('[ng-model="formaPgtoSubtotal"]');
-        await campoSubtotal.fill(''); // Limpa o campo
-        await page.waitForTimeout(200); // Aguarda 200ms
-        await campoSubtotal.type('136000');
-
-        // clicar no botão APLICAR
-        const botaoAplicar = page.locator('button[ng-click="aplicarAlterarValor()"]');
-        await botaoAplicar.click({ force: true });
-    }
-
-    //alterar valor para cima
-    async changeValueToTop (selector) {
-
-        // campo Valor da parcela
-        const campoValorParcela = page.locator('[ng-model="formaPgtoValor"]');
-        await campoValorParcela.fill(''); // Limpa o campo
-        await page.waitForTimeout(200); // Aguarda 200ms
-        await campoValorParcela.type('137000');
-
-        // campo Subtotal
-        const campoSubtotal = page.locator('[ng-model="formaPgtoSubtotal"]');
-        await campoSubtotal.fill(''); // Limpa o campo
-        await page.waitForTimeout(200); // Aguarda 200ms
-        await campoSubtotal.type('137000');
-
-        // clicar no botão APLICAR
-        const botaoAplicar = page.locator('button[ng-click="aplicarAlterarValor()"]');
-        await botaoAplicar.click({ force: true });
-    }
-
-
-    //------------------- APLICAR DESCONTOS ------
-
-    //aplicar desconto Sub(-) com R$
-    async applyDiscountR$ (selector) {
-
-        const valorDescontoRS = '1000';
-
-        // clicar no botão R$
-        const botaoRS = page.locator('button:has-text("R$")');
-        await botaoRS.click({ force: true });
-
-        // preencher campo com valor do desconto
-        const campoValorDesconto = page.locator('#txtReajusteReal_0');
-        await campoValorDesconto.type(valorDescontoRS);
-
-        // clicar no botão APLICAR
-        const botaoAplicar = page.locator('button[ng-click="aplicarSubSobre()"]');
-        await botaoAplicar.click({ force: true });
-    }
-
-    //aplicar desconto Sub(-) com %
-    async applyDiscountPencentage (selector) {
-
-        const valorDescontoPorcentagem = '2';
-
-        // clicar no botão %
-        const botaoPorcentagem = page.locator('button:has-text("%")');
-        await botaoPorcentagem.click({ force: true });
-
-        // preencher campo com valor do desconto
-        const campoValorDesconto = page.locator('#txtReajustePorc_0');
-        await campoValorDesconto.type(valorDescontoPorcentagem);
-
-        // clicar no botão APLICAR
-        const botaoAplicar = page.locator('button[ng-click="aplicarSubSobre()"]');
-        await botaoAplicar.click({ force: true });
-    }
-
-    //aplicar desconto Sub(-) com VALOR FIXO
-    async applyDiscountVF (selector) {
-
-        const valorDescontoValorFixo = '280000';
-
-        // clicar no botão VALOR FIXO
-        const botaoValorFixo = page.locator('button:has-text("VALOR FIXO")');
-        await botaoValorFixo.click({ force: true });
-
-        // preencher campo com valor do desconto
-        const campoValorDesconto = page.locator('#txtReajusteFixo_0');
-        await campoValorDesconto.fill(''); // Limpa o campo
-        await page.waitForTimeout(100); // Aguarda 100ms
-        await campoValorDesconto.type(valorDescontoValorFixo);
-
-        // clicar no botão APLICAR
-        const botaoAplicar = page.locator('button[ng-click="aplicarSubSobre()"]');
-        await botaoAplicar.click({ force: true });
-    }
-} 
+  /**
+   * Aplica desconto Sub(-) com VALOR FIXO.
+   */
+  async applyDiscountVF() {
+    const valorDescontoValorFixo = '280000';
+    await this.page.locator('button:has-text("VALOR FIXO")').click({ force: true });
+    const campoValorDesconto = this.page.locator('#txtReajusteFixo_0');
+    await campoValorDesconto.fill('');
+    await this.page.waitForTimeout(100);
+    await campoValorDesconto.type(valorDescontoValorFixo);
+    await this.page.locator('button[ng-click="aplicarSubSobre()"]').click({ force: true });
+  }
+}

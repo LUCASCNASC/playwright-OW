@@ -1,260 +1,215 @@
+import { expect, Page } from '@playwright/test';
+
+/**
+ * Page Object para validações finais na tela de pedido.
+ */
 export class ValidaFinal {
+  /**
+   * @param {Page} page
+   */
+  constructor(page) {
+    this.page = page;
+  }
 
-    constructor(page) {
-        this.page = page
-    }
+  /**
+   * Valida informações do cliente na última tela sem entrega.
+   */
+  async infoClienteSemEntrega() {
+    const tituloCliente = this.page.locator('.flex-gt-xs-100 > .md-primary > .md-toolbar-tools > .flex');
+    await tituloCliente.scrollIntoViewIfNeeded();
+    await this.page.waitForTimeout(200);
+    await expect(tituloCliente).toBeVisible();
+    await expect(tituloCliente).toHaveText('Cliente');
 
-    // ------------ VALIDAÇÕES FINAL DO PEDIDO -------------------
+    const nomeLabel = this.page.locator('.cliente > :nth-child(1) > b');
+    await expect(nomeLabel).toBeVisible();
+    await expect(nomeLabel).toHaveText('Nome:');
 
-    //Função para validar as informações do cliente na última tela antes de finalizar o pedido
-    async infoClienteSemEntrega (selector) {
+    const nomeInfo = this.page.locator('.padding-10 > :nth-child(1) > .cliente > :nth-child(1)');
+    await expect(nomeInfo).toBeVisible();
+    await expect(nomeInfo).toContainText('TA CPF AUTOMAÇÃO - COM ROTA');
 
-        // Título Cliente
-        const tituloCliente = page.locator('.flex-gt-xs-100 > .md-primary > .md-toolbar-tools > .flex');
-        await tituloCliente.scrollIntoViewIfNeeded();
-        await page.waitForTimeout(200);
+    const cpfCnpjLabel = this.page.locator('.cliente > :nth-child(2) > b');
+    await expect(cpfCnpjLabel).toBeVisible();
+    await expect(cpfCnpjLabel).toHaveText('CPF/CNPJ:');
 
-        // Título Cliente
-        await expect(tituloCliente).toBeVisible();
-        await expect(tituloCliente).toHaveText('Cliente');
+    const cpfCnpjInfo = this.page.locator('.padding-10 > :nth-child(1) > .cliente > :nth-child(2)');
+    await expect(cpfCnpjInfo).toBeVisible();
+    await expect(cpfCnpjInfo).toContainText('489.762.490-89');
 
-        // Nome:
-        const nomeLabel = page.locator('.cliente > :nth-child(1) > b');
-        await expect(nomeLabel).toBeVisible();
-        await expect(nomeLabel).toHaveText('Nome:');
+    const telFixoLabel = this.page.locator('.cliente > :nth-child(3) > b');
+    await expect(telFixoLabel).toBeVisible();
+    await expect(telFixoLabel).toHaveText('Tel. fixo:');
 
-        // Informação Nome
-        const nomeInfo = page.locator('.padding-10 > :nth-child(1) > .cliente > :nth-child(1)');
-        await expect(nomeInfo).toBeVisible();
-        await expect(nomeInfo).toContainText('TA CPF AUTOMAÇÃO - COM ROTA');
+    const telFixoInfo = this.page.locator('.padding-10 > :nth-child(1) > .cliente > :nth-child(3)');
+    await expect(telFixoInfo).toBeVisible();
+    await expect(telFixoInfo).toContainText('(44) 98656-5132');
 
-        // CPF/CNPJ:
-        const cpfCnpjLabel = page.locator('.cliente > :nth-child(2) > b');
-        await expect(cpfCnpjLabel).toBeVisible();
-        await expect(cpfCnpjLabel).toHaveText('CPF/CNPJ:');
+    const telCelularLabel = this.page.locator('.cliente > :nth-child(4) > b');
+    await expect(telCelularLabel).toBeVisible();
+    await expect(telCelularLabel).toHaveText('Tel. celular:');
 
-        // Informação CPF/CNPJ
-        const cpfCnpjInfo = page.locator('.padding-10 > :nth-child(1) > .cliente > :nth-child(2)');
-        await expect(cpfCnpjInfo).toBeVisible();
-        await expect(cpfCnpjInfo).toContainText('489.762.490-89');
+    const telCelularInfo = this.page.locator('.cliente > :nth-child(4)');
+    await expect(telCelularInfo).toBeVisible();
+    await expect(telCelularInfo).toContainText('(44) 98656-5132');
 
-        // Tel. fixo:
-        const telFixoLabel = page.locator('.cliente > :nth-child(3) > b');
-        await expect(telFixoLabel).toBeVisible();
-        await expect(telFixoLabel).toHaveText('Tel. fixo:');
+    const emailLabel = this.page.locator('.cliente > :nth-child(5) > b');
+    await expect(emailLabel).toBeVisible();
+    await expect(emailLabel).toHaveText('E-mail:');
 
-        // Informação Tel. fixo
-        const telFixoInfo = page.locator('.padding-10 > :nth-child(1) > .cliente > :nth-child(3)');
-        await expect(telFixoInfo).toBeVisible();
-        await expect(telFixoInfo).toContainText('(44) 98656-5132');
+    const emailInfo = this.page.locator('.cliente > :nth-child(5)');
+    await expect(emailInfo).toBeVisible();
+    await expect(emailInfo).toContainText('ta_cpf_automação_com_rota@gmail.com');
+  }
 
-        // Tel. celular:
-        const telCelularLabel = page.locator('.cliente > :nth-child(4) > b');
-        await expect(telCelularLabel).toBeVisible();
-        await expect(telCelularLabel).toHaveText('Tel. celular:');
+  /**
+   * Valida informações do cliente na última tela com entrega.
+   */
+  async infoClienteComEntrega() {
+    const tituloCliente = this.page.locator('.confirmacao > :nth-child(1) > .md-primary > .md-toolbar-tools > .flex');
+    await tituloCliente.scrollIntoViewIfNeeded();
+    await this.page.waitForTimeout(200);
+    await expect(tituloCliente).toBeVisible();
+    await expect(tituloCliente).toHaveText('Cliente');
 
-        // Informação Tel. celular
-        const telCelularInfo = page.locator('.cliente > :nth-child(4)');
-        await expect(telCelularInfo).toBeVisible();
-        await expect(telCelularInfo).toContainText('(44) 98656-5132');
+    const nomeLabel = this.page.locator('.cliente > :nth-child(1) > b');
+    await expect(nomeLabel).toBeVisible();
+    await expect(nomeLabel).toHaveText('Nome:');
 
-        // E-mail:
-        const emailLabel = page.locator('.cliente > :nth-child(5) > b');
-        await expect(emailLabel).toBeVisible();
-        await expect(emailLabel).toHaveText('E-mail:');
+    const nomeInfo = this.page.locator('.padding-10 > :nth-child(1) > .cliente > :nth-child(1)');
+    await expect(nomeInfo).toBeVisible();
+    await expect(nomeInfo).toContainText('TA CPF AUTOMAÇÃO - COM ROTA');
 
-        // Informação E-mail
-        const emailInfo = page.locator('.cliente > :nth-child(5)');
-        await expect(emailInfo).toBeVisible();
-        await expect(emailInfo).toContainText('ta_cpf_automação_com_rota@gmail.com');
+    const cpfCnpjLabel = this.page.locator('.cliente > :nth-child(2) > b');
+    await expect(cpfCnpjLabel).toBeVisible();
+    await expect(cpfCnpjLabel).toHaveText('CPF/CNPJ:');
 
-        // E-mail NFe:
-        const emailNFeLabel = page
-    }
+    const cpfCnpjInfo = this.page.locator('.padding-10 > :nth-child(1) > .cliente > :nth-child(2)');
+    await expect(cpfCnpjInfo).toBeVisible();
+    await expect(cpfCnpjInfo).toContainText('489.762.490-89');
 
-    //Função para validar as informações do cliente na última tela antes de finalizar o pedido
-    async infoClienteComEntrega (selector) {
+    const telFixoLabel = this.page.locator('.cliente > :nth-child(3) > b');
+    await expect(telFixoLabel).toBeVisible();
+    await expect(telFixoLabel).toHaveText('Tel. fixo:');
 
-        // Título Cliente
-        const tituloCliente = page.locator('.confirmacao > :nth-child(1) > .md-primary > .md-toolbar-tools > .flex');
-        await tituloCliente.scrollIntoViewIfNeeded();
-        await page.waitForTimeout(200);
+    const telFixoInfo = this.page.locator('.padding-10 > :nth-child(1) > .cliente > :nth-child(3)');
+    await expect(telFixoInfo).toBeVisible();
+    await expect(telFixoInfo).toContainText('(44) 98656-5132');
 
-        // Título Cliente
-        await expect(tituloCliente).toBeVisible();
-        await expect(tituloCliente).toHaveText('Cliente');
+    const telCelularLabel = this.page.locator('.cliente > :nth-child(4) > b');
+    await expect(telCelularLabel).toBeVisible();
+    await expect(telCelularLabel).toHaveText('Tel. celular:');
 
-        // Nome:
-        const nomeLabel = page.locator('.cliente > :nth-child(1) > b');
-        await expect(nomeLabel).toBeVisible();
-        await expect(nomeLabel).toHaveText('Nome:');
+    const telCelularInfo = this.page.locator('.cliente > :nth-child(4)');
+    await expect(telCelularInfo).toBeVisible();
+    await expect(telCelularInfo).toContainText('(44) 98656-5132');
 
-        // Informação Nome
-        const nomeInfo = page.locator('.padding-10 > :nth-child(1) > .cliente > :nth-child(1)');
-        await expect(nomeInfo).toBeVisible();
-        await expect(nomeInfo).toContainText('TA CPF AUTOMAÇÃO - COM ROTA');
+    const emailLabel = this.page.locator('.cliente > :nth-child(5) > b');
+    await expect(emailLabel).toBeVisible();
+    await expect(emailLabel).toHaveText('E-mail:');
 
-        // CPF/CNPJ:
-        const cpfCnpjLabel = page.locator('.cliente > :nth-child(2) > b');
-        await expect(cpfCnpjLabel).toBeVisible();
-        await expect(cpfCnpjLabel).toHaveText('CPF/CNPJ:');
+    const emailInfo = this.page.locator('.cliente > :nth-child(5)');
+    await expect(emailInfo).toBeVisible();
+    await expect(emailInfo).toContainText('ta_cpf_automação_com_rota@gmail.com');
 
-        // Informação CPF/CNPJ
-        const cpfCnpjInfo = page.locator('.padding-10 > :nth-child(1) > .cliente > :nth-child(2)');
-        await expect(cpfCnpjInfo).toBeVisible();
-        await expect(cpfCnpjInfo).toContainText('489.762.490-89');
+    const emailNFeLabel = this.page.locator('.cliente > :nth-child(6) > b');
+    await expect(emailNFeLabel).toBeVisible();
+    await expect(emailNFeLabel).toHaveText('E-mail NF-e:');
 
-        // Tel. fixo:
-        const telFixoLabel = page.locator('.cliente > :nth-child(3) > b');
-        await expect(telFixoLabel).toBeVisible();
-        await expect(telFixoLabel).toHaveText('Tel. fixo:');
+    const emailNFeInfo = this.page.locator('.cliente > :nth-child(6)');
+    await expect(emailNFeInfo).toBeVisible();
+    await expect(emailNFeInfo).toContainText('ta_cpf_automação_com_rota@gmail.com');
 
-        // Informação Tel. fixo
-        const telFixoInfo = page.locator('.padding-10 > :nth-child(1) > .cliente > :nth-child(3)');
-        await expect(telFixoInfo).toBeVisible();
-        await expect(telFixoInfo).toContainText('(44) 98656-5132');
+    const botaoEditar = this.page.locator('.padding-10 > :nth-child(1) > .cliente > .md-accent');
+    await expect(botaoEditar).toBeVisible();
+    await expect(botaoEditar).not.toBeDisabled();
+    await expect(botaoEditar).toHaveText('Editar');
 
-        // Tel. celular:
-        const telCelularLabel = page.locator('.cliente > :nth-child(4) > b');
-        await expect(telCelularLabel).toBeVisible();
-        await expect(telCelularLabel).toHaveText('Tel. celular:');
+    const consumidorFinalBotao = this.page.locator('.flex-100 > .md-auto-horizontal-margin > .md-container');
+    await expect(consumidorFinalBotao).toBeVisible();
+    await expect(consumidorFinalBotao).not.toBeDisabled();
 
-        // Informação Tel. celular
-        const telCelularInfo = page.locator('.cliente > :nth-child(4)');
-        await expect(telCelularInfo).toBeVisible();
-        await expect(telCelularInfo).toContainText('(44) 98656-5132');
+    const consumidorFinalLabel = this.page.locator('.flex-100 > .md-auto-horizontal-margin > .md-label');
+    await expect(consumidorFinalLabel).toBeVisible();
+    await expect(consumidorFinalLabel).not.toBeDisabled();
+    await expect(consumidorFinalLabel).toContainText('Consumidor Final');
+  }
 
-        // E-mail:
-        const emailLabel = page.locator('.cliente > :nth-child(5) > b');
-        await expect(emailLabel).toBeVisible();
-        await expect(emailLabel).toHaveText('E-mail:');
+  /**
+   * Valida informações do endereço de entrega na última tela.
+   */
+  async infoEntrega() {
+    const tituloEnderecoEntrega = this.page.locator('h2[ng-show="carrinho.endereco.local == \'entrega\'"]');
+    await tituloEnderecoEntrega.scrollIntoViewIfNeeded();
+    await this.page.waitForTimeout(200);
+    await expect(tituloEnderecoEntrega).toBeVisible();
+    await expect(tituloEnderecoEntrega).toHaveText('Endereço de entrega');
 
-        // Informação E-mail
-        const emailInfo = page.locator('.cliente > :nth-child(5)');
-        await expect(emailInfo).toBeVisible();
-        await expect(emailInfo).toContainText('ta_cpf_automação_com_rota@gmail.com');
+    const cepLabel = this.page.locator('.endereco > :nth-child(1) > b');
+    await expect(cepLabel).toBeVisible();
+    await expect(cepLabel).toHaveText('CEP:');
 
-        // E-mail NFe:
-        const emailNFeLabel = page.locator('.cliente > :nth-child(6) > b');
-        await expect(emailNFeLabel).toBeVisible();
-        await expect(emailNFeLabel).toHaveText('E-mail NF-e:');
+    const cepInfo = this.page.locator('.endereco > :nth-child(1)');
+    await expect(cepInfo).toBeVisible();
+    await expect(cepInfo).toContainText('87.065-320');
 
-        // Informação E-mail NFe
-        const emailNFeInfo = page.locator('.cliente > :nth-child(6)');
-        await expect(emailNFeInfo).toBeVisible();
-        await expect(emailNFeInfo).toContainText('ta_cpf_automação_com_rota@gmail.com');
+    const enderecoLabel = this.page.locator('.endereco > :nth-child(2) > b');
+    await expect(enderecoLabel).toBeVisible();
+    await expect(enderecoLabel).toHaveText('Endereço:');
 
-        // Botão EDITAR
-        const botaoEditar = page.locator('.padding-10 > :nth-child(1) > .cliente > .md-accent');
-        await expect(botaoEditar).toBeVisible();
-        await expect(botaoEditar).not.toBeDisabled();
-        await expect(botaoEditar).toHaveText('Editar');
+    const enderecoInfo = this.page.locator('.endereco > :nth-child(2)');
+    await expect(enderecoInfo).toBeVisible();
+    await expect(enderecoInfo).toContainText('RUA TULIPA, 232, PARQUE INDUSTRIAL, MARINGA/PR');
 
-        // Consumidor Final - botão
-        const consumidorFinalBotao = page.locator('.flex-100 > .md-auto-horizontal-margin > .md-container');
-        await expect(consumidorFinalBotao).toBeVisible();
-        await expect(consumidorFinalBotao).not.toBeDisabled();
+    const telefoneLabel = this.page.locator('.endereco > :nth-child(3) > b');
+    await expect(telefoneLabel).toBeVisible();
+    await expect(telefoneLabel).toHaveText('Telefone:');
 
-        // Consumidor Final
-        const consumidorFinalLabel = page.locator('.flex-100 > .md-auto-horizontal-margin > .md-label');
-        await expect(consumidorFinalLabel).toBeVisible();
-        await expect(consumidorFinalLabel).not.toBeDisabled();
-        await expect(consumidorFinalLabel).toContainText('Consumidor Final');
-    }
+    const telefoneInfo = this.page.locator('.endereco > :nth-child(3) > .ng-binding');
+    await expect(telefoneInfo).toBeVisible();
+    await expect(telefoneInfo).toContainText('(44) 9865-5132');
 
-    //Função para validar as informações da entrega na última tela antes de finalizar o pedido
-    async infoEntrega (selector) {
+    const rotaLabel = this.page.locator('[ng-show="(carrinho.frete && carrinho.frete.rota && carrinho.endereco.local == \'entrega\')"] > b');
+    await expect(rotaLabel).toBeVisible();
+    await expect(rotaLabel).toHaveText('Rota:');
 
-        // Título "Endereço de entrega"
-        const tituloEnderecoEntrega = page.locator('h2[ng-show="carrinho.endereco.local == \'entrega\'"]');
-        await tituloEnderecoEntrega.scrollIntoViewIfNeeded();
-        await page.waitForTimeout(200);
+    const rotaInfo = this.page.locator('[ng-show="(carrinho.frete && carrinho.frete.rota && carrinho.endereco.local == \'entrega\')"]');
+    await expect(rotaInfo).toBeVisible();
+    await expect(rotaInfo).toContainText('Rota Maringá, Centro');
 
-        // Validando título "Endereço de entrega"
-        await expect(tituloEnderecoEntrega).toBeVisible();
-        await expect(tituloEnderecoEntrega).toHaveText('Endereço de entrega');
+    const botaoEditarTelefone = this.page.locator('.endereco > .md-accent');
+    await expect(botaoEditarTelefone).toBeVisible();
+    await expect(botaoEditarTelefone).not.toBeDisabled();
+    await expect(botaoEditarTelefone).toHaveText('Editar Telefone');
+  }
 
-        // CEP:
-        const cepLabel = page.locator('.endereco > :nth-child(1) > b');
-        await expect(cepLabel).toBeVisible();
-        await expect(cepLabel).toHaveText('CEP:');
+  /**
+   * Valida campo de "Observações para a nota fiscal" vazio.
+   */
+  async obsNotaFiscalVazio() {
+    const observacoesNotaFiscalLabel = this.page.locator(':nth-child(1) > .header-interno > label');
+    await expect(observacoesNotaFiscalLabel).toBeVisible();
+    await expect(observacoesNotaFiscalLabel).toHaveText('OBSERVAÇÕES PARA A NOTA FISCAL');
+    const campoObservacoes = this.page.locator(':nth-child(1) > .col-md-12 > .form-group > .form-control');
+    await expect(campoObservacoes).toBeVisible();
+    await expect(campoObservacoes).not.toBeDisabled();
+    await expect(campoObservacoes).toHaveValue('');
+  }
 
-        // Informação CEP:
-        const cepInfo = page.locator('.endereco > :nth-child(1)');
-        await expect(cepInfo).toBeVisible();
-        await expect(cepInfo).toContainText('87.065-320');
-
-        // Endereço:
-        const enderecoLabel = page.locator('.endereco > :nth-child(2) > b');
-        await expect(enderecoLabel).toBeVisible();
-        await expect(enderecoLabel).toHaveText('Endereço:');
-
-        // Informação Endereço:
-        const enderecoInfo = page.locator('.endereco > :nth-child(2)');
-        await expect(enderecoInfo).toBeVisible();
-        await expect(enderecoInfo).toContainText('RUA TULIPA, 232, PARQUE INDUSTRIAL, MARINGA/PR');
-
-        // Telefone:
-        const telefoneLabel = page.locator('.endereco > :nth-child(3) > b');
-        await expect(telefoneLabel).toBeVisible();
-        await expect(telefoneLabel).toHaveText('Telefone:');
-
-        // Informação Telefone:
-        const telefoneInfo = page.locator('.endereco > :nth-child(3) > .ng-binding');
-        await expect(telefoneInfo).toBeVisible();
-        await expect(telefoneInfo).toContainText('(44) 9865-5132');
-
-        // Rota:
-        const rotaLabel = page.locator('[ng-show="(carrinho.frete && carrinho.frete.rota && carrinho.endereco.local == \'entrega\')"] > b');
-        await expect(rotaLabel).toBeVisible();
-        await expect(rotaLabel).toHaveText('Rota:');
-
-        // Informação Rota:
-        const rotaInfo = page.locator('[ng-show="(carrinho.frete && carrinho.frete.rota && carrinho.endereco.local == \'entrega\')"]');
-        await expect(rotaInfo).toBeVisible();
-        await expect(rotaInfo).toContainText('Rota Maringá, Centro');
-
-        // Botão EDITAR TELEFONE
-        const botaoEditarTelefone = page.locator('.endereco > .md-accent');
-        await expect(botaoEditarTelefone).toBeVisible();
-        await expect(botaoEditarTelefone).not.toBeDisabled();
-        await expect(botaoEditarTelefone).toHaveText('Editar Telefone');
-    }
-
-    //Função para validar campo - OBSERVAÇÕES PARA A NOTA FISCAL
-    async obsNotaFiscalVazio (selector) {
-
-        // OBSERVAÇÕES PARA A NOTA FISCAL
-        const observacoesNotaFiscalLabel = page.locator(':nth-child(1) > .header-interno > label');
-        await expect(observacoesNotaFiscalLabel).toBeVisible();
-        await expect(observacoesNotaFiscalLabel).toHaveText('OBSERVAÇÕES PARA A NOTA FISCAL');
-
-        // Campo vazio
-        const campoObservacoes = page.locator(':nth-child(1) > .col-md-12 > .form-group > .form-control');
-        await expect(campoObservacoes).toBeVisible();
-        await expect(campoObservacoes).not.toBeDisabled();
-        await expect(campoObservacoes).toHaveValue('');
-        // .and('have.attr', 'maxlength', '300') //não tem limite de caracteres
-    }
-
-    //Função para validar campo - OBSERVAÇÕES PARA USO INTERNO
-    async obsInternaVazio (selector) {
-
-        // OBSERVAÇÕES PARA USO INTERNO
-        const observacoesUsoInternoLabel = page.locator(':nth-child(2) > .header-interno > label');
-        await expect(observacoesUsoInternoLabel).toBeVisible();
-        await expect(observacoesUsoInternoLabel).toHaveText('OBSERVAÇÕES PARA USO INTERNO');
-
-        // Campo vazio
-        const campoObservacoesInterno = page.locator(':nth-child(2) > .col-md-12 > .form-group > .form-control');
-        await expect(campoObservacoesInterno).toBeVisible();
-        await expect(campoObservacoesInterno).not.toBeDisabled();
-        await expect(campoObservacoesInterno).toHaveValue('');
-        await expect(campoObservacoesInterno).toHaveAttribute('maxlength', '300');
-
-        // "Limite de 300 caracteres"
-        const limiteCaracteres = page.locator('.form-group > span');
-        await expect(limiteCaracteres).toBeVisible();
-        await expect(limiteCaracteres).toHaveText('Limite de 300 caracteres');
-    }
+  /**
+   * Valida campo de "Observações para uso interno" vazio.
+   */
+  async obsInternaVazio() {
+    const observacoesUsoInternoLabel = this.page.locator(':nth-child(2) > .header-interno > label');
+    await expect(observacoesUsoInternoLabel).toBeVisible();
+    await expect(observacoesUsoInternoLabel).toHaveText('OBSERVAÇÕES PARA USO INTERNO');
+    const campoObservacoesInterno = this.page.locator(':nth-child(2) > .col-md-12 > .form-group > .form-control');
+    await expect(campoObservacoesInterno).toBeVisible();
+    await expect(campoObservacoesInterno).not.toBeDisabled();
+    await expect(campoObservacoesInterno).toHaveValue('');
+    await expect(campoObservacoesInterno).toHaveAttribute('maxlength', '300');
+    const limiteCaracteres = this.page.locator('.form-group > span');
+    await expect(limiteCaracteres).toBeVisible();
+    await expect(limiteCaracteres).toHaveText('Limite de 300 caracteres');
+  }
 }

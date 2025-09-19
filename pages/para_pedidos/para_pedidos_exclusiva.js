@@ -1,94 +1,87 @@
+import { expect, Page } from '@playwright/test';
+
+/**
+ * Page Object para operações exclusivas de pedidos.
+ */
 export class OrderExclusiva {
+  /**
+   * @param {Page} page
+   */
+  constructor(page) {
+    this.page = page;
+  }
 
-    constructor(page) {
-        this.page = page
+  /**
+   * Aumenta a quantidade a ser vendida para 5 unidades.
+   */
+  async increaseAmountSaleFive() {
+    const btnDown = this.page.locator('[ng-click="delItem()"]');
+    await expect(btnDown).toBeVisible();
+    await expect(btnDown).not.toBeDisabled();
+
+    const campoQtd = this.page.locator('[ng-model="quantidadeShow"]');
+    await expect(campoQtd).toBeVisible();
+    await expect(campoQtd).toBeDisabled();
+    await expect(campoQtd).toHaveValue('1');
+
+    const btnUp = this.page.locator('[ng-click="addItem()"]');
+    await expect(btnUp).toBeVisible();
+    await expect(btnUp).not.toBeDisabled();
+
+    for (let i = 0; i < 5; i++) {
+      await btnUp.click();
     }
+  }
 
-    //aumentar quantidade a ser vendida, 5 unidades
-    async increaseAmountSaleFive (selector) {
+  /**
+   * Aumenta a quantidade a ser vendida para 10 unidades.
+   */
+  async increaseAmountSaleTen() {
+    const btnDown = this.page.locator('[ng-click="delItem()"]');
+    await expect(btnDown).toBeVisible();
+    await expect(btnDown).not.toBeDisabled();
 
-        // botão para diminuir quantidade
-        const botaoDiminuirQuantidade = page.locator('[ng-click="delItem()"]');
-        await expect(botaoDiminuirQuantidade).toBeVisible();
-        await expect(botaoDiminuirQuantidade).not.toBeDisabled();
+    const campoQtd = this.page.locator('[ng-model="quantidadeShow"]');
+    await expect(campoQtd).toBeVisible();
+    await expect(campoQtd).toBeDisabled();
+    await expect(campoQtd).toHaveValue('1');
 
-        // validar campo Quantidade
-        const campoQuantidade = page.locator('[ng-model="quantidadeShow"]');
-        await expect(campoQuantidade).toBeVisible();
-        await expect(campoQuantidade).toBeDisabled();
-        await expect(campoQuantidade).toHaveValue('1');
+    const btnUp = this.page.locator('[ng-click="addItem()"]');
+    await expect(btnUp).toBeVisible();
+    await expect(btnUp).not.toBeDisabled();
 
-        // botão para aumentar quantidade
-        const botaoAumentarQuantidade = page.locator('[ng-click="addItem()"]');
-        await expect(botaoAumentarQuantidade).toBeVisible();
-        await expect(botaoAumentarQuantidade).not.toBeDisabled();
-
-        // clicar no botão para aumentar quantidade várias vezes
-        await botaoAumentarQuantidade.click();
-        await botaoAumentarQuantidade.click();
-        await botaoAumentarQuantidade.click();
-        await botaoAumentarQuantidade.click();
-        await botaoAumentarQuantidade.click();
+    for (let i = 0; i < 10; i++) {
+      await btnUp.click();
     }
+  }
 
-    //aumentar quantidade a ser vendida, 10 unidades
-    async increaseAmountSaleTen (selector) {
+  /**
+   * Valida produto remoto com saldo indisponível.
+   */
+  async balanceRemoteReceive() {
+    const imagemResultado = this.page.locator('.resultado-imagem');
+    await expect(imagemResultado).toBeVisible();
 
-        // botão para diminuir quantidade
-        const botaoDiminuirQuantidade = page.locator('[ng-click="delItem()"]');
-        await expect(botaoDiminuirQuantidade).toBeVisible();
-        await expect(botaoDiminuirQuantidade).not.toBeDisabled();
+    const saldoDisponivel = this.page.locator('.label');
+    await expect(saldoDisponivel).toBeVisible();
+    await expect(saldoDisponivel).toHaveText('Saldo disponivel');
+    const backgroundColor = await saldoDisponivel.evaluate(el => getComputedStyle(el).backgroundColor);
+    expect(backgroundColor).toBe('rgb(240, 173, 78)');
 
-        // validar campo Quantidade
-        const campoQuantidade = page.locator('[ng-model="quantidadeShow"]');
-        await expect(campoQuantidade).toBeVisible();
-        await expect(campoQuantidade).toBeDisabled();
-        await expect(campoQuantidade).toHaveValue('1');
+    const nomeProduto = this.page.locator('.md-resultado-titulo');
+    await expect(nomeProduto).toBeVisible();
 
-        // botão para aumentar quantidade
-        const botaoAumentarQuantidade = page.locator('[ng-click="addItem()"]');
-        await expect(botaoAumentarQuantidade).toBeVisible();
-        await expect(botaoAumentarQuantidade).not.toBeDisabled();
+    const codigoProduto = this.page.locator('.badge-saldo.ng-binding');
+    await expect(codigoProduto).toBeVisible();
 
-        // clicar no botão para aumentar quantidade 10 vezes
-        for (let i = 0; i < 10; i++) {
-            await botaoAumentarQuantidade.click();
-        }
-    }
+    const simboloRS = this.page.locator('sup');
+    await expect(simboloRS).toBeVisible();
+    await expect(simboloRS).toHaveText('R$');
 
-    //Validando produto com saldo indisponível
-    async balanceRemoteReceive (selector) {
-        
-        // Validando imagem
-        const imagemResultado = page.locator('.resultado-imagem');
-        await expect(imagemResultado).toBeVisible();
+    const valorProduto = this.page.locator('.valor-busca');
+    await expect(valorProduto).toBeVisible();
 
-        // Validando "Saldo disponivel"
-        const saldoDisponivel = page.locator('.label');
-        await expect(saldoDisponivel).toBeVisible();
-        await expect(saldoDisponivel).toHaveText('Saldo disponivel');
-        const backgroundColor = await saldoDisponivel.evaluate((element) => getComputedStyle(element).backgroundColor);
-        expect(backgroundColor).toBe('rgb(240, 173, 78)');
-
-        // Validando nome do produto dentro do card
-        const nomeProduto = page.locator('.md-resultado-titulo');
-        await expect(nomeProduto).toBeVisible();
-
-        // Validando código do produto dentro do card
-        const codigoProduto = page.locator('.badge-saldo.ng-binding');
-        await expect(codigoProduto).toBeVisible();
-
-        // Validando R$ dentro do card
-        const simboloRS = page.locator('sup');
-        await expect(simboloRS).toBeVisible();
-        await expect(simboloRS).toHaveText('R$');
-
-        // Validando valor do produto dentro do card
-        const valorProduto = page.locator('.valor-busca');
-        await expect(valorProduto).toBeVisible();
-
-        // Validando check box dentro do card
-        const checkBox = page.locator('.expandeIcone');
-        await expect(checkBox).toBeVisible();
-    }
+    const checkBox = this.page.locator('.expandeIcone');
+    await expect(checkBox).toBeVisible();
+  }
 }
