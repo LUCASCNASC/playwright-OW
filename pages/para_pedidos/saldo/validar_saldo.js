@@ -1,126 +1,94 @@
+import { expect, Page } from '@playwright/test';
+
+/**
+ * Page Object para validações de saldo de produto (local, CD, indisponível).
+ */
 export class ValidateBalance {
+  /**
+   * @param {Page} page
+   */
+  constructor(page) {
+    this.page = page;
+  }
 
-    constructor(page) {
-        this.page = page
-    }
+  /**
+   * Valida produto com saldo disponível local (verde).
+   */
+  async withBalance() {
+    const resultadoImagem = this.page.locator('.resultado-imagem');
+    await expect(resultadoImagem).toBeVisible();
 
-    //Validando produto com saldo disponível local
-    async withBalance (selector) {
-        
-        //Validando imagem
-        const resultadoImagem = page.locator('.resultado-imagem');
-        await expect(resultadoImagem).toBeVisible();
+    const saldoDisponivel = this.page.locator('.label');
+    await expect(saldoDisponivel).toBeVisible();
+    await expect(saldoDisponivel).toHaveText('Saldo disponivel');
+    const color = await saldoDisponivel.evaluate(node => getComputedStyle(node).backgroundColor);
+    expect(color).toBe('rgb(92, 184, 92)');
 
-        //Validando "Saldo disponivel"
-        const saldoDisponivel = page.locator('.label');
-        await expect(saldoDisponivel).toBeVisible();
-        await expect(saldoDisponivel).toHaveText('Saldo disponivel');
-        await saldoDisponivel.evaluate((node) => {
-            const style = getComputedStyle(node);
-            return style.backgroundColor;
-        }).then(color => {
-            expect(color).toBe('rgb(92, 184, 92)');
-        });
+    const nomeProduto = this.page.locator('.md-resultado-titulo');
+    await expect(nomeProduto).toBeVisible();
 
-        //Validando nome do produto dentro card
-        const nomeProduto = page.locator('.md-resultado-titulo');
-        await expect(nomeProduto).toBeVisible();
+    const codigoProduto = this.page.locator('.badge-saldo.ng-binding');
+    await expect(codigoProduto).toBeVisible();
 
-        //Validado código do produto dentro do card
-        const codigoProduto = page.locator('.badge-saldo.ng-binding');
-        await expect(codigoProduto).toBeVisible();
+    const rsCard = this.page.locator('sup');
+    await expect(rsCard).toBeVisible();
+    await expect(rsCard).toHaveText('R$');
 
-        //Validando R$ dentro do card
-        const rsCard = page.locator('sup');
-        await expect(rsCard).toBeVisible();
-        await expect(rsCard).toHaveText('R$');
+    const valorProduto = this.page.locator('.valor-busca');
+    await expect(valorProduto).toBeVisible();
+  }
 
-        //Validando valor do produto dentro do card
-        const valorProduto = page.locator('.valor-busca');
-        await expect(valorProduto).toBeVisible();
+  /**
+   * Valida produto com saldo disponível no CD (amarelo).
+   */
+  async withBalanceCD() {
+    const resultadoImagem = this.page.locator('.resultado-imagem');
+    await expect(resultadoImagem).toBeVisible();
 
-        //Validando check box dentro do card
-        // const checkBox = page.locator('.expandeIcone');
-        // await expect(checkBox).toBeVisible();
-    }
+    const saldoDisponivel = this.page.locator('.label');
+    await expect(saldoDisponivel).toBeVisible();
+    await expect(saldoDisponivel).toHaveText('Saldo disponivel');
+    const color = await saldoDisponivel.evaluate(node => getComputedStyle(node).backgroundColor);
+    expect(color).toBe('rgb(240, 173, 78)');
 
-    //Validando produto com saldo disponível no CD 
-    async withBalanceCD (selector) {
-        
-        //Validando imagem
-        const resultadoImagem = page.locator('.resultado-imagem');
-        await expect(resultadoImagem).toBeVisible();
+    const nomeProduto = this.page.locator('.md-resultado-titulo');
+    await expect(nomeProduto).toBeVisible();
 
-        //Validando "Saldo disponivel"
-        const saldoDisponivel = page.locator('.label');
-        await expect(saldoDisponivel).toBeVisible();
-        await expect(saldoDisponivel).toHaveText('Saldo disponivel');
-        await saldoDisponivel.evaluate((node) => {
-            const style = getComputedStyle(node);
-            return style.backgroundColor;
-        }).then(color => {
-            expect(color).toBe('rgb(240, 173, 78)');
-        });
+    const codigoProduto = this.page.locator('.badge-saldo.ng-binding');
+    await expect(codigoProduto).toBeVisible();
 
-        //Validando nome do produto dentro card
-        const nomeProduto = page.locator('.md-resultado-titulo');
-        await expect(nomeProduto).toBeVisible();
+    const rsCard = this.page.locator('sup');
+    await expect(rsCard).toBeVisible();
+    await expect(rsCard).toHaveText('R$');
 
-        //Validado código do produto dentro do card
-        const codigoProduto = page.locator('.badge-saldo.ng-binding');
-        await expect(codigoProduto).toBeVisible();
+    const valorProduto = this.page.locator('.valor-busca');
+    await expect(valorProduto).toBeVisible();
+  }
 
-        //Validando R$ dentro do card
-        const rsCard = page.locator('sup');
-        await expect(rsCard).toBeVisible();
-        await expect(rsCard).toHaveText('R$');
+  /**
+   * Valida produto com saldo indisponível (vermelho).
+   */
+  async withoutBalance() {
+    const resultadoImagem = this.page.locator('.resultado-imagem');
+    await expect(resultadoImagem).toBeVisible();
 
-        //Validando valor do produto dentro do card
-        const valorProduto = page.locator('.valor-busca');
-        await expect(valorProduto).toBeVisible();
+    const saldoIndisponivel = this.page.locator('.label');
+    await expect(saldoIndisponivel).toBeVisible();
+    await expect(saldoIndisponivel).toHaveText('Saldo indisponivel');
+    const color = await saldoIndisponivel.evaluate(node => getComputedStyle(node).backgroundColor);
+    expect(color).toBe('rgb(217, 83, 79)');
 
-        //Validando check box dentro do card
-        // const checkBox = page.locator('.expandeIcone');
-        // await expect(checkBox).toBeVisible();
-    }
+    const nomeProduto = this.page.locator('.md-resultado-titulo');
+    await expect(nomeProduto).toBeVisible();
 
-    //Validando produto com saldo indisponível
-    async withoutBalance (selector) {
-        
-        //Validando imagem
-        const resultadoImagem = page.locator('.resultado-imagem');
-        await expect(resultadoImagem).toBeVisible();
+    const codigoProduto = this.page.locator('.badge-saldo.ng-binding');
+    await expect(codigoProduto).toBeVisible();
 
-        //Validando "Saldo indisponivel"
-        const saldoIndisponivel = page.locator('.label');
-        await expect(saldoIndisponivel).toBeVisible();
-        await expect(saldoIndisponivel).toHaveText('Saldo indisponivel');
-        await saldoIndisponivel.evaluate((node) => {
-            const style = getComputedStyle(node);
-            return style.backgroundColor;
-        }).then(color => {
-            expect(color).toBe('rgb(217, 83, 79)');
-        });
+    const rsCard = this.page.locator('sup');
+    await expect(rsCard).toBeVisible();
+    await expect(rsCard).toHaveText('R$');
 
-        //Validando nome do produto dentro card
-        const nomeProduto = page.locator('.md-resultado-titulo');
-        await expect(nomeProduto).toBeVisible();
-
-        //Validando código do produto dentro do card
-        const codigoProduto = page.locator('.badge-saldo.ng-binding');
-        await expect(codigoProduto).toBeVisible();
-
-        //Validando R$ dentro do card
-        const rsCard = page.locator('sup');
-        await expect(rsCard).toBeVisible();
-        await expect(rsCard).toHaveText('R$');
-
-        //Validando valor do produto dentro do card
-        const valorProduto = page.locator('.valor-busca');
-        await expect(valorProduto).toBeVisible();
-
-        //Validando check box dentro do card
-        // const checkBox = page.locator('.expandeIcone');
-        // await expect(checkBox).toBeVisible();
-    }
-} 
+    const valorProduto = this.page.locator('.valor-busca');
+    await expect(valorProduto).toBeVisible();
+  }
+}

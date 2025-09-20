@@ -1,117 +1,57 @@
-export class AdvanceNormal {
+import { expect, Page } from '@playwright/test';
 
-    constructor(page) {
-        this.page = page
-    }
+/**
+ * Page Object para seleção e pesquisa de clientes no pedido.
+ */
+export class ChooseClient {
+  /**
+   * @param {Page} page
+   */
+  constructor(page) {
+    this.page = page;
+  }
 
-    //Botão para avançar para a tela de Gerar parcelas - com intercept
-    async toInstallments (selector) {
+  /**
+   * Escolhe cliente CPF para gerar pedido de venda (com intenções de compra).
+   */
+  async pedido2() {
+    await this.page.locator('.click-cliente > .informe-o-cliente > .cliente-header').waitForTimeout(500);
+    await this.page.locator('.click-cliente > .informe-o-cliente > .cliente-header').type('    48976249089{enter}');
+    await this.page.waitForTimeout(2000);
 
-        // Interceptando a requisição GET para /views/list-action-buttons.html
-        await page.route('**/views/list-action-buttons.html', route => route.continue());
-        const apiTelaPagamento = page.waitForResponse('**/views/list-action-buttons.html');
+    await expect(this.page.locator('.md-title')).toBeVisible();
+    await expect(this.page.locator('.md-title')).toHaveText('Intenções de Compra');
+    await expect(this.page.locator('.md-dialog-content-body > .ng-binding')).toBeVisible();
+    await expect(this.page.locator('.md-dialog-content-body > .ng-binding')).toHaveText('O cliente selecionado possui produtos adicionados nas intenções de compra, deseja acessá-los?');
+    await expect(this.page.locator('.md-confirm-button')).toBeVisible();
+    await expect(this.page.locator('.md-confirm-button')).not.toBeDisabled();
+    await expect(this.page.locator('.md-confirm-button')).toHaveText('Sim');
+    await expect(this.page.locator('.md-cancel-button')).toBeVisible();
+    await expect(this.page.locator('.md-cancel-button')).not.toBeDisabled();
+    await expect(this.page.locator('.md-cancel-button')).toHaveText('Não');
+    await this.page.locator('.md-cancel-button').click({ force: true });
+  }
 
-        // Localizando e rolando até o botão "Avançar"
-        await page.locator('.flex-gt-sm-50 > .md-primary')
-                    .scrollIntoViewIfNeeded();
-        await page.waitForTimeout(200);
-        // await expect(page.locator('.flex-gt-sm-50 > .md-primary')).toBeVisible();
-        await expect(page.locator('.flex-gt-sm-50 > .md-primary')).toContainText('Avançar');
+  /**
+   * Pesquisa e seleciona cliente CPF para o pedido, fluxo com rota.
+   */
+  async withRoute() {
+    await this.page.locator('.click-cliente > .informe-o-cliente > .cliente-header').waitForTimeout(500);
+    await this.page.locator('.click-cliente > .informe-o-cliente > .cliente-header').type('48976249089 {ArrowDown}');
 
-        // Clicar para avançar para a tela de GERAR PARCELAS
-        await page.locator('.flex-gt-sm-50 > .md-primary').click({force: true});
+    await this.page.route('**/views/cliente/modalClientes.html', route => route.continue());
+    const apiModalClientes = this.page.waitForResponse('**/views/cliente/modalClientes.html');
+    await this.page.locator('.md-block > .ng-binding').click();
+    await apiModalClientes;
 
-        // Validando carregamento do ícone de "Adicionando produtos/serviços..."
-        await expect(page.locator('.conteudo > .layout-align-center-center > .md-accent')).toBeVisible();
+    await this.page.route('**/consultaclientes/*', route => route.continue());
+    const apiConsultaClientes = this.page.waitForResponse('**/consultaclientes/*');
+    await apiConsultaClientes;
 
-        // Validando mensagem de carregamento - "Adicionando produtos/serviços..."
-        await expect(page.locator('h3')).toBeVisible();
-        await expect(page.locator('h3')).toHaveText('Adicionando produtos/serviços...');
+    await this.page.route('**/services/v3/pedido_validar_cliente', route => route.continue());
+    const apiPedidoValidarCliente = this.page.waitForResponse('**/services/v3/pedido_validar_cliente');
 
-        // Esperando a resposta da requisição interceptada
-        await apiTelaPagamento;
-    }
-
-    //Botão para avançar para a tela de escolher transportadora e rota - com intercept
-    async toTransporter (selector) {
-
-       // Interceptando a requisição GET para /views/carrinho/endereco.html
-        await page.route('**/views/carrinho/endereco.html', route => route.continue());
-        const apiEndereco = page.waitForResponse('**/views/carrinho/endereco.html');
-
-        // Interceptando a requisição GET para /services/v3/cidade?uf=PR
-        await page.route('**/services/v3/cidade?uf=PR', route => route.continue());
-        const apiCidade = page.waitForResponse('**/services/v3/cidade?uf=PR');
-
-        // Localizando e rolando até o botão "Avançar"
-        await page.locator('.flex-gt-sm-50 > .md-primary')
-                    .scrollIntoViewIfNeeded();
-        await page.waitForTimeout(200);
-        // await expect(page.locator('.flex-gt-sm-50 > .md-primary')).toBeVisible();
-        // await expect(page.locator('.flex-gt-sm-50 > .md-primary')).not.toBeDisabled();
-        await expect(page.locator('.flex-gt-sm-50 > .md-primary')).toContainText('Avançar');
-
-        // Clicar para avançar para a tela de GERAR PARCELAS
-        await page.locator('.flex-gt-sm-50 > .md-primary').dblclick({force: true});
-
-        await page.waitForTimeout(2000);
-
-        // Validando carregamento do ícone de "Adicionando produtos/serviços..."
-        await expect(page.locator('.conteudo > .layout-align-center-center > .md-accent')).toBeVisible();
-
-        // Validando mensagem de carregamento - "Adicionando produtos/serviços..."
-        await expect(page.locator('h3')).toBeVisible();
-        await expect(page.locator('h3')).toHaveText('Adicionando produtos/serviços...');
-
-        // Esperando as respostas das requisições interceptadas
-        await apiEndereco;
-        await apiCidade;
-    }
-
-    //Botão para avançar para a tela de Gerar parcelas - com intercept
-    async installmentDelivery (selector) {
-
-        // Interceptando a requisição GET para /views/list-action-buttons.html
-        await page.route('**/views/list-action-buttons.html', route => route.continue());
-        const apiTelaPagamento = page.waitForResponse('**/views/list-action-buttons.html');
-
-        // Localizando e rolando até o botão "Avançar"
-        await page.locator('.layout-align-end-end > :nth-child(2) > .md-primary')
-                    .scrollIntoViewIfNeeded();
-        await page.waitForTimeout(200);
-        // await expect(page.locator('.layout-align-end-end > :nth-child(2) > .md-primary')).toBeVisible();
-        // await expect(page.locator('.layout-align-end-end > :nth-child(2) > .md-primary')).not.toBeDisabled();
-        await expect(page.locator('.layout-align-end-end > :nth-child(2) > .md-primary')).toContainText('Avançar');
-
-        // Clicar para avançar para a tela de GERAR PARCELAS
-        await page.locator('.layout-align-end-end > :nth-child(2) > .md-primary').click({force: true});
-
-        // Esperando a resposta da requisição interceptada
-        await apiTelaPagamento;
-    }
-
-    //Botão AVANÇAR, da tela antes de finalizar o pedido - com intercept
-    async final (selector) {
-
-        // Espera de 300ms
-        await page.waitForTimeout(300);
-
-        // Interceptando a requisição GET para /views/carrinho/confirmacao.html
-        await page.route('**/views/carrinho/confirmacao.html', route => route.continue());
-        const apiCarrinhoConfirmacao = page.waitForResponse('**/views/carrinho/confirmacao.html');
-
-        // Botão "AVANÇAR"
-        await page.locator('.layout-align-end-end > :nth-child(2) > .md-primary')
-                    .scrollIntoViewIfNeeded();
-        await page.waitForTimeout(200);
-        // await expect(page.locator('.layout-align-end-end > :nth-child(2) > .md-primary')).toBeVisible();
-        // await expect(page.locator('.layout-align-end-end > :nth-child(2) > .md-primary')).not.toBeDisabled();
-        await expect(page.locator('.layout-align-end-end > :nth-child(2) > .md-primary')).toContainText('Avançar');
-
-        // Botão "AVANÇAR" - clicar
-        await page.locator('.layout-align-end-end > :nth-child(2) > .md-primary').dblclick({force: true});
-
-        // Esperando a resposta da requisição interceptada
-        await apiCarrinhoConfirmacao;
-    }
+    await this.page.locator('.md-3-line > div.md-button > .md-no-style').click();
+    await apiPedidoValidarCliente;
+  }
 }

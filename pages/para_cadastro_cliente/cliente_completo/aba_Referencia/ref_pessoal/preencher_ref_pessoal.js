@@ -1,49 +1,55 @@
-import { gerarCpf, gerarNomeAleatorio, gerarEmailAleatorio, gerarCNPJ, gerarTelefoneAleatorio, gerarNomeEmpresa, gerarRelacionamento }  from '../../../../gerarDados';
-import { gerarChavePixTelefone, gerarChavePixTelefoneErrada, gerarChavePixEmailErrada, gerarChavePixCpfCnpjErrada } from '../../../../gerarDadosPIX'
+import {
+  gerarCpf,
+  gerarNomeAleatorio,
+  gerarEmailAleatorio,
+  gerarCNPJ,
+  gerarTelefoneAleatorio,
+  gerarNomeEmpresa,
+  gerarRelacionamento
+} from '../../../../gerarDados';
+import {
+  gerarChavePixTelefone,
+  gerarChavePixTelefoneErrada,
+  gerarChavePixEmailErrada,
+  gerarChavePixCpfCnpjErrada
+} from '../../../../gerarDadosPIX';
 
+/**
+ * Page Object para preencher campos de referência pessoal no cadastro de cliente.
+ */
 export class FillRefGuys {
+  /**
+   * @param {Page} page
+   */
+  constructor(page) {
+    this.page = page;
+  }
 
-    constructor(page) {
-        this.page = page
-    }
+  // referência pessoal - escolher Nome
+  async name() {
+    const Nome = gerarNomeAleatorio();
+    await this.page.click('#txtNomeRefPes');
+    await this.page.type('#txtNomeRefPes', Nome);
+  }
 
-    //referencia pessoal - escolher Nome 
-    async name (selector) {
+  // referência pessoal - escolher Email
+  async email() {
+    const email = gerarEmailAleatorio();
+    await this.page.click('#txtEmailRefPes');
+    await this.page.type('#txtEmailRefPes', email);
+  }
 
-        const Nome = gerarNomeAleatorio(); 
+  // referência pessoal - escolher Telefone
+  async phone() {
+    const numero_telefone = gerarTelefoneAleatorio();
+    await this.page.click('#txtTelefoneRefPes');
+    await this.page.type('#txtTelefoneRefPes', numero_telefone);
+  }
 
-        // clicar para abrir as opções
-        await page.click('#txtNomeRefPes');
-        await page.type('#txtNomeRefPes', Nome);
-    }
-
-    //referencia pessoal - escolher Email
-    async email (selector) {
-
-        const email = gerarEmailAleatorio();
-
-        // clicar para abrir as opções
-        await page.click('#txtEmailRefPes');
-        await page.type('#txtEmailRefPes', email);
-    }
-
-    //referencia pessoal - escolher Telefone
-    async phone (selector) {
-
-        const numero_telefone = gerarTelefoneAleatorio();
-
-        // clicar para abrir as opções
-        await page.click('#txtTelefoneRefPes');
-        await page.type('#txtTelefoneRefPes', numero_telefone);
-    }
-
-    //referencia pessoal - escolher Relacionamento
-    async relationship (selector) {
-
-        const relacionamento = gerarRelacionamento();
-
-        // clicar para abrir as opções
-        await page.click('#txtRelacionamentoRefPes');
-        await page.type('#txtRelacionamentoRefPes', relacionamento);
-    }
+  // referência pessoal - escolher Relacionamento
+  async relationship() {
+    const relacionamento = gerarRelacionamento();
+    await this.page.click('#txtRelacionamentoRefPes');
+    await this.page.type('#txtRelacionamentoRefPes', relacionamento);
+  }
 }

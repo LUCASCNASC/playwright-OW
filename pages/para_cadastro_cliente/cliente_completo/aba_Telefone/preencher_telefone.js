@@ -1,42 +1,31 @@
-import { gerarCpf, gerarNomeAleatorio, gerarEmailAleatorio, gerarCNPJ, gerarTelefoneAleatorio, gerarNomeEmpresa }  from '../../../gerarDados';
-import { gerarChavePixTelefone } from '../../../gerarDadosPIX'
+import { gerarTelefoneAleatorio } from '../../../gerarDados';
 
+/**
+ * Page Object para preencher campos do telefone em cadastro de cliente.
+ */
 export class FillRefPhone {
+  /**
+   * @param {Page} page
+   */
+  constructor(page) {
+    this.page = page;
+  }
 
-    constructor(page) {
-        this.page = page
-    }
+  // Selecionar tipo de telefone na aba telefone
+  async typePhone() {
+    await this.page.locator('#txtTpTel').click({ force: true });
+    await this.page.locator('.md-text.ng-binding').filter({ hasText: 'Padrão' }).click({ force: true });
+  }
 
-    //selecionar tipo de telefone na aba telefone
-    async typePhone (selector) {
+  // Preencher campo Número no cadastro de telefone
+  async numberPhone() {
+    const numero_telefone = gerarTelefoneAleatorio();
+    await this.page.locator('#txtNumTel').type(numero_telefone);
+  }
 
-        //Card Telefone - campo tipo de telefone
-        cy.get('#txtTpTel')
-            .click({force:true})
-        
-        //Card Telefone - escolher tipo de telefone
-        cy.get('.md-text.ng-binding')
-            .contains('Padrão')
-            .click({force:true})
-    }
-
-    //preencher campo Numero, no cadastro de telefone
-    async numberPhone (selector) {
-
-        const numero_telefone = gerarTelefoneAleatorio();
-
-        //Card Telefone - preencher campo número
-        cy.get('#txtNumTel')
-            .type(numero_telefone)
-    }
-
-    //preencher campo Ramal, no cadastro de telefone
-    async ramalPhone (selector) {
-
-        const ramal_telefone = "435"
-
-        //Card Telefone - preencher campo ramal
-        cy.get('#txtRamalTel')
-            .type(ramal_telefone)
-    }
+  // Preencher campo Ramal no cadastro de telefone
+  async ramalPhone() {
+    const ramal_telefone = "435";
+    await this.page.locator('#txtRamalTel').type(ramal_telefone);
+  }
 }

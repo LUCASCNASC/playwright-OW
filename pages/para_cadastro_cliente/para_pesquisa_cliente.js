@@ -1,232 +1,149 @@
+import { expect, Page } from '@playwright/test';
+
+/**
+ * Page Object para pesquisa e seleção de clientes.
+ */
 export class SearchClient {
+  /**
+   * @param {Page} page
+   */
+  constructor(page) {
+    this.page = page;
+  }
 
-    constructor(page) {
-        this.page = page
-    }
+  // Validando mensagem "Aguarde carregando..."
+  async messWaitLoading() {
+    await this.page.locator('.md-dialog-fullscreen > .carregando').waitFor({ state: 'visible' });
+    const text = await this.page.locator('.md-dialog-fullscreen > .carregando').textContent();
+    expect(text).toBe(' Aguarde carregando...');
+  }
 
-    //validando mensagem "Aguarde carregando..."
-    async messWaitLoading (selector) {
+  // Clicando na lupa pesquisa de cliente
+  async clickGlassSearchClient() {
+    await this.page.route('**/views/cliente/modalClientes.html', route => route.continue());
+    await this.page.locator('.md-block > .ng-binding').waitFor({ state: 'visible' });
+    await this.page.locator('.md-block > .ng-binding').click({ force: true });
+    await this.page.waitForResponse('**/views/cliente/modalClientes.html', { timeout: 40000 });
+  }
 
-        // Mensagem de "Aguarde carregando..."
-        await page.locator('.md-dialog-fullscreen > .carregando')
-        .waitFor({ state: 'visible' });
-        const text = await page.locator('.md-dialog-fullscreen > .carregando').textContent();
-        expect(text).toBe(' Aguarde carregando...');
-    }
+  // Validando botão X do card cliente
+  async cardClientValidate() {
+    await expect(this.page.locator('.md-dialog-fullscreen > ._md-toolbar-transitions > .md-toolbar-tools > .md-icon-button > .ng-binding')).toBeVisible();
+    await expect(this.page.locator('.md-dialog-fullscreen > ._md-toolbar-transitions > .md-toolbar-tools > .md-icon-button > .ng-binding')).not.toHaveAttribute('disabled', 'true');
+    await expect(this.page.locator('.md-dialog-fullscreen')).toBeVisible();
+    await expect(this.page.locator('.md-dialog-fullscreen > ._md-toolbar-transitions > .md-toolbar-tools > .flex')).toBeVisible();
+    await expect(this.page.locator('.md-dialog-fullscreen > ._md-toolbar-transitions > .md-toolbar-tools > .flex')).toHaveText('Clientes');
+    await expect(this.page.locator('label[for="txtBuscaClienteModal"]')).toHaveText('Digite o nome ou o CPF do cliente para busca');
+    await expect(this.page.locator('label[for="txtBuscaClienteModal"]')).toBeVisible();
+    await expect(this.page.locator('[ng-click="novoCliente()"] > .ng-binding')).toBeVisible();
+    await expect(this.page.locator('[ng-click="novoCliente()"] > .ng-binding')).not.toHaveAttribute('disabled', 'true');
+    await expect(this.page.locator('[ng-click="capturarVozCliente()"] > .ng-binding')).toBeVisible();
+    await expect(this.page.locator('[ng-click="capturarVozCliente()"] > .ng-binding')).not.toHaveAttribute('disabled', 'true');
+    await expect(this.page.locator('#txtBuscaClienteModal')).toBeVisible();
+    const inputValue = await this.page.locator('#txtBuscaClienteModal').inputValue();
+    expect(inputValue).not.toBe('');
+  }
 
-    //clicando na lupa pesquisa de cliente
-    async clickGlassSearchClient (selector) {
+  // Validando número e descrição do cliente CPF selecionado
+  async numberDescripCPFSearch() {
+    await expect(this.page.locator('#lblCpfClienteSelecionado')).toBeVisible();
+    await expect(this.page.locator('#lblNomeClienteSelecionado')).toBeVisible();
+  }
 
-        // Interceptar a requisição para '/views/cliente/modalClientes.html'
-        await page.route('**/views/cliente/modalClientes.html', route => route.continue());
+  // Validando número e descrição do cliente CNPJ selecionado
+  async numberDescripCNPJSearch() {
+    await expect(this.page.locator('#lblCpfClienteSelecionado')).toBeVisible();
+    await expect(this.page.locator('#lblNomeClienteSelecionado')).toBeVisible();
+  }
 
-        // clicar na lupa de pesquisa de clientes
-        await page.locator('.md-block > .ng-binding')
-            .waitFor({ state: 'visible' });
-        await page.locator('.md-block > .ng-binding').click({ force: true });
+  // Clicando cliente CPF pesquisado
+  async clickCPFSearch() {
+    await expect(this.page.locator('button[aria-label="CPF AUTOMACAO SABIUM - LUCAS CAMARGO 117.415.410-18   - MARINGA/PR"]')).toBeVisible();
+    await expect(this.page.locator('button[aria-label="CPF AUTOMACAO SABIUM - LUCAS CAMARGO 117.415.410-18   - MARINGA/PR"]')).not.toHaveAttribute('disabled', 'true');
+    await this.page.locator('button[aria-label="CPF AUTOMACAO SABIUM - LUCAS CAMARGO 117.415.410-18   - MARINGA/PR"]').click();
+  }
 
-        // Aguardar a resposta da requisição interceptada
-        await page.waitForResponse('**/views/cliente/modalClientes.html', { timeout: 40000 });
-    }
+  // Clicando cliente CNPJ pesquisado
+  async clickCNPJSearch() {
+    await expect(this.page.locator('button[aria-label="CNPJ AUTOMACAO SABIUM - LUCAS CAMARGO 24.468.163/0001-61   - MARINGA/PR"]')).toBeVisible();
+    await expect(this.page.locator('button[aria-label="CNPJ AUTOMACAO SABIUM - LUCAS CAMARGO 24.468.163/0001-61   - MARINGA/PR"]')).not.toHaveAttribute('disabled', 'true');
+    await this.page.locator('button[aria-label="CNPJ AUTOMACAO SABIUM - LUCAS CAMARGO 24.468.163/0001-61   - MARINGA/PR"]').click();
+  }
 
-    //validando botão X do card cliente
-    async cardClientValidate (selector) {
+  // Pesquisar cliente por número de CPF
+  async fillCPF() {
+    const numeroCPF = "117.415.410-18";
+    await this.page.locator('.click-cliente > .informe-o-cliente > .cliente-header').waitFor({ state: 'visible' });
+    await this.page.locator('.click-cliente > .informe-o-cliente > .cliente-header').type(numeroCPF, { delay: 500 });
+  }
 
-        // Card de clientes - Botão X
-        await expect(page.locator('.md-dialog-fullscreen > ._md-toolbar-transitions > .md-toolbar-tools > .md-icon-button > .ng-binding'))
-        .toBeVisible();
-        await expect(page.locator('.md-dialog-fullscreen > ._md-toolbar-transitions > .md-toolbar-tools > .md-icon-button > .ng-binding'))
-        .not.toHaveAttribute('disabled', 'true');
+  // Digitar cliente por número de CPF
+  async typeAgainCPF() {
+    const numeroCPF = "117.415.410-18";
+    const inputLocator = this.page.locator('#txtBuscaClienteModal');
+    await inputLocator.clear();
+    await this.page.waitForTimeout(100);
+    await expect(inputLocator).toHaveValue('');
+    await this.page.waitForTimeout(100);
+    await inputLocator.type(numeroCPF);
+  }
 
-        // Card inteiro de Clientes
-        await expect(page.locator('.md-dialog-fullscreen')).toBeVisible();
+  // Pesquisar cliente por número de CNPJ
+  async fillCNPJ() {
+    const numeroCNPJ = "24468163000161";
+    await this.page.locator('.click-cliente > .informe-o-cliente > .cliente-header').waitFor({ state: 'visible' });
+    await this.page.waitForTimeout(500);
+    await this.page.locator('.click-cliente > .informe-o-cliente > .cliente-header').type(numeroCNPJ, { delay: 100 });
+  }
 
-        // Card de clientes - Título Clientes
-        await expect(page.locator('.md-dialog-fullscreen > ._md-toolbar-transitions > .md-toolbar-tools > .flex'))
-        .toBeVisible();
-        await expect(page.locator('.md-dialog-fullscreen > ._md-toolbar-transitions > .md-toolbar-tools > .flex'))
-        .toHaveText('Clientes');
+  // Digitar cliente por número de CNPJ
+  async typeAgainCNPJ() {
+    const numeroCNPJ = "24468163000161";
+    const inputLocator = this.page.locator('#txtBuscaClienteModal');
+    await inputLocator.clear();
+    await this.page.waitForTimeout(100);
+    await expect(inputLocator).toHaveValue('');
+    await this.page.waitForTimeout(100);
+    await inputLocator.type(numeroCNPJ);
+  }
 
-        // Card de clientes - Texto Digite o nome ou o CPF do cliente para busca
-        await expect(page.locator('label[for="txtBuscaClienteModal"]'))
-        .toHaveText('Digite o nome ou o CPF do cliente para busca');
-        await expect(page.locator('label[for="txtBuscaClienteModal"]'))
-        .toBeVisible();
+  // Pesquisar cliente por descrição de CPF
+  async fillDescripCPF() {
+    const descricaoCPF = "CPF AUTOMAÇÃO SABIUM - LUCAS CAMARGO";
+    await this.page.locator('.click-cliente > .informe-o-cliente > .cliente-header').click();
+    await this.page.locator('#txtBuscaCliente').waitFor({ state: 'visible' });
+    await this.page.waitForTimeout(500);
+    await this.page.locator('#txtBuscaCliente').type(descricaoCPF, { delay: 100 });
+  }
 
-        // Card de clientes - Botão de cadastrar novo cliente
-        await expect(page.locator('[ng-click="novoCliente()"] > .ng-binding'))
-        .toBeVisible();
-        await expect(page.locator('[ng-click="novoCliente()"] > .ng-binding'))
-        .not.toHaveAttribute('disabled', 'true');
+  // Digitar cliente por descrição de CPF
+  async typeAgainDescriptCPF() {
+    const descricaoCPF = "CPF AUTOMAÇÃO SABIUM - LUCAS CAMARGO";
+    const inputLocator = this.page.locator('#txtBuscaClienteModal');
+    await inputLocator.clear();
+    await this.page.waitForTimeout(100);
+    await expect(inputLocator).toHaveValue('');
+    await this.page.waitForTimeout(100);
+    await inputLocator.type(descricaoCPF);
+  }
 
-        // Card de clientes - Botão comando de voz
-        await expect(page.locator('[ng-click="capturarVozCliente()"] > .ng-binding'))
-        .toBeVisible();
-        await expect(page.locator('[ng-click="capturarVozCliente()"] > .ng-binding'))
-        .not.toHaveAttribute('disabled', 'true');
+  // Pesquisar cliente por descrição de CNPJ
+  async fillDescripCNPJ() {
+    const descricaoCNPJ = "CNPJ AUTOMAÇÃO SABIUM - LUCAS CAMARGO";
+    await this.page.locator('.click-cliente > .informe-o-cliente > .cliente-header').click();
+    await this.page.locator('#txtBuscaCliente').waitFor({ state: 'visible' });
+    await this.page.waitForTimeout(500);
+    await this.page.locator('#txtBuscaCliente').type(descricaoCNPJ, { delay: 100 });
+  }
 
-        // Card de clientes - campo para digitar cliente
-        await expect(page.locator('#txtBuscaClienteModal')).toBeVisible();
-        const inputValue = await page.locator('#txtBuscaClienteModal').inputValue();
-        expect(inputValue).not.toBe('');
-    }
-
-    //validando numero e descrição do cliente CPF selecionado
-    async numberDescripCPFSearch (selector) {
-
-        // Número CPF do cliente selecionado
-        await expect(page.locator('#lblCpfClienteSelecionado')).toBeVisible();
-
-        // Descrição CPF do cliente selecionado
-        await expect(page.locator('#lblNomeClienteSelecionado')).toBeVisible();
-    }
-
-    //validando numero e descrição do cliente CNPJ selecionado
-    async numberDescripCNPJSearch (selector) {
-
-        // Número CNPJ do cliente selecionado
-        await expect(page.locator('#lblCpfClienteSelecionado')).toBeVisible();
-
-        // Descrição CNPJ do cliente selecionado
-        await expect(page.locator('#lblNomeClienteSelecionado')).toBeVisible();
-    }
-
-    //clicando cliente CPF pesquisado
-    async clickCPFSearch (selector) {
-
-        // Card de clientes - Conteúdo que a pesquisa trouxe
-        await expect(page.locator('button[aria-label="CPF AUTOMACAO SABIUM - LUCAS CAMARGO 117.415.410-18   - MARINGA/PR"]'))
-        .toBeVisible();
-        await expect(page.locator('button[aria-label="CPF AUTOMACAO SABIUM - LUCAS CAMARGO 117.415.410-18   - MARINGA/PR"]'))
-        .not.toHaveAttribute('disabled', 'true');
-
-        // Card de clientes - clicar no botão de conteúdo que a pesquisa trouxe
-        await page.locator('button[aria-label="CPF AUTOMACAO SABIUM - LUCAS CAMARGO 117.415.410-18   - MARINGA/PR"]').click();
-    }
-
-    //clicando cliente CNPJ pesquisado
-    async clickCNPJSearch (selector) {
-
-        // Card de clientes - Conteúdo que a pesquisa trouxe
-        await expect(page.locator('button[aria-label="CNPJ AUTOMACAO SABIUM - LUCAS CAMARGO 24.468.163/0001-61   - MARINGA/PR"]'))
-        .toBeVisible();
-        await expect(page.locator('button[aria-label="CNPJ AUTOMACAO SABIUM - LUCAS CAMARGO 24.468.163/0001-61   - MARINGA/PR"]'))
-        .not.toHaveAttribute('disabled', 'true');
-
-        // Card de clientes - clicar no botão de conteúdo que a pesquisa trouxe
-        await page.locator('button[aria-label="CNPJ AUTOMACAO SABIUM - LUCAS CAMARGO 24.468.163/0001-61   - MARINGA/PR"]').click();
-    }
-
-    //pesquisar cliente por numero de CPF
-    async fillCPF (selector) {
-
-        const numeroCPF = "117.415.410-18";
-
-        // inserir CPF/CNPJ no campo de cliente para podermos pesquisar pela lupa
-        await page.locator('.click-cliente > .informe-o-cliente > .cliente-header')
-            .waitFor({ state: 'visible' });
-        await page.locator('.click-cliente > .informe-o-cliente > .cliente-header')
-            .type(numeroCPF, { delay: 500 });
-    }
-
-    //digitar cliente por numero de CPF
-    async typeAgainCPF (selector) {
-
-        const numeroCPF = "117.415.410-18";
-
-        // Card de clientes - campo para digitar cliente
-        const inputLocator = page.locator('#txtBuscaClienteModal');
-        await inputLocator.clear();
-        await page.waitForTimeout(100);
-        await expect(inputLocator).toHaveValue('');
-        await page.waitForTimeout(100);
-        await inputLocator.type(numeroCPF);
-    }
-
-    //pesquisar cliente por numero de CNPJ
-    async fillCNPJ (selector) {
-
-        const numeroCNPJ = "24468163000161";
-
-        // inserir CPF/CNPJ no campo de cliente para podermos pesquisar pela lupa
-        await page.locator('.click-cliente > .informe-o-cliente > .cliente-header')
-            .waitFor({ state: 'visible' });
-        await page.waitForTimeout(500);
-        await page.locator('.click-cliente > .informe-o-cliente > .cliente-header')
-            .type(numeroCNPJ, { delay: 100 });
-    }
-
-    //digitar cliente por numero de CNPJ
-    async typeAgainCNPJ (selector) {
-
-        const numeroCNPJ = "24468163000161";
-
-        // Card de clientes - campo para digitar cliente
-        const inputLocator = page.locator('#txtBuscaClienteModal');
-        await inputLocator.clear();
-        await page.waitForTimeout(100);
-        await expect(inputLocator).toHaveValue('');
-        await page.waitForTimeout(100);
-        await inputLocator.type(numeroCNPJ);
-    }
-
-    //pesquisar cliente por descrição de CPF
-    async fillDescripCPF (selector) {
-
-        const descricaoCPF = "CPF AUTOMAÇÃO SABIUM - LUCAS CAMARGO";
-
-        // clicar no campo de cliente para podermos pesquisar pela lupa
-        await page.locator('.click-cliente > .informe-o-cliente > .cliente-header').click();
-
-        // inserir CPF/CNPJ no campo de cliente para podermos pesquisar pela lupa
-        await page.locator('#txtBuscaCliente')
-            .waitFor({ state: 'visible' });
-        await page.waitForTimeout(500);
-        await page.locator('#txtBuscaCliente')
-            .type(descricaoCPF, { delay: 100 });
-    }
-
-    //digitar cliente por descrição de CPF
-    async typeAgainDescriptCPF (selector) {
-
-        const descricaoCPF = "CPF AUTOMAÇÃO SABIUM - LUCAS CAMARGO";
-
-        // Card de clientes - campo para digitar cliente
-        const inputLocator = page.locator('#txtBuscaClienteModal');
-        await inputLocator.clear();
-        await page.waitForTimeout(100);
-        await expect(inputLocator).toHaveValue('');
-        await page.waitForTimeout(100);
-        await inputLocator.type(descricaoCPF);
-    }
-
-    //pesquisar cliente por descrição de CNPJ
-    async fillDescripCNPJ (selector) {
-
-        const descricaoCNPJ = "CNPJ AUTOMAÇÃO SABIUM - LUCAS CAMARGO";
-
-        // clicar no campo de cliente para podermos pesquisar pela lupa
-        await page.locator('.click-cliente > .informe-o-cliente > .cliente-header').click();
-
-        // inserir CPF/CNPJ no campo de cliente para podermos pesquisar pela lupa
-        await page.locator('#txtBuscaCliente')
-            .waitFor({ state: 'visible' });
-        await page.waitForTimeout(500);
-        await page.locator('#txtBuscaCliente')
-            .type(descricaoCNPJ, { delay: 100 });
-    }
-
-    //digitar cliente por descrição de CNPJ
-    async typeAgainDescriptCNPJ (selector) {
-
-        const descricaoCNPJ = "CNPJ AUTOMAÇÃO SABIUM - LUCAS CAMARGO";
-
-        // Card de clientes - campo para digitar cliente
-        const inputLocator = page.locator('#txtBuscaClienteModal');
-        await inputLocator.clear();
-        await page.waitForTimeout(100);
-        await expect(inputLocator).toHaveValue('');
-        await page.waitForTimeout(100);
-        await inputLocator.type(descricaoCNPJ);
-    }
+  // Digitar cliente por descrição de CNPJ
+  async typeAgainDescriptCNPJ() {
+    const descricaoCNPJ = "CNPJ AUTOMAÇÃO SABIUM - LUCAS CAMARGO";
+    const inputLocator = this.page.locator('#txtBuscaClienteModal');
+    await inputLocator.clear();
+    await this.page.waitForTimeout(100);
+    await expect(inputLocator).toHaveValue('');
+    await this.page.waitForTimeout(100);
+    await inputLocator.type(descricaoCNPJ);
+  }
 }

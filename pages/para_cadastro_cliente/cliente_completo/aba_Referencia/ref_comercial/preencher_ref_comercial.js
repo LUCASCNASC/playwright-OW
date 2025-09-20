@@ -1,67 +1,63 @@
-import { gerarCpf, gerarNomeAleatorio, gerarEmailAleatorio, gerarCNPJ, gerarTelefoneAleatorio, gerarNomeEmpresa,
-         gerarRelacionamento, gerarObservação }  from '../../../../gerarDados';
-import { gerarChavePixTelefone, gerarChavePixTelefoneErrada, gerarChavePixEmailErrada, gerarChavePixCpfCnpjErrada } from '../../../../gerarDadosPIX'
+import {
+  gerarCpf,
+  gerarNomeAleatorio,
+  gerarEmailAleatorio,
+  gerarCNPJ,
+  gerarTelefoneAleatorio,
+  gerarNomeEmpresa,
+  gerarRelacionamento,
+  gerarObservação
+} from '../../../../gerarDados';
+import {
+  gerarChavePixTelefone,
+  gerarChavePixTelefoneErrada,
+  gerarChavePixEmailErrada,
+  gerarChavePixCpfCnpjErrada
+} from '../../../../gerarDadosPIX';
 
-
+/**
+ * Page Object para preencher campos de referência comercial no cadastro de cliente.
+ */
 export class FillRefCommercial {
+  /**
+   * @param {Page} page
+   */
+  constructor(page) {
+    this.page = page;
+  }
 
-    constructor(page) {
-        this.page = page
-    }
+  // referência Comercial - Empresa
+  async enterprise() {
+    const empresa = gerarNomeEmpresa();
+    const campoEmpresa = this.page.locator('#txtEmpresaRefCom');
+    await campoEmpresa.type(empresa);
+  }
 
-    //referencia Comercial - escolher Agencia
-    async enterprise (selector) {
+  // referência Comercial - Contato
+  async contact() {
+    const contato = gerarTelefoneAleatorio();
+    const campoContato = this.page.locator('#txtContatoRefCom');
+    await campoContato.type(contato);
+  }
 
-        // Gerar nome da empresa
-        const empresa = gerarNomeEmpresa();
+  // referência Comercial - Telefone
+  async phone() {
+    const telefone = gerarTelefoneAleatorio();
+    const campoTelefone = this.page.locator('#txtTelefoneRefCom');
+    await campoTelefone.type(telefone);
+  }
 
-        // Inserir dados
-        const campoEmpresa = page.locator('#txtEmpresaRefCom');
-        await campoEmpresa.type(empresa);
-    }
+  // referência Comercial - Email
+  async email() {
+    const email = gerarEmailAleatorio();
+    const campoEmail = this.page.locator('#txtEmailRefCom');
+    await campoEmail.type(email);
+  }
 
-    //referencia Comercial - escolher Contato
-    async contact (selector) {
-
-        // Gerar telefone de contato aleatório
-        const contato = gerarTelefoneAleatorio();
-
-        // Inserir dados
-        const campoContato = page.locator('#txtContatoRefCom');
-        await campoContato.type(contato);
-    }
-
-    //referencia Comercial - escolher Telefone
-    async phone (selector) {
-
-        // Gerar telefone aleatório
-        const telefone = gerarTelefoneAleatorio();
-
-        // Inserir dados
-        const campoTelefone = page.locator('#txtTelefoneRefCom');
-        await campoTelefone.type(telefone);
-    }
-
-    //referencia Comercial - escolher Email
-    async email (selector) {
-
-        // Gerar email aleatório
-        const email = gerarEmailAleatorio();
-
-        // Inserir dados
-        const campoEmail = page.locator('#txtEmailRefCom');
-        await campoEmail.type(email);
-    }
-
-    //referencia Comercial - escolher Observação
-    async observation (selector) {
-
-        // Gerar observação
-        const observacao = gerarObservação();
-
-        // Inserir dados
-        const campoObservacao = page.locator('#txtObsRefCom');
-        await campoObservacao.type(observacao);
-    }
+  // referência Comercial - Observação
+  async observation() {
+    const observacao = gerarObservação();
+    const campoObservacao = this.page.locator('#txtObsRefCom');
+    await campoObservacao.type(observacao);
+  }
 }
-  
