@@ -1,10 +1,6 @@
-import { gerarCpf, gerarNomeAleatorio, gerarEmailAleatorio, gerarCNPJ, gerarTelefoneAleatorio, gerarNomeEmpresa } from '../../../gerarDados';
-import { gerarChavePixTelefone } from '../../../gerarDadosPIX';
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para operações com telefones de clientes.
- */
+//Page Object para operações com telefones de clientes.
 export class GeneralRefPhone {
   /**
    * @param {Page} page

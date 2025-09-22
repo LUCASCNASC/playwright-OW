@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para operações gerais de entrega, rotas e inconsistências.
- */
+//Page Object para operações gerais de entrega, rotas e inconsistências.
 export class GeneralDelivery {
   /**
    * @param {Page} page
@@ -11,9 +9,7 @@ export class GeneralDelivery {
     this.page = page;
   }
 
-  /**
-   * Clica no campo transportadora e escolhe a transportadora.
-   */
+  //Clica no campo transportadora e escolhe a transportadora.
   async chooseTransporter() {
     await this.page.locator('.progressbar').scrollIntoViewIfNeeded();
     await this.page.waitForTimeout(200);
@@ -22,9 +18,7 @@ export class GeneralDelivery {
     await this.page.locator('span[md-highlight-text="transpAutoCompleteSearchText"]').filter({ hasText: '1' }).click();
   }
 
-  /**
-   * Escolhe rota completa, rota Maringá.
-   */
+  //Escolhe rota completa, rota Maringá.
   async chooseRoute() {
     await this.page.locator('.rota-frete > .md-icon-right > .ng-binding').scrollIntoViewIfNeeded();
     await this.page.locator('.rota-frete > .md-icon-right > .ng-binding').click({ force: true });
@@ -37,9 +31,7 @@ export class GeneralDelivery {
     await this.page.waitForTimeout(200);
   }
 
-  /**
-   * Valida card de inconsistências - rota e transportadora.
-   */
+  //Valida card de inconsistências - rota e transportadora.
   async modalInconsRouteTransporter() {
     await expect(this.page.locator('.md-dialog-fullscreen > :nth-child(1) > .md-toolbar-tools > .flex')).toBeVisible();
     await expect(this.page.locator('.md-dialog-fullscreen > :nth-child(1) > .md-toolbar-tools > .flex')).toHaveText('Inconsistências');
@@ -58,9 +50,7 @@ export class GeneralDelivery {
     await this.page.locator('.md-dialog-fullscreen > :nth-child(1) > .md-toolbar-tools > .md-icon-button > .ng-binding').click({ force: true });
   }
 
-  /**
-   * Valida card de inconsistências - apenas transportadora.
-   */
+  //Valida card de inconsistências - apenas transportadora.
   async modalInconsOnlyTransporter() {
     await expect(this.page.locator('.md-dialog-fullscreen > :nth-child(1) > .md-toolbar-tools > .flex')).toBeVisible();
     await expect(this.page.locator('.md-dialog-fullscreen > :nth-child(1) > .md-toolbar-tools > .flex')).toHaveText('Inconsistências');
@@ -76,9 +66,7 @@ export class GeneralDelivery {
     await this.page.locator('.md-dialog-fullscreen > :nth-child(1) > .md-toolbar-tools > .md-icon-button > .ng-binding').click({ force: true });
   }
 
-  /**
-   * Valida card de inconsistências - apenas rota.
-   */
+  //Valida card de inconsistências - apenas rota.
   async modalInconsOnlyRoute() {
     await expect(this.page.locator('.md-dialog-fullscreen > :nth-child(1) > .md-toolbar-tools > .flex')).toBeVisible();
     await expect(this.page.locator('.md-dialog-fullscreen > :nth-child(1) > .md-toolbar-tools > .flex')).toHaveText('Inconsistências');

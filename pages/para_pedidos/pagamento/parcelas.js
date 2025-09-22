@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para seleção de parcelas no recebimento.
- */
+//Page Object para seleção de parcelas no recebimento.
 export class ChooseInstallmentReceipt {
   /**
    * @param {Page} page
@@ -11,9 +9,7 @@ export class ChooseInstallmentReceipt {
     this.page = page;
   }
 
-  /**
-   * Seleciona a opção "1X" (uma parcela).
-   */
+  //Seleciona a opção "1X" (uma parcela).
   async one() {
     const parcela1X = this.page.locator('.active > md-collapsible-body > .layout-column > [style="position: relative"] > :nth-child(1) > div.ng-binding');
     await expect(parcela1X).toBeVisible();
@@ -21,9 +17,7 @@ export class ChooseInstallmentReceipt {
     await parcela1X.click({ force: true });
   }
 
-  /**
-   * Seleciona a opção "2X" (duas parcelas).
-   */
+  //Seleciona a opção "2X" (duas parcelas).
   async two() {
     const parcela2X = this.page.locator('.active > md-collapsible-body > .layout-column > [style="position: relative"] > :nth-child(2) > div.ng-binding');
     await expect(parcela2X).toBeVisible();
@@ -31,9 +25,7 @@ export class ChooseInstallmentReceipt {
     await parcela2X.click({ force: true });
   }
 
-  /**
-   * Seleciona a opção "4X" (quatro parcelas).
-   */
+  //Seleciona a opção "4X" (quatro parcelas).
   async for() {
     await this.page.locator('[style="position: relative"] > :nth-child(4) > div.ng-binding').scrollIntoViewIfNeeded();
     await this.page.waitForTimeout(200);

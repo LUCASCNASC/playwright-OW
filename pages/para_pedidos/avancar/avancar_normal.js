@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para seleção e pesquisa de clientes no pedido.
- */
+//Page Object para seleção e pesquisa de clientes no pedido.
 export class ChooseClient {
   /**
    * @param {Page} page
@@ -11,9 +9,7 @@ export class ChooseClient {
     this.page = page;
   }
 
-  /**
-   * Escolhe cliente CPF para gerar pedido de venda (com intenções de compra).
-   */
+  //Escolhe cliente CPF para gerar pedido de venda (com intenções de compra).
   async pedido2() {
     await this.page.locator('.click-cliente > .informe-o-cliente > .cliente-header').waitForTimeout(500);
     await this.page.locator('.click-cliente > .informe-o-cliente > .cliente-header').type('    48976249089{enter}');
@@ -32,9 +28,7 @@ export class ChooseClient {
     await this.page.locator('.md-cancel-button').click({ force: true });
   }
 
-  /**
-   * Pesquisa e seleciona cliente CPF para o pedido, fluxo com rota.
-   */
+  //Pesquisa e seleciona cliente CPF para o pedido, fluxo com rota.
   async withRoute() {
     await this.page.locator('.click-cliente > .informe-o-cliente > .cliente-header').waitForTimeout(500);
     await this.page.locator('.click-cliente > .informe-o-cliente > .cliente-header').type('48976249089 {ArrowDown}');

@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para ações e validações relacionadas a promoções.
- */
+//Page Object para ações e validações relacionadas a promoções.
 export class Promotion {
   /**
    * @param {Page} page
@@ -11,9 +9,7 @@ export class Promotion {
     this.page = page;
   }
 
-  /**
-   * Seleciona a primeira promoção do produto.
-   */
+  //Seleciona a primeira promoção do produto.
   async selectFirstPromoProduct() {
     const botaoVoltar = this.page.locator('[ng-click="modalSaldo()"] > .ng-binding');
     await expect(botaoVoltar).toBeVisible();
@@ -38,9 +34,7 @@ export class Promotion {
     await promocaoSim.click();
   }
 
-  /**
-   * Valida produtos com ticket vermelho "PROMOÇÃO".
-   */
+  //Valida produtos com ticket vermelho "PROMOÇÃO".
   async ticketPromotion() {
     const etiquetaInteira = this.page.locator('.md-secondary-container > div > .ng-scope');
     await expect(etiquetaInteira).toBeVisible();
@@ -54,9 +48,7 @@ export class Promotion {
     await expect(etiquetaPromocao).toHaveCSS('color', 'rgb(255, 255, 255)');
   }
 
-  /**
-   * Valida modal de carregamento "Adicionando produtos/serviços...".
-   */
+  //Valida modal de carregamento "Adicionando produtos/serviços...".
   async messAddProductsServices() {
     const iconeCarregamento = this.page.locator('.conteudo > .layout-align-center-center > .md-accent');
     await expect(iconeCarregamento).toBeVisible();
@@ -66,9 +58,7 @@ export class Promotion {
     await expect(mensagemCarregamento).toHaveText('Adicionando produtos/serviços...');
   }
 
-  /**
-   * Valida e prepara adição do serviço prestamista.
-   */
+  //Valida e prepara adição do serviço prestamista.
   async addPrestamista() {
     const iconeServico = this.page.locator('.btn-remove-item-list > :nth-child(2) > .md-raised > .ng-scope');
     await expect(iconeServico).toBeVisible();
@@ -116,9 +106,7 @@ export class Promotion {
     // await checkboxSeguroPrestamista.click();
   }
 
-  /**
-   * Valida tipo "Tipo(s) Serviço(s) Isento(s):" dentro do modal Promoções.
-   */
+  //Valida tipo "Tipo(s) Serviço(s) Isento(s):" dentro do modal Promoções.
   async typeServiceFreeValidate() {
     const tipoServicoIsento = this.page.locator('text=Tipo(s) Serviço(s) Isento(s):');
     await expect(tipoServicoIsento).toBeVisible();

@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para seleção de formas de pagamento prestamista (abatimento %, valor fixo, origem serviço).
- */
+//Page Object para seleção de formas de pagamento prestamista (abatimento %, valor fixo, origem serviço).
 export class ProcessReceiptPrest {
   /**
    * @param {Page} page
@@ -99,9 +97,7 @@ export class ProcessReceiptPrest {
     );
   }
 
-  /**
-   * Seleciona forma de pagamento 3878 (T.A.A Receb Presente CDCI - Prest. Valor Fixo)
-   */
+  //Seleciona forma de pagamento 3878 (T.A.A Receb Presente CDCI - Prest. Valor Fixo)
   async presentAbatVF() {
     await expect(this.page.locator('.md-dialog-fullscreen > .md-primary > .md-toolbar-tools > .flex')).toBeVisible();
     await expect(this.page.locator('.md-dialog-fullscreen > .md-primary > .md-toolbar-tools > .flex')).toHaveText('Forma de pagamento');
@@ -120,9 +116,7 @@ export class ProcessReceiptPrest {
     );
   }
 
-  /**
-   * Seleciona forma de pagamento 3879 (T.A. A Receb Fut sem juros - Prest. Valor Fixo)
-   */
+  //Seleciona forma de pagamento 3879 (T.A. A Receb Fut sem juros - Prest. Valor Fixo)
   async futWithoutFeesAbatVF() {
     await expect(this.page.locator('.md-dialog-fullscreen > .md-primary > .md-toolbar-tools > .flex')).toBeVisible();
     await expect(this.page.locator('.md-dialog-fullscreen > .md-primary > .md-toolbar-tools > .flex')).toHaveText('Forma de pagamento');
@@ -143,9 +137,7 @@ export class ProcessReceiptPrest {
 
   //---------- Prestamista Abatimento Origem Serviço
 
-  /**
-   * Seleciona forma de pagamento 3881 (T.A. A Receb Fut com juros - Prest. Origem Produto)
-   */
+  //Seleciona forma de pagamento 3881 (T.A. A Receb Fut com juros - Prest. Origem Produto)
   async futWithFeesAbatOS() {
     await expect(this.page.locator('.md-dialog-fullscreen > .md-primary > .md-toolbar-tools > .flex')).toBeVisible();
     await expect(this.page.locator('.md-dialog-fullscreen > .md-primary > .md-toolbar-tools > .flex')).toHaveText('Forma de pagamento');

@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para finalizar e validar pedidos.
- */
+//Page Object para finalizar e validar pedidos.
 export class FinishOrder {
   /**
    * @param {Page} page
@@ -11,9 +9,7 @@ export class FinishOrder {
     this.page = page;
   }
 
-  /**
-   * Valida modal de proposta de crédito gerada.
-   */
+  //Valida modal de proposta de crédito gerada.
   async validatePropCreditGenerated() {
     const tituloPedidoConcluido = this.page.locator(':nth-child(5) > .md-transition-in > ._md > .md-toolbar-tools > .flex');
     await expect(tituloPedidoConcluido).toBeVisible();
@@ -38,9 +34,7 @@ export class FinishOrder {
     await botaoSim.click({ force: true });
   }
 
-  /**
-   * Valida card de Pedido Concluído - alterado com sucesso.
-   */
+  //Valida card de Pedido Concluído - alterado com sucesso.
   async validateOrderChangedSucess() {
     const tituloPedidoConcluido = this.page.locator('.md-toolbar-tools h2.flex');
     await expect(tituloPedidoConcluido).toBeVisible();
@@ -77,9 +71,7 @@ export class FinishOrder {
     await expect(botaoOk).not.toHaveAttribute('disabled');
   }
 
-  /**
-   * Clica no botão para finalizar o pedido.
-   */
+  //Clica no botão para finalizar o pedido.
   async clickFinishOrder() {
     await this.page.route('POST', '/services/v3/pedido_finalizar', route => route.continue());
     const apiPedidoFinalizar = this.page.waitForResponse('/services/v3/pedido_finalizar');
@@ -120,9 +112,7 @@ export class FinishOrder {
     await apiPedidoFinalizar;
   }
 
-  /**
-   * Valida card de Pedido Concluído - gravado com sucesso.
-   */
+  //Valida card de Pedido Concluído - gravado com sucesso.
   async validateOrderGenerated() {
     const tituloPedidoConcluido = this.page.locator('.md-toolbar-tools h2.flex');
     await expect(tituloPedidoConcluido).toBeVisible();

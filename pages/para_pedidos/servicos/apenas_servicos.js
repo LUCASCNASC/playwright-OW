@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para ações relacionadas a serviços no pedido.
- */
+//Page Object para ações relacionadas a serviços no pedido.
 export class Service {
   /**
    * @param {Page} page
@@ -32,9 +30,7 @@ export class Service {
     await checkbox140.click();
   }
 
-  /**
-   * Marca Garantia separa título em um processo diferente - 141
-   */
+  //Marca Garantia separa título em um processo diferente - 141
   async garantiaSepTituloProcDif() {
     const checkbox141 = this.page.locator('#checkbox-141-2 > .md-container');
     await expect(checkbox141).toBeVisible();
@@ -42,9 +38,7 @@ export class Service {
     await checkbox141.click();
   }
 
-  /**
-   * Marca Mão de Obra "T.A. MO Destaca e Não Separa" - 142
-   */
+  //Marca Mão de Obra "T.A. MO Destaca e Não Separa" - 142
   async maoObraDestNaoSep() {
     const checkbox142 = this.page.locator('#checkbox-142-0 > .md-container');
     await expect(checkbox142).toBeVisible();
@@ -52,9 +46,7 @@ export class Service {
     await checkbox142.click();
   }
 
-  /**
-   * Marca Mão de Obra "T.A. MO Não Destaca e Separa Mesmo Processo" - 143
-   */
+  //Marca Mão de Obra "T.A. MO Não Destaca e Separa Mesmo Processo" - 143
   async maoObraNaoDestSepMesmoProc() {
     const checkbox143 = this.page.locator('#checkbox-143-1 > .md-container');
     await expect(checkbox143).toBeVisible();
@@ -62,9 +54,7 @@ export class Service {
     await checkbox143.click();
   }
 
-  /**
-   * Marca Mão de obra que não destaca e separa título em processo diferente - 144
-   */
+  //Marca Mão de obra que não destaca e separa título em processo diferente - 144
   async maoObraNaoDestSepaProcDif() {
     const checkbox144 = this.page.locator('#checkbox-144-2 > .md-container');
     await expect(checkbox144).not.toBeDisabled();
@@ -73,9 +63,7 @@ export class Service {
 
   // ------------ SERVIÇOS VINCULADOS / MODAIS ------------
 
-  /**
-   * Valida modal de serviços vinculados.
-   */
+  //Valida modal de serviços vinculados.
   async validateModalServLinked() {
     const tituloModal = this.page.locator('.md-dialog-fullscreen > ._md-toolbar-transitions > .md-toolbar-tools > .flex');
     await expect(tituloModal).toBeVisible();
@@ -105,9 +93,7 @@ export class Service {
     await expect(mensagemMaoDeObra).toBeVisible();
   }
 
-  /**
-   * Clica no botão OK do modal de serviços vinculados (com intercept).
-   */
+  //Clica no botão OK do modal de serviços vinculados (com intercept).
   async clickOKServiceLinked() {
     await this.page.route('POST', '/services/v3/pedido_calcular_frete', route => route.continue());
     const apiPedidoCalcularFrete = this.page.waitForResponse('/services/v3/pedido_calcular_frete');
@@ -119,9 +105,7 @@ export class Service {
     await apiPedidoCalcularFrete;
   }
 
-  /**
-   * Clica no botão OK do modal de serviços vinculados de pedidos remotos.
-   */
+  //Clica no botão OK do modal de serviços vinculados de pedidos remotos.
   async clickOKServiceLinkedRemote() {
     const botaoSalvar = this.page.locator('button[ng-click="salvar()"]');
     await expect(botaoSalvar).toBeVisible();
@@ -130,9 +114,7 @@ export class Service {
     await botaoSalvar.click({ force: true });
   }
 
-  /**
-   * Valida modal e clica em OK para seguro prestamista.
-   */
+  //Valida modal e clica em OK para seguro prestamista.
   async okInsurancePrest() {
     const tituloModalSeguro = this.page.locator('.md-dialog-fullscreen > ._md-toolbar-transitions > .md-toolbar-tools > .flex');
     await expect(tituloModalSeguro).toBeVisible();
@@ -177,9 +159,7 @@ export class Service {
     await botaoOk.click();
   }
 
-  /**
-   * Valida mensagem de remoção do prestamista por agrupamento de formas de pagamento.
-   */
+  //Valida mensagem de remoção do prestamista por agrupamento de formas de pagamento.
   async messPrestRemoved() {
     const toast = this.page.locator('.toast');
     await expect(toast).toBeVisible();
@@ -191,9 +171,7 @@ export class Service {
     await expect(toastMessage).toHaveText('O seguro prestamista será removido, você terá que adicioná-lo novamente');
   }
 
-  /**
-   * Valida modal e clica para adicionar seguro prestamista.
-   */
+  //Valida modal e clica para adicionar seguro prestamista.
   async addInsurancePrest() {
     const tituloModalSeguro = this.page.locator('.md-dialog-fullscreen > ._md-toolbar-transitions > .md-toolbar-tools > .flex');
     await expect(tituloModalSeguro).toBeVisible();

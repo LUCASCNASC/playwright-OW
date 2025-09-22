@@ -1,23 +1,6 @@
-import {
-  gerarCpf,
-  gerarNomeAleatorio,
-  gerarEmailAleatorio,
-  gerarCNPJ,
-  gerarTelefoneAleatorio,
-  gerarNomeEmpresa,
-  gerarRelacionamento
-} from '../../../../gerarDados';
-import {
-  gerarChavePixTelefone,
-  gerarChavePixTelefoneErrada,
-  gerarChavePixEmailErrada,
-  gerarChavePixCpfCnpjErrada
-} from '../../../../gerarDadosPIX';
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para operações com referência pessoal em cadastro de cliente.
- */
+//Page Object para operações com referência pessoal em cadastro de cliente.
 export class GeneralRefGuys {
   /**
    * @param {Page} page

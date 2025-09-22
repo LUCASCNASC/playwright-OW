@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para validações de saldo de produto (local, CD, indisponível).
- */
+//Page Object para validações de saldo de produto (local, CD, indisponível).
 export class ValidateBalance {
   /**
    * @param {Page} page
@@ -11,9 +9,7 @@ export class ValidateBalance {
     this.page = page;
   }
 
-  /**
-   * Valida produto com saldo disponível local (verde).
-   */
+  //Valida produto com saldo disponível local (verde).
   async withBalance() {
     const resultadoImagem = this.page.locator('.resultado-imagem');
     await expect(resultadoImagem).toBeVisible();
@@ -38,9 +34,7 @@ export class ValidateBalance {
     await expect(valorProduto).toBeVisible();
   }
 
-  /**
-   * Valida produto com saldo disponível no CD (amarelo).
-   */
+  //Valida produto com saldo disponível no CD (amarelo).
   async withBalanceCD() {
     const resultadoImagem = this.page.locator('.resultado-imagem');
     await expect(resultadoImagem).toBeVisible();
@@ -65,9 +59,7 @@ export class ValidateBalance {
     await expect(valorProduto).toBeVisible();
   }
 
-  /**
-   * Valida produto com saldo indisponível (vermelho).
-   */
+  //Valida produto com saldo indisponível (vermelho).
   async withoutBalance() {
     const resultadoImagem = this.page.locator('.resultado-imagem');
     await expect(resultadoImagem).toBeVisible();

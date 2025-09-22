@@ -1,24 +1,8 @@
-import {
-  gerarCpf,
-  gerarNomeAleatorio,
-  gerarEmailAleatorio,
-  gerarCNPJ,
-  gerarTelefoneAleatorio,
-  gerarNomeEmpresa
-} from '../../../../gerarDados';
-import {
-  gerarChavePixTelefone,
-  gerarChavePixTelefoneErrada,
-  gerarChavePixEmailErrada,
-  gerarChavePixCpfCnpjErrada,
-  gerarChavePixEmail,
-  gerarChavePixCPF,
-  gerarChavePixAleatoria
-} from '../../../../gerarDadosPIX';
+import {gerarCpf,gerarNomeAleatorio,gerarEmailAleatorio,gerarTelefoneAleatorio} from '../../../../gerarDados';
+import { gerarChavePixTelefone,gerarChavePixTelefoneErrada,gerarChavePixEmailErrada,gerarChavePixCpfCnpjErrada,
+  gerarChavePixEmail,gerarChavePixCPF,gerarChavePixAleatoria} from '../../../../gerarDadosPIX';
 
-/**
- * Page Object para preencher campos de referência bancária no cadastro de cliente.
- */
+//Page Object para preencher campos de referência bancária no cadastro de cliente.
 export class FillRefBanking {
   /**
    * @param {Page} page

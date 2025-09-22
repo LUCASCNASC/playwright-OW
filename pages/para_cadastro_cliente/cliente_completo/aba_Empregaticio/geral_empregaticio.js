@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para operações com aba Empregatício de clientes.
- */
+//Page Object para operações com aba Empregatício de clientes.
 export class GeneralEmployment {
   /**
    * @param {Page} page
@@ -11,9 +9,7 @@ export class GeneralEmployment {
     this.page = page;
   }
 
-  /**
-   * Validar e clicar na aba Empregatício.
-   */
+  //Validar e clicar na aba Empregatício.
   async clickAbaEmployment() {
     await expect(this.page.locator('#menu_items_pri > :nth-child(6)')).toBeVisible();
     await expect(this.page.locator('#menu_items_pri > :nth-child(6)')).not.toHaveAttribute('disabled', 'true');
@@ -22,9 +18,7 @@ export class GeneralEmployment {
     await this.page.waitForResponse('**/views/cliente/clienteEmpregaticioLista.html', { timeout: 40000 });
   }
 
-  /**
-   * Validar informações da tela antes de adicionar qualquer coisa.
-   */
+  //Validar informações da tela antes de adicionar qualquer coisa.
   async validateAbaEmploymentEmpty() {
     await expect(this.page.locator('h3')).toBeVisible();
     await expect(this.page.locator('h3')).toHaveText('Empregatício');
@@ -36,18 +30,14 @@ export class GeneralEmployment {
     await expect(this.page.locator('.btn')).not.toHaveAttribute('disabled', 'true');
   }
 
-  /**
-   * Clicar no botão + para adicionar uma nova referência bancária.
-   */
+  //Clicar no botão + para adicionar uma nova referência bancária.
   async clickAddNewEmployment() {
     await this.page.route('**/services/v3/dados_tabela/tipocomprovanterenda', route => route.continue());
     await this.page.locator('.layout-align-end-end > .md-fab').click();
     await this.page.waitForResponse('**/services/v3/dados_tabela/tipocomprovanterenda', { timeout: 40000 });
   }
 
-  /**
-   * Validar informações do modal Empregatício antes de preencher as informações.
-   */
+  //Validar informações do modal Empregatício antes de preencher as informações.
   async modalEmploymentEmpty() {
     await expect(this.page.locator('.md-dialog-fullscreen > ._md > .md-toolbar-tools > .flex')).toBeVisible();
     await expect(this.page.locator('.md-dialog-fullscreen > ._md > .md-toolbar-tools > .flex')).toHaveText('Empregatício');

@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para validações e interações do menu de opções.
- */
+//Page Object para validações e interações do menu de opções.
 export class MenuOpcoes {
   /**
    * @param {Page} page
@@ -11,9 +9,7 @@ export class MenuOpcoes {
     this.page = page;
   }
 
-  /**
-   * Validar e clicar no menu de opções.
-   */
+  //Validar e clicar no menu de opções.
   async iconeMenuOpcoes() {
     const menuOpcoesIcone = this.page.locator('[aria-label="Menu de opções"] > .ng-binding');
     await expect(menuOpcoesIcone).toBeVisible();
@@ -21,25 +17,19 @@ export class MenuOpcoes {
     await menuOpcoesIcone.click({ force: true });
   }
 
-  /**
-   * Validando topo da página - parte colorida.
-   */
+  //Validando topo da página - parte colorida.
   async topoPagina() {
     return this.iconeMenuOpcoes();
   }
 
-  /**
-   * Validar imagem no início do modal menu.
-   */
+  //Validar imagem no início do modal menu.
   async imageMenu() {
     const imagemModalMenu = this.page.locator('.md-primary > .logo > .md-default-theme > img');
     await expect(imagemModalMenu).toBeVisible();
     await expect(imagemModalMenu).not.toHaveAttribute('disabled');
   }
 
-  /**
-   * Ícone do computador para validar se realmente saiu do pedido web.
-   */
+  //Ícone do computador para validar se realmente saiu do pedido web.
   async iconeComputadorLogin() {
     const iconeComputador = this.page.locator('[ng-click="clienteStatsOpen()"] > .ng-binding');
     await expect(iconeComputador).toBeVisible();
@@ -51,9 +41,7 @@ export class MenuOpcoes {
     await expect(labelBuscarProduto).toHaveText('Buscar produtos');
   }
 
-  /**
-   * Validando opção Início, do menu de opções.
-   */
+  //Validando opção Início, do menu de opções.
   async inicioOpcaoMenu() {
     const iconeInicio = this.page.locator('md-icon[md-svg-src="images/icons/home.svg"]');
     await iconeInicio.scrollIntoViewIfNeeded();
@@ -66,9 +54,7 @@ export class MenuOpcoes {
     await opcaoInicioMenu.click({ force: true });
   }
 
-  /**
-   * Validando opção Departamentos, do menu de opções.
-   */
+  //Validando opção Departamentos, do menu de opções.
   async departamentoOpcaoMenu() {
     const iconeDepartamentos = this.page.locator('md-icon[md-svg-src="images/icons/departamentos.svg"]');
     await iconeDepartamentos.scrollIntoViewIfNeeded();
@@ -83,9 +69,7 @@ export class MenuOpcoes {
     await expect(breadcrumbDepartamentos).toContainText('Departamentos');
   }
 
-  /**
-   * Validando opção Serviços, do menu de opções.
-   */
+  //Validando opção Serviços, do menu de opções.
   async servicosOpcaoMenu() {
     const iconeServicos = this.page.locator('md-icon[md-svg-src="images/icons/services.svg"]');
     await iconeServicos.scrollIntoViewIfNeeded();
@@ -100,9 +84,7 @@ export class MenuOpcoes {
     await expect(ordenarServicos).not.toHaveAttribute('disabled');
   }
 
-  /**
-   * Validando opção Pedidos Pendentes, do menu de opções.
-   */
+  //Validando opção Pedidos Pendentes, do menu de opções.
   async pedidosPendentesOpcaoMenu() {
     const iconePedidosPendentes = this.page.locator('md-icon[md-svg-src="images/icons/pedido.svg"]');
     await iconePedidosPendentes.scrollIntoViewIfNeeded();
@@ -117,9 +99,7 @@ export class MenuOpcoes {
     await expect(headerPedidosPendentes).toContainText('PEDIDOS PENDENTES');
   }
 
-  /**
-   * Validando opção Cliente, do menu de opções.
-   */
+  //Validando opção Cliente, do menu de opções.
   async clienteOpcaoMenu() {
     const iconeCliente = this.page.locator('md-icon[md-svg-src="images/icons/cliente.svg"]');
     await iconeCliente.scrollIntoViewIfNeeded();
@@ -134,9 +114,7 @@ export class MenuOpcoes {
     await expect(clientePageElement).not.toHaveAttribute('disabled');
   }
 
-  /**
-   * Validando opção Cliente Completo, do menu de opções.
-   */
+  //Validando opção Cliente Completo, do menu de opções.
   async clienteCompletoOpcaoMenu() {
     const iconeClienteCompleto = this.page.locator('md-icon[md-svg-src="images/icons/cliente_completo.svg"]');
     await iconeClienteCompleto.scrollIntoViewIfNeeded();
@@ -151,9 +129,7 @@ export class MenuOpcoes {
     await expect(menuClienteCompleto).not.toHaveAttribute('disabled');
   }
 
-  /**
-   * Validando opção Pós Venda, do menu de opções.
-   */
+  //Validando opção Pós Venda, do menu de opções.
   async posVendaOpcaoMenu() {
     const iconePosVenda = this.page.locator('md-icon[md-svg-src="images/icons/pos-venda.svg"]');
     await iconePosVenda.scrollIntoViewIfNeeded();
@@ -167,9 +143,7 @@ export class MenuOpcoes {
     await expect(headerPosVenda).toBeVisible();
   }
 
-  /**
-   * Validando opção Intenção de compra, do menu de opções.
-   */
+  //Validando opção Intenção de compra, do menu de opções.
   async intencaoCompraOpcaoMenu() {
     const iconeIntencaoCompra = this.page.locator('md-icon[md-svg-src="images/icons/intencao.svg"]');
     await iconeIntencaoCompra.scrollIntoViewIfNeeded();
@@ -183,9 +157,7 @@ export class MenuOpcoes {
     await expect(headerIntencaoCompra).toBeVisible();
   }
 
-  /**
-   * Validando opção Proposta de crédito, do menu de opções.
-   */
+  //Validando opção Proposta de crédito, do menu de opções.
   async propostaCreditoOpcaoMenu() {
     const iconePropostaCredito = this.page.locator('md-icon[md-svg-src="images/icons/aprovacao_credito.svg"]');
     await iconePropostaCredito.scrollIntoViewIfNeeded();
@@ -199,9 +171,7 @@ export class MenuOpcoes {
     await expect(headerPropostaCredito).toBeVisible();
   }
 
-  /**
-   * Validando opção Configurações, do menu de opções.
-   */
+  //Validando opção Configurações, do menu de opções.
   async configuracoesOpcaoMenu() {
     const iconeConfiguracoes = this.page.locator('md-icon[md-svg-src="images/icons/settings.svg"]');
     await iconeConfiguracoes.scrollIntoViewIfNeeded();
@@ -215,9 +185,7 @@ export class MenuOpcoes {
     await expect(viewConfiguracoes).toBeVisible();
   }
 
-  /**
-   * Validando opção Minha performance, do menu de opções.
-   */
+  //Validando opção Minha performance, do menu de opções.
   async minhaPerformanceOpcaoMenu() {
     const iconeMinhaPerformance = this.page.locator('md-icon[md-svg-src="images/icons/performance.svg"]');
     await iconeMinhaPerformance.scrollIntoViewIfNeeded();
@@ -231,9 +199,7 @@ export class MenuOpcoes {
     await expect(headerMinhaPerformance).toBeVisible();
   }
 
-  /**
-   * Validando opção Sair, já fora do menu de opções.
-   */
+  //Validando opção Sair, já fora do menu de opções.
   async botaoSair() {
     const opcaoMinhaPerformance = this.page.locator('.rodape > ._md-button-wrap > div.md-button > .md-no-style');
     await expect(opcaoMinhaPerformance).toBeVisible();

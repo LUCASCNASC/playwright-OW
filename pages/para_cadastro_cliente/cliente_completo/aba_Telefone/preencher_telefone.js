@@ -1,8 +1,6 @@
 import { gerarTelefoneAleatorio } from '../../../gerarDados';
 
-/**
- * Page Object para preencher campos do telefone em cadastro de cliente.
- */
+//Page Object para preencher campos do telefone em cadastro de cliente.
 export class FillRefPhone {
   /**
    * @param {Page} page

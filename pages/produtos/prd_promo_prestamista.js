@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para produtos prestamista promocionais.
- */
+//Page Object para produtos prestamista promocionais.
 export class ProductPromo {
   /**
    * @param {Page} page

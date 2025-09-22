@@ -1,9 +1,7 @@
-import { gerarCpf, gerarNomeAleatorio, gerarCNPJ, gerarTelefoneAleatorio, gerarEmailAleatorio, gerarNomeEmpresa } from '../../gerarDados';
+import { gerarCpf, gerarNomeAleatorio, gerarCNPJ, gerarNomeEmpresa } from '../../gerarDados';
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para preencher dados do cliente simples (formulário).
- */
+//Page Object para preencher dados do cliente simples (formulário).
 export class FillClientSimple {
   /**
    * @param {Page} page

@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para seleção do processo de venda (NFe/NFCe).
- */
+//Page Object para seleção do processo de venda (NFe/NFCe).
 export class ProcessSale {
   /**
    * @param {Page} page
@@ -13,9 +11,7 @@ export class ProcessSale {
 
   // ------------------- PROCESSOS NFe -------------------
 
-  /**
-   * Escolhe processo de venda 9860 NFe.
-   */
+  //Escolhe processo de venda 9860 NFe.
   async NFe() {
     const selectIcon = this.page.locator('#select_value_label_4 > .md-select-icon');
     await expect(selectIcon).toBeVisible();
@@ -35,9 +31,7 @@ export class ProcessSale {
     await this.page.waitForTimeout(200);
   }
 
-  /**
-   * Escolhe processo de venda 9869 para exclusiva NFe.
-   */
+  //Escolhe processo de venda 9869 para exclusiva NFe.
   async exclusive() {
     const selectIcon = this.page.locator('#select_value_label_4 > .md-select-icon');
     await expect(selectIcon).toBeVisible();
@@ -57,9 +51,7 @@ export class ProcessSale {
     await this.page.waitForTimeout(200);
   }
 
-  /**
-   * Escolhe processo de venda entrega futura 9862 normal - NFe.
-   */
+  //Escolhe processo de venda entrega futura 9862 normal - NFe.
   async deliveryFutureNFe() {
     const selectIcon = this.page.locator('#select_value_label_4 > .md-select-icon');
     await expect(selectIcon).toBeVisible();
@@ -79,9 +71,7 @@ export class ProcessSale {
     await this.page.waitForTimeout(200);
   }
 
-  /**
-   * Escolhe processo de venda financeiro baixa 9863 normal - NFe.
-   */
+  //Escolhe processo de venda financeiro baixa 9863 normal - NFe.
   async financePaymentNFe() {
     const selectIcon = this.page.locator('#select_value_label_4 > .md-select-icon');
     await expect(selectIcon).toBeVisible();
@@ -101,9 +91,7 @@ export class ProcessSale {
     await this.page.waitForTimeout(200);
   }
 
-  /**
-   * Escolhe processo de venda 9888 - serviços avulsos (já tem nota de venda de produto ou vai vender igual produto) - NFe.
-   */
+  //Escolhe processo de venda 9888 - serviços avulsos (já tem nota de venda de produto ou vai vender igual produto) - NFe.
   async saleServiceLoose() {
     const selectIcon = this.page.locator('#select_value_label_4 > .md-select-icon');
     await expect(selectIcon).toBeVisible();
@@ -126,9 +114,7 @@ export class ProcessSale {
 
   // ------------------- PROCESSOS NFCe -------------------
 
-  /**
-   * Escolhe processo de venda 9860 NFCe.
-   */
+  //Escolhe processo de venda 9860 NFCe.
   async NFCe() {
     const selectIcon = this.page.locator('#select_value_label_4 > .md-select-icon');
     await expect(selectIcon).toBeVisible();
@@ -148,9 +134,7 @@ export class ProcessSale {
     await this.page.waitForTimeout(200);
   }
 
-  /**
-   * Escolhe processo de venda entrega futura 9891 normal - NFCe.
-   */
+  //Escolhe processo de venda entrega futura 9891 normal - NFCe.
   async deliveryFutureNFCe() {
     const selectIcon = this.page.locator('#select_value_label_4 > .md-select-icon');
     await expect(selectIcon).toBeVisible();
@@ -171,9 +155,7 @@ export class ProcessSale {
     await this.page.waitForTimeout(200);
   }
 
-  /**
-   * Escolhe processo de venda financeiro baixa 9892 normal - NFCe.
-   */
+  //Escolhe processo de venda financeiro baixa 9892 normal - NFCe.
   async financePaymentNFCe() {
     const selectIcon = this.page.locator('#select_value_label_4 > .md-select-icon');
     await expect(selectIcon).toBeVisible();

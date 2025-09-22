@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para ações gerais em pedidos.
- */
+//Page Object para ações gerais em pedidos.
 export class GeneralOrder {
   /**
    * @param {Page} page
@@ -11,9 +9,7 @@ export class GeneralOrder {
     this.page = page;
   }
 
-  /**
-   * Troca a filial de faturamento de local para remota.
-   */
+  //Troca a filial de faturamento de local para remota.
   async changeBranchInvoicing() {
     const filialLocal = '50 - PR - EMISSÃO NFe/NFCe';
     const filialRemota = '6 - GAZIN - IND. E COM. DE MÓVEIS E ELETROD. LTDA.';
@@ -45,9 +41,7 @@ export class GeneralOrder {
     await clicarFilial6.click();
   }
 
-  /**
-   * Valida a composição do kit.
-   */
+  //Valida a composição do kit.
   async compositionKit() {
     const composicaoKitTitulo = this.page.locator('.is-expanded > v-pane-header.ng-scope > div');
     await composicaoKitTitulo.scrollIntoViewIfNeeded();
@@ -56,9 +50,7 @@ export class GeneralOrder {
     await expect(composicaoKitTitulo).toContainText('Composição deste KIT');
   }
 
-  /**
-   * Clica no botão de editar parcelas da forma de pagamento.
-   */
+  //Clica no botão de editar parcelas da forma de pagamento.
   async clickEditInstallments() {
     const iconeLapisEdicao = this.page.locator('.btn-remove-item-list > :nth-child(3) > .md-raised');
     await iconeLapisEdicao.click({ force: true });

@@ -1,9 +1,7 @@
 import { umDiaAposHoje, trintaUmDiasAposHoje } from '../../gerarDados'
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para ações gerais de pagamento.
- */
+//Page Object para ações gerais de pagamento.
 export class GeneralPayment {
   /**
    * @param {Page} page

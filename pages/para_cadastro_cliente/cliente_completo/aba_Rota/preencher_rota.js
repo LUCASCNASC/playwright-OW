@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para preencher dados de rota no cadastro de cliente.
- */
+//Page Object para preencher dados de rota no cadastro de cliente.
 export class FillRefRoute {
   /**
    * @param {Page} page

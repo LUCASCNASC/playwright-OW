@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para ações de desconto no pedido (Playwright).
- */
+//Page Object para ações de desconto no pedido (Playwright).
 export class OrderExclusiva {
   /**
    * @param {Page} page
@@ -11,9 +9,7 @@ export class OrderExclusiva {
     this.page = page;
   }
 
-  /**
-   * Valida e clica no botão de desconto (%).
-   */
+  //Valida e clica no botão de desconto (%).
   async clicarBotaoDesconto() {
     const descontoBtn = this.page.locator('[ng-click="abrirModalDescontoProduto($index)"]');
     await descontoBtn.scrollIntoViewIfNeeded();
@@ -29,9 +25,7 @@ export class OrderExclusiva {
     await descontoIcon.click({ force: true });
   }
 
-  /**
-   * Valida o modal Sub/Sobre e opções de desconto.
-   */
+  //Valida o modal Sub/Sobre e opções de desconto.
   async validateModalSub() {
     const tituloSubSobre = this.page.locator('.md-transition-in > ._md > .md-toolbar-tools > .flex');
     await expect(tituloSubSobre).toBeVisible();
@@ -69,9 +63,7 @@ export class OrderExclusiva {
     await expect(botaoAplicar).not.toBeDisabled();
   }
 
-  /**
-   * Arrasta a forma de pagamento escolhida para aparecer desconto.
-   */
+  //Arrasta a forma de pagamento escolhida para aparecer desconto.
   async dragFormPayment() {
     const dragTarget = this.page.locator('.md-whiteframe-2dp');
     await dragTarget.dispatchEvent('mousedown', { button: 0 });
@@ -79,9 +71,7 @@ export class OrderExclusiva {
     await dragTarget.dispatchEvent('mouseup');
   }
 
-  /**
-   * Clica no botão R$ para desconto.
-   */
+  //Clica no botão R$ para desconto.
   async clickChangeValue() {
     const botaoCompleto = this.page.locator('.btn-remove-item-list > :nth-child(1) > .md-raised');
     await expect(botaoCompleto).toBeVisible();
@@ -93,9 +83,7 @@ export class OrderExclusiva {
     await iconeDentroBotao.click({ force: true });
   }
 
-  /**
-   * Valida o modal de alteração de valor.
-   */
+  //Valida o modal de alteração de valor.
   async modalChangeValue() {
     const tituloAlterarValor = this.page.locator('.md-transition-in > ._md > .md-toolbar-tools > .flex');
     await expect(tituloAlterarValor).toBeVisible();
@@ -122,9 +110,7 @@ export class OrderExclusiva {
     await expect(botaoAplicar).toContainText(' Aplicar ');
   }
 
-  /**
-   * Altera valor para baixo (por exemplo: 136000).
-   */
+  //Altera valor para baixo (por exemplo: 136000).
   async changeValueToLow() {
     const campoValorParcela = this.page.locator('[ng-model="formaPgtoValor"]');
     await campoValorParcela.fill('');
@@ -139,9 +125,7 @@ export class OrderExclusiva {
     await this.page.locator('button[ng-click="aplicarAlterarValor()"]').click({ force: true });
   }
 
-  /**
-   * Altera valor para cima (por exemplo: 137000).
-   */
+  //Altera valor para cima (por exemplo: 137000).
   async changeValueToTop() {
     const campoValorParcela = this.page.locator('[ng-model="formaPgtoValor"]');
     await campoValorParcela.fill('');
@@ -156,9 +140,7 @@ export class OrderExclusiva {
     await this.page.locator('button[ng-click="aplicarAlterarValor()"]').click({ force: true });
   }
 
-  /**
-   * Aplica desconto Sub(-) com R$.
-   */
+  //Aplica desconto Sub(-) com R$.
   async applyDiscountR$() {
     const valorDescontoRS = '1000';
     await this.page.locator('button:has-text("R$")').click({ force: true });
@@ -166,9 +148,7 @@ export class OrderExclusiva {
     await this.page.locator('button[ng-click="aplicarSubSobre()"]').click({ force: true });
   }
 
-  /**
-   * Aplica desconto Sub(-) com %.
-   */
+  //Aplica desconto Sub(-) com %.
   async applyDiscountPencentage() {
     const valorDescontoPorcentagem = '2';
     await this.page.locator('button:has-text("%")').click({ force: true });
@@ -176,9 +156,7 @@ export class OrderExclusiva {
     await this.page.locator('button[ng-click="aplicarSubSobre()"]').click({ force: true });
   }
 
-  /**
-   * Aplica desconto Sub(-) com VALOR FIXO.
-   */
+  //Aplica desconto Sub(-) com VALOR FIXO.
   async applyDiscountVF() {
     const valorDescontoValorFixo = '280000';
     await this.page.locator('button:has-text("VALOR FIXO")').click({ force: true });

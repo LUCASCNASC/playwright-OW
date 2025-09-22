@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para ações de agrupamento de recebimento (lançamentos financeiros).
- */
+//Page Object para ações de agrupamento de recebimento (lançamentos financeiros).
 export class GroupReceipt {
   /**
    * @param {Page} page
@@ -11,9 +9,7 @@ export class GroupReceipt {
     this.page = page;
   }
 
-  /**
-   * Clica para NÃO agrupar lançamentos com o mesmo processo de recebimento.
-   */
+  //Clica para NÃO agrupar lançamentos com o mesmo processo de recebimento.
   async notGroupReleases() {
     await expect(this.page.locator('.md-title')).toBeVisible();
     await expect(this.page.locator('.md-title')).toHaveText('Identificamos que já existe um pagamento lançado com esta mesma forma escolhida');
@@ -37,9 +33,7 @@ export class GroupReceipt {
     await cancelButton.click();
   }
 
-  /**
-   * Clica para SIM, agrupar lançamentos com o mesmo processo de recebimento.
-   */
+  //Clica para SIM, agrupar lançamentos com o mesmo processo de recebimento.
   async groupReleases() {
     await expect(this.page.locator('.md-title')).toBeVisible();
     await expect(this.page.locator('.md-title')).toHaveText('Identificamos que já existe um pagamento lançado com esta mesma forma escolhida');
@@ -59,9 +53,7 @@ export class GroupReceipt {
     await confirmButton.click();
   }
 
-  /**
-   * Seleciona dois lançamentos com o mesmo processo de recebimento para clicar no botão AGRUPAR.
-   */
+  //Seleciona dois lançamentos com o mesmo processo de recebimento para clicar no botão AGRUPAR.
   async selectReleasesGroup() {
     // Primeiro lançamento
     await expect(this.page.locator('[ng-show="parcelamentoAutomaticoDisponivel"] > .md-subheader-inner > .md-subheader-content')).toBeVisible();
@@ -110,9 +102,7 @@ export class GroupReceipt {
     await this.page.locator(':nth-child(2) > .md-whiteframe-2dp > .layout-gt-sm-row > [ng-show="item.opcaoAgrupar && item.permiteAgrupar"] > span > .md-auto-horizontal-margin > .md-container').click();
   }
 
-  /**
-   * Clica no botão AGRUPAR.
-   */
+  //Clica no botão AGRUPAR.
   async clickGroup() {
     const agruparButton = this.page.locator('.layout-align-center-end > .flex-gt-sm-50 > .md-primary');
     await expect(agruparButton).toBeVisible();
@@ -120,9 +110,7 @@ export class GroupReceipt {
     await agruparButton.click();
   }
 
-  /**
-   * Coloca o valor da primeira forma de pagamento no campo "valor a parcelar".
-   */
+  //Coloca o valor da primeira forma de pagamento no campo "valor a parcelar".
   async firstValueInstallment() {
     await expect(this.page.locator('label', { hasText: 'Valor a parcelar' })).toBeVisible();
     const valorAparcelarInput = this.page.locator('.campoMoeda_valorAparcelar');

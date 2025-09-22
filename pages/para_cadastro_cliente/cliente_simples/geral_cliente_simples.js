@@ -1,9 +1,6 @@
-import { gerarCpf, gerarNomeAleatorio, gerarCNPJ, gerarTelefoneAleatorio, gerarEmailAleatorio, gerarNomeEmpresa } from '../gerarDados';
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para operações com cliente simples.
- */
+//Page Object para operações com cliente simples.
 export class GeneralClientSimple {
   /**
    * @param {Page} page
@@ -12,27 +9,21 @@ export class GeneralClientSimple {
     this.page = page;
   }
 
-  /**
-   * Clica no ícone do menu de opções.
-   */
+  //Clica no ícone do menu de opções.
   async iconMenuOptions() {
     await expect(this.page.locator('[aria-label="Menu de opções"] > .ng-binding')).toBeVisible();
     await expect(this.page.locator('[aria-label="Menu de opções"] > .ng-binding')).not.toHaveAttribute('disabled', 'true');
     await this.page.click('[aria-label="Menu de opções"] > .ng-binding', { force: true });
   }
 
-  /**
-   * Escolhe a opção cliente no menu de opções.
-   */
+  //Escolhe a opção cliente no menu de opções.
   async optionClientSimple() {
     await expect(this.page.locator('a[aria-label="Cliente"]')).toHaveAttribute('aria-label', 'Cliente');
     await this.page.locator('a[aria-label="Cliente"]').scrollIntoViewIfNeeded();
     await this.page.click('a[aria-label="Cliente"]', { force: true });
   }
 
-  /**
-   * Clica no botão SALVAR do cliente simples.
-   */
+  //Clica no botão SALVAR do cliente simples.
   async saveClientSimple() {
     await this.page.locator('.layout-align-end-center > .md-raised').scrollIntoViewIfNeeded();
     await expect(this.page.locator('.layout-align-end-center > .md-raised')).toBeVisible();
@@ -40,18 +31,14 @@ export class GeneralClientSimple {
     await this.page.click('.layout-align-end-center > .md-raised', { force: true });
   }
 
-  /**
-   * Arrasta para pessoa jurídica.
-   */
+  //Arrasta para pessoa jurídica.
   async dragPersonLegal() {
     await expect(this.page.locator('.flex-md-100 > .md-auto-horizontal-margin > .md-label')).toBeVisible();
     await expect(this.page.locator('.flex-md-100 > .md-auto-horizontal-margin > .md-label')).toContainText('Pessoa Física/Pessoa Júridica');
     await this.page.click('.flex-md-100 > .md-auto-horizontal-margin > .md-label', { force: true });
   }
 
-  /**
-   * Mensagem de "Registro salvo com sucesso!"
-   */
+  //Mensagem de "Registro salvo com sucesso!"
   async messFirstRegistSaveSucess() {
     await expect(this.page.locator('.toast')).toBeVisible();
     await expect(this.page.locator('.toast-title')).toBeVisible();
@@ -60,9 +47,7 @@ export class GeneralClientSimple {
     await expect(this.page.locator('.toast-message')).toHaveText('Registro salvo com sucesso!');
   }
 
-  /**
-   * Logar novamente no sistema.
-   */
+  //Logar novamente no sistema.
   async loginAgain() {
     await this.page.fill('#txtusername', 'sabium.automacao');
     await this.page.fill('#txtpassword', '123.automacao');
@@ -71,16 +56,12 @@ export class GeneralClientSimple {
     await this.page.waitForResponse('**/@api_entrar_sistema', { timeout: 40000 });
   }
 
-  /**
-   * Clica para sair do sistema.
-   */
+  //Clica para sair do sistema.
   async clickOutSystem() {
     await this.page.click('.rodape > ._md-button-wrap > div.md-button > .md-no-style', { force: true });
   }
 
-  /**
-   * Valida e clica em SIM na mensagem "Deseja visualizar este cadastro?"
-   */
+  //Valida e clica em SIM na mensagem "Deseja visualizar este cadastro?"
   async desireSeeRegister() {
     await expect(this.page.locator('.md-title')).toBeVisible();
     await expect(this.page.locator('.md-title')).toContainText('Este CPF / CNPJ já está cadastrado para');
@@ -92,9 +73,7 @@ export class GeneralClientSimple {
     await this.page.click('.md-confirm-button', { force: true });
   }
 
-  /**
-   * Autoriza trial ao alterar data de nascimento do cliente simples.
-   */
+  //Autoriza trial ao alterar data de nascimento do cliente simples.
   async authorizeTrialDateBirth() {
     const idSupervisorTrial = "393";
     const nomeSupervidorTrial = "T.A. USUÁRIO AUTOMAÇÃO";

@@ -2,9 +2,7 @@ import { gerarCpf, gerarNomeAleatorio, gerarEmailAleatorio, gerarCNPJ, gerarTele
 import { gerarChavePixTelefone } from '../../../gerarDadosPIX';
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para operações com anexos em cadastros de clientes.
- */
+//Page Object para operações com anexos em cadastros de clientes.
 export class GeneralAnexo {
   /**
    * @param {Page} page
@@ -13,9 +11,7 @@ export class GeneralAnexo {
     this.page = page;
   }
 
-  /**
-   * Validar e clicar na aba de anexos.
-   */
+  //Validar e clicar na aba de anexos.
   async clickAbaAttachment() {
     await expect(this.page.locator('#menu_mais_pri > :nth-child(4)')).toBeVisible();
     await expect(this.page.locator('#menu_mais_pri > :nth-child(4)')).not.toHaveAttribute('disabled', 'true');
@@ -24,9 +20,7 @@ export class GeneralAnexo {
     await this.page.waitForResponse('**/services/v3/dados_tabela/tipoanexo', { timeout: 40000 });
   }
 
-  /**
-   * Validar informações da tela antes de fazer upload do arquivo anexo.
-   */
+  //Validar informações da tela antes de fazer upload do arquivo anexo.
   async validateAbaAttachmentEmpty() {
     await expect(this.page.locator('[ng-controller="ListaDeAnexosController"] > :nth-child(1)')).toBeVisible();
     await expect(this.page.locator('[ng-controller="ListaDeAnexosController"] > :nth-child(1)')).toHaveText('Anexos');
@@ -41,17 +35,13 @@ export class GeneralAnexo {
     await expect(this.page.locator('.btn')).not.toHaveAttribute('disabled', 'true');
   }
 
-  /**
-   * Seleciona o primeiro tipo de anexo.
-   */
+  //Seleciona o primeiro tipo de anexo.
   async selectFirstTypeAttachment() {
     await this.page.locator('#ComboTipoAnexo').click();
     await this.page.locator('div.md-text.ng-binding', { hasText: 'Assinatura do Termo de Adesão do Titular' }).click();
   }
 
-  /**
-   * Confirma envio do arquivo na mensagem "Deseja enviar o arquivo selecionado?".
-   */
+  //Confirma envio do arquivo na mensagem "Deseja enviar o arquivo selecionado?".
   async confirmSendFile() {
     await expect(this.page.locator('.md-title')).toBeVisible();
     await expect(this.page.locator('.md-title')).toHaveText('Deseja enviar o arquivo selecionado?');
@@ -62,9 +52,7 @@ export class GeneralAnexo {
     await this.page.locator('.md-confirm-button').click();
   }
 
-  /**
-   * Mensagem de anexo incluído com sucesso.
-   */
+  //Mensagem de anexo incluído com sucesso.
   async messAttachmentAddSucess() {
     await expect(this.page.locator('.toast')).toBeVisible();
     await expect(this.page.locator('.toast-title')).toBeVisible();
@@ -73,9 +61,7 @@ export class GeneralAnexo {
     await expect(this.page.locator('.toast-message')).toHaveText('Anexo cadastrado com sucesso!');
   }
 
-  /**
-   * Validar se o anexo realmente foi adicionado.
-   */
+  //Validar se o anexo realmente foi adicionado.
   async validateAttachmentAdded() {
     const hoje = new Date();
     const dataAtual = hoje.toLocaleDateString('pt-BR');

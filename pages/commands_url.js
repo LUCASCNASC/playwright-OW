@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Classe utilitária para validação de URLs de rotas.
- */
+//Classe utilitária para validação de URLs de rotas.
 export class ValidateURL {
   /**
    * @param {Page} page

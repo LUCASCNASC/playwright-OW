@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para operações de serviços avulsos no pedido.
- */
+//Page Object para operações de serviços avulsos no pedido.
 export class OrderServiceLoose {
   /**
    * @param {Page} page
@@ -11,9 +9,7 @@ export class OrderServiceLoose {
     this.page = page;
   }
 
-  /**
-   * Escolhe cliente CPF para gerar pedido de venda - pesquisa por cliente.
-   */
+  //Escolhe cliente CPF para gerar pedido de venda - pesquisa por cliente.
   async chooseClientOrder() {
     const campoCliente = this.page.locator('.click-cliente > .informe-o-cliente > .cliente-header');
     await this.page.waitForTimeout(500);
@@ -30,9 +26,7 @@ export class OrderServiceLoose {
     await clienteSelecionado.click();
   }
 
-  /**
-   * Valida e clica no menu de opções.
-   */
+  //Valida e clica no menu de opções.
   async iconMenuOptions() {
     const iconeMenuOpcoes = this.page.locator('[aria-label="Menu de opções"] > .ng-binding');
     await expect(iconeMenuOpcoes).toBeVisible();
@@ -40,9 +34,7 @@ export class OrderServiceLoose {
     await iconeMenuOpcoes.click({ force: true });
   }
 
-  /**
-   * Valida a opção Cliente Completo no menu e clica nela.
-   */
+  //Valida a opção Cliente Completo no menu e clica nela.
   async clientCompleteOptionMenu() {
     const iconeClienteCompleto = this.page.locator('md-icon[md-svg-src="images/icons/cliente_completo.svg"]');
     await iconeClienteCompleto.scrollIntoViewIfNeeded();
@@ -55,9 +47,7 @@ export class OrderServiceLoose {
     await opcaoClienteCompleto.click({ force: true });
   }
 
-  /**
-   * Insere número do pedido no campo Cliente ou pedido.
-   */
+  //Insere número do pedido no campo Cliente ou pedido.
   async searchOrderNumber(nomeClienteCPF) {
     const labelCampoClienteOuPedido = this.page.locator('label[for="input_96"]');
     await expect(labelCampoClienteOuPedido).toHaveText('Cliente ou pedido');
@@ -68,9 +58,7 @@ export class OrderServiceLoose {
     await campoClienteOuPedido.type(nomeClienteCPF, { force: true });
   }
 
-  /**
-   * Valida e clica no menu dentro do cadastro de cliente completo.
-   */
+  //Valida e clica no menu dentro do cadastro de cliente completo.
   async clickMenuClientComplete() {
     const menuClickPri = this.page.locator('#menu_click_pri');
     await expect(menuClickPri).toBeVisible();
@@ -78,9 +66,7 @@ export class OrderServiceLoose {
     await menuClickPri.click({ force: true });
   }
 
-  /**
-   * Valida e clica na opção Serviços.
-   */
+  //Valida e clica na opção Serviços.
   async clickOptionServices() {
     const elementoValidacao = this.page.locator('div[ng-repeat="tab in tabs"][ng-if="tab.checked"]');
     await expect(elementoValidacao).toBeVisible();
@@ -91,9 +77,7 @@ export class OrderServiceLoose {
     await elementoClique.click({ force: true });
   }
 
-  /**
-   * Aguarda mensagem de carregamento da aba de serviços.
-   */
+  //Aguarda mensagem de carregamento da aba de serviços.
   async waitLoadingService() {
     const iconeCarregamento = this.page.locator('.layout-align-center-center > .md-accent');
     await expect(iconeCarregamento).toBeVisible();
@@ -102,9 +86,7 @@ export class OrderServiceLoose {
     await expect(mensagemCarregando).toHaveText('Aguarde carregando...');
   }
 
-  /**
-   * Valida o botão "Adicionar Mão de Obra".
-   */
+  //Valida o botão "Adicionar Mão de Obra".
   async buttonAddMaoObra() {
     const elemento = this.page.locator('[ng-show="filtroShow(pedidoAtual)"][aria-hidden="false"] > .md-list-item-text > .prodServicoUl > :nth-child(1) > .md-default');
     await expect(elemento).toBeVisible();
@@ -112,9 +94,7 @@ export class OrderServiceLoose {
     await expect(elemento).not.toHaveAttribute('disabled', '');
   }
 
-  /**
-   * Valida o botão "Adicionar Garantias".
-   */
+  //Valida o botão "Adicionar Garantias".
   async buttonAddGarantias() {
     const elemento = this.page.locator('[ng-show="filtroShow(pedidoAtual)"][aria-hidden="false"] > .md-list-item-text > .prodServicoUl > :nth-child(2) > .md-default');
     await expect(elemento).toBeVisible();
@@ -122,25 +102,19 @@ export class OrderServiceLoose {
     await expect(elemento).not.toHaveAttribute('disabled', '');
   }
 
-  /**
-   * Clica no botão "Adicionar Mão de Obra".
-   */
+  //Clica no botão "Adicionar Mão de Obra".
   async clickAddMaoObra() {
     const elemento = this.page.locator('[ng-show="filtroShow(pedidoAtual)"][aria-hidden="false"] > .md-list-item-text > .prodServicoUl > :nth-child(1) > .md-default');
     await elemento.click({ force: true });
   }
 
-  /**
-   * Clica no botão "Adicionar Garantias".
-   */
+  //Clica no botão "Adicionar Garantias".
   async clickAddGarantias() {
     const elemento = this.page.locator('[ng-show="filtroShow(pedidoAtual)"][aria-hidden="false"] > .md-list-item-text > .prodServicoUl > :nth-child(2) > .md-default');
     await elemento.click({ force: true });
   }
 
-  /**
-   * Validações do modal de serviços vinculados apenas com Garantias.
-   */
+  //Validações do modal de serviços vinculados apenas com Garantias.
   async modalGarantiasServicesLinked() {
     const titulo = this.page.locator('.md-dialog-fullscreen > ._md-toolbar-transitions > .md-toolbar-tools > .flex');
     await expect(titulo).toBeVisible();
@@ -152,9 +126,7 @@ export class OrderServiceLoose {
     await expect(mensagem).toBeVisible();
   }
 
-  /**
-   * Validações do modal de serviços vinculados com "Mão de Obra".
-   */
+  //Validações do modal de serviços vinculados com "Mão de Obra".
   async modalMaoObraServicesLinked() {
     const titulo = this.page.locator('.md-dialog-fullscreen > ._md-toolbar-transitions > .md-toolbar-tools > .flex');
     await expect(titulo).toBeVisible();
@@ -168,9 +140,7 @@ export class OrderServiceLoose {
     await expect(mensagem).toBeVisible();
   }
 
-  /**
-   * Clica no botão OK do modal de serviços vinculados.
-   */
+  //Clica no botão OK do modal de serviços vinculados.
   async okServicesLinked() {
     const botaoSalvar = this.page.locator('button[ng-click="salvar()"]');
     await expect(botaoSalvar).toBeVisible();
@@ -179,9 +149,7 @@ export class OrderServiceLoose {
     await botaoSalvar.click({ force: true });
   }
 
-  /**
-   * Valida mensagem de "Item adicionado com sucesso!".
-   */
+  //Valida mensagem de "Item adicionado com sucesso!".
   async messLinkedAddedSucess() {
     const toastCard = this.page.locator('.toast');
     await expect(toastCard).toBeVisible();
@@ -193,9 +161,7 @@ export class OrderServiceLoose {
     await expect(toastMensagem).toHaveText('Item adicionado com sucesso!');
   }
 
-  /**
-   * Clica no botão SALVAR.
-   */
+  //Clica no botão SALVAR.
   async buttonSaveService() {
     const botaoSalvarCompleto = this.page.locator('.btn');
     await expect(botaoSalvarCompleto).toBeVisible();
@@ -207,9 +173,7 @@ export class OrderServiceLoose {
     await botaoSalvarCompleto.click({ force: true });
   }
 
-  /**
-   * Valida mensagem de carregamento após clicar em SALVAR.
-   */
+  //Valida mensagem de carregamento após clicar em SALVAR.
   async messWaitLoading() {
     const iconeGiratorio = this.page.locator('svg');
     await expect(iconeGiratorio).toBeVisible();
@@ -217,9 +181,7 @@ export class OrderServiceLoose {
     await expect(mensagemAguarde).toHaveCount(1);
   }
 
-  /**
-   * Valida mensagem de "Registro salvo com sucesso!".
-   */
+  //Valida mensagem de "Registro salvo com sucesso!".
   async messResgistrationSaveSucess() {
     const cardRegistroSalvo = this.page.locator('[style="display: block;"]');
     await expect(cardRegistroSalvo).toBeVisible();
@@ -231,9 +193,7 @@ export class OrderServiceLoose {
     await expect(mensagemRegistroSalvo).toHaveText('Registro salvo com sucesso!');
   }
 
-  /**
-   * Valida mensagem de "O Serviço Garantias já foi adicionado à esse produto."
-   */
+  //Valida mensagem de "O Serviço Garantias já foi adicionado à esse produto."
   async messGarantiaAdded() {
     const cardServicoGarantias = this.page.locator('.toast-warning');
     await expect(cardServicoGarantias).toBeVisible();
@@ -243,9 +203,7 @@ export class OrderServiceLoose {
     await expect(cardServicoGarantias).toContainText('O Serviço Garantias já foi adicionado à esse produto.');
   }
 
-  /**
-   * Clica no carrinho de compras.
-   */
+  //Clica no carrinho de compras.
   async clickCartShopping() {
     await this.page.route('**/images/icons/brazil-real-symbol.svg', route => route.continue());
     const apiProdutoCarrinhoCompra = this.page.waitForResponse('**/images/icons/brazil-real-symbol.svg');
@@ -255,9 +213,7 @@ export class OrderServiceLoose {
     await apiProdutoCarrinhoCompra;
   }
 
-  /**
-   * Clica no botão AVANÇAR.
-   */
+  //Clica no botão AVANÇAR.
   async buttonAdvanceOrder() {
     const botaoAvancar = this.page.locator('.flex-gt-sm-50 > .md-primary');
     await botaoAvancar.scrollIntoViewIfNeeded();
@@ -270,9 +226,7 @@ export class OrderServiceLoose {
     await apiPedidoFormaPagamentoLista;
   }
 
-  /**
-   * Clica no botão "GERAR PARCELAS".
-   */
+  //Clica no botão "GERAR PARCELAS".
   async buttonGenerateInstallmentsServices() {
     const botaoGerarParcelas = this.page.locator('.gerar-parcelas > .layout-wrap > [style="padding: 0 5px"] > .md-primary');
     await botaoGerarParcelas.scrollIntoViewIfNeeded();
@@ -285,9 +239,7 @@ export class OrderServiceLoose {
     await apiModalFormaPagamento;
   }
 
-  /**
-   * Escolhe serviço para vender - código 144.
-   */
+  //Escolhe serviço para vender - código 144.
   async productServiceLoose() {
     const codigoServico = '144';
     await this.page.route(/\/consultaprodutos\/.*144.*/, route => route.continue());
@@ -303,9 +255,7 @@ export class OrderServiceLoose {
     await apiConsultaProdutos;
   }
 
-  /**
-   * Valida serviço com saldo disponível local.
-   */
+  //Valida serviço com saldo disponível local.
   async balanceAvailableService() {
     const imagemResultado = this.page.locator('.resultado-imagem');
     await expect(imagemResultado).toBeVisible();
@@ -325,9 +275,7 @@ export class OrderServiceLoose {
     await expect(valorServico).toBeVisible();
   }
 
-  /**
-   * Clica para selecionar o produto para adicionar ao pedido.
-   */
+  //Clica para selecionar o produto para adicionar ao pedido.
   async chooseServiceSearch() {
     await expect(this.page.locator('.resultado-imagem')).toBeVisible();
     await expect(this.page.locator('.md-resultado-titulo')).toBeVisible();
@@ -344,9 +292,7 @@ export class OrderServiceLoose {
     await apiProdutoServico;
   }
 
-  /**
-   * Valida mensagem de "Item adicionado com sucesso!".
-   */
+  //Valida mensagem de "Item adicionado com sucesso!".
   async messItemAddedSucess() {
     const cardServicoGarantias = this.page.locator('.toast');
     await expect(cardServicoGarantias).toBeVisible();
@@ -358,9 +304,7 @@ export class OrderServiceLoose {
     await expect(mensagemServicoGarantias).toContainText('Item adicionado com sucesso!');
   }
 
-  /**
-   * Valida que o serviço foi adicionado ao carrinho.
-   */
+  //Valida que o serviço foi adicionado ao carrinho.
   async serviceAddedCart() {
     const cardCompleto = this.page.locator('.servicos > .noscroll');
     await expect(cardCompleto).toBeVisible();
@@ -378,9 +322,7 @@ export class OrderServiceLoose {
     await expect(this.page.locator('.btn-remove-item-list > .md-button')).not.toBeDisabled();
   }
 
-  /**
-   * Escolhe serviço host para vender - código 104.
-   */
+  //Escolhe serviço host para vender - código 104.
   async productServiceHost() {
     const codigoServicoHost = '104';
     const campoBuscarProduto = this.page.locator('#searchText');
@@ -393,9 +335,7 @@ export class OrderServiceLoose {
     await expect(campoBuscarProduto).toHaveValue(codigoServicoHost);
   }
 
-  /**
-   * Valida e clica na opção Serviços do menu de opções.
-   */
+  //Valida e clica na opção Serviços do menu de opções.
   async clickServiceMenu() {
     const opcaoServicosMenu = this.page.locator('a[aria-label="Serviços"]');
     await expect(opcaoServicosMenu).toBeVisible();
@@ -407,9 +347,7 @@ export class OrderServiceLoose {
     await iconeServicos.click({ force: true });
   }
 
-  /**
-   * Modal para selecionar faixa de preço para o serviço.
-   */
+  //Modal para selecionar faixa de preço para o serviço.
   async chooseValueRecharge() {
     const tituloModalPreco = this.page.locator('.md-dialog-fullscreen > ._md-toolbar-transitions > .md-toolbar-tools > .flex');
     await expect(tituloModalPreco).toBeVisible();

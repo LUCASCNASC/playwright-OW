@@ -1,19 +1,3 @@
-import {
-  gerarCpf,
-  gerarNomeAleatorio,
-  gerarEmailAleatorio,
-  gerarCNPJ,
-  gerarTelefoneAleatorio,
-  gerarNomeEmpresa,
-  gerarRelacionamento,
-  gerarObservação
-} from '../../../../gerarDados';
-import {
-  gerarChavePixTelefone,
-  gerarChavePixTelefoneErrada,
-  gerarChavePixEmailErrada,
-  gerarChavePixCpfCnpjErrada
-} from '../../../../gerarDadosPIX';
 import { expect, Page } from '@playwright/test';
 
 //------referencia financeira - funções de geração de dados
@@ -34,9 +18,7 @@ function gerarValorDuasCasasAposVirgula() {
   return valorFinal;
 }
 
-/**
- * Page Object para operações com referência financeira em cadastro de cliente.
- */
+//Page Object para operações com referência financeira em cadastro de cliente.
 export class GeneralRefFinance {
   /**
    * @param {Page} page

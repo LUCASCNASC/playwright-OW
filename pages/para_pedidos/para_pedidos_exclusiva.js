@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para operações exclusivas de pedidos.
- */
+//Page Object para operações exclusivas de pedidos.
 export class OrderExclusiva {
   /**
    * @param {Page} page
@@ -11,9 +9,7 @@ export class OrderExclusiva {
     this.page = page;
   }
 
-  /**
-   * Aumenta a quantidade a ser vendida para 5 unidades.
-   */
+  //Aumenta a quantidade a ser vendida para 5 unidades.
   async increaseAmountSaleFive() {
     const btnDown = this.page.locator('[ng-click="delItem()"]');
     await expect(btnDown).toBeVisible();
@@ -33,9 +29,7 @@ export class OrderExclusiva {
     }
   }
 
-  /**
-   * Aumenta a quantidade a ser vendida para 10 unidades.
-   */
+  //Aumenta a quantidade a ser vendida para 10 unidades.
   async increaseAmountSaleTen() {
     const btnDown = this.page.locator('[ng-click="delItem()"]');
     await expect(btnDown).toBeVisible();
@@ -55,9 +49,7 @@ export class OrderExclusiva {
     }
   }
 
-  /**
-   * Valida produto remoto com saldo indisponível.
-   */
+  //Valida produto remoto com saldo indisponível.
   async balanceRemoteReceive() {
     const imagemResultado = this.page.locator('.resultado-imagem');
     await expect(imagemResultado).toBeVisible();

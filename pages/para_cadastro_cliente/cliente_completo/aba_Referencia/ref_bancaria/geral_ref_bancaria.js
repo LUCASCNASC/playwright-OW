@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para operações com referência bancária em cadastro de cliente.
- */
+//Page Object para operações com referência bancária em cadastro de cliente.
 export class GeneralRefBanking {
   /**
    * @param {Page} page

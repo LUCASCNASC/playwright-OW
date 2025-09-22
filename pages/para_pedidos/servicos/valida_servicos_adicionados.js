@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para validações de serviços adicionados no pedido.
- */
+//Page Object para validações de serviços adicionados no pedido.
 export class ValidateService {
   /**
    * @param {Page} page
@@ -11,9 +9,7 @@ export class ValidateService {
     this.page = page;
   }
 
-  /**
-   * Valida modal de serviços vinculados - título (pedido com um produto).
-   */
+  //Valida modal de serviços vinculados - título (pedido com um produto).
   async servLinked() {
     const subheaderInner = this.page.locator('.md-subheader-inner');
     await subheaderInner.scrollIntoViewIfNeeded();
@@ -24,9 +20,7 @@ export class ValidateService {
     await expect(subheaderContent).toHaveText('Serviços vinculados');
   }
 
-  /**
-   * Valida item "139 - T.A. Garantia Separa Mesmo Processo".
-   */
+  //Valida item "139 - T.A. Garantia Separa Mesmo Processo".
   async addGarantSepMesmoProc() {
     const garantiaItem = this.page.locator('text=139 - T.A. Garantia Separa Mesmo Processo');
     await garantiaItem.scrollIntoViewIfNeeded();
@@ -34,9 +28,7 @@ export class ValidateService {
     await expect(garantiaItem).toBeVisible();
   }
 
-  /**
-   * Valida item "140 - T.A. Garantia Não Separa".
-   */
+  //Valida item "140 - T.A. Garantia Não Separa".
   async addGarantNaoSep() {
     const garantiaItem = this.page.locator('text=140 - T.A. Garantia Não Separa');
     await garantiaItem.scrollIntoViewIfNeeded();
@@ -44,9 +36,7 @@ export class ValidateService {
     await expect(garantiaItem).toBeVisible();
   }
 
-  /**
-   * Valida item "141 - T.A. Garantia Separa Processo Diferente".
-   */
+  //Valida item "141 - T.A. Garantia Separa Processo Diferente".
   async addGarantSepTituloProcDif() {
     const garantiaItem = this.page.locator('text=141 - T.A. Garantia Separa Processo Diferente');
     await garantiaItem.scrollIntoViewIfNeeded();
@@ -54,9 +44,7 @@ export class ValidateService {
     await expect(garantiaItem).toBeVisible();
   }
 
-  /**
-   * Valida item "142 - T.A. MO Destaca e Não Separa".
-   */
+  //Valida item "142 - T.A. MO Destaca e Não Separa".
   async addMODestNaoSepara() {
     const garantiaItem = this.page.locator('text=142 - T.A. MO Destaca e Não Separa');
     await garantiaItem.scrollIntoViewIfNeeded();
@@ -64,9 +52,7 @@ export class ValidateService {
     await expect(garantiaItem).toBeVisible();
   }
 
-  /**
-   * Valida item "143 - T.A. MO Não Destaca e Separa Mesmo Processo".
-   */
+  //Valida item "143 - T.A. MO Não Destaca e Separa Mesmo Processo".
   async addMONaoDestSepMesmoProc() {
     const garantiaItem = this.page.locator('text=143 - T.A. MO Não Destaca e Separa Mesmo Processo');
     await garantiaItem.scrollIntoViewIfNeeded();
@@ -74,9 +60,7 @@ export class ValidateService {
     await expect(garantiaItem).toBeVisible();
   }
 
-  /**
-   * Valida item "144 - T.A. MO Não Destaca e Separa Processo Diferente".
-   */
+  //Valida item "144 - T.A. MO Não Destaca e Separa Processo Diferente".
   async addMONaoDestSepProcDif() {
     const garantiaItem = this.page.locator('text=144 - T.A. MO Não Destaca e Separa Processo Diferente');
     await garantiaItem.scrollIntoViewIfNeeded();

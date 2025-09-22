@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para pesquisa e seleção de clientes.
- */
+//Page Object para pesquisa e seleção de clientes.
 export class SearchClient {
   /**
    * @param {Page} page

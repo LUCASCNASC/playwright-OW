@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para operações com rotas do cadastro de cliente.
- */
+//Page Object para operações com rotas do cadastro de cliente.
 export class GeneralRefRoute {
   /**
    * @param {Page} page

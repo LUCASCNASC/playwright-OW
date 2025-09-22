@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para validação do serviço prestamista no fluxo do pedido.
- */
+//Page Object para validação do serviço prestamista no fluxo do pedido.
 export class TicketPrestamista {
   /**
    * @param {Page} page
@@ -11,9 +9,7 @@ export class TicketPrestamista {
     this.page = page;
   }
 
-  /**
-   * Valida adição do serviço prestamista após clicar para adicionar.
-   */
+  //Valida adição do serviço prestamista após clicar para adicionar.
   async adicionado() {
     const servicosItem = this.page.locator('[ng-repeat="itemAtual in item.servicos track by $index"] > ul');
     await servicosItem.scrollIntoViewIfNeeded();
@@ -34,9 +30,7 @@ export class TicketPrestamista {
     await expect(iconeLapis).not.toBeDisabled();
   }
 
-  /**
-   * Valida adição do prestamista na página de finalizar o pedido.
-   */
+  //Valida adição do prestamista na página de finalizar o pedido.
   async paginaFinal() {
     const ngScopeItem = this.page.locator('.ng-scope > ul');
     await ngScopeItem.scrollIntoViewIfNeeded();
@@ -54,9 +48,7 @@ export class TicketPrestamista {
     await expect(nomeVendedor).toBeVisible();
   }
 
-  /**
-   * Valida adição do serviço prestamista após agrupar lançamentos.
-   */
+  //Valida adição do serviço prestamista após agrupar lançamentos.
   async adicionadoRecebAgrupado() {
     const prestamistaItem = this.page.locator('b.ng-binding', { hasText: 'T.A. Prestamista Não separa Com juros - Futuro' });
     await expect(prestamistaItem).toBeVisible();

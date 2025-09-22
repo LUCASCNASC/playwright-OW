@@ -23,23 +23,17 @@ export class CommandsGeneral {
     await expect(this.page.locator('.click-cliente > .informe-o-cliente > .cliente-header')).toContainText('Cliente');
   }
 
-  /**
-   * Valida se a URL contém '/' após login.
-   */
+  //Valida se a URL contém '/' após login.
   async urlAposLogin() {
     await expect(this.page).toHaveURL(/\//);
   }
 
-  /**
-   * Valida o título da página.
-   */
+  //Valida o título da página.
   async tituloPagina() {
     await expect(this.page).toHaveTitle('Sabium Mobile');
   }
 
-  /**
-   * Seleciona um produto de busca e adiciona no carrinho.
-   */
+  //Seleciona um produto de busca e adiciona no carrinho.
   async selectProductSearch() {
     await this.page.route('**/services/v3/produto_tambem_compraram**', route => route.continue());
     const apiProdutoTambemCompraramPromise = this.page.waitForResponse('**/services/v3/produto_tambem_compraram**');
@@ -55,9 +49,7 @@ export class CommandsGeneral {
     await apiProdutoTambemCompraramPromise;
   }
 
-  /**
-   * Seleciona a voltagem do produto.
-   */
+  //Seleciona a voltagem do produto.
   async clickVoltageProduct() {
     const voltageModal = this.page.locator('md-list.md-default-theme > .btn-rounded > .md-toolbar-tools > .flex');
     await expect(voltageModal).toBeVisible();
@@ -79,9 +71,7 @@ export class CommandsGeneral {
     await this.page.waitForResponse('**/services/v3/produto_relacionado_lista**', { timeout: 40000 });
   }
 
-  /**
-   * Clica no botão adicionar produto após selecionar voltagem.
-   */
+  //Clica no botão adicionar produto após selecionar voltagem.
   async clickAddProduct() {
     await this.page.route('**/services/v3/produto_servico_vinculado**', route => route.continue());
     const apiServicosVinculadosPromise = this.page.waitForResponse('**/services/v3/produto_servico_vinculado**');

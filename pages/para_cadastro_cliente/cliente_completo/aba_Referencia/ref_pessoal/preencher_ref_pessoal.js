@@ -1,22 +1,6 @@
-import {
-  gerarCpf,
-  gerarNomeAleatorio,
-  gerarEmailAleatorio,
-  gerarCNPJ,
-  gerarTelefoneAleatorio,
-  gerarNomeEmpresa,
-  gerarRelacionamento
-} from '../../../../gerarDados';
-import {
-  gerarChavePixTelefone,
-  gerarChavePixTelefoneErrada,
-  gerarChavePixEmailErrada,
-  gerarChavePixCpfCnpjErrada
-} from '../../../../gerarDadosPIX';
+import {gerarNomeAleatorio,gerarEmailAleatorio,gerarTelefoneAleatorio,gerarRelacionamento} from '../../../../gerarDados';
 
-/**
- * Page Object para preencher campos de referência pessoal no cadastro de cliente.
- */
+//Page Object para preencher campos de referência pessoal no cadastro de cliente.
 export class FillRefGuys {
   /**
    * @param {Page} page

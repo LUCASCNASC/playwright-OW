@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para validações finais na tela de pedido.
- */
+//Page Object para validações finais na tela de pedido.
 export class ValidaFinal {
   /**
    * @param {Page} page
@@ -11,9 +9,7 @@ export class ValidaFinal {
     this.page = page;
   }
 
-  /**
-   * Valida informações do cliente na última tela sem entrega.
-   */
+  //Valida informações do cliente na última tela sem entrega.
   async infoClienteSemEntrega() {
     const tituloCliente = this.page.locator('.flex-gt-xs-100 > .md-primary > .md-toolbar-tools > .flex');
     await tituloCliente.scrollIntoViewIfNeeded();
@@ -62,9 +58,7 @@ export class ValidaFinal {
     await expect(emailInfo).toContainText('ta_cpf_automação_com_rota@gmail.com');
   }
 
-  /**
-   * Valida informações do cliente na última tela com entrega.
-   */
+  //Valida informações do cliente na última tela com entrega.
   async infoClienteComEntrega() {
     const tituloCliente = this.page.locator('.confirmacao > :nth-child(1) > .md-primary > .md-toolbar-tools > .flex');
     await tituloCliente.scrollIntoViewIfNeeded();
@@ -135,9 +129,7 @@ export class ValidaFinal {
     await expect(consumidorFinalLabel).toContainText('Consumidor Final');
   }
 
-  /**
-   * Valida informações do endereço de entrega na última tela.
-   */
+  //Valida informações do endereço de entrega na última tela.
   async infoEntrega() {
     const tituloEnderecoEntrega = this.page.locator('h2[ng-show="carrinho.endereco.local == \'entrega\'"]');
     await tituloEnderecoEntrega.scrollIntoViewIfNeeded();
@@ -183,9 +175,7 @@ export class ValidaFinal {
     await expect(botaoEditarTelefone).toHaveText('Editar Telefone');
   }
 
-  /**
-   * Valida campo de "Observações para a nota fiscal" vazio.
-   */
+  //Valida campo de "Observações para a nota fiscal" vazio.
   async obsNotaFiscalVazio() {
     const observacoesNotaFiscalLabel = this.page.locator(':nth-child(1) > .header-interno > label');
     await expect(observacoesNotaFiscalLabel).toBeVisible();
@@ -196,9 +186,7 @@ export class ValidaFinal {
     await expect(campoObservacoes).toHaveValue('');
   }
 
-  /**
-   * Valida campo de "Observações para uso interno" vazio.
-   */
+  //Valida campo de "Observações para uso interno" vazio.
   async obsInternaVazio() {
     const observacoesUsoInternoLabel = this.page.locator(':nth-child(2) > .header-interno > label');
     await expect(observacoesUsoInternoLabel).toBeVisible();

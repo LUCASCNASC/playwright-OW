@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para preencher dados do endereço do cliente.
- */
+//Page Object para preencher dados do endereço do cliente.
 export class FillAdress {
   /**
    * @param {Page} page

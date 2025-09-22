@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 
-/**
- * Page Object para ações gerais com produtos.
- */
+//Page Object para ações gerais com produtos.
 export class GeneralProduct {
   /**
    * @param {Page} page
@@ -11,9 +9,7 @@ export class GeneralProduct {
     this.page = page;
   }
 
-  /**
-   * Seleciona o produto e adiciona ao pedido.
-   */
+  //Seleciona o produto e adiciona ao pedido.
   async chooseProductSearch() {
     await this.page.route('**/services/v3/produto_tambem_compraram**', route => route.fulfill());
     const apiProdutoTambemCompraram = this.page.waitForResponse('**/services/v3/produto_tambem_compraram**');
@@ -31,9 +27,7 @@ export class GeneralProduct {
     await apiProdutoTambemCompraram;
   }
 
-  /**
-   * Seleciona a voltagem do produto.
-   */
+  //Seleciona a voltagem do produto.
   async clickVoltageProduct() {
     await this.page.route('**/services/v3/produto_relacionado**', route => route.fulfill());
     const apiProdutoRelacionadoLista = this.page.waitForResponse('**/services/v3/produto_relacionado**');
@@ -57,9 +51,7 @@ export class GeneralProduct {
     await apiProdutoRelacionadoLista;
   }
 
-  /**
-   * Clica no botão para adicionar produto após selecionar voltagem.
-   */
+  //Clica no botão para adicionar produto após selecionar voltagem.
   async clickAddProduct() {
     await this.page.route('**/services/v3/produto_servico_vinculado**', route => route.fulfill());
     const apiServicosVinculados = this.page.waitForResponse('**/services/v3/produto_servico_vinculado**');
