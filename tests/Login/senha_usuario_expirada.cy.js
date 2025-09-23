@@ -305,7 +305,6 @@ test.describe('Senha do usuário expirada', () => {
                 Login.buttonEnterEnabled()
                 Login.clickButtonEnter()
                 Login.messageOpeningSystem()
-        
                 Login.expiresAcessCardValidate() //APÓS LOGAR
         
                 //Card de expira acesso - clicar em NÃO
@@ -342,7 +341,6 @@ test.describe('Senha do usuário expirada', () => {
             Login.buttonEnterEnabled()
             Login.clickButtonEnter()
             Login.messageOpeningSystem()
-    
             Login.expiresAcessCardValidate() //APÓS LOGAR
             Login.clickSIMExpires() //clicar SIM 
     
@@ -469,7 +467,6 @@ test.describe('Senha do usuário expirada', () => {
             Login.buttonEnterEnabled()
             Login.clickButtonEnter()
             Login.messageOpeningSystem()
-    
             //APÓS LOGAR
             Login.expiresAcessCardValidate()
             Login.clickSIMExpires() //clicar SIM 
