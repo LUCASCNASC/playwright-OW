@@ -24,7 +24,7 @@ test.describe('Gerar pedido com reserva no CD - Regra de saldo Parâmetro 36 = 4
 
     context('Sem entrega/ processo 9860 - caminho feliz', () => {
 
-        test('1. Ped venda: produto 1880 0 0 - (Venda local de produto com saldo só no CD - sem entrega)',  async ({ page }) => {
+        test('Ped venda: produto 1880 0 0 - (Venda local de produto com saldo só no CD - sem entrega)',  async ({ page }) => {
 
             Product.cdFirst() //PRODUTO
             ValidateBalance.withBalance() //VALIDAR SALDO
@@ -44,7 +44,7 @@ test.describe('Gerar pedido com reserva no CD - Regra de saldo Parâmetro 36 = 4
             FinishOrder.validateOrderGenerated()
         })
 
-        test('2. Ped venda: produtos 1880 0 0 (reserva CD) e 1870 0 0 (saldo local) - (Venda local de 1 produto com saldo local + 1 produto com saldo no CD - sem entrega)',  async ({ page }) => {
+        test('Ped venda: produtos 1880 0 0 (reserva CD) e 1870 0 0 (saldo local) - (Venda local de 1 produto com saldo local + 1 produto com saldo no CD - sem entrega)',  async ({ page }) => {
 
             Product.cdFirst() //PRODUTO
             ValidateBalance.withBalance() //VALIDAR SALDO
@@ -75,7 +75,7 @@ test.describe('Gerar pedido com reserva no CD - Regra de saldo Parâmetro 36 = 4
 
     context('Com entrega/ processo 9860 - caminho feliz', () => {
 
-        test('3. Ped venda: produto 1880 0 0 - (Venda local de produto com saldo só no CD - com entrega)',  async ({ page }) => {
+        test('Ped venda: produto 1880 0 0 - (Venda local de produto com saldo só no CD - com entrega)',  async ({ page }) => {
             
             Product.cdFirst() //PRODUTO
             ValidateBalance.withBalance() //VALIDAR SALDO
@@ -95,7 +95,7 @@ test.describe('Gerar pedido com reserva no CD - Regra de saldo Parâmetro 36 = 4
             FinishOrder.validateOrderGenerated()
         })
 
-        test('4. Ped venda: produtos 1880 0 0 (reserva CD) e 1870 0 0 (saldo local) - (Venda local de 1 produto com saldo local + 1 produto com saldo no CD - com entrega)',  async ({ page }) => {
+        test('Ped venda: produtos 1880 0 0 (reserva CD) e 1870 0 0 (saldo local) - (Venda local de 1 produto com saldo local + 1 produto com saldo no CD - com entrega)',  async ({ page }) => {
             
             Product.fisrt() //PRODUTO
             ValidateBalance.withBalance() //VALIDAR SALDO

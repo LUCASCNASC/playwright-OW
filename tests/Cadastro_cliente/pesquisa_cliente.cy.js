@@ -11,7 +11,7 @@ test.describe('Cadastrar cliente', () => {
 
     context('Pesquisa cliente por número', () => {
 
-        test('1-Pesquisa por número CPF',  async ({ page }) => {
+        test('Pesquisa por número CPF',  async ({ page }) => {
     
             SearchClient.fillCPF() //Preencher com CPF
             SearchClient.clickGlassSearchClient()
@@ -22,7 +22,7 @@ test.describe('Cadastrar cliente', () => {
             SearchClient.numberDescripCPFSearch()
         }) 
 
-        test('2-Pesquisa por número CNPJ',  async ({ page }) => {
+        test('Pesquisa por número CNPJ',  async ({ page }) => {
 
             SearchClient.fillCNPJ() //Preencher com CNPJ
             SearchClient.clickGlassSearchClient()
@@ -37,7 +37,7 @@ test.describe('Cadastrar cliente', () => {
 
     context('Pesquisa cliente por descrição', () => {
 
-        test('3-Pesquisa por descrição CPF',  async ({ page }) => {
+        test('Pesquisa por descrição CPF',  async ({ page }) => {
 
             SearchClient.fillDescripCPF() //Preencher com DESCRIÇÃO CPF
             SearchClient.clickGlassSearchClient()
@@ -48,7 +48,7 @@ test.describe('Cadastrar cliente', () => {
             SearchClient.numberDescripCPFSearch()
         }) 
 
-        test('4-Pesquisa por descrição CNPJ',  async ({ page }) => {
+        test('Pesquisa por descrição CNPJ',  async ({ page }) => {
 
             SearchClient.typeAgainDescriptCNPJ() //Preencher com DESCRIÇÃO CNPJ
             SearchClient.clickGlassSearchClient()

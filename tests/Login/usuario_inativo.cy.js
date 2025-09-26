@@ -15,7 +15,7 @@ test.describe('Usuário inativo', () => {
         Login.userTextIcon()
     })
 
-    test('1. Tentar logar com usuário inativo',  async ({ page }) => {
+    test('Tentar logar com usuário inativo',  async ({ page }) => {
     
         //Validando campo "informe seu usuário"
         cy.get('#txtusername')

@@ -22,7 +22,7 @@ test.describe('Venda de serviço avulso Host - 104', () => {
 
     context('Processo 9888 - caminho feliz', () => {
 
-        test('1. Venda de Mão de obra - 144 (T.A. MO Não Destaca e Separa Processo Diferente)',  async ({ page }) => {
+        test('Venda de Mão de obra - 144 (T.A. MO Não Destaca e Separa Processo Diferente)',  async ({ page }) => {
 
             OrderServiceLoose.iconMenuOptions()
             OrderServiceLoose.clickServiceMenu()

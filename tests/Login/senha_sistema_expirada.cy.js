@@ -15,7 +15,7 @@ test.describe('Senha do usuário expirada', () => {
         Login.userTextIcon()
     })
 
-    test('1. Tentar logar com usuário com senha do usuário expirada',  async ({ page }) => {
+    test('Tentar logar com usuário com senha do usuário expirada',  async ({ page }) => {
     
         //Validando campo "informe seu usuário"
         cy.get('#txtusername')

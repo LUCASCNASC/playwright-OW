@@ -28,7 +28,7 @@ test.describe('Gerar pedido normal com entrega', () => {
     
     context('Com entrega/processo 9890 - caminho feliz', () => {
         
-        test('1. Ped venda: kit 1862 0 0',  async ({ page }) => {
+        test('Ped venda: kit 1862 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             GeneralOrder.compositionKit()

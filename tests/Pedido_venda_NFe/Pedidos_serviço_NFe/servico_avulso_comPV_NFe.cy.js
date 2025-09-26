@@ -24,7 +24,7 @@ test.describe('Venda de serviço avulso, com pedido do produto já baixado', () 
 
     context('Processo 9888 - caminho feliz', () => {
 
-        test('1. Venda de garantia - 139 (T.A. Garantia Separa Mesmo Processo)',  async ({ page }) => {
+        test('Venda de garantia - 139 (T.A. Garantia Separa Mesmo Processo)',  async ({ page }) => {
 
             const numero_pedido = '8605'
             

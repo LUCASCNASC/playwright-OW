@@ -26,7 +26,7 @@ test.describe('Gerar pedidos com promoção', () => {
   
     context('Sem entrega/ com promoção/ processo 9860 - caminho feliz', () => {
 
-        test('1. Ped venda com promoção partida (promoção 152): produto 1868 0 0',  async ({ page }) => {
+        test('Ped venda com promoção partida (promoção 152): produto 1868 0 0',  async ({ page }) => {
     
             Product.promoMatch() //PRODUTO
             ValidateBalance.withBalance() //VALIDAR SALDO
@@ -47,7 +47,7 @@ test.describe('Gerar pedidos com promoção', () => {
             FinishOrder.validateOrderGenerated()
         })
     
-        test('2. Ped venda com promoção a prazo com entrada (promoção 150): produto 1866 0 0',  async ({ page }) => {
+        test('Ped venda com promoção a prazo com entrada (promoção 150): produto 1866 0 0',  async ({ page }) => {
     
             Product.promoDeadlineEntry() //PRODUTO
             ValidateBalance.withBalance() //VALIDAR SALDO
@@ -74,7 +74,7 @@ test.describe('Gerar pedidos com promoção', () => {
             FinishOrder.validateOrderGenerated()
         })
     
-        test('3. Ped venda com promoção a prazo parcelado (promoção 151): produto 1867 0 0',  async ({ page }) => {
+        test('Ped venda com promoção a prazo parcelado (promoção 151): produto 1867 0 0',  async ({ page }) => {
     
             Product.promoDeadlineInstallment() //PRODUTO
             ValidateBalance.withBalance() //VALIDAR SALDO
@@ -98,7 +98,7 @@ test.describe('Gerar pedidos com promoção', () => {
 
     context('Sem entrega/ com promoção e sem promoção/ processo 9860 - caminho feliz', () => {
 
-        test('4. Ped venda com promoção partida (promoção 152): produto 1868 0 0 e produto 1870 0 0 (sem promoção)',  async ({ page }) => {
+        test('Ped venda com promoção partida (promoção 152): produto 1868 0 0 e produto 1870 0 0 (sem promoção)',  async ({ page }) => {
     
             Product.promoMatch() //PRODUTO
             ValidateBalance.withBalance() //VALIDAR SALDO
@@ -134,7 +134,7 @@ test.describe('Gerar pedidos com promoção', () => {
             // FinishOrder.validateOrderGenerated()
         })
 
-        test('5. Ped venda com promoção a prazo com entrada (promoção 150): produto 1866 0 0 e produto 1870 0 0 (sem promoção)',  async ({ page }) => {
+        test('Ped venda com promoção a prazo com entrada (promoção 150): produto 1866 0 0 e produto 1870 0 0 (sem promoção)',  async ({ page }) => {
     
             Product.promoDeadlineEntry() //PRODUTO
             ValidateBalance.withBalance() //VALIDAR SALDO
@@ -171,7 +171,7 @@ test.describe('Gerar pedidos com promoção', () => {
 
     context('Com entrega /com promoção/ processo 9860 - caminho feliz', () => {
 
-        test('6. Ped venda com promoção partida (promoção 152): produto 1868 0 0',  async ({ page }) => {
+        test('Ped venda com promoção partida (promoção 152): produto 1868 0 0',  async ({ page }) => {
     
             Product.promoMatch() //PRODUTO
             ValidateBalance.withBalance() //VALIDAR SALDO
@@ -196,7 +196,7 @@ test.describe('Gerar pedidos com promoção', () => {
             FinishOrder.validateOrderGenerated()
         })
     
-        test('7. Ped venda com promoção a prazo com entrada (promoção 150): produto 1866 0 0',  async ({ page }) => {
+        test('Ped venda com promoção a prazo com entrada (promoção 150): produto 1866 0 0',  async ({ page }) => {
     
             Product.promoDeadlineEntry() //PRODUTO
             ValidateBalance.withBalance() //VALIDAR SALDO
@@ -235,7 +235,7 @@ test.describe('Gerar pedidos com promoção', () => {
             // FinishOrder.validateOrderGenerated()
         })
 
-        test('8. Ped venda com promoção a prazo parcelado (promoção 151): produto 1867 0 0',  async ({ page }) => {
+        test('Ped venda com promoção a prazo parcelado (promoção 151): produto 1867 0 0',  async ({ page }) => {
     
             Product.promoDeadlineInstallment() //PRODUTO
             ValidateBalance.withBalance() //VALIDAR SALDO
@@ -263,7 +263,7 @@ test.describe('Gerar pedidos com promoção', () => {
 
     context('Com entrega/ com promoção e sem promoção/ processo 9860 - caminho feliz', () => {
 
-        test('9. Ped venda com promoção partida (promoção 152): produto 1868 0 0 e produto 1870 0 0 (sem promoção)',  async ({ page }) => {
+        test('Ped venda com promoção partida (promoção 152): produto 1868 0 0 e produto 1870 0 0 (sem promoção)',  async ({ page }) => {
     
             Product.promoMatch() //PRODUTO
             ValidateBalance.withBalance() //VALIDAR SALDO

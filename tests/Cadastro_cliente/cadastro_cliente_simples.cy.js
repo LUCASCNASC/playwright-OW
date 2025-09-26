@@ -17,7 +17,7 @@ test.describe('Cadastrar cliente simples', () => {
   
     context('Cadastro de cliente simples', () => {
 
-        test('1. Cliente simples CPF',  async ({ page }) => {
+        test('Cliente simples CPF',  async ({ page }) => {
 
             GeneralClientSimple.iconMenuOptions()
             GeneralClientSimple.optionClientSimple()
@@ -32,7 +32,7 @@ test.describe('Cadastrar cliente simples', () => {
             GeneralClientSimple.messFirstRegistSaveSucess()
         })  
 
-        test('2. Cliente simples CPF - alterar Endereço logo após cadastrar',  async ({ page }) => {
+        test('Cliente simples CPF - alterar Endereço logo após cadastrar',  async ({ page }) => {
     
             GeneralClientSimple.iconMenuOptions()
             GeneralClientSimple.optionClientSimple()
@@ -75,7 +75,7 @@ test.describe('Cadastrar cliente simples', () => {
             GeneralClientSimple.messFirstRegistSaveSucess()
         })
 
-        test('3. Cliente simples CPF - alterar data de nascimento logo após cadastrar',  async ({ page }) => {
+        test('Cliente simples CPF - alterar data de nascimento logo após cadastrar',  async ({ page }) => {
     
             GeneralClientSimple.iconMenuOptions()
             GeneralClientSimple.optionClientSimple()
@@ -106,7 +106,7 @@ test.describe('Cadastrar cliente simples', () => {
             GeneralClientSimple.messFirstRegistSaveSucess()
         })  
 
-        test('4. Cliente simples CPF - alterar data de nascimento (deve pedir trial)',  async ({ page }) => {
+        test('Cliente simples CPF - alterar data de nascimento (deve pedir trial)',  async ({ page }) => {
 
             const cpf = gerarCpf(); // Gera um CPF válido
     
@@ -174,7 +174,7 @@ test.describe('Cadastrar cliente simples', () => {
             GeneralClientSimple.messFirstRegistSaveSucess()
         })
 
-        test('5. Cliente simples CPF - alterar tipo de sexo',  async ({ page }) => {
+        test('Cliente simples CPF - alterar tipo de sexo',  async ({ page }) => {
 
             const cpf = gerarCpf(); // Gera um CPF válido
 
@@ -243,7 +243,7 @@ test.describe('Cadastrar cliente simples', () => {
             GeneralClientSimple.optionClientSimple()
         })
 
-        test('6. Cliente simples CNPJ',  async ({ page }) => {
+        test('Cliente simples CNPJ',  async ({ page }) => {
     
             GeneralClientSimple.iconMenuOptions()
             GeneralClientSimple.optionClientSimple()
@@ -257,7 +257,7 @@ test.describe('Cadastrar cliente simples', () => {
             GeneralClientSimple.messFirstRegistSaveSucess()
         })
 
-        test('7. Cliente simples CNPJ - alterar Endereço',  async ({ page }) => {
+        test('Cliente simples CNPJ - alterar Endereço',  async ({ page }) => {
 
             GeneralClientSimple.iconMenuOptions()
             GeneralClientSimple.optionClientSimple()
@@ -302,7 +302,7 @@ test.describe('Cadastrar cliente simples', () => {
 
     context('Botão de adicionar cliente, na pesquisa de cliente', () => {
 
-        test('8. Botão de adicionar cliente, na pesquisa de cliente',  async ({ page }) => {
+        test('Botão de adicionar cliente, na pesquisa de cliente',  async ({ page }) => {
         
             //inserir CPF/CNPJ no campo de cliente para podermos pesquisar pela lupa
             cy.get('.click-cliente > .informe-o-cliente > .cliente-header')

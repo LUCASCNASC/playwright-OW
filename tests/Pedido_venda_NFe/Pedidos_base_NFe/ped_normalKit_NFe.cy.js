@@ -28,7 +28,7 @@ test.describe('Gerar pedido normal', () => {
   
     context('Sem entrega/ processo 9860 - caminho feliz', () => {
         
-        test('1. Ped venda: kit 1862 0 0',  async ({ page }) => {
+        test('Ped venda: kit 1862 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             GeneralOrder.compositionKit()
@@ -49,7 +49,7 @@ test.describe('Gerar pedido normal', () => {
     
     context('Com entrega/processo 9860 - caminho feliz', () => {
         
-        test('2. Ped venda: kit 1862 0 0',  async ({ page }) => {
+        test('Ped venda: kit 1862 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             GeralPedido.compositionKit()

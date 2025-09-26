@@ -28,7 +28,7 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
 
     context('Configuração de processo - Exclusiva: 36 = 2; 139 = 6; 552= 5 dias', () => {
 
-        test('1. Vender um produto normal (com saldo e com entrega, 15 dias) e um kit remoto (2 composições, sem saldo e sem a receber, 20 dias).',  async ({ page }) => {
+        test('Vender um produto normal (com saldo e com entrega, 15 dias) e um kit remoto (2 composições, sem saldo e sem a receber, 20 dias).',  async ({ page }) => {
 
             ProductExclusiva.firstNormal() //PRODUTO EXCLUSIVA
             ValidateBalance.withBalance() //VALIDAR SALDO
@@ -56,7 +56,7 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('2. Vender um produto normal (com saldo e com entrega) e um kit com composição 6 volumes (data atual + parametro 552/ 5 dias).',  async ({ page }) => {
+        test('Vender um produto normal (com saldo e com entrega) e um kit com composição 6 volumes (data atual + parametro 552/ 5 dias).',  async ({ page }) => {
 
             ProductExclusiva.firstNormal() //PRODUTO
             ValidateBalance.withBalance() //VALIDAR SALDO
@@ -86,7 +86,7 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
 
     context('Configuração de processo - Exclusiva: 36 = 2; 139 = 6; 552= 5 dias', () => {
 
-        test('3. Vender um produto (sem saldo e com saldo a receber para 10 dias, e com entrega), e ter um agendamento para a data de previsão.',  async ({ page }) => {
+        test('Vender um produto (sem saldo e com saldo a receber para 10 dias, e com entrega), e ter um agendamento para a data de previsão.',  async ({ page }) => {
 
             ProductExclusiva.balanceReceive() //PRODUTO
             ValidateBalance.withBalance() //VALIDAR SALDO
@@ -108,7 +108,7 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('4. Vender um produto em duas linhas (um com 5 unidades a receber e 10 para solicitar compra), e ter um agendamento para a data de previsão para a receber.',  async ({ page }) => {
+        test('Vender um produto em duas linhas (um com 5 unidades a receber e 10 para solicitar compra), e ter um agendamento para a data de previsão para a receber.',  async ({ page }) => {
 
             ProductExclusiva.balanceReceiveTwoLines() //PRODUTO
             PedExclusiva.balanceRemoteReceive()
@@ -125,7 +125,7 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             PedExclusiva.increaseAmountSaleTen()
         })
 
-        test('5. Pedido de venda normal: produto 1896 0 0 (sem entrega)',  async ({ page }) => {
+        test('Pedido de venda normal: produto 1896 0 0 (sem entrega)',  async ({ page }) => {
     
             ProductExclusiva.firstNormal() //PRODUTO EXCLUSIVA
             ValidateBalance.withBalance() //VALIDAR SALDO

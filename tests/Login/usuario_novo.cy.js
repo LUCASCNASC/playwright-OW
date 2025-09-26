@@ -16,7 +16,7 @@ test.describe('Logar com novo usuário', () => {
         Login.userTextIcon()
     })
 
-    test('1. Novo usuário - clicar em Fechar, não alterando a senha',  async ({ page }) => {
+    test('Novo usuário - clicar em Fechar, não alterando a senha',  async ({ page }) => {
     
         //Validando campo "informe seu usuário"
         cy.get('#txtusername')
@@ -207,7 +207,7 @@ test.describe('Logar com novo usuário', () => {
         Login.iconComputerLogin() //Validando que não entrou no sistema
     })
 
-    test('2. Novo usuário - clicar em CONFIRMAR, alterando a senha',  async ({ page }) => {
+    test('Novo usuário - clicar em CONFIRMAR, alterando a senha',  async ({ page }) => {
     
         //Validando campo "informe seu usuário"
         cy.get('#txtusername')

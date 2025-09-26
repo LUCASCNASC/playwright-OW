@@ -32,7 +32,7 @@ test.describe('Gerar pedidos com Mão de obra', () => {
   
     context('Sem entrega/processo 9860 - caminho feliz', () => {
 
-        test('1. Ped venda: produto 1860 0 0 (com Mão de Obra que Destaca e Não separa título',  async ({ page }) => {
+        test('Ped venda: produto 1860 0 0 (com Mão de Obra que Destaca e Não separa título',  async ({ page }) => {
     
             Service.garantiaNaoSep() //Marcar Mão de Obra "T.A. MO Destaca e Não Separa"
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -48,7 +48,7 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('2. Ped venda: produto 1860 0 0 (com Mão de Obra que Destaca e Não separa título) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('Ped venda: produto 1860 0 0 (com Mão de Obra que Destaca e Não separa título) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
 
             Service.garantiaNaoSep()  //Marcar Mão de Obra "T.A. MO Destaca e Não Separa"
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -72,7 +72,7 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             FinishOrder.validateOrderGenerated()
         })
     
-        test('3. Ped venda: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título no Mesmo processo)',  async ({ page }) => {
+        test('Ped venda: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título no Mesmo processo)',  async ({ page }) => {
     
             Service.garantiaSepMesmoProc() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Mesmo Processo"
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -88,7 +88,7 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('4. Ped venda: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título no Mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('Ped venda: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título no Mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
     
             Service.garantiaSepMesmoProc() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Mesmo Processo"
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -112,7 +112,7 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             FinishOrder.validateOrderGenerated()
         })
     
-        test('5. Ped venda: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título em processo Diferente)',  async ({ page }) => {
+        test('Ped venda: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título em processo Diferente)',  async ({ page }) => {
 
             Service.garantiaSepTituloProcDif() //Marcar Mão de obra que não destaca e separa título em processo diferente
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -128,7 +128,7 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('6. Ped venda: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título em processo Diferente) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('Ped venda: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título em processo Diferente) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
 
             Service.garantiaSepTituloProcDif() //Marcar Mão de obra que não destaca e separa título em processo diferente
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -155,7 +155,7 @@ test.describe('Gerar pedidos com Mão de obra', () => {
 
     context('Com entrega/processo 9860 - caminho feliz', () => {
 
-        test('7. Ped venda: produto 1860 0 0 (com Mão de Obra que Destaca e Não separa título)',  async ({ page }) => {
+        test('Ped venda: produto 1860 0 0 (com Mão de Obra que Destaca e Não separa título)',  async ({ page }) => {
     
             Service.garantiaNaoSep()  //Marcar Mão de Obra "T.A. MO Destaca e Não Separa"
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -171,7 +171,7 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             FinishOrder.validateOrderGenerated()
         })
         
-        test('8. Ped venda: produto 1860 0 0 (com Mão de Obra que Destaca e Não separa título) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('Ped venda: produto 1860 0 0 (com Mão de Obra que Destaca e Não separa título) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
     
             Service.garantiaNaoSep()  //Marcar Mão de Obra "T.A. MO Destaca e Não Separa"
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -194,7 +194,7 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('9. Ped venda: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título no Mesmo processo)',  async ({ page }) => {
+        test('Ped venda: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título no Mesmo processo)',  async ({ page }) => {
     
             Service.garantiaSepMesmoProc() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Mesmo Processo"
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -210,7 +210,7 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('10. Ped venda: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título no Mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('Ped venda: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título no Mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
     
             Service.garantiaSepMesmoProc() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Mesmo Processo"
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -233,7 +233,7 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('11. Ped venda: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título em processo Diferente)',  async ({ page }) => {
+        test('Ped venda: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título em processo Diferente)',  async ({ page }) => {
     
             Service.garantiaSepTituloProcDif() //Marcar Mão de obra que não destaca e separa título em processo diferente
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -249,7 +249,7 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             FinishOrder.validarPedvalidateOrderGeneratedGerado()
         })   
 
-        test('12. Ped venda: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título em processo Diferente) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('Ped venda: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título em processo Diferente) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
     
             Service.garantiaSepTituloProcDif() //Marcar Mão de obra que não destaca e separa título em processo diferente
             Service.clickOKServiceLinked() //SERVIÇOS

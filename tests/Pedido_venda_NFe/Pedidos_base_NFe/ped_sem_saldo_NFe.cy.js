@@ -17,7 +17,7 @@ test.describe('Tentar gerar pedido de venda com produto sem saldo - Regra de sal
 
     context('Processo 9860 - não permitir fazer a venda - no momento de adicionar produto, devem aparecer mensagens de aviso', () => {
 
-        test('1. Ped venda: produto 1869 0 0 (Venda local de produto sem saldo - sem entrega)',  async ({ page }) => {
+        test('Ped venda: produto 1869 0 0 (Venda local de produto sem saldo - sem entrega)',  async ({ page }) => {
             
             Product.withoutBalance() //PRODUTO
             ValidarSaldo.comSaldo() //VALIDAR SALDO
