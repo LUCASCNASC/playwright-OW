@@ -20,7 +20,7 @@ test.describe('Cadastrar cliente completo', () => {
         CommandsGeneral.tituloPagina()
     })
 
-        test('Cliente completo CPF - caminho feliz',  async ({ page }) => {
+        test('1.Cliente completo CPF - caminho feliz',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete()

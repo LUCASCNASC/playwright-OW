@@ -24,7 +24,7 @@ test.describe('Cadastrar cliente completo', () => {
 
     context('Cadastro de cliente completo - básico ', () => {
 
-        test('Cliente completo CPF',  async ({ page }) => {
+        test('1.Cliente completo CPF',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions() //PESSOA
             GeralClienteCoGeneralClientCompletempleto.optionClientComplete()
@@ -64,7 +64,7 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.messRegisterSaveSucess()
         })  
 
-        test('Cliente completo CPF - mensagem de campos obrigatórios',  async ({ page }) => {
+        test('2.Cliente completo CPF - mensagem de campos obrigatórios',  async ({ page }) => {
     
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete()
@@ -110,7 +110,7 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.messRegisterSaveSucess()
         })  
 
-        test('Cliente completo CNPJ',  async ({ page }) => {
+        test('3.Cliente completo CNPJ',  async ({ page }) => {
     
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete() 
@@ -154,7 +154,7 @@ test.describe('Cadastrar cliente completo', () => {
 
     context('Cadastro de cliente completo - incluindo anexo após salvar o cadastro de cliente', () => {
 
-        test('Cliente completo CPF - caminho feliz',  async ({ page }) => {
+        test('4.Cliente completo CPF - caminho feliz',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete() 
@@ -208,7 +208,7 @@ test.describe('Cadastrar cliente completo', () => {
 
     context('Cadastro de cliente completo - incluindo referencia bancária', () => {
 
-        test('Cliente completo CPF - tipo de chave PIX Telefone correto',  async ({ page }) => {
+        test('5.Cliente completo CPF - tipo de chave PIX Telefone correto',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete() 
@@ -272,7 +272,7 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.messRegisterSaveSucess()
         })  
 
-        test('Cliente completo CPF - tipo de chave PIX Email correto',  async ({ page }) => {
+        test('6.Cliente completo CPF - tipo de chave PIX Email correto',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete() 
@@ -336,7 +336,7 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.messRegisterSaveSucess()
         }) 
 
-        test('Cliente completo CPF - tipo de chave PIX CPF CNPJ correto',  async ({ page }) => {
+        test('7.Cliente completo CPF - tipo de chave PIX CPF CNPJ correto',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete() 
@@ -400,7 +400,7 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.messRegisterSaveSucess()
         }) 
 
-        test('Cliente completo CPF - tipo de chave PIX CPF CNPJ correto',  async ({ page }) => {
+        test('8.Cliente completo CPF - tipo de chave PIX CPF CNPJ correto',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete() 
@@ -464,7 +464,7 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralClientComplete.messRegisterSaveSucess()
         }) 
 
-        test('Cliente completo CPF - validar tipo de chave PIX Telefone incorreto ',  async ({ page }) => {
+        test('9.Cliente completo CPF - validar tipo de chave PIX Telefone incorreto ',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete()
@@ -528,7 +528,7 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralRefBanking.messRefBankingKeyPixPhoneInvalid()
         })  
 
-        test('Cliente completo CPF - validar tipo de chave PIX Email incorreto ',  async ({ page }) => {
+        test('10.Cliente completo CPF - validar tipo de chave PIX Email incorreto ',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete()
@@ -591,7 +591,7 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralRefBanking.messRefBankingKeyPixEmailInvalid()
         })  
 
-        test('Cliente completo CPF - validar tipo de chave CPF CNPJ incorreto ',  async ({ page }) => {
+        test('11.Cliente completo CPF - validar tipo de chave CPF CNPJ incorreto ',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete()
@@ -654,7 +654,7 @@ test.describe('Cadastrar cliente completo', () => {
             GeneralRefBanking.messRefBankingKeyPixCpfCnpjInvalid()
         })  
 
-        test('Cliente completo CPF - validar tipo de chave Aleatória incorreto ',  async ({ page }) => {
+        test('12.Cliente completo CPF - validar tipo de chave Aleatória incorreto ',  async ({ page }) => {
 
             GeneralClientComplete.iconMenuOptions()
             GeneralClientComplete.optionClientComplete()

@@ -18,7 +18,7 @@ test.describe('Senha do usuário expirada', () => {
 
     context('Tentar login quando a senha já está expirada', () => {
 
-        test('Tentar logar com usuário com senha do usuário expirada - clicar em SIM atualizar senha - clicar em Fechar a redefinição de senha',  async ({ page }) => {
+        test('1.Tentar logar com usuário com senha do usuário expirada - clicar em SIM atualizar senha - clicar em Fechar a redefinição de senha',  async ({ page }) => {
         
             //Validando campo "informe seu usuário"
             cy.get('#txtusername')
@@ -142,7 +142,7 @@ test.describe('Senha do usuário expirada', () => {
                 .and('not.have.attr', 'disabled')
         })
 
-        test('Tentar logar com usuário com senha do usuário expirada - clicar em NÃO atualizar senha - clicar em Fechar a redefinição de senha',  async ({ page }) => {
+        test('2.Tentar logar com usuário com senha do usuário expirada - clicar em NÃO atualizar senha - clicar em Fechar a redefinição de senha',  async ({ page }) => {
         
             //Validando campo "informe seu usuário"
             cy.get('#txtusername')
@@ -280,7 +280,7 @@ test.describe('Senha do usuário expirada', () => {
 
     context('Login quando a senha foi trocada e falta 1 dia para expirar, como foi definido no grupo deste usuário', () => {
 
-        test('Login - clicar em NÃO atualizar senha',  async ({ page }) => {
+        test('3.Login - clicar em NÃO atualizar senha',  async ({ page }) => {
         
                 //Validando campo "informe seu usuário"
                 cy.get('#txtusername')
@@ -316,7 +316,7 @@ test.describe('Senha do usuário expirada', () => {
                     .should('be.visible')
         })
         
-        test('Login - clicar em SIM atualizar senha - clicar em Fechar a redefinição de senha',  async ({ page }) => {
+        test('4.Login - clicar em SIM atualizar senha - clicar em Fechar a redefinição de senha',  async ({ page }) => {
         
             //Validando campo "informe seu usuário"
             cy.get('#txtusername')
@@ -442,7 +442,7 @@ test.describe('Senha do usuário expirada', () => {
                 .and('not.have.attr', 'disabled')
         })
     
-        test('Login - clicar em SIM atualizar senha - clicar em CONFIRMAR a redefinição de senha',  async ({ page }) => {
+        test('5.Login - clicar em SIM atualizar senha - clicar em CONFIRMAR a redefinição de senha',  async ({ page }) => {
         
             //Validando campo "informe seu usuário"
             cy.get('#txtusername')
