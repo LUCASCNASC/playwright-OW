@@ -28,7 +28,7 @@ test.describe('Gerar pedido normal', () => {
 
     context('Sem entrega/ processo 9860 - caminho feliz', () => {
 
-        test('Ped venda: produto 1860 0 0 - (Venda local de produto com saldo - sem entrega)',  async ({ page }) => {
+        test('1.Pedido: produto 1860 0 0 - (Venda local de produto com saldo - sem entrega)',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -45,7 +45,7 @@ test.describe('Gerar pedido normal', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('Ped venda: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
+        test('2.Pedido: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -70,7 +70,7 @@ test.describe('Gerar pedido normal', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('Ped venda: produto 1860 0 0 - (Pedido de venda sem entrega. Com Entrada + parcelamento.)',  async ({ page }) => {
+        test('3.Pedido: produto 1860 0 0 - (Pedido de venda sem entrega. Com Entrada + parcelamento.)',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -92,7 +92,7 @@ test.describe('Gerar pedido normal', () => {
 
     context('Com entrega/ processo 9860 - caminho feliz', () => {
 
-        test('Ped venda: produto 1860 0 0 - (Venda local de produto com saldo - com entrega)',  async ({ page }) => {
+        test('4.Pedido: produto 1860 0 0 - (Venda local de produto com saldo - com entrega)',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -109,7 +109,7 @@ test.describe('Gerar pedido normal', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('Ped venda: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
+        test('5.Pedido: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -133,7 +133,7 @@ test.describe('Gerar pedido normal', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('Ped venda: produto 1860 0 0 - (Pedido de venda com entrega. Com Entrada + parcelamento.)',  async ({ page }) => {
+        test('6.Pedido: produto 1860 0 0 - (Pedido de venda com entrega. Com Entrada + parcelamento.)',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho

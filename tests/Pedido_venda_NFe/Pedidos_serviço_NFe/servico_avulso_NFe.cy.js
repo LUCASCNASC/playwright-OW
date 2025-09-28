@@ -21,7 +21,7 @@ test.describe('Venda de serviço avulso', () => {
 
     context('Processo 9888 - caminho feliz', () => {
 
-        test('Venda de Mão de obra - 144 (T.A. MO Não Destaca e Separa Processo Diferente)',  async ({ page }) => {
+        test('1.Pedido de Mão de obra - 144 (T.A. MO Não Destaca e Separa Processo Diferente)',  async ({ page }) => {
 
             OrderServiceLoose.productServiceLoose() //PRODUTO
             OrderServiceLoose.chooseServiceSearch()

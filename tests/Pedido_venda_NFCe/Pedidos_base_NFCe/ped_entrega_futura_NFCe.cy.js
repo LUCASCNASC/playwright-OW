@@ -28,7 +28,7 @@ test.describe('Gerar pedido de entrega futura com entrega', () => {
     
     context('Com entrega/ processo 9891 - caminho feliz', () => {
 
-        test('Ped venda: produto 1860 0 0', async ({ page }) => {
+        test('1.Pedido: produto 1860 0 0', async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -47,7 +47,7 @@ test.describe('Gerar pedido de entrega futura com entrega', () => {
             FinishOrder.validateOrderGenerated()
         })    
         
-        test('Ped venda: produtos 1860 0 0 e 1870 0 0', async ({ page }) => {
+        test('2.Pedido: produtos 1860 0 0 e 1870 0 0', async ({ page }) => {
                       
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto

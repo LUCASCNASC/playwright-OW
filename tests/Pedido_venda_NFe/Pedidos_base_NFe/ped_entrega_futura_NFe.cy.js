@@ -27,7 +27,7 @@ test.describe('Gerar pedido de entrega futura', () => {
 
     context('Sem entrega/ processo 9862 - caminho feliz', () => {
 
-        test('Ped venda: produto 1860 0 0',  async ({ page }) => {
+        test('1.Pedido: produto 1860 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -44,7 +44,7 @@ test.describe('Gerar pedido de entrega futura', () => {
             FinishOrder.validateOrderGenerated()
         })
         
-        test('Ped venda: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
+        test('2.Pedido: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -72,7 +72,7 @@ test.describe('Gerar pedido de entrega futura', () => {
     
     context('Com entrega/ processo 9862 - caminho feliz', () => {
 
-        test('Ped venda: produto 1860 0 0',  async ({ page }) => {
+        test('3.Pedido: produto 1860 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -89,7 +89,7 @@ test.describe('Gerar pedido de entrega futura', () => {
             FinishOrder.validateOrderGenerated()
         })    
         
-        test('Ped venda: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
+        test('4.Pedido: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho

@@ -28,7 +28,7 @@ test.describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244
 
     context('Sem entrega/ processo 9860 - caminho feliz - processo de inclusão 3860', () => {
 
-        test('Ped venda: produto 1860 0 0 - arredondar para baixo',  async ({ page }) => {
+        test('1.Pedido: produto 1860 0 0 - arredondar para baixo',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -49,7 +49,7 @@ test.describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244
             FinishOrder.validateOrderGenerated()
         })
 
-        test('Ped venda: produtos 1860 0 0 - arredondar para cima',  async ({ page }) => {
+        test('2.Pedido: produtos 1860 0 0 - arredondar para cima',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho

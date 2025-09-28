@@ -28,7 +28,7 @@ test.describe('Gerar pedido com financeiro na baixa', () => {
   
     context('Sem entrega/ processo 9863 - caminho feliz', () => {
 
-        test('Ped venda: produto 1860 0 0',  async ({ page }) => {
+        test('1.Pedido: produto 1860 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -45,7 +45,7 @@ test.describe('Gerar pedido com financeiro na baixa', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('Ped venda: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
+        test('2.Pedido: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -73,7 +73,7 @@ test.describe('Gerar pedido com financeiro na baixa', () => {
     
     context('Com entrega/ processo 9863 - caminho feliz', () => {
 
-        test('Ped venda: produto 1860 0 0',  async ({ page }) => {
+        test('3.Pedido: produto 1860 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -90,7 +90,7 @@ test.describe('Gerar pedido com financeiro na baixa', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('Ped venda: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
+        test('4.Pedido: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho

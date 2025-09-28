@@ -28,7 +28,7 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
 
     context('Sem entrega/ processo 9860 - caminho feliz', () => {
 
-        test('Ped venda: produto 1860 0 0 - duas formas de pagamento 3871 e 3860',  async ({ page }) => {
+        test('1.Pedido: produto 1860 0 0 - duas formas de pagamento 3871 e 3860',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -50,7 +50,7 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('Ped venda: produto 1860 0 0 - com entrada (3861) e outra forma de pagamento (3860)',  async ({ page }) => {
+        test('2.Pedido: produto 1860 0 0 - com entrada (3861) e outra forma de pagamento (3860)',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -69,7 +69,7 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('Ped venda: produto 1860 0 0 - duas formas de pagamento iguais (3860) - clicar para NÃO agrupar',  async ({ page }) => {
+        test('3.Pedido: produto 1860 0 0 - duas formas de pagamento iguais (3860) - clicar para NÃO agrupar',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -92,7 +92,7 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('Ped venda: produto 1860 0 0 - duas formas de pagamento iguais (3860) - clicar para SIM agrupar',  async ({ page }) => {
+        test('4.Pedido: produto 1860 0 0 - duas formas de pagamento iguais (3860) - clicar para SIM agrupar',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -115,7 +115,7 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('Ped venda: produto 1860 0 0 - duas formas de pagamento iguais (3860) - clicar para NÃO agrupar, mas logo em seguida agrupar selecionando os dois.',  async ({ page }) => {
+        test('5.Pedido: produto 1860 0 0 - duas formas de pagamento iguais (3860) - clicar para NÃO agrupar, mas logo em seguida agrupar selecionando os dois.',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho

@@ -32,7 +32,7 @@ test.describe('Gerar pedidos com Garantia', () => {
 
     context('Sem entrega/processo 9860 - caminho feliz', () => {
 
-        test('Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo)',  async ({ page }) => {
+        test('1.Pedido: produto 1860 0 0 (com Garantia que separa título no mesmo processo)',  async ({ page }) => {
     
             Service.maoObraNaoDestSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
             Service.clickOKServiceLinked() //SERVIÇOS 
@@ -48,7 +48,7 @@ test.describe('Gerar pedidos com Garantia', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('2.Pedido: produto 1860 0 0 (com Garantia que separa título no mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
     
             Service.maoObraNaoDestSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -72,7 +72,7 @@ test.describe('Gerar pedidos com Garantia', () => {
             FinishOrder.validateOrderGenerated()
         })
     
-        test('Ped venda: produto 1860 0 0 (com Garantia que não separa título)',  async ({ page }) => {
+        test('3.Pedido: produto 1860 0 0 (com Garantia que não separa título)',  async ({ page }) => {
     
             Service.maoObraDestNãoSep() //Marcar garantia "T.A. Garantia Não Separa"
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -88,7 +88,7 @@ test.describe('Gerar pedidos com Garantia', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('Ped venda: produto 1860 0 0 (com Garantia que não separa título) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('4.Pedido: produto 1860 0 0 (com Garantia que não separa título) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
     
             Service.maoObraDestNãoSep() //Marcar garantia "T.A. Garantia Não Separa"
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -112,7 +112,7 @@ test.describe('Gerar pedidos com Garantia', () => {
             FinishOrder.validateOrderGenerated()
         })
     
-        test('Ped venda: produto 1860 0 0 (com Garantia que separa título em um processo diferente)',  async ({ page }) => {
+        test('5.Pedido: produto 1860 0 0 (com Garantia que separa título em um processo diferente)',  async ({ page }) => {
     
             Service.maoObraNaoDestSepaProcDif() //Marcar Garantia separa titulo em um processo diferente
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -128,7 +128,7 @@ test.describe('Gerar pedidos com Garantia', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('Ped venda: produto 1860 0 0 (com Garantia que separa título em um processo diferente) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('6.Pedido: produto 1860 0 0 (com Garantia que separa título em um processo diferente) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
     
             Service.maoObraNaoDestSepaProcDif() //Marcar Garantia separa titulo em um processo diferente
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -155,7 +155,7 @@ test.describe('Gerar pedidos com Garantia', () => {
 
     context('Com entrega/processo 9860 - caminho feliz', () => {
 
-        test('Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo)',  async ({ page }) => {
+        test('7.Pedido: produto 1860 0 0 (com Garantia que separa título no mesmo processo)',  async ({ page }) => {
     
             Service.maoObraNaoDestSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -171,7 +171,7 @@ test.describe('Gerar pedidos com Garantia', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('Ped venda: produto 1860 0 0 (com Garantia que separa título no mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('8.Pedido: produto 1860 0 0 (com Garantia que separa título no mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
     
             Service.maoObraNaoDestSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -194,7 +194,7 @@ test.describe('Gerar pedidos com Garantia', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('Ped venda: produto 1860 0 0 (com Garantia que não separa título)',  async ({ page }) => {
+        test('9.Pedido: produto 1860 0 0 (com Garantia que não separa título)',  async ({ page }) => {
     
             Service.maoObraDestNãoSep() //Marcar garantia "T.A. Garantia Não Separa"
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -210,7 +210,7 @@ test.describe('Gerar pedidos com Garantia', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('Ped venda: produto 1860 0 0 (com Garantia que não separa título) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('10.Pedido: produto 1860 0 0 (com Garantia que não separa título) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
     
             Service.maoObraDestNãoSep() //Marcar garantia "T.A. Garantia Não Separa"
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -233,7 +233,7 @@ test.describe('Gerar pedidos com Garantia', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('Ped venda: produto 1860 0 0 (com Garantia que separa título em um processo diferente)',  async ({ page }) => {
+        test('11.Pedido: produto 1860 0 0 (com Garantia que separa título em um processo diferente)',  async ({ page }) => {
     
             Service.maoObraNaoDestSepaProcDif() //Marcar Garantia separa titulo em um processo diferente
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -249,7 +249,7 @@ test.describe('Gerar pedidos com Garantia', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('Ped venda: produto 1860 0 0 (com Garantia que separa título em um processo diferente) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('12.Pedido: produto 1860 0 0 (com Garantia que separa título em um processo diferente) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
     
             Service.maoObraNaoDestSepaProcDif() //Marcar Garantia separa titulo em um processo diferente
             Service.clickOKServiceLinked() //SERVIÇOS

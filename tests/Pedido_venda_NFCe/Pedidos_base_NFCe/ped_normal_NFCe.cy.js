@@ -27,7 +27,7 @@ test.describe('Gerar pedido normal com entrega', () => {
 
     context('Com entrega/ processo 9890 - caminho feliz', () => {
 
-        test('Ped venda: produto 1860 0 0 - (Venda local de produto com saldo - com entrega)',  async ({ page }) => {
+        test('1.Pedido: produto 1860 0 0 - (Venda local de produto com saldo - com entrega)',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -46,7 +46,7 @@ test.describe('Gerar pedido normal com entrega', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('Ped venda: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
+        test('2.Pedido: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -72,7 +72,7 @@ test.describe('Gerar pedido normal com entrega', () => {
             FinishOrder.validateOrderGenerated()
         })
 
-        test('Ped venda: produto 1860 0 0 - (Pedido de venda com entrega. Com Entrada + parcelamento.)',  async ({ page }) => {
+        test('3.Pedido: produto 1860 0 0 - (Pedido de venda com entrega. Com Entrada + parcelamento.)',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho

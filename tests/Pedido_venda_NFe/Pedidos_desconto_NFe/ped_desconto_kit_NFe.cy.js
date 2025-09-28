@@ -26,7 +26,7 @@ test.describe('Gerar pedido de venda Kit com desconto', () => {
   
     context('Sem entrega/ processo 9862 - caminho feliz', () => {
         
-        test('Ped venda: kit 1862 0 0 com desconto Sub (-) / VALOR FIXO',  async ({ page }) => {
+        test('1.Pedido: kit 1862 0 0 com desconto Sub (-) / VALOR FIXO',  async ({ page }) => {
     
             Product.kitDiscount() //PRODUTO
             ValidateBalance.withBalance() //VALIDAR SALDO
