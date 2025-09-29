@@ -1,4 +1,4 @@
-import { expect, Page } from '@playwright/test';
+import { Page } from '@playwright/test';
 
 //Page Object para anexar arquivo PDF ao cadastro de cliente completo.
 export class FillFieldAnexo {

@@ -1,4 +1,4 @@
-import {gerarNomeEmpresa} from '../../../../gerarDados';
+import { gerarNomeEmpresa } from '../../../../gerarDados';
 // Início exp. crédito
 function gerarDataReferenciaFinanceira() {
   const dataInicio = new Date('2000-01-01');

@@ -1,4 +1,4 @@
-import {gerarEmailAleatorio,gerarTelefoneAleatorio,gerarNomeEmpresa,gerarObservação} from '../../../../gerarDados';
+import { gerarEmailAleatorio, gerarTelefoneAleatorio, gerarNomeEmpresa, gerarObservação } from '../../../../gerarDados';
 
 //Page Object para preencher campos de referência comercial no cadastro de cliente.
 export class FillRefCommercial {
