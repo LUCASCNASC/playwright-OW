@@ -1,6 +1,5 @@
 import { test } from '@playwright/test';
-import { FillClientSimple } from '../../../pages/para_cadastro_cliente/cliente_simples/preencher_cliente_simples';
-import { GeneralClientSimple } from '../../../pages/para_cadastro_cliente/cliente_simples/geral_cliente_simples';
+import { FillClientSimple, GeneralClientSimple } from '../../../pages/para_cadastro_cliente/cliente_simples/cliente_simples.';
 import { gerarCpf }  from '../../support/gerarDados';
 
 const Numeroalteracao = '113'
