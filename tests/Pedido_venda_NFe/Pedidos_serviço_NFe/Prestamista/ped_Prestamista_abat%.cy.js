@@ -4,7 +4,7 @@ import { ChooseClient } from '../../../../../pages/para_pedidos/cliente/cliente.
 import { ValidateBalance } from '../../../../../pages/para_pedidos/saldo/validar_saldo.js'
 import { Product } from '../../../../../pages/produtos/prd_normal.js'
 import { Service, ValidateService } from '../../../../pages/para_pedidos/servicos/servicos.js'
-import { AdvanceNormal } from '../../../../../pages/para_pedidos/botoes/avancar/avancar_normal.js'
+import { AdvanceNormal } from '../../../../pages/para_pedidos/avancar/avancar_normal.js'
 import { FinishOrder } from '../../../../../pages/para_pedidos/finalizar_pedido.js'
 import { ThrowDelivery, ThrowAssembly } from '../../../../pages/para_pedidos/entrega/tirar_entrega_montagem.js'
 import { GeneralPayment } from '../../../../pages/para_pedidos/pagamento/geral_pagamento.js'
