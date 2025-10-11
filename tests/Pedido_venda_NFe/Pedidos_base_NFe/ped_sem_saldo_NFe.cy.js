@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
 import { ChooseClient } from '../../../../pages/para_pedidos/cliente/cliente.js'
-import { Product } from '../../../../pages/produtos/prd_normal.js'
+import { Product } from '../../../../pages/produtos/produtos.js'
 import { ValidarSaldo } from '../../../../pages/para_pedidos/saldo/validar_saldo.js'
 import { CommandsGeneral } from '../../../../pages/commands..js'
 

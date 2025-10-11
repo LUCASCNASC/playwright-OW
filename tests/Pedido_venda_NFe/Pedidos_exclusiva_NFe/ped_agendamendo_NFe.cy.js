@@ -9,7 +9,7 @@ import { GeneralPayment } from '../../../../pages/para_pedidos/pagamento/geral_p
 import { ChooseInstallmentReceipt } from '../../../../pages/para_pedidos/pagamento/parcelas.js'
 import { Receipt } from '../../../../pages/para_pedidos/processos/processo_recebimento.js'
 import { PedExclusiva } from '../../../../pages/para_pedidos/para_pedidos_exclusiva.js'
-import { ProductExclusiva } from '../../../../pages/produtos/prd_exclusiva.js'
+import { Product, ProductExclusiva } from '../../../../pages/produtos/produtos.js'
 import { GeneralOrder } from '../../../../pages/para_pedidos/gerais_pedidos.js'
 import { ValidateBalance } from '../../../../pages/para_pedidos/saldo/validar_saldo.js'
 import { Service, ValidateService } from '../../../../pages/para_pedidos/servicos/servicos.js'

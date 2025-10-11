@@ -2,7 +2,7 @@ import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../../pages/para_pedidos/processos/processo_venda.js'
 import { ChooseClient } from '../../../../../pages/para_pedidos/cliente/cliente.js'
 import { ValidateBalance } from '../../../../../pages/para_pedidos/saldo/validar_saldo.js'
-import { Product } from '../../../../../pages/produtos/prd_normal.js'
+import { Product } from '../../../../pages/produtos/produtos.js'
 import { Service, ValidateService } from '../../../../pages/para_pedidos/servicos/servicos.js'
 import { AdvanceNormal } from '../../../../pages/para_pedidos/avancar/avancar_normal.js'
 import { FinishOrder } from '../../../../../pages/para_pedidos/finalizar_pedido.js'
