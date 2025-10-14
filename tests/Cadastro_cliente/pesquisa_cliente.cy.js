@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { SearchClient } from '../../../pages/para_cadastro_cliente/para_pesquisa_cliente'
+import { SearchClient } from '../../../pages/para_cadastro_cliente/pesquisa_cliente.page';
 
 test.describe('Cadastrar cliente', () => {
 
