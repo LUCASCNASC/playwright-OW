@@ -1,5 +1,6 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
+import dotenv from "dotenv";
 
 /**
  * Read environment variables from file.
@@ -79,6 +80,6 @@ module.exports = defineConfig({
 
 export default defineConfig({
   use: {
-    baseURL: 'https://sua-url-padrao.com', // Defina sua URL padrão aqui
+    baseURL: process.env.BASE_URL, // Defina sua URL padrão aqui
   },
 });
