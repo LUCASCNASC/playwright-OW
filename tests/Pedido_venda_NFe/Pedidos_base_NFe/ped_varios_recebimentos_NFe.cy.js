@@ -1,10 +1,7 @@
 import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
-import { ChooseClient } from '../../../../pages/para_pedidos/cliente/cliente.js'
 import { Product } from '../../../../pages/produtos/produtos.js'
 import { ValidateBalance } from '../../../../pages/para_pedidos/saldo/validar_saldo.js'
-import { Service, ValidateService } from '../../../../pages/para_pedidos/servicos/servicos.js'
-import { AdvanceNormal } from '../../../pages/para_pedidos/avancar/avancar_normal.js'
 import { FinishOrder } from '../../../../pages/para_pedidos/finalizar_pedido.js'
 import { ThrowDelivery, ThrowAssembly } from '../../../pages/para_pedidos/entrega/tirar_entrega_montagem.js'
 import { GeneralPayment } from '../../../../pages/para_pedidos/pagamento/geral_pagamento.js'
@@ -12,6 +9,9 @@ import { ChooseInstallmentReceipt } from '../../../../pages/para_pedidos/pagamen
 import { GroupReceipt } from '../../../../pages/para_pedidos/pagamento/agrupar_recebimento.js'
 import { Receipt } from '../../../../pages/para_pedidos/processos/processo_recebimento.js'
 import { CommandsGeneral } from '../../../../pages/commands..js'
+import { ChooseClient } from '../../../pages/para_pedidos/cliente.js'
+import { Service, ValidateService } from '../../../pages/para_pedidos/servicos.js'
+import { AdvanceNormal } from '../../../pages/para_pedidos/avancar_normal.js'
 
 test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
 

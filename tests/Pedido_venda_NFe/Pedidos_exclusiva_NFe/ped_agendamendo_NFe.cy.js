@@ -1,7 +1,5 @@
 import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
-import { ChooseClient } from '../../../../pages/para_pedidos/cliente/cliente.js'
-import { AdvanceNormal } from '../../../pages/para_pedidos/avancar/avancar_normal.js'
 import { FinishOrder } from '../../../../pages/para_pedidos/finalizar_pedido.js'
 import { ThrowDelivery, ThrowAssembly } from '../../../pages/para_pedidos/entrega/tirar_entrega_montagem.js'
 import { GeneralDelivery } from '../../../../pages/para_pedidos/entrega/geral_entrega.js'
@@ -12,8 +10,10 @@ import { PedExclusiva } from '../../../../pages/para_pedidos/para_pedidos_exclus
 import { Product, ProductExclusiva } from '../../../../pages/produtos/produtos.js'
 import { GeneralOrder } from '../../../../pages/para_pedidos/gerais_pedidos.js'
 import { ValidateBalance } from '../../../../pages/para_pedidos/saldo/validar_saldo.js'
-import { Service, ValidateService } from '../../../../pages/para_pedidos/servicos/servicos.js'
 import { CommandsGeneral } from '../../../../pages/commands..js'
+import { ChooseClient } from '../../../pages/para_pedidos/cliente.js'
+import { Service, ValidateService } from '../../../pages/para_pedidos/servicos.js'
+import { AdvanceNormal } from '../../../pages/para_pedidos/avancar_normal.js'
 
 //Para testarmos esses cenários, é necessário mudar para a versão da exclusiva e criar um agendamento na filial que está sendo usada
 test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
