@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { GeneralClientComplete, ClickClientComplete } from '../../../../pages/para_cadastro_cliente/cliente_completo/geral_cliente_completo';
+import { GeneralClientComplete, ClickClientComplete } from '../../../pages/cadastro_cliente/cliente_completo/ClienteCompletoPage.js';
 import { FillPerson } from '../../../../pages/para_cadastro_cliente/cliente_completo/aba_Pessoa/preencher_pessoa';
 import { GeneralRefGuys } from '../../../../pages/para_cadastro_cliente/cliente_completo/aba_Referencia/ref_pessoal/geral_ref_pessoal';
 import { FillRefGuys } from '../../../../pages/para_cadastro_cliente/cliente_completo/aba_Referencia/ref_pessoal/preencher_ref_pessoal';
