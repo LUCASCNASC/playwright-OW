@@ -69,3 +69,18 @@ export class GeneralAnexo {
     await expect(this.page.locator('small.list-title')).toContainText(dataAtual);
   }
 }
+
+export class FillFieldAnexo {
+  /**
+   * @param {Page} page
+   */
+  constructor(page) {
+    this.page = page;
+  }
+
+  //Função para anexar arquivo dentro do cadastro de cliente completo.
+  async filePDF() {
+    const caminhoDoArquivo = 'cypress\\fixtures\\anexo_cadastro_cliente_completo.pdf';
+    await this.page.setInputFiles("[type='file']", caminhoDoArquivo);
+  }
+}

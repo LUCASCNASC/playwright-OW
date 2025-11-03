@@ -1,4 +1,4 @@
-import { gerarCpf, gerarNomeAleatorio, gerarCNPJ, gerarNomeEmpresa } from '../../../gerarDados';
+import { gerarCpf, gerarNomeAleatorio, gerarCNPJ, gerarNomeEmpresa } from '../../gerarDados';
 import { expect, Page } from '@playwright/test';
 
 //Page Object para preencher dados pessoais do cliente.
