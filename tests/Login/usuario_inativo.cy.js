@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { Login } from '../../../pages/para_logins/para_login'
+import { Login } from '../../pages/login/LoginPage'
 
 const usuSabiumAutomacao = "usu.inativo"; //usuário 416
 const senhaautomacao = "123.automacao";

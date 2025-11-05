@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { Login } from '../../../pages/para_logins/para_login'
+import { Login } from '../../pages/login/LoginPage'
 
 const usuSabiumAutomacao = "usu.expiradosistema"; //usuário 496
 const senhaautomacao = "123.automacao";
