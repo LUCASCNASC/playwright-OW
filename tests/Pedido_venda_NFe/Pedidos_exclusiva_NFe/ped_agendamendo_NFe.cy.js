@@ -9,10 +9,10 @@ import { PedExclusiva } from '../../../../pages/para_pedidos/para_pedidos_exclus
 import { Product, ProductExclusiva } from '../../../../pages/produtos/produtos.js'
 import { GeneralOrder } from '../../../../pages/para_pedidos/gerais_pedidos.js'
 import { ValidateBalance } from '../../../../pages/para_pedidos/saldo/validar_saldo.js'
-import { CommandsGeneral } from '../../../../pages/commands..js'
-import { ChooseClient } from '../../../pages/para_pedidos/cliente.js'
+import { CommandsGeneral } from '../../../../pages/commands.js'
 import { Service, ValidateService } from '../../../pages/para_pedidos/ServicosPage.js'
-import { AdvanceNormal } from '../../../pages/para_pedidos/avancar_normal.js'
+import { AdvanceNormal } from '../../../pages/para_pedidos/AvancarPage.js'
+import { ChooseClient } from '../../../pages/para_pedidos/ClientePage.js'
 
 //Para testarmos esses cenários, é necessário mudar para a versão da exclusiva e criar um agendamento na filial que está sendo usada
 test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {

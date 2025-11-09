@@ -5,12 +5,11 @@ import { ValidateBalance } from '../../../../pages/para_pedidos/saldo/validar_sa
 import { FinishOrder } from '../../../../pages/para_pedidos/finalizar_pedido.js'
 import { GeneralDelivery, ThrowDelivery, ThrowAssembly } from '../../../pages/para_pedidos/EntregaPage.js'
 import { GeneralPayment } from '../../../../pages/para_pedidos/pagamento/geral_pagamento.js'
-import { RecebimentoPromo } from '../../../../pages/para_pedidos/processos/processo_recebimento_promo.js'
 import { Promotion } from '../../../../pages/para_pedidos/promocao/promocao.js'
-import { CommandsGeneral } from '../../../../pages/commands..js'
-import { ChooseClient } from '../../../pages/para_pedidos/cliente.js'
+import { CommandsGeneral } from '../../../../pages/commands.js'
 import { Service, ValidateService } from '../../../pages/para_pedidos/ServicosPage.js'
-import { AdvanceNormal } from '../../../pages/para_pedidos/avancar_normal.js'
+import { AdvanceNormal } from '../../../pages/para_pedidos/AvancarPage.js'
+import { ChooseClient } from '../../../pages/para_pedidos/ClientePage.js'
 
 test.describe('Gerar pedidos com promoção com entrega', () => {
 

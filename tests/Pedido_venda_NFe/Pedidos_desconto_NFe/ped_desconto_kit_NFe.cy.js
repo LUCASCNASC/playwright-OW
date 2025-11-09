@@ -9,10 +9,10 @@ import { ChooseInstallmentReceipt } from '../../../../pages/para_pedidos/pagamen
 import { Receipt } from '../../../../pages/para_pedidos/processos/processo_recebimento.js'
 import { OrderDiscount } from '../../../../pages/para_pedidos/para_pedido_desconto.js'
 import { GeneralOrder } from '../../../../pages/para_pedidos/gerais_pedidos.js'
-import { CommandsGeneral } from '../../../../pages/commands..js'
-import { ChooseClient } from '../../../pages/para_pedidos/cliente.js'
+import { CommandsGeneral } from '../../../../pages/commands.js'
 import { Service, ValidateService } from '../../../pages/para_pedidos/ServicosPage.js'
-import { AdvanceNormal } from '../../../pages/para_pedidos/avancar_normal.js'
+import { AdvanceNormal } from '../../../pages/para_pedidos/AvancarPage.js'
+import { ChooseClient } from '../../../pages/para_pedidos/ClientePage.js'
 
 test.describe('Gerar pedido de venda Kit com desconto', () => {
 

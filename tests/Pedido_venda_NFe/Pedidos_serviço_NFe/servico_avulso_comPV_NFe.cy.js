@@ -5,10 +5,10 @@ import { GeneralPayment } from '../../../../pages/para_pedidos/pagamento/geral_p
 import { ChooseInstallmentReceipt } from '../../../../pages/para_pedidos/pagamento/parcelas.js'
 import { Receipt } from '../../../../pages/para_pedidos/processos/processo_recebimento.js'
 import { OrderServiceLoose } from '../../../../pages/para_pedidos/para_servicos_avulsos.js'
-import { CommandsGeneral } from '../../../../pages/commands..js'
-import { ChooseClient } from '../../../pages/para_pedidos/cliente.js'
+import { CommandsGeneral } from '../../../../pages/commands.js'
 import { Service, ValidateService } from '../../../pages/para_pedidos/ServicosPage.js'
-import { AdvanceNormal } from '../../../pages/para_pedidos/avancar_normal.js'
+import { AdvanceNormal } from '../../../pages/para_pedidos/AvancarPage.js'
+import { ChooseClient } from '../../../pages/para_pedidos/ClientePage.js'
 
 
 test.describe('Venda de serviço avulso, com pedido do produto já baixado', () => {

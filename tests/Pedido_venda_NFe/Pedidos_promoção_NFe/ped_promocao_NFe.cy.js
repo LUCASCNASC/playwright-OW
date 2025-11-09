@@ -9,10 +9,10 @@ import { ChooseInstallmentReceipt } from '../../../../pages/para_pedidos/pagamen
 import { Receipt } from '../../../../pages/para_pedidos/processos/processo_recebimento.js'
 import { ReceiptPromotion } from '../../../../pages/para_pedidos/processos/processo_recebimento_promo.js'
 import { Promotion } from '../../../../pages/para_pedidos/promocao/promocao.js'
-import { CommandsGeneral } from '../../../../pages/commands..js'
-import { ChooseClient } from '../../../pages/para_pedidos/cliente.js'
+import { CommandsGeneral } from '../../../../pages/commands.js'
 import { Service, ValidateService } from '../../../pages/para_pedidos/ServicosPage.js'
-import { AdvanceNormal } from '../../../pages/para_pedidos/avancar_normal.js'
+import { AdvanceNormal } from '../../../pages/para_pedidos/AvancarPage.js'
+import { ChooseClient } from '../../../pages/para_pedidos/ClientePage.js'
 
 test.describe('Gerar pedidos com promoção', () => {
 
