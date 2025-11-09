@@ -10,7 +10,7 @@ import { GroupReceipt } from '../../../../pages/para_pedidos/pagamento/agrupar_r
 import { Receipt } from '../../../../pages/para_pedidos/processos/processo_recebimento.js'
 import { CommandsGeneral } from '../../../../pages/commands..js'
 import { ChooseClient } from '../../../pages/para_pedidos/cliente.js'
-import { Service, ValidateService } from '../../../pages/para_pedidos/servicos.js'
+import { Service, ValidateService } from '../../../pages/para_pedidos/ServicosPage.js'
 import { AdvanceNormal } from '../../../pages/para_pedidos/avancar_normal.js'
 
 test.describe('Gerar pedido com mais de uma forma de pagamento', () => {

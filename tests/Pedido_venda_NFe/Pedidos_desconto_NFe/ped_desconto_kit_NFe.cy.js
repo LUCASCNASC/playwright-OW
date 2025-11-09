@@ -11,7 +11,7 @@ import { OrderDiscount } from '../../../../pages/para_pedidos/para_pedido_descon
 import { GeneralOrder } from '../../../../pages/para_pedidos/gerais_pedidos.js'
 import { CommandsGeneral } from '../../../../pages/commands..js'
 import { ChooseClient } from '../../../pages/para_pedidos/cliente.js'
-import { Service, ValidateService } from '../../../pages/para_pedidos/servicos.js'
+import { Service, ValidateService } from '../../../pages/para_pedidos/ServicosPage.js'
 import { AdvanceNormal } from '../../../pages/para_pedidos/avancar_normal.js'
 
 test.describe('Gerar pedido de venda Kit com desconto', () => {

@@ -9,7 +9,7 @@ import { GeneralPayment } from '../../../../pages/para_pedidos/pagamento/geral_p
 import { Receipt } from '../../../../pages/para_pedidos/processos/processo_recebimento.js'
 import { CommandsGeneral } from '../../../../pages/commands..js'
 import { ChooseClient } from '../../../pages/para_pedidos/cliente.js'
-import { Service, ValidateService } from '../../../pages/para_pedidos/servicos.js'
+import { Service, ValidateService } from '../../../pages/para_pedidos/ServicosPage.js'
 import { AdvanceNormal } from '../../../pages/para_pedidos/avancar_normal.js'
 
 

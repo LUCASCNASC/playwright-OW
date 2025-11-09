@@ -9,7 +9,7 @@ import { GeneralPayment } from '../../../../pages/para_pedidos/pagamento/geral_p
 import { ChooseInstallmentReceipt } from '../../../../pages/para_pedidos/pagamento/parcelas.js'
 import { CommandsGeneral } from '../../../../pages/commands..js'
 import { ChooseClient } from '../../../pages/para_pedidos/cliente.js'
-import { Service, ValidateService } from '../../../pages/para_pedidos/servicos.js'
+import { Service, ValidateService } from '../../../pages/para_pedidos/ServicosPage.js'
 import { AdvanceNormal } from '../../../pages/para_pedidos/avancar_normal.js'
 
 test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâmetro 139 = 4 - Trial 653 não configurado', () => {

@@ -9,7 +9,7 @@ import { RecebimentoPromo } from '../../../../pages/para_pedidos/processos/proce
 import { Promotion } from '../../../../pages/para_pedidos/promocao/promocao.js'
 import { CommandsGeneral } from '../../../../pages/commands..js'
 import { ChooseClient } from '../../../pages/para_pedidos/cliente.js'
-import { Service, ValidateService } from '../../../pages/para_pedidos/servicos.js'
+import { Service, ValidateService } from '../../../pages/para_pedidos/ServicosPage.js'
 import { AdvanceNormal } from '../../../pages/para_pedidos/avancar_normal.js'
 
 test.describe('Gerar pedidos com promoção com entrega', () => {
