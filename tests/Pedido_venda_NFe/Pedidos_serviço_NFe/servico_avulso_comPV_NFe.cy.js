@@ -1,6 +1,6 @@
 import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
-import { FinishOrder } from '../../../../pages/para_pedidos/finalizar_pedido.js'
+import { FinishOrder } from '../../../pages/para_pedidos/FinalizarPedidoPage.js'
 import { GeneralPayment } from '../../../../pages/para_pedidos/pagamento/geral_pagamento.js'
 import { ChooseInstallmentReceipt } from '../../../../pages/para_pedidos/pagamento/parcelas.js'
 import { Receipt } from '../../../../pages/para_pedidos/processos/processo_recebimento.js'

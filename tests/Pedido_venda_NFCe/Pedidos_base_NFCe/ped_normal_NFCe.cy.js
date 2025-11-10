@@ -3,7 +3,7 @@ import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_v
 import { Product } from '../../../../pages/produtos/produtos.js'
 import { ValidateBalance } from '../../../../pages/para_pedidos/saldo/validar_saldo.js'
 import { Service, ValidateService } from '../../../pages/para_pedidos/ServicosPage.js'
-import { FinishOrder } from '../../../../pages/para_pedidos/finalizar_pedido.js'
+import { FinishOrder } from '../../../pages/para_pedidos/FinalizarPedidoPage.js'
 import { GeneralDelivery, ThrowDelivery, ThrowAssembly } from '../../../pages/para_pedidos/EntregaPage.js'
 import { GeneralPayment } from '../../../../pages/para_pedidos/pagamento/geral_pagamento.js'
 import { ChooseInstallmentReceipt } from '../../../../pages/para_pedidos/pagamento/parcelas.js'
