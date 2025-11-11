@@ -4,7 +4,7 @@ import { ValidateBalance } from '../../../../pages/para_pedidos/saldo/validar_sa
 import { Product } from '../../../../pages/produtos/produtos.js'
 import { FinishOrder } from '../../../pages/para_pedidos/FinalizarPedidoPage.js'
 import { Receipt } from '../../../../pages/para_pedidos/processos/processo_recebimento.js'
-import { GeneralOrder } from '../../../../pages/para_pedidos/gerais_pedidos.js'
+import { GeneralOrder } from '../../../pages/para_pedidos/GeraisPedidosPage.js'
 import { GeneralPayment } from '../../../../pages/para_pedidos/pagamento/geral_pagamento.js'
 import { ChooseInstallmentReceipt } from '../../../../pages/para_pedidos/pagamento/parcelas.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'

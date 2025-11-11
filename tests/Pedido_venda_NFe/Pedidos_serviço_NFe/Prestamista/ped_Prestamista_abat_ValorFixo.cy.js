@@ -9,7 +9,7 @@ import { Receipt } from '../../../../../pages/para_pedidos/processos/processo_re
 import { ReceiptPromotion } from '../../../../../pages/para_pedidos/processos/processo_recebimento_promo.js'
 import { Promotion } from '../../../../../pages/para_pedidos/promocao.js'
 import { TicketPrestamista } from '../../../../../pages/para_pedidos/validar_tela/prestamista.js'
-import { GeneralOrder } from '../../../../pages/para_pedidos/gerais_pedidos.js'
+import { GeneralOrder } from '../../../../pages/para_pedidos/GeraisPedidosPage.js'
 import { CommandsGeneral } from '../../../../../pages/commands.js'
 import { Service, ValidateService } from '../../../../pages/para_pedidos/ServicosPage.js'
 import { AdvanceNormal } from '../../../../pages/para_pedidos/AvancarPage.js'
