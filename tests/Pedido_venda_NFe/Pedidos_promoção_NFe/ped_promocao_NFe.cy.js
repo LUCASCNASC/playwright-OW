@@ -8,7 +8,7 @@ import { GeneralPayment } from '../../../../pages/para_pedidos/pagamento/geral_p
 import { ChooseInstallmentReceipt } from '../../../../pages/para_pedidos/pagamento/parcelas.js'
 import { Receipt } from '../../../../pages/para_pedidos/processos/processo_recebimento.js'
 import { ReceiptPromotion } from '../../../../pages/para_pedidos/processos/processo_recebimento_promo.js'
-import { Promotion } from '../../../../pages/para_pedidos/promocao/promocao.js'
+import { Promotion } from '../../../pages/para_pedidos/PromocaoPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
 import { Service, ValidateService } from '../../../pages/para_pedidos/ServicosPage.js'
 import { AdvanceNormal } from '../../../pages/para_pedidos/AvancarPage.js'
