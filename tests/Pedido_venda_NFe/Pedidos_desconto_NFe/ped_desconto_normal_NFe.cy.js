@@ -1,17 +1,17 @@
 import { test } from '@playwright/test';
-import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
+import { ProcessSale } from '../../../../pages/pedido/processos/processo_venda.js'
 import { Product } from '../../../../pages/produtos/produtos.js'
-import { ValidateBalance } from '../../../../pages/para_pedidos/saldo/validar_saldo.js'
-import { FinishOrder } from '../../../pages/para_pedidos/FinalizarPedidoPage.js'
-import { GeneralDelivery, ThrowDelivery, ThrowAssembly } from '../../../pages/para_pedidos/EntregaPage.js'
-import { GeneralPayment } from '../../../../pages/para_pedidos/pagamento/geral_pagamento.js'
-import { ChooseInstallmentReceipt } from '../../../../pages/para_pedidos/pagamento/parcelas.js'
-import { Receipt } from '../../../../pages/para_pedidos/processos/processo_recebimento.js'
-import { OrderDiscount } from '../../../pages/para_pedidos/PedidoDescontoPage.js'
+import { ValidateBalance } from '../../../../pages/pedido/saldo/validar_saldo.js'
+import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
+import { GeneralDelivery, ThrowDelivery, ThrowAssembly } from '../../../pages/pedido/EntregaPage.js'
+import { GeneralPayment } from '../../../../pages/pedido/pagamento/geral_pagamento.js'
+import { ChooseInstallmentReceipt } from '../../../../pages/pedido/pagamento/parcelas.js'
+import { Receipt } from '../../../../pages/pedido/processos/processo_recebimento.js'
+import { OrderDiscount } from '../../../pages/pedido/PedidoDescontoPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
-import { Service, ValidateService } from '../../../pages/para_pedidos/ServicosPage.js'
-import { AdvanceNormal } from '../../../pages/para_pedidos/AvancarPage.js'
-import { ChooseClient } from '../../../pages/para_pedidos/ClientePage.js'
+import { Service, ValidateService } from '../../../pages/pedido/ServicosPage.js'
+import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js'
+import { ChooseClient } from '../../../pages/pedido/ClientePage.js'
 
 test.describe('Gerar pedido de venda com desconto', () => {
 

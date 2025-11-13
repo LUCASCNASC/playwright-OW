@@ -1,11 +1,11 @@
 import { test } from '@playwright/test';
-import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
+import { ProcessSale } from '../../../../pages/pedido/processos/processo_venda.js'
 import { Product } from '../../../../pages/produtos/produtos.js'
-import { ValidarSaldo } from '../../../../pages/para_pedidos/saldo/validar_saldo.js'
+import { ValidarSaldo } from '../../../../pages/pedido/saldo/validar_saldo.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
-import { Service, ValidateService } from '../../../pages/para_pedidos/ServicosPage.js'
-import { AdvanceNormal } from '../../../pages/para_pedidos/AvancarPage.js'
-import { ChooseClient } from '../../../pages/para_pedidos/ClientePage.js'
+import { Service, ValidateService } from '../../../pages/pedido/ServicosPage.js'
+import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js'
+import { ChooseClient } from '../../../pages/pedido/ClientePage.js'
 
 test.describe('Tentar gerar pedido de venda com produto sem saldo - Regra de saldo Parâmetro 36 = 4 - Parâmetro 139 = 4 - Trial 653 não configurado', () => {
 

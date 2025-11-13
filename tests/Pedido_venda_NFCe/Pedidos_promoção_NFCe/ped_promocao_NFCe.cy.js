@@ -1,15 +1,15 @@
 import { test } from '@playwright/test';
-import { ProcessSale } from '../../../../pages/para_pedidos/processos/processo_venda.js'
+import { ProcessSale } from '../../../../pages/pedido/processos/processo_venda.js'
 import { Product } from '../../../../pages/produtos/produtos.js'
-import { ValidateBalance } from '../../../../pages/para_pedidos/saldo/validar_saldo.js'
-import { FinishOrder } from '../../../pages/para_pedidos/FinalizarPedidoPage.js'
-import { GeneralDelivery, ThrowDelivery, ThrowAssembly } from '../../../pages/para_pedidos/EntregaPage.js'
-import { GeneralPayment } from '../../../../pages/para_pedidos/pagamento/geral_pagamento.js'
-import { Promotion } from '../../../pages/para_pedidos/PromocaoPage.js'
+import { ValidateBalance } from '../../../../pages/pedido/saldo/validar_saldo.js'
+import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
+import { GeneralDelivery, ThrowDelivery, ThrowAssembly } from '../../../pages/pedido/EntregaPage.js'
+import { GeneralPayment } from '../../../../pages/pedido/pagamento/geral_pagamento.js'
+import { Promotion } from '../../../pages/pedido/PromocaoPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
-import { Service, ValidateService } from '../../../pages/para_pedidos/ServicosPage.js'
-import { AdvanceNormal } from '../../../pages/para_pedidos/AvancarPage.js'
-import { ChooseClient } from '../../../pages/para_pedidos/ClientePage.js'
+import { Service, ValidateService } from '../../../pages/pedido/ServicosPage.js'
+import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js'
+import { ChooseClient } from '../../../pages/pedido/ClientePage.js'
 
 test.describe('Gerar pedidos com promoção com entrega', () => {
 
