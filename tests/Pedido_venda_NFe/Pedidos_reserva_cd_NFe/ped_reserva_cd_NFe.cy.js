@@ -1,14 +1,14 @@
 import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../pages/pedido/processos/processo_venda.js'
 import { ValidateBalance } from '../../../../pages/pedido/saldo/validar_saldo.js'
-import { Product } from '../../../../pages/produtos/produtos.js'
+import { Product } from '../../../pages/ProdutoPage.js'
 import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
-import { GeneralDelivery, ThrowDelivery, ThrowAssembly } from '../../../pages/pedido/EntregaPage.js'
+import { ThrowDelivery } from '../../../pages/pedido/EntregaPage.js'
 import { GeneralPayment } from '../../../../pages/pedido/pagamento/geral_pagamento.js'
 import { ChooseInstallmentReceipt } from '../../../../pages/pedido/pagamento/parcelas.js'
 import { Receipt } from '../../../../pages/pedido/processos/processo_recebimento.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
-import { Service, ValidateService } from '../../../pages/pedido/ServicosPage.js'
+import { Service } from '../../../pages/pedido/ServicosPage.js'
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js'
 import { ChooseClient } from '../../../pages/pedido/ClientePage.js'
 
