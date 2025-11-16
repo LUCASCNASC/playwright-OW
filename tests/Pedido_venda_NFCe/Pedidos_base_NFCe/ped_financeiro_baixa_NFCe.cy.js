@@ -1,7 +1,6 @@
 import { test } from '@playwright/test';
-import { ProcessSale } from '../../../../pages/pedidos/processos/processo_venda.js'
-import { Product } from '../../../pages/ProdutoPage.js'
-import { ValidateBalance } from '../../../../pages/pedidos/saldo/validar_saldo.js'
+import { ProcessSale } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
+import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
 import { Service } from '../../../pages/pedidos/ServicosPage.js'
 import { FinishOrder } from '../../../pages/pedidos/FinalizarPedidoPage.js'
 import { GeneralDelivery } from '../../../pages/pedidos/EntregaPage.js'
