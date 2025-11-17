@@ -3,7 +3,7 @@ import { ProcessSale } from '../../../pages/pedido/processos/ProcessoVendaPage.j
 import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { GeneralPayment } from '../../../../pages/pedido/pagamento/geral_pagamento.js'
 import { ChooseInstallmentReceipt } from '../../../../pages/pedido/pagamento/parcelas.js'
-import { Receipt } from '../../../../pages/pedido/processos/processo_recebimento.js'
+import { Receipt } from '../../../pages/pedido/processos/ProcessoRecebimentoPage.js'
 import { OrderServiceLoose } from '../../../pages/pedido/ServicoAvulsoPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
 import { Service, ValidateService } from '../../../pages/pedido/ServicosPage.js'
