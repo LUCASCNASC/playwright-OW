@@ -2,7 +2,7 @@ import { test } from '@playwright/test';
 import { ProcessSale } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
 import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
-import { Receipt } from '../../../pages/pedido/processos/ProcessoRecebimentoPage.js'
+import { Receipt } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { GeneralOrder } from '../../../pages/pedido/GeraisPedidosPage.js'
 import { GeneralPayment } from '../../../../pages/pedido/pagamento/geral_pagamento.js'
 import { ChooseInstallmentReceipt } from '../../../../pages/pedido/pagamento/parcelas.js'
