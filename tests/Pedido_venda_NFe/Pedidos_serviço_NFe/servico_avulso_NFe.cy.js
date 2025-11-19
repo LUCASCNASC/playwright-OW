@@ -1,8 +1,8 @@
 import { test } from '@playwright/test';
 import { ProcessSale } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
 import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
-import { GeneralPayment } from '../../../../pages/pedido/pagamento/geral_pagamento.js'
-import { ChooseInstallmentReceipt } from '../../../../pages/pedido/pagamento/parcelas.js'
+import { GeneralPayment } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
+import { ChooseInstallmentReceipt } from '../../../pages/pedido/pagamento/ParcelasPage.js'
 import { Receipt } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { OrderServiceLoose } from '../../../pages/pedido/ServicoAvulsoPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
