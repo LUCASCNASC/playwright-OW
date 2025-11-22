@@ -1,7 +1,7 @@
 import { expect, Page } from '@playwright/test';
 
 //Page Object para validação do serviço prestamista no fluxo do pedido.
-export class TicketPrestamista {
+export class PrestamistaPage {
   /**
    * @param {Page} page
    */
