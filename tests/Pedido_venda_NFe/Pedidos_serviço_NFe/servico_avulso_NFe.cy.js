@@ -1,8 +1,8 @@
 import { test } from '@playwright/test';
 import { ProcessSale } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
 import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
-import { GeneralPayment } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
-import { ChooseInstallmentReceipt } from '../../../pages/pedido/pagamento/ParcelasPage.js'
+import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
+import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
 import { Receipt } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { OrderServiceLoose } from '../../../pages/pedido/ServicoAvulsoPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
@@ -30,10 +30,10 @@ test.describe('Venda de serviço avulso', () => {
             OrderServiceLoose.clickCartShopping() //CARRINHO COMPRAS
             OrderServiceLoose.serviceAddedCart()
             OrderServiceLoose.buttonAdvanceOrder()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment()
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment()
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()

@@ -1,7 +1,7 @@
 import { expect, Page } from '@playwright/test';
 
 //Page Object para seleção de parcelas no recebimento.
-export class ChooseInstallmentReceipt {
+export class ParcelasPage {
   /**
    * @param {Page} page
    */

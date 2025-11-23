@@ -4,8 +4,8 @@ import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
 import { Service } from '../../../pages/pedido/ServicosPage.js'
 import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { GeneralDelivery } from '../../../pages/pedido/EntregaPage.js'
-import { GeneralPayment } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
-import { ChooseInstallmentReceipt } from '../../../pages/pedido/pagamento/ParcelasPage.js'
+import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
+import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
 import { Receipt } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js'
@@ -36,10 +36,10 @@ test.describe('Gerar pedido normal com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment()
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment()
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -62,10 +62,10 @@ test.describe('Gerar pedido normal com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment()
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment()
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -81,12 +81,12 @@ test.describe('Gerar pedido normal com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            GeneralPayment.chooseEntryFormPayment() //GERAR PARCELAS
-            GeneralPayment.clickGeneratePayment()
-            GeneralPayment.clickGenerateInstallments()
-            GeneralPayment.loadingFormPayment()
+            GeralPagamentoPage.chooseEntryFormPayment() //GERAR PARCELAS
+            GeralPagamentoPage.clickGeneratePayment()
+            GeralPagamentoPage.clickGenerateInstallments()
+            GeralPagamentoPage.loadingFormPayment()
             Receipt.main()
-            ChooseInstallmentReceipt.one()
+            ParcelasPage.one()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()

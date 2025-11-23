@@ -3,8 +3,8 @@ import { ProcessSale } from '../../../pages/pedido/processos/ProcessoVendaPage.j
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
 import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { ThrowDelivery } from '../../../pages/pedido/EntregaPage.js'
-import { GeneralPayment } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
-import { ChooseInstallmentReceipt } from '../../../pages/pedido/pagamento/ParcelasPage.js'
+import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
+import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
 import { Receipt } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { Service } from '../../../../pages/pedido/servicos/apenas_servicos.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
@@ -38,10 +38,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.AddGarantSepMesmoProc() ; ValidateService.addMODestNãoSepara()
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments() 
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -63,10 +63,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -80,10 +80,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.AddGarantSepMesmoProc() ; ValidateService.addMONaoDestSepMesmoProc()
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -104,10 +104,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Servico.clickOKServiceLinked() //SERVIÇOS - SEGUNDO PRODUTO
             ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
             AdvanceNormal.toInstallments() 
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -121,10 +121,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.AddGarantSepMesmoProc() ; ValidateService.addMONaoDestSepProcDif()
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments() 
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -145,10 +145,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
             AdvanceNormal.toInstallments() 
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -162,10 +162,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep() ; ValidateService.addMODestNãoSepara()
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments() 
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -187,10 +187,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() //ENTREGA
             AdvanceNormal.toInstallments() 
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -204,10 +204,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep() ; ValidateService.addMONaoDestSepMesmoProc()
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments() 
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -229,10 +229,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
             AdvanceNormal.toInstallments() 
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -246,10 +246,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep() ; ValidateService.addMONaoDestSepProcDif()
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments() 
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -271,10 +271,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
             AdvanceNormal.toInstallments() 
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -288,10 +288,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.addGarantSepTituloProcDif() ; ValidateService.addMODestNãoSepara()
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments() 
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -313,10 +313,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
             AdvanceNormal.toInstallments() 
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -330,10 +330,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.addGarantSepTituloProcDif() ; ValidateService.addMONaoDestSepMesmoProc()
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments() 
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -355,10 +355,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
             AdvanceNormal.toInstallments()  
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -372,10 +372,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.addGarantSepTituloProcDif() ; ValidateService.addMONaoDestSepProcDif()
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments() 
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -397,10 +397,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
             AdvanceNormal.toInstallments() 
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -417,10 +417,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.AddGarantSepMesmoProc() ; ValidateService.addMODestNãoSepara()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()  
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -441,10 +441,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -458,10 +458,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.AddGarantSepMesmoProc() ; ValidateService.addMONaoDestSepMesmoProc()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -482,10 +482,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -499,10 +499,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.AddGarantSepMesmoProc() ; ValidateService.addMONaoDestSepProcDif()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -523,10 +523,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -540,10 +540,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep() ; ValidateService.addMODestNãoSepara()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -564,10 +564,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -581,10 +581,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep() ; ValidateService.addMONaoDestSepMesmoProc()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -605,10 +605,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -622,10 +622,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep() ; ValidateService.addMONaoDestSepProcDif()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -646,10 +646,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -663,10 +663,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.addGarantSepTituloProcDif() ; ValidateService.addMODestNãoSepara()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -686,10 +686,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -703,10 +703,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.addGarantSepTituloProcDif() ; ValidateService.addMONaoDestSepMesmoProc()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments() 
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -727,10 +727,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments() 
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -744,10 +744,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.addGarantSepTituloProcDif() ; ValidateService.addMONaoDestSepProcDif()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -768,10 +768,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()

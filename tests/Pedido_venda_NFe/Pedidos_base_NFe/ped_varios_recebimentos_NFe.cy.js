@@ -3,9 +3,9 @@ import { ProcessSale } from '../../../pages/pedido/processos/ProcessoVendaPage.j
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
 import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { ThrowDelivery } from '../../../pages/pedido/EntregaPage.js'
-import { GeneralPayment } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
-import { ChooseInstallmentReceipt } from '../../../pages/pedido/pagamento/ParcelasPage.js'
-import { GroupReceipt } from '../../../pages/pedido/pagamento/AgruparRecebPage.js'
+import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
+import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
+import { AgruparRecebPage } from '../../../pages/pedido/pagamento/AgruparRecebPage.js'
 import { Receipt } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
 import { Service } from '../../../pages/pedido/ServicosPage.js'
@@ -35,15 +35,15 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments()
-            GroupReceipt.firstValueInstallment() //COLOCAR VALOR DA PRIMEIRA FORMA DE PAGAMENTO
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS - PRIMEIRA FORMA DE PAGAMENTO
-            GeneralPayment.carregandoFormaPagamento()
+            AgruparRecebPage.firstValueInstallment() //COLOCAR VALOR DA PRIMEIRA FORMA DE PAGAMENTO
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS - PRIMEIRA FORMA DE PAGAMENTO
+            GeralPagamentoPage.carregandoFormaPagamento()
             Receipt.debitTEF()
-            ChooseInstallmentReceipt.one()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS - SEGUNDA FORMA DE PAGAMENTO
-            GeneralPayment.carregandoFormaPagamento()
+            ParcelasPage.one()
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS - SEGUNDA FORMA DE PAGAMENTO
+            GeralPagamentoPage.carregandoFormaPagamento()
             Receipt.main() //SEGUNDA FORMA DE PAGAMENTO
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -57,12 +57,12 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments()
-            GeneralPayment.chooseEntryFormPayment()
-            GeneralPayment.clicarGerarPagamento()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS - SEGUNDA FORMA DE PAGAMENTO
-            GeneralPayment.carregandoFormaPagamento()
+            GeralPagamentoPage.chooseEntryFormPayment()
+            GeralPagamentoPage.clicarGerarPagamento()
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS - SEGUNDA FORMA DE PAGAMENTO
+            GeralPagamentoPage.carregandoFormaPagamento()
             Receipt.main() //SEGUNDA FORMA DE PAGAMENTO
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -76,16 +76,16 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments()
-            GroupReceipt.firstValueInstallment() //COLOCAR VALOR DA PRIMEIRA FORMA DE PAGAMENTO
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS - PRIMEIRA FORMA DE PAGAMENTO
-            GeneralPayment.carregandoFormaPagamento()
+            AgruparRecebPage.firstValueInstallment() //COLOCAR VALOR DA PRIMEIRA FORMA DE PAGAMENTO
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS - PRIMEIRA FORMA DE PAGAMENTO
+            GeralPagamentoPage.carregandoFormaPagamento()
             Receipt.main()
-            ChooseInstallmentReceipt.one()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS - SEGUNDA FORMA DE PAGAMENTO
-            GeneralPayment.carregandoFormaPagamento()
+            ParcelasPage.one()
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS - SEGUNDA FORMA DE PAGAMENTO
+            GeralPagamentoPage.carregandoFormaPagamento()
             Receipt.main() //SEGUNDA FORMA DE PAGAMENTO
-            ChooseInstallmentReceipt.one()
-            GroupReceipt.notGroupReleases()
+            ParcelasPage.one()
+            AgruparRecebPage.notGroupReleases()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -99,16 +99,16 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments()
-            GroupReceipt.firstValueInstallment() //COLOCAR VALOR DA PRIMEIRA FORMA DE PAGAMENTO
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS - PRIMEIRA FORMA DE PAGAMENTO
-            GeneralPayment.carregandoFormaPagamento()
+            AgruparRecebPage.firstValueInstallment() //COLOCAR VALOR DA PRIMEIRA FORMA DE PAGAMENTO
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS - PRIMEIRA FORMA DE PAGAMENTO
+            GeralPagamentoPage.carregandoFormaPagamento()
             Receipt.main()
-            ChooseInstallmentReceipt.one()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS - SEGUNDA FORMA DE PAGAMENTO
-            GeneralPayment.carregandoFormaPagamento()
+            ParcelasPage.one()
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS - SEGUNDA FORMA DE PAGAMENTO
+            GeralPagamentoPage.carregandoFormaPagamento()
             Receipt.main() //SEGUNDA FORMA DE PAGAMENTO
-            ChooseInstallmentReceipt.one()
-            GroupReceipt.groupReleases()
+            ParcelasPage.one()
+            AgruparRecebPage.groupReleases()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -122,18 +122,18 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments()
-            GroupReceipt.firstValueInstallment() //COLOCAR VALOR DA PRIMEIRA FORMA DE PAGAMENTO
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS - PRIMEIRA FORMA DE PAGAMENTO
-            GeneralPayment.carregandoFormaPagamento()
+            AgruparRecebPage.firstValueInstallment() //COLOCAR VALOR DA PRIMEIRA FORMA DE PAGAMENTO
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS - PRIMEIRA FORMA DE PAGAMENTO
+            GeralPagamentoPage.carregandoFormaPagamento()
             Receipt.main()
-            ChooseInstallmentReceipt.one()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS - SEGUNDA FORMA DE PAGAMENTO
-            GeneralPayment.carregandoFormaPagamento()
+            ParcelasPage.one()
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS - SEGUNDA FORMA DE PAGAMENTO
+            GeralPagamentoPage.carregandoFormaPagamento()
             Receipt.main() //SEGUNDA FORMA DE PAGAMENTO
-            ChooseInstallmentReceipt.one()
-            GroupReceipt.notGroupReleases()
-            GroupReceipt.selectReleasesGroup()
-            GroupReceipt.clickGroup()
+            ParcelasPage.one()
+            AgruparRecebPage.notGroupReleases()
+            AgruparRecebPage.selectReleasesGroup()
+            AgruparRecebPage.clickGroup()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()

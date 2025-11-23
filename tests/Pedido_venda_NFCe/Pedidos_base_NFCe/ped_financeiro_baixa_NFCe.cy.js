@@ -4,8 +4,8 @@ import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
 import { Service } from '../../../pages/pedidos/ServicosPage.js'
 import { FinishOrder } from '../../../pages/pedidos/FinalizarPedidoPage.js'
 import { GeneralDelivery } from '../../../pages/pedidos/EntregaPage.js'
-import { GeneralPayment } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
-import { ChooseInstallmentReceipt } from '../../../pages/pedido/pagamento/ParcelasPage.js'
+import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
+import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
 import { Receipt } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
 import { AdvanceNormal } from '../../../pages/pedidos/AvancarPage.js'
@@ -36,10 +36,10 @@ test.describe('Gerar pedido com financeiro na baixa com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter()
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -62,10 +62,10 @@ test.describe('Gerar pedido com financeiro na baixa com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter()
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()

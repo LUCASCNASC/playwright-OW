@@ -2,8 +2,8 @@ import { test } from '@playwright/test';
 import { ProcessSale } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
 import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { GeneralDelivery, ThrowDelivery } from '../../../pages/pedido/EntregaPage.js'
-import { GeneralPayment } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
-import { ChooseInstallmentReceipt } from '../../../pages/pedido/pagamento/ParcelasPage.js'
+import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
+import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
 import { Receipt } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { PedExclusiva } from '../../../pages/pedido/PedidoExclusivaPage.js'
 import { ProductExclusiva, ValidateBalance } from '../../../pages/ProdutoPage.js'
@@ -45,10 +45,10 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             GeneralDelivery.modalInconsApenasTransp()
             GeneralDelivery.escolherTransportadora()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.carregandoFormaPagamento()
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.carregandoFormaPagamento()
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -72,10 +72,10 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             GeneralDelivery.modalInconsApenasTransp()
             GeneralDelivery.escolherTransportadora()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.carregandoFormaPagamento()
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.carregandoFormaPagamento()
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -97,10 +97,10 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             GeneralDelivery.modalInconsApenasTransp()
             GeneralDelivery.escolherTransportadora()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.carregandoFormaPagamento()
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.carregandoFormaPagamento()
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -134,10 +134,10 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment()
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment()
             Receipt.main()
-            ChooseInstallmentReceipt.two()
+            ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()

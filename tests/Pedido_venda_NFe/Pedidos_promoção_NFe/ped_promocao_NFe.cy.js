@@ -3,8 +3,8 @@ import { ProcessSale } from '../../../pages/pedido/processos/ProcessoVendaPage.j
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
 import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { ThrowDelivery } from '../../../pages/pedido/EntregaPage.js'
-import { GeneralPayment } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
-import { ChooseInstallmentReceipt } from '../../../pages/pedido/pagamento/ParcelasPage.js'
+import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
+import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
 import { Receipt } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { ReceiptPromotion } from '../../../pages/pedido/processos/ProcessoRecebPromoPage.js'
 import { Promotion } from '../../../pages/pedido/PromocaoPage.js'
@@ -119,7 +119,7 @@ test.describe('Gerar pedidos com promoção', () => {
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
 
             //Escolher forma de pagamento
             cy.contains('3868 - T.A. A Receber PIX TEF').click({force:true})
@@ -186,10 +186,10 @@ test.describe('Gerar pedidos com promoção', () => {
             AdvanceNormal.toInstallments() //ENTREGA
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pagamento_lista')
             cy.wait('@api_pagamento_lista', { timeout: 40000 })
-            GeneralPayment.insertDateTomorrow1Due()
-            GeneralPayment.clicarGerarParcAlterarVenc()
+            GeralPagamentoPage.insertDateTomorrow1Due()
+            GeralPagamentoPage.clicarGerarParcAlterarVenc()
             Receipt.principal()
-            ChooseInstallmentReceipt.one()
+            ParcelasPage.one()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             FinishOrder.validateOrderGenerated()
@@ -212,10 +212,10 @@ test.describe('Gerar pedidos com promoção', () => {
             cy.intercept('GET', 'images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
 
-            GeneralPayment.insertDateTomorrow1Due()
+            GeralPagamentoPage.insertDateTomorrow1Due()
             cy.get('.gerar-parcelas > .layout-wrap > [style="padding: 0 5px"] > .md-primary').click({force:true})
             Receipt.main()
-            ChooseInstallmentReceipt.one()
+            ParcelasPage.one()
 
             // //"GERAR PAGAMENTO"
             // cy.get('.white > :nth-child(3)').scrollIntoView().wait(300)
@@ -224,11 +224,11 @@ test.describe('Gerar pedidos com promoção', () => {
             // cy.get('.white > .layout-align-center-center > .md-primary').click({force:true})
             // cy.get('.md-select-backdrop').click({force:true})
 
-            // GeneralPayment.insertDateTomorrow1Due()
-            // GeneralPayment.clicarGerarParcAlterarVenc()
+            // GeralPagamentoPage.insertDateTomorrow1Due()
+            // GeralPagamentoPage.clicarGerarParcAlterarVenc()
             // cy.wait(3000)
             // Receipt.main()
-            // ChooseInstallmentReceipt.two()
+            // ParcelasPage.two()
             // AdvanceNormal.final()
             // FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
             // FinishOrder.validateOrderGenerated()
@@ -247,7 +247,7 @@ test.describe('Gerar pedidos com promoção', () => {
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
 
             //Escolher a forma de pagamento
             cy.get('[style=""] > md-collapsible-header.layout-row > .md-collapsible-tools > .ng-scope').click({force:true})
@@ -281,7 +281,7 @@ test.describe('Gerar pedidos com promoção', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
 
             //Escolher forma de pagemento
             cy.get('[style=""] > md-collapsible-header.layout-row > .md-collapsible-tools > .ng-scope').click({force: true})

@@ -3,9 +3,9 @@ import { ProcessSale } from '../../../../pages/pedido/processos/ProcessoVendaPag
 import { Product, ValidateBalance } from '../../../../pages/ProdutoPage.js'
 import { FinishOrder } from '../../../../pages/pedido/FinalizarPedidoPage.js'
 import { ThrowDelivery } from '../../../pages/pedido/EntregaPage.js'
-import { GeneralPayment } from '../../../../pages/pedido/pagamento/GeralPagamentoPage.js'
-import { ChooseInstallmentReceipt } from '../../../../pages/pedido/pagamento/ParcelasPage.js'
-import { GroupReceipt } from '../../../../pages/pedido/pagamento/AgruparRecebPage.js'
+import { GeralPagamentoPage } from '../../../../pages/pedido/pagamento/GeralPagamentoPage.js'
+import { ParcelasPage } from '../../../../pages/pedido/pagamento/ParcelasPage.js'
+import { AgruparRecebPage } from '../../../../pages/pedido/pagamento/AgruparRecebPage.js'
 import { Receipt } from '../../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { ReceiptPromotion } from '../../../../pages/pedido/processos/ProcessoRecebPromoPage.js'
 import { Promotion } from '../../../../../pages/pedido/promocao.js'
@@ -48,10 +48,10 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment()
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment()
             Receipt.futMoneyWithFees()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
@@ -79,10 +79,10 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment()
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment()
             Receipt.presentMoney()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
@@ -112,10 +112,10 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment()
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment()
             Receipt.futMoneyWithoutFees()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
@@ -144,10 +144,10 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment()
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment()
             Receipt.futMoneyWithFees()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
@@ -176,10 +176,10 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment()
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment()
             Receipt.futMoneyWithoutFees()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
@@ -208,10 +208,10 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment()
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment()
             Receipt.presentMoney()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
@@ -240,7 +240,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeneralOrder.clickEditInstallments()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
@@ -266,7 +266,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeneralOrder.clickEditInstallments()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
@@ -293,7 +293,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeneralOrder.clickEditInstallments()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
@@ -323,12 +323,12 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_pagamentoPedido')
             cy.wait('@api_pagamentoPedido', { timeout: 40000 })
-            GeneralPayment.insertDateTomorrow1Due()
-            GeneralPayment.clicarGerarParcAlterarVenc()
+            GeralPagamentoPage.insertDateTomorrow1Due()
+            GeralPagamentoPage.clicarGerarParcAlterarVenc()
             cy.contains('3876 - T.A. A Receber Futuro - para Prestamista sem juros').click()
             cy.intercept('/services/v3/pedido_forma_pagamento').as('api_pedido_forma_pagamento')
             cy.wait('@api_pedido_forma_pagamento', { timeout: 40000 })
-            ChooseInstallmentReceipt.one()
+            ParcelasPage.one()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.finalarFinal()
@@ -356,12 +356,12 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             cy.intercept('GET', '/images/icons/chain.svg').as('api_pagamentoPedido')
             cy.wait('@api_pagamentoPedido', { timeout: 40000 })
             //TicketPrestamista.added() //Validando adição do prestamista
-            GeneralPayment.insertDateTomorrow1Due()
-            GeneralPayment.clicarGerarParcAlterarVenc()
+            GeralPagamentoPage.insertDateTomorrow1Due()
+            GeralPagamentoPage.clicarGerarParcAlterarVenc()
             cy.contains('3874 - T.A. A Receber Futuro - para Prestamista').click()
             cy.intercept('/services/v3/pedido_forma_pagamento').as('api_pedido_forma_pagamento')
             cy.wait('@api_pedido_forma_pagamento', { timeout: 40000 })
-            ChooseInstallmentReceipt.one()
+            ParcelasPage.one()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
@@ -389,7 +389,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeneralOrder.clickEditInstallments()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
@@ -426,13 +426,13 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeneralOrder.clickEditInstallments()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
-            GeneralPayment.insertDateTomorrow1Due()
-            GeneralPayment.clicarGerarParcAlterarVenc()
+            GeralPagamentoPage.insertDateTomorrow1Due()
+            GeralPagamentoPage.clicarGerarParcAlterarVenc()
             Receipt.main()
-            ChooseInstallmentReceipt.one()
+            ParcelasPage.one()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
@@ -464,14 +464,14 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeneralOrder.clickEditInstallments()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
-            GeneralPayment.insertDate31Days1Due()
-            GeneralPayment.clicarGerarParcAlterarVenc()
+            GeralPagamentoPage.insertDate31Days1Due()
+            GeralPagamentoPage.clicarGerarParcAlterarVenc()
             Receipt.futMoneyWithFees()
             cy.get('[style="position: relative"] > :nth-child(4) > div.ng-binding').click({force:true}) //escolher 4 parcelas
-            GroupReceipt.groupReleases()
+            AgruparRecebPage.groupReleases()
             ValidateService.messPrestRemoved()
             ValidateService.addInsurancePrest()
             GeneralOrder.adicionadoRecebAgrupado()
@@ -506,13 +506,13 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeneralOrder.clickEditInstallments()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
-            GeneralPayment.insertDateTomorrow1Due()
-            GeneralPayment.clicarGerarParcAlterarVenc()
+            GeralPagamentoPage.insertDateTomorrow1Due()
+            GeralPagamentoPage.clicarGerarParcAlterarVenc()
             Receipt.main()
-            ChooseInstallmentReceipt.one()
+            ParcelasPage.one()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
@@ -544,16 +544,16 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeneralOrder.clickEditInstallments()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
-            GeneralPayment.insertDate31Days1Due()
-            GeneralPayment.clicarGerarParcAlterarVenc()
+            GeralPagamentoPage.insertDate31Days1Due()
+            GeralPagamentoPage.clicarGerarParcAlterarVenc()
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
             Receipt.futMoneyWithoutFees()
             cy.get('[style="position: relative"] > :nth-child(4) > div.ng-binding').click({force:true}) //escolher 4 parcelas
-            GroupReceipt.groupReleases()
+            AgruparRecebPage.groupReleases()
             ValidateService.messPrestRemoved()
             ValidateService.addInsurancePrest()
             GeneralOrder.adicionadoRecebAgrupado()
@@ -580,7 +580,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeneralOrder.clickEditInstallments()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
@@ -618,15 +618,15 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeneralOrder.clickEditInstallments()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
-            GeneralPayment.insertDateTomorrow1Due()
-            GeneralPayment.clicarGerarParcAlterarVenc()
+            GeralPagamentoPage.insertDateTomorrow1Due()
+            GeralPagamentoPage.clicarGerarParcAlterarVenc()
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
             Receipt.main()
-            ChooseInstallmentReceipt.one()
+            ParcelasPage.one()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
@@ -660,16 +660,16 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             cy.wait('@api_icons', { timeout: 40000 })
             // TicketPrestamista.added() //Validando adição do prestamista
             GeneralOrder.clickEditInstallments()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
-            GeneralPayment.insertDate31Days1Due()
-            GeneralPayment.clicarGerarParcAlterarVenc()
+            GeralPagamentoPage.insertDate31Days1Due()
+            GeralPagamentoPage.clicarGerarParcAlterarVenc()
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
             Receipt.futMoneyWithFees()
             cy.get('[style="position: relative"] > :nth-child(4) > div.ng-binding').click({force:true}) //escolher 4 parcelas
-            GroupReceipt.groupReleases()
+            AgruparRecebPage.groupReleases()
             ValidateService.messPrestRemoved()
             ValidateService.addInsurancePrest()
             GeneralOrder.adicionadoRecebAgrupado()
@@ -705,15 +705,15 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeneralOrder.clickEditInstallments()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
-            GeneralPayment.insertDateTomorrow1Due()
-            GeneralPayment.clicarGerarParcAlterarVenc()
+            GeralPagamentoPage.insertDateTomorrow1Due()
+            GeralPagamentoPage.clicarGerarParcAlterarVenc()
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
             Receipt.main()
-            ChooseInstallmentReceipt.one()
+            ParcelasPage.one()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
@@ -747,16 +747,16 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             cy.wait('@api_icons', { timeout: 40000 })
             // TicketPrestamista.added() //Validando adição do prestamista
             GeneralOrder.clickEditInstallments()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
-            GeneralPayment.insertDate31Days1Due()
-            GeneralPayment.clicarGerarParcAlterarVenc()
+            GeralPagamentoPage.insertDate31Days1Due()
+            GeralPagamentoPage.clicarGerarParcAlterarVenc()
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
             Receipt.futMoneyWithoutFees()
             cy.get('[style="position: relative"] > :nth-child(4) > div.ng-binding').click({force:true}) //escolher 4 parcelas
-            GroupReceipt.groupReleases()
+            AgruparRecebPage.groupReleases()
             ValidateService.messPrestRemoved()
             ValidateService.addInsurancePrest()
             GeneralOrder.adicionadoRecebAgrupado()
@@ -793,15 +793,15 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeneralOrder.clickEditInstallments()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
-            GeneralPayment.insertDateTomorrow1Due()
-            GeneralPayment.clicarGerarParcAlterarVenc()
+            GeralPagamentoPage.insertDateTomorrow1Due()
+            GeralPagamentoPage.clicarGerarParcAlterarVenc()
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
             Receipt.secondForm()
-            ChooseInstallmentReceipt.one()
+            ParcelasPage.one()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
@@ -836,16 +836,16 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             cy.wait('@api_icons', { timeout: 40000 })
             // TicketPrestamista.added() //Validando adição do prestamista
             GeneralOrder.clickEditInstallments()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
-            GeneralPayment.insertDate31Days1Due()
-            GeneralPayment.clicarGerarParcAlterarVenc()
+            GeralPagamentoPage.insertDate31Days1Due()
+            GeralPagamentoPage.clicarGerarParcAlterarVenc()
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
             Receipt.presentMoney()
             cy.get('[style="position: relative"] > :nth-child(4) > div.ng-binding').click({force:true}) //escolher 4 parcelas
-            GroupReceipt.groupReleases()
+            AgruparRecebPage.groupReleases()
             ValidateService.messPrestRemoved()
             ValidateService.addInsurancePrest()
             GeneralOrder.adicionadoRecebAgrupado()

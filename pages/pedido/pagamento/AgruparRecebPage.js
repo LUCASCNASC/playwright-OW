@@ -1,7 +1,7 @@
 import { expect, Page } from '@playwright/test';
 
 //Page Object para ações de agrupamento de recebimento (lançamentos financeiros).
-export class GroupReceipt {
+export class AgruparRecebPage {
   /**
    * @param {Page} page
    */

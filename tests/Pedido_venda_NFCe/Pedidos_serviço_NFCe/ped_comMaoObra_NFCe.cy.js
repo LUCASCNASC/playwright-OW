@@ -3,7 +3,7 @@ import { ProcessSale } from '../../../pages/pedido/processos/ProcessoVendaPage.j
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
 import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { GeneralDelivery } from '../../../pages/pedido/EntregaPage.js'
-import { GeneralPayment } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
+import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
 import { EscolherParcelaReceb } from '../../../pages/pedido/pagamento/ParcelasPage.js'
 import { Receipt } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
@@ -37,8 +37,8 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery() 
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()
@@ -61,8 +61,8 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()
@@ -78,8 +78,8 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery() 
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()
@@ -102,8 +102,8 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()
@@ -119,8 +119,8 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery() 
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()
@@ -143,8 +143,8 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()  
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment() 
             Receipt.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()

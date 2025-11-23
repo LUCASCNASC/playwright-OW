@@ -2,8 +2,8 @@ import { test } from '@playwright/test';
 import { ProcessSale } from '../../../../pages/pedido/processos/ProcessoVendaPage.js'
 import { Product, ValidateBalance } from '../../../../pages/ProdutoPage.js'
 import { FinishOrder } from '../../../../pages/pedido/FinalizarPedidoPage.js'
-import { GeneralPayment } from '../../../../pages/pedido/pagamento/GeralPagamentoPage.js'
-import { ChooseInstallmentReceipt } from '../../../../pages/pedido/pagamento/ParcelasPage.js'
+import { GeralPagamentoPage } from '../../../../pages/pedido/pagamento/GeralPagamentoPage.js'
+import { ParcelasPage } from '../../../../pages/pedido/pagamento/ParcelasPage.js'
 import { Receipt } from '../../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { ReceiptPromotion } from '../../../../pages/pedido/processos/ProcessoRecebPromoPage.js'
 import { Promotion } from '../../../../../pages/pedido/promocao.js'
@@ -37,10 +37,10 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment()
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment()
             Receipt.futWithoutRebVF()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
@@ -68,10 +68,10 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment()
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment()
             Receipt.futWithoutRebVF()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added()
             AdvanceNormal.final()
@@ -100,7 +100,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeneralOrder.clickEditInstallments()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
@@ -128,7 +128,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeneralOrder.clickEditInstallments()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
@@ -156,7 +156,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeneralOrder.clickEditInstallments()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
@@ -179,10 +179,10 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeneralPayment.clickGenerateInstallments() //GERAR PARCELAS
-            GeneralPayment.loadingFormPayment()
+            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            GeralPagamentoPage.loadingFormPayment()
             Receipt.presentMoneyRebVF()
-            ChooseInstallmentReceipt.for()
+            ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
