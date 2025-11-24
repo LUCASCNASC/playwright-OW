@@ -9,39 +9,39 @@ export class ValidateURL {
     this.page = page;
   }
 
-  async urlDepartamentos() {
+  async Departamentos() {
     await expect(this.page).toHaveURL(/\/#!\/departamentos\//);
   }
 
-  async urlServicos() {
+  async Servicos() {
     await expect(this.page).toHaveURL(/\/#!\/servicos/);
   }
 
-  async urlPedidosPendentes() {
+  async PedidosPendentes() {
     await expect(this.page).toHaveURL(/\/#!\/vendedor\/pedidos/);
   }
 
-  async urlCliente() {
+  async Cliente() {
     await expect(this.page).toHaveURL(/\/#!\/cliente\/cliente-cadastro/);
   }
 
-  async urlClienteCompleto() {
+  async ClienteCompleto() {
     await expect(this.page).toHaveURL(/\/#!\/clienteCompleto/);
   }
 
-  async urlPosVenda() {
+  async PosVenda() {
     await expect(this.page).toHaveURL(/\/#!\/posvenda/);
   }
 
-  async urlIntencaoCompra() {
+  async IntencaoCompra() {
     await expect(this.page).toHaveURL(/\/#!\/intencoescompra/);
   }
 
-  async urlConfiguracoes() {
+  async Configuracoes() {
     await expect(this.page).toHaveURL(/\/#!\/customizacao/);
   }
 
-  async urlMinhaPerformance() {
+  async MinhaPerformance() {
     await expect(this.page).toHaveURL(/\/#!\/vendedor/);
   }
 }
