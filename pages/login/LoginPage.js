@@ -1,7 +1,7 @@
 import { expect, Page } from '@playwright/test';
 
 //Page Object para validações e interações na tela de login.
-export class Login {
+export class LoginPage {
   /**
    * @param {Page} page
    */

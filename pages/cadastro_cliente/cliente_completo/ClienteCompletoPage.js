@@ -1,7 +1,7 @@
 import { expect, Page } from '@playwright/test';
 
 //Page Object para ações de navegação e validação no cadastro de cliente completo.
-export class ClickClientComplete {
+export class ClienteCompletoPage {
   /**
    * @param {Page} page
    */
@@ -54,10 +54,7 @@ export class ClickClientComplete {
     await this.page.locator('#menu_items_pri > :nth-child(5)').click();
     await this.page.waitForResponse(response => response.url().includes('/views/cliente/refEtapaPessoalLista.html') && response.status() === 200, { timeout: 40000 });
   }
-}
 
-//Page Object para validações e ações de cadastro de cliente completo.
-export class GeneralClientComplete {
   /**
    * @param {Page} page
    */

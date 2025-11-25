@@ -10,9 +10,9 @@ test.describe('Usuário inativo', () => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
-        Login.logoEnterpriseLogin()
-        Login.iconComputerLogin()
-        Login.userTextIcon()
+        LoginPage.logoEnterpriseLogin()
+        LoginPage.iconComputerLogin()
+        LoginPage.userTextIcon()
     })
 
     test('1.Tentar logar com usuário inativo',  async ({ page }) => {
@@ -25,7 +25,7 @@ test.describe('Usuário inativo', () => {
             .invoke('attr', 'placeholder')
             .should('equal', 'Informe seu usuário')
 
-        Login.passwordTextIcon()
+        LoginPage.passwordTextIcon()
 
         //Campo Informe sua senha
         cy.get('#txtpassword')
@@ -35,10 +35,10 @@ test.describe('Usuário inativo', () => {
             .invoke('attr', 'placeholder')
             .should('equal', 'Informe sua senha')
 
-        Login.iconEyesPassword()
-        Login.buttonForgotPassword()
-        Login.buttonEnterEnabled()
-        Login.clickButtonEnter()
+        LoginPage.iconEyesPassword()
+        LoginPage.buttonForgotPassword()
+        LoginPage.buttonEnterEnabled()
+        LoginPage.clickButtonEnter()
 
         //Card de mensagem 
         cy.get('.toast')
@@ -59,6 +59,6 @@ test.describe('Usuário inativo', () => {
         cy.get('.toast-close-button')
             .should('be.visible')
 
-        Login.iconComputerLogin() //Validando que não entrou no sistema
+        LoginPage.iconComputerLogin() //Validando que não entrou no sistema
     })
 })

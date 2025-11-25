@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { SearchClient } from '../../pages/cadastro_cliente/PesquisaClientePage.js';
+import { PesquisaClientePage } from '../../pages/cadastro_cliente/PesquisaClientePage.js';
 
 test.describe('Cadastrar cliente', () => {
 
@@ -13,25 +13,25 @@ test.describe('Cadastrar cliente', () => {
 
         test('1.Pesquisa por número CPF',  async ({ page }) => {
     
-            SearchClient.fillCPF() //Preencher com CPF
-            SearchClient.clickGlassSearchClient()
-            SearchClient.cardClientValidate()
-            SearchClient.typeAgainCPF()
-            SearchClient.clickCPFSearch()
-            SearchClient.messWaitLoading()
-            SearchClient.numberDescripCPFSearch()
+            PesquisaClientePage.fillCPF() //Preencher com CPF
+            PesquisaClientePage.clickGlassPesquisaClientePage()
+            PesquisaClientePage.cardClientValidate()
+            PesquisaClientePage.typeAgainCPF()
+            PesquisaClientePage.clickCPFSearch()
+            PesquisaClientePage.messWaitLoading()
+            PesquisaClientePage.numberDescripCPFSearch()
         }) 
 
         test('2.Pesquisa por número CNPJ',  async ({ page }) => {
 
-            SearchClient.fillCNPJ() //Preencher com CNPJ
-            SearchClient.clickGlassSearchClient()
-            SearchClient.cardClientValidate()
-            SearchClient.typeAgainCNPJ()
-            SearchClient.clickGlassSearchClient()
-            SearchClient.clickCNPJSearch()
-            SearchClient.messWaitLoading()
-            SearchClient.numberDescripCNPJSearch()
+            PesquisaClientePage.fillCNPJ() //Preencher com CNPJ
+            PesquisaClientePage.clickGlassPesquisaClientePage()
+            PesquisaClientePage.cardClientValidate()
+            PesquisaClientePage.typeAgainCNPJ()
+            PesquisaClientePage.clickGlassPesquisaClientePage()
+            PesquisaClientePage.clickCNPJSearch()
+            PesquisaClientePage.messWaitLoading()
+            PesquisaClientePage.numberDescripCNPJSearch()
         }) 
     })
 
@@ -39,24 +39,24 @@ test.describe('Cadastrar cliente', () => {
 
         test('3.Pesquisa por descrição CPF',  async ({ page }) => {
 
-            SearchClient.fillDescripCPF() //Preencher com DESCRIÇÃO CPF
-            SearchClient.clickGlassSearchClient()
-            SearchClient.cardClientValidate()
-            SearchClient.typeAgainCPF()
-            SearchClient.clickCPFSearch()
-            SearchClient.messWaitLoading()
-            SearchClient.numberDescripCPFSearch()
+            PesquisaClientePage.fillDescripCPF() //Preencher com DESCRIÇÃO CPF
+            PesquisaClientePage.clickGlassPesquisaClientePage()
+            PesquisaClientePage.cardClientValidate()
+            PesquisaClientePage.typeAgainCPF()
+            PesquisaClientePage.clickCPFSearch()
+            PesquisaClientePage.messWaitLoading()
+            PesquisaClientePage.numberDescripCPFSearch()
         }) 
 
         test('4.Pesquisa por descrição CNPJ',  async ({ page }) => {
 
-            SearchClient.typeAgainDescriptCNPJ() //Preencher com DESCRIÇÃO CNPJ
-            SearchClient.clickGlassSearchClient()
-            SearchClient.cardClientValidate()
-            SearchClient.typeAgainCNPJ()
-            SearchClient.clickCNPJSearch()
-            SearchClient.messWaitLoading()
-            SearchClient.numberDescripCNPJSearch()
+            PesquisaClientePage.typeAgainDescriptCNPJ() //Preencher com DESCRIÇÃO CNPJ
+            PesquisaClientePage.clickGlassPesquisaClientePage()
+            PesquisaClientePage.cardClientValidate()
+            PesquisaClientePage.typeAgainCNPJ()
+            PesquisaClientePage.clickCNPJSearch()
+            PesquisaClientePage.messWaitLoading()
+            PesquisaClientePage.numberDescripCNPJSearch()
         }) 
     })
 })

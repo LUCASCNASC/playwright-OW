@@ -1,7 +1,7 @@
 import { expect, Page } from '@playwright/test';
 
 //Page Object para operações com endereço de cliente.
-export class GeneralAdress {
+export class EnderecoPage {
   /**
    * @param {Page} page
    */
@@ -95,9 +95,7 @@ export class GeneralAdress {
     await expect(this.page.locator('#txtTpEndereco')).toBeVisible();
     await expect(this.page.locator('#txtTpEndereco')).toHaveValue('');
   }
-}
 
-export class FillAdress {
   /**
    * @param {Page} page
    */

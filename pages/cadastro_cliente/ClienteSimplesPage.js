@@ -2,7 +2,7 @@ import { gerarCpf, gerarNomeAleatorio, gerarCNPJ, gerarNomeEmpresa } from '../ge
 import { expect, Page } from '@playwright/test';
 
 //Page Object para preencher dados do cliente simples (formulário).
-export class FillClientSimple {
+export class ClienteSimplesPage {
   /**
    * @param {Page} page
    */
@@ -118,10 +118,7 @@ export class FillClientSimple {
     await this.page.locator('text=560 - T.A. CIDADE AUTOMAÇÃO').click();
     await this.page.waitForResponse('**/@api_local_entrega_560', { timeout: 40000 });
   }
-}
 
-//Page Object para operações com cliente simples.
-export class GeneralClientSimple {
   /**
    * @param {Page} page
    */

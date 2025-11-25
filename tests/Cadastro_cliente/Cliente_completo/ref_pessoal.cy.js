@@ -1,10 +1,10 @@
 import { test } from '@playwright/test';
-import { GeneralClientComplete, ClickClientComplete } from '../../../pages/cadastro_cliente/cliente_completo/ClienteCompletoPage.js';
-import { GeneralRefGuys, FillRefGuys } from '../../../pages/cadastro_cliente/cliente_completo/aba_Referencia/RefPessoalPage.js';
-import { FillPerson } from '../../../pages/cadastro_cliente/cliente_completo/PessoaPage.js';
-import { GeneralRefRoute, FillRefRoute } from '../../../pages/cadastro_cliente/cliente_completo/RotaPage.js';
-import { GeneralRefPhone, FillRefPhone } from '../../../pages/cadastro_cliente/cliente_completo/TelefonePage.js';
-import { GeneralAdress, FillAdress } from '../../../pages/cadastro_cliente/cliente_completo/EnderecoPage.js';
+import { ClienteCompletoPage, ClienteCompletoPage } from '../../../pages/cadastro_cliente/cliente_completo/ClienteCompletoPage.js';
+import { RefFinanceiraPage, RefFinanceiraPage } from '../../../pages/cadastro_cliente/cliente_completo/aba_Referencia/RefPessoalPage.js';
+import { PessoaPage } from '../../../pages/cadastro_cliente/cliente_completo/PessoaPage.js';
+import { RotaPage, RotaPage } from '../../../pages/cadastro_cliente/cliente_completo/RotaPage.js';
+import { TelefonePage, TelefonePage } from '../../../pages/cadastro_cliente/cliente_completo/TelefonePage.js';
+import { EnderecoPage, EnderecoPage } from '../../../pages/cadastro_cliente/cliente_completo/EnderecoPage.js';
 
 
 test.describe('Cadastrar cliente completo', () => {
@@ -17,55 +17,55 @@ test.describe('Cadastrar cliente completo', () => {
 
         test('1.Cliente completo CPF - caminho feliz',  async ({ page }) => {
 
-            GeneralClientComplete.iconMenuOptions()
-            GeneralClientComplete.optionClientComplete()
-            FillPerson.cpfClient() //Preencher com CPF
-            FillPerson.nameComplete() //Preencher nome completo do cliente
-            FillPerson.nameSocial() //preencher nome social do cliente
-            FillPerson.dateBirth()
-            FillPerson.sexClient()
-            ClickClientComplete.saveClient()
-            GeneralClientComplete.messAlertAdressMandatory() //mensagem de endereço obrigatório após tentar salvar sem adicionar um endereço
-            GeneralAdress.clickAbaAdress() //CADASTRAR ENDEREÇO
-            GeneralAdress.clickAddNewAdress()
-            GeneralAdress.tipoEndereco()
-            GeneralAdress.modalAdressEmptyValidade()
-            GeneralAdress.clickOpenTypeAdress()
-            FillAdress.typeAdress()
-            FillAdress.cepAdress()
-            FillAdress.numberAdress()
-            GeneralClientComplete.buttonSaveDisabled()
-            GeneralAdress.clickSaveAdress()
-            GeneralAdress.infoAdressAdded()
-            GeneralRefRoute.clickAbaRoute() //CADASTRAR ROTA
-            GeneralRefRoute.clickAddedNewRoute()
-            GeneralRefRoute.modalRouteEmptyValidade()
-            FillRefRoute.typeAdressRoute()
-            FillRefRoute.routaComplete()
-            FillRefRoute.infoRouteAdded()
-            GeneralRefPhone.clickAbaPhone() //CADASTRAR TELEFONE
-            GeneralRefPhone.clickAddedNewPhone()
-            GeneralRefPhone.modalPhoneEmptyValidade()
-            FillRefPhone.typePhone()
-            FillRefPhone.numberPhone()
-            FillRefPhone.ramalPhone()
-            GeneralRefPhone.clickSavePhone()
-            GeneralRefPhone.infoPhoneAdded()
-            GeneralRefPhone.messPhoneAddedSucess()
-            ClickClientComplete.abaReferences() //REFERENCIA
-            GeneralRefGuys.clickAbaRefGuys()
-            GeneralRefGuys.validateAbaEmpty() //CADASTRAR REFERENCIA PESSOAL
-            GeneralRefGuys.clickAddNew()
-            GeneralRefGuys.modalEmpty()
-            FillRefGuys.name()
-            FillRefGuys.email()
-            FillRefGuys.phone()
-            FillRefGuys.relationship()
-            GeneralRefGuys.clickSave()
-            GeneralRefGuys.messRefGuysAddedSucess()
-            GeneralRefGuys.infoAdded()
-            ClickClientComplete.saveClient()
-            GeneralClientComplete.modalWaitingLoading()
-            GeneralClientComplete.messRegisterSaveSucess()
+            ClienteCompletoPage.iconMenuOptions()
+            ClienteCompletoPage.optionClientComplete()
+            PessoaPage.cpfClient() //Preencher com CPF
+            PessoaPage.nameComplete() //Preencher nome completo do cliente
+            PessoaPage.nameSocial() //preencher nome social do cliente
+            PessoaPage.dateBirth()
+            PessoaPage.sexClient()
+            ClienteCompletoPage.saveClient()
+            ClienteCompletoPage.messAlertAdressMandatory() //mensagem de endereço obrigatório após tentar salvar sem adicionar um endereço
+            EnderecoPage.clickAbaAdress() //CADASTRAR ENDEREÇO
+            EnderecoPage.clickAddNewAdress()
+            EnderecoPage.tipoEndereco()
+            EnderecoPage.modalAdressEmptyValidade()
+            EnderecoPage.clickOpenTypeAdress()
+            EnderecoPage.typeAdress()
+            EnderecoPage.cepAdress()
+            EnderecoPage.numberAdress()
+            ClienteCompletoPage.buttonSaveDisabled()
+            EnderecoPage.clickSaveAdress()
+            EnderecoPage.infoAdressAdded()
+            RotaPage.clickAbaRoute() //CADASTRAR ROTA
+            RotaPage.clickAddedNewRoute()
+            RotaPage.modalRouteEmptyValidade()
+            RotaPage.typeAdressRoute()
+            RotaPage.routaComplete()
+            RotaPage.infoRouteAdded()
+            TelefonePage.clickAbaPhone() //CADASTRAR TELEFONE
+            TelefonePage.clickAddedNewPhone()
+            TelefonePage.modalPhoneEmptyValidade()
+            TelefonePage.typePhone()
+            TelefonePage.numberPhone()
+            TelefonePage.ramalPhone()
+            TelefonePage.clickSavePhone()
+            TelefonePage.infoPhoneAdded()
+            TelefonePage.messPhoneAddedSucess()
+            ClienteCompletoPage.abaReferences() //REFERENCIA
+            RefFinanceiraPage.clickAbaRefGuys()
+            RefFinanceiraPage.validateAbaEmpty() //CADASTRAR REFERENCIA PESSOAL
+            RefFinanceiraPage.clickAddNew()
+            RefFinanceiraPage.modalEmpty()
+            RefFinanceiraPage.name()
+            RefFinanceiraPage.email()
+            RefFinanceiraPage.phone()
+            RefFinanceiraPage.relationship()
+            RefFinanceiraPage.clickSave()
+            RefFinanceiraPage.messRefGuysAddedSucess()
+            RefFinanceiraPage.infoAdded()
+            ClienteCompletoPage.saveClient()
+            ClienteCompletoPage.modalWaitingLoading()
+            ClienteCompletoPage.messRegisterSaveSucess()
         }) 
 })

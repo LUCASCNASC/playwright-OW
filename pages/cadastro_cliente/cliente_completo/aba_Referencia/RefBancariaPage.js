@@ -1,7 +1,7 @@
 import { expect, Page } from '@playwright/test';
 
 //Page Object para operações com referência bancária em cadastro de cliente.
-export class GeneralRefBanking {
+export class RefBancariaPage {
   /**
    * @param {Page} page
    */
@@ -207,10 +207,8 @@ export class GeneralRefBanking {
       this.page.waitForResponse('**/services/v3/forma_pagamento', { timeout: 40000 }),
     ]);
   }
-}
 
-export class FillRefBanking {
-  /**
+   /**
    * @param {Page} page
    */
   constructor(page) {

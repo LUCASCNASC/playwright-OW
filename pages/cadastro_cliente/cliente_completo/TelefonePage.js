@@ -1,7 +1,7 @@
 import { expect, Page } from '@playwright/test';
 
 //Page Object para operações com telefones de clientes.
-export class GeneralRefPhone {
+export class TelefonePage {
   /**
    * @param {Page} page
    */
@@ -71,9 +71,7 @@ export class GeneralRefPhone {
     await expect(this.page.locator('.toast-success > .toast-message')).toBeVisible();
     await expect(this.page.locator('.toast-success > .toast-message')).toHaveText('Telefone incluído com sucesso.');
   }
-}
 
-export class FillRefPhone {
   /**
    * @param {Page} page
    */

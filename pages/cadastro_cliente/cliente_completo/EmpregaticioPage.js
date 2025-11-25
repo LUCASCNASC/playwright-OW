@@ -1,7 +1,7 @@
 import { expect, Page } from '@playwright/test';
 
 //Page Object para operações com aba Empregatício de clientes.
-export class GeneralEmployment {
+export class EmpregaticioPage {
   /**
    * @param {Page} page
    */

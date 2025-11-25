@@ -2,7 +2,7 @@ import { gerarCpf, gerarNomeAleatorio, gerarCNPJ, gerarNomeEmpresa } from '../..
 import { expect, Page } from '@playwright/test';
 
 //Page Object para preencher dados pessoais do cliente.
-export class FillPerson {
+export class PessoaPage {
   /**
    * @param {Page} page
    */

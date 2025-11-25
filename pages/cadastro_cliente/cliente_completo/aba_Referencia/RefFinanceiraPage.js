@@ -20,7 +20,7 @@ function gerarValorDuasCasasAposVirgula() {
 }
 
 //Page Object para operações com referência financeira em cadastro de cliente.
-export class GeneralRefFinance {
+export class RefFinanceiraPage {
   /**
    * @param {Page} page
    */
@@ -142,28 +142,7 @@ export class GeneralRefFinance {
     const quantidadeValorPrestacao = this.page.locator('.layout-align-gt-sm-center-end > .list-title');
     await expect(quantidadeValorPrestacao).toBeVisible();
   }
-}
 
-function gerarDataReferenciaFinanceira() {
-  const dataInicio = new Date('2000-01-01');
-  const dataAtual = new Date();
-  const dataAleatoria = new Date(dataInicio.getTime() + Math.random() * (dataAtual.getTime() - dataInicio.getTime()));
-  const dia = String(dataAleatoria.getDate()).padStart(2, '0');
-  const mes = String(dataAleatoria.getMonth() + 1).padStart(2, '0');
-  const ano = dataAleatoria.getFullYear();
-  return `${dia}/${mes}/${ano}`;
-}
-
-// Valor prestação
-function gerarValorDuasCasasAposVirgula() {
-  const valorInteiro = Math.floor(Math.random() * 900) + 100;
-  const valorDecimal = (Math.random()).toFixed(2).substring(2);
-  const valorFinal = `${valorInteiro}.${valorDecimal}`;
-  return valorFinal;
-}
-
-//Page Object para preencher campos de referência financeira no cadastro de cliente.
-export class FillRefFinance {
   /**
    * @param {Page} page
    */
@@ -194,4 +173,22 @@ export class FillRefFinance {
     const valor_prestacao = gerarValorDuasCasasAposVirgula();
     await this.page.locator('#txtVlrPrest').type(valor_prestacao);
   }
+}
+
+function gerarDataReferenciaFinanceira() {
+  const dataInicio = new Date('2000-01-01');
+  const dataAtual = new Date();
+  const dataAleatoria = new Date(dataInicio.getTime() + Math.random() * (dataAtual.getTime() - dataInicio.getTime()));
+  const dia = String(dataAleatoria.getDate()).padStart(2, '0');
+  const mes = String(dataAleatoria.getMonth() + 1).padStart(2, '0');
+  const ano = dataAleatoria.getFullYear();
+  return `${dia}/${mes}/${ano}`;
+}
+
+// Valor prestação
+function gerarValorDuasCasasAposVirgula() {
+  const valorInteiro = Math.floor(Math.random() * 900) + 100;
+  const valorDecimal = (Math.random()).toFixed(2).substring(2);
+  const valorFinal = `${valorInteiro}.${valorDecimal}`;
+  return valorFinal;
 }

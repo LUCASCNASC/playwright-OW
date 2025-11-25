@@ -1,7 +1,7 @@
 import { expect, Page } from '@playwright/test';
 
 //Page Object para operações com anexos em cadastros de clientes.
-export class GeneralAnexo {
+export class AnexoPage {
   /**
    * @param {Page} page
    */
@@ -68,9 +68,7 @@ export class GeneralAnexo {
     await expect(this.page.locator('small.list-title')).toContainText('Anexo inserido em');
     await expect(this.page.locator('small.list-title')).toContainText(dataAtual);
   }
-}
 
-export class FillFieldAnexo {
   /**
    * @param {Page} page
    */

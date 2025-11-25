@@ -2,7 +2,7 @@ import { expect, Page } from '@playwright/test';
 import { gerarNomeAleatorio, gerarEmailAleatorio, gerarTelefoneAleatorio, gerarRelacionamento } from '../../../gerarDados';
 
 //Page Object para operações com referência pessoal em cadastro de cliente.
-export class GeneralRefGuys {
+export class RefPessoalPage {
   /**
    * @param {Page} page
    */
@@ -133,9 +133,7 @@ export class GeneralRefGuys {
     // Mesma implementação de modalEmpty
     await this.modalEmpty();
   }
-}
 
-export class FillRefGuys {
   /**
    * @param {Page} page
    */

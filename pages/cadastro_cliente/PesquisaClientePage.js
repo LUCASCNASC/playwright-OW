@@ -1,7 +1,7 @@
 import { expect, Page } from '@playwright/test';
 
 //Page Object para pesquisa e seleção de clientes.
-export class SearchClient {
+export class PesquisaClientePage {
   /**
    * @param {Page} page
    */
@@ -17,7 +17,7 @@ export class SearchClient {
   }
 
   // Clicando na lupa pesquisa de cliente
-  async clickGlassSearchClient() {
+  async clickGlassPesquisaClientePage() {
     await this.page.route('**/views/cliente/modalClientes.html', route => route.continue());
     await this.page.locator('.md-block > .ng-binding').waitFor({ state: 'visible' });
     await this.page.locator('.md-block > .ng-binding').click({ force: true });

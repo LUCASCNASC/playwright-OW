@@ -1,7 +1,7 @@
 import { expect, Page } from '@playwright/test';
 
 //Page Object para operações com referência comercial em cadastro de cliente.
-export class GeneralRefCommercial {
+export class RefComercialPage {
   /**
    * @param {Page} page
    */
@@ -124,9 +124,7 @@ export class GeneralRefCommercial {
     const email = this.page.locator('[ng-show="(item.email)"]');
     await expect(email).toBeVisible();
   }
-}
 
-export class FillRefCommercial {
   /**
    * @param {Page} page
    */
