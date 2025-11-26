@@ -5,7 +5,7 @@ import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { ThrowDelivery } from '../../../pages/pedido/EntregaPage.js'
 import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
 import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
-import { Receipt } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
+import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { ReceiptPromotion } from '../../../pages/pedido/processos/ProcessoRecebPromoPage.js'
 import { Promotion } from '../../../pages/pedido/PromocaoPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
@@ -188,7 +188,7 @@ test.describe('Gerar pedidos com promoção', () => {
             cy.wait('@api_pagamento_lista', { timeout: 40000 })
             GeralPagamentoPage.insertDateTomorrow1Due()
             GeralPagamentoPage.clicarGerarParcAlterarVenc()
-            Receipt.principal()
+            ProcessoRecebPage.principal()
             ParcelasPage.one()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
@@ -214,7 +214,7 @@ test.describe('Gerar pedidos com promoção', () => {
 
             GeralPagamentoPage.insertDateTomorrow1Due()
             cy.get('.gerar-parcelas > .layout-wrap > [style="padding: 0 5px"] > .md-primary').click({force:true})
-            Receipt.main()
+            ProcessoRecebPage.main()
             ParcelasPage.one()
 
             // //"GERAR PAGAMENTO"

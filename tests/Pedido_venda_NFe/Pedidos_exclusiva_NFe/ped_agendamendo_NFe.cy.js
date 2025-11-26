@@ -4,7 +4,7 @@ import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { GeneralDelivery, ThrowDelivery } from '../../../pages/pedido/EntregaPage.js'
 import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
 import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
-import { Receipt } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
+import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { PedExclusiva } from '../../../pages/pedido/PedidoExclusivaPage.js'
 import { ProductExclusiva, ValidateBalance } from '../../../pages/ProdutoPage.js'
 import { GeneralOrder } from '../../../pages/pedido/GeraisPedidosPage.js'
@@ -47,7 +47,7 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             AdvanceNormal.toInstallments()
             GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
             GeralPagamentoPage.carregandoFormaPagamento()
-            Receipt.main()
+            ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
@@ -74,7 +74,7 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             AdvanceNormal.toInstallments()
             GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
             GeralPagamentoPage.carregandoFormaPagamento()
-            Receipt.main()
+            ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
@@ -99,7 +99,7 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             AdvanceNormal.toInstallments()
             GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
             GeralPagamentoPage.carregandoFormaPagamento()
-            Receipt.main()
+            ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
@@ -136,7 +136,7 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             AdvanceNormal.toInstallments()
             GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
             GeralPagamentoPage.loadingFormPayment()
-            Receipt.main()
+            ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO

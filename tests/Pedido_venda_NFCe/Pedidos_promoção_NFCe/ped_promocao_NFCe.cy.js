@@ -73,7 +73,7 @@ test.describe('Gerar pedidos com promoção com entrega', () => {
 
             // GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
             // GeralPagamentoPage.loadingFormPayment()
-            // Receipt.main()
+            // ProcessoRecebPage.main()
             // ParcelasPage.two()
             // AdvanceNormal.final()
             // FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO

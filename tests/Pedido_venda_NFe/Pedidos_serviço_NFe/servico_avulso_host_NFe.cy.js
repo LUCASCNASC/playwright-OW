@@ -3,7 +3,7 @@ import { ProcessSale } from '../../../pages/pedido/processos/ProcessoVendaPage.j
 import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
 import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
-import { Receipt } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
+import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { OrderServiceLoose } from '../../../pages/pedido/ServicoAvulsoPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
 import { Service, ValidateService } from '../../../pages/pedido/ServicosPage.js'
@@ -34,7 +34,7 @@ test.describe('Venda de serviço avulso Host - 104', () => {
             OrderServiceLoose.buttonAdvanceOrder()
             GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
             GeralPagamentoPage.loadingFormPayment()
-            Receipt.main()
+            ProcessoRecebPage.main()
             ParcelasPage.one()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO

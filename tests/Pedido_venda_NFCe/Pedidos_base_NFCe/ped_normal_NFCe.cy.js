@@ -6,7 +6,7 @@ import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { GeneralDelivery } from '../../../pages/pedido/EntregaPage.js'
 import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
 import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
-import { Receipt } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
+import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js'
 import { ChooseClient } from '../../../pages/pedido/ClientePage.js'
@@ -38,7 +38,7 @@ test.describe('Gerar pedido normal com entrega', () => {
             AdvanceNormal.installmentDelivery()
             GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
             GeralPagamentoPage.loadingFormPayment()
-            Receipt.main()
+            ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
@@ -64,7 +64,7 @@ test.describe('Gerar pedido normal com entrega', () => {
             AdvanceNormal.installmentDelivery()
             GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
             GeralPagamentoPage.loadingFormPayment()
-            Receipt.main()
+            ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
@@ -85,7 +85,7 @@ test.describe('Gerar pedido normal com entrega', () => {
             GeralPagamentoPage.clickGeneratePayment()
             GeralPagamentoPage.clickGenerateInstallments()
             GeralPagamentoPage.loadingFormPayment()
-            Receipt.main()
+            ProcessoRecebPage.main()
             ParcelasPage.one()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO

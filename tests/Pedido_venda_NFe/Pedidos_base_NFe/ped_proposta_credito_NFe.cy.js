@@ -5,7 +5,7 @@ import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { ThrowDelivery } from '../../../pages/pedido/EntregaPage.js'
 import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
 import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
-import { Receipt } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
+import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
 import { Service } from '../../../pages/pedido/ServicosPage.js'
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js'
@@ -36,7 +36,7 @@ test.describe('Gerar pedido com proposta de crédito', () => {
             AdvanceNormal.toInstallments()
             GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
             GeralPagamentoPage.loadingFormPayment()
-            Receipt.proposalCredit()
+            ProcessoRecebPage.proposalCredit()
             ParcelasPage.one()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO

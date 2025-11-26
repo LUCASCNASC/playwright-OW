@@ -5,7 +5,7 @@ import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { ThrowDelivery } from '../../../pages/pedido/EntregaPage.js'
 import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
 import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
-import { Receipt } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
+import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { OrderDiscount } from '../../../pages/pedido/PedidoDescontoPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
 import { Service } from '../../../pages/pedido/ServicosPage.js'
@@ -37,7 +37,7 @@ test.describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244
             AdvanceNormal.toInstallments()
             GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
             GeralPagamentoPage.loadingFormPayment()
-            Receipt.main()
+            ProcessoRecebPage.main()
             ParcelasPage.one()
             OrderDiscount.dragFormPayment() //FINALIZAR PEDIDO
             OrderDiscount.clickChangeValue()
@@ -58,7 +58,7 @@ test.describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244
             AdvanceNormal.toInstallments()
             GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
             GeralPagamentoPage.loadingFormPayment()
-            Receipt.main()
+            ProcessoRecebPage.main()
             ParcelasPage.one()
             OrderDiscount.dragFormPayment() //DESCONTO
             OrderDiscount.clickChangeValue()

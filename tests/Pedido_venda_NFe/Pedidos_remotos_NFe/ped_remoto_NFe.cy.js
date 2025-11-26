@@ -2,7 +2,7 @@ import { test } from '@playwright/test';
 import { ProcessSale } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
 import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
-import { Receipt } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
+import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { GeneralOrder } from '../../../pages/pedido/GeraisPedidosPage.js'
 import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
 import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
@@ -38,7 +38,7 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
             AdvanceNormal.toInstallments()
             GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
             GeralPagamentoPage.loadingFormPayment()
-            Receipt.main()
+            ProcessoRecebPage.main()
             ParcelasPage.duas()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
@@ -69,7 +69,7 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
             AdvanceNormal.toInstallments()
             GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
             GeralPagamentoPage.loadingFormPayment()
-            Receipt.main()
+            ProcessoRecebPage.main()
             ParcelasPage.duas()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
@@ -92,7 +92,7 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
             AdvanceNormal.toInstallments()
             GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
             GeralPagamentoPage.loadingFormPayment()
-            Receipt.main()
+            ProcessoRecebPage.main()
             ParcelasPage.duas()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
@@ -117,7 +117,7 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
             AdvanceNormal.toInstallments()
             GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
             GeralPagamentoPage.loadingFormPayment()
-            Receipt.main()
+            ProcessoRecebPage.main()
             ParcelasPage.duas()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO

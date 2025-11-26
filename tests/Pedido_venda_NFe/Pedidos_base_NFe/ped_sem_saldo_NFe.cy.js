@@ -1,6 +1,6 @@
 import { test } from '@playwright/test';
 import { ProcessSale } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
-import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
+import { Product } from '../../../pages/ProdutoPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
 import { ChooseClient } from '../../../pages/pedido/ClientePage.js'
 

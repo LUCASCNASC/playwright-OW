@@ -6,7 +6,7 @@ import { ThrowDelivery } from '../../../pages/pedido/EntregaPage.js'
 import { ReceiptPromotion } from '../../../pages/pedido/processos/ProcessoRecebPromoPage.js'
 import { Promotion } from '../../../../pages/pedido/promocao/promocao.js'
 import { PrestamistaPage } from '../../../pages/pedido/PrestamistaPage.js'
-import { Receipt } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
+import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { Promotion } from '../../../pages/pedido/PromocaoPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
 import { Service, ValidateService } from '../../../pages/pedido/ServicosPage.js'
@@ -99,7 +99,7 @@ test.describe('Gerar pedidos com promoção e serviços com isenção de juros',
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Promotion.selectFirstPromoProduct()
-            Receipt.withMoneylender()
+            ProcessoRecebPage.withMoneylender()
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -125,7 +125,7 @@ test.describe('Gerar pedidos com promoção e serviços com isenção de juros',
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Promotion.typeServiceFreeValidate()
             Promotion.selectFirstPromoProduct()
-            Receipt.withMoneylender()
+            ProcessoRecebPage.withMoneylender()
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.garantiaSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
