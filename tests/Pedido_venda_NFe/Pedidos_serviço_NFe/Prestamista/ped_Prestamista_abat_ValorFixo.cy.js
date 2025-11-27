@@ -1,11 +1,11 @@
 import { test } from '@playwright/test';
-import { ProcessSale } from '../../../../pages/pedido/processos/ProcessoVendaPage.js'
+import { ProcessoVendaPage } from '../../../../pages/pedido/processos/ProcessoVendaPage.js'
 import { Product, ValidateBalance } from '../../../../pages/ProdutoPage.js'
 import { FinishOrder } from '../../../../pages/pedido/FinalizarPedidoPage.js'
 import { GeralPagamentoPage } from '../../../../pages/pedido/pagamento/GeralPagamentoPage.js'
 import { ParcelasPage } from '../../../../pages/pedido/pagamento/ParcelasPage.js'
 import { ProcessoRecebPage } from '../../../../pages/pedido/processos/ProcessoRecebPage.js'
-import { ReceiptPromotion } from '../../../../pages/pedido/processos/ProcessoRecebPromoPage.js'
+import { ProcessoRecebPromoPage } from '../../../../pages/pedido/processos/ProcessoRecebPromoPage.js'
 import { Promotion } from '../../../../../pages/pedido/promocao.js'
 import { PrestamistaPage } from '../../../../pages/pedido/PrestamistaPage.js'
 import { GeneralOrder } from '../../../../pages/pedido/GeraisPedidosPage.js'
@@ -20,7 +20,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
-        ProcessSale.NFe()
+        ProcessoVendaPage.NFe()
         ChooseClient.withRoute()
     })   
 
@@ -91,7 +91,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Promotion.selectFirstPromoProduct()
-            ReceiptPromotion.termFutWithFeesPrestAbatVF()
+            ProcessoRecebPromoPage.termFutWithFeesPrestAbatVF()
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -117,7 +117,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Promotion.selectFirstPromoProduct()
-            ReceiptPromotion.termFutWithFeesPrestAbatVF()
+            ProcessoRecebPromoPage.termFutWithFeesPrestAbatVF()
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
@@ -145,7 +145,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Promotion.selectFirstPromoProduct()
-            ReceiptPromotion.termFutWithFeesPrestAbatVF()
+            ProcessoRecebPromoPage.termFutWithFeesPrestAbatVF()
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()

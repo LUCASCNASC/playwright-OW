@@ -1,12 +1,12 @@
 import { test } from '@playwright/test';
-import { ProcessSale } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
+import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
 import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { ThrowDelivery } from '../../../pages/pedido/EntregaPage.js'
 import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
 import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
 import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
-import { ReceiptPromotion } from '../../../pages/pedido/processos/ProcessoRecebPromoPage.js'
+import { ProcessoRecebPromoPage } from '../../../pages/pedido/processos/ProcessoRecebPromoPage.js'
 import { Promotion } from '../../../pages/pedido/PromocaoPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
 import { Service } from '../../../pages/pedido/ServicosPage.js'
@@ -19,7 +19,7 @@ test.describe('Gerar pedidos com promoção', () => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
-        ProcessSale.NFe()
+        ProcessoVendaPage.NFe()
         ChooseClient.withRoute()
     })
   
@@ -33,7 +33,7 @@ test.describe('Gerar pedidos com promoção', () => {
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Promotion.selectFirstPromoProduct() //PROMOCAO
-            ReceiptPromotion.pagPrincipal()
+            ProcessoRecebPromoPage.pagPrincipal()
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -54,7 +54,7 @@ test.describe('Gerar pedidos com promoção', () => {
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
-            ReceiptPromotion.pagPrincipal()
+            ProcessoRecebPromoPage.pagPrincipal()
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -81,7 +81,7 @@ test.describe('Gerar pedidos com promoção', () => {
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
-            ReceiptPromotion.pagPrincipal()
+            ProcessoRecebPromoPage.pagPrincipal()
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -105,7 +105,7 @@ test.describe('Gerar pedidos com promoção', () => {
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
-            ReceiptPromotion.pagPrincipal()
+            ProcessoRecebPromoPage.pagPrincipal()
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -141,7 +141,7 @@ test.describe('Gerar pedidos com promoção', () => {
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
-            ReceiptPromotion.pagPrincipal()
+            ProcessoRecebPromoPage.pagPrincipal()
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -178,7 +178,7 @@ test.describe('Gerar pedidos com promoção', () => {
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Promotion.selectFirstPromoProduct()
-            ReceiptPromotion.pagPrincipal()
+            ProcessoRecebPromoPage.pagPrincipal()
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -203,7 +203,7 @@ test.describe('Gerar pedidos com promoção', () => {
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
-            ReceiptPromotion.pagPrincipal()
+            ProcessoRecebPromoPage.pagPrincipal()
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -241,7 +241,7 @@ test.describe('Gerar pedidos com promoção', () => {
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
-            ReceiptPromotion.pagPrincipal()
+            ProcessoRecebPromoPage.pagPrincipal()
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
@@ -269,7 +269,7 @@ test.describe('Gerar pedidos com promoção', () => {
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
-            ReceiptPromotion.pagPrincipal()
+            ProcessoRecebPromoPage.pagPrincipal()
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()

@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { ProcessSale } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
+import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
 import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { GeneralDelivery } from '../../../pages/pedido/EntregaPage.js'
@@ -18,7 +18,7 @@ test.describe('Remoto/processo 9890 - Regra de saldo Parâmetro 36 = 4 - Parâme
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
-        ProcessSale.NFCe()
+        ProcessoVendaPage.NFCe()
         ChooseClient.withRoute()
     })
   

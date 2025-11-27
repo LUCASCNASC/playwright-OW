@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { ProcessSale } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
+import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
 import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
 import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
@@ -16,7 +16,7 @@ test.describe('Venda de serviço avulso', () => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
-        ProcessSale.saleServiceLoose()
+        ProcessoVendaPage.saleServiceLoose()
         ChooseClient.withRoute()
     })
 

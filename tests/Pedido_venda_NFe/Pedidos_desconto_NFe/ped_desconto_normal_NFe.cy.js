@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { ProcessSale } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
+import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
 import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { ThrowDelivery } from '../../../pages/pedido/EntregaPage.js'
@@ -18,7 +18,7 @@ test.describe('Gerar pedido de venda com desconto', () => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
-        ProcessSale.NFe()
+        ProcessoVendaPage.NFe()
         ChooseClient.withRoute()
     })
 

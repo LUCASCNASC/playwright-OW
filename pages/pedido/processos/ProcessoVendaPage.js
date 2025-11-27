@@ -1,7 +1,7 @@
 import { expect, Page } from '@playwright/test';
 
 //Page Object para seleção do processo de venda (NFe/NFCe).
-export class ProcessSale {
+export class ProcessoVendaPage {
   /**
    * @param {Page} page
    */

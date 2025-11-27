@@ -1,7 +1,7 @@
 import { expect, Page } from '@playwright/test';
 
 //Page Object para seleção de formas de pagamento em promoções.
-export class ReceiptPromotion {
+export class ProcessoRecebPromoPage {
   /**
    * @param {Page} page
    */

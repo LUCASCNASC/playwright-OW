@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { ProcessSale } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
+import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
 import { Service } from '../../../pages/pedido/ServicosPage.js'
 import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
@@ -17,7 +17,7 @@ test.describe('Gerar pedido normal com entrega', () => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
-        ProcessSale.NFCe()
+        ProcessoVendaPage.NFCe()
         ChooseClient.withRoute()
         Product.fisrt() //PRODUTO
         ValidateBalance.withBalance() //VALIDAR SALDO

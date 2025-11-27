@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { ProcessSale } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
+import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
 import { ChooseClient } from '../../../pages/pedidos/ClientePage.js'
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
 import { Service } from '../../../pages/pedidos/ServicosPage.js'
@@ -9,7 +9,7 @@ import { GeneralDelivery } from '../../../pages/pedidos/EntregaPage.js'
 import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
 import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
 import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
-import { ReceiptPromotion } from '../../../../pages/pedidos/processos/processo_recebimento_promo.js'
+import { ProcessoRecebPromoPage } from '../../../../pages/pedidos/processos/processo_recebimento_promo.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
 
 test.describe('Gerar pedido de entrega futura com entrega', () => {
@@ -18,7 +18,7 @@ test.describe('Gerar pedido de entrega futura com entrega', () => {
         CommandsGeneral.login() //login
         CommandsGeneral.urlAposLogin() //url após login
         CommandsGeneral.tituloPagina() //título da página
-        ProcessSale.deliveryFutureNFCe() //processo de entrega futura
+        ProcessoVendaPage.deliveryFutureNFCe() //processo de entrega futura
         ChooseClient.withRoute() //escolher cliente com rota
         Product.fisrt() //PRODUTO
         ValidateBalance.withBalance() //VALIDAR SALDO
@@ -39,7 +39,7 @@ test.describe('Gerar pedido de entrega futura com entrega', () => {
             AdvanceNormal.installmentDelivery()
             GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
             GeralPagamentoPage.loadingFormPayment()
-            ReceiptPromotion.pagPrincipal()
+            ProcessoRecebPromoPage.pagPrincipal()
             ParcelasPage.two()
             AdvanceNormal.final()
             FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO

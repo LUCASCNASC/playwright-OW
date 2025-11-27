@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { ProcessSale } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
+import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
 import { Product } from '../../../pages/ProdutoPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
 import { ChooseClient } from '../../../pages/pedido/ClientePage.js'
@@ -10,7 +10,7 @@ test.describe('Tentar gerar pedido de venda com produto sem saldo - Regra de sal
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
-        ProcessSale.NFe()
+        ProcessoVendaPage.NFe()
         ChooseClient.withRoute()
     })
 

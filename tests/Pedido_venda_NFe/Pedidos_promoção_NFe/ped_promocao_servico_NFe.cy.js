@@ -1,9 +1,9 @@
 import { test } from '@playwright/test';
-import { ProcessSale } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
+import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
 import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { ThrowDelivery } from '../../../pages/pedido/EntregaPage.js'
-import { ReceiptPromotion } from '../../../pages/pedido/processos/ProcessoRecebPromoPage.js'
+import { ProcessoRecebPromoPage } from '../../../pages/pedido/processos/ProcessoRecebPromoPage.js'
 import { Promotion } from '../../../../pages/pedido/promocao/promocao.js'
 import { PrestamistaPage } from '../../../pages/pedido/PrestamistaPage.js'
 import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
@@ -19,7 +19,7 @@ test.describe('Gerar pedidos com promoção e serviços com isenção de juros',
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
-        ProcessSale.NFe()
+        ProcessoVendaPage.NFe()
         ChooseClient.withRoute()
     })
   
@@ -34,7 +34,7 @@ test.describe('Gerar pedidos com promoção e serviços com isenção de juros',
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Promotion.typeServiceFreeValidate()
             Promotion.selectFirstPromoProduct()
-            ReceiptPromotion.pagPrincipal()
+            ProcessoRecebPromoPage.pagPrincipal()
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.garantiaSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
@@ -58,7 +58,7 @@ test.describe('Gerar pedidos com promoção e serviços com isenção de juros',
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Promotion.typeServiceFreeValidate()
             Promotion.selectFirstPromoProduct()
-            ReceiptPromotion.pagPrincipal()
+            ProcessoRecebPromoPage.pagPrincipal()
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.garantiaSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"

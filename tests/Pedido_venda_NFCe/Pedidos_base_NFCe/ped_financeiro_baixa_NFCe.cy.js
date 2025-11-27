@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { ProcessSale } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
+import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
 import { Service } from '../../../pages/pedidos/ServicosPage.js'
 import { FinishOrder } from '../../../pages/pedidos/FinalizarPedidoPage.js'
@@ -17,7 +17,7 @@ test.describe('Gerar pedido com financeiro na baixa com entrega', () => {
         CommandsGeneral.login()//login
         CommandsGeneral.urlAposLogin() //url após login
         CommandsGeneral.tituloPagina() //título da página
-        ProcessSale.financePaymentNFCe() //processo de financeiro na baixa
+        ProcessoVendaPage.financePaymentNFCe() //processo de financeiro na baixa
         ChooseClient.withRoute() //escolher cliente com rota
         Product.fisrt() //PRODUTO
         ValidateBalance.withBalance() //VALIDAR SALDO

@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { ProcessSale } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
+import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
 import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { GeneralDelivery } from '../../../pages/pedido/EntregaPage.js'
@@ -17,7 +17,7 @@ test.describe('Gerar pedido com reserva no CD (com entrega) - Regra de saldo Par
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
-        ProcessSale.NFCe()
+        ProcessoVendaPage.NFCe()
         ChooseClient.withRoute()
     })
 
