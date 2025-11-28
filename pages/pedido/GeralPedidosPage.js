@@ -1,7 +1,7 @@
 import { expect, Page } from '@playwright/test';
 
 //Page Object para ações gerais em pedidos.
-export class GeneralOrder {
+export class GeralPedidosPage {
   /**
    * @param {Page} page
    */

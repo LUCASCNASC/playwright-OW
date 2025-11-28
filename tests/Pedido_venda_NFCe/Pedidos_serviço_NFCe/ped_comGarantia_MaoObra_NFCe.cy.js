@@ -1,15 +1,15 @@
 import { test } from '@playwright/test';
 import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
-import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
+import { FinalizarPedidoPage } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { GeneralDelivery } from '../../../pages/pedido/EntregaPage.js'
-import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
+import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js'
 import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
 import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
 import { Service } from '../../../pages/pedido/ServicosPage.js'
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js'
-import { ChooseClient } from '../../../pages/pedido/ClientePage.js'
+import { ChooseCliente } from '../../../pages/pedido/ClientePage.js'
 
 test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
 
@@ -18,7 +18,7 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
         ProcessoVendaPage.NFCe()
-        ChooseClient.withRoute()
+        ChooseCliente.withRoute()
         Product.fisrt() //PRODUTO
         ValidateBalance.withBalance() //VALIDAR SALDO
         CommandsGeneral.selectProductSearch() //selecionar produto
@@ -38,13 +38,13 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()  
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment() 
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('2.Pedido: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra que destaca e não separa) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
@@ -63,13 +63,13 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment() 
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('3.Pedido: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa no mesmo processo)',  async ({ page }) => {
@@ -81,13 +81,13 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment() 
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('4.Pedido: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa no mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
@@ -106,13 +106,13 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment() 
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('5.Pedido: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa em outro processo)',  async ({ page }) => {
@@ -124,13 +124,13 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery() 
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment() 
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('6.Pedido: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa em outro processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
@@ -149,13 +149,13 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment() 
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('7.Pedido: produto 1860 0 0 (com Garantia que não separa e Mão de Obra que destaca e não separa)',  async ({ page }) => {
@@ -167,13 +167,13 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery() 
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment() 
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('8.Pedido: produto 1860 0 0 (com Garantia que não separa e Mão de Obra que destaca e não separa) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
@@ -192,13 +192,13 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment() 
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('9.Pedido: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa no mesmo processo)',  async ({ page }) => {
@@ -210,13 +210,13 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment() 
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('10.Pedido: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa no mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
@@ -235,13 +235,13 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery() 
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment() 
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('11.Pedido: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa em outro processo)',  async ({ page }) => {
@@ -253,13 +253,13 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery() 
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment() 
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('12.Pedido: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa em outro processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
@@ -278,13 +278,13 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery() 
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment() 
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('13.Pedido: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra que destaca e não separa)',  async ({ page }) => {
@@ -296,13 +296,13 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment() 
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('14.Pedido: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra que destaca e não separa) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
@@ -320,13 +320,13 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment() 
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('15.Pedido: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa no mesmo processo)',  async ({ page }) => {
@@ -338,13 +338,13 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment() 
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('16.Pedido: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa no mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
@@ -363,13 +363,13 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment() 
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('17.Pedido: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa em outro processo)',  async ({ page }) => {
@@ -381,13 +381,13 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment() 
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })  
 
         test('18.Pedido: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa em outro processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
@@ -406,13 +406,13 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment() 
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
     })
 })

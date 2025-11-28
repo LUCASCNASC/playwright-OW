@@ -1,18 +1,18 @@
 import { test } from '@playwright/test';
 import { ProcessoVendaPage } from '../../../../pages/pedido/processos/ProcessoVendaPage.js'
 import { Product, ValidateBalance } from '../../../../pages/ProdutoPage.js'
-import { FinishOrder } from '../../../../pages/pedido/FinalizarPedidoPage.js'
-import { GeralPagamentoPage } from '../../../../pages/pedido/pagamento/GeralPagamentoPage.js'
+import { FinalizarPedidoPage } from '../../../../pages/pedido/FinalizarPedidoPage.js'
+import { PagamentoPage } from '../../../../pages/pedido/pagamento/PagamentoPage.js'
 import { ParcelasPage } from '../../../../pages/pedido/pagamento/ParcelasPage.js'
 import { ProcessoRecebPage } from '../../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { ProcessoRecebPromoPage } from '../../../../pages/pedido/processos/ProcessoRecebPromoPage.js'
 import { Promotion } from '../../../../../pages/pedido/promocao/promocao.js'
 import { PrestamistaPage } from '../../../../pages/pedido/PrestamistaPage.js'
-import { GeneralOrder } from '../../../../pages/pedido/GeraisPedidosPage.js'
+import { GeralPedidosPage } from '../../../../pages/pedido/GeralPedidosPage.js'
 import { CommandsGeneral } from '../../../../../pages/commands.js'
 import { Service, ValidateService } from '../../../../pages/pedido/ServicosPage.js'
 import { AdvanceNormal } from '../../../../pages/pedido/AvancarPage.js'
-import { ChooseClient } from '../../../../pages/pedido/ClientePage.js'
+import { ChooseCliente } from '../../../../pages/pedido/ClientePage.js'
 
 test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo - Origem Serviço (162)', () => {
 
@@ -21,7 +21,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo - Or
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
         ProcessoVendaPage.NFe()
-        ChooseClient.withRoute()
+        ChooseCliente.withRoute()
     })   
 
     context('Com entrega / Produtos sem promoção - Prestamista com abatimento Valor Fixo - Origem Serviço (162)', () => {
@@ -37,16 +37,16 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo - Or
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment()
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.futComJurosPrestAbatOrigemPrd()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('2.Pedido: produto 1860 0 0 e 1870 0 0, inclusão 3881 e 3860, prestamista 162 (99,30), 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
@@ -68,16 +68,16 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo - Or
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment()
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.futComJurosPrestAbatOrigemPrd()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
     })
 
@@ -99,14 +99,14 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo - Or
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
-            GeneralOrder.clickEditInstallments()
+            GeralPedidosPage.clickEditInstallments()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('4.Pedido: produto 1923 0 0 + garantia Não separa (promo a prazo 172 - isentar juros serviços), inclusão 3881, prestamista 162, 4 parcelas no recebimento Futuro com juros',  async ({ page }) => {
@@ -126,14 +126,14 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo - Or
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
-            GeneralOrder.clickEditInstallments()
+            GeralPedidosPage.clickEditInstallments()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('5.Pedido: produto 1924 0 0 + garantia Não separa (promo a prazo 173 - isentar juros garantia), inclusão 3882, prestamista 162, 4 parcelas no recebimento Futuro com juros',  async ({ page }) => {
@@ -154,14 +154,14 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo - Or
             AdvanceNormal.paraPatoInstallmentsrcelas()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
-            GeneralOrder.clickEditInstallments()
+            GeralPedidosPage.clickEditInstallments()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.pageFinal() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
     })
 })

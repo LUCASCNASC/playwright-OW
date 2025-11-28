@@ -1,7 +1,7 @@
 import { expect, Page } from '@playwright/test';
 
 //Page Object para finalizar e validar pedidos.
-export class FinishOrder {
+export class FinalizarPedidoPage {
   /**
    * @param {Page} page
    */
@@ -72,7 +72,7 @@ export class FinishOrder {
   }
 
   //Clica no botão para finalizar o pedido.
-  async clickFinishOrder() {
+  async clickFinalizarPedidoPage() {
     await this.page.route('POST', '/services/v3/pedido_finalizar', route => route.continue());
     const apiPedidoFinalizar = this.page.waitForResponse('/services/v3/pedido_finalizar');
 

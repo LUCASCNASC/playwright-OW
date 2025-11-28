@@ -1,15 +1,15 @@
 import { test } from '@playwright/test';
 import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
-import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
+import { FinalizarPedidoPage } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
-import { GeneralOrder } from '../../../pages/pedido/GeraisPedidosPage.js'
-import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
+import { GeralPedidosPage } from '../../../pages/pedido/GeralPedidosPage.js'
+import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js'
 import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
 import { Service } from '../../../pages/pedido/ServicosPage.js'
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js'
-import { ChooseClient } from '../../../pages/pedido/ClientePage.js'
+import { ChooseCliente } from '../../../pages/pedido/ClientePage.js'
 
 test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâmetro 139 = 4 - Trial 653 não configurado', () => {
 
@@ -18,7 +18,7 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
         ProcessoVendaPage.NFe()
-        ChooseClient.withRoute()
+        ChooseCliente.withRoute()
     })
   
     context('Pedido de venda remoto normal', () => {
@@ -30,19 +30,19 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            GeneralOrder.changeBranchInvoicing()
+            GeralPedidosPage.changeBranchInvoicing()
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVIÇOS
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment()
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.duas()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('2.Pedido remoto: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
@@ -52,7 +52,7 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            GeneralOrder.changeBranchInvoicing()
+            GeralPedidosPage.changeBranchInvoicing()
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVIÇOS
             Service.clickOKServiceLinked()
@@ -61,19 +61,19 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            GeneralOrder.changeBranchInvoicing()
+            GeralPedidosPage.changeBranchInvoicing()
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment()
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.duas()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
         
         test('3.Pedido remoto: kit 1877 0 0',  async ({ page }) => {
@@ -83,20 +83,20 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            GeneralOrder.changeBranchInvoicing()
-            GeneralOrder.compositionKit()
+            GeralPedidosPage.changeBranchInvoicing()
+            GeralPedidosPage.compositionKit()
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVIÇOS
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment()
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.duas()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
     })
     
@@ -109,19 +109,19 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            GeneralOrder.changeBranchInvoicing()
+            GeralPedidosPage.changeBranchInvoicing()
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVIÇOS
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment()
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.duas()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })    
         
         test('5.Pedido remoto - SEM saldo no CD (filial 1) - NÃO deve permitir fazer o pedido - (Venda remota de produto sem saldo na filial do faturamento, sem saldo da CD do faturamento)',  async ({ page }) => {
@@ -131,7 +131,7 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            GeneralOrder.changeBranchInvoicing()
+            GeralPedidosPage.changeBranchInvoicing()
 
             //Validando mensagem "Este produto não possui saldo na filial selecionada."
             cy.get('[ng-if="semSaldoCD"][style=""] > p')

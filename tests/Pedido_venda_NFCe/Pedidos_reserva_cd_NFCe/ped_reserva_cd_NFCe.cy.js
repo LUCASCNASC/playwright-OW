@@ -1,15 +1,15 @@
 import { test } from '@playwright/test';
 import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
-import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
+import { FinalizarPedidoPage } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { GeneralDelivery } from '../../../pages/pedido/EntregaPage.js'
-import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
+import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js'
 import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
 import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
 import { Service } from '../../../pages/pedido/ServicosPage.js'
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js'
-import { ChooseClient } from '../../../pages/pedido/ClientePage.js'
+import { ChooseCliente } from '../../../pages/pedido/ClientePage.js'
 
 test.describe('Gerar pedido com reserva no CD (com entrega) - Regra de saldo Parâmetro 36 = 4 - Parâmetro 139 = 4 - Trial 653 não configurado', () => {
 
@@ -18,7 +18,7 @@ test.describe('Gerar pedido com reserva no CD (com entrega) - Regra de saldo Par
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
         ProcessoVendaPage.NFCe()
-        ChooseClient.withRoute()
+        ChooseCliente.withRoute()
     })
 
     context('Com entrega/ processo 9890 - caminho feliz', () => {
@@ -36,13 +36,13 @@ test.describe('Gerar pedido com reserva no CD (com entrega) - Regra de saldo Par
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment()
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('2.Pedido: produtos 1880 0 0 (reserva CD) e 1870 0 0 (saldo local) - (Venda local de 1 produto com saldo local + 1 produto com saldo no CD - com entrega)',  async ({ page }) => {
@@ -65,13 +65,13 @@ test.describe('Gerar pedido com reserva no CD (com entrega) - Regra de saldo Par
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment()
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
     })
 })

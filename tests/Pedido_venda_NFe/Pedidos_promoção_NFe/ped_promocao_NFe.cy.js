@@ -1,9 +1,9 @@
 import { test } from '@playwright/test';
 import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
-import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
+import { FinalizarPedidoPage } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { ThrowDelivery } from '../../../pages/pedido/EntregaPage.js'
-import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
+import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js'
 import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
 import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { ProcessoRecebPromoPage } from '../../../pages/pedido/processos/ProcessoRecebPromoPage.js'
@@ -11,7 +11,7 @@ import { Promotion } from '../../../pages/pedido/PromocaoPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
 import { Service } from '../../../pages/pedido/ServicosPage.js'
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js'
-import { ChooseClient } from '../../../pages/pedido/ClientePage.js'
+import { ChooseCliente } from '../../../pages/pedido/ClientePage.js'
 
 test.describe('Gerar pedidos com promoção', () => {
 
@@ -20,7 +20,7 @@ test.describe('Gerar pedidos com promoção', () => {
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
         ProcessoVendaPage.NFe()
-        ChooseClient.withRoute()
+        ChooseCliente.withRoute()
     })
   
     context('Sem entrega/ com promoção/ processo 9860 - caminho feliz', () => {
@@ -42,8 +42,8 @@ test.describe('Gerar pedidos com promoção', () => {
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pagamento_lista')
             cy.wait('@api_pagamento_lista', { timeout: 40000 })
             AdvanceNormal.final() 
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
     
         test('2.Pedido com promoção a prazo com entrada (promoção 150): produto 1866 0 0',  async ({ page }) => {
@@ -69,8 +69,8 @@ test.describe('Gerar pedidos com promoção', () => {
             cy.get('.white > .layout-align-center-center > .md-primary').click()
     
             AdvanceNormal.final() 
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
     
         test('3.Pedido com promoção a prazo parcelado (promoção 151): produto 1867 0 0',  async ({ page }) => {
@@ -90,8 +90,8 @@ test.describe('Gerar pedidos com promoção', () => {
             cy.intercept('GET', 'images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
     })
 
@@ -119,7 +119,7 @@ test.describe('Gerar pedidos com promoção', () => {
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
 
             //Escolher forma de pagamento
             cy.contains('3868 - T.A. A Receber PIX TEF').click({force:true})
@@ -129,8 +129,8 @@ test.describe('Gerar pedidos com promoção', () => {
             //cy.get('.active > md-collapsible-body > .layout-column > [style="position: relative"] > :nth-child(1) > div.ng-binding').click({force:true})
 
             // AdvanceNormal.final()
-            // FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            // FinishOrder.validateOrderGenerated()
+            // FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            // FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('5.Pedido com promoção a prazo com entrada (promoção 150): produto 1866 0 0 e produto 1870 0 0 (sem promoção)',  async ({ page }) => {
@@ -163,8 +163,8 @@ test.describe('Gerar pedidos com promoção', () => {
             cy.get('.white > .layout-align-center-center > .md-primary').click({force:true}) //clicar GERAR PAGAMENTO
     
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
     })
 
@@ -186,13 +186,13 @@ test.describe('Gerar pedidos com promoção', () => {
             AdvanceNormal.toInstallments() //ENTREGA
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pagamento_lista')
             cy.wait('@api_pagamento_lista', { timeout: 40000 })
-            GeralPagamentoPage.insertDateTomorrow1Due()
-            GeralPagamentoPage.clicarGerarParcAlterarVenc()
+            PagamentoPage.insertDateTomorrow1Due()
+            PagamentoPage.clicarGerarParcAlterarVenc()
             ProcessoRecebPage.principal()
             ParcelasPage.one()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
     
         test('7.Pedido com promoção a prazo com entrada (promoção 150): produto 1866 0 0',  async ({ page }) => {
@@ -212,7 +212,7 @@ test.describe('Gerar pedidos com promoção', () => {
             cy.intercept('GET', 'images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
 
-            GeralPagamentoPage.insertDateTomorrow1Due()
+            PagamentoPage.insertDateTomorrow1Due()
             cy.get('.gerar-parcelas > .layout-wrap > [style="padding: 0 5px"] > .md-primary').click({force:true})
             ProcessoRecebPage.main()
             ParcelasPage.one()
@@ -224,14 +224,14 @@ test.describe('Gerar pedidos com promoção', () => {
             // cy.get('.white > .layout-align-center-center > .md-primary').click({force:true})
             // cy.get('.md-select-backdrop').click({force:true})
 
-            // GeralPagamentoPage.insertDateTomorrow1Due()
-            // GeralPagamentoPage.clicarGerarParcAlterarVenc()
+            // PagamentoPage.insertDateTomorrow1Due()
+            // PagamentoPage.clicarGerarParcAlterarVenc()
             // cy.wait(3000)
             // Receipt.main()
             // ParcelasPage.two()
             // AdvanceNormal.final()
-            // FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            // FinishOrder.validateOrderGenerated()
+            // FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            // FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('8.Pedido com promoção a prazo parcelado (promoção 151): produto 1867 0 0',  async ({ page }) => {
@@ -247,7 +247,7 @@ test.describe('Gerar pedidos com promoção', () => {
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
 
             //Escolher a forma de pagamento
             cy.get('[style=""] > md-collapsible-header.layout-row > .md-collapsible-tools > .ng-scope').click({force:true})
@@ -255,8 +255,8 @@ test.describe('Gerar pedidos com promoção', () => {
             cy.get('.active > md-collapsible-body > .layout-column > [style="position: relative"] > :nth-child(1) > div.ng-binding').click({force:true})
 
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })  
     }) 
 
@@ -281,7 +281,7 @@ test.describe('Gerar pedidos com promoção', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
 
             //Escolher forma de pagemento
             cy.get('[style=""] > md-collapsible-header.layout-row > .md-collapsible-tools > .ng-scope').click({force: true})
@@ -289,8 +289,8 @@ test.describe('Gerar pedidos com promoção', () => {
             cy.get('.active > md-collapsible-body > .layout-column > [style="position: relative"] > :nth-child(1) > div.ng-binding').click({force: true})
 
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
     })
 })

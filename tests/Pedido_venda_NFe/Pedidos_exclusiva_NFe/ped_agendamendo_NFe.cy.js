@@ -1,17 +1,17 @@
 import { test } from '@playwright/test';
 import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
-import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
+import { FinalizarPedidoPage } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { GeneralDelivery, ThrowDelivery } from '../../../pages/pedido/EntregaPage.js'
-import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
+import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js'
 import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
 import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
 import { PedExclusiva } from '../../../pages/pedido/PedidoExclusivaPage.js'
 import { ProductExclusiva, ValidateBalance } from '../../../pages/ProdutoPage.js'
-import { GeneralOrder } from '../../../pages/pedido/GeraisPedidosPage.js'
+import { GeralPedidosPage } from '../../../pages/pedido/GeralPedidosPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
 import { Service } from '../../../pages/pedido/ServicosPage.js'
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js'
-import { ChooseClient } from '../../../pages/pedido/ClientePage.js'
+import { ChooseCliente } from '../../../pages/pedido/ClientePage.js'
 
 //Para testarmos esses cenários, é necessário mudar para a versão da exclusiva e criar um agendamento na filial que está sendo usada
 test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
@@ -21,7 +21,7 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
         ProcessoVendaPage.NFe()
-        ChooseClient.withRoute()
+        ChooseCliente.withRoute()
     })
 
     context('Configuração de processo - Exclusiva: 36 = 2; 139 = 6; 552= 5 dias', () => {
@@ -39,19 +39,19 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             ValidateBalance.withoutBalance() //VALIDAR SALDO
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            GeneralOrder.trocarFilialFaturamento()
+            GeralPedidosPage.trocarFilialFaturamento()
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             AdvanceNormal.toTransporter()
             GeneralDelivery.modalInconsApenasTransp()
             GeneralDelivery.escolherTransportadora()
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.carregandoFormaPagamento()
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.carregandoFormaPagamento()
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('2.Pedido: produto normal (com saldo e com entrega) e um kit com composição 6 volumes (data atual + parametro 552/ 5 dias).',  async ({ page }) => {
@@ -72,13 +72,13 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             GeneralDelivery.modalInconsApenasTransp()
             GeneralDelivery.escolherTransportadora()
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.carregandoFormaPagamento()
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.carregandoFormaPagamento()
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
     })
 
@@ -97,13 +97,13 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             GeneralDelivery.modalInconsApenasTransp()
             GeneralDelivery.escolherTransportadora()
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.carregandoFormaPagamento()
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.carregandoFormaPagamento()
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('4.Pedido: um produto em duas linhas (um com 5 unidades a receber e 10 para solicitar compra), e ter um agendamento para a data de previsão para a receber.',  async ({ page }) => {
@@ -112,14 +112,14 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             PedExclusiva.balanceRemoteReceive()
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            GeneralOrder.trocarFilialFaturamento()
+            GeralPedidosPage.trocarFilialFaturamento()
             PedExclusiva.increaseAmountSaleFive()
             CommandsGeneral.selectProductSearch() //selecionar produto
             ProductExclusiva.balanceReceiveTwoLines() //SEGUNDO PRODUTO
             PedExclusiva.balanceRemoteReceive()
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto 
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            GeneralOrder.trocarFilialFaturamento()
+            GeralPedidosPage.trocarFilialFaturamento()
             PedExclusiva.increaseAmountSaleTen()
         })
 
@@ -134,13 +134,13 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment()
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
     })
 })

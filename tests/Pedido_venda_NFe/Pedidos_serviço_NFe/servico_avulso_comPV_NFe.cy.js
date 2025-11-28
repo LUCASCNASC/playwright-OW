@@ -1,14 +1,14 @@
 import { test } from '@playwright/test';
 import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
-import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
-import { GeralPagamentoPage } from '../../../pages/pedido/pagamento/GeralPagamentoPage.js'
+import { FinalizarPedidoPage } from '../../../pages/pedido/FinalizarPedidoPage.js'
+import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js'
 import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
 import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
-import { OrderServiceLoose } from '../../../pages/pedido/ServicoAvulsoPage.js'
+import { ServicoAvulsoPage } from '../../../pages/pedido/ServicoAvulsoPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
 import { Service, ValidateService } from '../../../pages/pedido/ServicosPage.js'
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js'
-import { ChooseClient } from '../../../pages/pedido/ClientePage.js'
+import { ChooseCliente } from '../../../pages/pedido/ClientePage.js'
 
 
 test.describe('Venda de serviço avulso, com pedido do produto já baixado', () => {
@@ -18,7 +18,7 @@ test.describe('Venda de serviço avulso, com pedido do produto já baixado', () 
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
         ProcessoVendaPage.saleServiceLoose()
-        ChooseClient.withRoute()
+        ChooseCliente.withRoute()
     })
 
     context('Processo 9888 - caminho feliz', () => {
@@ -27,11 +27,11 @@ test.describe('Venda de serviço avulso, com pedido do produto já baixado', () 
 
             const numero_pedido = '8605'
             
-            OrderServiceLoose.iconMenuOptions()
-            OrderServiceLoose.clientCompleteOptionMenu()
-            OrderServiceLoose.clickMenuClientComplete()
-            OrderServiceLoose.clicarOpcaoSeclickOptionServicesrvicos()
-            OrderServiceLoose.waitLoadingService()
+            ServicoAvulsoPage.iconMenuOptions()
+            ServicoAvulsoPage.clientCompleteOptionMenu()
+            ServicoAvulsoPage.clickMenuClientComplete()
+            ServicoAvulsoPage.clicarOpcaoSeclickOptionServicesrvicos()
+            ServicoAvulsoPage.waitLoadingService()
 
             //Validando campo
             cy.get('form.ng-pristine > .ng-pristine')
@@ -47,27 +47,27 @@ test.describe('Venda de serviço avulso, com pedido do produto já baixado', () 
             cy.get('[ng-show="filtroShow(pedidoAtual)"][aria-hidden="false"] > .md-list-item-text > h3 > .ng-binding')
                 .should('have.text', numero_pedido)
 
-            OrderServiceLoose.buttonAddMaoObra()
-            OrderServiceLoose.buttonAddGarantias()
-            OrderServiceLoose.clickAddGarantias()
-            OrderServiceLoose.modalGarantiasServicesLinked()
+            ServicoAvulsoPage.buttonAddMaoObra()
+            ServicoAvulsoPage.buttonAddGarantias()
+            ServicoAvulsoPage.clickAddGarantias()
+            ServicoAvulsoPage.modalGarantiasServicesLinked()
             Service.garantiaSepMesmoProc() //clicar na primeira garantia - Garantia Separa Mesmo Processo
             Service.clickOKServiceLinked()()
-            OrderServiceLoose.messLinkedAddedSucess()
-            OrderServiceLoose.buttonSaveService()
-            OrderServiceLoose.messWaitLoading()
-            OrderServiceLoose.messResgistrationSaveSucess()
-            OrderServiceLoose.clickAddGarantias() //Clicando novamente para validar que não deixa adicionar mais garantias
-            OrderServiceLoose.messGarantiaAdded() //Mensagem de "O Serviço Garantias já foi adicionado à esse produto.", quando tentamos adicionar novamente
-            OrderServiceLoose.clickCartShopping()
-            OrderServiceLoose.buttonAdvanceOrder()
-            GeralPagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            GeralPagamentoPage.loadingFormPayment()
+            ServicoAvulsoPage.messLinkedAddedSucess()
+            ServicoAvulsoPage.buttonSaveService()
+            ServicoAvulsoPage.messWaitLoading()
+            ServicoAvulsoPage.messResgistrationSaveSucess()
+            ServicoAvulsoPage.clickAddGarantias() //Clicando novamente para validar que não deixa adicionar mais garantias
+            ServicoAvulsoPage.messGarantiaAdded() //Mensagem de "O Serviço Garantias já foi adicionado à esse produto.", quando tentamos adicionar novamente
+            ServicoAvulsoPage.clickCartShopping()
+            ServicoAvulsoPage.buttonAdvanceOrder()
+            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
     })
 })

@@ -1,7 +1,7 @@
 import { expect, Page } from '@playwright/test';
 
 //Page Object para operações de serviços avulsos no pedido.
-export class OrderServiceLoose {
+export class ServicoAvulsoPage {
   /**
    * @param {Page} page
    */
@@ -10,7 +10,7 @@ export class OrderServiceLoose {
   }
 
   //Escolhe cliente CPF para gerar pedido de venda - pesquisa por cliente.
-  async chooseClientOrder() {
+  async ChooseClienteOrder() {
     const campoCliente = this.page.locator('.click-cliente > .informe-o-cliente > .cliente-header');
     await this.page.waitForTimeout(500);
     await campoCliente.type('48976249089 {ArrowDown}');

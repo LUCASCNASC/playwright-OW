@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
 import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
-import { FinishOrder } from '../../../pages/pedido/FinalizarPedidoPage.js'
+import { FinalizarPedidoPage } from '../../../pages/pedido/FinalizarPedidoPage.js'
 import { ThrowDelivery } from '../../../pages/pedido/EntregaPage.js'
 import { ProcessoRecebPromoPage } from '../../../pages/pedido/processos/ProcessoRecebPromoPage.js'
 import { Promotion } from '../../../../pages/pedido/promocao/promocao.js'
@@ -11,7 +11,7 @@ import { Promotion } from '../../../pages/pedido/PromocaoPage.js'
 import { CommandsGeneral } from '../../../../pages/commands.js'
 import { Service, ValidateService } from '../../../pages/pedido/ServicosPage.js'
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js'
-import { ChooseClient } from '../../../pages/pedido/ClientePage.js'
+import { ChooseCliente } from '../../../pages/pedido/ClientePage.js'
 
 test.describe('Gerar pedidos com promoção e serviços com isenção de juros', () => {
 
@@ -20,7 +20,7 @@ test.describe('Gerar pedidos com promoção e serviços com isenção de juros',
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
         ProcessoVendaPage.NFe()
-        ChooseClient.withRoute()
+        ChooseCliente.withRoute()
     })
   
     context('Sem entrega/ com promoção/ com serviço processo 9860 - caminho feliz', () => {
@@ -45,8 +45,8 @@ test.describe('Gerar pedidos com promoção e serviços com isenção de juros',
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
     
         test('2.Pedido com promoção a prazo/entrada + parcelas (promoção 158): produto 1895 0 0 com garantia (isenta de juros)',  async ({ page }) => {
@@ -87,8 +87,8 @@ test.describe('Gerar pedidos com promoção e serviços com isenção de juros',
                 .click({force:true})
 
             AdvanceNormal.final()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
     
         test('3.Pedido com promoção a partida (promoção 161): produto 1893 0 0 com prestamista (isento de juros)',  async ({ page }) => {
@@ -112,8 +112,8 @@ test.describe('Gerar pedidos com promoção e serviços com isenção de juros',
             TicketPrestamista.added()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('4.Pedido com promoção a prazo/parcelas (promoção 162): produto 1894 0 0 com garantia (isenta de juros) e prestamista (com juros)',  async ({ page }) => {
@@ -139,8 +139,8 @@ test.describe('Gerar pedidos com promoção e serviços com isenção de juros',
             TicketPrestamista.added()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinishOrder.clickFinishOrder() //FINALIZAR PEDIDO
-            FinishOrder.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.validateOrderGenerated()
         })
     })
  })
