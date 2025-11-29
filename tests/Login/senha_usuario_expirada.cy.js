@@ -11,9 +11,9 @@ test.describe('Senha do usuário expirada', () => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
-        LoginPage.logoEnterpriseLogin()
-        LoginPage.iconComputerLogin()
-        LoginPage.userTextIcon()
+        LoginPage.validateLogoEmpresaLogin()
+        LoginPage.validateIconeComputadorLogin()
+        LoginPage.validateUsuarioTextoIcone()
     })
 
     context('Tentar login quando a senha já está expirada', () => {
@@ -28,7 +28,7 @@ test.describe('Senha do usuário expirada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
 
-            LoginPage.passwordTextIcon()
+            LoginPage.validateSenhaTextoIcone()
 
             //Campo Informe sua senha
             cy.get('#txtpassword')
@@ -38,11 +38,11 @@ test.describe('Senha do usuário expirada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
 
-            LoginPage.iconEyesPassword()
-            LoginPage.buttonForgotPassword()
-            LoginPage.buttonEnterEnabled()
-            LoginPage.clickButtonEnter()
-            LoginPage.messPasswordUserExpired()
+            LoginPage.validateIconeOlhosSenha()
+            LoginPage.validateEsqueciSenha()
+            LoginPage.validateBotaoEntrarHabilitado()
+            LoginPage.clickBotaoEntrar()
+            LoginPage.validateMessageSenhaUsuarioExpirada()
 
             //Card Altere Sua Senha Temporária - título "Altere Sua Senha Temporária"
             cy.get('p')
@@ -84,7 +84,7 @@ test.describe('Senha do usuário expirada', () => {
                 .contains('Regras para a Nova Senha')
                 .should('be.visible')
 
-            LoginPage.rulesNewPasswordBefore()
+            LoginPage.validateNovaSenhaAntes()
 
             //Card Altere Sua Senha Temporária - campo para preenchimento "Nova Senha"
             cy.get('input[name="password_new"]')
@@ -96,7 +96,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get('md-icon[ng-click="showPasswordToggle(true)"]')
                 .should('be.visible')
 
-            LoginPage.rulesrulesNewPasswordAfter()
+            LoginPage.validateNovaSenhaDepois()
 
             //Card Altere Sua Senha Temporária - botão CONFIRMAR antes de todas as regras estarem certas
             cy.get(':nth-child(5) > .md-raised')
@@ -152,7 +152,7 @@ test.describe('Senha do usuário expirada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
 
-            LoginPage.passwordTextIcon()
+            LoginPage.validateSenhaTextoIcone()
 
             //Campo Informe sua senha
             cy.get('#txtpassword')
@@ -162,11 +162,11 @@ test.describe('Senha do usuário expirada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
 
-            LoginPage.iconEyesPassword()
-            LoginPage.buttonForgotPassword()
-            LoginPage.botaoEntrarHabbuttonEnterEnabledilitado()
-            LoginPage.clickButtonEnter()
-            LoginPage.messPasswordUserExpired()
+            LoginPage.validateIconeOlhosSenha()
+            LoginPage.validateEsqueciSenha()
+            LoginPage.botaoEntrarHabvalidateBotaoEntrarHabilitadoilitado()
+            LoginPage.clickBotaoEntrar()
+            LoginPage.validateMessageSenhaUsuarioExpirada()
 
             //Card Altere Sua Senha Temporária - título "Altere Sua Senha Temporária"
             cy.get('p')
@@ -208,7 +208,7 @@ test.describe('Senha do usuário expirada', () => {
                 .contains('Regras para a Nova Senha')
                 .should('be.visible')
 
-            LoginPage.rulesNewPasswordBefore()
+            LoginPage.validateNovaSenhaAntes()
 
             //Card Altere Sua Senha Temporária - campo para preenchimento "Nova Senha"
             cy.get('input[name="password_new"]')
@@ -220,7 +220,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get('md-icon[ng-click="showPasswordToggle(true)"]')
                 .should('be.visible')
 
-            LoginPage.rulesrulesNewPasswordAfter()
+            LoginPage.validateNovaSenhaDepois()
 
             //Card Altere Sua Senha Temporária - botão CONFIRMAR antes de todas as regras estarem certas
             cy.get(':nth-child(5) > .md-raised')
@@ -290,7 +290,7 @@ test.describe('Senha do usuário expirada', () => {
                     .invoke('attr', 'placeholder')
                     .should('equal', 'Informe seu usuário')
         
-                LoginPage.passwordTextIcon()
+                LoginPage.validateSenhaTextoIcone()
         
                 //Campo Informe sua senha
                 cy.get('#txtpassword')
@@ -300,12 +300,12 @@ test.describe('Senha do usuário expirada', () => {
                     .invoke('attr', 'placeholder')
                     .should('equal', 'Informe sua senha')
         
-                LoginPage.iconEyesPassword()
-                LoginPage.buttonForgotPassword()
-                LoginPage.buttonEnterEnabled()
-                LoginPage.clickButtonEnter()
-                LoginPage.messageOpeningSystem()
-                LoginPage.expiresAcessCardValidate() //APÓS LOGAR
+                LoginPage.validateIconeOlhosSenha()
+                LoginPage.validateEsqueciSenha()
+                LoginPage.validateBotaoEntrarHabilitado()
+                LoginPage.clickBotaoEntrar()
+                LoginPage.validateMessageEntrandoSistema()
+                LoginPage.validateSenhaSistemaExpirada() //APÓS LOGAR
         
                 //Card de expira acesso - clicar em NÃO
                 cy.get('.md-cancel-button')
@@ -326,7 +326,7 @@ test.describe('Senha do usuário expirada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
     
-            LoginPage.passwordTextIcon()
+            LoginPage.validateSenhaTextoIcone()
     
             //Campo Informe sua senha
             cy.get('#txtpassword')
@@ -336,13 +336,13 @@ test.describe('Senha do usuário expirada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
     
-            LoginPage.iconEyesPassword()
-            LoginPage.buttonForgotPassword()
-            LoginPage.buttonEnterEnabled()
-            LoginPage.clickButtonEnter()
-            LoginPage.messageOpeningSystem()
-            LoginPage.expiresAcessCardValidate() //APÓS LOGAR
-            LoginPage.clickSIMExpires() //clicar SIM 
+            LoginPage.validateIconeOlhosSenha()
+            LoginPage.validateEsqueciSenha()
+            LoginPage.validateBotaoEntrarHabilitado()
+            LoginPage.clickBotaoEntrar()
+            LoginPage.validateMessageEntrandoSistema()
+            LoginPage.validateSenhaSistemaExpirada() //APÓS LOGAR
+            LoginPage.clickSIMExpirada() //clicar SIM 
     
             //Card Altere Sua Senha Temporária - título "Altere Sua Senha Temporária"
             cy.get('p')
@@ -384,7 +384,7 @@ test.describe('Senha do usuário expirada', () => {
                 .contains('Regras para a Nova Senha')
                 .should('be.visible')
     
-            LoginPage.rulesNewPasswordBefore()
+            LoginPage.validateNovaSenhaAntes()
     
             //Card Altere Sua Senha Temporária - campo para preenchimento "Nova Senha"
             cy.get('input[name="password_new"]')
@@ -396,7 +396,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get('md-icon[ng-click="showPasswordToggle(true)"]')
                 .should('be.visible')
     
-            LoginPage.rulesrulesNewPasswordAfter()
+            LoginPage.validateNovaSenhaDepois()
     
             //Card Altere Sua Senha Temporária - botão CONFIRMAR antes de todas as regras estarem certas
             cy.get(':nth-child(5) > .md-raised')
@@ -452,7 +452,7 @@ test.describe('Senha do usuário expirada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
     
-            LoginPage.passwordTextIcon()
+            LoginPage.validateSenhaTextoIcone()
     
             //Campo Informe sua senha
             cy.get('#txtpassword')
@@ -462,14 +462,14 @@ test.describe('Senha do usuário expirada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
     
-            LoginPage.iconEyesPassword()
-            LoginPage.buttonForgotPassword()
-            LoginPage.buttonEnterEnabled()
-            LoginPage.clickButtonEnter()
-            LoginPage.messageOpeningSystem()
+            LoginPage.validateIconeOlhosSenha()
+            LoginPage.validateEsqueciSenha()
+            LoginPage.validateBotaoEntrarHabilitado()
+            LoginPage.clickBotaoEntrar()
+            LoginPage.validateMessageEntrandoSistema()
             //APÓS LOGAR
-            LoginPage.expiresAcessCardValidate()
-            LoginPage.clickSIMExpires() //clicar SIM 
+            LoginPage.validateSenhaSistemaExpirada()
+            LoginPage.clickSIMExpirada() //clicar SIM 
     
             //Card Altere Sua Senha Temporária - título "Altere Sua Senha Temporária"
             cy.get('p')
@@ -511,7 +511,7 @@ test.describe('Senha do usuário expirada', () => {
                 .contains('Regras para a Nova Senha')
                 .should('be.visible')
     
-            LoginPage.rulesNewPasswordBefore()
+            LoginPage.validateNovaSenhaAntes()
     
             //Card Altere Sua Senha Temporária - campo para preenchimento "Nova Senha"
             cy.get('input[name="password_new"]')
@@ -523,7 +523,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get('md-icon[ng-click="showPasswordToggle(true)"]')
                 .should('be.visible')
     
-            LoginPage.rulesrulesNewPasswordAfter()
+            LoginPage.validateNovaSenhaDepois()
     
             //Card Altere Sua Senha Temporária - botão CONFIRMAR antes de todas as regras estarem certas
             cy.get(':nth-child(5) > .md-raised')

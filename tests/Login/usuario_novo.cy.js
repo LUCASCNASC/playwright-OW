@@ -11,9 +11,9 @@ test.describe('Logar com novo usuário', () => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
-        LoginPage.logoEnterpriseLogin()
-        LoginPage.iconComputerLogin()
-        LoginPage.userTextIcon()
+        LoginPage.validateLogoEmpresaLogin()
+        LoginPage.validateIconeComputadorLogin()
+        LoginPage.validateUsuarioTextoIcone()
     })
 
     test('1.Novo usuário - clicar em Fechar, não alterando a senha',  async ({ page }) => {
@@ -26,7 +26,7 @@ test.describe('Logar com novo usuário', () => {
             .invoke('attr', 'placeholder')
             .should('equal', 'Informe seu usuário')
 
-        LoginPage.passwordTextIcon()
+        LoginPage.validateSenhaTextoIcone()
 
         //Campo Informe sua senha
         cy.get('#txtpassword')
@@ -36,10 +36,10 @@ test.describe('Logar com novo usuário', () => {
             .invoke('attr', 'placeholder')
             .should('equal', 'Informe sua senha')
 
-        LoginPage.iconEyesPassword()
-        LoginPage.buttonForgotPassword()
-        LoginPage.buttonEnterEnabled()
-        LoginPage.clickButtonEnter()
+        LoginPage.validateIconeOlhosSenha()
+        LoginPage.validateEsqueciSenha()
+        LoginPage.validateBotaoEntrarHabilitado()
+        LoginPage.clickBotaoEntrar()
 
         //Card Sua Senha expirou - Mensagem "Sua Senha expirou..."
         cy.get('.md-dialog-content-body')
@@ -204,7 +204,7 @@ test.describe('Logar com novo usuário', () => {
         cy.get('[ng-show="!loading"] > a')
             .click()
 
-        LoginPage.iconComputerLogin() //Validando que não entrou no sistema
+        LoginPage.validateIconeComputadorLogin() //Validando que não entrou no sistema
     })
 
     test('2.Novo usuário - clicar em CONFIRMAR, alterando a senha',  async ({ page }) => {
@@ -217,7 +217,7 @@ test.describe('Logar com novo usuário', () => {
             .invoke('attr', 'placeholder')
             .should('equal', 'Informe seu usuário')
 
-        LoginPage.passwordTextIcon()
+        LoginPage.validateSenhaTextoIcone()
 
         //Campo Informe sua senha
         cy.get('#txtpassword')
@@ -227,10 +227,10 @@ test.describe('Logar com novo usuário', () => {
             .invoke('attr', 'placeholder')
             .should('equal', 'Informe sua senha')
 
-        LoginPage.iconEyesPassword()
-        LoginPage.buttonForgotPassword()
-        LoginPage.buttonEnterEnabled()
-        LoginPage.clickButtonEnter()
+        LoginPage.validateIconeOlhosSenha()
+        LoginPage.validateEsqueciSenha()
+        LoginPage.validateBotaoEntrarHabilitado()
+        LoginPage.clickBotaoEntrar()
 
         //Card Sua Senha expirou - Mensagem "Sua Senha expirou..."
         cy.get('.md-dialog-content-body')

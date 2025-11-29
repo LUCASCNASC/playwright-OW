@@ -10,9 +10,9 @@ test.describe('Senha do usuário expirada', () => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
-        LoginPage.logoEnterpriseLogin()
-        LoginPage.iconComputerLogin()
-        LoginPage.userTextIcon()
+        LoginPage.validateLogoEmpresaLogin()
+        LoginPage.validateIconeComputadorLogin()
+        LoginPage.validateUsuarioTextoIcone()
     })
 
     test('1.Tentar logar com usuário com senha do usuário expirada',  async ({ page }) => {
@@ -25,7 +25,7 @@ test.describe('Senha do usuário expirada', () => {
             .invoke('attr', 'placeholder')
             .should('equal', 'Informe seu usuário')
 
-        LoginPage.passwordTextIcon()
+        LoginPage.validateSenhaTextoIcone()
 
         //Campo Informe sua senha
         cy.get('#txtpassword')
@@ -35,11 +35,11 @@ test.describe('Senha do usuário expirada', () => {
             .invoke('attr', 'placeholder')
             .should('equal', 'Informe sua senha')
 
-        LoginPage.iconEyesPassword()
-        LoginPage.buttonForgotPassword()
-        LoginPage.buttonEnterEnabled()
-        LoginPage.clickButtonEnter()
-        LoginPage.messageOpeningSystem()
+        LoginPage.validateIconeOlhosSenha()
+        LoginPage.validateEsqueciSenha()
+        LoginPage.validateBotaoEntrarHabilitado()
+        LoginPage.clickBotaoEntrar()
+        LoginPage.validateMessageEntrandoSistema()
 
         //Mensagem "Seu acesso ao sistema expirou."
         cy.get('.md-dialog-content-body')
@@ -56,6 +56,6 @@ test.describe('Senha do usuário expirada', () => {
         cy.get('md-dialog-actions > .md-primary')
             .click()
 
-        LoginPage.iconComputerLogin() //Validando que não entrou no sistema
+        LoginPage.validateIconeComputadorLogin() //Validando que não entrou no sistema
     })
 })

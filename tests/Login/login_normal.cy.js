@@ -13,9 +13,9 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
-        Login.logoEnterpriseLogin()
-        Login.iconComputerLogin()
-        Login.userTextIcon()
+        LoginPage.validateLogoEmpresaLogin()
+        LoginPage.validateIconeComputadorLogin()
+        LoginPage.validateUsuarioTextoIcone()
     })
 
     context('Usuário contexto 1', () => {
@@ -30,7 +30,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
     
-            LoginPage.passwordTextIcon()
+            LoginPage.validateSenhaTextoIcone()
     
             //Campo Informe sua senha
             cy.get('#txtpassword')
@@ -40,12 +40,12 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
 
-            LoginPage.iconEyesPassword()
-            LoginPage.buttonForgotPassword()
-            LoginPage.buttonEnterEnabled()
-            LoginPage.clickButtonEnter()
-            LoginPage.messageOpeningSystem()
-            LoginPage.buttonInitService()
+            LoginPage.validateIconeOlhosSenha()
+            LoginPage.validateEsqueciSenha()
+            LoginPage.validateBotaoEntrarHabilitado()
+            LoginPage.clickBotaoEntrar()
+            LoginPage.validateMessageEntrandoSistema()
+            LoginPage.validateBotaoIniciarServico()
         })
     
         test('2.Login - passar usuário errado (deve dar mensagem de Login ou Senha do usuário está incorreto.)',  async ({ page }) => {
@@ -58,7 +58,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
     
-            LoginPage.passwordTextIcon()
+            LoginPage.validateSenhaTextoIcone()
     
             //Campo Informe sua senha
             cy.get('#txtpassword')
@@ -68,12 +68,12 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
     
-            LoginPage.iconEyesPassword()
-            LoginPage.buttonForgotPassword()
-            LoginPage.buttonEnterEnabled()
-            LoginPage.clickButtonEnter()
-            LoginPage.messLoginPasswordIncorrect() 
-            LoginPage.iconComputerLogin() //Validando que não entrou no sistema
+            LoginPage.validateIconeOlhosSenha()
+            LoginPage.validateEsqueciSenha()
+            LoginPage.validateBotaoEntrarHabilitado()
+            LoginPage.clickBotaoEntrar()
+            LoginPage.validateMessageSenhaIncorreta() 
+            LoginPage.validateIconeComputadorLogin() //Validando que não entrou no sistema
         })
     
         test('3.Login - passar senha errada (deve dar mensagem de Login ou Senha do usuário está incorreto.)',  async ({ page }) => {
@@ -86,7 +86,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
     
-            LoginPage.passwordTextIcon()
+            LoginPage.validateSenhaTextoIcone()
     
             //Campo Informe sua senha
             cy.get('#txtpassword')
@@ -96,12 +96,12 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
     
-            LoginPage.iconEyesPassword()
-            LoginPage.buttonForgotPassword()
-            LoginPage.buttonEnterEnabled()
-            LoginPage.clickButtonEnter()
-            LoginPage.messLoginPasswordIncorrect()
-            LoginPage.iconComputerLogin() //Validando que não entrou no sistema
+            LoginPage.validateIconeOlhosSenha()
+            LoginPage.validateEsqueciSenha()
+            LoginPage.validateBotaoEntrarHabilitado()
+            LoginPage.clickBotaoEntrar()
+            LoginPage.validateMessageSenhaIncorreta()
+            LoginPage.validateIconeComputadorLogin() //Validando que não entrou no sistema
         })
     
         test('4.Login - passar somente login (botão ENTRAR deve ficar desabilitado)',  async ({ page }) => {
@@ -113,7 +113,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
     
-            LoginPage.passwordTextIcon()
+            LoginPage.validateSenhaTextoIcone()
     
             //Campo Informe sua senha
             cy.get('#txtpassword')
@@ -123,11 +123,11 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
     
-            LoginPage.iconEyesPassword()
-            LoginPage.buttonForgotPassword()
-            LoginPage.buttonEnterDisabled()
-            LoginPage.clickButtonEnter()
-            LoginPage.iconComputerLogin() //Validando que não entrou no sistema
+            LoginPage.validateIconeOlhosSenha()
+            LoginPage.validateEsqueciSenha()
+            LoginPage.validateBotaoEntrarDesabilitado()
+            LoginPage.clickBotaoEntrar()
+            LoginPage.validateIconeComputadorLogin() //Validando que não entrou no sistema
         })
     
         test('5.Login - passar somente login (botão ENTRAR deve ficar desabilitado)',  async ({ page }) => {
@@ -140,7 +140,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
     
-            LoginPage.passwordTextIcon()
+            LoginPage.validateSenhaTextoIcone()
     
             //Campo Informe sua senha
             cy.get('#txtpassword')
@@ -149,11 +149,11 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
     
-            LoginPage.iconEyesPassword()
-            LoginPage.buttonForgotPassword()
-            LoginPage.buttonEnterDisabled()
-            LoginPage.clickButtonEnter()
-            LoginPage.iconComputerLogin() //Validando que não entrou no sistema
+            LoginPage.validateIconeOlhosSenha()
+            LoginPage.validateEsqueciSenha()
+            LoginPage.validateBotaoEntrarDesabilitado()
+            LoginPage.clickBotaoEntrar()
+            LoginPage.validateIconeComputadorLogin() //Validando que não entrou no sistema
         })  
     
         test('6.Login - sem passar login e senha (botão ENTRAR deve ficar desabilitado)',  async ({ page }) => {
@@ -165,7 +165,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
     
-            LoginPage.passwordTextIcon()
+            LoginPage.validateSenhaTextoIcone()
     
             //Campo Informe sua senha
             cy.get('#txtpassword')
@@ -174,11 +174,11 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
     
-            LoginPage.iconEyesPassword()
-            LoginPage.buttonForgotPassword()
-            LoginPage.buttonEnterDisabled()
-            LoginPage.clickButtonEnter()
-            LoginPage.iconComputerLogin() //Validando que não entrou no sistema
+            LoginPage.validateIconeOlhosSenha()
+            LoginPage.validateEsqueciSenha()
+            LoginPage.validateBotaoEntrarDesabilitado()
+            LoginPage.clickBotaoEntrar()
+            LoginPage.validateIconeComputadorLogin() //Validando que não entrou no sistema
         })
     })
 
@@ -194,7 +194,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
     
-            LoginPage.passwordTextIcon()
+            LoginPage.validateSenhaTextoIcone()
     
             //Campo Informe sua senha
             cy.get('#txtpassword')
@@ -204,12 +204,12 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
     
-            LoginPage.iconEyesPassword()
-            LoginPage.buttonForgotPassword()
-            LoginPage.buttonEnterEnabled()
-            LoginPage.clickButtonEnter()
-            LoginPage.messageOpeningSystem()
-            LoginPage.buttonInitService()
+            LoginPage.validateIconeOlhosSenha()
+            LoginPage.validateEsqueciSenha()
+            LoginPage.validateBotaoEntrarHabilitado()
+            LoginPage.clickBotaoEntrar()
+            LoginPage.validateMessageEntrandoSistema()
+            LoginPage.validateBotaoIniciarServico()
         })
     
         test('8.Login - passar usuário errado (deve dar mensagem de Login ou Senha do usuário está incorreto.)',  async ({ page }) => {
@@ -222,7 +222,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
     
-            LoginPage.passwordTextIcon()
+            LoginPage.validateSenhaTextoIcone()
     
             //Campo Informe sua senha
             cy.get('#txtpassword')
@@ -232,12 +232,12 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
     
-            LoginPage.iconEyesPassword()
-            LoginPage.buttonForgotPassword()
-            LoginPage.buttonEnterEnabled()
-            LoginPage.clickButtonEnter()
-            LoginPage.messLoginPasswordIncorrect()
-            LoginPage.iconComputerLogin() //Validando que não entrou no sistema
+            LoginPage.validateIconeOlhosSenha()
+            LoginPage.validateEsqueciSenha()
+            LoginPage.validateBotaoEntrarHabilitado()
+            LoginPage.clickBotaoEntrar()
+            LoginPage.validateMessageSenhaIncorreta()
+            LoginPage.validateIconeComputadorLogin() //Validando que não entrou no sistema
         })
     
         test('9.Login - passar senha errada (deve dar mensagem de Login ou Senha do usuário está incorreto.)',  async ({ page }) => {
@@ -250,7 +250,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
     
-            LoginPage.passwordTextIcon()
+            LoginPage.validateSenhaTextoIcone()
     
             //Campo Informe sua senha
             cy.get('#txtpassword')
@@ -260,12 +260,12 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
     
-            LoginPage.iconEyesPassword()
-            LoginPage.buttonForgotPassword()
-            LoginPage.buttonEnterEnabled()
-            LoginPage.clickButtonEnter()
-            LoginPage.messLoginPasswordIncorrect()
-            LoginPage.iconComputerLogin() //Validando que não entrou no sistema
+            LoginPage.validateIconeOlhosSenha()
+            LoginPage.validateEsqueciSenha()
+            LoginPage.validateBotaoEntrarHabilitado()
+            LoginPage.clickBotaoEntrar()
+            LoginPage.validateMessageSenhaIncorreta()
+            LoginPage.validateIconeComputadorLogin() //Validando que não entrou no sistema
         })
     
         test('10.Login - passar somente login (botão ENTRAR deve ficar desabilitado)',  async ({ page }) => {
@@ -277,7 +277,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
     
-            LoginPage.passwordTextIcon()
+            LoginPage.validateSenhaTextoIcone()
     
             //Campo Informe sua senha
             cy.get('#txtpassword')
@@ -287,11 +287,11 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
     
-            LoginPage.iconEyesPassword()
-            LoginPage.buttonForgotPassword()
-            LoginPage.buttonEnterDisabled()
-            LoginPage.clickButtonEnter()
-            LoginPage.iconComputerLogin() //Validando que não entrou no sistema
+            LoginPage.validateIconeOlhosSenha()
+            LoginPage.validateEsqueciSenha()
+            LoginPage.validateBotaoEntrarDesabilitado()
+            LoginPage.clickBotaoEntrar()
+            LoginPage.validateIconeComputadorLogin() //Validando que não entrou no sistema
         })
     
         test('11.Login - passar somente senha (botão ENTRAR deve ficar desabilitado)',  async ({ page }) => {
@@ -304,7 +304,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
     
-            LoginPage.passwordTextIcon()
+            LoginPage.validateSenhaTextoIcone()
     
             //Campo Informe sua senha
             cy.get('#txtpassword')
@@ -313,11 +313,11 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
     
-            LoginPage.iconEyesPassword()
-            LoginPage.buttonForgotPassword()
-            LoginPage.buttonEnterDisabled()
-            LoginPage.clickButtonEnter()
-            LoginPage.iconComputerLogin() //Validando que não entrou no sistema
+            LoginPage.validateIconeOlhosSenha()
+            LoginPage.validateEsqueciSenha()
+            LoginPage.validateBotaoEntrarDesabilitado()
+            LoginPage.clickBotaoEntrar()
+            LoginPage.validateIconeComputadorLogin() //Validando que não entrou no sistema
         })  
     
         test('12.Login - sem passar login e senha (botão ENTRAR deve ficar desabilitado)',  async ({ page }) => {
@@ -329,7 +329,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
     
-            LoginPage.passwordTextIcon()
+            LoginPage.validateSenhaTextoIcone()
     
             //Campo Informe sua senha
             cy.get('#txtpassword')
@@ -338,11 +338,11 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
     
-            LoginPage.iconEyesPassword()
-            LoginPage.buttonForgotPassword()
-            LoginPage.buttonEnterDisabled()
-            LoginPage.clickButtonEnter()
-            LoginPage.iconComputerLogin() //Validando que não entrou no sistema
+            LoginPage.validateIconeOlhosSenha()
+            LoginPage.validateEsqueciSenha()
+            LoginPage.validateBotaoEntrarDesabilitado()
+            LoginPage.clickBotaoEntrar()
+            LoginPage.validateIconeComputadorLogin() //Validando que não entrou no sistema
         })
     })
 })

@@ -10,74 +10,74 @@ export class LoginPage {
   }
 
   // Validando Logo da empresa
-  async logoEnterpriseLogin() {
+  async validateLogoEmpresaLogin() {
     await this.page.locator('.logo').isVisible();
   }
 
   // Validando Ícone do computador
-  async iconComputerLogin() {
+  async validateIconeComputadorLogin() {
     await expect(this.page.locator('[ng-click="clienteStatsOpen()"] > .ng-binding')).toBeVisible();
     await expect(this.page.locator('[ng-click="clienteStatsOpen()"] > .ng-binding')).not.toHaveAttribute('disabled', '');
   }
 
   // Validando texto usuário, acima do campo usuário e ícone
-  async userTextIcon() {
+  async validateUsuarioTextoIcone() {
     await expect(this.page.locator('label[for="txtusername"]')).toBeVisible();
     await expect(this.page.locator('label[for="txtusername"]')).toHaveText('Usuário');
     await expect(this.page.locator(':nth-child(3) > .name')).toBeVisible();
   }
 
   // Validando texto Senha, acima do campo senha e ícone
-  async passwordTextIcon() {
+  async validateSenhaTextoIcone() {
     await expect(this.page.locator('label[for="txtpassword"]')).toBeVisible();
     await expect(this.page.locator('label[for="txtpassword"]')).toHaveText('Senha');
     await expect(this.page.locator('.md-icon-right > .name')).toBeVisible();
   }
 
   // Ícone de visualizar senha
-  async iconEyesPassword() {
+  async validateIconeOlhosSenha() {
     await expect(this.page.locator('.md-icon-right > .md-primary')).toBeVisible();
     await expect(this.page.locator('.md-icon-right > .md-primary')).not.toHaveAttribute('disabled', '');
   }
 
   // Botão Esqueceu Senha
-  async buttonForgotPassword() {
+  async validateEsqueciSenha() {
     await expect(this.page.locator('div[ng-click="modalSenhaNovaOpen()"]').filter({ hasText: 'Esqueceu a senha?' })).toBeVisible();
     await expect(this.page.locator('div[ng-click="modalSenhaNovaOpen()"]').filter({ hasText: 'Esqueceu a senha?' })).not.toHaveAttribute('disabled', '');
   }
 
   // Botão entrar habilitado
-  async buttonEnterEnabled() {
+  async validateBotaoEntrarHabilitado() {
     await expect(this.page.locator('.test_btnSalvarCliente')).toBeVisible();
     await expect(this.page.locator('.test_btnSalvarCliente')).toHaveText('Entrar');
     await expect(this.page.locator('.test_btnSalvarCliente')).not.toHaveAttribute('disabled', '');
   }
 
   // Botão entrar desabilitado
-  async buttonEnterDisabled() {
+  async validateBotaoEntrarDesabilitado() {
     await expect(this.page.locator('.test_btnSalvarCliente')).toBeVisible();
     await expect(this.page.locator('.test_btnSalvarCliente')).toHaveText('Entrar');
     await expect(this.page.locator('.test_btnSalvarCliente')).not.toHaveAttribute('not.disabled', '');
   }
 
   // Clicar no botão entrar
-  async clickButtonEnter() {
+  async clickBotaoEntrar() {
     await this.page.locator('.test_btnSalvarCliente').click({ force: true });
   }
 
   // Mensagem Entrando no sistema
-  async messageOpeningSystem() {
+  async validateMessageEntrandoSistema() {
     await expect(this.page.locator('.ng-scope > .ng-binding')).toBeVisible();
     await expect(this.page.locator('.ng-scope > .ng-binding')).toHaveText('Entrando no sistema');
   }
 
   // Botão INICIAR ATENDIMENTO - validando que entrou no sistema
-  async buttonInitService() {
+  async validateBotaoIniciarServico() {
     await expect(this.page.locator('.md-raised > .truncate')).toBeVisible();
   }
 
   // Mensagem Login ou senha incorretos
-  async messLoginPasswordIncorrect() {
+  async validateMessageSenhaIncorreta() {
     await expect(this.page.locator('.toast')).toBeVisible();
     await expect(this.page.locator('.toast-title')).toBeVisible();
     await expect(this.page.locator('.toast-title')).toHaveText('Atenção');
@@ -89,7 +89,7 @@ export class LoginPage {
   }
 
   // Card de expira acesso - "Falta(m) " 2 " dia(s) para seu acesso ao sistema expirar. Favor atualizá-lo."
-  async expiresAcessCardValidate() {
+  async validateSenhaSistemaExpirada() {
     await expect(this.page.locator('.md-dialog-content-body > .ng-binding')).toBeVisible();
     await expect(this.page.locator('.md-dialog-content-body > .ng-binding')).toHaveText('Falta(m) "2" dia(s) para seu acesso ao sistema expirar. Favor atualizá-lo.');
     await expect(this.page.locator('.md-cancel-button')).toBeVisible();
@@ -101,14 +101,14 @@ export class LoginPage {
   }
 
   // Card de expira acesso - clicar em SIM
-  async clickSIMExpires() {
+  async clickSIMExpirada() {
     await this.page.locator('.md-confirm-button').click();
     await expect(this.page.locator('center')).toBeVisible();
     await expect(this.page.locator('center')).toHaveText('Aguarde carregando...');
   }
 
   // Validar Regras para a Nova Senha (antes de preencher campo Nova Senha)
-  async rulesNewPasswordBefore() {
+  async validateNovaSenhaAntes() {
     await expect(this.page.locator('span', { hasText: 'Ao menos 8 caracteres.' })).toBeVisible();
     await expect(this.page.locator('span', { hasText: 'Ao menos 8 caracteres.' })).toHaveCSS('color', 'rgb(204, 0, 0)');
     await expect(this.page.locator('span', { hasText: 'Ao menos 1 letra maiúscula ou minúscula.' })).toBeVisible();
@@ -124,7 +124,7 @@ export class LoginPage {
   }
 
   // Validar Regras para a Nova Senha (depois de preencher campo Nova Senha)
-  async rulesrulesNewPasswordAfter() {
+  async validateNovaSenhaDepois() {
     await expect(this.page.locator('span', { hasText: 'Ao menos 8 caracteres.' })).toBeVisible();
     await expect(this.page.locator('span', { hasText: 'Ao menos 8 caracteres.' })).toHaveCSS('color', 'rgb(0, 100, 0)');
     await expect(this.page.locator('span', { hasText: 'Ao menos 1 letra maiúscula ou minúscula.' })).toBeVisible();
@@ -140,7 +140,7 @@ export class LoginPage {
   }
 
   // Validar card "Sua Senha expirou" quando a senha do usuário está expirada
-  async messPasswordUserExpired() {
+  async validateMessageSenhaUsuarioExpirada() {
     await expect(this.page.locator('.md-dialog-content-body')).toBeVisible();
     await expect(this.page.locator('.md-dialog-content-body')).toHaveText('Sua Senha expirou...');
     await expect(this.page.locator('md-dialog-actions > .md-primary')).toBeVisible();
