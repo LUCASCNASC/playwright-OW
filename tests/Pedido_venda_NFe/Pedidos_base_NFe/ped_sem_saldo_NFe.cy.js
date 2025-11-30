@@ -1,8 +1,8 @@
 import { test } from '@playwright/test';
-import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
-import { Product } from '../../../pages/ProdutoPage.js'
-import { CommandsGeneral } from '../../../../pages/commands.js'
-import { ChooseCliente } from '../../../pages/pedido/ClientePage.js'
+import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js';
+import { Product } from '../../../pages/ProdutoPage.js';
+import { CommandsGeneral } from '../../../../pages/commands.js';
+import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
 test.describe('Tentar gerar pedido de venda com produto sem saldo - Regra de saldo Parâmetro 36 = 4 - Parâmetro 139 = 4 - Trial 653 não configurado', () => {
 

@@ -2,9 +2,9 @@ import { test } from '@playwright/test';
 import { ClienteSimplesPage, ClienteSimplesPage } from '../../pages/cadastro_cliente/ClienteSimplesPage.js';
 import { gerarCpf }  from '../../support/gerarDados';
 
-const Numeroalteracao = '113'
-const CEPalteracao = "87054320"
-const numeroCPF = "117.415.410-18" //usado apenas no teste de adicionar pelo botão na pesquisa de cliente
+const Numeroalteracao = '113';
+const CEPalteracao = "87054320";
+const numeroCPF = "117.415.410-18";
 
 test.describe('Cadastrar cliente simples', () => {
 

@@ -1,16 +1,16 @@
 import { test } from '@playwright/test';
-import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
-import { ChooseCliente } from '../../../pages/pedidos/ClientePage.js'
-import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
-import { Service } from '../../../pages/pedidos/ServicosPage.js'
-import { AdvanceNormal } from '../../../pages/pedidos/AvancarPage.js'
-import { FinalizarPedidoPage } from '../../../pages/pedidos/FinalizarPedidoPage.js'
-import { GeneralDelivery } from '../../../pages/pedidos/EntregaPage.js'
-import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js'
-import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
-import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
-import { ProcessoRecebPromoPage } from '../../../../pages/pedidos/processos/processo_recebimento_promo.js'
-import { CommandsGeneral } from '../../../../pages/commands.js'
+import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js';
+import { ChooseCliente } from '../../../pages/pedidos/ClientePage.js';
+import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js';
+import { Service } from '../../../pages/pedidos/ServicosPage.js';
+import { AdvanceNormal } from '../../../pages/pedidos/AvancarPage.js';
+import { FinalizarPedidoPage } from '../../../pages/pedidos/FinalizarPedidoPage.js';
+import { GeneralDelivery } from '../../../pages/pedidos/EntregaPage.js';
+import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js';
+import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js';
+import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js';
+import { ProcessoRecebPromoPage } from '../../../../pages/pedidos/processos/processo_recebimento_promo.js';
+import { CommandsGeneral } from '../../../../pages/commands.js';
 
 test.describe('Gerar pedido de entrega futura com entrega', () => {
 

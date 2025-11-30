@@ -1,17 +1,17 @@
 import { test } from '@playwright/test';
-import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
-import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
-import { FinalizarPedidoPage } from '../../../pages/pedido/FinalizarPedidoPage.js'
-import { ThrowDelivery } from '../../../pages/pedido/EntregaPage.js'
-import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js'
-import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
-import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
-import { OrderDiscount } from '../../../pages/pedido/PedidoDescontoPage.js'
-import { GeralPedidosPage } from '../../../pages/pedido/GeralPedidosPage.js'
-import { CommandsGeneral } from '../../../../pages/commands.js'
-import { Service } from '../../../pages/pedido/ServicosPage.js'
-import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js'
-import { ChooseCliente } from '../../../pages/pedido/ClientePage.js'
+import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js';
+import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js';
+import { FinalizarPedidoPage } from '../../../pages/pedido/FinalizarPedidoPage.js';
+import { ThrowDelivery } from '../../../pages/pedido/EntregaPage.js';
+import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js';
+import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js';
+import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js';
+import { OrderDiscount } from '../../../pages/pedido/PedidoDescontoPage.js';
+import { GeralPedidosPage } from '../../../pages/pedido/GeralPedidosPage.js';
+import { CommandsGeneral } from '../../../../pages/commands.js';
+import { Service } from '../../../pages/pedido/ServicosPage.js';
+import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
+import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
 test.describe('Gerar pedido de venda Kit com desconto', () => {
 

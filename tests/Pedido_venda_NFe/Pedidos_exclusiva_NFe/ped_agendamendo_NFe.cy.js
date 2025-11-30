@@ -1,17 +1,17 @@
 import { test } from '@playwright/test';
-import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
-import { FinalizarPedidoPage } from '../../../pages/pedido/FinalizarPedidoPage.js'
-import { GeneralDelivery, ThrowDelivery } from '../../../pages/pedido/EntregaPage.js'
-import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js'
-import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
-import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
-import { PedExclusiva } from '../../../pages/pedido/PedidoExclusivaPage.js'
-import { ProductExclusiva, ValidateBalance } from '../../../pages/ProdutoPage.js'
-import { GeralPedidosPage } from '../../../pages/pedido/GeralPedidosPage.js'
-import { CommandsGeneral } from '../../../../pages/commands.js'
-import { Service } from '../../../pages/pedido/ServicosPage.js'
-import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js'
-import { ChooseCliente } from '../../../pages/pedido/ClientePage.js'
+import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js';
+import { FinalizarPedidoPage } from '../../../pages/pedido/FinalizarPedidoPage.js';
+import { GeneralDelivery, ThrowDelivery } from '../../../pages/pedido/EntregaPage.js';
+import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js';
+import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js';
+import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js';
+import { PedExclusiva } from '../../../pages/pedido/PedidoExclusivaPage.js';
+import { ProductExclusiva, ValidateBalance } from '../../../pages/ProdutoPage.js';
+import { GeralPedidosPage } from '../../../pages/pedido/GeralPedidosPage.js';
+import { CommandsGeneral } from '../../../../pages/commands.js';
+import { Service } from '../../../pages/pedido/ServicosPage.js';
+import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
+import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
 //Para testarmos esses cenários, é necessário mudar para a versão da exclusiva e criar um agendamento na filial que está sendo usada
 test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {

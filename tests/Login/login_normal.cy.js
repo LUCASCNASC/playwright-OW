@@ -1,11 +1,10 @@
 import { test } from '@playwright/test';
-import { LoginPage } from '../../pages/login/LoginPage'
+import { LoginPage } from '../../pages/login/LoginPage';
 
 const usuSabiumAutomacao = "sabium.automacao"; //usuário ERP Sabium (contexto 1)
 const senhaautomacao = "123.automacao"; //senha usuário ERP Sabium (contexto 1)
 const usuarioSbx = "sbx.automacao" //usuário SBX Sabium (contexto 3)
 const senhaSbx = "1234.sbx" //senha usuário SBX Sabium (contexto 3)
-
 
 test.describe('Login caminho feliz - usuário normal senha liberada', () => {
 

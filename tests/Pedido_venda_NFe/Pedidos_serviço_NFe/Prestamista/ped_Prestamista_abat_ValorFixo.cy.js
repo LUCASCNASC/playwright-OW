@@ -1,18 +1,18 @@
 import { test } from '@playwright/test';
-import { ProcessoVendaPage } from '../../../../pages/pedido/processos/ProcessoVendaPage.js'
-import { Product, ValidateBalance } from '../../../../pages/ProdutoPage.js'
-import { FinalizarPedidoPage } from '../../../../pages/pedido/FinalizarPedidoPage.js'
-import { PagamentoPage } from '../../../../pages/pedido/pagamento/PagamentoPage.js'
-import { ParcelasPage } from '../../../../pages/pedido/pagamento/ParcelasPage.js'
-import { ProcessoRecebPage } from '../../../../pages/pedido/processos/ProcessoRecebPage.js'
-import { ProcessoRecebPromoPage } from '../../../../pages/pedido/processos/ProcessoRecebPromoPage.js'
-import { Promotion } from '../../../../../pages/pedido/promocao.js'
-import { PrestamistaPage } from '../../../../pages/pedido/PrestamistaPage.js'
-import { GeralPedidosPage } from '../../../../pages/pedido/GeralPedidosPage.js'
-import { CommandsGeneral } from '../../../../../pages/commands.js'
-import { Service, ValidateService } from '../../../../pages/pedido/ServicosPage.js'
-import { AdvanceNormal } from '../../../../pages/pedido/AvancarPage.js'
-import { ChooseCliente } from '../../../../pages/pedido/ClientePage.js'
+import { ProcessoVendaPage } from '../../../../pages/pedido/processos/ProcessoVendaPage.js';
+import { Product, ValidateBalance } from '../../../../pages/ProdutoPage.js';
+import { FinalizarPedidoPage } from '../../../../pages/pedido/FinalizarPedidoPage.js';
+import { PagamentoPage } from '../../../../pages/pedido/pagamento/PagamentoPage.js';
+import { ParcelasPage } from '../../../../pages/pedido/pagamento/ParcelasPage.js';
+import { ProcessoRecebPage } from '../../../../pages/pedido/processos/ProcessoRecebPage.js';
+import { ProcessoRecebPromoPage } from '../../../../pages/pedido/processos/ProcessoRecebPromoPage.js';
+import { Promotion } from '../../../../../pages/pedido/promocao.js';
+import { PrestamistaPage } from '../../../../pages/pedido/PrestamistaPage.js';
+import { GeralPedidosPage } from '../../../../pages/pedido/GeralPedidosPage.js';
+import { CommandsGeneral } from '../../../../../pages/commands.js';
+import { Service, ValidateService } from '../../../../pages/pedido/ServicosPage.js';
+import { AdvanceNormal } from '../../../../pages/pedido/AvancarPage.js';
+import { ChooseCliente } from '../../../../pages/pedido/ClientePage.js';
 
 test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161)', () => {
 

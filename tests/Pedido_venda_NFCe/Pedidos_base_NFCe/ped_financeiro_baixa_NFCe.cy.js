@@ -1,15 +1,15 @@
 import { test } from '@playwright/test';
-import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js'
-import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js'
-import { Service } from '../../../pages/pedidos/ServicosPage.js'
-import { FinalizarPedidoPage } from '../../../pages/pedidos/FinalizarPedidoPage.js'
-import { GeneralDelivery } from '../../../pages/pedidos/EntregaPage.js'
-import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js'
-import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js'
-import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js'
-import { CommandsGeneral } from '../../../../pages/commands.js'
-import { AdvanceNormal } from '../../../pages/pedidos/AvancarPage.js'
-import { ChooseCliente } from '../../../pages/pedidos/ClientePage.js'
+import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js';
+import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js';
+import { Service } from '../../../pages/pedidos/ServicosPage.js';
+import { FinalizarPedidoPage } from '../../../pages/pedidos/FinalizarPedidoPage.js';
+import { GeneralDelivery } from '../../../pages/pedidos/EntregaPage.js';
+import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js';
+import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js';
+import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js';
+import { CommandsGeneral } from '../../../../pages/commands.js';
+import { AdvanceNormal } from '../../../pages/pedidos/AvancarPage.js';
+import { ChooseCliente } from '../../../pages/pedidos/ClientePage.js';
 
 test.describe('Gerar pedido com financeiro na baixa com entrega', () => {
 

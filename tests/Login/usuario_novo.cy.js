@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { Login } from '../../pages/login/LoginPage'
+import { LoginPage } from '../../pages/login/LoginPage';
 
 const usunovo = "testtest"; //494
 const senhausunovo = "!MV87gsp";
