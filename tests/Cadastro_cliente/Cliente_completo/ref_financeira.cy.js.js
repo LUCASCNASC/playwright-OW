@@ -18,14 +18,14 @@ test.describe('Cadastrar cliente completo', () => {
 
             ClienteCompletoPage.iconMenuOptions()
             ClienteCompletoPage.optionClientComplete()
-            PessoaPage.cpfClient() //Preencher com CPF
-            PessoaPage.nameComplete() //Preencher nome completo do cliente
-            PessoaPage.nameSocial() //preencher nome social do cliente
+            PessoaPage.cpfClient()
+            PessoaPage.nameComplete() 
+            PessoaPage.nameSocial()
             PessoaPage.dataNascimento()
             PessoaPage.sexClient()
             ClienteCompletoPage.saveClient()
-            ClienteCompletoPage.messAlertAdressMandatory() //mensagem de endereço obrigatório após tentar salvar sem adicionar um endereço
-            EnderecoPage.clickAbaAdress() //CADASTRAR ENDEREÇO
+            ClienteCompletoPage.messAlertAdressMandatory()
+            EnderecoPage.clickAbaAdress()
             EnderecoPage.clickAddNewAdress()
             EnderecoPage.tipoEndereco()
             EnderecoPage.modalAdressEmptyValidade()
@@ -42,7 +42,7 @@ test.describe('Cadastrar cliente completo', () => {
             RotaPage.typeAdressRoute()
             RotaPage.routaComplete()
             RotaPage.infoRouteAdded()
-            TelefonePage.clickAbaPhone() //CADASTRAR TELEFONE
+            TelefonePage.clickAbaPhone()
             TelefonePage.clickAddedNewPhone()
             TelefonePage.modalPhoneEmptyValidade()
             TelefonePage.typePhone()
@@ -51,8 +51,8 @@ test.describe('Cadastrar cliente completo', () => {
             TelefonePage.clickSavePhone()
             TelefonePage.infoPhoneAdded()
             TelefonePage.messPhoneAddedSucess()
-            ClienteCompletoPage.abaReferences() //REFERENCIA
-            RefFinanceiraPage.clickEmpty() //CADASTRAR REFERENCIA FINANCEIRA
+            ClienteCompletoPage.abaReferences()
+            RefFinanceiraPage.clickEmpty()
             RefFinanceiraPage.validateAbaEmpty()
             RefFinanceiraPage.clickAddNew()
             RefFinanceiraPage.modalEmpty()

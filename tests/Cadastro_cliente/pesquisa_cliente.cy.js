@@ -13,7 +13,7 @@ test.describe('Cadastrar cliente', () => {
 
         test('1.Pesquisa por número CPF',  async ({ page }) => {
     
-            PesquisaClientePage.fillCPF() //Preencher com CPF
+            PesquisaClientePage.fillCPF()
             PesquisaClientePage.clickGlassPesquisaClientePage()
             PesquisaClientePage.cardClientValidate()
             PesquisaClientePage.typeAgainCPF()
@@ -24,7 +24,7 @@ test.describe('Cadastrar cliente', () => {
 
         test('2.Pesquisa por número CNPJ',  async ({ page }) => {
 
-            PesquisaClientePage.fillCNPJ() //Preencher com CNPJ
+            PesquisaClientePage.fillCNPJ()
             PesquisaClientePage.clickGlassPesquisaClientePage()
             PesquisaClientePage.cardClientValidate()
             PesquisaClientePage.typeAgainCNPJ()
@@ -39,7 +39,7 @@ test.describe('Cadastrar cliente', () => {
 
         test('3.Pesquisa por descrição CPF',  async ({ page }) => {
 
-            PesquisaClientePage.fillDescripCPF() //Preencher com DESCRIÇÃO CPF
+            PesquisaClientePage.fillDescripCPF()
             PesquisaClientePage.clickGlassPesquisaClientePage()
             PesquisaClientePage.cardClientValidate()
             PesquisaClientePage.typeAgainCPF()
@@ -50,7 +50,7 @@ test.describe('Cadastrar cliente', () => {
 
         test('4.Pesquisa por descrição CNPJ',  async ({ page }) => {
 
-            PesquisaClientePage.typeAgainDescriptCNPJ() //Preencher com DESCRIÇÃO CNPJ
+            PesquisaClientePage.typeAgainDescriptCNPJ()
             PesquisaClientePage.clickGlassPesquisaClientePage()
             PesquisaClientePage.cardClientValidate()
             PesquisaClientePage.typeAgainCNPJ()

@@ -18,14 +18,14 @@ test.describe('Cadastrar cliente completo', () => {
 
             ClienteCompletoPage.iconMenuOptions()
             ClienteCompletoPage.optionClientComplete()
-            PessoaPage.cpfClient() //Preencher com CPF
-            PessoaPage.nameComplete() //Preencher nome completo do cliente
-            PessoaPage.nameSocial() //preencher nome social do cliente
+            PessoaPage.cpfClient()
+            PessoaPage.nameComplete()
+            PessoaPage.nameSocial()
             PessoaPage.dateBirth()
             PessoaPage.sexClient()
             ClienteCompletoPage.saveClient()
-            ClienteCompletoPage.messAlertAdressMandatory() //mensagem de endereço obrigatório após tentar salvar sem adicionar um endereço
-            EnderecoPage.clickAbaAdress() //CADASTRAR ENDEREÇO
+            ClienteCompletoPage.messAlertAdressMandatory()
+            EnderecoPage.clickAbaAdress()
             EnderecoPage.clickAddNewAdress()
             EnderecoPage.tipoEndereco()
             EnderecoPage.modalAdressEmptyValidade()
@@ -36,13 +36,13 @@ test.describe('Cadastrar cliente completo', () => {
             ClienteCompletoPage.buttonSaveDisabled()
             EnderecoPage.clickSaveAdress()
             EnderecoPage.infoAdressAdded()
-            RotaPage.clickAbaRoute() //CADASTRAR ROTA
+            RotaPage.clickAbaRoute()
             RotaPage.clickAddedNewRoute()
             RotaPage.modalRouteEmptyValidade()
             RotaPage.typeAdressRoute()
             RotaPage.routaComplete()
             RotaPage.infoRouteAdded()
-            TelefonePage.clickAbaPhone() //CADASTRAR TELEFONE
+            TelefonePage.clickAbaPhone()
             TelefonePage.clickAddedNewPhone()
             TelefonePage.modalPhoneEmptyValidade()
             TelefonePage.typePhone()
@@ -51,9 +51,9 @@ test.describe('Cadastrar cliente completo', () => {
             TelefonePage.clickSavePhone()
             TelefonePage.infoPhoneAdded()
             TelefonePage.messPhoneAddedSucess()
-            ClienteCompletoPage.abaReferences() //REFERENCIA
+            ClienteCompletoPage.abaReferences()
             RefFinanceiraPage.clickAbaRefGuys()
-            RefFinanceiraPage.validateAbaEmpty() //CADASTRAR REFERENCIA PESSOAL
+            RefFinanceiraPage.validateAbaEmpty() 
             RefFinanceiraPage.clickAddNew()
             RefFinanceiraPage.modalEmpty()
             RefFinanceiraPage.name()
