@@ -1,0 +1,23 @@
+{
+  "userSabium": {
+    "login": "sabium.automacao",
+    "password": "123.automacao"
+  },
+  "userSBX": {
+    "login": "sbx.automacao",
+    "password": "1234.sbx"
+  },
+  "userSabiumExpirado": {
+    "login": "usu.expiradosistema",
+    "password": "123.automacao"
+  },
+  "userSabiumInativo": {
+    "login": "usu.inativo",
+    "password": "123.automacao"
+  },
+  "userSabiumNovo": {
+    "login": "usu.inativo",
+    "password": "!MV87gsp",
+    "newPassword": "321@Teste"
+  }
+}
