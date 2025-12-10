@@ -27,7 +27,7 @@ test.describe('Gerar pedidos com promoção', () => {
 
         test('1.Pedido com promoção partida (promoção 152): produto 1868 0 0',  async ({ page }) => {
     
-            Product.promoMatch() //PRODUTO
+            Product.promoMatch()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -42,13 +42,13 @@ test.describe('Gerar pedidos com promoção', () => {
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pagamento_lista')
             cy.wait('@api_pagamento_lista', { timeout: 40000 })
             AdvanceNormal.final() 
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     
         test('2.Pedido com promoção a prazo com entrada (promoção 150): produto 1866 0 0',  async ({ page }) => {
     
-            Product.promoDeadlineEntry() //PRODUTO
+            Product.promoDeadlineEntry()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -69,13 +69,13 @@ test.describe('Gerar pedidos com promoção', () => {
             cy.get('.white > .layout-align-center-center > .md-primary').click()
     
             AdvanceNormal.final() 
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     
         test('3.Pedido com promoção a prazo parcelado (promoção 151): produto 1867 0 0',  async ({ page }) => {
     
-            Product.promoDeadlineInstallment() //PRODUTO
+            Product.promoDeadlineInstallment()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -90,7 +90,7 @@ test.describe('Gerar pedidos com promoção', () => {
             cy.intercept('GET', 'images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     })
@@ -99,7 +99,7 @@ test.describe('Gerar pedidos com promoção', () => {
 
         test('4.Pedido com promoção partida (promoção 152): produto 1868 0 0 e produto 1870 0 0 (sem promoção)',  async ({ page }) => {
     
-            Product.promoMatch() //PRODUTO
+            Product.promoMatch()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -110,7 +110,7 @@ test.describe('Gerar pedidos com promoção', () => {
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -129,13 +129,13 @@ test.describe('Gerar pedidos com promoção', () => {
             //cy.get('.active > md-collapsible-body > .layout-column > [style="position: relative"] > :nth-child(1) > div.ng-binding').click({force:true})
 
             // AdvanceNormal.final()
-            // FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            // FinalizarPedidoPage.clickFinalizarPedidoPage()
             // FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('5.Pedido com promoção a prazo com entrada (promoção 150): produto 1866 0 0 e produto 1870 0 0 (sem promoção)',  async ({ page }) => {
     
-            Product.promoDeadlineEntry() //PRODUTO
+            Product.promoDeadlineEntry()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -146,7 +146,7 @@ test.describe('Gerar pedidos com promoção', () => {
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -163,7 +163,7 @@ test.describe('Gerar pedidos com promoção', () => {
             cy.get('.white > .layout-align-center-center > .md-primary').click({force:true}) //clicar GERAR PAGAMENTO
     
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     })
@@ -172,7 +172,7 @@ test.describe('Gerar pedidos com promoção', () => {
 
         test('6.Pedido com promoção partida (promoção 152): produto 1868 0 0',  async ({ page }) => {
     
-            Product.promoMatch() //PRODUTO
+            Product.promoMatch()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -191,13 +191,13 @@ test.describe('Gerar pedidos com promoção', () => {
             ProcessoRecebPage.principal()
             ParcelasPage.one()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     
         test('7.Pedido com promoção a prazo com entrada (promoção 150): produto 1866 0 0',  async ({ page }) => {
     
-            Product.promoDeadlineEntry() //PRODUTO
+            Product.promoDeadlineEntry()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -230,13 +230,13 @@ test.describe('Gerar pedidos com promoção', () => {
             // Receipt.main()
             // ParcelasPage.two()
             // AdvanceNormal.final()
-            // FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            // FinalizarPedidoPage.clickFinalizarPedidoPage()
             // FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('8.Pedido com promoção a prazo parcelado (promoção 151): produto 1867 0 0',  async ({ page }) => {
     
-            Product.promoDeadlineInstallment() //PRODUTO
+            Product.promoDeadlineInstallment()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
@@ -255,7 +255,7 @@ test.describe('Gerar pedidos com promoção', () => {
             cy.get('.active > md-collapsible-body > .layout-column > [style="position: relative"] > :nth-child(1) > div.ng-binding').click({force:true})
 
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })  
     }) 
@@ -264,7 +264,7 @@ test.describe('Gerar pedidos com promoção', () => {
 
         test('9.Pedido com promoção partida (promoção 152): produto 1868 0 0 e produto 1870 0 0 (sem promoção)',  async ({ page }) => {
     
-            Product.promoMatch() //PRODUTO
+            Product.promoMatch()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             cy.clickAddProduc()
@@ -273,7 +273,7 @@ test.describe('Gerar pedidos com promoção', () => {
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -289,7 +289,7 @@ test.describe('Gerar pedidos com promoção', () => {
             cy.get('.active > md-collapsible-body > .layout-column > [style="position: relative"] > :nth-child(1) > div.ng-binding').click({force: true})
 
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     })

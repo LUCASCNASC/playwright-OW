@@ -25,7 +25,7 @@ test.describe('Gerar pedido com reserva no CD - Regra de saldo Parâmetro 36 = 4
 
         test('1.Pedido: produto 1880 0 0 - (Venda local de produto com saldo só no CD - sem entrega)',  async ({ page }) => {
 
-            Product.cdFirst() //PRODUTO
+            Product.cdFirst()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -39,13 +39,13 @@ test.describe('Gerar pedido com reserva no CD - Regra de saldo Parâmetro 36 = 4
             ProcessoRecebPage.main()
             ParcelasPage.duas()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('2.Pedido: produtos 1880 0 0 (reserva CD) e 1870 0 0 (saldo local) - (Venda local de 1 produto com saldo local + 1 produto com saldo no CD - sem entrega)',  async ({ page }) => {
 
-            Product.cdFirst() //PRODUTO
+            Product.cdFirst()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -53,7 +53,7 @@ test.describe('Gerar pedido com reserva no CD - Regra de saldo Parâmetro 36 = 4
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -67,7 +67,7 @@ test.describe('Gerar pedido com reserva no CD - Regra de saldo Parâmetro 36 = 4
             ProcessoRecebPage.main()
             ParcelasPage.duas()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     })
@@ -76,7 +76,7 @@ test.describe('Gerar pedido com reserva no CD - Regra de saldo Parâmetro 36 = 4
 
         test('3.Pedido: produto 1880 0 0 - (Venda local de produto com saldo só no CD - com entrega)',  async ({ page }) => {
             
-            Product.cdFirst() //PRODUTO
+            Product.cdFirst()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -90,20 +90,20 @@ test.describe('Gerar pedido com reserva no CD - Regra de saldo Parâmetro 36 = 4
             ProcessoRecebPage.main()
             ParcelasPage.duas()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('4.Pedido: produtos 1880 0 0 (reserva CD) e 1870 0 0 (saldo local) - (Venda local de 1 produto com saldo local + 1 produto com saldo no CD - com entrega)',  async ({ page }) => {
             
-            Product.fisrt() //PRODUTO
+            Product.fisrt()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -117,7 +117,7 @@ test.describe('Gerar pedido com reserva no CD - Regra de saldo Parâmetro 36 = 4
             ProcessoRecebPage.main()
             ParcelasPage.duas()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     })

@@ -20,7 +20,7 @@ test.describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244
         CommandsGeneral.tituloPagina()
         ProcessoVendaPage.NFe()
         ChooseCliente.withRoute()
-        Product.roundUpDown() //PRODUTO
+        Product.roundUpDown()
         ValidateBalance.withBalance() //VALIDAR SALDO
         CommandsGeneral.selectProductSearch() //selecionar produto
     })
@@ -39,7 +39,7 @@ test.describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.one()
-            OrderDiscount.dragFormPayment() //FINALIZAR PEDIDO
+            OrderDiscount.dragFormPayment()
             OrderDiscount.clickChangeValue()
             OrderDiscount.modalChangeValue()
             OrderDiscount.changeValueToLow()
@@ -65,7 +65,7 @@ test.describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244
             OrderDiscount.modalChangeValue()
             OrderDiscount.changeValueToTop()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     })

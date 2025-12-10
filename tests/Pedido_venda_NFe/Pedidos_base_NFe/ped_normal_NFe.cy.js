@@ -20,7 +20,7 @@ test.describe('Gerar pedido normal', () => {
         CommandsGeneral.tituloPagina()
         ProcessoVendaPage.NFe()
         ChooseCliente.withRoute()
-        Product.fisrt() //PRODUTO
+        Product.fisrt()
         ValidateBalance.withBalance() //VALIDAR SALDO
         CommandsGeneral.selectProductSearch() //selecionar produto
     }) 
@@ -40,7 +40,7 @@ test.describe('Gerar pedido normal', () => {
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
@@ -51,7 +51,7 @@ test.describe('Gerar pedido normal', () => {
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -65,7 +65,7 @@ test.describe('Gerar pedido normal', () => {
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
@@ -84,7 +84,7 @@ test.describe('Gerar pedido normal', () => {
             ProcessoRecebPage.main()
             ParcelasPage.one()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     })
@@ -104,7 +104,7 @@ test.describe('Gerar pedido normal', () => {
             ProcessoRecebPage.main() 
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
@@ -114,7 +114,7 @@ test.describe('Gerar pedido normal', () => {
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -128,7 +128,7 @@ test.describe('Gerar pedido normal', () => {
             ProcessoRecebPage.main() 
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
@@ -147,7 +147,7 @@ test.describe('Gerar pedido normal', () => {
             ProcessoRecebPage.main() 
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     })

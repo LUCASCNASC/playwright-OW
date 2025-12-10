@@ -19,7 +19,7 @@ test.describe('Gerar pedidos com Garantia e com entrega', () => {
         CommandsGeneral.tituloPagina()
         ProcessoVendaPage.NFCe()
         ChooseCliente.withRoute()
-        Product.fisrt() //PRODUTO
+        Product.fisrt()
         ValidateBalance.withBalance() //VALIDAR SALDO
         CommandsGeneral.selectProductSearch() //selecionar produto
         CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -42,7 +42,7 @@ test.describe('Gerar pedidos com Garantia e com entrega', () => {
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
@@ -50,7 +50,7 @@ test.describe('Gerar pedidos com Garantia e com entrega', () => {
     
             Service.garantiaSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
             Service.clickOKServiceLinked() //SERVIÇOS
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -66,7 +66,7 @@ test.describe('Gerar pedidos com Garantia e com entrega', () => {
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
@@ -83,7 +83,7 @@ test.describe('Gerar pedidos com Garantia e com entrega', () => {
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
@@ -91,7 +91,7 @@ test.describe('Gerar pedidos com Garantia e com entrega', () => {
     
             Service.garantiaNaoSep() //Marcar garantia "T.A. Garantia Não Separa"
             Service.clickOKServiceLinked() //SERVIÇOS
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -107,7 +107,7 @@ test.describe('Gerar pedidos com Garantia e com entrega', () => {
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
@@ -124,7 +124,7 @@ test.describe('Gerar pedidos com Garantia e com entrega', () => {
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
@@ -132,7 +132,7 @@ test.describe('Gerar pedidos com Garantia e com entrega', () => {
     
             Service.garantiaSepTituloProcDif() //Marcar Garantia separa titulo em um processo diferente
             Service.clickOKServiceLinked() //SERVIÇOS
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -148,7 +148,7 @@ test.describe('Gerar pedidos com Garantia e com entrega', () => {
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     })

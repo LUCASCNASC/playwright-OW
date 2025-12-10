@@ -19,7 +19,7 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
         CommandsGeneral.tituloPagina()
         ProcessoVendaPage.NFCe()
         ChooseCliente.withRoute()
-        Product.fisrt() //PRODUTO
+        Product.fisrt()
         ValidateBalance.withBalance() //VALIDAR SALDO
         CommandsGeneral.selectProductSearch() //selecionar produto
         CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -42,7 +42,7 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             ProcessoRecebPage.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
         
@@ -66,7 +66,7 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             ProcessoRecebPage.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
@@ -83,7 +83,7 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             ProcessoRecebPage.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
@@ -107,7 +107,7 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             ProcessoRecebPage.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
@@ -124,7 +124,7 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             ProcessoRecebPage.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })   
 
@@ -148,7 +148,7 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             ProcessoRecebPage.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     })

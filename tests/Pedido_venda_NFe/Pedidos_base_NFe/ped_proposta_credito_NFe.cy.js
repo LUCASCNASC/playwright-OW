@@ -19,7 +19,7 @@ test.describe('Gerar pedido com proposta de crédito', () => {
         CommandsGeneral.tituloPagina()
         ProcessoVendaPage.NFe()
         ChooseCliente.withRoute()
-        Product.fisrt() //PRODUTO
+        Product.fisrt()
         ValidateBalance.withBalance() //VALIDAR SALDO
         CommandsGeneral.selectProductSearch() //selecionar produto
     })
@@ -39,7 +39,7 @@ test.describe('Gerar pedido com proposta de crédito', () => {
             ProcessoRecebPage.proposalCredit()
             ParcelasPage.one()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validatePropCreditGenerated    ()
             FinalizarPedidoPage.validateOrderGenerated()
         })

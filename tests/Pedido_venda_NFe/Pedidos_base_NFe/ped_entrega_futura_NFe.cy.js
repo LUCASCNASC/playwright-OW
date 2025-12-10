@@ -19,7 +19,7 @@ test.describe('Gerar pedido de entrega futura', () => {
         CommandsGeneral.tituloPagina()
         ProcessoVendaPage.deliveryFutureNFe()
         ChooseCliente.withRoute()
-        Product.fisrt() //PRODUTO
+        Product.fisrt()
         ValidateBalance.withBalance() //VALIDAR SALDO
         CommandsGeneral.selectProductSearch() //selecionar produto
     })
@@ -39,7 +39,7 @@ test.describe('Gerar pedido de entrega futura', () => {
             ProcessoRecebPage.main() //PROCESSO INCLUSÃO
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
         
@@ -50,7 +50,7 @@ test.describe('Gerar pedido de entrega futura', () => {
             Service.validateModalServLinked() //SERVICOS
             clicarOKServVinServico.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA PRODUTO
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -64,7 +64,7 @@ test.describe('Gerar pedido de entrega futura', () => {
             ProcessoRecebPage.main() //PROCESSO INCLUSÃO
             ParcelasPage.two()
             AdvanceNormal.final() 
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     })
@@ -84,7 +84,7 @@ test.describe('Gerar pedido de entrega futura', () => {
             ProcessoRecebPage.main() //PROCESSO INCLUSÃO
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })    
         
@@ -94,7 +94,7 @@ test.describe('Gerar pedido de entrega futura', () => {
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -108,7 +108,7 @@ test.describe('Gerar pedido de entrega futura', () => {
             ProcessoRecebPage.main() //PROCESSO INCLUSÃO
             ParcelasPage.two()
             AdvanceNormal.final() 
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })  
     })

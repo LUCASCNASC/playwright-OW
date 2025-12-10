@@ -24,7 +24,7 @@ test.describe('Venda de serviço avulso', () => {
 
         test('1.Pedido de Mão de obra - 144 (T.A. MO Não Destaca e Separa Processo Diferente)',  async ({ page }) => {
 
-            ServicoAvulsoPage.productServiceLoose() //PRODUTO
+            ServicoAvulsoPage.productServiceLoose()
             ServicoAvulsoPage.chooseServiceSearch()
             ServicoAvulsoPage.messItemAddedSucess()
             ServicoAvulsoPage.clickCartShopping() //CARRINHO COMPRAS
@@ -35,7 +35,7 @@ test.describe('Venda de serviço avulso', () => {
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     })

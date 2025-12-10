@@ -31,7 +31,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
 
         test('1.Pedido: produtos 1860 0 0 e 1870 0 0, inclusão 3874, prestamista 158, 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
     
-            Product.fisrt() //PRODUTO
+            Product.fisrt()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -39,7 +39,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             Service.validateModalServLinked()
             Service.clickOKServiceLinked() //SERVIÇOS
             ThrowDelivery.freightFirst()
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -56,13 +56,13 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('2.Pedido: produtos 1860 0 0 e 1870 0 0, inclusão 3875, prestamista 158, 4 parcelas no recebimento Presente.',  async ({ page }) => {
     
-            Product.fisrt() //PRODUTO
+            Product.fisrt()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -70,7 +70,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst()
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -87,7 +87,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     })
@@ -96,14 +96,14 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
 
         test('3.Pedido: produtos 1860 0 0 e 1870 0 0, inclusão 3876, prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
     
-            Product.fisrt() //PRODUTO
+            Product.fisrt()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -120,13 +120,13 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('4.Pedido: produtos 1860 0 0 (com garantia não separa) e 1870 0 0, inclusão 3874, prestamista 158, 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
     
-            Product.fisrt() //PRODUTO
+            Product.fisrt()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -135,7 +135,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ValidateService.garantiaNaoSep()
             Service.clickOKServiceLinked() //SERVIÇOS
             ValidateService.servLinked() ; ValidateService.garantiaSepMesmoProc()
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -152,13 +152,13 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('5.Pedido: produtos 1860 0 0 (com garantia não separa) e 1870 0 0, inclusão 3876, prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
 
-            Product.fisrt() //PRODUTO
+            Product.fisrt()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -167,7 +167,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ValidateService.garantiaNaoSep()
             Service.clickOKServiceLinked() //SERVIÇOS
             ValidateService.servLinked() ; ValidateService.garantiaSepMesmoProc()
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -184,13 +184,13 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('6.Pedido: produtos 1860 0 0 (com garantia não separa) e 1870 0 0, inclusão 3875, prestamista 158, 4 parcelas no recebimento Presente sem juros.',  async ({ page }) => {
     
-            Product.fisrt() //PRODUTO
+            Product.fisrt()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -199,7 +199,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ValidateService.garantiaNaoSep()
             Service.clickOKServiceLinked() //SERVIÇOS
             ValidateService.servLinked() ; ValidateService.garantiaSepMesmoProc()
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -216,7 +216,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     })
@@ -225,7 +225,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
 
         test('7.Pedido: produto 1918 0 0 (promoção a prazo 167), inclusão 3874, prestamista 158, 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
     
-            Product.termInstallmentPrest() //PRODUTO
+            Product.termInstallmentPrest()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -245,13 +245,13 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('8.Pedido: produto 1918 0 0 (promoção a prazo 167), inclusão 3876, prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
     
-            Product.termInstallmentPrest() //PRODUTO
+            Product.termInstallmentPrest()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -271,13 +271,13 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('9.Pedido: produto 1918 0 0 (promoção a prazo 167), com garantia Não separa, inclusão 3876, prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
     
-            Product.termInstallmentPrest() //PRODUTO
+            Product.termInstallmentPrest()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -298,7 +298,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     })
@@ -307,7 +307,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
 
         test('10.Pedido: produto 1919 0 0 (promoção a prazo 168), com garantia Não separa, inclusão 3876, prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
 
-            Product.termInstallmentPrest() //PRODUTO
+            Product.termInstallmentPrest()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -333,13 +333,13 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.finalarFinal()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('11.Pedido: produto 1919 0 0 (promoção a prazo 168), com garantia Não separa, inclusão 3874, prestamista 158, 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
 
-            Product.termInstallmentPrest() //PRODUTO
+            Product.termInstallmentPrest()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -366,13 +366,13 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
         
         test('12.Pedido: produto 1920 0 0 (promoção partida 169), com garantia Não separa, inclusão 3876, prestamista 158, 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
     
-            Product.termInstallmentPrest() //PRODUTO
+            Product.termInstallmentPrest()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -394,7 +394,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     })
@@ -403,7 +403,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
 
         test('13.Pedido: produto 1918 0 0 (promo a prazo 167) e 1860 0 0 (sem promoção), inclusão 3874 (outro recebimento 3860), prestamista 158, 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
     
-            Product.termInstallmentPrest() //PRODUTO
+            Product.termInstallmentPrest()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -414,7 +414,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             Service.validateModalServLinked()
             Service.clickOKServiceLinked() //SERVIÇOS
             ThrowDelivery.primeiro()
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -435,13 +435,13 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ParcelasPage.one()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('14.Pedido: produto 1918 0 0 (promo a prazo 167) e 1860 0 0 (sem promoção), inclusão 3874 (outro recebimento 3874 agrupar), prestamista 158, 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
     
-            Product.termInstallmentPrest() //PRODUTO
+            Product.termInstallmentPrest()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -452,7 +452,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             Service.validateModalServLinked()
             Service.clickOKServiceLinked() //SERVIÇOS
             ThrowDelivery.freightFirst()
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -477,13 +477,13 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             GeralPedidosPage.adicionadoRecebAgrupado()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('15.Pedido: produto 1918 0 0 (promo a prazo 167) e 1860 0 0 (sem promoção), inclusão 3876 (outro recebimento 3860), prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
     
-            Product.termInstallmentPrest() //PRODUTO
+            Product.termInstallmentPrest()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -494,7 +494,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             Service.validateModalServLinked()
             Service.clickOKServiceLinked() //SERVIÇOS
             ThrowDelivery.freightFirst()
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -515,13 +515,13 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ParcelasPage.one()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('16.Pedido: produto 1918 0 0 (promo a prazo 167) e 1860 0 0 (sem promoção), inclusão 3876 (outro recebimento 3876 agrupar), prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
     
-            Product.termInstallmentPrest() //PRODUTO
+            Product.termInstallmentPrest()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -532,7 +532,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             Service.validateModalServLinked()
             Service.clickOKServiceLinked() //SERVIÇOS
             ThrowDelivery.freightFirst()
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -559,13 +559,13 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             GeralPedidosPage.adicionadoRecebAgrupado()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('17.Pedido: produto 1921 0 0 (promo a prazo 170), inclusão 3874, prestamista 158, 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
     
-            Product.termInstallmentPrest() //PRODUTO
+            Product.termInstallmentPrest()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -585,7 +585,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.added() //Validando adição do prestamista
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     })
@@ -594,7 +594,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
 
         test('18.Pedido: produto 1918 0 0 (promo a prazo 167) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3874 (outro recebimento 3860), prestamista 158, 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
     
-            Product.termInstallmentPrest() //PRODUTO
+            Product.termInstallmentPrest()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -606,7 +606,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ValidateService.garantiaNaoSep()
             Service.clickOKServiceLinked() //SERVIÇOS
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -629,13 +629,13 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ParcelasPage.one()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('19.Pedido: produto 1918 0 0 (promo a prazo 167) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3874 (outro recebimento 3874 agrupar), prestamista 158, 4 parcelas no recebimento Futuro com juros.', async ({ page }) => {
     
-            Product.termInstallmentPrest() //PRODUTO
+            Product.termInstallmentPrest()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -647,7 +647,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ValidateService.garantiaNaoSep()
             Service.clickOKServiceLinked() //SERVIÇOS
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -675,13 +675,13 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             GeralPedidosPage.adicionadoRecebAgrupado()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('20.Pedido: produto 1918 0 0 (promo a prazo 167) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3876 (outro recebimento 3860), prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
 
-            Product.termInstallmentPrest() //PRODUTO
+            Product.termInstallmentPrest()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -693,7 +693,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ValidateService.garantiaNaoSep()
             Service.clickOKServiceLinked() //SERVIÇOS
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -716,13 +716,13 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ParcelasPage.one()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('21.Pedido: produto 1918 0 0 (promo a prazo 167) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3876 (outro recebimento 3876 agrupar), prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
     
-            Product.termInstallmentPrest() //PRODUTO
+            Product.termInstallmentPrest()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -734,7 +734,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ValidateService.garantiaNaoSep()
             Service.clickOKServiceLinked() //SERVIÇOS)
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -762,13 +762,13 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             GeralPedidosPage.adicionadoRecebAgrupado()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('22.Pedido: produto 1920 0 0 (promo a prazo 169) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3875 (outro recebimento 3874), prestamista 158, 4 parcelas no recebimento Presente.',  async ({ page }) => {
 
-            Product.termInstallmentPrest() //PRODUTO
+            Product.termInstallmentPrest()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -780,7 +780,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ValidateService.garantiaNaoSep()
             Service.clickOKServiceLinked() //SERVIÇOS
             ValidateService.servLinked() ; ValidateService.garantiaNaoSep()
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -804,13 +804,13 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ParcelasPage.one()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('23.Pedido: produto 1920 0 0 (promo a prazo 169) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3875 (outro recebimento 3875 agrupar), prestamista 158, 4 parcelas no recebimento Presente.',  async ({ page }) => {
     
-            Product.termInstallmentPrest() //PRODUTO
+            Product.termInstallmentPrest()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -822,7 +822,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ValidateService.garantiaNaoSep()
             Service.clickOKServiceLinked() //SERVIÇOS)
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
-            Product.second() //PRODUTO
+            Product.second()
             ValidateBalance.comSwithBalancealdo()
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -851,7 +851,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             GeralPedidosPage.adicionadoRecebAgrupado()
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     })

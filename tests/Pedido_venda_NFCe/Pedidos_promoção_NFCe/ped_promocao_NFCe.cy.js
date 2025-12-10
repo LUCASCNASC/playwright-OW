@@ -24,7 +24,7 @@ test.describe('Gerar pedidos com promoção com entrega', () => {
 
         test('1.Pedido com promoção partida (promoção 152): produto 1868 0 0',  async ({ page }) => {
     
-            Product.promoMatch() //PRODUTO
+            Product.promoMatch()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto ; 
             Promotion.ticketPromotion() 
@@ -45,13 +45,13 @@ test.describe('Gerar pedidos com promoção com entrega', () => {
             cy.get('.active > md-collapsible-body > .layout-column > [style="position: relative"] > :nth-child(1) > div.ng-binding').click()
 
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     
         test('2.Pedido com promoção a prazo com entrada (promoção 150): produto 1866 0 0',  async ({ page }) => {
     
-            Product.promoDeadlineEntry() //PRODUTO
+            Product.promoDeadlineEntry()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto ; 
             Promotion.ticketPromotion() 
@@ -76,13 +76,13 @@ test.describe('Gerar pedidos com promoção com entrega', () => {
             // ProcessoRecebPage.main()
             // ParcelasPage.two()
             // AdvanceNormal.final()
-            // FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            // FinalizarPedidoPage.clickFinalizarPedidoPage()
             // FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('3.Pedido com promoção a prazo parcelado (promoção 151): produto 1867 0 0',  async ({ page }) => {
     
-            Product.promoDeadlineInstallment() //PRODUTO
+            Product.promoDeadlineInstallment()
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto ; 
             Promotion.ticketPromotion()
@@ -102,7 +102,7 @@ test.describe('Gerar pedidos com promoção com entrega', () => {
             //Escolher a forma de pagamento/parcelas
             cy.get('.active > md-collapsible-body > .layout-column > [style="position: relative"] > :nth-child(1) > div.ng-binding').click({force:true})
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })  
     })

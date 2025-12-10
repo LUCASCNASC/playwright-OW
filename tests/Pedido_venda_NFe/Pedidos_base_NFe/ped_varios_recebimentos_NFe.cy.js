@@ -20,7 +20,7 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
         CommandsGeneral.tituloPagina()
         ProcessoVendaPage.NFe()
         ChooseCliente.withRoute()
-        Product.fisrt() //PRODUTO
+        Product.fisrt()
         ValidateBalance.withBalance() //VALIDAR SALDO
         CommandsGeneral.selectProductSearch() //selecionar produto
     })
@@ -45,7 +45,7 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             ProcessoRecebPage.main() //SEGUNDA FORMA DE PAGAMENTO
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
@@ -64,7 +64,7 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             ProcessoRecebPage.main() //SEGUNDA FORMA DE PAGAMENTO
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
@@ -87,7 +87,7 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             ParcelasPage.one()
             AgruparRecebPage.notGroupReleases()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
@@ -110,7 +110,7 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             ParcelasPage.one()
             AgruparRecebPage.groupReleases()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
@@ -135,7 +135,7 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             AgruparRecebPage.selectReleasesGroup()
             AgruparRecebPage.clickGroup()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     })

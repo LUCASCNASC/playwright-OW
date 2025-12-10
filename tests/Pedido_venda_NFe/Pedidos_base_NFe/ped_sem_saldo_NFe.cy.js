@@ -18,7 +18,7 @@ test.describe('Tentar gerar pedido de venda com produto sem saldo - Regra de sal
 
         test('1.Pedido: produto 1869 0 0 (Venda local de produto sem saldo - sem entrega)',  async ({ page }) => {
             
-            Product.withoutBalance() //PRODUTO
+            Product.withoutBalance()
             ValidarSaldo.comSaldo() //VALIDAR SALDO
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho

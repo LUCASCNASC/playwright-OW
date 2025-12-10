@@ -15,12 +15,12 @@ import { CommandsGeneral } from '../../../../pages/commands.js';
 test.describe('Gerar pedido de entrega futura com entrega', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login() //login
-        CommandsGeneral.urlAposLogin() //url após login
-        CommandsGeneral.tituloPagina() //título da página
+        CommandsGeneral.login()
+        CommandsGeneral.urlAposLogin()
+        CommandsGeneral.tituloPagina()
         ProcessoVendaPage.deliveryFutureNFCe() //processo de entrega futura
-        ChooseCliente.withRoute() //escolher cliente com rota
-        Product.fisrt() //PRODUTO
+        ChooseCliente.withRoute()
+        Product.fisrt()
         ValidateBalance.withBalance() //VALIDAR SALDO
         CommandsGeneral.selectProductSearch() //selecionar produto
     })
@@ -42,7 +42,7 @@ test.describe('Gerar pedido de entrega futura com entrega', () => {
             ProcessoRecebPromoPage.pagPrincipal()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })    
         
@@ -52,7 +52,7 @@ test.describe('Gerar pedido de entrega futura com entrega', () => {
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
             Service.validateModalServLinked() //SERVICOS
             Service.clickOKServiceLinked()
-            Product.second() //PRODUTO //SEGUNDO PRODUTO
+            Product.second() //SEGUNDO PRODUTO
             ValidateBalance.withBalance() //VALIDAR SALDO
             CommandsGeneral.selectProductSearch() //selecionar produto
             CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
@@ -68,7 +68,7 @@ test.describe('Gerar pedido de entrega futura com entrega', () => {
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final() 
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })  
     })

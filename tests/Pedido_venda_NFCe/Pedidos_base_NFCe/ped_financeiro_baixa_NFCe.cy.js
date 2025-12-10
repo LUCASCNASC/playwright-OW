@@ -15,11 +15,11 @@ test.describe('Gerar pedido com financeiro na baixa com entrega', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()//login
-        CommandsGeneral.urlAposLogin() //url após login
-        CommandsGeneral.tituloPagina() //título da página
+        CommandsGeneral.urlAposLogin()
+        CommandsGeneral.tituloPagina()
         ProcessoVendaPage.financePaymentNFCe() //processo de financeiro na baixa
-        ChooseCliente.withRoute() //escolher cliente com rota
-        Product.fisrt() //PRODUTO
+        ChooseCliente.withRoute()
+        Product.fisrt()
         ValidateBalance.withBalance() //VALIDAR SALDO
         CommandsGeneral.selectProductSearch() //selecionar produto
     })
@@ -41,7 +41,7 @@ test.describe('Gerar pedido com financeiro na baixa com entrega', () => {
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
@@ -67,7 +67,7 @@ test.describe('Gerar pedido com financeiro na baixa com entrega', () => {
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //FINALIZAR PEDIDO
+            FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     })
