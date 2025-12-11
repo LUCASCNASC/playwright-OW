@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
 import { LoginPage } from '../../pages/login/LoginPage';
 
-const usunovo = "testtest"; //494
+const usunovo = "testtest";
 const senhausunovo = "!MV87gsp";
 const novasenha = "321@Teste";
 
@@ -18,7 +18,6 @@ test.describe('Logar com novo usuário', () => {
 
     test('1.Novo usuário - clicar em Fechar, não alterando a senha',  async ({ page }) => {
     
-        //Validando campo "informe seu usuário"
         cy.get('#txtusername')
             .should('be.visible')
             .and('have.value','')
@@ -28,7 +27,7 @@ test.describe('Logar com novo usuário', () => {
 
         LoginPage.validateSenhaTextoIcone()
 
-        //Campo Informe sua senha
+        
         cy.get('#txtpassword')
             .should('be.visible')
             .and('have.value','')
@@ -41,57 +40,46 @@ test.describe('Logar com novo usuário', () => {
         LoginPage.validateBotaoEntrarHabilitado()
         LoginPage.clickBotaoEntrar()
 
-        //Card Sua Senha expirou - Mensagem "Sua Senha expirou..."
         cy.get('.md-dialog-content-body')
             .should('be.visible')
             .and('have.text','Sua Senha expirou...')
 
-        //Card Sua Senha expirou - "OK" 
         cy.get('md-dialog-actions > .md-primary')
             .should('be.visible')
             .and('have.text','Ok')
             .and('not.have.attr', 'disabled')
 
-        //Card Sua Senha expirou - clica no botão "OK" 
         cy.get('md-dialog-actions > .md-primary')
             .click()
 
-        //Card Altere Sua Senha Temporária - título "Altere Sua Senha Temporária"
         cy.get('p')
             .contains('Altere Sua Senha Temporária')
             .should('be.visible')
 
-        //Card Altere Sua Senha Temporária - texto "Usuário"
         cy.get('.senha_nova > :nth-child(1)')
             .should('be.visible')
             .and('have.text','Usuário')
 
-        //Card Altere Sua Senha Temporária - campo para preenchimento "Usuário"
         cy.get(':nth-child(2) > .ng-pristine')
             .should('be.visible')
             .and('have.value',(usunovo))
 
-        //Card Altere Sua Senha Temporária - texto "Senha Atual"
         cy.get('.senha_nova > :nth-child(4)')
             .should('be.visible')
             .and('have.text','Senha Atual')
 
-        //Card Altere Sua Senha Temporária - campo para preenchimento "Senha Atual"
         cy.get(':nth-child(5) > .ng-pristine')
             .should('be.visible')
             .and('have.value','')
             .type((senhausunovo))
 
-        //Card Altere Sua Senha Temporária - olhos "Senha Atual"
         cy.get('md-icon[ng-click="showPasswordToggle()"]')
             .should('be.visible')
 
-        //Card Altere Sua Senha Temporária - botão "Gerar uma Nova Senha"
         cy.get('a[ng-click="gerarNovaSenha($event)"]')
             .should('be.visible')
             .and('not.have.attr', 'disabled')
 
-        //Card Altere Sua Senha Temporária - título "Regras para a Nova Senha"
         cy.get('p')
             .contains('Regras para a Nova Senha')
             .should('be.visible')
@@ -219,7 +207,7 @@ test.describe('Logar com novo usuário', () => {
 
         LoginPage.validateSenhaTextoIcone()
 
-        //Campo Informe sua senha
+        
         cy.get('#txtpassword')
             .should('be.visible')
             .and('have.value','')

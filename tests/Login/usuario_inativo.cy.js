@@ -17,7 +17,6 @@ test.describe('Usuário inativo', () => {
 
     test('1.Tentar logar com usuário inativo',  async ({ page }) => {
     
-        //Validando campo "informe seu usuário"
         cy.get('#txtusername')
             .should('be.visible')
             .and('have.value','')
@@ -26,8 +25,7 @@ test.describe('Usuário inativo', () => {
             .should('equal', 'Informe seu usuário')
 
         LoginPage.validateSenhaTextoIcone()
-
-        //Campo Informe sua senha
+        
         cy.get('#txtpassword')
             .should('be.visible')
             .and('have.value','')
@@ -40,25 +38,21 @@ test.describe('Usuário inativo', () => {
         LoginPage.validateBotaoEntrarHabilitado()
         LoginPage.clickBotaoEntrar()
 
-        //Card de mensagem 
         cy.get('.toast')
             .should('be.visible')
             .and('have.css', 'background-color', 'rgb(248, 148, 6)')
 
-        //Mensagem de Atenção
         cy.get('.toast-title')
             .should('be.visible')
             .and('have.text','Atenção')
 
-        //Mensagem "Usuário não está ativo."
         cy.get('.toast-message')
             .should('be.visible')
             .and('have.text','Usuário não está ativo.')
 
-        //Botão X para fechar mensagem
         cy.get('.toast-close-button')
             .should('be.visible')
 
-        LoginPage.validateIconeComputadorLogin() //Validando que não entrou no sistema
+        LoginPage.validateIconeComputadorLogin()
     })
 })
