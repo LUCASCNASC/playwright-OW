@@ -25,13 +25,13 @@ test.describe('Gerar pedidos com promoção com entrega', () => {
         test('1.Pedido com promoção partida (promoção 152): produto 1868 0 0',  async ({ page }) => {
     
             Product.promoMatch()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto ; 
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch()  ; 
             Promotion.ticketPromotion() 
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
+            CommandsGeneral.clickVoltageProduct() 
             Promotion.selectFirstPromoProduct()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked() 
             AdvanceNormal.toTransporter()
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
@@ -52,13 +52,13 @@ test.describe('Gerar pedidos com promoção com entrega', () => {
         test('2.Pedido com promoção a prazo com entrada (promoção 150): produto 1866 0 0',  async ({ page }) => {
     
             Product.promoDeadlineEntry()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto ; 
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch()  ; 
             Promotion.ticketPromotion() 
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
+            CommandsGeneral.clickVoltageProduct() 
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
@@ -83,13 +83,13 @@ test.describe('Gerar pedidos com promoção com entrega', () => {
         test('3.Pedido com promoção a prazo parcelado (promoção 151): produto 1867 0 0',  async ({ page }) => {
     
             Product.promoDeadlineInstallment()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto ; 
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch()  ; 
             Promotion.ticketPromotion()
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
+            CommandsGeneral.clickVoltageProduct() 
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA

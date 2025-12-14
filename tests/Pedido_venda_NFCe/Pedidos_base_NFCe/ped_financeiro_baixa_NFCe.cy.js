@@ -17,20 +17,20 @@ test.describe('Gerar pedido com financeiro na baixa com entrega', () => {
         CommandsGeneral.login()//login
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
-        ProcessoVendaPage.financePaymentNFCe() //processo de financeiro na baixa
+        ProcessoVendaPage.financePaymentNFCe() 
         ChooseCliente.withRoute()
         Product.fisrt()
-        ValidateBalance.withBalance() //VALIDAR SALDO
-        CommandsGeneral.selectProductSearch() //selecionar produto
+        ValidateBalance.withBalance() 
+        CommandsGeneral.selectProductSearch() 
     })
     
     context('Com entrega/ processo 9892 - caminho feliz', () => {
 
         test('1.Pedido: produto 1860 0 0',  async ({ page }) => {
                       
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             GeneralDelivery.modalInconsOnlyTransporter()
@@ -47,16 +47,16 @@ test.describe('Gerar pedido com financeiro na baixa com entrega', () => {
 
         test('2.Pedido: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
                       
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             Product.second() //SEGUNDO PRODUTO
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            Service.validateModalServLinked() //SERVICOS
+            ValidateBalance.withBalance() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
+            CommandsGeneral.selectProductSearch() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter() 
             GeneralDelivery.modalInconsOnlyTransporter()

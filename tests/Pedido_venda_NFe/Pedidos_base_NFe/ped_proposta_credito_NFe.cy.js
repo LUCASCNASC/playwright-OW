@@ -20,17 +20,17 @@ test.describe('Gerar pedido com proposta de crédito', () => {
         ProcessoVendaPage.NFe()
         ChooseCliente.withRoute()
         Product.fisrt()
-        ValidateBalance.withBalance() //VALIDAR SALDO
-        CommandsGeneral.selectProductSearch() //selecionar produto
+        ValidateBalance.withBalance() 
+        CommandsGeneral.selectProductSearch() 
     })
 
     context('Sem entrega/ processo 9860 - caminho feliz', () => {
 
         test('1.Pedido: produto 1860 0 0 - (Pedido de venda sem entrega, com proposta de crédito.)',  async ({ page }) => {
 
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments()

@@ -21,10 +21,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
         ProcessoVendaPage.NFe()
         ChooseCliente.withRoute()
         Product.fisrt()
-        ValidateBalance.withBalance() //VALIDAR SALDO
-        CommandsGeneral.selectProductSearch() //selecionar produto
-        CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-        CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+        ValidateBalance.withBalance() 
+        CommandsGeneral.selectProductSearch() 
+        CommandsGeneral.clickVoltageProduct() 
+        CommandsGeneral.clickAddProduct() 
         Service.validateModalServLinked()
     })
 
@@ -55,10 +55,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.AddGarantSepMesmoProc() ; ValidateService.addMODestNãoSepara()
             ThrowDelivery.freightFirst() //ENTREGA
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
@@ -97,10 +97,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.AddGarantSepMesmoProc() ; ValidateService.addMONaoDestSepMesmoProc()
             ThrowDelivery.freightFirst() //ENTREGA
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Servico.clickOKServiceLinked() //SERVIÇOS - SEGUNDO PRODUTO
             ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
             AdvanceNormal.toInstallments() 
@@ -138,10 +138,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.AddGarantSepMesmoProc() ; ValidateService.addMONaoDestSepProcDif()
             ThrowDelivery.freightFirst() //ENTREGA
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.clickOKServiceLinked() //SERVIÇOS
             ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
             AdvanceNormal.toInstallments() 
@@ -179,10 +179,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep() ; ValidateService.addMODestNãoSepara()
             ThrowDelivery.freightFirst() //ENTREGA
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() //ENTREGA
@@ -221,10 +221,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep() ; ValidateService.addMONaoDestSepMesmoProc()
             ThrowDelivery.freightFirst() //ENTREGA
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
@@ -263,10 +263,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep() ; ValidateService.addMONaoDestSepProcDif()
             ThrowDelivery.freightFirst() //ENTREGA
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
@@ -305,10 +305,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.addGarantSepTituloProcDif() ; ValidateService.addMODestNãoSepara()
             ThrowDelivery.freightFirst() //ENTREGA
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
@@ -347,10 +347,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.addGarantSepTituloProcDif() ; ValidateService.addMONaoDestSepMesmoProc()
             ThrowDelivery.freightFirst() //ENTREGA
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
@@ -389,10 +389,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             ValidateService.servLinked() ; ValidateService.addGarantSepTituloProcDif() ; ValidateService.addMONaoDestSepProcDif()
             ThrowDelivery.freightFirst() //ENTREGA
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
@@ -433,10 +433,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             ValidateService.servLinked() ; ValidateService.AddGarantSepMesmoProc() ; ValidateService.addMODestNãoSepara()
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
@@ -474,10 +474,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             ValidateService.servLinked() ; ValidateService.AddGarantSepMesmoProc() ; ValidateService.addMONaoDestSepMesmoProc()
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
@@ -515,10 +515,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             ValidateService.servLinked() ; ValidateService.AddGarantSepMesmoProc() ; ValidateService.addMONaoDestSepProcDif()
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
@@ -556,10 +556,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep() ; ValidateService.addMODestNãoSepara()
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
@@ -597,10 +597,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep() ; ValidateService.addMONaoDestSepMesmoProc()
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
@@ -638,10 +638,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep() ; ValidateService.addMONaoDestSepProcDif()
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
@@ -679,10 +679,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             ValidateService.servLinked() ; ValidateService.addGarantSepTituloProcDif() ; ValidateService.addMODestNãoSepara()
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
@@ -719,10 +719,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             ValidateService.servLinked() ; ValidateService.addGarantSepTituloProcDif() ; ValidateService.addMONaoDestSepMesmoProc()
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
@@ -760,10 +760,10 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             ValidateService.servLinked() ; ValidateService.addGarantSepTituloProcDif() ; ValidateService.addMONaoDestSepProcDif()
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()

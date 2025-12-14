@@ -21,18 +21,18 @@ test.describe('Gerar pedido normal com entrega', () => {
         ProcessoVendaPage.NFCe()
         ChooseCliente.withRoute()
         Product.kitFirst()
-        ValidateBalance.withBalance() //VALIDAR SALDO
-        CommandsGeneral.selectProductSearch() //selecionar produto
+        ValidateBalance.withBalance() 
+        CommandsGeneral.selectProductSearch() 
     })
     
     context('Com entrega/processo 9890 - caminho feliz', () => {
         
         test('Pedido1.: kit 1862 0 0',  async ({ page }) => {
                       
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
+            CommandsGeneral.clickVoltageProduct() 
             GeralPedidosPage.compositionKit()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             GeneralDelivery.modalInconsOnlyTransporter()

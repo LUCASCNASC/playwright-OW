@@ -28,15 +28,15 @@ test.describe('Gerar pedidos com promoção e serviços com isenção de juros',
         test('1.Pedido com promoção a prazo/parcelas (promoção 159): produto 1891 0 0 com garantia (isenta de juros)',  async ({ page }) => {
     
             Product.firstInstallmentDeadline()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Promotion.typeServiceFreeValidate()
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPromoPage.pagPrincipal()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.garantiaSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
             Service.clickOKServiceLinked()
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc()
@@ -52,15 +52,15 @@ test.describe('Gerar pedidos com promoção e serviços com isenção de juros',
         test('2.Pedido com promoção a prazo/entrada + parcelas (promoção 158): produto 1895 0 0 com garantia (isenta de juros)',  async ({ page }) => {
     
             Product.secondInstallmentDeadline()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Promotion.typeServiceFreeValidate()
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPromoPage.pagPrincipal()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.garantiaSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
             Service.clickOKServiceLinked()
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc()
@@ -94,14 +94,14 @@ test.describe('Gerar pedidos com promoção e serviços com isenção de juros',
         test('3.Pedido com promoção a partida (promoção 161): produto 1893 0 0 com prestamista (isento de juros)',  async ({ page }) => {
     
             Product.thirdInstallmentDeadline()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPage.withMoneylender()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc()
             ThrowDelivery.freightFirst() //ENTREGA
@@ -119,15 +119,15 @@ test.describe('Gerar pedidos com promoção e serviços com isenção de juros',
         test('4.Pedido com promoção a prazo/parcelas (promoção 162): produto 1894 0 0 com garantia (isenta de juros) e prestamista (com juros)',  async ({ page }) => {
     
             Product.fourthInstallmentDeadline()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Promotion.typeServiceFreeValidate()
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPage.withMoneylender()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.garantiaSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
             Service.clickOKServiceLinked()
             ValidateService.servLinked() ; ValidateService.AddGarantSepMesmoProc()

@@ -20,11 +20,11 @@ test.describe('Gerar pedidos com Garantia e com entrega', () => {
         ProcessoVendaPage.NFCe()
         ChooseCliente.withRoute()
         Product.fisrt()
-        ValidateBalance.withBalance() //VALIDAR SALDO
-        CommandsGeneral.selectProductSearch() //selecionar produto
-        CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-        CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-        Service.validateModalServLinked() //SERVICOS
+        ValidateBalance.withBalance() 
+        CommandsGeneral.selectProductSearch() 
+        CommandsGeneral.clickVoltageProduct() 
+        CommandsGeneral.clickAddProduct() 
+        Service.validateModalServLinked() 
     })   
 
     context('Com entrega/processo 9890 - caminho feliz', () => {
@@ -51,11 +51,11 @@ test.describe('Gerar pedidos com Garantia e com entrega', () => {
             Service.garantiaSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
             Service.clickOKServiceLinked() //SERVIÇOS
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
@@ -92,11 +92,11 @@ test.describe('Gerar pedidos com Garantia e com entrega', () => {
             Service.garantiaNaoSep() //Marcar garantia "T.A. Garantia Não Separa"
             Service.clickOKServiceLinked() //SERVIÇOS
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
@@ -133,11 +133,11 @@ test.describe('Gerar pedidos com Garantia e com entrega', () => {
             Service.garantiaSepTituloProcDif() //Marcar Garantia separa titulo em um processo diferente
             Service.clickOKServiceLinked() //SERVIÇOS
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA

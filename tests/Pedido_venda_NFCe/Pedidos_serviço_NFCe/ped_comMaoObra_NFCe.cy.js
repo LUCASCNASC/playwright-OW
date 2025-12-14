@@ -20,11 +20,11 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
         ProcessoVendaPage.NFCe()
         ChooseCliente.withRoute()
         Product.fisrt()
-        ValidateBalance.withBalance() //VALIDAR SALDO
-        CommandsGeneral.selectProductSearch() //selecionar produto
-        CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-        CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-        Service.validateModalServLinked() //SERVICOS
+        ValidateBalance.withBalance() 
+        CommandsGeneral.selectProductSearch() 
+        CommandsGeneral.clickVoltageProduct() 
+        CommandsGeneral.clickAddProduct() 
+        Service.validateModalServLinked() 
     })
 
     context('Com entrega/processo 9890 - caminho feliz', () => {
@@ -51,11 +51,11 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             Service.garantiaNaoSep()  //Marcar Mão de Obra "T.A. MO Destaca e Não Separa"
             Service.clickOKServiceLinked() //SERVIÇOS
             Product.second() //SEGUNDO PRODUTO
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS //SERVIÇOS - SEGUNDO PRODUTO
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked()  //SERVIÇOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
@@ -92,11 +92,11 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             Service.garantiaSepMesmoProc() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Mesmo Processo"
             Service.clickOKServiceLinked()
             Product.second() //SEGUNDO PRODUTO
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
@@ -133,11 +133,11 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             Service.garantiaSepTituloProcDif() //Marcar Mão de obra que não destaca e separa título em processo diferente
             Service.clickOKServiceLinked()
             Product.second() //SEGUNDO PRODUTO
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA

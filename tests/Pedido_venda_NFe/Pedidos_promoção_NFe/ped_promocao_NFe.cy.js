@@ -28,14 +28,14 @@ test.describe('Gerar pedidos com promoção', () => {
         test('1.Pedido com promoção partida (promoção 152): produto 1868 0 0',  async ({ page }) => {
     
             Product.promoMatch()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Promotion.selectFirstPromoProduct() //PROMOCAO
             ProcessoRecebPromoPage.pagPrincipal()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments()
@@ -49,14 +49,14 @@ test.describe('Gerar pedidos com promoção', () => {
         test('2.Pedido com promoção a prazo com entrada (promoção 150): produto 1866 0 0',  async ({ page }) => {
     
             Product.promoDeadlineEntry()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
             ProcessoRecebPromoPage.pagPrincipal()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments()
@@ -76,14 +76,14 @@ test.describe('Gerar pedidos com promoção', () => {
         test('3.Pedido com promoção a prazo parcelado (promoção 151): produto 1867 0 0',  async ({ page }) => {
     
             Product.promoDeadlineInstallment()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
             ProcessoRecebPromoPage.pagPrincipal()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments()
@@ -100,22 +100,22 @@ test.describe('Gerar pedidos com promoção', () => {
         test('4.Pedido com promoção partida (promoção 152): produto 1868 0 0 e produto 1870 0 0 (sem promoção)',  async ({ page }) => {
     
             Product.promoMatch()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
             ProcessoRecebPromoPage.pagPrincipal()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
             AdvanceNormal.toInstallments()
@@ -136,22 +136,22 @@ test.describe('Gerar pedidos com promoção', () => {
         test('5.Pedido com promoção a prazo com entrada (promoção 150): produto 1866 0 0 e produto 1870 0 0 (sem promoção)',  async ({ page }) => {
     
             Product.promoDeadlineEntry()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
             ProcessoRecebPromoPage.pagPrincipal()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
             AdvanceNormal.toInstallments()
@@ -173,14 +173,14 @@ test.describe('Gerar pedidos com promoção', () => {
         test('6.Pedido com promoção partida (promoção 152): produto 1868 0 0',  async ({ page }) => {
     
             Product.promoMatch()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPromoPage.pagPrincipal()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments() //ENTREGA
@@ -198,14 +198,14 @@ test.describe('Gerar pedidos com promoção', () => {
         test('7.Pedido com promoção a prazo com entrada (promoção 150): produto 1866 0 0',  async ({ page }) => {
     
             Product.promoDeadlineEntry()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
             ProcessoRecebPromoPage.pagPrincipal()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
@@ -237,13 +237,13 @@ test.describe('Gerar pedidos com promoção', () => {
         test('8.Pedido com promoção a prazo parcelado (promoção 151): produto 1867 0 0',  async ({ page }) => {
     
             Product.promoDeadlineInstallment()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
             ProcessoRecebPromoPage.pagPrincipal()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
@@ -265,19 +265,19 @@ test.describe('Gerar pedidos com promoção', () => {
         test('9.Pedido com promoção partida (promoção 152): produto 1868 0 0 e produto 1870 0 0 (sem promoção)',  async ({ page }) => {
     
             Product.promoMatch()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
+            ValidateBalance.withBalance() 
+            CommandsGeneral.clickVoltageProduct() 
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct() //PROMOÇÃO
             ProcessoRecebPromoPage.pagPrincipal()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()

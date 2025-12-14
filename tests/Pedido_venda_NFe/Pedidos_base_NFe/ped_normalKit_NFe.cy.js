@@ -21,18 +21,18 @@ test.describe('Gerar pedido normal', () => {
         ProcessoVendaPage.NFe()
         ChooseCliente.withRoute()
         Product.kitFirst()
-        ValidateBalance.withBalance() //VALIDAR SALDO
-        CommandsGeneral.selectProductSearch() //selecionar produto
+        ValidateBalance.withBalance() 
+        CommandsGeneral.selectProductSearch() 
     })
   
     context('Sem entrega/ processo 9860 - caminho feliz', () => {
         
         test('1.Pedido: kit 1862 0 0',  async ({ page }) => {
                       
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
+            CommandsGeneral.clickVoltageProduct() 
             GeralPedidosPage.compositionKit()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments()
@@ -50,10 +50,10 @@ test.describe('Gerar pedido normal', () => {
         
         test('2.Pedido: kit 1862 0 0',  async ({ page }) => {
                       
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
+            CommandsGeneral.clickVoltageProduct() 
             GeralPedido.compositionKit()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()

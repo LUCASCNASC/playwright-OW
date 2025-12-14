@@ -27,11 +27,11 @@ test.describe('Gerar pedido de venda com desconto', () => {
         test('1.Pedido: produto 1912 0 0 com desconto Sub (-) / R$',  async ({ page }) => {
 
             Product.discountNumber()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             OrderDiscount.clickButtonDiscount() //DESCONTO
             OrderDiscount.validateModalSub()
@@ -50,11 +50,11 @@ test.describe('Gerar pedido de venda com desconto', () => {
         test('2.Pedido: produto 1913 0 0 com desconto Sub (-) / % (Porcentagem)',  async ({ page }) => {
 
             Product.discountPercentage()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             OrderDiscount.clickButtonDiscount() //DESCONTO
             OrderDiscount.validateModalSub()
@@ -73,11 +73,11 @@ test.describe('Gerar pedido de venda com desconto', () => {
         test('3.Pedido: produto 1914 0 0 com desconto Sub (-) / VALOR FIXO',  async ({ page }) => {
 
             Product.discountValueFixed()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             OrderDiscount.clickButtonDiscount() //DESCONTO
             OrderDiscount.validateModalSub()

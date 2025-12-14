@@ -192,7 +192,7 @@ test.describe('Logar com novo usuário', () => {
         cy.get('[ng-show="!loading"] > a')
             .click()
 
-        LoginPage.validateIconeComputadorLogin() //Validando que não entrou no sistema
+        LoginPage.validateIconeComputadorLogin() 
     })
 
     test('2.Novo usuário - clicar em CONFIRMAR, alterando a senha',  async ({ page }) => {

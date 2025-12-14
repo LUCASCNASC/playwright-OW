@@ -26,12 +26,12 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
         test('1.Pedido remoto: produto 1860 0 0 - (Venda remota de produto com saldo na filial do faturamento )',  async ({ page }) => {
 
             Product.fisrt()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             GeralPedidosPage.changeBranchInvoicing()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
@@ -48,21 +48,21 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
         test('2.Pedido remoto: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
 
             Product.fisrt()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             GeralPedidosPage.changeBranchInvoicing()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS
             Service.clickOKServiceLinked()
             Product.freightSecond() //SEGUNDO PRODUTO
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             GeralPedidosPage.changeBranchInvoicing()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
@@ -79,13 +79,13 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
         test('3.Pedido remoto: kit 1877 0 0',  async ({ page }) => {
 
             Product.kitRemote()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             GeralPedidosPage.changeBranchInvoicing()
             GeralPedidosPage.compositionKit()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
@@ -105,12 +105,12 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
         test('4.Pedido remoto - com saldo no CD (filial 1) - deve permitir fazer o pedido - (Venda remota de produto sem saldo na filial do faturamento, mas com saldo no CD do faturamento - com entrega)',  async ({ page }) => {
 
             Product.remoteWithCD()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             GeralPedidosPage.changeBranchInvoicing()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
@@ -127,10 +127,10 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
         test('5.Pedido remoto - SEM saldo no CD (filial 1) - NÃO deve permitir fazer o pedido - (Venda remota de produto sem saldo na filial do faturamento, sem saldo da CD do faturamento)',  async ({ page }) => {
 
             Product.remoteWithoutCD()
-            ValidateBalance.withoutBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withoutBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             GeralPedidosPage.changeBranchInvoicing()
 
             //Validando mensagem "Este produto não possui saldo na filial selecionada."

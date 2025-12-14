@@ -20,10 +20,10 @@ test.describe('Gerar pedidos com Mão de obra', () => {
         ProcessoVendaPage.NFe()
         ChooseCliente.withRoute()
         Product.fisrt()
-        ValidateBalance.withBalance() //VALIDAR SALDO
-        CommandsGeneral.selectProductSearch() //selecionar produto
-        CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-        CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+        ValidateBalance.withBalance() 
+        CommandsGeneral.selectProductSearch() 
+        CommandsGeneral.clickVoltageProduct() 
+        CommandsGeneral.clickAddProduct() 
         Service.validateModalServLinked()
     })
   
@@ -52,10 +52,10 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             ValidateService.servLinked() ; ValidateService.addMODestNãoSepara()
             ThrowDelivery.freightFirst() //ENTREGA
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
@@ -92,10 +92,10 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc()
             ThrowDelivery.freightFirst() //ENTREGA
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() //ENTREGA- SEGUNDO PRODUTO
@@ -132,10 +132,10 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepProcDif()
             ThrowDelivery.freightFirst() //ENTREGA
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
@@ -174,10 +174,10 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             ValidateService.servLinked() ; ValidateService.addMODestNãoSepara()
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
@@ -213,10 +213,10 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc()
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTP
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
@@ -252,10 +252,10 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             Service.clickOKServiceLinked() //SERVIÇOS
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepProcDif()
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()

@@ -21,17 +21,17 @@ test.describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244
         ProcessoVendaPage.NFe()
         ChooseCliente.withRoute()
         Product.roundUpDown()
-        ValidateBalance.withBalance() //VALIDAR SALDO
-        CommandsGeneral.selectProductSearch() //selecionar produto
+        ValidateBalance.withBalance() 
+        CommandsGeneral.selectProductSearch() 
     })
 
     context('Sem entrega/ processo 9860 - caminho feliz - processo de inclusão 3860', () => {
 
         test('1.Pedido: produto 1860 0 0 - arredondar para baixo',  async ({ page }) => {
 
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments()
@@ -50,9 +50,9 @@ test.describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244
 
         test('2.Pedido: produtos 1860 0 0 - arredondar para cima',  async ({ page }) => {
 
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked() 
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments()

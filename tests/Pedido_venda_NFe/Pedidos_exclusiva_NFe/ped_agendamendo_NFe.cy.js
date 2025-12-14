@@ -28,19 +28,19 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
 
         test('1.Pedido: produto normal (com saldo e com entrega, 15 dias) e um kit remoto (2 composições, sem saldo e sem a receber, 20 dias).',  async ({ page }) => {
 
-            ProductExclusiva.firstNormal() EXCLUSIVA
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            ProductExclusiva.firstNormal() 
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            ProductExclusiva.kitWithoutBalanceScheduling() KIT
-            ValidateBalance.withoutBalance() //VALIDAR SALDO
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ProductExclusiva.kitWithoutBalanceScheduling() 
+            ValidateBalance.withoutBalance() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             GeralPedidosPage.trocarFilialFaturamento()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            CommandsGeneral.clickAddProduct() 
             AdvanceNormal.toTransporter()
             GeneralDelivery.modalInconsApenasTransp()
             GeneralDelivery.escolherTransportadora()
@@ -57,17 +57,17 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
         test('2.Pedido: produto normal (com saldo e com entrega) e um kit com composição 6 volumes (data atual + parametro 552/ 5 dias).',  async ({ page }) => {
 
             ProductExclusiva.firstNormal()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            ProductExclusiva.kitVolumes() KIT
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ProductExclusiva.kitVolumes() 
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             AdvanceNormal.toTransporter()
             GeneralDelivery.modalInconsApenasTransp()
             GeneralDelivery.escolherTransportadora()
@@ -87,11 +87,11 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
         test('3.Pedido: um produto (sem saldo e com saldo a receber para 10 dias, e com entrega), e ter um agendamento para a data de previsão.',  async ({ page }) => {
 
             ProductExclusiva.balanceReceive()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             GeneralDelivery.modalInconsApenasTransp()
@@ -110,27 +110,27 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
 
             ProductExclusiva.balanceReceiveTwoLines()
             PedExclusiva.balanceRemoteReceive()
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             GeralPedidosPage.trocarFilialFaturamento()
             PedExclusiva.increaseAmountSaleFive()
-            CommandsGeneral.selectProductSearch() //selecionar produto
+            CommandsGeneral.selectProductSearch() 
             ProductExclusiva.balanceReceiveTwoLines() //SEGUNDO PRODUTO
             PedExclusiva.balanceRemoteReceive()
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto 
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            CommandsGeneral.clickVoltageProduct()  
+            CommandsGeneral.clickAddProduct() 
             GeralPedidosPage.trocarFilialFaturamento()
             PedExclusiva.increaseAmountSaleTen()
         })
 
         test('5.Pedido: venda normal: produto 1896 0 0 (sem entrega)',  async ({ page }) => {
     
-            ProductExclusiva.firstNormal() EXCLUSIVA
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
-            Service.validateModalServLinked() //SERVICOS
+            ProductExclusiva.firstNormal() 
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() //ENTREGA
             AdvanceNormal.toInstallments()

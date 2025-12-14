@@ -68,7 +68,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
             LoginPage.validateBotaoEntrarHabilitado()
             LoginPage.clickBotaoEntrar()
             LoginPage.validateMessageSenhaIncorreta() 
-            LoginPage.validateIconeComputadorLogin() //Validando que não entrou no sistema
+            LoginPage.validateIconeComputadorLogin() 
         })
     
         test('3.Login - passar senha errada (deve dar mensagem de Login ou Senha do usuário está incorreto.)',  async ({ page }) => {
@@ -118,7 +118,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
             LoginPage.validateEsqueciSenha()
             LoginPage.validateBotaoEntrarDesabilitado()
             LoginPage.clickBotaoEntrar()
-            LoginPage.validateIconeComputadorLogin() //Validando que não entrou no sistema
+            LoginPage.validateIconeComputadorLogin() 
         })
     
         test('5.Login - passar somente login (botão ENTRAR deve ficar desabilitado)',  async ({ page }) => {

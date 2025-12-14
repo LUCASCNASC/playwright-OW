@@ -29,10 +29,10 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo - Or
         test('1.Pedido: produto 1860 0 0, inclusão 3881, prestamista 162 (99,30), 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
     
             Product.fisrt()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
@@ -52,18 +52,18 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo - Or
         test('2.Pedido: produto 1860 0 0 e 1870 0 0, inclusão 3881 e 3860, prestamista 162 (99,30), 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
     
             Product.fisrt()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
             Service.clickOKServiceLinked() //SERVIÇOS
             Product.second()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
@@ -86,13 +86,13 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo - Or
         test('3.Pedido: produto 1922 0 0 (promo a prazo 171), inclusão 3881, prestamista 162, 4 parcelas no recebimento Futuro com juros',  async ({ page }) => {
     
             Product.termFisrtPrestAbatVF()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPromoPage.termFutWithFeesPrestAbatVF()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
             Service.clickOKServiceLinked() //SERVIÇOS
             AdvanceNormal.toTransporter()
@@ -112,12 +112,12 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo - Or
         test('4.Pedido: produto 1923 0 0 + garantia Não separa (promo a prazo 172 - isentar juros serviços), inclusão 3881, prestamista 162, 4 parcelas no recebimento Futuro com juros',  async ({ page }) => {
 
             Product.termSecondPrestAbatVF()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Promotion.selectFirstPromoProduct()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
             Service.clickOKServiceLinked() //SERVIÇOS
@@ -139,13 +139,13 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo - Or
         test('5.Pedido: produto 1924 0 0 + garantia Não separa (promo a prazo 173 - isentar juros garantia), inclusão 3882, prestamista 162, 4 parcelas no recebimento Futuro com juros',  async ({ page }) => {
 
             Product.prazoPrestTercAbatVF()
-            ValidateBalance.withBalance() //VALIDAR SALDO
-            CommandsGeneral.selectProductSearch() //selecionar produto
-            CommandsGeneral.clickVoltageProduct() //escolher voltagem do produto
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            ValidateBalance.withBalance() 
+            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickAddProduct() 
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPromoPage.termPresentWithFeesPrestAbatVFOS()
-            CommandsGeneral.clickAddProduct() //clicar para adicionar produto ao carrinho
+            CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
             Service.clickOKServiceLinked() //SERVIÇOS
