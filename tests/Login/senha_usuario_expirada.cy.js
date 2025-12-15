@@ -1,9 +1,6 @@
 import { test } from '@playwright/test';
 import { LoginPage } from '../../pages/login/LoginPage';
-
-const usuSabiumAutomacao = "usu.expiradosenha"; //usuário 415
-const senhaautomacao = "123.automacao";
-const novasenha = "123.novasenha";
+import users from '../../tests/users.json';
 
 test.describe('Senha do usuário expirada', () => {
 
@@ -23,7 +20,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get('#txtusername')
                 .should('be.visible')
                 .and('have.value','')
-                .type((usuSabiumAutomacao))
+                .type(users.userSabium.login)
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
 
@@ -32,7 +29,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get('#txtpassword')
                 .should('be.visible')
                 .and('have.value','')
-                .type((senhaautomacao))
+                .type(users.userSabium.password)
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
 
@@ -52,7 +49,7 @@ test.describe('Senha do usuário expirada', () => {
 
             cy.get(':nth-child(2) > .ng-pristine')
                 .should('be.visible')
-                .and('have.value', usuSabiumAutomacao)
+                .and('have.value', users.userSabium.login)
 
             cy.get('.senha_nova > :nth-child(4)')
                 .should('be.visible')
@@ -61,7 +58,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get(':nth-child(5) > .ng-pristine')
                 .should('be.visible')
                 .and('have.value','')
-                .type(senhaautomacao, {force:true})
+                .type(users.userSabium.password, {force:true})
 
             cy.get('md-icon[ng-click="showPasswordToggle()"]')
                 .should('be.visible')
@@ -79,7 +76,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get('input[name="password_new"]')
                 .should('be.visible')
                 .and('have.value','')
-                .type(novasenha)
+                .type(users.userSabiumNovo.newPassword)
 
             cy.get('md-icon[ng-click="showPasswordToggle(true)"]')
                 .should('be.visible')
@@ -98,7 +95,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get(':nth-child(11) > .ng-pristine')
                 .should('be.visible')
                 .and('have.value','')
-                .type((novasenha))
+                .type(users.userSabiumNovo.newPassword)
 
             cy.contains('span', 'As novas senhas informadas são iguais.')
                 .should('be.visible')
@@ -127,7 +124,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get('#txtusername')
                 .should('be.visible')
                 .and('have.value','')
-                .type((usuSabiumAutomacao))
+                .type(users.userSabium.login)
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
 
@@ -136,7 +133,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get('#txtpassword')
                 .should('be.visible')
                 .and('have.value','')
-                .type((senhaautomacao))
+                .type(users.userSabium.password)
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
 
@@ -156,7 +153,7 @@ test.describe('Senha do usuário expirada', () => {
 
             cy.get(':nth-child(2) > .ng-pristine')
                 .should('be.visible')
-                .and('have.value', usuSabiumAutomacao)
+                .and('have.value', users.userSabium.login)
 
             cy.get('.senha_nova > :nth-child(4)')
                 .should('be.visible')
@@ -165,7 +162,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get(':nth-child(5) > .ng-pristine')
                 .should('be.visible')
                 .and('have.value','')
-                .type(senhaautomacao, {force:true})
+                .type(users.userSabium.password, {force:true})
 
             cy.get('md-icon[ng-click="showPasswordToggle()"]')
                 .should('be.visible')
@@ -183,7 +180,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get('input[name="password_new"]')
                 .should('be.visible')
                 .and('have.value','')
-                .type(novasenha)
+                .type(users.userSabiumNovo.newPassword)
 
             cy.get('md-icon[ng-click="showPasswordToggle(true)"]')
                 .should('be.visible')
@@ -202,7 +199,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get(':nth-child(11) > .ng-pristine')
                 .should('be.visible')
                 .and('have.value','')
-                .type((novasenha))
+                .type(users.userSabiumNovo.newPassword)
 
             cy.contains('span', 'As novas senhas informadas são iguais.')
                 .should('be.visible')
@@ -243,7 +240,7 @@ test.describe('Senha do usuário expirada', () => {
                 cy.get('#txtusername')
                     .should('be.visible')
                     .and('have.value','')
-                    .type(usuSabiumAutomacao)
+                    .type(users.userSabium.login)
                     .invoke('attr', 'placeholder')
                     .should('equal', 'Informe seu usuário')
         
@@ -252,7 +249,7 @@ test.describe('Senha do usuário expirada', () => {
                 cy.get('#txtpassword')
                     .should('be.visible')
                     .and('have.value','')
-                    .type(novasenha)
+                    .type(users.userSabiumNovo.newPassword)
                     .invoke('attr', 'placeholder')
                     .should('equal', 'Informe sua senha')
         
@@ -275,7 +272,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get('#txtusername')
                 .should('be.visible')
                 .and('have.value','')
-                .type(usuSabiumAutomacao)
+                .type(users.userSabium.login)
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
     
@@ -284,7 +281,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get('#txtpassword')
                 .should('be.visible')
                 .and('have.value','')
-                .type(novasenha)
+                .type(users.userSabiumNovo.newPassword)
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
     
@@ -306,7 +303,7 @@ test.describe('Senha do usuário expirada', () => {
 
             cy.get(':nth-child(2) > .ng-pristine')
                 .should('be.visible')
-                .and('have.value', usuSabiumAutomacao)
+                .and('have.value', users.userSabium.login)
 
             cy.get('.senha_nova > :nth-child(4)')
                 .should('be.visible')
@@ -315,7 +312,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get(':nth-child(5) > .ng-pristine')
                 .should('be.visible')
                 .and('have.value','')
-                .type(novasenha, {force:true})
+                .type(users.userSabiumNovo.newPassword, {force:true})
 
             cy.get('md-icon[ng-click="showPasswordToggle()"]')
                 .should('be.visible')
@@ -333,7 +330,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get('input[name="password_new"]')
                 .should('be.visible')
                 .and('have.value','')
-                .type(senhaautomacao)
+                .type(users.userSabium.password)
 
             cy.get('md-icon[ng-click="showPasswordToggle(true)"]')
                 .should('be.visible')
@@ -352,7 +349,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get(':nth-child(11) > .ng-pristine')
                 .should('be.visible')
                 .and('have.value','')
-                .type((senhaautomacao))
+                .type(users.userSabium.password)
 
             cy.contains('span', 'As novas senhas informadas são iguais.')
                 .should('be.visible')
@@ -381,7 +378,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get('#txtusername')
                 .should('be.visible')
                 .and('have.value','')
-                .type(usuSabiumAutomacao)
+                .type(users.userSabium.login)
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
     
@@ -390,7 +387,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get('#txtpassword')
                 .should('be.visible')
                 .and('have.value','')
-                .type(novasenha)
+                .type(users.userSabiumNovo.newPassword)
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
     
@@ -412,7 +409,7 @@ test.describe('Senha do usuário expirada', () => {
 
             cy.get(':nth-child(2) > .ng-pristine')
                 .should('be.visible')
-                .and('have.value', usuSabiumAutomacao)
+                .and('have.value', users.userSabium.login)
 
             cy.get('.senha_nova > :nth-child(4)')
                 .should('be.visible')
@@ -421,7 +418,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get(':nth-child(5) > .ng-pristine')
                 .should('be.visible')
                 .and('have.value','')
-                .type(novasenha, {force:true})
+                .type(users.userSabiumNovo.newPassword, {force:true})
 
             cy.get('md-icon[ng-click="showPasswordToggle()"]')
                 .should('exist')
@@ -439,7 +436,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get('input[name="password_new"]')
                 .should('be.visible')
                 .and('have.value','')
-                .type(senhaautomacao)
+                .type(users.userSabium.password)
 
             cy.get('md-icon[ng-click="showPasswordToggle(true)"]')
                 .should('be.visible')
@@ -459,7 +456,7 @@ test.describe('Senha do usuário expirada', () => {
             cy.get(':nth-child(11) > .ng-pristine')
                 .should('be.visible')
                 .and('have.value','')
-                .type((senhaautomacao))
+                .type(users.userSabium.password)
 
             cy.contains('span', 'As novas senhas informadas são iguais.')
                 .should('be.visible')

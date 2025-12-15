@@ -1,8 +1,6 @@
 import { test } from '@playwright/test';
 import { LoginPage } from '../../pages/login/LoginPage';
-
-const usuSabiumAutomacao = "usu.expiradosistema"; //usuário 496
-const senhaautomacao = "123.automacao";
+import users from '../../tests/users.json';
 
 test.describe('Senha do usuário expirada', () => {
 
@@ -20,7 +18,7 @@ test.describe('Senha do usuário expirada', () => {
         cy.get('#txtusername')
             .should('be.visible')
             .and('have.value','')
-            .type((usuSabiumAutomacao))
+            .type(users.userSabium.login)
             .invoke('attr', 'placeholder')
             .should('equal', 'Informe seu usuário')
 

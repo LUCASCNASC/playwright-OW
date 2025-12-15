@@ -1,10 +1,6 @@
 import { test } from '@playwright/test';
 import { LoginPage } from '../../pages/login/LoginPage';
-
-const usuSabiumAutomacao = "sabium.automacao"; //usuário ERP Sabium (contexto 1)
-const senhaautomacao = "123.automacao"; //senha usuário ERP Sabium (contexto 1)
-const usuarioSbx = "sbx.automacao" //usuário SBX Sabium (contexto 3)
-const senhaSbx = "1234.sbx" //senha usuário SBX Sabium (contexto 3)
+import users from '../../tests/users.json';
 
 test.describe('Login caminho feliz - usuário normal senha liberada', () => {
 
@@ -24,7 +20,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
             cy.get('#txtusername')
                 .should('be.visible')
                 .and('have.value','')
-                .type((usuSabiumAutomacao))
+                .type(users.userSabium.login)
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
     
@@ -33,7 +29,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
             cy.get('#txtpassword')
                 .should('be.visible')
                 .and('have.value','')
-                .type((senhaautomacao))
+                .type(users.userSabium.password)
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
 
@@ -59,7 +55,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
             cy.get('#txtpassword')
                 .should('be.visible')
                 .and('have.value','')
-                .type((senhaautomacao))
+                .type(users.userSabium.password)
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
     
@@ -76,7 +72,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
             cy.get('#txtusername')
                 .should('be.visible')
                 .and('have.value','')
-                .type(usuSabiumAutomacao)
+                .type(users.userSabium.login)
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
     
@@ -176,7 +172,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
             cy.get('#txtusername')
                 .should('be.visible')
                 .and('have.value','')
-                .type((usuarioSbx))
+                .type(users.userSBX.login)
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
     
@@ -185,7 +181,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
             cy.get('#txtpassword')
                 .should('be.visible')
                 .and('have.value','')
-                .type((senhaSbx))
+                .type(users.userSBX.password)
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
     
@@ -211,7 +207,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
             cy.get('#txtpassword')
                 .should('be.visible')
                 .and('have.value','')
-                .type((senhaSbx))
+                .type(users.userSBX.password)
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
     
@@ -228,7 +224,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
             cy.get('#txtusername')
                 .should('be.visible')
                 .and('have.value','')
-                .type(usuarioSbx)
+                .type(users.userSBX.login)
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
     

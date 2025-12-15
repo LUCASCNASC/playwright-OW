@@ -1,9 +1,6 @@
 import { test } from '@playwright/test';
 import { LoginPage } from '../../pages/login/LoginPage';
-
-const usunovo = "testtest";
-const senhausunovo = "!MV87gsp";
-const novasenha = "321@Teste";
+import users from '../../tests/users.json';
 
 test.describe('Logar com novo usuário', () => {
 
@@ -21,7 +18,7 @@ test.describe('Logar com novo usuário', () => {
         cy.get('#txtusername')
             .should('be.visible')
             .and('have.value','')
-            .type((usunovo))
+            .type(users.userSabiumNovo.login)
             .invoke('attr', 'placeholder')
             .should('equal', 'Informe seu usuário')
 
@@ -31,7 +28,7 @@ test.describe('Logar com novo usuário', () => {
         cy.get('#txtpassword')
             .should('be.visible')
             .and('have.value','')
-            .type((senhausunovo))
+            .type(users.userSabiumNovo.password)
             .invoke('attr', 'placeholder')
             .should('equal', 'Informe sua senha')
 
@@ -62,7 +59,7 @@ test.describe('Logar com novo usuário', () => {
 
         cy.get(':nth-child(2) > .ng-pristine')
             .should('be.visible')
-            .and('have.value',(usunovo))
+            .and('have.value',users.userSabiumNovo.login)
 
         cy.get('.senha_nova > :nth-child(4)')
             .should('be.visible')
@@ -71,7 +68,7 @@ test.describe('Logar com novo usuário', () => {
         cy.get(':nth-child(5) > .ng-pristine')
             .should('be.visible')
             .and('have.value','')
-            .type((senhausunovo))
+            .type(users.userSabiumNovo.password)
 
         cy.get('md-icon[ng-click="showPasswordToggle()"]')
             .should('be.visible')
@@ -118,7 +115,7 @@ test.describe('Logar com novo usuário', () => {
         cy.get('input[name="password_new"]')
             .should('be.visible')
             .and('have.value','')
-            .type((novasenha))
+            .type(users.userSabiumNovo.newPassword)
 
         //Card Altere Sua Senha Temporária - olhos "Nova Senha"
         cy.get('md-icon[ng-click="showPasswordToggle(true)"]')
@@ -169,7 +166,7 @@ test.describe('Logar com novo usuário', () => {
         cy.get(':nth-child(11) > .ng-pristine')
             .should('be.visible')
             .and('have.value','')
-            .type((novasenha))
+            .type(users.userSabiumNovo.newPassword)
 
         //Validar a sexta Regras para a Nova Senha (depois de preencher campo Repetir Nova Senha) - Texto As novas senhas informadas são iguais.
         cy.contains('span', 'As novas senhas informadas são iguais.')
@@ -201,7 +198,7 @@ test.describe('Logar com novo usuário', () => {
         cy.get('#txtusername')
             .should('be.visible')
             .and('have.value','')
-            .type((usunovo))
+            .type(users.userSabiumNovo.login)
             .invoke('attr', 'placeholder')
             .should('equal', 'Informe seu usuário')
 
@@ -211,7 +208,7 @@ test.describe('Logar com novo usuário', () => {
         cy.get('#txtpassword')
             .should('be.visible')
             .and('have.value','')
-            .type((senhausunovo))
+            .type(users.userSabiumNovo.password)
             .invoke('attr', 'placeholder')
             .should('equal', 'Informe sua senha')
 
@@ -248,7 +245,7 @@ test.describe('Logar com novo usuário', () => {
         //Card Altere Sua Senha Temporária - campo para preenchimento "Usuário"
         cy.get(':nth-child(2) > .ng-pristine')
             .should('be.visible')
-            .and('have.value',(usunovo))
+            .and('have.value',users.userSabiumNovo.login)
 
         //Card Altere Sua Senha Temporária - texto "Senha Atual"
         cy.get('.senha_nova > :nth-child(4)')
@@ -259,7 +256,7 @@ test.describe('Logar com novo usuário', () => {
         cy.get(':nth-child(5) > .ng-pristine')
             .should('be.visible')
             .and('have.value','')
-            .type((senhausunovo))
+            .type(users.userSabiumNovo.password)
 
         //Card Altere Sua Senha Temporária - olhos "Senha Atual"
         cy.get('md-icon[ng-click="showPasswordToggle()"]')
@@ -309,7 +306,7 @@ test.describe('Logar com novo usuário', () => {
         cy.get('input[name="password_new"]')
             .should('be.visible')
             .and('have.value','')
-            .type((novasenha))
+            .type(users.userSabiumNovo.newPassword)
 
         //Card Altere Sua Senha Temporária - olhos "Nova Senha"
         cy.get('md-icon[ng-click="showPasswordToggle(true)"]')
@@ -360,7 +357,7 @@ test.describe('Logar com novo usuário', () => {
         cy.get(':nth-child(11) > .ng-pristine')
             .should('be.visible')
             .and('have.value','')
-            .type((novasenha))
+            .type(users.userSabiumNovo.newPassword)
 
         //Validar a sexta Regras para a Nova Senha (depois de preencher campo Repetir Nova Senha) - Texto As novas senhas informadas são iguais.
         cy.contains('span', 'As novas senhas informadas são iguais.')
