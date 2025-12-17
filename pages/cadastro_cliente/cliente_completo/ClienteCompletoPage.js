@@ -55,13 +55,6 @@ export class ClienteCompletoPage {
     await this.page.waitForResponse(response => response.url().includes('/views/cliente/refEtapaPessoalLista.html') && response.status() === 200, { timeout: 40000 });
   }
 
-  /**
-   * @param {Page} page
-   */
-  constructor(page) {
-    this.page = page;
-  }
-
   // Validar botão salvar sem ter os campos obrigatórios (deve estar desabilitado)
   async buttonSaveDisabled() {
     await expect(this.page.locator('#btnModalAddEndereco')).toBeVisible();

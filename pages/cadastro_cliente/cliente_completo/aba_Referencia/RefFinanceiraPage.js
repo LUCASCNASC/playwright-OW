@@ -143,13 +143,6 @@ export class RefFinanceiraPage {
     await expect(quantidadeValorPrestacao).toBeVisible();
   }
 
-  /**
-   * @param {Page} page
-   */
-  constructor(page) {
-    this.page = page;
-  }
-
   // referência financeira - escolher Início exp. crédito
   async dateStart() {
     const data_inicio = gerarDataReferenciaFinanceira();

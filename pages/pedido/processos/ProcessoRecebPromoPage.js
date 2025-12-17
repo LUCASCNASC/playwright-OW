@@ -10,7 +10,6 @@ export class ProcessoRecebPromoPage {
   }
 
   // Promoções para arquivos apenas de promoção e promoção serviço
-
   async pagPrincipal() {
     const botaoVoltar = this.page.locator('.md-toolbar-tools > [ng-click="modalPromocao()"] > .ng-binding');
     await expect(botaoVoltar).toBeVisible();

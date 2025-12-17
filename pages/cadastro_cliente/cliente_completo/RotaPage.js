@@ -52,14 +52,6 @@ export class RotaPage {
   // Validar informações que foram adicionadas no cadastro de rota
   async infoRouteAdded() {
     await expect(this.page.locator('.md-whiteframe-2dp')).toBeVisible();
-    // Pode incluir aqui validações de texto se necessário (descomentando as linhas originais)
-  }
-
-  /**
-   * @param {Page} page
-   */
-  constructor(page) {
-    this.page = page;
   }
 
   // Preencher rota no cadastro de rota e escolher as opções certas

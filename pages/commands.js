@@ -8,9 +8,7 @@ export class CommandsGeneral {
     this.page = page;
   }
 
-  /**
-   * Faz login no sistema.
-   */
+  //Faz login no sistema.
   async login() {
     await this.page.goto('/');
     await this.page.fill('#txtusername', 'sabium.automacao');

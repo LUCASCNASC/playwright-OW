@@ -134,13 +134,6 @@ export class RefPessoalPage {
     await this.modalEmpty();
   }
 
-  /**
-   * @param {Page} page
-   */
-  constructor(page) {
-    this.page = page;
-  }
-
   // referência pessoal - escolher Nome
   async name() {
     const Nome = gerarNomeAleatorio();

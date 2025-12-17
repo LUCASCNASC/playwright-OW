@@ -69,13 +69,6 @@ export class AnexoPage {
     await expect(this.page.locator('small.list-title')).toContainText(dataAtual);
   }
 
-  /**
-   * @param {Page} page
-   */
-  constructor(page) {
-    this.page = page;
-  }
-
   //Função para anexar arquivo dentro do cadastro de cliente completo.
   async filePDF() {
     const caminhoDoArquivo = 'cypress\\fixtures\\anexo_cadastro_cliente_completo.pdf';

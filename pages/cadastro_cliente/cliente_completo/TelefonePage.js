@@ -72,13 +72,6 @@ export class TelefonePage {
     await expect(this.page.locator('.toast-success > .toast-message')).toHaveText('Telefone incluído com sucesso.');
   }
 
-  /**
-   * @param {Page} page
-   */
-  constructor(page) {
-    this.page = page;
-  }
-
   // Selecionar tipo de telefone na aba telefone
   async typePhone() {
     await this.page.locator('#txtTpTel').click({ force: true });

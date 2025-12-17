@@ -96,13 +96,6 @@ export class EnderecoPage {
     await expect(this.page.locator('#txtTpEndereco')).toHaveValue('');
   }
 
-  /**
-   * @param {Page} page
-   */
-  constructor(page) {
-    this.page = page;
-  }
-
   // Selecionar tipo de endereço
   async typeAdress() {
     await this.page.locator('.md-text.ng-binding:has-text("Padrão")').click({ force: true });

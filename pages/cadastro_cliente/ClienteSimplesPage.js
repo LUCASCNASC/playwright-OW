@@ -119,13 +119,6 @@ export class ClienteSimplesPage {
     await this.page.waitForResponse('**/@api_local_entrega_560', { timeout: 40000 });
   }
 
-  /**
-   * @param {Page} page
-   */
-  constructor(page) {
-    this.page = page;
-  }
-
   //Clica no ícone do menu de opções.
   async iconMenuOptions() {
     await expect(this.page.locator('[aria-label="Menu de opções"] > .ng-binding')).toBeVisible();

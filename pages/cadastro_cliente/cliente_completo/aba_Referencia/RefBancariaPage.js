@@ -208,13 +208,6 @@ export class RefBancariaPage {
     ]);
   }
 
-   /**
-   * @param {Page} page
-   */
-  constructor(page) {
-    this.page = page;
-  }
-
   async bank() {
     const bankField = this.page.locator('#txtBancoRefBanc');
     await bankField.click();

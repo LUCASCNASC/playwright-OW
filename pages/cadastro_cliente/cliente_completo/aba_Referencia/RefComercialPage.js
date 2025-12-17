@@ -125,13 +125,6 @@ export class RefComercialPage {
     await expect(email).toBeVisible();
   }
 
-  /**
-   * @param {Page} page
-   */
-  constructor(page) {
-    this.page = page;
-  }
-
   // referência Comercial - Empresa
   async enterprise() {
     const empresa = gerarNomeEmpresa();

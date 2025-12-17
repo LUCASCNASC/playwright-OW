@@ -20,7 +20,7 @@ test.describe('Cadastrar cliente completo', () => {
         test('1.Cliente completo CPF',  async ({ page }) => {
 
             ClienteCompletoPage.iconMenuOptions()
-            GeralClienteCoClienteCompletoPagempleto.optionClientComplete()
+            GeralClienteCompletoPage.optionClientComplete()
             PessoaPage.cpfClient() 
             PessoaPage.nameComplete() 
             PessoaPage.nameSocial() 

@@ -158,6 +158,5 @@ function trintaUmDiasAposHoje() {
   return `${day}/${month}/${year}`;
 }
 
-  
 export { gerarCpf, gerarTelefoneAleatorio, gerarEmailAleatorio, gerarNomeAleatorio, gerarCNPJ, gerarNomeEmpresa,
          gerarRelacionamento, gerarObservação, umDiaAposHoje, trintaUmDiasAposHoje }; 

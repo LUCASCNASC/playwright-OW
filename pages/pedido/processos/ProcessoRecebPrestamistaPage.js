@@ -11,9 +11,7 @@ export class ProcessoRecebPrestamistaPage {
 
   //---------- Prestamista Abatimento %
 
-  /**
-   * Seleciona forma de pagamento 3874 (T.A. A Receber Futuro - para Prestamista)
-   */
+  //Seleciona forma de pagamento 3874 (T.A. A Receber Futuro - para Prestamista)
   async futWithFeesAbatPercentage() {
     await expect(this.page.locator('.md-dialog-fullscreen > .md-primary > .md-toolbar-tools > .flex')).toBeVisible();
     await expect(this.page.locator('.md-dialog-fullscreen > .md-primary > .md-toolbar-tools > .flex')).toHaveText('Forma de pagamento');
@@ -32,9 +30,7 @@ export class ProcessoRecebPrestamistaPage {
     );
   }
 
-  /**
-   * Seleciona forma de pagamento 3875 (T.A.A Receber Presente CDCI - para Prestamista)
-   */
+  //Seleciona forma de pagamento 3875 (T.A.A Receber Presente CDCI - para Prestamista)
   async presentAbatPercentage() {
     await expect(this.page.locator('.md-dialog-fullscreen > .md-primary > .md-toolbar-tools > .flex')).toBeVisible();
     await expect(this.page.locator('.md-dialog-fullscreen > .md-primary > .md-toolbar-tools > .flex')).toHaveText('Forma de pagamento');
@@ -53,9 +49,7 @@ export class ProcessoRecebPrestamistaPage {
     );
   }
 
-  /**
-   * Seleciona forma de pagamento 3876 (T.A. A Receber Futuro - para Prestamista sem juros)
-   */
+  //Seleciona forma de pagamento 3876 (T.A. A Receber Futuro - para Prestamista sem juros)
   async futWithoutFeesAbatPercentage() {
     await expect(this.page.locator('.md-dialog-fullscreen > .md-primary > .md-toolbar-tools > .flex')).toBeVisible();
     await expect(this.page.locator('.md-dialog-fullscreen > .md-primary > .md-toolbar-tools > .flex')).toHaveText('Forma de pagamento');
@@ -76,9 +70,7 @@ export class ProcessoRecebPrestamistaPage {
 
   //---------- Prestamista Abatimento Valor Fixo
 
-  /**
-   * Seleciona forma de pagamento 3880 (T.A. A Receb Fut com juros - Prest. Valor Fixo)
-   */
+  //Seleciona forma de pagamento 3880 (T.A. A Receb Fut com juros - Prest. Valor Fixo)
   async futWithFeesAbatVF() {
     await expect(this.page.locator('.md-dialog-fullscreen > .md-primary > .md-toolbar-tools > .flex')).toBeVisible();
     await expect(this.page.locator('.md-dialog-fullscreen > .md-primary > .md-toolbar-tools > .flex')).toHaveText('Forma de pagamento');
