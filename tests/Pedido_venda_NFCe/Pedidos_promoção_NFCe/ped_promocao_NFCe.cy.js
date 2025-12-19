@@ -34,10 +34,10 @@ test.describe('Gerar pedidos com promoção com entrega', () => {
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked() 
             AdvanceNormal.toTransporter()
-            GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
+            GeneralDelivery.modalInconsOnlyTransporter() 
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
 
             //Escolher "Forma de pagamento"
             cy.get('[style=""] > md-collapsible-header.layout-row > .md-collapsible-tools > .ng-scope').click()
@@ -56,28 +56,18 @@ test.describe('Gerar pedidos com promoção com entrega', () => {
             CommandsGeneral.selectProductSearch()  ; 
             Promotion.ticketPromotion() 
             CommandsGeneral.clickVoltageProduct() 
-            Promotion.selectFirstPromoProduct() //PROMOÇÃO
+            Promotion.selectFirstPromoProduct() 
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
-            GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
+            GeneralDelivery.modalInconsOnlyTransporter() 
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
 
             //"GERAR PAGAMENTO"
             cy.get('.layout-wrap > .md-primary').scrollTo('top').wait(200)
             cy.contains('.md-select-value', 'Forma de pagamento').click()
-            // cy.get('.white > :nth-child(3)').click({force:true})
-            // cy.contains('3861 - T.A. A Receber A Vista').click({force:true})
-
-            // PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
-            // PagamentoPage.loadingFormPayment()
-            // ProcessoRecebPage.main()
-            // ParcelasPage.two()
-            // AdvanceNormal.final()
-            // FinalizarPedidoPage.clickFinalizarPedidoPage()
-            // FinalizarPedidoPage.validateOrderGenerated()
         })
 
         test('3.Pedido com promoção a prazo parcelado (promoção 151): produto 1867 0 0',  async ({ page }) => {
@@ -87,15 +77,15 @@ test.describe('Gerar pedidos com promoção com entrega', () => {
             CommandsGeneral.selectProductSearch()  ; 
             Promotion.ticketPromotion()
             CommandsGeneral.clickVoltageProduct() 
-            Promotion.selectFirstPromoProduct() //PROMOÇÃO
+            Promotion.selectFirstPromoProduct() 
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
-            GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
+            GeneralDelivery.modalInconsOnlyTransporter() 
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
 
             //Escolher a forma de pagamento
             cy.get('[style=""] > md-collapsible-header.layout-row > .md-collapsible-tools > .ng-scope').click({force:true})

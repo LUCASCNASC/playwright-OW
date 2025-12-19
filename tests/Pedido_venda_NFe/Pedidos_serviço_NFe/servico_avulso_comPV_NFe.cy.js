@@ -61,7 +61,7 @@ test.describe('Venda de serviço avulso, com pedido do produto já baixado', () 
             ServicoAvulsoPage.messGarantiaAdded() //Mensagem de "O Serviço Garantias já foi adicionado à esse produto.", quando tentamos adicionar novamente
             ServicoAvulsoPage.clickCartShopping()
             ServicoAvulsoPage.buttonAdvanceOrder()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.two()

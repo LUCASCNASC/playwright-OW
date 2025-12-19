@@ -32,15 +32,15 @@ test.describe('Gerar pedido com proposta de crédito', () => {
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            ThrowDelivery.freightFirst() //ENTREGA
+            ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.proposalCredit()
             ParcelasPage.one()
             AdvanceNormal.final()
             FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validatePropCreditGenerated    ()
+            FinalizarPedidoPage.validatePropCreditGenerated()
             FinalizarPedidoPage.validateOrderGenerated()
         })
     })

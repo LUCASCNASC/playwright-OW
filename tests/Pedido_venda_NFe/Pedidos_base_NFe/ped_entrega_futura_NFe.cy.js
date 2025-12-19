@@ -32,11 +32,11 @@ test.describe('Gerar pedido de entrega futura', () => {
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            ThrowDelivery.freightFirst() //ENTREGA PRODUTO
+            ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.main() //PROCESSO INCLUSÃO
+            ProcessoRecebPage.main() 
             ParcelasPage.two()
             AdvanceNormal.final()
             FinalizarPedidoPage.clickFinalizarPedidoPage()
@@ -49,7 +49,7 @@ test.describe('Gerar pedido de entrega futura', () => {
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             clicarOKServVinServico.clickOKServiceLinked()
-            ThrowDelivery.freightFirst() //ENTREGA PRODUTO
+            ThrowDelivery.freightFirst() 
             Product.second()
             ValidateBalance.withBalance() 
             CommandsGeneral.selectProductSearch() 
@@ -57,11 +57,11 @@ test.describe('Gerar pedido de entrega futura', () => {
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
+            ThrowDelivery.freightSecond() 
             AdvanceNormal.clickGenerateInstallments()
-            PagamentoPage.clicarGerarParcelas() //GERAR PARCELAS
+            PagamentoPage.clicarGerarParcelas() 
             PagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.main() //PROCESSO INCLUSÃO
+            ProcessoRecebPage.main() 
             ParcelasPage.two()
             AdvanceNormal.final() 
             FinalizarPedidoPage.clickFinalizarPedidoPage()
@@ -79,9 +79,9 @@ test.describe('Gerar pedido de entrega futura', () => {
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.main() //PROCESSO INCLUSÃO
+            ProcessoRecebPage.main() 
             ParcelasPage.two()
             AdvanceNormal.final()
             FinalizarPedidoPage.clickFinalizarPedidoPage()
@@ -103,9 +103,9 @@ test.describe('Gerar pedido de entrega futura', () => {
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter() //TRANSPORTADORA
             AdvanceNormal.toInstallments() 
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment() 
-            ProcessoRecebPage.main() //PROCESSO INCLUSÃO
+            ProcessoRecebPage.main() 
             ParcelasPage.two()
             AdvanceNormal.final() 
             FinalizarPedidoPage.clickFinalizarPedidoPage()

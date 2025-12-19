@@ -36,7 +36,7 @@ test.describe('Gerar pedido com financeiro na baixa com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter()
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()
@@ -51,7 +51,7 @@ test.describe('Gerar pedido com financeiro na baixa com entrega', () => {
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            Product.second() //SEGUNDO PRODUTO
+            Product.second() 
             ValidateBalance.withBalance() 
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
@@ -62,7 +62,7 @@ test.describe('Gerar pedido com financeiro na baixa com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter()
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()

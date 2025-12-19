@@ -30,9 +30,9 @@ test.describe('Venda de serviço avulso Host - 104', () => {
             ServicoAvulsoPage.productServiceHost()
             ServicoAvulsoPage.chooseServiceSearch()
             ServicoAvulsoPage.chooseValueRecharge()
-            ServicoAvulsoPage.clickCartShopping() //CARRINHO COMPRAS
+            ServicoAvulsoPage.clickCartShopping()
             ServicoAvulsoPage.buttonAdvanceOrder()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.one()

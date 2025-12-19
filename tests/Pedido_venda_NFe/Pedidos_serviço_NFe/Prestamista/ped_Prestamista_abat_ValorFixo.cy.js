@@ -37,12 +37,12 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.futWithoutRebVF()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage()
@@ -58,7 +58,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.clickOKServiceLinked() 
             Product.second()
             ValidateBalance.withBalance() 
             CommandsGeneral.selectProductSearch() 
@@ -68,7 +68,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.futWithoutRebVF()
             ParcelasPage.for()
@@ -102,7 +102,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
             GeralPedidosPage.clickEditInstallments()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage()
@@ -121,7 +121,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.clickOKServiceLinked() 
             ValidateService.servLinked() ; ValidateService.garantiaNaoSep()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
@@ -130,7 +130,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
             GeralPedidosPage.clickEditInstallments()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage()
@@ -149,7 +149,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.clickOKServiceLinked() 
             ValidateService.servLinked() ; ValidateService.garantiaNaoSep()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
@@ -158,7 +158,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
             GeralPedidosPage.clickEditInstallments()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage()
@@ -179,12 +179,12 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.presentMoneyRebVF()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage()

@@ -33,10 +33,10 @@ test.describe('Gerar pedido normal com entrega', () => {
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
-            GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
+            GeneralDelivery.modalInconsOnlyTransporter() 
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.two()
@@ -51,7 +51,7 @@ test.describe('Gerar pedido normal com entrega', () => {
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            Product.second() //SEGUNDO PRODUTO
+            Product.second() 
             ValidateBalance.withBalance() 
             CommandsGeneral.selectProductSearch() 
             CommandsGeneral.clickVoltageProduct() 
@@ -59,10 +59,10 @@ test.describe('Gerar pedido normal com entrega', () => {
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
-            GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
+            GeneralDelivery.modalInconsOnlyTransporter() 
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.two()
@@ -78,10 +78,10 @@ test.describe('Gerar pedido normal com entrega', () => {
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
-            GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
+            GeneralDelivery.modalInconsOnlyTransporter() 
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            PagamentoPage.chooseEntryFormPayment() //GERAR PARCELAS
+            PagamentoPage.chooseEntryFormPayment() 
             PagamentoPage.clickGeneratePayment()
             PagamentoPage.clickGenerateInstallments()
             PagamentoPage.loadingFormPayment()

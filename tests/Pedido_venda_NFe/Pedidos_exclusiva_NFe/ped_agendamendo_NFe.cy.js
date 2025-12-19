@@ -13,7 +13,6 @@ import { Service } from '../../../pages/pedido/ServicosPage.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-//Para testarmos esses cenários, é necessário mudar para a versão da exclusiva e criar um agendamento na filial que está sendo usada
 test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
 
     test.beforeEach(async ({ page }) => {
@@ -45,7 +44,7 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             GeneralDelivery.modalInconsApenasTransp()
             GeneralDelivery.escolherTransportadora()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.carregandoFormaPagamento()
             ProcessoRecebPage.main()
             ParcelasPage.two()
@@ -72,7 +71,7 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             GeneralDelivery.modalInconsApenasTransp()
             GeneralDelivery.escolherTransportadora()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.carregandoFormaPagamento()
             ProcessoRecebPage.main()
             ParcelasPage.two()
@@ -97,7 +96,7 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             GeneralDelivery.modalInconsApenasTransp()
             GeneralDelivery.escolherTransportadora()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.carregandoFormaPagamento()
             ProcessoRecebPage.main()
             ParcelasPage.two()
@@ -115,7 +114,7 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             GeralPedidosPage.trocarFilialFaturamento()
             PedExclusiva.increaseAmountSaleFive()
             CommandsGeneral.selectProductSearch() 
-            ProductExclusiva.balanceReceiveTwoLines() //SEGUNDO PRODUTO
+            ProductExclusiva.balanceReceiveTwoLines() 
             PedExclusiva.balanceRemoteReceive()
             CommandsGeneral.clickVoltageProduct()  
             CommandsGeneral.clickAddProduct() 
@@ -132,9 +131,9 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            ThrowDelivery.freightFirst() //ENTREGA
+            ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.two()

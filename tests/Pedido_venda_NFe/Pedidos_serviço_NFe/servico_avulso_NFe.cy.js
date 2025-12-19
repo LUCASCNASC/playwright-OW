@@ -27,10 +27,10 @@ test.describe('Venda de serviço avulso', () => {
             ServicoAvulsoPage.productServiceLoose()
             ServicoAvulsoPage.chooseServiceSearch()
             ServicoAvulsoPage.messItemAddedSucess()
-            ServicoAvulsoPage.clickCartShopping() //CARRINHO COMPRAS
+            ServicoAvulsoPage.clickCartShopping()
             ServicoAvulsoPage.serviceAddedCart()
             ServicoAvulsoPage.buttonAdvanceOrder()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.two()

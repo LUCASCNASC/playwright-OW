@@ -9,7 +9,6 @@ import { AgruparRecebPage } from '../../../../pages/pedido/pagamento/AgruparRece
 import { ProcessoRecebPage } from '../../../../pages/pedido/processos/ProcessoRecebPage.js';
 import { ProcessoRecebPromoPage } from '../../../../pages/pedido/processos/ProcessoRecebPromoPage.js';
 import { Promotion } from '../../../../../pages/pedido/promocao.js';
-import { PrestamistaPage } from '../../../../pages/pedido/PrestamistaPage.js';
 import { GeralPedidosPage } from '../../../../pages/pedido/GeralPedidosPage.js';
 import { CommandsGeneral } from '../../../../../pages/commands.js';
 import { Service, ValidateService } from '../../../../pages/pedido/ServicosPage.js';
@@ -37,23 +36,23 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.clickOKServiceLinked() 
             ThrowDelivery.freightFirst()
             Product.second()
             ValidateBalance.withBalance() 
             CommandsGeneral.selectProductSearch() 
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()  - SEGUNDO PRODUTO
+            Service.validateModalServLinked()  
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.futMoneyWithFees()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage()
@@ -79,12 +78,12 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.presentMoney()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage()
@@ -112,12 +111,12 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.futMoneyWithoutFees()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage()
@@ -133,7 +132,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.clickOKServiceLinked() 
             ValidateService.servLinked() ; ValidateService.garantiaSepMesmoProc()
             Product.second()
             ValidateBalance.withBalance() 
@@ -144,12 +143,12 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.futMoneyWithFees()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage()
@@ -165,23 +164,23 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.clickOKServiceLinked() 
             ValidateService.servLinked() ; ValidateService.garantiaSepMesmoProc()
             Product.second()
             ValidateBalance.withBalance() 
             CommandsGeneral.selectProductSearch() 
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()  - SEGUNDO PRODUTO
+            Service.validateModalServLinked()  
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.futMoneyWithoutFees()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage()
@@ -197,23 +196,23 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.clickOKServiceLinked() 
             ValidateService.servLinked() ; ValidateService.garantiaSepMesmoProc()
             Product.second()
             ValidateBalance.withBalance() 
             CommandsGeneral.selectProductSearch() 
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()  - SEGUNDO PRODUTO
+            Service.validateModalServLinked()  
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.presentMoney()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage()
@@ -234,7 +233,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ProcessoRecebPromoPage.termFutWithFeesPrest()
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.clickOKServiceLinked() 
             ThrowDelivery.freightFirst()
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
@@ -242,7 +241,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             GeralPedidosPage.clickEditInstallments()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage()
@@ -260,7 +259,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ProcessoRecebPromoPage.termFutWithoutFeesPrest()
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.clickOKServiceLinked() 
             ThrowDelivery.freightFirst()
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
@@ -268,7 +267,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             GeralPedidosPage.clickEditInstallments()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage()
@@ -287,7 +286,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.clickOKServiceLinked() 
             ThrowDelivery.freightFirst()
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
@@ -295,7 +294,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             GeralPedidosPage.clickEditInstallments()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage()
@@ -317,7 +316,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.clickOKServiceLinked() 
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
@@ -330,7 +329,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             cy.wait('@api_pedido_forma_pagamento', { timeout: 40000 })
             ParcelasPage.one()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             AdvanceNormal.finalarFinal()
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage()
@@ -349,13 +348,13 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.clickOKServiceLinked() 
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_pagamentoPedido')
             cy.wait('@api_pagamentoPedido', { timeout: 40000 })
-            //TicketPrestamista.added() //Validando adição do prestamista
+            //TicketPrestamista.added() 
             PagamentoPage.insertDateTomorrow1Due()
             PagamentoPage.clicarGerarParcAlterarVenc()
             cy.contains('3874 - T.A. A Receber Futuro - para Prestamista').click()
@@ -363,7 +362,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             cy.wait('@api_pedido_forma_pagamento', { timeout: 40000 })
             ParcelasPage.one()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage()
@@ -382,7 +381,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.clickOKServiceLinked() 
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
             ThrowDelivery.freightFirst()
             AdvanceNormal.toInstallments()
@@ -391,7 +390,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             GeralPedidosPage.clickEditInstallments()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage()
@@ -412,7 +411,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ProcessoRecebPromoPage.termFutWithFeesPrest()
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.clickOKServiceLinked() 
             ThrowDelivery.primeiro()
             Product.second()
             ValidateBalance.withBalance() 
@@ -428,7 +427,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             GeralPedidosPage.clickEditInstallments()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             PagamentoPage.insertDateTomorrow1Due()
             PagamentoPage.clicarGerarParcAlterarVenc()
             ProcessoRecebPage.main()
@@ -450,7 +449,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ProcessoRecebPromoPage.termFutWithFeesPrest()
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.clickOKServiceLinked() 
             ThrowDelivery.freightFirst()
             Product.second()
             ValidateBalance.withBalance() 
@@ -466,7 +465,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             GeralPedidosPage.clickEditInstallments()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             PagamentoPage.insertDate31Days1Due()
             PagamentoPage.clicarGerarParcAlterarVenc()
             ProcessoRecebPage.futMoneyWithFees()
@@ -492,7 +491,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ProcessoRecebPromoPage.termFutWithoutFeesPrest()
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.clickOKServiceLinked() 
             ThrowDelivery.freightFirst()
             Product.second()
             ValidateBalance.withBalance() 
@@ -508,7 +507,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             GeralPedidosPage.clickEditInstallments()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             PagamentoPage.insertDateTomorrow1Due()
             PagamentoPage.clicarGerarParcAlterarVenc()
             ProcessoRecebPage.main()
@@ -530,7 +529,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ProcessoRecebPromoPage.termFutWithoutFeesPrest()
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.clickOKServiceLinked() 
             ThrowDelivery.freightFirst()
             Product.second()
             ValidateBalance.withBalance() 
@@ -546,7 +545,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             GeralPedidosPage.clickEditInstallments()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             PagamentoPage.insertDate31Days1Due()
             PagamentoPage.clicarGerarParcAlterarVenc()
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
@@ -574,7 +573,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             ProcessoRecebPromoPage.termFutWithFeesPrest()
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.clickOKServiceLinked() 
             ThrowDelivery.primeiro()
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
@@ -582,7 +581,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             GeralPedidosPage.clickEditInstallments()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             AdvanceNormal.final()
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage()
@@ -604,7 +603,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.clickOKServiceLinked() 
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
             Product.second()
             ValidateBalance.withBalance() 
@@ -620,7 +619,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             GeralPedidosPage.clickEditInstallments()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             PagamentoPage.insertDateTomorrow1Due()
             PagamentoPage.clicarGerarParcAlterarVenc()
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
@@ -645,7 +644,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.clickOKServiceLinked() 
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
             Product.second()
             ValidateBalance.withBalance() 
@@ -658,11 +657,11 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
-            // TicketPrestamista.added() //Validando adição do prestamista
+            // TicketPrestamista.added() 
             GeralPedidosPage.clickEditInstallments()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             PagamentoPage.insertDate31Days1Due()
             PagamentoPage.clicarGerarParcAlterarVenc()
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
@@ -691,7 +690,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.clickOKServiceLinked() 
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
             Product.second()
             ValidateBalance.withBalance() 
@@ -707,7 +706,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             GeralPedidosPage.clickEditInstallments()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             PagamentoPage.insertDateTomorrow1Due()
             PagamentoPage.clicarGerarParcAlterarVenc()
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
@@ -732,7 +731,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() //SERVIÇOS)
+            Service.clickOKServiceLinked() )
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
             Product.second()
             ValidateBalance.withBalance() 
@@ -745,11 +744,11 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
-            // TicketPrestamista.added() //Validando adição do prestamista
+            // TicketPrestamista.added() 
             GeralPedidosPage.clickEditInstallments()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             PagamentoPage.insertDate31Days1Due()
             PagamentoPage.clicarGerarParcAlterarVenc()
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
@@ -778,7 +777,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.clickOKServiceLinked() 
             ValidateService.servLinked() ; ValidateService.garantiaNaoSep()
             Product.second()
             ValidateBalance.withBalance() 
@@ -795,7 +794,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             GeralPedidosPage.clickEditInstallments()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             PagamentoPage.insertDateTomorrow1Due()
             PagamentoPage.clicarGerarParcAlterarVenc()
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
@@ -820,7 +819,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()
             ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() //SERVIÇOS)
+            Service.clickOKServiceLinked() )
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
             Product.second()
             ValidateBalance.comSwithBalancealdo()
@@ -834,11 +833,11 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
-            // TicketPrestamista.added() //Validando adição do prestamista
+            // TicketPrestamista.added() 
             GeralPedidosPage.clickEditInstallments()
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
-            TicketPrestamista.added() //Validando adição do prestamista
+            TicketPrestamista.added() 
             PagamentoPage.insertDate31Days1Due()
             PagamentoPage.clicarGerarParcAlterarVenc()
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')

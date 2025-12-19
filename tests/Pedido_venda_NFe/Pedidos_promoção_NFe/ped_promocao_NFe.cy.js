@@ -32,12 +32,12 @@ test.describe('Gerar pedidos com promoção', () => {
             CommandsGeneral.selectProductSearch() 
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
-            Promotion.selectFirstPromoProduct() //PROMOCAO
+            Promotion.selectFirstPromoProduct() 
             ProcessoRecebPromoPage.pagPrincipal()
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            ThrowDelivery.freightFirst() //ENTREGA
+            ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pagamento_lista')
             cy.wait('@api_pagamento_lista', { timeout: 40000 })
@@ -53,15 +53,15 @@ test.describe('Gerar pedidos com promoção', () => {
             CommandsGeneral.selectProductSearch() 
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
-            Promotion.selectFirstPromoProduct() //PROMOÇÃO
+            Promotion.selectFirstPromoProduct() 
             ProcessoRecebPromoPage.pagPrincipal()
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            ThrowDelivery.freightFirst() //ENTREGA
+            ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
     
-            //GERAR PARCELAS
+            
             cy.get('.white > :nth-child(3)').click()
             cy.contains('3861 - T.A. A Receber A Vista').click()
     
@@ -80,12 +80,12 @@ test.describe('Gerar pedidos com promoção', () => {
             CommandsGeneral.selectProductSearch() 
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
-            Promotion.selectFirstPromoProduct() //PROMOÇÃO
+            Promotion.selectFirstPromoProduct() 
             ProcessoRecebPromoPage.pagPrincipal()
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            ThrowDelivery.freightFirst() //ENTREGA
+            ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
             cy.intercept('GET', 'images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
@@ -104,12 +104,12 @@ test.describe('Gerar pedidos com promoção', () => {
             CommandsGeneral.selectProductSearch() 
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
-            Promotion.selectFirstPromoProduct() //PROMOÇÃO
+            Promotion.selectFirstPromoProduct() 
             ProcessoRecebPromoPage.pagPrincipal()
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            ThrowDelivery.freightFirst() //ENTREGA
+            ThrowDelivery.freightFirst() 
             Product.second()
             ValidateBalance.withBalance() 
             CommandsGeneral.selectProductSearch() 
@@ -117,9 +117,9 @@ test.describe('Gerar pedidos com promoção', () => {
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
+            ThrowDelivery.freightSecond() 
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
 
             //Escolher forma de pagamento
             cy.contains('3868 - T.A. A Receber PIX TEF').click({force:true})
@@ -140,12 +140,12 @@ test.describe('Gerar pedidos com promoção', () => {
             CommandsGeneral.selectProductSearch() 
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
-            Promotion.selectFirstPromoProduct() //PROMOÇÃO
+            Promotion.selectFirstPromoProduct() 
             ProcessoRecebPromoPage.pagPrincipal()
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            ThrowDelivery.freightFirst() //ENTREGA
+            ThrowDelivery.freightFirst() 
             Product.second()
             ValidateBalance.withBalance() 
             CommandsGeneral.selectProductSearch() 
@@ -153,10 +153,10 @@ test.describe('Gerar pedidos com promoção', () => {
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            ThrowDelivery.freightSecond() //ENTREGA - SEGUNDO PRODUTO
+            ThrowDelivery.freightSecond() 
             AdvanceNormal.toInstallments()
 
-            //GERAR PARCELAS 
+             
             cy.get('.layout-row.flex-100 > :nth-child(1) > .md-fab').should('be.visible').click({force:true})
             cy.get('.white > :nth-child(3)').click({force:true})
             cy.contains('div.md-text', '3861 - T.A. A Receber A Vista').click({force:true}) //Escolher forma de pagamento entrada
@@ -183,7 +183,7 @@ test.describe('Gerar pedidos com promoção', () => {
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
-            AdvanceNormal.toInstallments() //ENTREGA
+            AdvanceNormal.toInstallments() 
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pagamento_lista')
             cy.wait('@api_pagamento_lista', { timeout: 40000 })
             PagamentoPage.insertDateTomorrow1Due()
@@ -202,7 +202,7 @@ test.describe('Gerar pedidos com promoção', () => {
             CommandsGeneral.selectProductSearch() 
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
-            Promotion.selectFirstPromoProduct() //PROMOÇÃO
+            Promotion.selectFirstPromoProduct() 
             ProcessoRecebPromoPage.pagPrincipal()
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
@@ -240,14 +240,14 @@ test.describe('Gerar pedidos com promoção', () => {
             ValidateBalance.withBalance() 
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
-            Promotion.selectFirstPromoProduct() //PROMOÇÃO
+            Promotion.selectFirstPromoProduct() 
             ProcessoRecebPromoPage.pagPrincipal()
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
 
             //Escolher a forma de pagamento
             cy.get('[style=""] > md-collapsible-header.layout-row > .md-collapsible-tools > .ng-scope').click({force:true})
@@ -268,7 +268,7 @@ test.describe('Gerar pedidos com promoção', () => {
             ValidateBalance.withBalance() 
             CommandsGeneral.clickVoltageProduct() 
             cy.clickAddProduc()
-            Promotion.selectFirstPromoProduct() //PROMOÇÃO
+            Promotion.selectFirstPromoProduct() 
             ProcessoRecebPromoPage.pagPrincipal()
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
@@ -278,10 +278,10 @@ test.describe('Gerar pedidos com promoção', () => {
             CommandsGeneral.selectProductSearch() 
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.clickOKServiceLinked() 
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
 
             //Escolher forma de pagemento
             cy.get('[style=""] > md-collapsible-header.layout-row > .md-collapsible-tools > .ng-scope').click({force: true})

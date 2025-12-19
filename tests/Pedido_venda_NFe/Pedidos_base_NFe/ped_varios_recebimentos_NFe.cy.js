@@ -33,16 +33,16 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            ThrowDelivery.freightFirst() //ENTREGA
+            ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
-            AgruparRecebPage.firstValueInstallment() //COLOCAR VALOR DA PRIMEIRA FORMA DE PAGAMENTO
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS - PRIMEIRA FORMA DE PAGAMENTO
+            AgruparRecebPage.firstValueInstallment() 
+            PagamentoPage.clickGenerateInstallments()
             PagamentoPage.carregandoFormaPagamento()
             ProcessoRecebPage.debitTEF()
             ParcelasPage.one()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS - SEGUNDA FORMA DE PAGAMENTO
+            PagamentoPage.clickGenerateInstallments()
             PagamentoPage.carregandoFormaPagamento()
-            ProcessoRecebPage.main() //SEGUNDA FORMA DE PAGAMENTO
+            ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
             FinalizarPedidoPage.clickFinalizarPedidoPage()
@@ -55,13 +55,13 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            ThrowDelivery.freightFirst() //ENTREGA
+            ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
             PagamentoPage.chooseEntryFormPayment()
             PagamentoPage.clicarGerarPagamento()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS - SEGUNDA FORMA DE PAGAMENTO
+            PagamentoPage.clickGenerateInstallments()
             PagamentoPage.carregandoFormaPagamento()
-            ProcessoRecebPage.main() //SEGUNDA FORMA DE PAGAMENTO
+            ProcessoRecebPage.main() 
             ParcelasPage.two()
             AdvanceNormal.final()
             FinalizarPedidoPage.clickFinalizarPedidoPage()
@@ -74,16 +74,16 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            ThrowDelivery.freightFirst() //ENTREGA
+            ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
-            AgruparRecebPage.firstValueInstallment() //COLOCAR VALOR DA PRIMEIRA FORMA DE PAGAMENTO
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS - PRIMEIRA FORMA DE PAGAMENTO
+            AgruparRecebPage.firstValueInstallment() 
+            PagamentoPage.clickGenerateInstallments()  
             PagamentoPage.carregandoFormaPagamento()
             ProcessoRecebPage.main()
             ParcelasPage.one()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS - SEGUNDA FORMA DE PAGAMENTO
+            PagamentoPage.clickGenerateInstallments()  
             PagamentoPage.carregandoFormaPagamento()
-            ProcessoRecebPage.main() //SEGUNDA FORMA DE PAGAMENTO
+            ProcessoRecebPage.main() 
             ParcelasPage.one()
             AgruparRecebPage.notGroupReleases()
             AdvanceNormal.final()
@@ -97,16 +97,16 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            ThrowDelivery.freightFirst() //ENTREGA
+            ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
-            AgruparRecebPage.firstValueInstallment() //COLOCAR VALOR DA PRIMEIRA FORMA DE PAGAMENTO
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS - PRIMEIRA FORMA DE PAGAMENTO
+            AgruparRecebPage.firstValueInstallment() 
+            PagamentoPage.clickGenerateInstallments()  
             PagamentoPage.carregandoFormaPagamento()
             ProcessoRecebPage.main()
             ParcelasPage.one()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS - SEGUNDA FORMA DE PAGAMENTO
+            PagamentoPage.clickGenerateInstallments()  
             PagamentoPage.carregandoFormaPagamento()
-            ProcessoRecebPage.main() //SEGUNDA FORMA DE PAGAMENTO
+            ProcessoRecebPage.main() 
             ParcelasPage.one()
             AgruparRecebPage.groupReleases()
             AdvanceNormal.final()
@@ -120,16 +120,16 @@ test.describe('Gerar pedido com mais de uma forma de pagamento', () => {
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            ThrowDelivery.freightFirst() //ENTREGA
+            ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
-            AgruparRecebPage.firstValueInstallment() //COLOCAR VALOR DA PRIMEIRA FORMA DE PAGAMENTO
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS - PRIMEIRA FORMA DE PAGAMENTO
+            AgruparRecebPage.firstValueInstallment() 
+            PagamentoPage.clickGenerateInstallments()  
             PagamentoPage.carregandoFormaPagamento()
             ProcessoRecebPage.main()
             ParcelasPage.one()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS - SEGUNDA FORMA DE PAGAMENTO
+            PagamentoPage.clickGenerateInstallments()  
             PagamentoPage.carregandoFormaPagamento()
-            ProcessoRecebPage.main() //SEGUNDA FORMA DE PAGAMENTO
+            ProcessoRecebPage.main() 
             ParcelasPage.one()
             AgruparRecebPage.notGroupReleases()
             AgruparRecebPage.selectReleasesGroup()

@@ -37,10 +37,10 @@ test.describe('Gerar pedidos com promoção e serviços com isenção de juros',
             ProcessoRecebPromoPage.pagPrincipal()
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
-            Service.garantiaSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
+            Service.garantiaSepMesmoProc() 
             Service.clickOKServiceLinked()
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc()
-            ThrowDelivery.freightFirst() //ENTREGA
+            ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
@@ -61,10 +61,10 @@ test.describe('Gerar pedidos com promoção e serviços com isenção de juros',
             ProcessoRecebPromoPage.pagPrincipal()
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
-            Service.garantiaSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
+            Service.garantiaSepMesmoProc() 
             Service.clickOKServiceLinked()
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc()
-            ThrowDelivery.freightFirst() //ENTREGA
+            ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
@@ -104,7 +104,7 @@ test.describe('Gerar pedidos com promoção e serviços com isenção de juros',
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc()
-            ThrowDelivery.freightFirst() //ENTREGA
+            ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
@@ -128,10 +128,10 @@ test.describe('Gerar pedidos com promoção e serviços com isenção de juros',
             ProcessoRecebPage.withMoneylender()
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
-            Service.garantiaSepMesmoProc() //Marcar garantia "T.A. Garantia Separa Mesmo Processo"
+            Service.garantiaSepMesmoProc() 
             Service.clickOKServiceLinked()
             ValidateService.servLinked() ; ValidateService.AddGarantSepMesmoProc()
-            ThrowDelivery.freightFirst() //ENTREGA
+            ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })

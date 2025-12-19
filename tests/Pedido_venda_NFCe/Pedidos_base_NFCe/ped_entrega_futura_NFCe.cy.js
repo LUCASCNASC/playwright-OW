@@ -34,10 +34,10 @@ test.describe('Gerar pedido de entrega futura com entrega', () => {
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
-            GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA)
+            GeneralDelivery.modalInconsOnlyTransporter() 
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPromoPage.pagPrincipal()
             ParcelasPage.two()
@@ -52,7 +52,7 @@ test.describe('Gerar pedido de entrega futura com entrega', () => {
             CommandsGeneral.clickVoltageProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            Product.second() //SEGUNDO PRODUTO
+            Product.second() 
             ValidateBalance.withBalance() 
             CommandsGeneral.selectProductSearch() 
             CommandsGeneral.clickVoltageProduct() 
@@ -60,10 +60,10 @@ test.describe('Gerar pedido de entrega futura com entrega', () => {
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter() 
-            GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
+            GeneralDelivery.modalInconsOnlyTransporter() 
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery() 
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.two()

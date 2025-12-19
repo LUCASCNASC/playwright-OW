@@ -35,12 +35,12 @@ test.describe('Gerar pedido de venda Kit com desconto', () => {
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            OrderDiscount.clickButtonDiscount() //DESCONTO
+            OrderDiscount.clickButtonDiscount() 
             OrderDiscount.validateModalSub()
             OrderDiscount.aplicarDescontoValorFixo()
             ThrowDelivery.freightFirst()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.two()

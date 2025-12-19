@@ -31,13 +31,13 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
 
         test('1.Pedido: produto 1860 0 0 (com Mão de Obra que Destaca e Não separa título)',  async ({ page }) => {
     
-            Service.garantiaNaoSep()  //Marcar Mão de Obra "T.A. MO Destaca e Não Separa"
+            Service.garantiaNaoSep()  
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
-            GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
+            GeneralDelivery.modalInconsOnlyTransporter() 
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery() 
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             EscolherParcelaReceb.two()
@@ -48,20 +48,20 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
         
         test('2.Pedido: produto 1860 0 0 (com Mão de Obra que Destaca e Não separa título) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
     
-            Service.garantiaNaoSep()  //Marcar Mão de Obra "T.A. MO Destaca e Não Separa"
-            Service.clickOKServiceLinked() //SERVIÇOS
-            Product.second() //SEGUNDO PRODUTO
+            Service.garantiaNaoSep()  
+            Service.clickOKServiceLinked() 
+            Product.second() 
             ValidateBalance.withBalance() 
             CommandsGeneral.selectProductSearch() 
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()  //SERVIÇOS - SEGUNDO PRODUTO
-            Service.clickOKServiceLinked() //SERVIÇOS
+            Service.validateModalServLinked()
+            Service.clickOKServiceLinked() 
             AdvanceNormal.toTransporter()
-            GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
+            GeneralDelivery.modalInconsOnlyTransporter() 
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             EscolherParcelaReceb.two()
@@ -72,13 +72,13 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
 
         test('3.Pedido: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título no Mesmo processo)',  async ({ page }) => {
     
-            Service.garantiaSepMesmoProc() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Mesmo Processo"
+            Service.garantiaSepMesmoProc() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
-            GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
+            GeneralDelivery.modalInconsOnlyTransporter() 
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery() 
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             EscolherParcelaReceb.two()
@@ -89,9 +89,9 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
 
         test('4.Pedido: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título no Mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
     
-            Service.garantiaSepMesmoProc() //Marcar Mão de Obra "T.A. MO Não Destaca e Separa Mesmo Processo"
+            Service.garantiaSepMesmoProc() 
             Service.clickOKServiceLinked()
-            Product.second() //SEGUNDO PRODUTO
+            Product.second() 
             ValidateBalance.withBalance() 
             CommandsGeneral.selectProductSearch() 
             CommandsGeneral.clickVoltageProduct() 
@@ -99,10 +99,10 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
-            GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
+            GeneralDelivery.modalInconsOnlyTransporter() 
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             EscolherParcelaReceb.two()
@@ -113,13 +113,13 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
 
         test('5.Pedido: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título em processo Diferente)',  async ({ page }) => {
     
-            Service.garantiaSepTituloProcDif() //Marcar Mão de obra que não destaca e separa título em processo diferente
+            Service.garantiaSepTituloProcDif() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
-            GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
+            GeneralDelivery.modalInconsOnlyTransporter() 
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery() 
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             EscolherParcelaReceb.two()
@@ -130,9 +130,9 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
 
         test('6.Pedido: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título em processo Diferente) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
     
-            Service.garantiaSepTituloProcDif() //Marcar Mão de obra que não destaca e separa título em processo diferente
+            Service.garantiaSepTituloProcDif() 
             Service.clickOKServiceLinked()
-            Product.second() //SEGUNDO PRODUTO
+            Product.second() 
             ValidateBalance.withBalance() 
             CommandsGeneral.selectProductSearch() 
             CommandsGeneral.clickVoltageProduct() 
@@ -140,10 +140,10 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
-            GeneralDelivery.modalInconsOnlyTransporter() //ESCOLHER TRANSPORTADORA
+            GeneralDelivery.modalInconsOnlyTransporter() 
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()  
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             EscolherParcelaReceb.two()

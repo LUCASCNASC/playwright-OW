@@ -33,9 +33,9 @@ test.describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            ThrowDelivery.freightFirst() //ENTREGA
+            ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.one()
@@ -44,7 +44,7 @@ test.describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244
             OrderDiscount.modalChangeValue()
             OrderDiscount.changeValueToLow()
             AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() //RESUMO
+            FinalizarPedidoPage.clickFinalizarPedidoPage() 
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
@@ -54,13 +54,13 @@ test.describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked() 
-            ThrowDelivery.freightFirst() //ENTREGA
+            ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.one()
-            OrderDiscount.dragFormPayment() //DESCONTO
+            OrderDiscount.dragFormPayment() 
             OrderDiscount.clickChangeValue()
             OrderDiscount.modalChangeValue()
             OrderDiscount.changeValueToTop()

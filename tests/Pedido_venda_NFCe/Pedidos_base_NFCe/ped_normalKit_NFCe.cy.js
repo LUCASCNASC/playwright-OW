@@ -38,7 +38,7 @@ test.describe('Gerar pedido normal com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter()
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.two()

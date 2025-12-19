@@ -32,11 +32,11 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
             CommandsGeneral.clickAddProduct() 
             GeralPedidosPage.changeBranchInvoicing()
             CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() //SERVIÇOS
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.duas()
@@ -54,20 +54,20 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
             CommandsGeneral.clickAddProduct() 
             GeralPedidosPage.changeBranchInvoicing()
             CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() //SERVIÇOS
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            Product.freightSecond() //SEGUNDO PRODUTO
+            Product.freightSecond() 
             ValidateBalance.withBalance() 
             CommandsGeneral.selectProductSearch() 
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
             GeralPedidosPage.changeBranchInvoicing()
             CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() //SERVIÇOS - SEGUNDO PRODUTO
+            Service.validateModalServLinked()
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.duas()
@@ -86,11 +86,11 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
             GeralPedidosPage.changeBranchInvoicing()
             GeralPedidosPage.compositionKit()
             CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() //SERVIÇOS
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.duas()
@@ -111,11 +111,11 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
             CommandsGeneral.clickAddProduct() 
             GeralPedidosPage.changeBranchInvoicing()
             CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() //SERVIÇOS
+            Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.duas()

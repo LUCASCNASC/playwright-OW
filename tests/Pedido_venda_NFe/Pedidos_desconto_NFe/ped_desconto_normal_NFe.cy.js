@@ -33,12 +33,12 @@ test.describe('Gerar pedido de venda com desconto', () => {
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            OrderDiscount.clickButtonDiscount() //DESCONTO
+            OrderDiscount.clickButtonDiscount() 
             OrderDiscount.validateModalSub()
             OrderDiscount.applyDiscountR$()
-            ThrowDelivery.freightFirst() //ENTREGA
+            ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.one()
@@ -56,12 +56,12 @@ test.describe('Gerar pedido de venda com desconto', () => {
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            OrderDiscount.clickButtonDiscount() //DESCONTO
+            OrderDiscount.clickButtonDiscount() 
             OrderDiscount.validateModalSub()
             OrderDiscount.applyDiscountPencentage()
-            ThrowDelivery.freightFirst() //ENTREGA
+            ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.one()
@@ -79,12 +79,12 @@ test.describe('Gerar pedido de venda com desconto', () => {
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
-            OrderDiscount.clickButtonDiscount() //DESCONTO
+            OrderDiscount.clickButtonDiscount() 
             OrderDiscount.validateModalSub()
             OrderDiscount.applyDiscountVF()
-            ThrowDelivery.freightFirst()() //ENTREGA
+            ThrowDelivery.freightFirst()() 
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() //GERAR PARCELAS
+            PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.one()
