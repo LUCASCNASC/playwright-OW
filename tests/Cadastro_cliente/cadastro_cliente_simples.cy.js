@@ -1,10 +1,7 @@
 import { test } from '@playwright/test';
 import { ClienteSimplesPage, ClienteSimplesPage } from '../../pages/cadastro_cliente/ClienteSimplesPage.js';
-import { gerarCpf }  from '../../support/gerarDados';
-
-const Numeroalteracao = '113';
-const CEPalteracao = "87054320";
-const numeroCPF = "117.415.410-18";
+import { gerarCpf }  from '../../support/gerarDados/gerarCpf.js';
+import dataCliente from '../../tests/Cadastro_cliente/data.cliente.json';
 
 test.describe('Cadastrar cliente simples', () => {
 
@@ -52,7 +49,7 @@ test.describe('Cadastrar cliente simples', () => {
                 .should('be.visible')
                 .clear({force:true})
                 .and('have.value','')
-                .type(CEPalteracao, {force:true})
+                .type(dataCliente.CEPalteracao, {force:true})
 
             //Lupa de pesquisa do CEP
             cy.get('.md-icon-float > .ng-binding')
@@ -68,7 +65,7 @@ test.describe('Cadastrar cliente simples', () => {
                 .should('be.visible')
                 .clear({force:true})
                 .and('have.value','')
-                .type(Numeroalteracao, {force:true})
+                .type(dataCliente.Numeroalteracao, {force:true})
 
             ClienteSimplesPage.saveClientSimple()
             ClienteSimplesPage.messFirstRegistSaveSucess()
@@ -276,7 +273,7 @@ test.describe('Cadastrar cliente simples', () => {
                 .should('be.visible')
                 .clear({force:true})
                 .and('have.value','')
-                .type(CEPalteracao, {force:true})
+                .type(dataCliente.CEPalteracao, {force:true})
 
             //Lupa de pesquisa do CEP
             cy.get('.md-icon-float > .ng-binding')
@@ -292,7 +289,7 @@ test.describe('Cadastrar cliente simples', () => {
                 .should('be.visible')
                 .clear({force:true})
                 .and('have.value','')
-                .type(Numeroalteracao, {force:true})
+                .type(dataCliente.Numeroalteracao, {force:true})
 
             ClienteSimplesPage.saveClientSimple()
             ClienteSimplesPage.messFirstRegistSaveSucess()
@@ -306,7 +303,7 @@ test.describe('Cadastrar cliente simples', () => {
             //inserir CPF/CNPJ no campo de cliente para podermos pesquisar pela lupa
             cy.get('.click-cliente > .informe-o-cliente > .cliente-header')
                 .wait(800)
-                .type(numeroCPF,'{downArrow}')
+                .type(dataCliente.numeroCPF,'{downArrow}')
 
             //clicar na lupa de pesquisa de clientes
             cy.get('.md-block > .ng-binding')
