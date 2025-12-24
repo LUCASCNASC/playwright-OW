@@ -5,6 +5,7 @@ import users from '../../tests/users.json';
 test.describe('Login caminho feliz - usuário normal senha liberada', () => {
 
     test.beforeEach(async ({ page }) => {
+
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()

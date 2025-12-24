@@ -16,6 +16,7 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Gerar pedidos com promoção', () => {
 
     test.beforeEach(async ({ page }) => {
+
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()

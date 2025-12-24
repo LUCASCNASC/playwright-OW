@@ -7,6 +7,7 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Tentar gerar pedido de venda com produto sem saldo - Regra de saldo Parâmetro 36 = 4 - Parâmetro 139 = 4 - Trial 653 não configurado', () => {
 
     test.beforeEach(async ({ page }) => {
+
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()

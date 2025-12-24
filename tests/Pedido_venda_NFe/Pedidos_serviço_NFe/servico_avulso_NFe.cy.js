@@ -13,6 +13,7 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Venda de serviço avulso', () => {
 
     test.beforeEach(async ({ page }) => {
+
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()

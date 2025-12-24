@@ -5,6 +5,7 @@ import users from '../../tests/users.json';
 test.describe('Senha do usuário expirada', () => {
 
     test.beforeEach(async ({ page }) => {
+
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()

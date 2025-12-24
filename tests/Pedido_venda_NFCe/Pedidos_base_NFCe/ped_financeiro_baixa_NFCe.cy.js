@@ -14,6 +14,7 @@ import { ChooseCliente } from '../../../pages/pedidos/ClientePage.js';
 test.describe('Gerar pedido com financeiro na baixa com entrega', () => {
 
     test.beforeEach(async ({ page }) => {
+
         CommandsGeneral.login()//login
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()

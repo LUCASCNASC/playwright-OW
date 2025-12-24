@@ -10,6 +10,7 @@ import { EnderecoPage, EnderecoPage } from '../../../pages/cadastro_cliente/clie
 test.describe('Cadastrar cliente completo', () => {
 
     test.beforeEach(async ({ page }) => {
+        
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()

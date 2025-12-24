@@ -6,6 +6,7 @@ import dataCliente from '../../tests/Cadastro_cliente/data.cliente.json';
 test.describe('Cadastrar cliente simples', () => {
 
     test.beforeEach(async ({ page }) => {
+
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
