@@ -16,7 +16,6 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
 
     test.beforeEach(async ({ page }) => {
-
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()

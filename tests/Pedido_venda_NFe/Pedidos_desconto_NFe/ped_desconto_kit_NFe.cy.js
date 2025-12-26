@@ -16,7 +16,6 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Gerar pedido de venda Kit com desconto', () => {
 
     test.beforeEach(async ({ page }) => {
-
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()

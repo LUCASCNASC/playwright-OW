@@ -15,7 +15,6 @@ import { CommandsGeneral } from '../../../../pages/commands.js';
 test.describe('Gerar pedido de entrega futura com entrega', () => {
 
     test.beforeEach(async ({ page }) => {
-
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()

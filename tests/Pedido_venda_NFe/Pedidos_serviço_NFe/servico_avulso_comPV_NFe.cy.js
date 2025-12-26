@@ -14,7 +14,6 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Venda de serviço avulso, com pedido do produto já baixado', () => {
 
     test.beforeEach(async ({ page }) => {
-
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()

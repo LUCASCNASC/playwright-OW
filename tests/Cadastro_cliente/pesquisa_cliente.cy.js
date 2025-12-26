@@ -4,7 +4,6 @@ import { PesquisaClientePage } from '../../pages/cadastro_cliente/PesquisaClient
 test.describe('Cadastrar cliente', () => {
 
     test.beforeEach(async ({ page }) => {
-
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()

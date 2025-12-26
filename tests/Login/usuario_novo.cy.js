@@ -5,7 +5,6 @@ import users from '../../tests/users.json';
 test.describe('Logar com novo usuário', () => {
 
     test.beforeEach(async ({ page }) => {
-
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()

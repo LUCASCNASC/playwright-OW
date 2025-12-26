@@ -16,7 +16,6 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Gerar pedidos com promoção e serviços com isenção de juros', () => {
 
     test.beforeEach(async ({ page }) => {
-
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()

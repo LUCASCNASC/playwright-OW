@@ -19,7 +19,6 @@ import { ChooseCliente } from '../../../../pages/pedido/ClientePage.js';
 test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
 
     test.beforeEach(async ({ page }) => {
-
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()

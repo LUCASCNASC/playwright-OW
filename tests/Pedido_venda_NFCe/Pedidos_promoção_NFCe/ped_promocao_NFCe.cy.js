@@ -13,7 +13,6 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Gerar pedidos com promoção com entrega', () => {
 
     test.beforeEach(async ({ page }) => {
-
         CommandsGeneral.login()
         CommandsGeneral.urlAposLogin()
         CommandsGeneral.tituloPagina()
