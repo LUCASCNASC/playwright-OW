@@ -5,7 +5,8 @@ import { FinalizarPedidoPage } from '../../../pages/pedido/FinalizarPedidoPage.j
 import { ThrowDelivery } from '../../../pages/pedido/EntregaPage.js';
 import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js';
 import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js';
-import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js';
+import { ProcessoRecebPage } from '../../../pages/pedido
+/ProcessoRecebPage.js';
 import { OrderDiscount } from '../../../pages/pedido/PedidoDescontoPage.js';
 import { GeralPedidosPage } from '../../../pages/pedido/GeralPedidosPage.js';
 import { CommandsGeneral } from '../../../../pages/commands.js';

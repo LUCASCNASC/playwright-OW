@@ -1,4 +1,4 @@
-import { umDiaAposHoje, trintaUmDiasAposHoje } from '../../gerarDados'
+import { umDiaAposHoje, trintaUmDiasAposHoje } from '../gerarDados'
 import { expect, Page } from '@playwright/test';
 
 //Page Object para seleção de formas de pagamento no processo de recebimento.

@@ -8,7 +8,7 @@ import { FinalizarPedidoPage } from '../../../pages/pedidos/FinalizarPedidoPage.
 import { GeneralDelivery } from '../../../pages/pedidos/EntregaPage.js';
 import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js';
 import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js';
-import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js';
+import { ProcessoRecebPage } from '../../../pages/pedido/ProcessoRecebPage.js';
 import { ProcessoRecebPromoPage } from '../../../../pages/pedidos/processos/processo_recebimento_promo.js';
 import { CommandsGeneral } from '../../../../pages/commands.js';
 

@@ -6,7 +6,7 @@ import { FinalizarPedidoPage } from '../../../pages/pedidos/FinalizarPedidoPage.
 import { GeneralDelivery } from '../../../pages/pedidos/EntregaPage.js';
 import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js';
 import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js';
-import { ProcessoRecebPage } from '../../../pages/pedido/processos/ProcessoRecebPage.js';
+import { ProcessoRecebPage } from '../../../pages/pedido/ProcessoRecebPage.js';
 import { CommandsGeneral } from '../../../../pages/commands.js';
 import { AdvanceNormal } from '../../../pages/pedidos/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedidos/ClientePage.js';
