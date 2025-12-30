@@ -4,7 +4,7 @@ import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js';
 import { FinalizarPedidoPage } from '../../../pages/pedido/FinalizarPedidoPage.js';
 import { GeneralDelivery } from '../../../pages/pedido/EntregaPage.js';
 import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js';
-import { ParcelasPage } from '../../../pages/pedido/pagamento/ParcelasPage.js';
+import { ParcelasPage } from '../../../pages/pedido/ParcelasPage.js';
 import { ProcessoRecebPage } from '../../../pages/pedido/ProcessoRecebPage.js';
 import { GeralPedidosPage } from '../../../pages/pedido/GeralPedidosPage.js';
 import { CommandsGeneral } from '../../../../pages/commands.js';
