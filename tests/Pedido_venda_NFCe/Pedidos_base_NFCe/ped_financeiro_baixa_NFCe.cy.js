@@ -4,7 +4,7 @@ import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js';
 import { Service } from '../../../pages/pedidos/ServicosPage.js';
 import { FinalizarPedidoPage } from '../../../pages/pedidos/FinalizarPedidoPage.js';
 import { GeneralDelivery } from '../../../pages/pedidos/EntregaPage.js';
-import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js';
+import { GeralPagamentoPage } from '../../../pages/pedido/GeralPagamentoPage.js';
 import { ParcelasPage } from '../../../pages/pedido/ParcelasPage.js';
 import { ProcessoRecebPage } from '../../../pages/pedido/ProcessoRecebPage.js';
 import { CommandsGeneral } from '../../../../pages/commands.js';
@@ -36,8 +36,8 @@ test.describe('Gerar pedido com financeiro na baixa com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter()
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
@@ -62,8 +62,8 @@ test.describe('Gerar pedido com financeiro na baixa com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter()
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()

@@ -3,7 +3,7 @@ import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVenda
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js';
 import { FinalizarPedidoPage } from '../../../pages/pedido/FinalizarPedidoPage.js';
 import { ThrowDelivery } from '../../../pages/pedido/EntregaPage.js';
-import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js';
+import { GeralPagamentoPage } from '../../../pages/pedido/GeralPagamentoPage.js';
 import { ParcelasPage } from '../../../pages/pedido/ParcelasPage.js';
 import { ProcessoRecebPage } from '../../../pages/pedido/ProcessoRecebPage.js';
 import { OrderDiscount } from '../../../pages/pedido/PedidoDescontoPage.js';
@@ -40,8 +40,8 @@ test.describe('Gerar pedido de venda Kit com desconto', () => {
             OrderDiscount.aplicarDescontoValorFixo()
             ThrowDelivery.freightFirst()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment()
+            GeralPagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()

@@ -3,7 +3,7 @@ import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVenda
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js';
 import { FinalizarPedidoPage } from '../../../pages/pedido/FinalizarPedidoPage.js';
 import { GeneralDelivery } from '../../../pages/pedido/EntregaPage.js';
-import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js';
+import { GeralPagamentoPage } from '../../../pages/pedido/GeralPagamentoPage.js';
 import { EscolherParcelaReceb } from '../../../pages/pedido/ParcelasPage.js';
 import { ProcessoRecebPage } from '../../../pages/pedido/ProcessoRecebPage.js';
 import { CommandsGeneral } from '../../../../pages/commands.js';
@@ -37,8 +37,8 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() 
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery() 
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()
@@ -61,8 +61,8 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() 
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()
@@ -78,8 +78,8 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() 
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery() 
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()
@@ -102,8 +102,8 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() 
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()
@@ -119,8 +119,8 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() 
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery() 
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()
@@ -143,8 +143,8 @@ test.describe('Gerar pedidos com Mão de obra e com entrega', () => {
             GeneralDelivery.modalInconsOnlyTransporter() 
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()  
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             EscolherParcelaReceb.two()
             AdvanceNormal.final()

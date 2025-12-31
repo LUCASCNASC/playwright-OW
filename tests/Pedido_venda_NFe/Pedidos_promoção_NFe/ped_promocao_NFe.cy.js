@@ -3,7 +3,7 @@ import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVenda
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js';
 import { FinalizarPedidoPage } from '../../../pages/pedido/FinalizarPedidoPage.js';
 import { ThrowDelivery } from '../../../pages/pedido/EntregaPage.js';
-import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js';
+import { GeralPagamentoPage } from '../../../pages/pedido/GeralPagamentoPage.js';
 import { ParcelasPage } from '../../../pages/pedido/ParcelasPage.js';
 import { ProcessoRecebPage } from '../../../pages/pedido/ProcessoRecebPage.js';
 import { ProcessoRecebPromoPage } from '../../../pages/pedido/processos/ProcessoRecebPromoPage.js';
@@ -119,7 +119,7 @@ test.describe('Gerar pedidos com promoção', () => {
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() 
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.clickGenerateInstallments() 
 
             //Escolher forma de pagamento
             cy.contains('3868 - T.A. A Receber PIX TEF').click({force:true})
@@ -186,8 +186,8 @@ test.describe('Gerar pedidos com promoção', () => {
             AdvanceNormal.toInstallments() 
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pagamento_lista')
             cy.wait('@api_pagamento_lista', { timeout: 40000 })
-            PagamentoPage.insertDateTomorrow1Due()
-            PagamentoPage.clicarGerarParcAlterarVenc()
+            GeralPagamentoPage.insertDateTomorrow1Due()
+            GeralPagamentoPage.clicarGerarParcAlterarVenc()
             ProcessoRecebPage.principal()
             ParcelasPage.one()
             AdvanceNormal.final()
@@ -212,7 +212,7 @@ test.describe('Gerar pedidos com promoção', () => {
             cy.intercept('GET', 'images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
 
-            PagamentoPage.insertDateTomorrow1Due()
+            GeralPagamentoPage.insertDateTomorrow1Due()
             cy.get('.gerar-parcelas > .layout-wrap > [style="padding: 0 5px"] > .md-primary').click({force:true})
             ProcessoRecebPage.main()
             ParcelasPage.one()
@@ -224,8 +224,8 @@ test.describe('Gerar pedidos com promoção', () => {
             // cy.get('.white > .layout-align-center-center > .md-primary').click({force:true})
             // cy.get('.md-select-backdrop').click({force:true})
 
-            // PagamentoPage.insertDateTomorrow1Due()
-            // PagamentoPage.clicarGerarParcAlterarVenc()
+            // GeralPagamentoPage.insertDateTomorrow1Due()
+            // GeralPagamentoPage.clicarGerarParcAlterarVenc()
             // cy.wait(3000)
             // Receipt.main()
             // ParcelasPage.two()
@@ -247,7 +247,7 @@ test.describe('Gerar pedidos com promoção', () => {
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.clickGenerateInstallments() 
 
             //Escolher a forma de pagamento
             cy.get('[style=""] > md-collapsible-header.layout-row > .md-collapsible-tools > .ng-scope').click({force:true})
@@ -281,7 +281,7 @@ test.describe('Gerar pedidos com promoção', () => {
             Service.clickOKServiceLinked() 
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.clickGenerateInstallments() 
 
             //Escolher forma de pagemento
             cy.get('[style=""] > md-collapsible-header.layout-row > .md-collapsible-tools > .ng-scope').click({force: true})

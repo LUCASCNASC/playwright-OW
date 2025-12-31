@@ -3,7 +3,7 @@ import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVenda
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js';
 import { FinalizarPedidoPage } from '../../../pages/pedido/FinalizarPedidoPage.js';
 import { GeneralDelivery } from '../../../pages/pedido/EntregaPage.js';
-import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js';
+import { GeralPagamentoPage } from '../../../pages/pedido/GeralPagamentoPage.js';
 import { ParcelasPage } from '../../../pages/pedido/ParcelasPage.js';
 import { ProcessoRecebPage } from '../../../pages/pedido/ProcessoRecebPage.js';
 import { GeralPedidosPage } from '../../../pages/pedido/GeralPedidosPage.js';
@@ -37,8 +37,8 @@ test.describe('Remoto/processo 9890 - Regra de saldo Parâmetro 36 = 4 - Parâme
             AdvanceNormal.toTransporter()
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment()
+            GeralPagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
@@ -67,8 +67,8 @@ test.describe('Remoto/processo 9890 - Regra de saldo Parâmetro 36 = 4 - Parâme
             AdvanceNormal.toTransporter()
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment()
+            GeralPagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
@@ -90,8 +90,8 @@ test.describe('Remoto/processo 9890 - Regra de saldo Parâmetro 36 = 4 - Parâme
             AdvanceNormal.toTransporter()
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment()
+            GeralPagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
@@ -115,8 +115,8 @@ test.describe('Remoto/processo 9890 - Regra de saldo Parâmetro 36 = 4 - Parâme
             AdvanceNormal.toTransporter()
             GeneralDelivery.chooseTransporter()
             AdvanceNormal.installmentDelivery()
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment()
+            GeralPagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()

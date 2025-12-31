@@ -3,9 +3,8 @@ import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVenda
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js';
 import { FinalizarPedidoPage } from '../../../pages/pedido/FinalizarPedidoPage.js';
 import { ThrowDelivery } from '../../../pages/pedido/EntregaPage.js';
-import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js';
+import { GeralPagamentoPage } from '../../../pages/pedido/GeralPagamentoPage.js';
 import { ParcelasPage } from '../../../pages/pedido/ParcelasPage.js';
-import { PagamentoPage } from '../../../../pages/pedido/pagamento/geral_pagamento.js';
 import { ProcessoRecebPage } from '../../../pages/pedido/ProcessoRecebPage.js';
 import { CommandsGeneral } from '../../../../pages/commands.js';
 import { Service } from '../../../pages/pedido/ServicosPage.js';
@@ -35,8 +34,8 @@ test.describe('Gerar pedido com financeiro na baixa', () => {
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments() 
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
@@ -60,8 +59,8 @@ test.describe('Gerar pedido com financeiro na baixa', () => {
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() 
             AdvanceNormal.toInstallments() 
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment()
+            GeralPagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
@@ -80,8 +79,8 @@ test.describe('Gerar pedido com financeiro na baixa', () => {
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()
@@ -104,8 +103,8 @@ test.describe('Gerar pedido com financeiro na baixa', () => {
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment()
+            GeralPagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main()
             ParcelasPage.two()
             AdvanceNormal.final()

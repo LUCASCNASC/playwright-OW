@@ -3,7 +3,7 @@ import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVenda
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js';
 import { FinalizarPedidoPage } from '../../../pages/pedido/FinalizarPedidoPage.js';
 import { ThrowDelivery } from '../../../pages/pedido/EntregaPage.js';
-import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js';
+import { GeralPagamentoPage } from '../../../pages/pedido/GeralPagamentoPage.js';
 import { ParcelasPage } from '../../../pages/pedido/ParcelasPage.js';
 import { ProcessoRecebPage } from '../../../pages/pedido/ProcessoRecebPage.js';
 import { CommandsGeneral } from '../../../../pages/commands.js';
@@ -34,8 +34,8 @@ test.describe('Gerar pedido de entrega futura', () => {
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment()
+            GeralPagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main() 
             ParcelasPage.two()
             AdvanceNormal.final()
@@ -59,8 +59,8 @@ test.describe('Gerar pedido de entrega futura', () => {
             Service.clickOKServiceLinked()
             ThrowDelivery.freightSecond() 
             AdvanceNormal.clickGenerateInstallments()
-            PagamentoPage.clicarGerarParcelas() 
-            PagamentoPage.loadingFormPayment()
+            GeralPagamentoPage.clicarGerarParcelas() 
+            GeralPagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main() 
             ParcelasPage.two()
             AdvanceNormal.final() 
@@ -79,8 +79,8 @@ test.describe('Gerar pedido de entrega futura', () => {
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter()
             AdvanceNormal.toInstallments()
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment()
+            GeralPagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main() 
             ParcelasPage.two()
             AdvanceNormal.final()
@@ -103,8 +103,8 @@ test.describe('Gerar pedido de entrega futura', () => {
             Service.clickOKServiceLinked()
             AdvanceNormal.toTransporter() //TRANSPORTADORA
             AdvanceNormal.toInstallments() 
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment() 
+            GeralPagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.loadingFormPayment() 
             ProcessoRecebPage.main() 
             ParcelasPage.two()
             AdvanceNormal.final() 
