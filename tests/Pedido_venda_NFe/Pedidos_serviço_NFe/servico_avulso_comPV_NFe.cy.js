@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { ProcessoVendaPage } from '../../../pages/pedido/processos/ProcessoVendaPage.js';
+import { ProcessoVendaPage } from '../../../pages/pedido/ProcessoVendaPage.js';
 import { FinalizarPedidoPage } from '../../../pages/pedido/FinalizarPedidoPage.js';
 import { PagamentoPage } from '../../../pages/pedido/pagamento/PagamentoPage.js';
 import { ParcelasPage } from '../../../pages/pedido/ParcelasPage.js';
