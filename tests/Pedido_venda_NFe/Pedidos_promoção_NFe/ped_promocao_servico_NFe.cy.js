@@ -3,7 +3,7 @@ import { ProcessoVendaPage } from '../../../pages/pedido/ProcessoVendaPage.js';
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js';
 import { FinalizarPedidoPage } from '../../../pages/pedido/FinalizarPedidoPage.js';
 import { ThrowDelivery } from '../../../pages/pedido/EntregaPage.js';
-import { ProcessoRecebPromoPage } from '../../../pages/pedido/processos/ProcessoRecebPromoPage.js';
+import { ProcessoRecebPromoPage } from '../../../pages/pedido/ProcessoRecebPromoPage.js';
 import { Promotion } from '../../../../pages/pedido/promocao/promocao.js';
 import { ProcessoRecebPage } from '../../../pages/pedido/ProcessoRecebPage.js';
 import { Promotion } from '../../../pages/pedido/PromocaoPage.js';

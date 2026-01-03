@@ -5,7 +5,7 @@ import { FinalizarPedidoPage } from '../../../../pages/pedido/FinalizarPedidoPag
 import { PagamentoPage } from '../../../../pages/pedido/pagamento/PagamentoPage.js';
 import { ParcelasPage } from '../../../../pages/pedido/ParcelasPage.js';
 import { ProcessoRecebPage } from '../../../../pages/pedido/ProcessoRecebPage.js';
-import { ProcessoRecebPromoPage } from '../../../../pages/pedido/processos/ProcessoRecebPromoPage.js';
+import { ProcessoRecebPromoPage } from '../../../../pages/pedido/ProcessoRecebPromoPage.js';
 import { Promotion } from '../../../../../pages/pedido/promocao/promocao.js';
 import { PrestamistaPage } from '../../../../pages/pedido/PrestamistaPage.js';
 import { GeralPedidosPage } from '../../../../pages/pedido/GeralPedidosPage.js';

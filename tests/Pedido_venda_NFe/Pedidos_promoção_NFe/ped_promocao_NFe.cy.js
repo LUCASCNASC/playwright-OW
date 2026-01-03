@@ -6,7 +6,7 @@ import { ThrowDelivery } from '../../../pages/pedido/EntregaPage.js';
 import { GeralPagamentoPage } from '../../../pages/pedido/GeralPagamentoPage.js';
 import { ParcelasPage } from '../../../pages/pedido/ParcelasPage.js';
 import { ProcessoRecebPage } from '../../../pages/pedido/ProcessoRecebPage.js';
-import { ProcessoRecebPromoPage } from '../../../pages/pedido/processos/ProcessoRecebPromoPage.js';
+import { ProcessoRecebPromoPage } from '../../../pages/pedido/ProcessoRecebPromoPage.js';
 import { Promotion } from '../../../pages/pedido/PromocaoPage.js';
 import { CommandsGeneral } from '../../../../pages/commands.js';
 import { Service } from '../../../pages/pedido/ServicosPage.js';

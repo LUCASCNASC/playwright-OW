@@ -9,7 +9,7 @@ import { GeneralDelivery } from '../../../pages/pedidos/EntregaPage.js';
 import { GeralPagamentoPage } from '../../../pages/pedido/GeralPagamentoPage.js';
 import { ParcelasPage } from '../../../pages/pedido/ParcelasPage.js';
 import { ProcessoRecebPage } from '../../../pages/pedido/ProcessoRecebPage.js';
-import { ProcessoRecebPromoPage } from '../../../../pages/pedidos/processos/processo_recebimento_promo.js';
+import { ProcessoRecebPromoPage } from '../../../../pages/pedidos/processo_recebimento_promo.js';
 import { CommandsGeneral } from '../../../../pages/commands.js';
 
 test.describe('Gerar pedido de entrega futura com entrega', () => {
