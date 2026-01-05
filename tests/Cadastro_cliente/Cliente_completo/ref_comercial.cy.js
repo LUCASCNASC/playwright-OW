@@ -6,7 +6,7 @@ import { TelefonePage, TelefonePage } from '../../../pages/cadastro_cliente/clie
 import { EnderecoPage, EnderecoPage } from '../../../pages/cadastro_cliente/cliente_completo/EnderecoPage.js';
 import { RefComercialPage,RefComercialPage } from '../../../pages/cadastro_cliente/cliente_completo/aba_Referencia/RefComercialPage.js';
 
-test.describe('Cadastrar cliente completo', () => {
+test.describe('Register cliente completo', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()

@@ -7,7 +7,7 @@ import { RotaPage, RotaPage } from '../../../pages/cadastro_cliente/cliente_comp
 import { TelefonePage, TelefonePage } from '../../../pages/cadastro_cliente/cliente_completo/TelefonePage.js';
 import { EnderecoPage, EnderecoPage } from '../../../pages/cadastro_cliente/cliente_completo/EnderecoPage.js';
 
-test.describe('Cadastrar cliente completo', () => {
+test.describe('Register cliente completo', () => {
 
     test.beforeEach(async ({ page }) => {
         

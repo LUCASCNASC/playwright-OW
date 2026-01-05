@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
 import { PesquisaClientePage } from '../../pages/cadastro_cliente/PesquisaClientePage.js';
 
-test.describe('Cadastrar cliente', () => {
+test.describe('Register cliente', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
