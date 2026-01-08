@@ -1,15 +1,15 @@
 import { test } from '@playwright/test';
 import { ProcessoVendaPage } from '../../../pages/pedido/ProcessoVendaPage.js';
 import { Product, ValidateBalance } from '../../../pages/ProdutoPage.js';
-import { Service } from '../../../pages/pedidos/ServicosPage.js';
-import { FinalizarPedidoPage } from '../../../pages/pedidos/FinalizarPedidoPage.js';
-import { GeneralDelivery } from '../../../pages/pedidos/EntregaPage.js';
+import { Service } from '../../../pages/pedido/ServicosPage.js';
+import { FinalizarPedidoPage } from '../../../pages/pedido/FinalizarPedidoPage.js';
+import { GeneralDelivery } from '../../../pages/pedido/EntregaPage.js';
 import { GeralPagamentoPage } from '../../../pages/pedido/GeralPagamentoPage.js';
 import { ParcelasPage } from '../../../pages/pedido/ParcelasPage.js';
 import { ProcessoRecebPage } from '../../../pages/pedido/ProcessoRecebPage.js';
 import { CommandsGeneral } from '../../../../pages/commands.js';
-import { AdvanceNormal } from '../../../pages/pedidos/AvancarPage.js';
-import { ChooseCliente } from '../../../pages/pedidos/ClientePage.js';
+import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
+import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
 test.describe('Gerar pedido com financeiro na baixa com entrega', () => {
 

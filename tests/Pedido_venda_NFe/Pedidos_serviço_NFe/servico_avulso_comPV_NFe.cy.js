@@ -6,7 +6,7 @@ import { ParcelasPage } from '../../../pages/pedido/ParcelasPage.js';
 import { ProcessoRecebPage } from '../../../pages/pedido/ProcessoRecebPage.js';
 import { ServicoAvulsoPage } from '../../../pages/pedido/ServicoAvulsoPage.js';
 import { CommandsGeneral } from '../../../../pages/commands.js';
-import { Service, ValidateService } from '../../../pages/pedido/ServicosPage.js';
+import { Service } from '../../../pages/pedido/ServicosPage.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 

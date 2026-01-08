@@ -7,7 +7,6 @@ import { ParcelasPage } from '../../../../pages/pedido/ParcelasPage.js';
 import { ProcessoRecebPage } from '../../../../pages/pedido/ProcessoRecebPage.js';
 import { ProcessoRecebPromoPage } from '../../../../pages/pedido/ProcessoRecebPromoPage.js';
 import { Promotion } from '../../../../../pages/pedido/promocao/promocao.js';
-import { PrestamistaPage } from '../../../../pages/pedido/PrestamistaPage.js';
 import { GeralPedidosPage } from '../../../../pages/pedido/GeralPedidosPage.js';
 import { CommandsGeneral } from '../../../../../pages/commands.js';
 import { Service, ValidateService } from '../../../../pages/pedido/ServicosPage.js';
