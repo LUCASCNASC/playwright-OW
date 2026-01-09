@@ -2,7 +2,7 @@ import { test } from '@playwright/test';
 import { LoginPage } from '../../pages/login/LoginPage';
 import users from '../../tests/users.json';
 
-test.describe('Login caminho feliz - usuário normal senha liberada', () => {
+test.describe('Login hapy path - regular user with password enabled', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -13,9 +13,9 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
         LoginPage.validateUsuarioTextoIcone()
     })
 
-    context('Usuário contexto 1', () => {
+    context('User context 1', () => {
 
-        test('1.Login - caminho feliz',  async ({ page }) => {
+        test('1.Login - happy path',  async ({ page }) => {
 
             cy.get('#txtusername')
                 .should('be.visible')
@@ -41,7 +41,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
             LoginPage.validateBotaoIniciarServico()
         })
     
-        test('2.Login - passar usuário errado (deve dar mensagem de Login ou Senha do usuário está incorreto.)',  async ({ page }) => {
+        test('2.Login - pass user strong (deve dar mensagem de Login ou Senha do usuário está incorreto.)',  async ({ page }) => {
         
             cy.get('#txtusername')
                 .should('be.visible')
@@ -67,7 +67,7 @@ test.describe('Login caminho feliz - usuário normal senha liberada', () => {
             LoginPage.validateIconeComputadorLogin() 
         })
     
-        test('3.Login - passar senha errada (deve dar mensagem de Login ou Senha do usuário está incorreto.)',  async ({ page }) => {
+        test('3.Login - pass user strong (deve dar mensagem de Login ou Senha do usuário está incorreto.)',  async ({ page }) => {
         
             cy.get('#txtusername')
                 .should('be.visible')
