@@ -3,7 +3,7 @@ import { ClienteSimplesPage, ClienteSimplesPage } from '../../pages/cadastro_cli
 import { gerarCpf }  from '../../support/gerarDados/gerarCpf.js';
 import dataCliente from '../../tests/Cadastro_cliente/data.cliente.json';
 
-test.describe('Register cliente simples', () => {
+test.describe('Register simple register', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
