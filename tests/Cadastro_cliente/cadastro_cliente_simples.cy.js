@@ -3,7 +3,7 @@ import { ClienteSimplesPage, ClienteSimplesPage } from '../../pages/cadastro_cli
 import { gerarCpf }  from '../../support/gerarDados/gerarCpf.js';
 import dataCliente from '../../tests/Cadastro_cliente/data.cliente.json';
 
-test.describe('Register simple register', () => {
+test.describe('Register simple custumer', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -11,9 +11,9 @@ test.describe('Register simple register', () => {
         CommandsGeneral.tituloPagina()
     })
   
-    context('Cadastro de cliente simples', () => {
+    context('Simple customer registration.', () => {
 
-        test('1.Cliente simples CPF',  async ({ page }) => {
+        test('1.Simple customer CPF.',  async ({ page }) => {
 
             ClienteSimplesPage.iconMenuOptions()
             ClienteSimplesPage.optionClientSimple()
@@ -28,7 +28,7 @@ test.describe('Register simple register', () => {
             ClienteSimplesPage.messFirstRegistSaveSucess()
         })  
 
-        test('2.Cliente simples CPF - alterar Endereço logo após cadastrar',  async ({ page }) => {
+        test('2.Simple customer CPF - change address immediately after registering',  async ({ page }) => {
     
             ClienteSimplesPage.iconMenuOptions()
             ClienteSimplesPage.optionClientSimple()
@@ -71,7 +71,7 @@ test.describe('Register simple register', () => {
             ClienteSimplesPage.messFirstRegistSaveSucess()
         })
 
-        test('3.Cliente simples CPF - alterar data de nascimento logo após cadastrar',  async ({ page }) => {
+        test('3.Simple customer CPF - change date of birth immediately after registering.',  async ({ page }) => {
     
             ClienteSimplesPage.iconMenuOptions()
             ClienteSimplesPage.optionClientSimple()
@@ -102,7 +102,7 @@ test.describe('Register simple register', () => {
             ClienteSimplesPage.messFirstRegistSaveSucess()
         })  
 
-        test('4.Cliente simples CPF - alterar data de nascimento (deve pedir trial)',  async ({ page }) => {
+        test('4.Simple CPF customer - change date of birth (must request a trial)',  async ({ page }) => {
 
             const cpf = gerarCpf();
     
@@ -170,7 +170,7 @@ test.describe('Register simple register', () => {
             ClienteSimplesPage.messFirstRegistSaveSucess()
         })
 
-        test('5.Cliente simples CPF - alterar tipo de sexo',  async ({ page }) => {
+        test('5.Simple customer CPF - change gender type',  async ({ page }) => {
 
             const cpf = gerarCpf(); // Gera um CPF válido
 
@@ -239,7 +239,7 @@ test.describe('Register simple register', () => {
             ClienteSimplesPage.optionClientSimple()
         })
 
-        test('6.Cliente simples CNPJ',  async ({ page }) => {
+        test('6.Simple customer CNPJ',  async ({ page }) => {
     
             ClienteSimplesPage.iconMenuOptions()
             ClienteSimplesPage.optionClientSimple()
@@ -253,7 +253,7 @@ test.describe('Register simple register', () => {
             ClienteSimplesPage.messFirstRegistSaveSucess()
         })
 
-        test('7.Cliente simples CNPJ - alterar Endereço',  async ({ page }) => {
+        test('7.Simple Customer CNPJ - Change Address',  async ({ page }) => {
 
             ClienteSimplesPage.iconMenuOptions()
             ClienteSimplesPage.optionClientSimple()
@@ -296,9 +296,9 @@ test.describe('Register simple register', () => {
         })
     })
 
-    context('Botão de adicionar cliente, na pesquisa de cliente', () => {
+    context('Add customer button in customer search.', () => {
 
-        test('8.Botão de adicionar cliente, na pesquisa de cliente',  async ({ page }) => {
+        test('8.Add customer button in customer search.',  async ({ page }) => {
         
             //inserir CPF/CNPJ no campo de cliente para podermos pesquisar pela lupa
             cy.get('.click-cliente > .informe-o-cliente > .cliente-header')

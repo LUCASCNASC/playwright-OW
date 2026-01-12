@@ -7,7 +7,7 @@ import { RotaPage, RotaPage } from '../../../pages/cadastro_cliente/cliente_comp
 import { TelefonePage, TelefonePage } from '../../../pages/cadastro_cliente/cliente_completo/TelefonePage.js';
 import { EnderecoPage, EnderecoPage } from '../../../pages/cadastro_cliente/cliente_completo/EnderecoPage.js';
 
-test.describe('Register complete client', () => {
+test.describe('Register complete customer', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -15,9 +15,9 @@ test.describe('Register complete client', () => {
         CommandsGeneral.tituloPagina()
     })
 
-    context('Cadastro de cliente completo - básico ', () => {
+    context('Register complete customer - basic.', () => {
 
-        test('1.Cliente completo CPF',  async ({ page }) => {
+        test('1.Complete customer CPF.',  async ({ page }) => {
 
             ClienteCompletoPage.iconMenuOptions()
             GeralClienteCompletoPage.optionClientComplete()
@@ -57,7 +57,7 @@ test.describe('Register complete client', () => {
             ClienteCompletoPage.messRegisterSaveSucess()
         })  
 
-        test('2.Cliente completo CPF - mensagem de campos obrigatórios',  async ({ page }) => {
+        test('2.Complete customer CPF - Required fields message.',  async ({ page }) => {
     
             ClienteCompletoPage.iconMenuOptions()
             ClienteCompletoPage.optionClientComplete()
@@ -103,7 +103,7 @@ test.describe('Register complete client', () => {
             ClienteCompletoPage.messRegisterSaveSucess()
         })  
 
-        test('3.Cliente completo CNPJ',  async ({ page }) => {
+        test('3.Complete customer CNPJ.',  async ({ page }) => {
     
             ClienteCompletoPage.iconMenuOptions()
             ClienteCompletoPage.optionClientComplete() 
@@ -145,9 +145,9 @@ test.describe('Register complete client', () => {
         }) 
     })
 
-    context('Cadastro de cliente completo - incluindo anexo após salvar o cadastro de cliente', () => {
+    context('Register complete customer - Including attachment after saving the customer registration.', () => {
 
-        test('4.Cliente completo CPF - caminho feliz',  async ({ page }) => {
+        test('4.Complete customer CPF - happy path.',  async ({ page }) => {
 
             ClienteCompletoPage.iconMenuOptions()
             ClienteCompletoPage.optionClientComplete() 
@@ -199,9 +199,9 @@ test.describe('Register complete client', () => {
         })
     })
 
-    context('Cadastro de cliente completo - incluindo referencia bancária', () => {
+    context('Register complete customer - including bank reference.', () => {
 
-        test('5.Cliente completo CPF - tipo de chave PIX Telefone correto',  async ({ page }) => {
+        test('5.Complete customer CPF - PIX key type Correct phone number.',  async ({ page }) => {
 
             ClienteCompletoPage.iconMenuOptions()
             ClienteCompletoPage.optionClientComplete() 
@@ -265,7 +265,7 @@ test.describe('Register complete client', () => {
             ClienteCompletoPage.messRegisterSaveSucess()
         })  
 
-        test('6.Cliente completo CPF - tipo de chave PIX Email correto',  async ({ page }) => {
+        test('6.Complete customer CPF - PIX key type Correct email.',  async ({ page }) => {
 
             ClienteCompletoPage.iconMenuOptions()
             ClienteCompletoPage.optionClientComplete() 
@@ -329,7 +329,7 @@ test.describe('Register complete client', () => {
             ClienteCompletoPage.messRegisterSaveSucess()
         }) 
 
-        test('7.Cliente completo CPF - tipo de chave PIX CPF CNPJ correto',  async ({ page }) => {
+        test('7.Complete customer CPF - PIX key type, correct CPF/CNPJ.',  async ({ page }) => {
 
             ClienteCompletoPage.iconMenuOptions()
             ClienteCompletoPage.optionClientComplete() 
@@ -393,7 +393,7 @@ test.describe('Register complete client', () => {
             ClienteCompletoPage.messRegisterSaveSucess()
         }) 
 
-        test('8.Cliente completo CPF - tipo de chave PIX CPF CNPJ correto',  async ({ page }) => {
+        test('8.Complete customer CPF - PIX key type, correct CPF/CNPJ.',  async ({ page }) => {
 
             ClienteCompletoPage.iconMenuOptions()
             ClienteCompletoPage.optionClientComplete() 
@@ -457,7 +457,7 @@ test.describe('Register complete client', () => {
             ClienteCompletoPage.messRegisterSaveSucess()
         }) 
 
-        test('9.Cliente completo CPF - validar tipo de chave PIX Telefone incorreto ',  async ({ page }) => {
+        test('9.Complete customer CPF - Validate PIX key type. Incorrect phone number.',  async ({ page }) => {
 
             ClienteCompletoPage.iconMenuOptions()
             ClienteCompletoPage.optionClientComplete()
@@ -521,7 +521,7 @@ test.describe('Register complete client', () => {
             RefBancariaPage.messRefBankingKeyPixPhoneInvalid()
         })  
 
-        test('10.Cliente completo CPF - validar tipo de chave PIX Email incorreto ',  async ({ page }) => {
+        test('10.Complete customer CPF - Validate PIX key type. Incorrect email.',  async ({ page }) => {
 
             ClienteCompletoPage.iconMenuOptions()
             ClienteCompletoPage.optionClientComplete()
@@ -584,7 +584,7 @@ test.describe('Register complete client', () => {
             RefBancariaPage.messRefBankingKeyPixEmailInvalid()
         })  
 
-        test('11.Cliente completo CPF - validar tipo de chave CPF CNPJ incorreto ',  async ({ page }) => {
+        test('11.Complete customer CPF - Validate CPF key type. Incorrect CNPJ.',  async ({ page }) => {
 
             ClienteCompletoPage.iconMenuOptions()
             ClienteCompletoPage.optionClientComplete()
@@ -647,7 +647,7 @@ test.describe('Register complete client', () => {
             RefBancariaPage.messRefBankingKeyPixCpfCnpjInvalid()
         })  
 
-        test('12.Cliente completo CPF - validar tipo de chave Aleatória incorreto ',  async ({ page }) => {
+        test('12.Complete customer CPF - Validate incorrect Random key type.',  async ({ page }) => {
 
             ClienteCompletoPage.iconMenuOptions()
             ClienteCompletoPage.optionClientComplete()

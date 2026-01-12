@@ -9,9 +9,9 @@ test.describe('Search client', () => {
         CommandsGeneral.tituloPagina()
     })
 
-    context('Pesquisa cliente por número', () => {
+    context('Search customer by number.', () => {
 
-        test('1.Pesquisa por número CPF',  async ({ page }) => {
+        test('1.Search by CPF number.',  async ({ page }) => {
     
             PesquisaClientePage.fillCPF()
             PesquisaClientePage.clickGlassPesquisaClientePage()
@@ -22,7 +22,7 @@ test.describe('Search client', () => {
             PesquisaClientePage.numberDescripCPFSearch()
         }) 
 
-        test('2.Pesquisa por número CNPJ',  async ({ page }) => {
+        test('2.Search by CNPJ number.',  async ({ page }) => {
 
             PesquisaClientePage.fillCNPJ()
             PesquisaClientePage.clickGlassPesquisaClientePage()
@@ -35,9 +35,9 @@ test.describe('Search client', () => {
         }) 
     })
 
-    context('Pesquisa cliente por descrição', () => {
+    context('Search customer by description.', () => {
 
-        test('3.Pesquisa por descrição CPF',  async ({ page }) => {
+        test('3.Search by CPF description.',  async ({ page }) => {
 
             PesquisaClientePage.fillDescripCPF()
             PesquisaClientePage.clickGlassPesquisaClientePage()
@@ -48,7 +48,7 @@ test.describe('Search client', () => {
             PesquisaClientePage.numberDescripCPFSearch()
         }) 
 
-        test('4.Pesquisa por descrição CNPJ',  async ({ page }) => {
+        test('4.Search by CNPJ description.',  async ({ page }) => {
 
             PesquisaClientePage.typeAgainDescriptCNPJ()
             PesquisaClientePage.clickGlassPesquisaClientePage()

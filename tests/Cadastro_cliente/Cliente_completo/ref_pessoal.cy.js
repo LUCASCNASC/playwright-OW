@@ -6,7 +6,7 @@ import { RotaPage, RotaPage } from '../../../pages/cadastro_cliente/cliente_comp
 import { TelefonePage, TelefonePage } from '../../../pages/cadastro_cliente/cliente_completo/TelefonePage.js';
 import { EnderecoPage, EnderecoPage } from '../../../pages/cadastro_cliente/cliente_completo/EnderecoPage.js';
 
-test.describe('Register complete client - referencia pessoal', () => {
+test.describe('Register complete customer - personal reference', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -14,7 +14,7 @@ test.describe('Register complete client - referencia pessoal', () => {
         CommandsGeneral.tituloPagina()
     })
 
-    test('1.Cliente completo CPF - caminho feliz',  async ({ page }) => {
+    test('1.Complete customer CPF - happy path',  async ({ page }) => {
 
         ClienteCompletoPage.iconMenuOptions()
         ClienteCompletoPage.optionClientComplete()
