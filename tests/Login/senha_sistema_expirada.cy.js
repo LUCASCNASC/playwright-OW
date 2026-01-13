@@ -2,7 +2,7 @@ import { test } from '@playwright/test';
 import { LoginPage } from '../../pages/login/LoginPage';
 import users from '../../tests/users.json';
 
-test.describe('Senha do usuário expirada', () => {
+test.describe('User password expired.', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -13,7 +13,7 @@ test.describe('Senha do usuário expirada', () => {
         LoginPage.validateUsuarioTextoIcone()
     })
 
-    test('1.Tentar logar com usuário com senha do usuário expirada',  async ({ page }) => {
+    test('1.Attempting to log in with a user whose password has expired.',  async ({ page }) => {
     
         cy.get('#txtusername')
             .should('be.visible')

@@ -2,7 +2,7 @@ import { test } from '@playwright/test';
 import { LoginPage } from '../../pages/login/LoginPage';
 import users from '../../tests/users.json';
 
-test.describe('Usuário inativo', () => {
+test.describe('Inactive user', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -13,7 +13,7 @@ test.describe('Usuário inativo', () => {
         LoginPage.validateUsuarioTextoIcone()
     })
 
-    test('1.Tentar logar com usuário inativo',  async ({ page }) => {
+    test('1.Attempting to log in with an inactive user.',  async ({ page }) => {
     
         cy.get('#txtusername')
             .should('be.visible')

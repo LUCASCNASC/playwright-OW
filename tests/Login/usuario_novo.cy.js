@@ -2,7 +2,7 @@ import { test } from '@playwright/test';
 import { LoginPage } from '../../pages/login/LoginPage';
 import users from '../../tests/users.json';
 
-test.describe('Logar com novo usuário', () => {
+test.describe('Log in with new user.', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -13,7 +13,7 @@ test.describe('Logar com novo usuário', () => {
         LoginPage.validateUsuarioTextoIcone()
     })
 
-    test('1.Novo usuário - clicar em Fechar, não alterando a senha',  async ({ page }) => {
+    test('1.New user - click Close, do not change password.',  async ({ page }) => {
     
         cy.get('#txtusername')
             .should('be.visible')
@@ -192,7 +192,7 @@ test.describe('Logar com novo usuário', () => {
         LoginPage.validateIconeComputadorLogin() 
     })
 
-    test('2.Novo usuário - clicar em CONFIRMAR, alterando a senha',  async ({ page }) => {
+    test('2.New user - click CONFIRM, change your password.',  async ({ page }) => {
     
         //Validando campo "informe seu usuário"
         cy.get('#txtusername')

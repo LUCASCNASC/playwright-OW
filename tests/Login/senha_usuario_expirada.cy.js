@@ -2,7 +2,7 @@ import { test } from '@playwright/test';
 import { LoginPage } from '../../pages/login/LoginPage';
 import users from '../../tests/users.json';
 
-test.describe('Senha do usuário expirada', () => {
+test.describe('User password expired.', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -13,9 +13,9 @@ test.describe('Senha do usuário expirada', () => {
         LoginPage.validateUsuarioTextoIcone()
     })
 
-    context('Tentar login quando a senha já está expirada', () => {
+    context('Attempting to log in when the password has already expired.', () => {
 
-        test('1.Tentar logar com usuário com senha do usuário expirada - clicar em SIM atualizar senha - clicar em Fechar a redefinição de senha',  async ({ page }) => {
+        test('1.Try logging in with a user whose password has expired - click YES to update password - click Close password reset',  async ({ page }) => {
         
             cy.get('#txtusername')
                 .should('be.visible')
@@ -119,7 +119,7 @@ test.describe('Senha do usuário expirada', () => {
                 .and('not.have.attr', 'disabled')
         })
 
-        test('2.Tentar logar com usuário com senha do usuário expirada - clicar em NÃO atualizar senha - clicar em Fechar a redefinição de senha',  async ({ page }) => {
+        test('2.Attempt to log in with a user whose password has expired - click DO NOT update password - click Close password reset',  async ({ page }) => {
         
             cy.get('#txtusername')
                 .should('be.visible')
@@ -233,9 +233,9 @@ test.describe('Senha do usuário expirada', () => {
         })
     })
 
-    context('Login quando a senha foi trocada e falta 1 dia para expirar, como foi definido no grupo deste usuário', () => {
+    context('Log in when the password has been changed and there is 1 day left before it expires, as defined in this users group.', () => {
 
-        test('3.Login - clicar em NÃO atualizar senha',  async ({ page }) => {
+        test('3.Login - click on DO NOT update password',  async ({ page }) => {
 
                 cy.get('#txtusername')
                     .should('be.visible')
@@ -267,7 +267,7 @@ test.describe('Senha do usuário expirada', () => {
                     .should('be.visible')
         })
         
-        test('4.Login - clicar em SIM atualizar senha - clicar em Fechar a redefinição de senha',  async ({ page }) => {
+        test('4.Login - click YES to update password - click Close password reset',  async ({ page }) => {
 
             cy.get('#txtusername')
                 .should('be.visible')
@@ -373,7 +373,7 @@ test.describe('Senha do usuário expirada', () => {
                 .and('not.have.attr', 'disabled')
         })
     
-        test('5.Login - clicar em SIM atualizar senha - clicar em CONFIRMAR a redefinição de senha',  async ({ page }) => {
+        test('5.Login - click YES to update password - click CONFIRM to reset password',  async ({ page }) => {
         
             cy.get('#txtusername')
                 .should('be.visible')
