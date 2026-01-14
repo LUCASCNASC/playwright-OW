@@ -10,7 +10,7 @@ import { Service } from '../../../pages/pedido/ServicosPage.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Gerar pedidos com promoção com entrega', () => {
+test.describe('Generate promotional orders with delivery', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -20,9 +20,9 @@ test.describe('Gerar pedidos com promoção com entrega', () => {
         ChooseCliente.withRoute()
     })
 
-    context('Com entrega /com promoção/ processo 9890 - caminho feliz', () => {
+    context('With delivery / with promotion / process 9890 - happy path', () => {
 
-        test('1.Pedido com promoção partida (promoção 152): produto 1868 0 0',  async ({ page }) => {
+        test('1.Order with promotional offer (promotion 152): product 1868 0 0',  async ({ page }) => {
     
             Product.promoMatch()
             ValidateBalance.withBalance() 
@@ -49,7 +49,7 @@ test.describe('Gerar pedidos com promoção com entrega', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
     
-        test('2.Pedido com promoção a prazo com entrada (promoção 150): produto 1866 0 0',  async ({ page }) => {
+        test('2.Order with installment payment promotion with down payment (promotion 150): product 1866 0 0',  async ({ page }) => {
     
             Product.promoDeadlineEntry()
             ValidateBalance.withBalance() 
@@ -70,7 +70,7 @@ test.describe('Gerar pedidos com promoção com entrega', () => {
             cy.contains('.md-select-value', 'Forma de pagamento').click()
         })
 
-        test('3.Pedido com promoção a prazo parcelado (promoção 151): produto 1867 0 0',  async ({ page }) => {
+        test('3.Order with installment payment promotion (promotion 151): product 1867 0 0',  async ({ page }) => {
     
             Product.promoDeadlineInstallment()
             ValidateBalance.withBalance() 

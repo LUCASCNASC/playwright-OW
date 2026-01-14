@@ -12,7 +12,7 @@ import { ProcessoRecebPage } from '../../../pages/pedido/ProcessoRecebPage.js';
 import { ProcessoRecebPromoPage } from '../../../../pages/pedido/processo_recebimento_promo.js';
 import { CommandsGeneral } from '../../../../pages/commands.js';
 
-test.describe('Gerar pedido de entrega futura com entrega', () => {
+test.describe('Generate a future delivery order with delivery.', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -25,9 +25,9 @@ test.describe('Gerar pedido de entrega futura com entrega', () => {
         CommandsGeneral.selectProductSearch() 
     })
     
-    context('Com entrega/ processo 9891 - caminho feliz', () => {
+    context('With delivery/process 9891 - happy path', () => {
 
-        test('1.Pedido: produto 1860 0 0', async ({ page }) => {
+        test('1.Order: product 1860 0 0', async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
@@ -46,7 +46,7 @@ test.describe('Gerar pedido de entrega futura com entrega', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })    
         
-        test('2.Pedido: produtos 1860 0 0 e 1870 0 0', async ({ page }) => {
+        test('2.Order: products 1860 0 0 and 1870 0 0', async ({ page }) => {
                       
             CommandsGeneral.selectProductSearch() 
             CommandsGeneral.clickVoltageProduct() 

@@ -11,7 +11,7 @@ import { Service } from '../../../pages/pedido/ServicosPage.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Gerar pedido com reserva no CD (com entrega) - Regra de saldo Parâmetro 36 = 4 - Parâmetro 139 = 4 - Trial 653 não configurado', () => {
+test.describe('Generate order with reservation at the distribution center (with delivery) - Balance rule Parameter 36 = 4 - Parameter 139 = 4 - Trial 653 not configured', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -21,9 +21,9 @@ test.describe('Gerar pedido com reserva no CD (com entrega) - Regra de saldo Par
         ChooseCliente.withRoute()
     })
 
-    context('Com entrega/ processo 9890 - caminho feliz', () => {
+    context('With delivery/process 9890 - happy path', () => {
 
-        test('1.Pedido: produto 1880 0 0 - (Venda local de produto com saldo só no CD - com entrega)', () => {
+        test('1.Order: product 1880 0 0 - (Local sale of product with stock only at the distribution center - with delivery)', () => {
             
             Product.cdFirst()
             ValidateBalance.withBalance() 
@@ -45,7 +45,7 @@ test.describe('Gerar pedido com reserva no CD (com entrega) - Regra de saldo Par
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('2.Pedido: produtos 1880 0 0 (reserva CD) e 1870 0 0 (saldo local) - (Venda local de 1 produto com saldo local + 1 produto com saldo no CD - com entrega)',  async ({ page }) => {
+        test('2.Order: products 1880 0 0 (CD reservation) and 1870 0 0 (local balance) - (Local sale of 1 product with local balance + 1 product with balance in the CD - with delivery)',  async ({ page }) => {
             
             Product.fisrt()
             ValidateBalance.withBalance() 

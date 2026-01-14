@@ -12,7 +12,7 @@ import { CommandsGeneral } from '../../../../pages/commands.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Gerar pedido normal com entrega', () => {
+test.describe('Generate a standard order with delivery.', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -25,9 +25,9 @@ test.describe('Gerar pedido normal com entrega', () => {
         CommandsGeneral.selectProductSearch() 
     })
     
-    context('Com entrega/processo 9890 - caminho feliz', () => {
+    context('With delivery/process 9890 - happy path', () => {
         
-        test('Pedido1.: kit 1862 0 0',  async ({ page }) => {
+        test('1.Order: kit 1862 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() 
             GeralPedidosPage.compositionKit()

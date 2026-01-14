@@ -11,7 +11,7 @@ import { CommandsGeneral } from '../../../../pages/commands.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Gerar pedido com financeiro na baixa com entrega', () => {
+test.describe('Generate order with financial terms upon delivery.', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()//login
@@ -24,9 +24,9 @@ test.describe('Gerar pedido com financeiro na baixa com entrega', () => {
         CommandsGeneral.selectProductSearch() 
     })
     
-    context('Com entrega/ processo 9892 - caminho feliz', () => {
+    context('With delivery/process 9892 - happy path', () => {
 
-        test('1.Pedido: produto 1860 0 0',  async ({ page }) => {
+        test('1.Order: product 1860 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
@@ -45,7 +45,7 @@ test.describe('Gerar pedido com financeiro na baixa com entrega', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('2.Pedido: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
+        test('2.Order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
