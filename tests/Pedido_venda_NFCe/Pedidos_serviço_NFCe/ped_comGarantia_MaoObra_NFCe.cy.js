@@ -11,7 +11,7 @@ import { Service } from '../../../pages/pedido/ServicosPage.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
+test.describe('Generate orders with warranty and labor with delivery', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -27,9 +27,9 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
         Service.validateModalServLinked()
     })
 
-    context('Com entrega/processo 9890 - caminho feliz', () => {
+    context('With delivery/process 9890 - happy path', () => {
 
-        test('1.Pedido: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra que destaca e não separa)',  async ({ page }) => {
+        test('1.Order: product 1860 0 0 (with Warranty that separates title in the same process and Labor that detaches and does not separate)',  async ({ page }) => {
 
             Service.garantiaSepMesmoProc() 
             Service.maoObraDestNãoSep() 
@@ -47,7 +47,7 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('2.Pedido: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra que destaca e não separa) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+            test('2.Order: product 1860 0 0 (with Warranty that separates title in the same process and Labor that detaches and does not separate) and product 1870 0 0 (without service)',  async ({ page }) => {
 
             Service.garantiaSepMesmoProc() 
             Service.maoObraDestNãoSep() 
@@ -72,7 +72,7 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('3.Pedido: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa no mesmo processo)',  async ({ page }) => {
+        test('3.Order: product 1860 0 0 (with Warranty that separates title in the same process and Labor that does not detach and separates in the same process)',  async ({ page }) => {
 
             Service.garantiaSepMesmoProc() 
             Service.maoObraNaoDestSepMesmoProc() 
@@ -90,7 +90,7 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('4.Pedido: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa no mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('4.Order: product 1860 0 0 (with Warranty that separates title in the same process and Labor does not separate and is separated in the same process) and product 1870 0 0 (without service)',  async ({ page }) => {
 
             Service.garantiaSepMesmoProc() 
             Service.maoObraNaoDestSepMesmoProc() 
@@ -115,7 +115,7 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('5.Pedido: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa em outro processo)',  async ({ page }) => {
+        test('5.Order: product 1860 0 0 (with Warranty that separates title in the same process and Labor does not detach and separates in another process)',  async ({ page }) => {
 
             Service.garantiaSepMesmoProc() 
             Service.maoObraNaoDestSepaProcDif() 
@@ -133,7 +133,7 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('6.Pedido: produto 1860 0 0 (com Garantia que separa título no mesmo processo e Mão de Obra não destaca e separa em outro processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('6.Order: product 1860 0 0 (with Warranty that separates title in the same process and Labor does not detach and separates in another process) and product 1870 0 0 (without service)',  async ({ page }) => {
 
             Service.garantiaSepMesmoProc() 
             Service.maoObraNaoDestSepaProcDif() 
@@ -158,7 +158,7 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('7.Pedido: produto 1860 0 0 (com Garantia que não separa e Mão de Obra que destaca e não separa)',  async ({ page }) => {
+        test('7.Order: product 1860 0 0 (with Warranty that does not separate and Labor that detaches and does not separate)',  async ({ page }) => {
 
             Service.garantiaNaoSep()
             Service.maoObraDestNãoSep()
@@ -176,7 +176,7 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('8.Pedido: produto 1860 0 0 (com Garantia que não separa e Mão de Obra que destaca e não separa) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('8.Order: product 1860 0 0 (with Warranty that does not separate and Labor that detaches and does not separate) and product 1870 0 0 (without service)',  async ({ page }) => {
 
             Service.garantiaNaoSep() 
             Service.maoObraDestNãoSep()
@@ -201,7 +201,7 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('9.Pedido: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa no mesmo processo)',  async ({ page }) => {
+        test('9.Order: product 1860 0 0 (with Warranty that does not separate and Labor that does not detach and separates in the same process)',  async ({ page }) => {
 
             Service.garantiaNaoSep() 
             Service.maoObraNaoDestSepMesmoProc() 
@@ -219,7 +219,7 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('10.Pedido: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa no mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('10.Order: product 1860 0 0 (with Warranty that does not separate and Labor that does not detach and separates in the same process) and product 1870 0 0 (without service)',  async ({ page }) => {
 
             Service.garantiaNaoSep() 
             Service.maoObraNaoDestSepMesmoProc() 
@@ -244,7 +244,7 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('11.Pedido: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa em outro processo)',  async ({ page }) => {
+        test('11.Order: product 1860 0 0 (with Warranty that does not separate and Labor that does not detach and separates in another process)',  async ({ page }) => {
 
             Service.garantiaNaoSep() 
             Service.maoObraNaoDestSepaProcDif() 
@@ -262,7 +262,7 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('12.Pedido: produto 1860 0 0 (com Garantia que não separa e Mão de Obra não destaca e separa em outro processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('12.Order: product 1860 0 0 (with Warranty that does not separate and Labor that does not detach and separates in another process) and product 1870 0 0 (without service)',  async ({ page }) => {
 
             Service.garantiaNaoSep() 
             Service.maoObraNaoDestSepaProcDif() 
@@ -287,7 +287,7 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('13.Pedido: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra que destaca e não separa)',  async ({ page }) => {
+        test('13.Order: product 1860 0 0 (with Warranty that separates in a different process and Labor that detaches and does not separate)',  async ({ page }) => {
 
             Service.garantiaSepTituloProcDif() 
             Service.maoObraDestNãoSep() 
@@ -305,7 +305,7 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('14.Pedido: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra que destaca e não separa) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('14.Order: product 1860 0 0 (with Warranty that separates in a different process and Labor that detaches and does not separate) and product 1870 0 0 (without service)',  async ({ page }) => {
 
             Service.garantiaSepTituloProcDif() 
             Service.maoObraDestNãoSep() 
@@ -329,7 +329,7 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('15.Pedido: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa no mesmo processo)',  async ({ page }) => {
+        test('15.Order: product 1860 0 0 (with Warranty that separates in a different process and Labor that does not detach and separates in the same process)',  async ({ page }) => {
 
             Service.garantiaSepTituloProcDif() 
             Service.maoObraNaoDestSepMesmoProc() 
@@ -347,7 +347,7 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('16.Pedido: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa no mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('16.Order: product 1860 0 0 (with Warranty that separates in a different process and Labor that does not detach and separates in the same process) and product 1870 0 0 (without service)',  async ({ page }) => {
 
             Service.garantiaSepTituloProcDif() 
             Service.maoObraNaoDestSepMesmoProc() 
@@ -372,7 +372,7 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('17.Pedido: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa em outro processo)',  async ({ page }) => {
+        test('17.Order: product 1860 0 0 (with Warranty that separates in a different process and Labor that does not detach and separates in another process)',  async ({ page }) => {
 
             Service.garantiaSepTituloProcDif() 
             Service.maoObraNaoDestSepaProcDif()
@@ -390,7 +390,7 @@ test.describe('Gerar pedidos com Garantia e Mão de Obra com entrega', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })  
 
-        test('18.Pedido: produto 1860 0 0 (com Garantia que separa em processo diferente e Mão de Obra não destaca e separa em outro processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('18.Order: product 1860 0 0 (with Warranty that separates in a different process and Labor that does not detach and separates in another process) and product 1870 0 0 (without service)',  async ({ page }) => {
 
             Service.garantiaSepTituloProcDif()
             Service.maoObraNaoDestSepaProcDif()
