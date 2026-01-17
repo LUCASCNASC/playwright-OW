@@ -12,7 +12,7 @@ import { Service } from '../../../pages/pedido/ServicosPage.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Gerar pedido normal', () => {
+test.describe('Generate normal order', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -24,10 +24,10 @@ test.describe('Gerar pedido normal', () => {
         ValidateBalance.withBalance() 
         CommandsGeneral.selectProductSearch() 
     })
-  
-    context('Sem entrega/ processo 9860 - caminho feliz', () => {
+
+    context('Without delivery/ process 9860 - happy path', () => {
         
-        test('1.Pedido: kit 1862 0 0',  async ({ page }) => {
+        test('1.Order: kit 1862 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() 
             GeralPedidosPage.compositionKit()
@@ -45,10 +45,10 @@ test.describe('Gerar pedido normal', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
     })
-    
-    context('Com entrega/processo 9860 - caminho feliz', () => {
-        
-        test('2.Pedido: kit 1862 0 0',  async ({ page }) => {
+
+    context('With delivery/process 9860 - happy path', () => {
+
+        test('2.Order: kit 1862 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() 
             GeralPedido.compositionKit()

@@ -12,7 +12,7 @@ import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
 
-test.describe('Gerar pedido normal', () => {
+test.describe('Generate normal order', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -25,9 +25,9 @@ test.describe('Gerar pedido normal', () => {
         CommandsGeneral.selectProductSearch() 
     }) 
 
-    context('Sem entrega/ processo 9860 - caminho feliz', () => {
+    context('Without delivery/ process 9860 - happy path', () => {
 
-        test('1.Pedido: produto 1860 0 0 - (Venda local de produto com saldo - sem entrega)',  async ({ page }) => {
+        test('1.Order: product 1860 0 0 - (Local sale of product with balance - without delivery)',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
@@ -44,7 +44,7 @@ test.describe('Gerar pedido normal', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('2.Pedido: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
+        test('2.Order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
@@ -69,7 +69,7 @@ test.describe('Gerar pedido normal', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('3.Pedido: produto 1860 0 0 - (Pedido de venda sem entrega. Com Entrada + parcelamento.)',  async ({ page }) => {
+        test('3.Order: product 1860 0 0 - (Order without delivery. With Entry + Installments.)',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
@@ -89,9 +89,9 @@ test.describe('Gerar pedido normal', () => {
         })
     })
 
-    context('Com entrega/ processo 9860 - caminho feliz', () => {
+    context('With delivery/process 9860 - happy path', () => {
 
-        test('4.Pedido: produto 1860 0 0 - (Venda local de produto com saldo - com entrega)',  async ({ page }) => {
+        test('4.Order: product 1860 0 0 - (Local sale of product with balance - with delivery)',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
@@ -108,7 +108,7 @@ test.describe('Gerar pedido normal', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('5.Pedido: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
+        test('5.Order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
@@ -132,7 +132,7 @@ test.describe('Gerar pedido normal', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('6.Pedido: produto 1860 0 0 - (Pedido de venda com entrega. Com Entrada + parcelamento.)',  async ({ page }) => {
+        test('6.Order: product 1860 0 0 - (Order with delivery. With Entry + Installments.)',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 

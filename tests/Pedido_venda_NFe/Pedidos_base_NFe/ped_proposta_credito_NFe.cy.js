@@ -11,7 +11,7 @@ import { Service } from '../../../pages/pedido/ServicosPage.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Gerar pedido com proposta de crédito', () => {
+test.describe('Generate request with credit proposal', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -24,9 +24,9 @@ test.describe('Gerar pedido com proposta de crédito', () => {
         CommandsGeneral.selectProductSearch() 
     })
 
-    context('Sem entrega/ processo 9860 - caminho feliz', () => {
+    context('Without delivery/ process 9860 - happy path', () => {
 
-        test('1.Pedido: produto 1860 0 0 - (Pedido de venda sem entrega, com proposta de crédito.)',  async ({ page }) => {
+        test('1.Order: product 1860 0 0 - (Order without delivery, with credit proposal.)',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 

@@ -4,7 +4,7 @@ import { Product } from '../../../pages/ProdutoPage.js';
 import { CommandsGeneral } from '../../../../pages/commands.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Tentar gerar pedido de venda com produto sem saldo - Regra de saldo Parâmetro 36 = 4 - Parâmetro 139 = 4 - Trial 653 não configurado', () => {
+test.describe('Attempting to generate a sales order with an out-of-stock product - Stock rule Parameter 36 = 4 - Parameter 139 = 4 - Trial 653 not configured', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -14,9 +14,9 @@ test.describe('Tentar gerar pedido de venda com produto sem saldo - Regra de sal
         ChooseCliente.withRoute()
     })
 
-    context('Processo 9860 - não permitir fazer a venda - no momento de adicionar produto, devem aparecer mensagens de aviso', () => {
+    context('Process 9860 - do not allow making the sale - at the moment of adding the product, warning messages should appear', () => {
 
-        test('1.Pedido: produto 1869 0 0 (Venda local de produto sem saldo - sem entrega)',  async ({ page }) => {
+        test('1.Order: product 1869 0 0 (Local sale of product without balance - without delivery)',  async ({ page }) => {
             
             Product.withoutBalance()
             ValidarSaldo.comSaldo() 
