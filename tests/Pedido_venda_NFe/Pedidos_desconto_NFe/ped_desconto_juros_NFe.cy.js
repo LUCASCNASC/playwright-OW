@@ -12,7 +12,7 @@ import { Service } from '../../../pages/pedido/ServicosPage.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244 definidos no processo de inclusão', () => {
+test.describe('Generate a standard order with interest discount - parameters 243 and 244 defined in the inclusion process', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -25,9 +25,9 @@ test.describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244
         CommandsGeneral.selectProductSearch() 
     })
 
-    context('Sem entrega/ processo 9860 - caminho feliz - processo de inclusão 3860', () => {
+    context('Without delivery/ process 9860 - happy path - inclusion process 3860', () => {
 
-        test('1.Pedido: produto 1860 0 0 - arredondar para baixo',  async ({ page }) => {
+        test('1.Order: product 1860 0 0 - round down',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 
@@ -48,7 +48,7 @@ test.describe('Gerar pedido normal com desconto nos juros - parametros 243 e 244
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('2.Pedido: produtos 1860 0 0 - arredondar para cima',  async ({ page }) => {
+        test('2.Order: products 1860 0 0 - round up',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct() 
             CommandsGeneral.clickAddProduct() 

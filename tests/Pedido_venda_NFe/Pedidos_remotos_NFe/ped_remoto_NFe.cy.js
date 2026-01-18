@@ -11,7 +11,7 @@ import { Service } from '../../../pages/pedido/ServicosPage.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâmetro 139 = 4 - Trial 653 não configurado', () => {
+test.describe('Remote/process 9860 - Balance rule Parameter 36 = 4 - Parameter 139 = 4 - Trial 653 not configured', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -20,10 +20,10 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
         ProcessoVendaPage.NFe()
         ChooseCliente.withRoute()
     })
-  
-    context('Pedido de venda remoto normal', () => {
 
-        test('1.Pedido remoto: produto 1860 0 0 - (Venda remota de produto com saldo na filial do faturamento )',  async ({ page }) => {
+    context('Remote order normal', () => {
+
+        test('1.Remote order: product 1860 0 0 - (Remote sale of product with stock available at the billing branch)',  async ({ page }) => {
 
             Product.fisrt()
             ValidateBalance.withBalance() 
@@ -45,7 +45,7 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('2.Pedido remoto: produtos 1860 0 0 e 1870 0 0',  async ({ page }) => {
+        test('2.Remote order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
 
             Product.fisrt()
             ValidateBalance.withBalance() 
@@ -76,7 +76,7 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
             FinalizarPedidoPage.validateOrderGenerated()
         })
         
-        test('3.Pedido remoto: kit 1877 0 0',  async ({ page }) => {
+        test('3.Remote order: kit 1877 0 0',  async ({ page }) => {
 
             Product.kitRemote()
             ValidateBalance.withBalance() 
@@ -99,10 +99,10 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
             FinalizarPedidoPage.validateOrderGenerated()
         })
     })
-    
-    context('Pedido de venda remoto sem saldo remoto, pegar CD', () => {
 
-        test('4.Pedido remoto - com saldo no CD (filial 1) - deve permitir fazer o pedido - (Venda remota de produto sem saldo na filial do faturamento, mas com saldo no CD do faturamento - com entrega)',  async ({ page }) => {
+    context('Remote order without remote stock, get CD', () => {
+
+        test('4.Remote order - with stock in CD (branch 1) - should allow order creation - (Remote sale of product without stock at the billing branch, but with stock in the CD of the billing branch - with delivery)',  async ({ page }) => {
 
             Product.remoteWithCD()
             ValidateBalance.withBalance() 
@@ -123,8 +123,8 @@ test.describe('Remoto/processo 9860 - Regra de saldo Parâmetro 36 = 4 - Parâme
             FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })    
-        
-        test('5.Pedido remoto - SEM saldo no CD (filial 1) - NÃO deve permitir fazer o pedido - (Venda remota de produto sem saldo na filial do faturamento, sem saldo da CD do faturamento)',  async ({ page }) => {
+
+        test('5.Remote order - WITHOUT stock in CD (branch 1) - should NOT allow order creation - (Remote sale of product without stock at the billing branch, without stock in the CD of the billing branch)',  async ({ page }) => {
 
             Product.remoteWithoutCD()
             ValidateBalance.withoutBalance() 

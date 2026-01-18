@@ -12,7 +12,7 @@ import { Service, ValidateService } from '../../../pages/pedido/ServicosPage.js'
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Gerar pedidos com promoção e serviços com isenção de juros', () => {
+test.describe('Generate orders with promotions and interest-free services', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -21,10 +21,10 @@ test.describe('Gerar pedidos com promoção e serviços com isenção de juros',
         ProcessoVendaPage.NFe()
         ChooseCliente.withRoute()
     })
-  
-    context('Sem entrega/ com promoção/ com serviço processo 9860 - caminho feliz', () => {
 
-        test('1.Pedido com promoção a prazo/parcelas (promoção 159): produto 1891 0 0 com garantia (isenta de juros)',  async ({ page }) => {
+    context('Without delivery/ with promotion/ with service process 9860 - happy path', () => {
+
+        test('1.Order with promotion deadline installment (promotion 159): product 1891 0 0 with guarantee (interest-free)',  async ({ page }) => {
     
             Product.firstInstallmentDeadline()
             ValidateBalance.withBalance() 
@@ -47,9 +47,9 @@ test.describe('Gerar pedidos com promoção e serviços com isenção de juros',
             FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
-    
-        test('2.Pedido com promoção a prazo/entrada + parcelas (promoção 158): produto 1895 0 0 com garantia (isenta de juros)',  async ({ page }) => {
-    
+
+        test('2.Order with promotion deadline with entry + installments (promotion 158): product 1895 0 0 with guarantee (interest-free)',  async ({ page }) => {
+
             Product.secondInstallmentDeadline()
             ValidateBalance.withBalance() 
             CommandsGeneral.selectProductSearch() 
@@ -89,8 +89,8 @@ test.describe('Gerar pedidos com promoção e serviços com isenção de juros',
             FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
-    
-        test('3.Pedido com promoção a partida (promoção 161): produto 1893 0 0 com prestamista (isento de juros)',  async ({ page }) => {
+
+        test('3.Order with promotion deadline installment (promotion 161): product 1893 0 0 with moneylender (interest-free)',  async ({ page }) => {
     
             Product.thirdInstallmentDeadline()
             ValidateBalance.withBalance() 
@@ -115,7 +115,7 @@ test.describe('Gerar pedidos com promoção e serviços com isenção de juros',
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('4.Pedido com promoção a prazo/parcelas (promoção 162): produto 1894 0 0 com garantia (isenta de juros) e prestamista (com juros)',  async ({ page }) => {
+        test('4.Order with installment payment promotion (promotion 162): product 1894 0 0 with warranty (interest-free) and lender (with interest)',  async ({ page }) => {
     
             Product.fourthInstallmentDeadline()
             ValidateBalance.withBalance() 

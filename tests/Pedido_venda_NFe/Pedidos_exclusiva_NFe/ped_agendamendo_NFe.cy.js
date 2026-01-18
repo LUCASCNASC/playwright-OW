@@ -13,7 +13,7 @@ import { Service } from '../../../pages/pedido/ServicosPage.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
+test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -23,9 +23,9 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
         ChooseCliente.withRoute()
     })
 
-    context('Configuração de processo - Exclusiva: 36 = 2; 139 = 6; 552= 5 dias', () => {
+    context('Process configuration - Exclusive: 36 = 2; 139 = 6; 552 = 5 days', () => {
 
-        test('1.Pedido: produto normal (com saldo e com entrega, 15 dias) e um kit remoto (2 composições, sem saldo e sem a receber, 20 dias).',  async ({ page }) => {
+        test('1.Order: normal product (with balance and with delivery, 15 days) and a remote kit (2 compositions, without balance and without receivable, 20 days).',  async ({ page }) => {
 
             ProductExclusiva.firstNormal() 
             ValidateBalance.withBalance() 
@@ -53,7 +53,7 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('2.Pedido: produto normal (com saldo e com entrega) e um kit com composição 6 volumes (data atual + parametro 552/ 5 dias).',  async ({ page }) => {
+        test('2.Order: normal product (with balance and with delivery) and a kit with 6 compositions (current date + parameter 552/ 5 days).',  async ({ page }) => {
 
             ProductExclusiva.firstNormal()
             ValidateBalance.withBalance() 
@@ -81,9 +81,9 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
         })
     })
 
-    context('Configuração de processo - Exclusiva: 36 = 2; 139 = 6; 552= 5 dias', () => {
+    context('Process configuration - Exclusive: 36 = 2; 139 = 6; 552 = 5 days', () => {
 
-        test('3.Pedido: um produto (sem saldo e com saldo a receber para 10 dias, e com entrega), e ter um agendamento para a data de previsão.',  async ({ page }) => {
+        test('3.Order: a product (without balance and with balance to receive for 10 days, and with delivery), and have an appointment for the forecast date.',  async ({ page }) => {
 
             ProductExclusiva.balanceReceive()
             ValidateBalance.withBalance() 
@@ -105,7 +105,7 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('4.Pedido: um produto em duas linhas (um com 5 unidades a receber e 10 para solicitar compra), e ter um agendamento para a data de previsão para a receber.',  async ({ page }) => {
+        test('4.Order: a product in two lines (one with 5 units to receive and 10 to request purchase), and have an appointment for the forecast date to receive.',  async ({ page }) => {
 
             ProductExclusiva.balanceReceiveTwoLines()
             PedExclusiva.balanceRemoteReceive()
@@ -122,7 +122,7 @@ test.describe('Pedidos Exclusiva - Parâmetro de empresa 1019 marcado', () => {
             PedExclusiva.increaseAmountSaleTen()
         })
 
-        test('5.Pedido: venda normal: produto 1896 0 0 (sem entrega)',  async ({ page }) => {
+        test('5.Order: normal sale: product 1896 0 0 (without delivery)',  async ({ page }) => {
     
             ProductExclusiva.firstNormal() 
             ValidateBalance.withBalance() 

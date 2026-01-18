@@ -13,7 +13,7 @@ import { Service } from '../../../pages/pedido/ServicosPage.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Gerar pedido de venda Kit com desconto', () => {
+test.describe('Generate sales order for discounted kit', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -22,11 +22,11 @@ test.describe('Gerar pedido de venda Kit com desconto', () => {
         ProcessoVendaPage.NFe()
         ChooseCliente.withRoute()
     })
-  
-    context('Sem entrega/ processo 9862 - caminho feliz', () => {
-        
-        test('1.Pedido: kit 1862 0 0 com desconto Sub (-) / VALOR FIXO',  async ({ page }) => {
-    
+
+    context('Without delivery/ process 9862 - happy path', () => {
+
+        test('1.Order: kit 1862 0 0 with discount Sub (-) / FIXED VALUE',  async ({ page }) => {
+
             Product.kitDiscount()
             ValidateBalance.withBalance() 
             CommandsGeneral.selectProductSearch() 
