@@ -13,7 +13,7 @@ import { Service, ValidateService } from '../../../../pages/pedido/ServicosPage.
 import { AdvanceNormal } from '../../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../../pages/pedido/ClientePage.js';
 
-test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161)', () => {
+test.describe('Generate orders with Fixed Value Discount Service (161)', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -23,9 +23,9 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
         ChooseCliente.withRoute()
     })   
 
-    context('Com entrega / Produtos sem promoção - Prestamista com abatimento Valor Fixo', () => {
+    context('With delivery / Products without promotion - Lender with fixed discount value', () => {
 
-        test('1.Pedido: produto 1860 0 0, inclusão 3880, prestamista 161 (55,90), 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
+        test('1.Order: product 1860 0 0, inclusion 3880, lender 161 (55.90), 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.fisrt()
             ValidateBalance.withBalance() 
@@ -48,7 +48,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('2.Pedido: produto 1860 0 0 e 1870 0 0, inclusão 3880, prestamista 161 (55,90), 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
+        test('2.Order: product 1860 0 0 e 1870 0 0, inclusion 3880, lender 161 (55.90), 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.fisrt()
             ValidateBalance.withBalance()
@@ -80,9 +80,9 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
         })
     })
 
-    context('Com entrega / Produtos com promoção - Prestamista com abatimento Valor Fixo', () => {
+    context('With delivery / Products with promotion - Lender with fixed discount value', () => {
 
-        test('3.Pedido: produto 1922 0 0 (promo a prazo 171), inclusão 3880 (outro recebimento 3860), prestamista 161, 4 parcelas no recebimento Futuro com juros',  async ({ page }) => {
+        test('3.Order: product 1922 0 0 (promo on credit 171), inclusion 3880 (other receipt 3860), lender 161, 4 installments upon receipt Future with interest',  async ({ page }) => {
     
             Product.termFisrtPrestAbatVF()
             ValidateBalance.withBalance() 
@@ -108,7 +108,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('4.Pedido: produto 1923 0 0 + garantia Não separa (promo a prazo 172 - isentar juros serviços), inclusão 3880 (outro recebimento 3860), prestamista 161, 4 parcelas no recebimento Futuro com juros',  async ({ page }) => {
+        test('4.Order: product 1923 0 0 + warranty not separated (promo on credit 172 - services interest free), inclusion 3880 (other receipt 3860), lender 161, 4 installments upon receipt Future with interest',  async ({ page }) => {
 
             Product.termSecondPrestAbatVF()
             ValidateBalance.withBalance() 
@@ -136,7 +136,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('5.Pedido: produto 1924 0 0 + garantia Não separa (promo a prazo 173 - isentar juros garantia), inclusão 3880 (outro recebimento 3860), prestamista 161, 4 parcelas no recebimento Futuro com juros',  async ({ page }) => {
+        test('5.Order: product 1924 0 0 + warranty not separated (promo on credit 173 - services interest free), inclusion 3880 (other receipt 3860), lender 161, 4 installments upon receipt Future with interest',  async ({ page }) => {
 
             Product.termThirdPrestAbatVF()
             ValidateBalance.withBalance() 
@@ -165,9 +165,9 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento Valor Fixo (161
         })
     })
 
-    context('Com entrega / Produto sem promoção - Prestamista com abatimento Valor Fixo', () => {
+    context('With delivery / Product without promotion - Lender with fixed discount value', () => {
 
-        test('6.Pedido: produto 1860 0 0, inclusão 3878, prestamista 161 (55,90), 4 parcelas no recebimento Presente com juros.',  async ({ page }) => {
+        test('6.Order: product 1860 0 0, inclusion 3878, lender 161 (55.90), 4 installments upon receipt Present with interest.',  async ({ page }) => {
     
             Product.fisrt()
             ValidateBalance.withBalance() 

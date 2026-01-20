@@ -16,7 +16,7 @@ import { AdvanceNormal } from '../../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../../pages/pedido/ClientePage.js';
 
 
-test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () => {
+test.describe('Generate orders with Lender Discount % (158)', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -26,9 +26,9 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
         ChooseCliente.withRoute()
     })   
 
-    context('Sem entrega / Produtos sem promoção - Prestamista com abatimento %', () => {
+    context('No delivery / Products without promotion - Lender with discount %', () => {
 
-        test('1.Pedido: produtos 1860 0 0 e 1870 0 0, inclusão 3874, prestamista 158, 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
+        test('1.Order: products 1860 0 0 e 1870 0 0, inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.fisrt()
             ValidateBalance.withBalance() 
@@ -59,7 +59,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('2.Pedido: produtos 1860 0 0 e 1870 0 0, inclusão 3875, prestamista 158, 4 parcelas no recebimento Presente.',  async ({ page }) => {
+        test('2.Order: products 1860 0 0 e 1870 0 0, inclusion 3875, lender 158, 4 installments upon receipt Present.',  async ({ page }) => {
     
             Product.fisrt()
             ValidateBalance.withBalance() 
@@ -91,9 +91,9 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
         })
     })
 
-    context('Com entrega / Produtos sem promoção - Prestamista com abatimento %', () => {
+    context('With delivery / Products without promotion - Lender with discount %', () => {
 
-        test('3.Pedido: produtos 1860 0 0 e 1870 0 0, inclusão 3876, prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
+        test('3.Order: products 1860 0 0 e 1870 0 0, inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
     
             Product.fisrt()
             ValidateBalance.withBalance() 
@@ -123,7 +123,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('4.Pedido: produtos 1860 0 0 (com garantia não separa) e 1870 0 0, inclusão 3874, prestamista 158, 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
+        test('4.Order: products 1860 0 0 (with warranty not separated) and 1870 0 0, inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.fisrt()
             ValidateBalance.withBalance() 
@@ -155,7 +155,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('5.Pedido: produtos 1860 0 0 (com garantia não separa) e 1870 0 0, inclusão 3876, prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
+        test('5.Order: products 1860 0 0 (with warranty not separated) and 1870 0 0, inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
 
             Product.fisrt()
             ValidateBalance.withBalance() 
@@ -187,7 +187,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('6.Pedido: produtos 1860 0 0 (com garantia não separa) e 1870 0 0, inclusão 3875, prestamista 158, 4 parcelas no recebimento Presente sem juros.',  async ({ page }) => {
+        test('6.Order: products 1860 0 0 (with warranty not separated) and 1870 0 0, inclusion 3875, lender 158, 4 installments upon receipt Present without interest.',  async ({ page }) => {
     
             Product.fisrt()
             ValidateBalance.withBalance() 
@@ -220,9 +220,9 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
         })
     })
 
-    context('Sem entrega / Produtos com promoção - Prestamista com abatimento %', () => {
+    context('Without delivery / Products with promotion - Lender with discount %', () => {
 
-        test('7.Pedido: produto 1918 0 0 (promoção a prazo 167), inclusão 3874, prestamista 158, 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
+        test('7.Order: product 1918 0 0 (term promotion 167), inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest()
             ValidateBalance.withBalance() 
@@ -248,7 +248,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('8.Pedido: produto 1918 0 0 (promoção a prazo 167), inclusão 3876, prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
+        test('8.Order: product 1918 0 0 (term promotion 167), inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest()
             ValidateBalance.withBalance() 
@@ -274,7 +274,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('9.Pedido: produto 1918 0 0 (promoção a prazo 167), com garantia Não separa, inclusão 3876, prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
+        test('9.Order: product 1918 0 0 (term promotion 167), with warranty not separated, inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest()
             ValidateBalance.withBalance() 
@@ -302,9 +302,9 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
         })
     })
 
-    context('Com entrega / Produtos com promoção - Prestamista com abatimento %', () => {
+    context('With delivery / Products with promotion - Lender with discount %', () => {
 
-        test('10.Pedido: produto 1919 0 0 (promoção a prazo 168), com garantia Não separa, inclusão 3876, prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
+        test('10.Order: product 1919 0 0 (term promotion 168), with warranty not separated, inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
 
             Product.termInstallmentPrest()
             ValidateBalance.withBalance() 
@@ -336,7 +336,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('11.Pedido: produto 1919 0 0 (promoção a prazo 168), com garantia Não separa, inclusão 3874, prestamista 158, 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
+        test('11.Order: product 1919 0 0 (term promotion 168), with warranty not separated, inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
 
             Product.termInstallmentPrest()
             ValidateBalance.withBalance() 
@@ -368,8 +368,8 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
-        
-        test('12.Pedido: produto 1920 0 0 (promoção partida 169), com garantia Não separa, inclusão 3876, prestamista 158, 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
+
+        test('12.Order: product 1920 0 0 (entry promotion 169), with warranty not separated, inclusion 3876, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest()
             ValidateBalance.withBalance() 
@@ -398,9 +398,9 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
         })
     })
 
-    context('Sem entrega / Misto com e sem Promoção - Prestamista abatimento %', () => {
+    context('Without delivery / Mixed with and without Promotion - Lender with discount %', () => {
 
-        test('13.Pedido: produto 1918 0 0 (promo a prazo 167) e 1860 0 0 (sem promoção), inclusão 3874 (outro recebimento 3860), prestamista 158, 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
+        test('13.Order: product 1918 0 0 (term promotion 167) and 1860 0 0 (without promotion), inclusion 3874 (other receipt 3860), lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest()
             ValidateBalance.withBalance() 
@@ -438,7 +438,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('14.Pedido: produto 1918 0 0 (promo a prazo 167) e 1860 0 0 (sem promoção), inclusão 3874 (outro recebimento 3874 agrupar), prestamista 158, 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
+        test('14.Order: product 1918 0 0 (term promotion 167) and 1860 0 0 (without promotion), inclusion 3874 (other receipt 3874 group), lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest()
             ValidateBalance.withBalance() 
@@ -480,7 +480,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('15.Pedido: produto 1918 0 0 (promo a prazo 167) e 1860 0 0 (sem promoção), inclusão 3876 (outro recebimento 3860), prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
+        test('15.Order: product 1918 0 0 (term promotion 167) and 1860 0 0 (without promotion), inclusion 3876 (other receipt 3860), lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest()
             ValidateBalance.withBalance() 
@@ -518,7 +518,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('16.Pedido: produto 1918 0 0 (promo a prazo 167) e 1860 0 0 (sem promoção), inclusão 3876 (outro recebimento 3876 agrupar), prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
+        test('16.Order: product 1918 0 0 (term promotion 167) and 1860 0 0 (without promotion), inclusion 3876 (other receipt 3876 group), lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest()
             ValidateBalance.withBalance() 
@@ -562,7 +562,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('17.Pedido: produto 1921 0 0 (promo a prazo 170), inclusão 3874, prestamista 158, 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
+        test('17.Order: product 1921 0 0 (term promotion 170), inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest()
             ValidateBalance.withBalance() 
@@ -589,7 +589,7 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
         })
     })
 
-    context('Com entrega / Misto com e sem Promoção - Prestamista abatimento %', () => {
+    context('With delivery / Mixed with and without Promotion - Lender with discount %', () => {
 
         test('18.Pedido: produto 1918 0 0 (promo a prazo 167) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3874 (outro recebimento 3860), prestamista 158, 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
     
@@ -763,9 +763,9 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
-        })
+    })
 
-        test('22.Pedido: produto 1920 0 0 (promo a prazo 169) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3875 (outro recebimento 3874), prestamista 158, 4 parcelas no recebimento Presente.',  async ({ page }) => {
+        test('22.Order: product 1920 0 0 (promo on credit 169) (with warranty, not separate) and 1860 0 0 (without promotion), inclusion 3875 (other receipt 3874), lender 158, 4 installments upon receipt. Gift.',  async ({ page }) => {
 
             Product.termInstallmentPrest()
             ValidateBalance.withBalance() 
@@ -807,18 +807,18 @@ test.describe('Gerar pedidos com serviço Prestamista Abatimento % (158)', () =>
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('23.Pedido: produto 1920 0 0 (promo a prazo 169) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3875 (outro recebimento 3875 agrupar), prestamista 158, 4 parcelas no recebimento Presente.',  async ({ page }) => {
-    
-            Product.termInstallmentPrest()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
-            CommandsGeneral.clickAddProduct() 
-            Promotion.selectFirstPromoProduct()
-            ProcessoRecebPromoPage.entryPresentPrest()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            ValidateService.garantiaNaoSep()
+        test('23.Order: product 1920 0 0 (promo on credit 169) (with warranty, not separate) and 1860 0 0 (without promotion), inclusion 3875 (other receipt 3875 group), lender 158, 4 installments upon receipt Present.',  async ({ page }) => {
+        
+                Product.termInstallmentPrest()
+                ValidateBalance.withBalance() 
+                CommandsGeneral.selectProductSearch() 
+                CommandsGeneral.clickVoltageProduct() 
+                CommandsGeneral.clickAddProduct() 
+                Promotion.selectFirstPromoProduct()
+                ProcessoRecebPromoPage.entryPresentPrest()
+                CommandsGeneral.clickAddProduct() 
+                Service.validateModalServLinked()
+                ValidateService.garantiaNaoSep()
             Service.clickOKServiceLinked() )
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
             Product.second()
