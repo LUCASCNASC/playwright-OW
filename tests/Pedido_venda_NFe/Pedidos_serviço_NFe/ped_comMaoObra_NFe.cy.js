@@ -11,7 +11,7 @@ import { Service, ValidateService } from '../../../pages/pedido/ServicosPage.js'
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Gerar pedidos com Mão de obra', () => {
+test.describe('Generate orders with labor', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -26,10 +26,10 @@ test.describe('Gerar pedidos com Mão de obra', () => {
         CommandsGeneral.clickAddProduct() 
         Service.validateModalServLinked()
     })
-  
-    context('Sem entrega/processo 9860 - caminho feliz', () => {
 
-        test('1.Pedido: produto 1860 0 0 (com Mão de Obra que Destaca e Não separa título',  async ({ page }) => {
+    context('Without delivery/process 9860 - happy path', () => {
+
+        test('1.Order: product 1860 0 0 (with Labor that Highlights and does not separate title',  async ({ page }) => {
     
             Service.garantiaNaoSep() 
             Service.clickOKServiceLinked() 
@@ -45,7 +45,7 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('2.Pedido: produto 1860 0 0 (com Mão de Obra que Destaca e Não separa título) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('2.Order: product 1860 0 0 (with Labor that Highlights and does not separate title) and product 1870 0 0 (without service)',  async ({ page }) => {
 
             Service.garantiaNaoSep()  
             Service.clickOKServiceLinked() 
@@ -68,8 +68,8 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
-    
-        test('3.Pedido: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título no Mesmo processo)',  async ({ page }) => {
+
+        test('3.Order: product 1860 0 0 (with Labor that does not highlight and separates title in the same process)',  async ({ page }) => {
     
             Service.garantiaSepMesmoProc() 
             Service.clickOKServiceLinked() 
@@ -85,7 +85,7 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('4.Pedido: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título no Mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('4.Order: product 1860 0 0 (with Labor that does not highlight and separates title in the same process) and product 1870 0 0 (without service)',  async ({ page }) => {
     
             Service.garantiaSepMesmoProc() 
             Service.clickOKServiceLinked() 
@@ -108,8 +108,8 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
-    
-        test('5.Pedido: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título em processo Diferente)',  async ({ page }) => {
+
+        test('5.Order: product 1860 0 0 (with Labor that does not highlight and separates title in a different process)',  async ({ page }) => {
 
             Service.garantiaSepTituloProcDif() 
             Service.clickOKServiceLinked() 
@@ -125,7 +125,7 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('6.Pedido: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título em processo Diferente) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('6.Order: product 1860 0 0 (with Labor that does not highlight and separates title in a different process) and product 1870 0 0 (without service)',  async ({ page }) => {
 
             Service.garantiaSepTituloProcDif() 
             Service.clickOKServiceLinked() 
@@ -150,9 +150,9 @@ test.describe('Gerar pedidos com Mão de obra', () => {
         })
     })
 
-    context('Com entrega/processo 9860 - caminho feliz', () => {
+    context('With delivery/process 9860 - happy path', () => {
 
-        test('7.Pedido: produto 1860 0 0 (com Mão de Obra que Destaca e Não separa título)',  async ({ page }) => {
+        test('7.Order: product 1860 0 0 (with Labor that Highlights and does not separate title)',  async ({ page }) => {
     
             Service.garantiaNaoSep()  
             Service.clickOKServiceLinked() 
@@ -167,8 +167,8 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             FinalizarPedidoPage.clickFinalizarPedidoPage()
             FinalizarPedidoPage.validateOrderGenerated()
         })
-        
-        test('8.Pedido: produto 1860 0 0 (com Mão de Obra que Destaca e Não separa título) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+
+        test('8.Order: product 1860 0 0 (with Labor that Highlights and does not separate title) and product 1870 0 0 (without service)',  async ({ page }) => {
     
             Service.garantiaNaoSep()  
             Service.clickOKServiceLinked() 
@@ -191,7 +191,7 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('9.Pedido: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título no Mesmo processo)',  async ({ page }) => {
+        test('9.Order: product 1860 0 0 (with Labor that does not highlight and separates title in the same process)',  async ({ page }) => {
     
             Service.garantiaSepMesmoProc() 
             Service.clickOKServiceLinked() 
@@ -207,7 +207,7 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('10.Pedido: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título no Mesmo processo) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('10.Order: product 1860 0 0 (with Labor that does not highlight and separates title in the same process) and product 1870 0 0 (without service)',  async ({ page }) => {
     
             Service.garantiaSepMesmoProc() 
             Service.clickOKServiceLinked() 
@@ -230,7 +230,7 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             FinalizarPedidoPage.validateOrderGenerated()
         })
 
-        test('11.Pedido: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título em processo Diferente)',  async ({ page }) => {
+        test('11.Order: product 1860 0 0 (with Labor that does not highlight and separates title in a different process)',  async ({ page }) => {
     
             Service.garantiaSepTituloProcDif() 
             Service.clickOKServiceLinked() 
@@ -246,7 +246,7 @@ test.describe('Gerar pedidos com Mão de obra', () => {
             FinalizarPedidoPage.validarPedvalidateOrderGeneratedGerado()
         })   
 
-        test('12.Pedido: produto 1860 0 0 (com Mão de Obra que Não destaca e Separa título em processo Diferente) e produto 1870 0 0 (sem serviço)',  async ({ page }) => {
+        test('12.Order: product 1860 0 0 (with Labor that does not highlight and separates title in a different process) and product 1870 0 0 (without service)',  async ({ page }) => {
     
             Service.garantiaSepTituloProcDif() 
             Service.clickOKServiceLinked() 

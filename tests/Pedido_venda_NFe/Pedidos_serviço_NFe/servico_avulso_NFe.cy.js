@@ -9,7 +9,7 @@ import { CommandsGeneral } from '../../../../pages/commands.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Venda de serviço avulso', () => {
+test.describe('Sale of individual services', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -19,9 +19,9 @@ test.describe('Venda de serviço avulso', () => {
         ChooseCliente.withRoute()
     })
 
-    context('Processo 9888 - caminho feliz', () => {
+    context('Process 9888 - happy path', () => {
 
-        test('1.Pedido de Mão de obra - 144 (T.A. MO Não Destaca e Separa Processo Diferente)',  async ({ page }) => {
+        test('1.Order of labor - 144 (T.A. MO Does not Highlight and Separates Different Process)',  async ({ page }) => {
 
             ServicoAvulsoPage.productServiceLoose()
             ServicoAvulsoPage.chooseServiceSearch()

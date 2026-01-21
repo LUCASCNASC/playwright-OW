@@ -11,7 +11,7 @@ import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
 
-test.describe('Venda de serviço avulso, com pedido do produto já baixado', () => {
+test.describe('Sale of a one-off service, with the product order already downloaded', () => {
 
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login()
@@ -21,9 +21,9 @@ test.describe('Venda de serviço avulso, com pedido do produto já baixado', () 
         ChooseCliente.withRoute()
     })
 
-    context('Processo 9888 - caminho feliz', () => {
+    context('Process 9888 - happy path', () => {
 
-        test('1.Pedido de garantia - 139 (T.A. Garantia Separa Mesmo Processo)',  async ({ page }) => {
+        test('1.Order of guarantee - 139 (T.A. Guarantee Separates Same Process)',  async ({ page }) => {
 
             const numero_pedido = '8605'
             
