@@ -14,21 +14,21 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Remote/process 9860 - Balance rule Parameter 36 = 4 - Parameter 139 = 4 - Trial 653 not configured', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
+        CommandsGeneral.login();
+        CommandsGeneral.urlAposLogin();
+        CommandsGeneral.tituloPagina();
         ProcessoVendaPage.NFe()
-        ChooseCliente.withRoute()
+        ChooseCliente.withRoute();
     })
 
     context('Remote order normal', () => {
 
         test('1.Remote order: product 1860 0 0 - (Remote sale of product with stock available at the billing branch)',  async ({ page }) => {
 
-            Product.fisrt()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            Product.fisrt();
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             GeralPedidosPage.changeBranchInvoicing()
             CommandsGeneral.clickAddProduct() 
@@ -47,19 +47,19 @@ test.describe('Remote/process 9860 - Balance rule Parameter 36 = 4 - Parameter 1
 
         test('2.Remote order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
 
-            Product.fisrt()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            Product.fisrt();
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             GeralPedidosPage.changeBranchInvoicing()
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             Product.freightSecond() 
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             GeralPedidosPage.changeBranchInvoicing()
             CommandsGeneral.clickAddProduct() 
@@ -79,9 +79,9 @@ test.describe('Remote/process 9860 - Balance rule Parameter 36 = 4 - Parameter 1
         test('3.Remote order: kit 1877 0 0',  async ({ page }) => {
 
             Product.kitRemote()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             GeralPedidosPage.changeBranchInvoicing()
             GeralPedidosPage.compositionKit()
@@ -105,9 +105,9 @@ test.describe('Remote/process 9860 - Balance rule Parameter 36 = 4 - Parameter 1
         test('4.Remote order - with stock in CD (branch 1) - should allow order creation - (Remote sale of product without stock at the billing branch, but with stock in the CD of the billing branch - with delivery)',  async ({ page }) => {
 
             Product.remoteWithCD()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             GeralPedidosPage.changeBranchInvoicing()
             CommandsGeneral.clickAddProduct() 
@@ -128,8 +128,8 @@ test.describe('Remote/process 9860 - Balance rule Parameter 36 = 4 - Parameter 1
 
             Product.remoteWithoutCD()
             ValidateBalance.withoutBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             GeralPedidosPage.changeBranchInvoicing()
 

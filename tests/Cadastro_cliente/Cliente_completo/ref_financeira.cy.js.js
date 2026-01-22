@@ -9,9 +9,9 @@ import { EnderecoPage, EnderecoPage } from '../../../pages/cadastro_cliente/clie
 test.describe('Register complete customer - financial reference', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
+        CommandsGeneral.login();
+        CommandsGeneral.urlAposLogin();
+        CommandsGeneral.tituloPagina();
     })
 
     test('1.Complete customer CPF - happy path',  async ({ page }) => {

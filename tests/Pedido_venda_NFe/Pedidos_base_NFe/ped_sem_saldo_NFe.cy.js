@@ -7,11 +7,11 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Attempting to generate a sales order with an out-of-stock product - Stock rule Parameter 36 = 4 - Parameter 139 = 4 - Trial 653 not configured', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
+        CommandsGeneral.login();
+        CommandsGeneral.urlAposLogin();
+        CommandsGeneral.tituloPagina();
         ProcessoVendaPage.NFe()
-        ChooseCliente.withRoute()
+        ChooseCliente.withRoute();
     })
 
     context('Process 9860 - do not allow making the sale - at the moment of adding the product, warning messages should appear', () => {
@@ -20,7 +20,7 @@ test.describe('Attempting to generate a sales order with an out-of-stock product
             
             Product.withoutBalance()
             ValidarSaldo.comSaldo() 
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
 
             //Validando mensagem "Este produto não possui saldo na filial selecionada."

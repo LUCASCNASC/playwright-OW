@@ -15,21 +15,21 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Generate a standard order with interest discount - parameters 243 and 244 defined in the inclusion process', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
+        CommandsGeneral.login();
+        CommandsGeneral.urlAposLogin();
+        CommandsGeneral.tituloPagina();
         ProcessoVendaPage.NFe()
-        ChooseCliente.withRoute()
+        ChooseCliente.withRoute();
         Product.roundUpDown()
-        ValidateBalance.withBalance() 
-        CommandsGeneral.selectProductSearch() 
+        ValidateBalance.withBalance() ;
+        CommandsGeneral.selectProductSearch() ;
     })
 
     context('Without delivery/ process 9860 - happy path - inclusion process 3860', () => {
 
         test('1.Order: product 1860 0 0 - round down',  async ({ page }) => {
 
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
@@ -50,7 +50,7 @@ test.describe('Generate a standard order with interest discount - parameters 243
 
         test('2.Order: products 1860 0 0 - round up',  async ({ page }) => {
 
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked() 

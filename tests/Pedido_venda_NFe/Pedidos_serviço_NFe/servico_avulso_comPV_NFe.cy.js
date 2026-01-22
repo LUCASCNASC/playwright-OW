@@ -14,11 +14,11 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Sale of a one-off service, with the product order already downloaded', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
+        CommandsGeneral.login();
+        CommandsGeneral.urlAposLogin();
+        CommandsGeneral.tituloPagina();
         ProcessoVendaPage.saleServiceLoose()
-        ChooseCliente.withRoute()
+        ChooseCliente.withRoute();
     })
 
     context('Process 9888 - happy path', () => {

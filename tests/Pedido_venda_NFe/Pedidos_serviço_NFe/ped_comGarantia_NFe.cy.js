@@ -14,15 +14,15 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Generate orders with Guarantee', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
+        CommandsGeneral.login();
+        CommandsGeneral.urlAposLogin();
+        CommandsGeneral.tituloPagina();
         ProcessoVendaPage.NFe()
-        ChooseCliente.withRoute()
-        Product.fisrt()
-        ValidateBalance.withBalance() 
-        CommandsGeneral.selectProductSearch() 
-        CommandsGeneral.clickVoltageProduct() 
+        ChooseCliente.withRoute();
+        Product.fisrt();
+        ValidateBalance.withBalance() ;
+        CommandsGeneral.selectProductSearch() ;
+        CommandsGeneral.clickVoltageProduct() ;
         CommandsGeneral.clickAddProduct() 
         Servico.validateModalServLinked()
     })   
@@ -52,9 +52,9 @@ test.describe('Generate orders with Guarantee', () => {
             ValidateService.servLinked() ; ValidateService.AddGarantSepMesmoProc()
             ThrowDelivery.freightFirst() 
             Product.second()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()  
             Service.clickOKServiceLinked()
@@ -92,9 +92,9 @@ test.describe('Generate orders with Guarantee', () => {
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
             ThrowDelivery.freightFirst() 
             Product.second()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()  
             Service.clickOKServiceLinked()
@@ -132,9 +132,9 @@ test.describe('Generate orders with Guarantee', () => {
             ValidateService.servLinked() ; ValidateService.addGarantSepTituloProcDif()
             ThrowDelivery.freightFirst() 
             Product.second()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()  
             Service.clickOKServiceLinked()
@@ -174,9 +174,9 @@ test.describe('Generate orders with Guarantee', () => {
             Service.clickOKServiceLinked() 
             ValidateService.servLinked() ; ValidateService.AddGarantSepMesmoProc()
             Product.second()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()  
             Service.clickOKServiceLinked() 
@@ -213,9 +213,9 @@ test.describe('Generate orders with Guarantee', () => {
             Service.clickOKServiceLinked() 
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
             Product.second()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()  
             Service.clickOKServiceLinked() 
@@ -252,9 +252,9 @@ test.describe('Generate orders with Guarantee', () => {
             Service.clickOKServiceLinked() 
             ValidateService.servLinked() ; ValidateService.addGarantSepTituloProcDif()
             Product.second()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.clickOKServiceLinked() 
             AdvanceNormal.toTransporter()

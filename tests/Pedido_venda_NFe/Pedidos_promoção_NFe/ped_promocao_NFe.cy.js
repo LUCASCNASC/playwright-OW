@@ -16,11 +16,11 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Generate orders with promotion', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
+        CommandsGeneral.login();
+        CommandsGeneral.urlAposLogin();
+        CommandsGeneral.tituloPagina();
         ProcessoVendaPage.NFe()
-        ChooseCliente.withRoute()
+        ChooseCliente.withRoute();
     })
 
     context('Without delivery/ with promotion/ process 9860 - happy path', () => {
@@ -28,9 +28,9 @@ test.describe('Generate orders with promotion', () => {
         test('1.Order with promotion match (promotion 152): product 1868 0 0',  async ({ page }) => {
     
             Product.promoMatch()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Promotion.selectFirstPromoProduct() 
             ProcessoRecebPromoPage.pagPrincipal()
@@ -49,9 +49,9 @@ test.describe('Generate orders with promotion', () => {
         test('2.Order with promotion deadline with entry (promotion 150): product 1866 0 0',  async ({ page }) => {
 
             Product.promoDeadlineEntry()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Promotion.selectFirstPromoProduct() 
             ProcessoRecebPromoPage.pagPrincipal()
@@ -76,9 +76,9 @@ test.describe('Generate orders with promotion', () => {
         test('3.Order with promotion deadline installment (promotion 151): product 1867 0 0',  async ({ page }) => {
     
             Product.promoDeadlineInstallment()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Promotion.selectFirstPromoProduct() 
             ProcessoRecebPromoPage.pagPrincipal()
@@ -100,9 +100,9 @@ test.describe('Generate orders with promotion', () => {
         test('4.Order with promotion match (promotion 152): product 1868 0 0 and product 1870 0 0 (without promotion)',  async ({ page }) => {
     
             Product.promoMatch()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Promotion.selectFirstPromoProduct() 
             ProcessoRecebPromoPage.pagPrincipal()
@@ -111,9 +111,9 @@ test.describe('Generate orders with promotion', () => {
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() 
             Product.second()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
@@ -136,9 +136,9 @@ test.describe('Generate orders with promotion', () => {
         test('5.Order with promotion deadline with entry (promotion 150): product 1866 0 0 and product 1870 0 0 (without promotion)',  async ({ page }) => {
     
             Product.promoDeadlineEntry()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Promotion.selectFirstPromoProduct() 
             ProcessoRecebPromoPage.pagPrincipal()
@@ -147,9 +147,9 @@ test.describe('Generate orders with promotion', () => {
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() 
             Product.second()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
@@ -173,9 +173,9 @@ test.describe('Generate orders with promotion', () => {
         test('6.Order with promotion match (promotion 152): product 1868 0 0',  async ({ page }) => {
     
             Product.promoMatch()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPromoPage.pagPrincipal()
@@ -198,9 +198,9 @@ test.describe('Generate orders with promotion', () => {
         test('7.Order with promotion deadline with entry (promotion 150): product 1866 0 0',  async ({ page }) => {
     
             Product.promoDeadlineEntry()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Promotion.selectFirstPromoProduct() 
             ProcessoRecebPromoPage.pagPrincipal()
@@ -237,8 +237,8 @@ test.describe('Generate orders with promotion', () => {
         test('8.Order with promotion deadline installment (promotion 151): product 1867 0 0',  async ({ page }) => {
     
             Product.promoDeadlineInstallment()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Promotion.selectFirstPromoProduct() 
             ProcessoRecebPromoPage.pagPrincipal()
@@ -265,8 +265,8 @@ test.describe('Generate orders with promotion', () => {
         test('9.Order with promotion match (promotion 152): product 1868 0 0 and product 1870 0 0 (without promotion)',  async ({ page }) => {
     
             Product.promoMatch()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.clickVoltageProduct() ;
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct() 
             ProcessoRecebPromoPage.pagPrincipal()
@@ -274,9 +274,9 @@ test.describe('Generate orders with promotion', () => {
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             Product.second()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.clickOKServiceLinked() 
             AdvanceNormal.toTransporter()

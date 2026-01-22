@@ -14,11 +14,11 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Generate order with reservation at the distribution center (with delivery) - Balance rule Parameter 36 = 4 - Parameter 139 = 4 - Trial 653 not configured', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
+        CommandsGeneral.login();
+        CommandsGeneral.urlAposLogin();
+        CommandsGeneral.tituloPagina();
         ProcessoVendaPage.NFCe()
-        ChooseCliente.withRoute()
+        ChooseCliente.withRoute();
     })
 
     context('With delivery/process 9890 - happy path', () => {
@@ -26,9 +26,9 @@ test.describe('Generate order with reservation at the distribution center (with 
         test('1.Order: product 1880 0 0 - (Local sale of product with stock only at the distribution center - with delivery)', () => {
             
             Product.cdFirst()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
@@ -47,17 +47,17 @@ test.describe('Generate order with reservation at the distribution center (with 
 
         test('2.Order: products 1880 0 0 (CD reservation) and 1870 0 0 (local balance) - (Local sale of 1 product with local balance + 1 product with balance in the CD - with delivery)',  async ({ page }) => {
             
-            Product.fisrt()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            Product.fisrt();
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             Product.second() 
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()

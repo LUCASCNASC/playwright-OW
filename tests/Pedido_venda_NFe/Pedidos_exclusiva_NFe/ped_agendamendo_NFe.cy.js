@@ -16,11 +16,11 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
+        CommandsGeneral.login();
+        CommandsGeneral.urlAposLogin();
+        CommandsGeneral.tituloPagina();
         ProcessoVendaPage.NFe()
-        ChooseCliente.withRoute()
+        ChooseCliente.withRoute();
     })
 
     context('Process configuration - Exclusive: 36 = 2; 139 = 6; 552 = 5 days', () => {
@@ -28,15 +28,15 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
         test('1.Order: normal product (with balance and with delivery, 15 days) and a remote kit (2 compositions, without balance and without receivable, 20 days).',  async ({ page }) => {
 
             ProductExclusiva.firstNormal() 
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             ProductExclusiva.kitWithoutBalanceScheduling() 
             ValidateBalance.withoutBalance() 
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             GeralPedidosPage.trocarFilialFaturamento()
             CommandsGeneral.clickAddProduct() 
@@ -56,16 +56,16 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
         test('2.Order: normal product (with balance and with delivery) and a kit with 6 compositions (current date + parameter 552/ 5 days).',  async ({ page }) => {
 
             ProductExclusiva.firstNormal()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             ProductExclusiva.kitVolumes() 
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             AdvanceNormal.toTransporter()
             GeneralDelivery.modalInconsApenasTransp()
@@ -86,9 +86,9 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
         test('3.Order: a product (without balance and with balance to receive for 10 days, and with delivery), and have an appointment for the forecast date.',  async ({ page }) => {
 
             ProductExclusiva.balanceReceive()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
@@ -109,14 +109,14 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
 
             ProductExclusiva.balanceReceiveTwoLines()
             PedExclusiva.balanceRemoteReceive()
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             GeralPedidosPage.trocarFilialFaturamento()
             PedExclusiva.increaseAmountSaleFive()
-            CommandsGeneral.selectProductSearch() 
+            CommandsGeneral.selectProductSearch() ;
             ProductExclusiva.balanceReceiveTwoLines() 
             PedExclusiva.balanceRemoteReceive()
-            CommandsGeneral.clickVoltageProduct()  
+            CommandsGeneral.clickVoltageProduct() ; 
             CommandsGeneral.clickAddProduct() 
             GeralPedidosPage.trocarFilialFaturamento()
             PedExclusiva.increaseAmountSaleTen()
@@ -125,9 +125,9 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
         test('5.Order: normal sale: product 1896 0 0 (without delivery)',  async ({ page }) => {
     
             ProductExclusiva.firstNormal() 
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()

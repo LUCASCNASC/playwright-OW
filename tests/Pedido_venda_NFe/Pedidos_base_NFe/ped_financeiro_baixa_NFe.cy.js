@@ -14,21 +14,21 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Generate order with financial data at low level', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
+        CommandsGeneral.login();
+        CommandsGeneral.urlAposLogin();
+        CommandsGeneral.tituloPagina();
         ProcessoVendaPage.financePaymentNFe()
-        ChooseCliente.withRoute()
-        Product.fisrt()
-        ValidateBalance.withBalance() 
-        CommandsGeneral.selectProductSearch() 
+        ChooseCliente.withRoute();
+        Product.fisrt();
+        ValidateBalance.withBalance() ;
+        CommandsGeneral.selectProductSearch() ;
     })
 
     context('Without delivery/ process 9863 - happy path', () => {
 
         test('1.Order: product 1860 0 0',  async ({ page }) => {
                       
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
@@ -45,15 +45,15 @@ test.describe('Generate order with financial data at low level', () => {
 
         test('2.Order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
                       
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() 
             Product.second()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
@@ -73,7 +73,7 @@ test.describe('Generate order with financial data at low level', () => {
 
         test('3.Order: product 1860 0 0',  async ({ page }) => {
                       
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
@@ -90,14 +90,14 @@ test.describe('Generate order with financial data at low level', () => {
 
         test('4.Order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
                       
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             Product.second()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()

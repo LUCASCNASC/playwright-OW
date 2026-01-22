@@ -16,11 +16,11 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Generate sales order for discounted kit', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
+        CommandsGeneral.login();
+        CommandsGeneral.urlAposLogin();
+        CommandsGeneral.tituloPagina();
         ProcessoVendaPage.NFe()
-        ChooseCliente.withRoute()
+        ChooseCliente.withRoute();
     })
 
     context('Without delivery/ process 9862 - happy path', () => {
@@ -28,9 +28,9 @@ test.describe('Generate sales order for discounted kit', () => {
         test('1.Order: kit 1862 0 0 with discount Sub (-) / FIXED VALUE',  async ({ page }) => {
 
             Product.kitDiscount()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             GeralPedidosPage.compositionKit()
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 

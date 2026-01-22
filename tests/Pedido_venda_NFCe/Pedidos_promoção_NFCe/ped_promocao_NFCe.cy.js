@@ -13,11 +13,11 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Generate promotional orders with delivery', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
+        CommandsGeneral.login();
+        CommandsGeneral.urlAposLogin();
+        CommandsGeneral.tituloPagina();
         ProcessoVendaPage.NFCe()
-        ChooseCliente.withRoute()
+        ChooseCliente.withRoute();
     })
 
     context('With delivery / with promotion / process 9890 - happy path', () => {
@@ -25,10 +25,10 @@ test.describe('Generate promotional orders with delivery', () => {
         test('1.Order with promotional offer (promotion 152): product 1868 0 0',  async ({ page }) => {
     
             Product.promoMatch()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch()  ; 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ; ; 
             Promotion.ticketPromotion() 
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             Promotion.selectFirstPromoProduct()
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
@@ -52,10 +52,10 @@ test.describe('Generate promotional orders with delivery', () => {
         test('2.Order with installment payment promotion with down payment (promotion 150): product 1866 0 0',  async ({ page }) => {
     
             Product.promoDeadlineEntry()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch()  ; 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ; ; 
             Promotion.ticketPromotion() 
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             Promotion.selectFirstPromoProduct() 
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
@@ -73,10 +73,10 @@ test.describe('Generate promotional orders with delivery', () => {
         test('3.Order with installment payment promotion (promotion 151): product 1867 0 0',  async ({ page }) => {
     
             Product.promoDeadlineInstallment()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch()  ; 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ; ; 
             Promotion.ticketPromotion()
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             Promotion.selectFirstPromoProduct() 
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 

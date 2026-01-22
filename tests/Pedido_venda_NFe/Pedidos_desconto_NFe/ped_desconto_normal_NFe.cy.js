@@ -15,11 +15,11 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Generate a sales order with a discount', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
+        CommandsGeneral.login();
+        CommandsGeneral.urlAposLogin();
+        CommandsGeneral.tituloPagina();
         ProcessoVendaPage.NFe()
-        ChooseCliente.withRoute()
+        ChooseCliente.withRoute();
     })
 
     context('Without delivery/ process 9860 - happy path',  async ({ page }) => {
@@ -27,9 +27,9 @@ test.describe('Generate a sales order with a discount', () => {
         test('1.Order: product 1912 0 0 with discount Sub (-) / R$',  async ({ page }) => {
 
             Product.discountNumber()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
@@ -50,9 +50,9 @@ test.describe('Generate a sales order with a discount', () => {
         test('2.Order: product 1913 0 0 with discount Sub (-) / % (Percentage)',  async ({ page }) => {
 
             Product.discountPercentage()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
@@ -73,9 +73,9 @@ test.describe('Generate a sales order with a discount', () => {
         test('3.Order: product 1914 0 0 with discount Sub (-) / FIXED VALUE',  async ({ page }) => {
 
             Product.discountValueFixed()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()

@@ -15,21 +15,21 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Generate normal order', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
+        CommandsGeneral.login();
+        CommandsGeneral.urlAposLogin();
+        CommandsGeneral.tituloPagina();
         ProcessoVendaPage.NFe()
-        ChooseCliente.withRoute()
-        Product.fisrt()
-        ValidateBalance.withBalance() 
-        CommandsGeneral.selectProductSearch() 
+        ChooseCliente.withRoute();
+        Product.fisrt();
+        ValidateBalance.withBalance() ;
+        CommandsGeneral.selectProductSearch() ;
     }) 
 
     context('Without delivery/ process 9860 - happy path', () => {
 
         test('1.Order: product 1860 0 0 - (Local sale of product with balance - without delivery)',  async ({ page }) => {
 
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
@@ -46,15 +46,15 @@ test.describe('Generate normal order', () => {
 
         test('2.Order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
                       
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             ThrowDelivery.freightFirst() 
             Product.second()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
@@ -71,7 +71,7 @@ test.describe('Generate normal order', () => {
 
         test('3.Order: product 1860 0 0 - (Order without delivery. With Entry + Installments.)',  async ({ page }) => {
 
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
@@ -93,7 +93,7 @@ test.describe('Generate normal order', () => {
 
         test('4.Order: product 1860 0 0 - (Local sale of product with balance - with delivery)',  async ({ page }) => {
                       
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
@@ -110,14 +110,14 @@ test.describe('Generate normal order', () => {
 
         test('5.Order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
                       
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             Product.second()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
@@ -134,7 +134,7 @@ test.describe('Generate normal order', () => {
 
         test('6.Order: product 1860 0 0 - (Order with delivery. With Entry + Installments.)',  async ({ page }) => {
                       
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()

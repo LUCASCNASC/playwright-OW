@@ -15,21 +15,21 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Generate a standard order with delivery.', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
+        CommandsGeneral.login();
+        CommandsGeneral.urlAposLogin();
+        CommandsGeneral.tituloPagina();
         ProcessoVendaPage.NFCe()
-        ChooseCliente.withRoute()
+        ChooseCliente.withRoute();
         Product.kitFirst()
-        ValidateBalance.withBalance() 
-        CommandsGeneral.selectProductSearch() 
+        ValidateBalance.withBalance() ;
+        CommandsGeneral.selectProductSearch() ;
     })
     
     context('With delivery/process 9890 - happy path', () => {
         
         test('1.Order: kit 1862 0 0',  async ({ page }) => {
                       
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             GeralPedidosPage.compositionKit()
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 

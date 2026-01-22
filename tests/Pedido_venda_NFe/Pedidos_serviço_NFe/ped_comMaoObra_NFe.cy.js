@@ -14,15 +14,15 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Generate orders with labor', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
+        CommandsGeneral.login();
+        CommandsGeneral.urlAposLogin();
+        CommandsGeneral.tituloPagina();
         ProcessoVendaPage.NFe()
-        ChooseCliente.withRoute()
-        Product.fisrt()
-        ValidateBalance.withBalance() 
-        CommandsGeneral.selectProductSearch() 
-        CommandsGeneral.clickVoltageProduct() 
+        ChooseCliente.withRoute();
+        Product.fisrt();
+        ValidateBalance.withBalance() ;
+        CommandsGeneral.selectProductSearch() ;
+        CommandsGeneral.clickVoltageProduct() ;
         CommandsGeneral.clickAddProduct() 
         Service.validateModalServLinked()
     })
@@ -52,9 +52,9 @@ test.describe('Generate orders with labor', () => {
             ValidateService.servLinked() ; ValidateService.addMODestNãoSepara()
             ThrowDelivery.freightFirst() 
             Product.second()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()  
             Service.clickOKServiceLinked()
@@ -92,9 +92,9 @@ test.describe('Generate orders with labor', () => {
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc()
             ThrowDelivery.freightFirst() 
             Product.second()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()  
             Service.clickOKServiceLinked()
@@ -132,9 +132,9 @@ test.describe('Generate orders with labor', () => {
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepProcDif()
             ThrowDelivery.freightFirst() 
             Product.second()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()  
             Service.clickOKServiceLinked()
@@ -174,9 +174,9 @@ test.describe('Generate orders with labor', () => {
             Service.clickOKServiceLinked() 
             ValidateService.servLinked() ; ValidateService.addMODestNãoSepara()
             Product.second()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()  
             Service.clickOKServiceLinked() 
@@ -213,9 +213,9 @@ test.describe('Generate orders with labor', () => {
             Service.clickOKServiceLinked() 
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc()
             Product.second()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()  - SEGUNDO PRODUTP
             Service.clickOKServiceLinked() 
@@ -252,9 +252,9 @@ test.describe('Generate orders with labor', () => {
             Service.clickOKServiceLinked() 
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepProcDif()
             Product.second()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked()  
             Service.clickOKServiceLinked() 

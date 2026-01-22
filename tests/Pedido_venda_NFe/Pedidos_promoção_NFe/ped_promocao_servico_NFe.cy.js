@@ -15,11 +15,11 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Generate orders with promotions and interest-free services', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
+        CommandsGeneral.login();
+        CommandsGeneral.urlAposLogin();
+        CommandsGeneral.tituloPagina();
         ProcessoVendaPage.NFe()
-        ChooseCliente.withRoute()
+        ChooseCliente.withRoute();
     })
 
     context('Without delivery/ with promotion/ with service process 9860 - happy path', () => {
@@ -27,9 +27,9 @@ test.describe('Generate orders with promotions and interest-free services', () =
         test('1.Order with promotion deadline installment (promotion 159): product 1891 0 0 with guarantee (interest-free)',  async ({ page }) => {
     
             Product.firstInstallmentDeadline()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Promotion.typeServiceFreeValidate()
             Promotion.selectFirstPromoProduct()
@@ -51,9 +51,9 @@ test.describe('Generate orders with promotions and interest-free services', () =
         test('2.Order with promotion deadline with entry + installments (promotion 158): product 1895 0 0 with guarantee (interest-free)',  async ({ page }) => {
 
             Product.secondInstallmentDeadline()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Promotion.typeServiceFreeValidate()
             Promotion.selectFirstPromoProduct()
@@ -93,9 +93,9 @@ test.describe('Generate orders with promotions and interest-free services', () =
         test('3.Order with promotion deadline installment (promotion 161): product 1893 0 0 with moneylender (interest-free)',  async ({ page }) => {
     
             Product.thirdInstallmentDeadline()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPage.withMoneylender()
@@ -118,9 +118,9 @@ test.describe('Generate orders with promotions and interest-free services', () =
         test('4.Order with installment payment promotion (promotion 162): product 1894 0 0 with warranty (interest-free) and lender (with interest)',  async ({ page }) => {
     
             Product.fourthInstallmentDeadline()
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Promotion.typeServiceFreeValidate()
             Promotion.selectFirstPromoProduct()

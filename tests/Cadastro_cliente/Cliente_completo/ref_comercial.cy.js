@@ -9,9 +9,9 @@ import { RefComercialPage,RefComercialPage } from '../../../pages/cadastro_clien
 test.describe('Register complete client - commercial reference', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
+        CommandsGeneral.login();
+        CommandsGeneral.urlAposLogin();
+        CommandsGeneral.tituloPagina();
     })
 
     test('1.Complete customer CPF - happy path',  async ({ page }) => {

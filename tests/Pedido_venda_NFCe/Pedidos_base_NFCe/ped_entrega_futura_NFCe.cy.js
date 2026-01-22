@@ -15,21 +15,21 @@ import { CommandsGeneral } from '../../../../pages/commands.js';
 test.describe('Generate a future delivery order with delivery.', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
-        ProcessoVendaPage.deliveryFutureNFCe() 
-        ChooseCliente.withRoute()
-        Product.fisrt()
-        ValidateBalance.withBalance() 
-        CommandsGeneral.selectProductSearch() 
+        CommandsGeneral.login();
+        CommandsGeneral.urlAposLogin();
+        CommandsGeneral.tituloPagina();
+        ProcessoVendaPage.deliveryFutureNFCe() ;
+        ChooseCliente.withRoute();
+        Product.fisrt();
+        ValidateBalance.withBalance() ;
+        CommandsGeneral.selectProductSearch() ;
     })
     
     context('With delivery/process 9891 - happy path', () => {
 
         test('1.Order: product 1860 0 0', async ({ page }) => {
                       
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
@@ -48,14 +48,13 @@ test.describe('Generate a future delivery order with delivery.', () => {
         
         test('2.Order: products 1860 0 0 and 1870 0 0', async ({ page }) => {
                       
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
             Product.second() 
-            ValidateBalance.withBalance() 
-            CommandsGeneral.selectProductSearch() 
-            CommandsGeneral.clickVoltageProduct() 
+            ValidateBalance.withBalance() ;
+            CommandsGeneral.selectProductSearch() ;
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()

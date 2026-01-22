@@ -15,21 +15,21 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Generate an order with more than one payment method', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
+        CommandsGeneral.login();
+        CommandsGeneral.urlAposLogin();
+        CommandsGeneral.tituloPagina();
         ProcessoVendaPage.NFe()
-        ChooseCliente.withRoute()
-        Product.fisrt()
-        ValidateBalance.withBalance() 
-        CommandsGeneral.selectProductSearch() 
+        ChooseCliente.withRoute();
+        Product.fisrt();
+        ValidateBalance.withBalance() ;
+        CommandsGeneral.selectProductSearch() ;
     })
 
     context('Without delivery/ process 9860 - happy path', () => {
 
         test('1.Order: product 1860 0 0 - two payment methods 3871 and 3860',  async ({ page }) => {
 
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
@@ -51,7 +51,7 @@ test.describe('Generate an order with more than one payment method', () => {
 
         test('2.Order: product 1860 0 0 - with entry (3861) and another payment method (3860)',  async ({ page }) => {
 
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
@@ -70,7 +70,7 @@ test.describe('Generate an order with more than one payment method', () => {
 
         test('3.Order: product 1860 0 0 - two payment methods (3860) - click to NOT group',  async ({ page }) => {
 
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
@@ -93,7 +93,7 @@ test.describe('Generate an order with more than one payment method', () => {
 
         test('4.Order: product 1860 0 0 - two identical payment methods (3860) - click to group YES',  async ({ page }) => {
 
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()
@@ -116,7 +116,7 @@ test.describe('Generate an order with more than one payment method', () => {
 
         test('5.Order: product 1860 0 0 - two identical payment methods (3860) - click to NOT group, but then group by selecting both.',  async ({ page }) => {
 
-            CommandsGeneral.clickVoltageProduct() 
+            CommandsGeneral.clickVoltageProduct() ;
             CommandsGeneral.clickAddProduct() 
             Service.validateModalServLinked() 
             Service.clickOKServiceLinked()

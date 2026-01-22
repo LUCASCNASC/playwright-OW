@@ -5,9 +5,9 @@ import users from '../../tests/users.json';
 test.describe('Login hapy path - regular user with password enabled', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
+        CommandsGeneral.login();
+        CommandsGeneral.urlAposLogin();
+        CommandsGeneral.tituloPagina();
         LoginPage.validateLogoEmpresaLogin()
         LoginPage.validateIconeComputadorLogin()
         LoginPage.validateUsuarioTextoIcone()

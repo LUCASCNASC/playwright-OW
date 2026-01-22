@@ -4,9 +4,9 @@ import { PesquisaClientePage } from '../../pages/cadastro_cliente/PesquisaClient
 test.describe('Search client', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login()
-        CommandsGeneral.urlAposLogin()
-        CommandsGeneral.tituloPagina()
+        CommandsGeneral.login();
+        CommandsGeneral.urlAposLogin();
+        CommandsGeneral.tituloPagina();
     })
 
     context('Search customer by number.', () => {
