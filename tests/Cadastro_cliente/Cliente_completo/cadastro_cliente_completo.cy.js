@@ -19,17 +19,17 @@ test.describe('Register complete customer', () => {
 
         test('1.Complete customer CPF.',  async ({ page }) => {
 
-            ClienteCompletoPage.iconMenuOptions()
-            GeralClienteCompletoPage.optionClientComplete()
-            PessoaPage.cpfClient() 
-            PessoaPage.nameComplete() 
-            PessoaPage.nameSocial() 
-            PessoaPage.dateBirth() 
-            PessoaPage.sexClient() 
-            ClienteCompletoPage.saveClient() 
-            ClienteCompletoPage.messAlertAdressMandatory() 
-            EnderecoPage.clickAbaAdress() 
-            EnderecoPage.clickAddNewAdress() 
+            ClienteCompletoPage.iconMenuOptions();
+            GeralClienteCompletoPage.optionClientComplete();
+            PessoaPage.cpfClient();
+            PessoaPage.nameComplete();
+            PessoaPage.nameSocial();
+            PessoaPage.dateBirth();
+            PessoaPage.sexClient(); 
+            ClienteCompletoPage.saveClient(); 
+            ClienteCompletoPage.messAlertAdressMandatory(); 
+            EnderecoPage.clickAbaAdress(); 
+            EnderecoPage.clickAddNewAdress(); 
             EnderecoPage.modalAdressEmptyValidade() 
             EnderecoPage.clickOpenTypeAdress() 
             EnderecoPage.typeAdress() 
@@ -52,26 +52,26 @@ test.describe('Register complete customer', () => {
             TelefonePage.clickSavePhone()
             TelefonePage.infoPhoneAdded()
             TelefonePage.messPhoneAddedSucess()
-            ClienteCompletoPage.saveClient()
+            ClienteCompletoPage.saveClient();
             ClienteCompletoPage.modalWaitingLoading()
             ClienteCompletoPage.messRegisterSaveSucess()
         })  
 
         test('2.Complete customer CPF - Required fields message.',  async ({ page }) => {
     
-            ClienteCompletoPage.iconMenuOptions()
+            ClienteCompletoPage.iconMenuOptions();
             ClienteCompletoPage.optionClientComplete()
-            ClienteCompletoPage.saveClient() 
-            ClienteCompletoPage.messAlertAdressMandatory() 
-            PessoaPage.cpfClient() 
-            PessoaPage.nameComplete()  
-            PessoaPage.nameSocial() 
-            PessoaPage.dateBirth()
-            PessoaPage.sexClient()
-            ClienteCompletoPage.saveClient() 
-            ClienteCompletoPage.messAlertAdressMandatory() 
-            EnderecoPage.clickAbaAdress() 
-            EnderecoPage.clickAddNewAdress()
+            ClienteCompletoPage.saveClient(); 
+            ClienteCompletoPage.messAlertAdressMandatory(); 
+            PessoaPage.cpfClient() ;
+            PessoaPage.nameComplete(); 
+            PessoaPage.nameSocial() ;
+            PessoaPage.dateBirth();
+            PessoaPage.sexClient();
+            ClienteCompletoPage.saveClient(); 
+            ClienteCompletoPage.messAlertAdressMandatory(); 
+            EnderecoPage.clickAbaAdress(); 
+            EnderecoPage.clickAddNewAdress();
             EnderecoPage.clickOpenTypeAdress()
             EnderecoPage.tipoEndereco()
             EnderecoPage.modalAdressEmptyValidade()
@@ -98,22 +98,22 @@ test.describe('Register complete customer', () => {
             TelefonePage.clickSavePhone()
             TelefonePage.infoPhoneAdded()
             TelefonePage.messPhoneAddedSucess()
-            ClienteCompletoPage.saveClient()
+            ClienteCompletoPage.saveClient();
             ClienteCompletoPage.modalWaitingLoading()
             ClienteCompletoPage.messRegisterSaveSucess()
         })  
 
         test('3.Complete customer CNPJ.',  async ({ page }) => {
     
-            ClienteCompletoPage.iconMenuOptions()
+            ClienteCompletoPage.iconMenuOptions();
             ClienteCompletoPage.optionClientComplete() 
             PessoaPage.cnpjClient() 
             PessoaPage.nameCNPJ() 
             PessoaPage.nameFantasyCNPJ()
-            ClienteCompletoPage.saveClient() 
-            ClienteCompletoPage.messAlertAdressMandatory() 
-            EnderecoPage.clickAbaAdress() 
-            EnderecoPage.clickAddNewAdress()
+            ClienteCompletoPage.saveClient(); 
+            ClienteCompletoPage.messAlertAdressMandatory(); 
+            EnderecoPage.clickAbaAdress(); 
+            EnderecoPage.clickAddNewAdress();
             EnderecoPage.tipoEndereco()
             EnderecoPage.modalAdressEmptyValidade()
             ClienteCompletoPage.buttonSaveDisabled()
@@ -139,7 +139,7 @@ test.describe('Register complete customer', () => {
             TelefonePage.clickSavePhone()
             TelefonePage.infoPhoneAdded()
             TelefonePage.messPhoneAddedSucess()
-            ClienteCompletoPage.saveClient()
+            ClienteCompletoPage.saveClient();
             ClienteCompletoPage.modalWaitingLoading()
             ClienteCompletoPage.messRegisterSaveSucess()
         }) 
@@ -149,16 +149,16 @@ test.describe('Register complete customer', () => {
 
         test('4.Complete customer CPF - happy path.',  async ({ page }) => {
 
-            ClienteCompletoPage.iconMenuOptions()
+            ClienteCompletoPage.iconMenuOptions();
             ClienteCompletoPage.optionClientComplete() 
-            PessoaPage.cpfClient() 
-            PessoaPage.nameComplete() 
-            PessoaPage.nameSocial() 
-            PessoaPage.dateBirth()
-            PessoaPage.sexClient()
-            ClienteCompletoPage.saveClient()
-            EnderecoPage.clickAbaAdress() 
-            EnderecoPage.clickAddNewAdress()
+            PessoaPage.cpfClient() ;
+            PessoaPage.nameComplete();
+            PessoaPage.nameSocial() ;
+            PessoaPage.dateBirth();
+            PessoaPage.sexClient();
+            ClienteCompletoPage.saveClient();
+            EnderecoPage.clickAbaAdress(); 
+            EnderecoPage.clickAddNewAdress();
             EnderecoPage.tipoEndereco()
             EnderecoPage.modalAdressEmptyValidade()
             EnderecoPage.clickOpenTypeAdress()
@@ -183,7 +183,7 @@ test.describe('Register complete customer', () => {
             TelefonePage.clickSavePhone()
             TelefonePage.infoPhoneAdded()
             TelefonePage.messPhoneAddedSucess()
-            ClienteCompletoPage.saveClient()
+            ClienteCompletoPage.saveClient();
             ClienteCompletoPage.modalWaitingLoading()
             ClienteCompletoPage.messRegisterSaveSucess()
             ClienteCompletoPage.menuRegisterClientComplete()
@@ -194,7 +194,7 @@ test.describe('Register complete customer', () => {
             AnexoPage.confirmSendFile()
             AnexoPage.messAttachmentAddSucess()
             AnexoPage.validateAttachmentAdded()
-            ClienteCompletoPage.saveClient()
+            ClienteCompletoPage.saveClient();
             ClienteCompletoPage.messRegisterSaveSucess()
         })
     })
@@ -203,17 +203,17 @@ test.describe('Register complete customer', () => {
 
         test('5.Complete customer CPF - PIX key type Correct phone number.',  async ({ page }) => {
 
-            ClienteCompletoPage.iconMenuOptions()
+            ClienteCompletoPage.iconMenuOptions();
             ClienteCompletoPage.optionClientComplete() 
-            PessoaPage.cpfClient() 
-            PessoaPage.nameComplete() 
-            PessoaPage.nameSocial() 
-            PessoaPage.dateBirth()
-            PessoaPage.sexClient()
-            ClienteCompletoPage.saveClient()
-            ClienteCompletoPage.messAlertAdressMandatory() 
-            EnderecoPage.clickAbaAdress() 
-            EnderecoPage.clickAddNewAdress()
+            PessoaPage.cpfClient() ;
+            PessoaPage.nameComplete();
+            PessoaPage.nameSocial() ;
+            PessoaPage.dateBirth();
+            PessoaPage.sexClient();
+            ClienteCompletoPage.saveClient();
+            ClienteCompletoPage.messAlertAdressMandatory(); 
+            EnderecoPage.clickAbaAdress(); 
+            EnderecoPage.clickAddNewAdress();
             EnderecoPage.tipoEndereco()
             EnderecoPage.modalAdressEmptyValidade()
             EnderecoPage.clickOpenTypeAdress()
@@ -260,24 +260,24 @@ test.describe('Register complete customer', () => {
             RefBancariaPage.clickSaveRefBanking()
             RefBancariaPage.messRefBankingAddedSucess()
             RefBancariaPage.infoRefBankingAdded()
-            ClienteCompletoPage.saveClient()
+            ClienteCompletoPage.saveClient();
             ClienteCompletoPage.modalWaitingLoading()
             ClienteCompletoPage.messRegisterSaveSucess()
         })  
 
         test('6.Complete customer CPF - PIX key type Correct email.',  async ({ page }) => {
 
-            ClienteCompletoPage.iconMenuOptions()
+            ClienteCompletoPage.iconMenuOptions();
             ClienteCompletoPage.optionClientComplete() 
-            PessoaPage.cpfClient() 
-            PessoaPage.nameComplete() 
-            PessoaPage.nameSocial() 
-            PessoaPage.dateBirth()
-            PessoaPage.sexClient()
-            ClienteCompletoPage.saveClient()
-            ClienteCompletoPage.messAlertAdressMandatory() 
-            EnderecoPage.clickAbaAdress() 
-            EnderecoPage.clickAddNewAdress()
+            PessoaPage.cpfClient() ;
+            PessoaPage.nameComplete();
+            PessoaPage.nameSocial() ;
+            PessoaPage.dateBirth();
+            PessoaPage.sexClient();
+            ClienteCompletoPage.saveClient();
+            ClienteCompletoPage.messAlertAdressMandatory(); 
+            EnderecoPage.clickAbaAdress(); 
+            EnderecoPage.clickAddNewAdress();
             EnderecoPage.tipoEndereco()
             EnderecoPage.modalAdressEmptyValidade()
             EnderecoPage.clickOpenTypeAdress()
@@ -324,24 +324,24 @@ test.describe('Register complete customer', () => {
             RefBancariaPage.clickSaveRefBanking()
             RefBancariaPage.messRefBankingAddedSucess()
             RefBancariaPage.infoRefBankingAdded()
-            ClienteCompletoPage.saveClient()
+            ClienteCompletoPage.saveClient();
             ClienteCompletoPage.modalWaitingLoading()
             ClienteCompletoPage.messRegisterSaveSucess()
         }) 
 
         test('7.Complete customer CPF - PIX key type, correct CPF/CNPJ.',  async ({ page }) => {
 
-            ClienteCompletoPage.iconMenuOptions()
+            ClienteCompletoPage.iconMenuOptions();
             ClienteCompletoPage.optionClientComplete() 
-            PessoaPage.cpfClient() 
-            PessoaPage.nameComplete() 
-            PessoaPage.nameSocial() 
-            PessoaPage.dateBirth()
-            PessoaPage.sexClient()
-            ClienteCompletoPage.saveClient()
-            ClienteCompletoPage.messAlertAdressMandatory() 
-            EnderecoPage.clickAbaAdress() 
-            EnderecoPage.clickAddNewAdress()
+            PessoaPage.cpfClient() ;
+            PessoaPage.nameComplete();
+            PessoaPage.nameSocial() ;
+            PessoaPage.dateBirth();
+            PessoaPage.sexClient();
+            ClienteCompletoPage.saveClient();
+            ClienteCompletoPage.messAlertAdressMandatory(); 
+            EnderecoPage.clickAbaAdress(); 
+            EnderecoPage.clickAddNewAdress();
             EnderecoPage.tipoEndereco()
             EnderecoPage.modalAdressEmptyValidade()
             EnderecoPage.clickOpenTypeAdress()
@@ -388,24 +388,24 @@ test.describe('Register complete customer', () => {
             RefBancariaPage.clicarSalvarRefBanclickSaveRefBankingcaria()
             RefBancariaPage.messRefBankingAddedSucess()
             RefBancariaPage.infoRefBankingAdded()
-            ClienteCompletoPage.saveClient()
+            ClienteCompletoPage.saveClient();
             ClienteCompletoPage.modalWaitingLoading()
             ClienteCompletoPage.messRegisterSaveSucess()
         }) 
 
         test('8.Complete customer CPF - PIX key type, correct CPF/CNPJ.',  async ({ page }) => {
 
-            ClienteCompletoPage.iconMenuOptions()
+            ClienteCompletoPage.iconMenuOptions();
             ClienteCompletoPage.optionClientComplete() 
-            PessoaPage.cpfClient() 
-            PessoaPage.nameComplete() 
-            PessoaPage.nameSocial() 
-            PessoaPage.dateBirth()
-            PessoaPage.sexClient()
-            ClienteCompletoPage.saveClient()
-            ClienteCompletoPage.messAlertAdressMandatory() 
-            EnderecoPage.clickAbaAdress() 
-            EnderecoPage.clickAddNewAdress()
+            PessoaPage.cpfClient() ;
+            PessoaPage.nameComplete();
+            PessoaPage.nameSocial() ;
+            PessoaPage.dateBirth();
+            PessoaPage.sexClient();
+            ClienteCompletoPage.saveClient();
+            ClienteCompletoPage.messAlertAdressMandatory(); 
+            EnderecoPage.clickAbaAdress(); 
+            EnderecoPage.clickAddNewAdress();
             EnderecoPage.tipoEndereco()
             EnderecoPage.modalAdressEmptyValidade()
             EnderecoPage.clickOpenTypeAdress()
@@ -452,24 +452,24 @@ test.describe('Register complete customer', () => {
             RefBancariaPage.clickSaveRefBanking()
             RefBancariaPage.messRefBankingAddedSucess()
             RefBancariaPage.infoRefBankingAdded()
-            ClienteCompletoPage.saveClient()
+            ClienteCompletoPage.saveClient();
             ClienteCompletoPage.modalWaitingLoading()
             ClienteCompletoPage.messRegisterSaveSucess()
         }) 
 
         test('9.Complete customer CPF - Validate PIX key type. Incorrect phone number.',  async ({ page }) => {
 
-            ClienteCompletoPage.iconMenuOptions()
+            ClienteCompletoPage.iconMenuOptions();
             ClienteCompletoPage.optionClientComplete()
-            PessoaPage.cpfClient() 
-            PessoaPage.nameComplete() 
-            PessoaPage.nameSocial() 
-            PessoaPage.dateBirth()
-            PessoaPage.sexClient()
-            ClienteCompletoPage.saveClient()
-            ClienteCompletoPage.messAlertAdressMandatory() 
-            EnderecoPage.clickAbaAdress() 
-            EnderecoPage.clickAddNewAdress()
+            PessoaPage.cpfClient() ;
+            PessoaPage.nameComplete();
+            PessoaPage.nameSocial() ;
+            PessoaPage.dateBirth();
+            PessoaPage.sexClient();
+            ClienteCompletoPage.saveClient();
+            ClienteCompletoPage.messAlertAdressMandatory(); 
+            EnderecoPage.clickAbaAdress(); 
+            EnderecoPage.clickAddNewAdress();
             EnderecoPage.tipoEndereco()
             EnderecoPage.modalAdressEmptyValidade()
             EnderecoPage.clickOpenTypeAdress()
@@ -517,23 +517,23 @@ test.describe('Register complete customer', () => {
             RefBancariaPage.clickSaveRefBanking()
             RefBancariaPage.messRefBankingAddedSucess()
             RefBancariaPage.infoRefBankingAdded()
-            ClienteCompletoPage.saveClient()
+            ClienteCompletoPage.saveClient();
             RefBancariaPage.messRefBankingKeyPixPhoneInvalid()
         })  
 
         test('10.Complete customer CPF - Validate PIX key type. Incorrect email.',  async ({ page }) => {
 
-            ClienteCompletoPage.iconMenuOptions()
+            ClienteCompletoPage.iconMenuOptions();
             ClienteCompletoPage.optionClientComplete()
-            PessoaPage.cpfClient() 
-            PessoaPage.nameComplete() 
-            PessoaPage.nameSocial() 
-            PessoaPage.dateBirth()
-            PessoaPage.sexClient()
-            ClienteCompletoPage.saveClient()
-            ClienteCompletoPage.messAlertAdressMandatory() 
-            EnderecoPage.clickAbaAdress() 
-            EnderecoPage.clickAddNewAdress()
+            PessoaPage.cpfClient() ;
+            PessoaPage.nameComplete();
+            PessoaPage.nameSocial() ;
+            PessoaPage.dateBirth();
+            PessoaPage.sexClient();
+            ClienteCompletoPage.saveClient();
+            ClienteCompletoPage.messAlertAdressMandatory(); 
+            EnderecoPage.clickAbaAdress(); 
+            EnderecoPage.clickAddNewAdress();
             EnderecoPage.tipoEndereco()
             EnderecoPage.modalAdressEmptyValidade()
             EnderecoPage.clickOpenTypeAdress()
@@ -580,23 +580,23 @@ test.describe('Register complete customer', () => {
             RefBancariaPage.clickSaveRefBanking()
             RefBancariaPage.messRefBankingAddedSucess()
             RefBancariaPage.infoRefBankingAdded()
-            ClienteCompletoPage.saveClient()
+            ClienteCompletoPage.saveClient();
             RefBancariaPage.messRefBankingKeyPixEmailInvalid()
         })  
 
         test('11.Complete customer CPF - Validate CPF key type. Incorrect CNPJ.',  async ({ page }) => {
 
-            ClienteCompletoPage.iconMenuOptions()
+            ClienteCompletoPage.iconMenuOptions();
             ClienteCompletoPage.optionClientComplete()
-            PessoaPage.cpfClient() 
-            PessoaPage.nameComplete() 
-            PessoaPage.nameSocial() 
-            PessoaPage.dateBirth()
-            PessoaPage.sexClient()
-            ClienteCompletoPage.saveClient()
-            ClienteCompletoPage.messAlertAdressMandatory() 
-            EnderecoPage.clickAbaAdress() 
-            EnderecoPage.clickAddNewAdress()
+            PessoaPage.cpfClient() ;
+            PessoaPage.nameComplete();
+            PessoaPage.nameSocial() ;
+            PessoaPage.dateBirth();
+            PessoaPage.sexClient();
+            ClienteCompletoPage.saveClient();
+            ClienteCompletoPage.messAlertAdressMandatory(); 
+            EnderecoPage.clickAbaAdress(); 
+            EnderecoPage.clickAddNewAdress();
             EnderecoPage.tipoEndereco()
             EnderecoPage.modalAdressEmptyValidade()
             EnderecoPage.clickOpenTypeAdress()
@@ -643,23 +643,23 @@ test.describe('Register complete customer', () => {
             RefBancariaPage.clickSaveRefBanking()
             RefBancariaPage.messRefBankingAddedSucess()
             RefBancariaPage.infoRefBankingAdded()
-            ClienteCompletoPage.saveClient()
+            ClienteCompletoPage.saveClient();
             RefBancariaPage.messRefBankingKeyPixCpfCnpjInvalid()
         })  
 
         test('12.Complete customer CPF - Validate incorrect Random key type.',  async ({ page }) => {
 
-            ClienteCompletoPage.iconMenuOptions()
+            ClienteCompletoPage.iconMenuOptions();
             ClienteCompletoPage.optionClientComplete()
-            PessoaPage.cpfClient() 
-            PessoaPage.nameComplete() 
-            PessoaPage.nameSocial() 
-            PessoaPage.dateBirth()
-            PessoaPage.sexClient()
-            ClienteCompletoPage.saveClient()
-            ClienteCompletoPage.messAlertAdressMandatory() 
-            EnderecoPage.clickAbaAdress() 
-            EnderecoPage.clickAddNewAdress()
+            PessoaPage.cpfClient() ;
+            PessoaPage.nameComplete();
+            PessoaPage.nameSocial() ;
+            PessoaPage.dateBirth();
+            PessoaPage.sexClient();
+            ClienteCompletoPage.saveClient();
+            ClienteCompletoPage.messAlertAdressMandatory(); 
+            EnderecoPage.clickAbaAdress(); 
+            EnderecoPage.clickAddNewAdress();
             EnderecoPage.tipoEndereco()
             EnderecoPage.modalAdressEmptyValidade()
             EnderecoPage.clickOpenTypeAdress()
@@ -705,7 +705,7 @@ test.describe('Register complete customer', () => {
             RefBancariaPage.clickSaveRefBanking()
             RefBancariaPage.messRefBankingAddedSucess()
             RefBancariaPage.infoRefBankingAdded()
-            ClienteCompletoPage.saveClient()
+            ClienteCompletoPage.saveClient();
             RefBancariaPage.messRefBankingKeyPixRandomInvalid()
         })  
     })

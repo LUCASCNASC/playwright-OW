@@ -16,17 +16,17 @@ test.describe('Register complete client - commercial reference', () => {
 
     test('1.Complete customer CPF - happy path',  async ({ page }) => {
 
-        ClienteCompletoPage.iconMenuOptions()
+        ClienteCompletoPage.iconMenuOptions();
         ClienteCompletoPage.optionClientComplete()
         PessoaPage.cpfClient()
         PessoaPage.nameComplete()
         PessoaPage.nameSocial()
-        PessoaPage.dateBirth()
-        PessoaPage.sexClient()
-        ClienteCompletoPage.saveClient()
-        ClienteCompletoPage.messAlertAdressMandatory()
-        EnderecoPage.clickAbaAdress()
-        EnderecoPage.clickAddNewAdress()
+        PessoaPage.dateBirth();
+        PessoaPage.sexClient();
+        ClienteCompletoPage.saveClient();
+        ClienteCompletoPage.messAlertAdressMandatory();
+        EnderecoPage.clickAbaAdress();
+        EnderecoPage.clickAddNewAdress();
         EnderecoPage.tipoEndereco()
         EnderecoPage.modalAdressEmptyValidade()
         EnderecoPage.clickOpenTypeAdress()
@@ -64,7 +64,7 @@ test.describe('Register complete client - commercial reference', () => {
         RefComercialPage.clickSaveRefCommercial()
         RefComercialPage.infoRefCommercialAdded()
         RefComercialPage.messRefCommercialAddedSucess()
-        ClienteCompletoPage.saveClient()
+        ClienteCompletoPage.saveClient();
         ClienteCompletoPage.modalWaitingLoading()
         ClienteCompletoPage.messRegisterSaveSucess()
     }) 

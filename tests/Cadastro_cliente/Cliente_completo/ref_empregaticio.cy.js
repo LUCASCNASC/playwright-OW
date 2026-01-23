@@ -16,17 +16,17 @@ test.describe('Register complete customer - employment reference', () => {
 
     test('1.Complete customer CPF - happy path',  async ({ page }) => {
 
-        ClienteCompletoPage.iconMenuOptions()
+        ClienteCompletoPage.iconMenuOptions();
         ClienteCompletoPage.optionClientComplete()
         PessoaPage.cpfClient()
         PessoaPage.nameComplete()
-        PessoaPage.nameSocial() 
-        PessoaPage.dateBirth()
-        PessoaPage.sexClient()
-        ClienteCompletoPage.saveClient()
-        ClienteCompletoPage.messAlertAdressMandatory()
-        EnderecoPage.clickAbaAdress()
-        EnderecoPage.clickAddNewAdress()
+        PessoaPage.nameSocial() ;
+        PessoaPage.dateBirth();
+        PessoaPage.sexClient();
+        ClienteCompletoPage.saveClient();
+        ClienteCompletoPage.messAlertAdressMandatory();
+        EnderecoPage.clickAbaAdress();
+        EnderecoPage.clickAddNewAdress();
         EnderecoPage.tipoEndereco()
         EnderecoPage.modalAdressEmptyValidade()
         EnderecoPage.clickOpenTypeAdress()
