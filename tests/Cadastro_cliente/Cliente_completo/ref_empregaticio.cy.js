@@ -17,9 +17,9 @@ test.describe('Register complete customer - employment reference', () => {
     test('1.Complete customer CPF - happy path',  async ({ page }) => {
 
         ClienteCompletoPage.iconMenuOptions();
-        ClienteCompletoPage.optionClientComplete()
-        PessoaPage.cpfClient()
-        PessoaPage.nameComplete()
+        ClienteCompletoPage.optionClientComplete();
+        PessoaPage.cpfClient();
+        PessoaPage.nameComplete();
         PessoaPage.nameSocial() ;
         PessoaPage.dateBirth();
         PessoaPage.sexClient();
@@ -27,33 +27,33 @@ test.describe('Register complete customer - employment reference', () => {
         ClienteCompletoPage.messAlertAdressMandatory();
         EnderecoPage.clickAbaAdress();
         EnderecoPage.clickAddNewAdress();
-        EnderecoPage.tipoEndereco()
-        EnderecoPage.modalAdressEmptyValidade()
-        EnderecoPage.clickOpenTypeAdress()
-        EnderecoPage.typeAdress()
-        EnderecoPage.cepAdress()
-        EnderecoPage.numberAdress()
-        ClienteCompletoPage.buttonSaveDisabled()
-        EnderecoPage.clickSaveAdress()
-        EnderecoPage.clickSaveAdress()
-        EnderecoPage.infoAdressAdded()
-        RotaPage.clickAbaRoute()
-        RotaPage.clickAddedNewRoute()
-        RotaPage.modalRouteEmptyValidade()
-        RotaPage.typeAdressRoute()
-        RotaPage.routaComplete()
-        RotaPage.infoRouteAdded()
-        TelefonePage.clickAbaPhone()
-        TelefonePage.clickAddedNewPhone()
-        TelefonePage.modalPhoneEmptyValidade()
-        TelefonePage.typePhone()
-        TelefonePage.numberPhone()
-        TelefonePage.ramalPhone()
-        TelefonePage.clickSavePhone()
-        TelefonePage.infoPhoneAdded()
-        TelefonePage.messPhoneAddedSucess()
-        EmpregaticioPage.clickAbaEmployment()
-        EmpregaticioPage.validateAbaEmploymentEmpty()
-        EmpregaticioPage.clickAddNewEmployment()
+        EnderecoPage.tipoEndereco();
+        EnderecoPage.modalAdressEmptyValidade();
+        EnderecoPage.clickOpenTypeAdress();
+        EnderecoPage.typeAdress();
+        EnderecoPage.cepAdress();
+        EnderecoPage.numberAdress();
+        ClienteCompletoPage.buttonSaveDisabled();
+        EnderecoPage.clickSaveAdress();
+        EnderecoPage.clickSaveAdress();
+        EnderecoPage.infoAdressAdded();
+        RotaPage.clickAbaRoute();
+        RotaPage.clickAddedNewRoute();
+        RotaPage.modalRouteEmptyValidade();
+        RotaPage.typeAdressRoute();
+        RotaPage.routaComplete();
+        RotaPage.infoRouteAdded();
+        TelefonePage.clickAbaPhone();
+        TelefonePage.clickAddedNewPhone();
+        TelefonePage.modalPhoneEmptyValidade();
+        TelefonePage.typePhone();
+        TelefonePage.numberPhone();
+        TelefonePage.ramalPhone();
+        TelefonePage.clickSavePhone();
+        TelefonePage.infoPhoneAdded();
+        TelefonePage.messPhoneAddedSucess();
+        EmpregaticioPage.clickAbaEmployment();
+        EmpregaticioPage.validateAbaEmploymentEmpty();
+        EmpregaticioPage.clickAddNewEmployment();
     }) 
 })

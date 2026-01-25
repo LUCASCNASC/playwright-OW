@@ -30,118 +30,118 @@ test.describe('Register complete customer', () => {
             ClienteCompletoPage.messAlertAdressMandatory(); 
             EnderecoPage.clickAbaAdress(); 
             EnderecoPage.clickAddNewAdress(); 
-            EnderecoPage.modalAdressEmptyValidade() 
-            EnderecoPage.clickOpenTypeAdress() 
-            EnderecoPage.typeAdress() 
-            EnderecoPage.cepAdress() 
-            EnderecoPage.numberAdress() 
-            EnderecoPage.clickSaveAdress() 
-            EnderecoPage.infoAdressAdded() 
-            RotaPage.clickAbaRoute() 
-            RotaPage.clickAddedNewRoute()
-            RotaPage.modalRouteEmptyValidade() 
-            RotaPage.typeAdressRoute() 
-            RotaPage.routaComplete() 
-            RotaPage.infoRouteAdded() 
-            TelefonePage.clickAbaPhone() 
-            TelefonePage.clickAddedNewPhone()
-            TelefonePage.modalPhoneEmptyValidade()
-            TelefonePage.typePhone()
-            TelefonePage.numberPhone()
-            TelefonePage.ramalPhone()
-            TelefonePage.clickSavePhone()
-            TelefonePage.infoPhoneAdded()
-            TelefonePage.messPhoneAddedSucess()
+            EnderecoPage.modalAdressEmptyValidade(); 
+            EnderecoPage.clickOpenTypeAdress(); 
+            EnderecoPage.typeAdress(); 
+            EnderecoPage.cepAdress(); 
+            EnderecoPage.numberAdress(); 
+            EnderecoPage.clickSaveAdress(); 
+            EnderecoPage.infoAdressAdded(); 
+            RotaPage.clickAbaRoute(); 
+            RotaPage.clickAddedNewRoute();
+            RotaPage.modalRouteEmptyValidade(); 
+            RotaPage.typeAdressRoute(); 
+            RotaPage.routaComplete(); 
+            RotaPage.infoRouteAdded();
+            TelefonePage.clickAbaPhone(); 
+            TelefonePage.clickAddedNewPhone();
+            TelefonePage.modalPhoneEmptyValidade();
+            TelefonePage.typePhone();
+            TelefonePage.numberPhone();
+            TelefonePage.ramalPhone();
+            TelefonePage.clickSavePhone();
+            TelefonePage.infoPhoneAdded();
+            TelefonePage.messPhoneAddedSucess();
             ClienteCompletoPage.saveClient();
-            ClienteCompletoPage.modalWaitingLoading()
-            ClienteCompletoPage.messRegisterSaveSucess()
+            ClienteCompletoPage.modalWaitingLoading();
+            ClienteCompletoPage.messRegisterSaveSucess();
         })  
 
         test('2.Complete customer CPF - Required fields message.',  async ({ page }) => {
     
             ClienteCompletoPage.iconMenuOptions();
-            ClienteCompletoPage.optionClientComplete()
+            ClienteCompletoPage.optionClientComplete();
             ClienteCompletoPage.saveClient(); 
             ClienteCompletoPage.messAlertAdressMandatory(); 
-            PessoaPage.cpfClient() ;
+            PessoaPage.cpfClient();
             PessoaPage.nameComplete(); 
-            PessoaPage.nameSocial() ;
+            PessoaPage.nameSocial();
             PessoaPage.dateBirth();
             PessoaPage.sexClient();
             ClienteCompletoPage.saveClient(); 
             ClienteCompletoPage.messAlertAdressMandatory(); 
             EnderecoPage.clickAbaAdress(); 
             EnderecoPage.clickAddNewAdress();
-            EnderecoPage.clickOpenTypeAdress()
+            EnderecoPage.clickOpenTypeAdress();
             EnderecoPage.tipoEndereco()
-            EnderecoPage.modalAdressEmptyValidade()
-            ClienteCompletoPage.buttonSaveDisabled()
-            EnderecoPage.clickOpenTypeAdress()
-            EnderecoPage.typeAdress()
-            EnderecoPage.cepAdress()
-            EnderecoPage.numberAdress()
-            ClienteCompletoPage.buttonSaveDisabled()
-            EnderecoPage.clickSaveAdress()
-            EnderecoPage.infoAdressAdded()
-            RotaPage.clickAbaRoute() 
-            RotaPage.clickAddedNewRoute()
-            RotaPage.modalRouteEmptyValidade()
-            RotaPage.typeAdressRoute()
-            RotaPage.routaComplete()
+            EnderecoPage.modalAdressEmptyValidade();
+            ClienteCompletoPage.buttonSaveDisabled();
+            EnderecoPage.clickOpenTypeAdress();
+            EnderecoPage.typeAdress();
+            EnderecoPage.cepAdress();
+            EnderecoPage.numberAdress();
+            ClienteCompletoPage.buttonSaveDisabled();
+            EnderecoPage.clickSaveAdress();
+            EnderecoPage.infoAdressAdded();
+            RotaPage.clickAbaRoute(); 
+            RotaPage.clickAddedNewRoute();
+            RotaPage.modalRouteEmptyValidade();
+            RotaPage.typeAdressRoute();
+            RotaPage.routaComplete();
             RotaPage.infoRouteAdded()
-            TelefonePage.clickAbaPhone() 
-            TelefonePage.clickAddedNewPhone()
-            TelefonePage.modalPhoneEmptyValidade()
-            TelefonePage.typePhone()
-            TelefonePage.numberPhone()
-            TelefonePage.ramalPhone()
-            TelefonePage.clickSavePhone()
-            TelefonePage.infoPhoneAdded()
-            TelefonePage.messPhoneAddedSucess()
+            TelefonePage.clickAbaPhone(); 
+            TelefonePage.clickAddedNewPhone();
+            TelefonePage.modalPhoneEmptyValidade();
+            TelefonePage.typePhone();
+            TelefonePage.numberPhone();
+            TelefonePage.ramalPhone();
+            TelefonePage.clickSavePhone();
+            TelefonePage.infoPhoneAdded();
+            TelefonePage.messPhoneAddedSucess();
             ClienteCompletoPage.saveClient();
-            ClienteCompletoPage.modalWaitingLoading()
-            ClienteCompletoPage.messRegisterSaveSucess()
+            ClienteCompletoPage.modalWaitingLoading();
+            ClienteCompletoPage.messRegisterSaveSucess();
         })  
 
         test('3.Complete customer CNPJ.',  async ({ page }) => {
     
             ClienteCompletoPage.iconMenuOptions();
-            ClienteCompletoPage.optionClientComplete() 
-            PessoaPage.cnpjClient() 
-            PessoaPage.nameCNPJ() 
-            PessoaPage.nameFantasyCNPJ()
+            ClienteCompletoPage.optionClientComplete();
+            PessoaPage.cnpjClient();
+            PessoaPage.nameCNPJ();
+            PessoaPage.nameFantasyCNPJ();
             ClienteCompletoPage.saveClient(); 
             ClienteCompletoPage.messAlertAdressMandatory(); 
             EnderecoPage.clickAbaAdress(); 
             EnderecoPage.clickAddNewAdress();
-            EnderecoPage.tipoEndereco()
-            EnderecoPage.modalAdressEmptyValidade()
+            EnderecoPage.tipoEndereco();
+            EnderecoPage.modalAdressEmptyValidade();
             ClienteCompletoPage.buttonSaveDisabled()
-            EnderecoPage.clickOpenTypeAdress()
-            EnderecoPage.typeAdress()
-            EnderecoPage.cepAdress()
-            EnderecoPage.numberAdress()
-            ClienteCompletoPage.buttonSaveDisabled()
-            EnderecoPage.clickSaveAdress()
-            EnderecoPage.infoAdressAdded()
-            RotaPage.clickAbaRoute() 
-            RotaPage.clickAddedNewRoute()
-            RotaPage.modalRouteEmptyValidade()
-            RotaPage.typeAdressRoute()
-            RotaPage.routaComplete()
-            RotaPage.infoRouteAdded()
-            TelefonePage.clickAbaPhone() 
-            TelefonePage.clickAddedNewPhone()
-            TelefonePage.modalPhoneEmptyValidade()
-            TelefonePage.typePhone()
-            TelefonePage.numberPhone()
-            TelefonePage.ramalPhone()
-            TelefonePage.clickSavePhone()
-            TelefonePage.infoPhoneAdded()
-            TelefonePage.messPhoneAddedSucess()
+            EnderecoPage.clickOpenTypeAdress();
+            EnderecoPage.typeAdress();
+            EnderecoPage.cepAdress();
+            EnderecoPage.numberAdress();
+            ClienteCompletoPage.buttonSaveDisabled();
+            EnderecoPage.clickSaveAdress();
+            EnderecoPage.infoAdressAdded();
+            RotaPage.clickAbaRoute(); 
+            RotaPage.clickAddedNewRoute();
+            RotaPage.modalRouteEmptyValidade();
+            RotaPage.typeAdressRoute();
+            RotaPage.routaComplete();
+            RotaPage.infoRouteAdded();
+            TelefonePage.clickAbaPhone(); 
+            TelefonePage.clickAddedNewPhone();
+            TelefonePage.modalPhoneEmptyValidade();
+            TelefonePage.typePhone();
+            TelefonePage.numberPhone();
+            TelefonePage.ramalPhone();
+            TelefonePage.clickSavePhone();
+            TelefonePage.infoPhoneAdded();
+            TelefonePage.messPhoneAddedSucess();
             ClienteCompletoPage.saveClient();
-            ClienteCompletoPage.modalWaitingLoading()
-            ClienteCompletoPage.messRegisterSaveSucess()
+            ClienteCompletoPage.modalWaitingLoading();
+            ClienteCompletoPage.messRegisterSaveSucess();
         }) 
     })
 
@@ -150,52 +150,52 @@ test.describe('Register complete customer', () => {
         test('4.Complete customer CPF - happy path.',  async ({ page }) => {
 
             ClienteCompletoPage.iconMenuOptions();
-            ClienteCompletoPage.optionClientComplete() 
-            PessoaPage.cpfClient() ;
+            ClienteCompletoPage.optionClientComplete();
+            PessoaPage.cpfClient();
             PessoaPage.nameComplete();
-            PessoaPage.nameSocial() ;
+            PessoaPage.nameSocial();
             PessoaPage.dateBirth();
             PessoaPage.sexClient();
             ClienteCompletoPage.saveClient();
             EnderecoPage.clickAbaAdress(); 
             EnderecoPage.clickAddNewAdress();
             EnderecoPage.tipoEndereco()
-            EnderecoPage.modalAdressEmptyValidade()
-            EnderecoPage.clickOpenTypeAdress()
-            EnderecoPage.typeAdress()
-            EnderecoPage.cepAdress()
-            EnderecoPage.numberAdress()
-            ClienteCompletoPage.buttonSaveDisabled()
-            EnderecoPage.clickSaveAdress()
-            EnderecoPage.infoAdressAdded()
-            RotaPage.clickAbaRoute() 
-            RotaPage.clickAddedNewRoute()
-            RotaPage.modalRouteEmptyValidade()
-            RotaPage.typeAdressRoute()
-            RotaPage.routaComplete()
+            EnderecoPage.modalAdressEmptyValidade();
+            EnderecoPage.clickOpenTypeAdress();
+            EnderecoPage.typeAdress();
+            EnderecoPage.cepAdress();
+            EnderecoPage.numberAdress();
+            ClienteCompletoPage.buttonSaveDisabled();
+            EnderecoPage.clickSaveAdress();
+            EnderecoPage.infoAdressAdded();
+            RotaPage.clickAbaRoute(); 
+            RotaPage.clickAddedNewRoute();
+            RotaPage.modalRouteEmptyValidade();
+            RotaPage.typeAdressRoute();
+            RotaPage.routaComplete();
             RotaPage.infoRouteAdded()
-            TelefonePage.clickAbaPhone() 
-            TelefonePage.clickAddedNewPhone()
-            TelefonePage.modalPhoneEmptyValidade()
-            TelefonePage.typePhone()
-            TelefonePage.numberPhone()
-            TelefonePage.ramalPhone()
-            TelefonePage.clickSavePhone()
-            TelefonePage.infoPhoneAdded()
-            TelefonePage.messPhoneAddedSucess()
+            TelefonePage.clickAbaPhone(); 
+            TelefonePage.clickAddedNewPhone();
+            TelefonePage.modalPhoneEmptyValidade();
+            TelefonePage.typePhone();
+            TelefonePage.numberPhone();
+            TelefonePage.ramalPhone();
+            TelefonePage.clickSavePhone();
+            TelefonePage.infoPhoneAdded();
+            TelefonePage.messPhoneAddedSucess();
             ClienteCompletoPage.saveClient();
-            ClienteCompletoPage.modalWaitingLoading()
-            ClienteCompletoPage.messRegisterSaveSucess()
-            ClienteCompletoPage.menuRegisterClientComplete()
-            AnexoPage.clickAbaAttachment()  
-            AnexoPage.validateAbaAttachmentEmpty()
-            AnexoPage.selectFirstTypeAttachment()
-            AnexoPage.filePDF()
-            AnexoPage.confirmSendFile()
-            AnexoPage.messAttachmentAddSucess()
-            AnexoPage.validateAttachmentAdded()
+            ClienteCompletoPage.modalWaitingLoading();
+            ClienteCompletoPage.messRegisterSaveSucess();
+            ClienteCompletoPage.menuRegisterClientComplete();
+            AnexoPage.clickAbaAttachment()  ;
+            AnexoPage.validateAbaAttachmentEmpty();
+            AnexoPage.selectFirstTypeAttachment();
+            AnexoPage.filePDF();
+            AnexoPage.confirmSendFile();
+            AnexoPage.messAttachmentAddSucess();
+            AnexoPage.validateAttachmentAdded();
             ClienteCompletoPage.saveClient();
-            ClienteCompletoPage.messRegisterSaveSucess()
+            ClienteCompletoPage.messRegisterSaveSucess();
         })
     })
 
@@ -204,509 +204,509 @@ test.describe('Register complete customer', () => {
         test('5.Complete customer CPF - PIX key type Correct phone number.',  async ({ page }) => {
 
             ClienteCompletoPage.iconMenuOptions();
-            ClienteCompletoPage.optionClientComplete() 
-            PessoaPage.cpfClient() ;
+            ClienteCompletoPage.optionClientComplete();
+            PessoaPage.cpfClient();
             PessoaPage.nameComplete();
-            PessoaPage.nameSocial() ;
+            PessoaPage.nameSocial();
             PessoaPage.dateBirth();
             PessoaPage.sexClient();
             ClienteCompletoPage.saveClient();
             ClienteCompletoPage.messAlertAdressMandatory(); 
             EnderecoPage.clickAbaAdress(); 
             EnderecoPage.clickAddNewAdress();
-            EnderecoPage.tipoEndereco()
-            EnderecoPage.modalAdressEmptyValidade()
-            EnderecoPage.clickOpenTypeAdress()
-            EnderecoPage.typeAdress()
-            EnderecoPage.cepAdress()
-            EnderecoPage.numberAdress()
-            ClienteCompletoPage.buttonSaveDisabled()
-            EnderecoPage.clickSaveAdress()
-            EnderecoPage.infoAdressAdded()
-            RotaPage.clickAbaRoute() 
-            RotaPage.clickAddedNewRoute()
-            RotaPage.modalRouteEmptyValidade()
-            RotaPage.typeAdressRoute()
-            RotaPage.routaComplete()
-            RotaPage.infoRouteAdded()
-            TelefonePage.clickAbaPhone() 
-            TelefonePage.clickAddedNewPhone()
-            TelefonePage.modalPhoneEmptyValidade()
-            TelefonePage.typePhone()
-            TelefonePage.numberPhone()
-            TelefonePage.ramalPhone()
-            TelefonePage.clickSavePhone()
-            TelefonePage.infoPhoneAdded()
-            TelefonePage.messPhoneAddedSucess()
-            ClienteCompletoPage.abaReferences() 
-            RefBancariaPage.clickAbaRefBanking() 
-            RefBancariaPage.validateAbaRefBankingEmpty()
-            RefBancariaPage.clickAddNewRefBanking()
-            RefBancariaPage.modalRefBankingEmpty()
-            RefBancariaPage.bank()
-            RefBancariaPage.agency()
-            RefBancariaPage.account()
-            RefBancariaPage.dateOpening()
-            RefBancariaPage.phone()
-            RefBancariaPage.manager()
-            RefBancariaPage.email()
-            RefBancariaPage.cpfAccountHolder()
-            RefBancariaPage.nameAccountHolder()
-            RefBancariaPage.typeAccount()
-            RefBancariaPage.operation()
-            RefBancariaPage.formPayment()
-            RefBancariaPage.typeKeyPixPhone()
-            RefBancariaPage.keyPixPhone()
-            RefBancariaPage.clickSaveRefBanking()
-            RefBancariaPage.messRefBankingAddedSucess()
-            RefBancariaPage.infoRefBankingAdded()
+            EnderecoPage.tipoEndereco();
+            EnderecoPage.modalAdressEmptyValidade();
+            EnderecoPage.clickOpenTypeAdress();
+            EnderecoPage.typeAdress();
+            EnderecoPage.cepAdress();
+            EnderecoPage.numberAdress();
+            ClienteCompletoPage.buttonSaveDisabled();
+            EnderecoPage.clickSaveAdress();
+            EnderecoPage.infoAdressAdded();
+            RotaPage.clickAbaRoute(); 
+            RotaPage.clickAddedNewRoute();
+            RotaPage.modalRouteEmptyValidade();
+            RotaPage.typeAdressRoute();
+            RotaPage.routaComplete();
+            RotaPage.infoRouteAdded();
+            TelefonePage.clickAbaPhone(); 
+            TelefonePage.clickAddedNewPhone();
+            TelefonePage.modalPhoneEmptyValidade();
+            TelefonePage.typePhone();
+            TelefonePage.numberPhone();
+            TelefonePage.ramalPhone();
+            TelefonePage.clickSavePhone();
+            TelefonePage.infoPhoneAdded();
+            TelefonePage.messPhoneAddedSucess();
+            ClienteCompletoPage.abaReferences();
+            RefBancariaPage.clickAbaRefBanking();
+            RefBancariaPage.validateAbaRefBankingEmpty();
+            RefBancariaPage.clickAddNewRefBanking();
+            RefBancariaPage.modalRefBankingEmpty();
+            RefBancariaPage.bank();
+            RefBancariaPage.agency();
+            RefBancariaPage.account();
+            RefBancariaPage.dateOpening();
+            RefBancariaPage.phone();
+            RefBancariaPage.manager();
+            RefBancariaPage.email();
+            RefBancariaPage.cpfAccountHolder();
+            RefBancariaPage.nameAccountHolder();
+            RefBancariaPage.typeAccount();
+            RefBancariaPage.operation();
+            RefBancariaPage.formPayment();
+            RefBancariaPage.typeKeyPixPhone();
+            RefBancariaPage.keyPixPhone();
+            RefBancariaPage.clickSaveRefBanking();
+            RefBancariaPage.messRefBankingAddedSucess();
+            RefBancariaPage.infoRefBankingAdded();
             ClienteCompletoPage.saveClient();
-            ClienteCompletoPage.modalWaitingLoading()
-            ClienteCompletoPage.messRegisterSaveSucess()
+            ClienteCompletoPage.modalWaitingLoading();
+            ClienteCompletoPage.messRegisterSaveSucess();
         })  
 
         test('6.Complete customer CPF - PIX key type Correct email.',  async ({ page }) => {
 
             ClienteCompletoPage.iconMenuOptions();
-            ClienteCompletoPage.optionClientComplete() 
-            PessoaPage.cpfClient() ;
+            ClienteCompletoPage.optionClientComplete();
+            PessoaPage.cpfClient();
             PessoaPage.nameComplete();
-            PessoaPage.nameSocial() ;
+            PessoaPage.nameSocial();
             PessoaPage.dateBirth();
             PessoaPage.sexClient();
             ClienteCompletoPage.saveClient();
             ClienteCompletoPage.messAlertAdressMandatory(); 
             EnderecoPage.clickAbaAdress(); 
             EnderecoPage.clickAddNewAdress();
-            EnderecoPage.tipoEndereco()
-            EnderecoPage.modalAdressEmptyValidade()
-            EnderecoPage.clickOpenTypeAdress()
-            EnderecoPage.typeAdress()
-            EnderecoPage.cepAdress()
-            EnderecoPage.numberAdress()
+            EnderecoPage.tipoEndereco();
+            EnderecoPage.modalAdressEmptyValidade();
+            EnderecoPage.clickOpenTypeAdress();
+            EnderecoPage.typeAdress();
+            EnderecoPage.cepAdress();
+            EnderecoPage.numberAdress();
             ClienteCompletoPage.buttonSaveDisabled()
-            EnderecoPage.clickSaveAdress()
-            EnderecoPage.infoAdressAdded()
-            RotaPage.clickAbaRoute() 
-            RotaPage.clickAddedNewRoute()
-            RotaPage.modalRouteEmptyValidade()
-            RotaPage.typeAdressRoute()
-            RotaPage.routaComplete()
-            RotaPage.infoRouteAdded()
-            TelefonePage.clickAbaPhone() 
-            TelefonePage.clickAddedNewPhone()
-            TelefonePage.modalPhoneEmptyValidade()
-            TelefonePage.typePhone()
-            TelefonePage.numberPhone()
-            TelefonePage.ramalPhone()
-            TelefonePage.clickSavePhone()
-            TelefonePage.infoPhoneAdded()
-            TelefonePage.messPhoneAddedSucess()
-            ClienteCompletoPage.abaReferences() 
-            RefBancariaPage.clickAbaRefBanking() 
-            RefBancariaPage.validateAbaRefBankingEmpty()
-            RefBancariaPage.clickAddNewRefBanking()
-            RefBancariaPage.modalRefBankingEmpty()
-            RefBancariaPage.bank()
-            RefBancariaPage.agency()
-            RefBancariaPage.account()
-            RefBancariaPage.dateOpening()
-            RefBancariaPage.phone()
-            RefBancariaPage.manager()
-            RefBancariaPage.email()
-            RefBancariaPage.cpfAccountHolder()
-            RefBancariaPage.nameAccountHolder()
-            RefBancariaPage.typeAccount()
-            RefBancariaPage.operation()
-            RefBancariaPage.formPayment()
-            RefBancariaPage.typeKeyPixEmail()
-            RefBancariaPage.keyPixEmail()
-            RefBancariaPage.clickSaveRefBanking()
-            RefBancariaPage.messRefBankingAddedSucess()
-            RefBancariaPage.infoRefBankingAdded()
+            EnderecoPage.clickSaveAdress();
+            EnderecoPage.infoAdressAdded();
+            RotaPage.clickAbaRoute(); 
+            RotaPage.clickAddedNewRoute();
+            RotaPage.modalRouteEmptyValidade();
+            RotaPage.typeAdressRoute();
+            RotaPage.routaComplete();
+            RotaPage.infoRouteAdded();
+            TelefonePage.clickAbaPhone(); 
+            TelefonePage.clickAddedNewPhone();
+            TelefonePage.modalPhoneEmptyValidade();
+            TelefonePage.typePhone();
+            TelefonePage.numberPhone();
+            TelefonePage.ramalPhone();
+            TelefonePage.clickSavePhone();
+            TelefonePage.infoPhoneAdded();
+            TelefonePage.messPhoneAddedSucess();
+            ClienteCompletoPage.abaReferences();
+            RefBancariaPage.clickAbaRefBanking();
+            RefBancariaPage.validateAbaRefBankingEmpty();
+            RefBancariaPage.clickAddNewRefBanking();
+            RefBancariaPage.modalRefBankingEmpty();
+            RefBancariaPage.bank();
+            RefBancariaPage.agency();
+            RefBancariaPage.account();
+            RefBancariaPage.dateOpening();
+            RefBancariaPage.phone();
+            RefBancariaPage.manager();
+            RefBancariaPage.email();
+            RefBancariaPage.cpfAccountHolder();
+            RefBancariaPage.nameAccountHolder();
+            RefBancariaPage.typeAccount();
+            RefBancariaPage.operation();
+            RefBancariaPage.formPayment();
+            RefBancariaPage.typeKeyPixEmail();
+            RefBancariaPage.keyPixEmail();
+            RefBancariaPage.clickSaveRefBanking();
+            RefBancariaPage.messRefBankingAddedSucess();
+            RefBancariaPage.infoRefBankingAdded();
             ClienteCompletoPage.saveClient();
-            ClienteCompletoPage.modalWaitingLoading()
-            ClienteCompletoPage.messRegisterSaveSucess()
+            ClienteCompletoPage.modalWaitingLoading();
+            ClienteCompletoPage.messRegisterSaveSucess();
         }) 
 
         test('7.Complete customer CPF - PIX key type, correct CPF/CNPJ.',  async ({ page }) => {
 
             ClienteCompletoPage.iconMenuOptions();
-            ClienteCompletoPage.optionClientComplete() 
-            PessoaPage.cpfClient() ;
+            ClienteCompletoPage.optionClientComplete();
+            PessoaPage.cpfClient();
             PessoaPage.nameComplete();
-            PessoaPage.nameSocial() ;
+            PessoaPage.nameSocial();
             PessoaPage.dateBirth();
             PessoaPage.sexClient();
             ClienteCompletoPage.saveClient();
             ClienteCompletoPage.messAlertAdressMandatory(); 
             EnderecoPage.clickAbaAdress(); 
             EnderecoPage.clickAddNewAdress();
-            EnderecoPage.tipoEndereco()
-            EnderecoPage.modalAdressEmptyValidade()
-            EnderecoPage.clickOpenTypeAdress()
-            EnderecoPage.typeAdress()
-            EnderecoPage.cepAdress()
-            EnderecoPage.numberAdress()
+            EnderecoPage.tipoEndereco();
+            EnderecoPage.modalAdressEmptyValidade();
+            EnderecoPage.clickOpenTypeAdress();
+            EnderecoPage.typeAdress();
+            EnderecoPage.cepAdress();
+            EnderecoPage.numberAdress();
             ClienteCompletoPage.buttonSaveDisabled()
-            EnderecoPage.clickSaveAdress()
-            EnderecoPage.infoAdressAdded()
-            RotaPage.clickAbaRoute() 
-            RotaPage.clickAddedNewRoute()
-            RotaPage.modalRouteEmptyValidade()
-            RotaPage.typeAdressRoute()
-            RotaPage.routaComplete()
-            RotaPage.infoRouteAdded()
-            TelefonePage.clickAbaPhone() 
-            TelefonePage.clickAddedNewPhone()
-            TelefonePage.modalPhoneEmptyValidade()
-            TelefonePage.typePhone()
-            TelefonePage.numberPhone()
-            TelefonePage.ramalPhone()
-            TelefonePage.clickSavePhone()
-            TelefonePage.infoPhoneAdded()
-            TelefonePage.messPhoneAddedSucess()
-            ClienteCompletoPage.abaReferences() 
-            RefBancariaPage.clickAbaRefBanking() 
-            RefBancariaPage.validateAbaRefBankingEmpty()
-            RefBancariaPage.clickAddNewRefBanking()
-            RefBancariaPage.modalRefBankingEmpty()
-            RefBancariaPage.bank()
-            RefBancariaPage.agency()
-            RefBancariaPage.account()
-            RefBancariaPage.dateOpening()
-            RefBancariaPage.phone()
-            RefBancariaPage.manager()
-            RefBancariaPage.email()
-            RefBancariaPage.cpfAccountHolder()
-            RefBancariaPage.nameAccountHolder()
-            RefBancariaPage.typeAccount()
-            RefBancariaPage.operation()
-            RefBancariaPage.formPayment()
-            RefBancariaPage.typeKeyPixCpfCnpj()
-            RefBancariaPage.keyPixCPF()
-            RefBancariaPage.clicarSalvarRefBanclickSaveRefBankingcaria()
-            RefBancariaPage.messRefBankingAddedSucess()
-            RefBancariaPage.infoRefBankingAdded()
+            EnderecoPage.clickSaveAdress();
+            EnderecoPage.infoAdressAdded();
+            RotaPage.clickAbaRoute(); 
+            RotaPage.clickAddedNewRoute();
+            RotaPage.modalRouteEmptyValidade();
+            RotaPage.typeAdressRoute();
+            RotaPage.routaComplete();
+            RotaPage.infoRouteAdded();
+            TelefonePage.clickAbaPhone(); 
+            TelefonePage.clickAddedNewPhone();
+            TelefonePage.modalPhoneEmptyValidade();
+            TelefonePage.typePhone();
+            TelefonePage.numberPhone();
+            TelefonePage.ramalPhone();
+            TelefonePage.clickSavePhone();
+            TelefonePage.infoPhoneAdded();
+            TelefonePage.messPhoneAddedSucess();
+            ClienteCompletoPage.abaReferences();
+            RefBancariaPage.clickAbaRefBanking();
+            RefBancariaPage.validateAbaRefBankingEmpty();
+            RefBancariaPage.clickAddNewRefBanking();
+            RefBancariaPage.modalRefBankingEmpty();
+            RefBancariaPage.bank();
+            RefBancariaPage.agency();
+            RefBancariaPage.account();
+            RefBancariaPage.dateOpening();
+            RefBancariaPage.phone();
+            RefBancariaPage.manager();
+            RefBancariaPage.email();
+            RefBancariaPage.cpfAccountHolder();
+            RefBancariaPage.nameAccountHolder();
+            RefBancariaPage.typeAccount();
+            RefBancariaPage.operation();
+            RefBancariaPage.formPayment();
+            RefBancariaPage.typeKeyPixCpfCnpj();
+            RefBancariaPage.keyPixCPF();
+            RefBancariaPage.clicarSalvarRefBanclickSaveRefBankingcaria();
+            RefBancariaPage.messRefBankingAddedSucess();
+            RefBancariaPage.infoRefBankingAdded();
             ClienteCompletoPage.saveClient();
-            ClienteCompletoPage.modalWaitingLoading()
-            ClienteCompletoPage.messRegisterSaveSucess()
+            ClienteCompletoPage.modalWaitingLoading();
+            ClienteCompletoPage.messRegisterSaveSucess();
         }) 
 
         test('8.Complete customer CPF - PIX key type, correct CPF/CNPJ.',  async ({ page }) => {
 
             ClienteCompletoPage.iconMenuOptions();
-            ClienteCompletoPage.optionClientComplete() 
-            PessoaPage.cpfClient() ;
+            ClienteCompletoPage.optionClientComplete();
+            PessoaPage.cpfClient();
             PessoaPage.nameComplete();
-            PessoaPage.nameSocial() ;
+            PessoaPage.nameSocial();
             PessoaPage.dateBirth();
             PessoaPage.sexClient();
             ClienteCompletoPage.saveClient();
             ClienteCompletoPage.messAlertAdressMandatory(); 
             EnderecoPage.clickAbaAdress(); 
             EnderecoPage.clickAddNewAdress();
-            EnderecoPage.tipoEndereco()
-            EnderecoPage.modalAdressEmptyValidade()
-            EnderecoPage.clickOpenTypeAdress()
-            EnderecoPage.typeAdress()
-            EnderecoPage.cepAdress()
-            EnderecoPage.numberAdress()
+            EnderecoPage.tipoEndereco();
+            EnderecoPage.modalAdressEmptyValidade();
+            EnderecoPage.clickOpenTypeAdress();
+            EnderecoPage.typeAdress();
+            EnderecoPage.cepAdress();
+            EnderecoPage.numberAdress();
             ClienteCompletoPage.buttonSaveDisabled()
-            EnderecoPage.clickSaveAdress()
-            EnderecoPage.infoAdressAdded()
-            RotaPage.clickAbaRoute() 
-            RotaPage.clickAddedNewRoute()
-            RotaPage.modalRouteEmptyValidade()
-            RotaPage.typeAdressRoute()
-            RotaPage.routaComplete()
-            RotaPage.infoRouteAdded()
-            TelefonePage.clickAbaPhone() 
-            TelefonePage.clickAddedNewPhone()
-            TelefonePage.modalPhoneEmptyValidade()
-            TelefonePage.typePhone()
-            TelefonePage.numberPhone()
-            TelefonePage.ramalPhone()
-            TelefonePage.clickSavePhone()
-            TelefonePage.infoPhoneAdded()
-            TelefonePage.messPhoneAddedSucess()
-            ClienteCompletoPage.abaReferences() 
-            RefBancariaPage.clickAbaRefBanking() 
-            RefBancariaPage.validateAbaRefBankingEmpty()
-            RefBancariaPage.clickAddNewRefBanking()
-            RefBancariaPage.modalRefBankingEmpty()
-            RefBancariaPage.bank()
-            RefBancariaPage.agency()
-            RefBancariaPage.account()
-            RefBancariaPage.dateOpening()
-            RefBancariaPage.phone()
-            RefBancariaPage.manager()
-            RefBancariaPage.email()
-            RefBancariaPage.cpfAccountHolder()
-            RefBancariaPage.nameAccountHolder()
-            RefBancariaPage.typeAccount()
-            RefBancariaPage.operation()
-            RefBancariaPage.formPayment()
-            RefBancariaPage.typeKeyPixRandom()
-            RefBancariaPage.keyPixRandom()
-            RefBancariaPage.clickSaveRefBanking()
-            RefBancariaPage.messRefBankingAddedSucess()
-            RefBancariaPage.infoRefBankingAdded()
+            EnderecoPage.clickSaveAdress();
+            EnderecoPage.infoAdressAdded();
+            RotaPage.clickAbaRoute(); 
+            RotaPage.clickAddedNewRoute();
+            RotaPage.modalRouteEmptyValidade();
+            RotaPage.typeAdressRoute();
+            RotaPage.routaComplete();
+            RotaPage.infoRouteAdded();
+            TelefonePage.clickAbaPhone(); 
+            TelefonePage.clickAddedNewPhone();
+            TelefonePage.modalPhoneEmptyValidade();
+            TelefonePage.typePhone();
+            TelefonePage.numberPhone();
+            TelefonePage.ramalPhone();
+            TelefonePage.clickSavePhone();
+            TelefonePage.infoPhoneAdded();
+            TelefonePage.messPhoneAddedSucess();
+            ClienteCompletoPage.abaReferences();
+            RefBancariaPage.clickAbaRefBanking();
+            RefBancariaPage.validateAbaRefBankingEmpty();
+            RefBancariaPage.clickAddNewRefBanking();
+            RefBancariaPage.modalRefBankingEmpty();
+            RefBancariaPage.bank();
+            RefBancariaPage.agency();
+            RefBancariaPage.account();
+            RefBancariaPage.dateOpening();
+            RefBancariaPage.phone();
+            RefBancariaPage.manager();
+            RefBancariaPage.email();
+            RefBancariaPage.cpfAccountHolder();
+            RefBancariaPage.nameAccountHolder();
+            RefBancariaPage.typeAccount();
+            RefBancariaPage.operation();
+            RefBancariaPage.formPayment();
+            RefBancariaPage.typeKeyPixRandom();
+            RefBancariaPage.keyPixRandom();
+            RefBancariaPage.clickSaveRefBanking();
+            RefBancariaPage.messRefBankingAddedSucess();
+            RefBancariaPage.infoRefBankingAdded();
             ClienteCompletoPage.saveClient();
-            ClienteCompletoPage.modalWaitingLoading()
-            ClienteCompletoPage.messRegisterSaveSucess()
+            ClienteCompletoPage.modalWaitingLoading();
+            ClienteCompletoPage.messRegisterSaveSucess();
         }) 
 
         test('9.Complete customer CPF - Validate PIX key type. Incorrect phone number.',  async ({ page }) => {
 
             ClienteCompletoPage.iconMenuOptions();
-            ClienteCompletoPage.optionClientComplete()
-            PessoaPage.cpfClient() ;
+            ClienteCompletoPage.optionClientComplete();
+            PessoaPage.cpfClient();
             PessoaPage.nameComplete();
-            PessoaPage.nameSocial() ;
+            PessoaPage.nameSocial();
             PessoaPage.dateBirth();
             PessoaPage.sexClient();
             ClienteCompletoPage.saveClient();
             ClienteCompletoPage.messAlertAdressMandatory(); 
             EnderecoPage.clickAbaAdress(); 
             EnderecoPage.clickAddNewAdress();
-            EnderecoPage.tipoEndereco()
-            EnderecoPage.modalAdressEmptyValidade()
-            EnderecoPage.clickOpenTypeAdress()
-            EnderecoPage.typeAdress()
-            EnderecoPage.cepAdress()
-            EnderecoPage.numberAdress()
-            ClienteCompletoPage.buttonSaveDisabled()
-            EnderecoPage.clickSaveAdress()
-            EnderecoPage.infoAdressAdded()
+            EnderecoPage.tipoEndereco();
+            EnderecoPage.modalAdressEmptyValidade();
+            EnderecoPage.clickOpenTypeAdress();
+            EnderecoPage.typeAdress();
+            EnderecoPage.cepAdress();
+            EnderecoPage.numberAdress();
+            ClienteCompletoPage.buttonSaveDisabled();
+            EnderecoPage.clickSaveAdress();
+            EnderecoPage.infoAdressAdded();
 
-            RotaPage.clickAbaRoute() 
-            RotaPage.clickAddedNewRoute()
-            RotaPage.modalRouteEmptyValidade()
-            RotaPage.typeAdressRoute()
-            RotaPage.routaComplete()
-            RotaPage.infoRouteAdded()
-            TelefonePage.clickAbaPhone() 
-            TelefonePage.clickAddedNewPhone()
-            TelefonePage.modalPhoneEmptyValidade()
-            TelefonePage.typePhone()
-            TelefonePage.numberPhone()
-            TelefonePage.ramalPhone()
-            TelefonePage.clickSavePhone()
-            TelefonePage.infoPhoneAdded()
-            TelefonePage.messPhoneAddedSucess()
-            ClienteCompletoPage.abaReferences() 
-            RefBancariaPage.clickAbaRefBanking() 
-            RefBancariaPage.validateAbaRefBankingEmpty()
-            RefBancariaPage.clickAddNewRefBanking()
-            RefBancariaPage.modalRefBankingEmpty()
-            RefBancariaPage.bank()
-            RefBancariaPage.agency()
-            RefBancariaPage.account()
-            RefBancariaPage.dateOpening()
-            RefBancariaPage.phone()
-            RefBancariaPage.manager()
-            RefBancariaPage.email()
-            RefBancariaPage.cpfAccountHolder()
-            RefBancariaPage.nameAccountHolder()
-            RefBancariaPage.typeAccount()
-            RefBancariaPage.operation()
-            RefBancariaPage.formPayment()
-            RefBancariaPage.typeKeyPixPhone()
-            RefBancariaPage.keyPixPhoneWrong()
-            RefBancariaPage.clickSaveRefBanking()
-            RefBancariaPage.messRefBankingAddedSucess()
-            RefBancariaPage.infoRefBankingAdded()
+            RotaPage.clickAbaRoute(); 
+            RotaPage.clickAddedNewRoute();
+            RotaPage.modalRouteEmptyValidade();
+            RotaPage.typeAdressRoute();
+            RotaPage.routaComplete();
+            RotaPage.infoRouteAdded();
+            TelefonePage.clickAbaPhone(); 
+            TelefonePage.clickAddedNewPhone();
+            TelefonePage.modalPhoneEmptyValidade();
+            TelefonePage.typePhone();
+            TelefonePage.numberPhone();
+            TelefonePage.ramalPhone();
+            TelefonePage.clickSavePhone();
+            TelefonePage.infoPhoneAdded();
+            TelefonePage.messPhoneAddedSucess();
+            ClienteCompletoPage.abaReferences();
+            RefBancariaPage.clickAbaRefBanking();
+            RefBancariaPage.validateAbaRefBankingEmpty();
+            RefBancariaPage.clickAddNewRefBanking();
+            RefBancariaPage.modalRefBankingEmpty();
+            RefBancariaPage.bank();
+            RefBancariaPage.agency();
+            RefBancariaPage.account();
+            RefBancariaPage.dateOpening();
+            RefBancariaPage.phone();
+            RefBancariaPage.manager();
+            RefBancariaPage.email();
+            RefBancariaPage.cpfAccountHolder();
+            RefBancariaPage.nameAccountHolder();
+            RefBancariaPage.typeAccount();
+            RefBancariaPage.operation();
+            RefBancariaPage.formPayment();
+            RefBancariaPage.typeKeyPixPhone();
+            RefBancariaPage.keyPixPhoneWrong();
+            RefBancariaPage.clickSaveRefBanking();
+            RefBancariaPage.messRefBankingAddedSucess();
+            RefBancariaPage.infoRefBankingAdded();
             ClienteCompletoPage.saveClient();
-            RefBancariaPage.messRefBankingKeyPixPhoneInvalid()
+            RefBancariaPage.messRefBankingKeyPixPhoneInvalid();
         })  
 
         test('10.Complete customer CPF - Validate PIX key type. Incorrect email.',  async ({ page }) => {
 
             ClienteCompletoPage.iconMenuOptions();
-            ClienteCompletoPage.optionClientComplete()
-            PessoaPage.cpfClient() ;
+            ClienteCompletoPage.optionClientComplete();
+            PessoaPage.cpfClient();
             PessoaPage.nameComplete();
-            PessoaPage.nameSocial() ;
+            PessoaPage.nameSocial();
             PessoaPage.dateBirth();
             PessoaPage.sexClient();
             ClienteCompletoPage.saveClient();
             ClienteCompletoPage.messAlertAdressMandatory(); 
             EnderecoPage.clickAbaAdress(); 
             EnderecoPage.clickAddNewAdress();
-            EnderecoPage.tipoEndereco()
-            EnderecoPage.modalAdressEmptyValidade()
-            EnderecoPage.clickOpenTypeAdress()
-            EnderecoPage.typeAdress()
-            EnderecoPage.cepAdress()
-            EnderecoPage.numberAdress()
-            ClienteCompletoPage.buttonSaveDisabled()
-            EnderecoPage.clickSaveAdress()
-            EnderecoPage.infoAdressAdded()
-            RotaPage.clickAbaRoute() 
-            RotaPage.clickAddedNewRoute()
-            RotaPage.modalRouteEmptyValidade()
-            RotaPage.typeAdressRoute()
-            RotaPage.routaComplete()
-            RotaPage.infoRouteAdded()
-            TelefonePage.clickAbaPhone() 
-            TelefonePage.clickAddedNewPhone()
-            TelefonePage.modalPhoneEmptyValidade()
-            TelefonePage.typePhone()
-            TelefonePage.numberPhone()
-            TelefonePage.ramalPhone()
-            TelefonePage.clickSavePhone()
-            TelefonePage.infoPhoneAdded()
-            TelefonePage.messPhoneAddedSucess()
+            EnderecoPage.tipoEndereco();
+            EnderecoPage.modalAdressEmptyValidade();
+            EnderecoPage.clickOpenTypeAdress();
+            EnderecoPage.typeAdress();
+            EnderecoPage.cepAdress();
+            EnderecoPage.numberAdress();
+            ClienteCompletoPage.buttonSaveDisabled();
+            EnderecoPage.clickSaveAdress();
+            EnderecoPage.infoAdressAdded();
+            RotaPage.clickAbaRoute(); 
+            RotaPage.clickAddedNewRoute();
+            RotaPage.modalRouteEmptyValidade();
+            RotaPage.typeAdressRoute();
+            RotaPage.routaComplete();
+            RotaPage.infoRouteAdded();
+            TelefonePage.clickAbaPhone(); 
+            TelefonePage.clickAddedNewPhone();
+            TelefonePage.modalPhoneEmptyValidade();
+            TelefonePage.typePhone();
+            TelefonePage.numberPhone();
+            TelefonePage.ramalPhone();
+            TelefonePage.clickSavePhone();
+            TelefonePage.infoPhoneAdded();
+            TelefonePage.messPhoneAddedSucess();
             ClienteCompletoPage.abaReferences() 
-            RefBancariaPage.clickAbaRefBanking() 
-            RefBancariaPage.validateAbaRefBankingEmpty()
-            RefBancariaPage.clickAddNewRefBanking()
-            RefBancariaPage.modalRefBankingEmpty()
-            RefBancariaPage.bank()
-            RefBancariaPage.agency()
-            RefBancariaPage.account()
-            RefBancariaPage.dateOpening()
-            RefBancariaPage.phone()
-            RefBancariaPage.manager()
-            RefBancariaPage.email()
-            RefBancariaPage.cpfAccountHolder()
-            RefBancariaPage.nameAccountHolder()
-            RefBancariaPage.typeAccount()
-            RefBancariaPage.operation()
-            RefBancariaPage.formPayment()
-            RefBancariaPage.typeKeyPixEmail()
-            RefBancariaPage.keyPixEmailWrong()
-            RefBancariaPage.clickSaveRefBanking()
-            RefBancariaPage.messRefBankingAddedSucess()
-            RefBancariaPage.infoRefBankingAdded()
+            RefBancariaPage.clickAbaRefBanking() ;
+            RefBancariaPage.validateAbaRefBankingEmpty();
+            RefBancariaPage.clickAddNewRefBanking();
+            RefBancariaPage.modalRefBankingEmpty();
+            RefBancariaPage.bank();
+            RefBancariaPage.agency();
+            RefBancariaPage.account();
+            RefBancariaPage.dateOpening();
+            RefBancariaPage.phone();
+            RefBancariaPage.manager();
+            RefBancariaPage.email();
+            RefBancariaPage.cpfAccountHolder();
+            RefBancariaPage.nameAccountHolder();
+            RefBancariaPage.typeAccount();
+            RefBancariaPage.operation();
+            RefBancariaPage.formPayment();
+            RefBancariaPage.typeKeyPixEmail();
+            RefBancariaPage.keyPixEmailWrong();
+            RefBancariaPage.clickSaveRefBanking();
+            RefBancariaPage.messRefBankingAddedSucess();
+            RefBancariaPage.infoRefBankingAdded();
             ClienteCompletoPage.saveClient();
-            RefBancariaPage.messRefBankingKeyPixEmailInvalid()
+            RefBancariaPage.messRefBankingKeyPixEmailInvalid();
         })  
 
         test('11.Complete customer CPF - Validate CPF key type. Incorrect CNPJ.',  async ({ page }) => {
 
             ClienteCompletoPage.iconMenuOptions();
-            ClienteCompletoPage.optionClientComplete()
-            PessoaPage.cpfClient() ;
+            ClienteCompletoPage.optionClientComplete();
+            PessoaPage.cpfClient();
             PessoaPage.nameComplete();
-            PessoaPage.nameSocial() ;
+            PessoaPage.nameSocial();
             PessoaPage.dateBirth();
             PessoaPage.sexClient();
             ClienteCompletoPage.saveClient();
             ClienteCompletoPage.messAlertAdressMandatory(); 
             EnderecoPage.clickAbaAdress(); 
             EnderecoPage.clickAddNewAdress();
-            EnderecoPage.tipoEndereco()
-            EnderecoPage.modalAdressEmptyValidade()
-            EnderecoPage.clickOpenTypeAdress()
-            EnderecoPage.typeAdress()
-            EnderecoPage.cepAdress()
-            EnderecoPage.numberAdress()
-            ClienteCompletoPage.buttonSaveDisabled()
-            EnderecoPage.clickSaveAdress()
-            EnderecoPage.infoAdressAdded()
-            RotaPage.clickAbaRoute() 
-            RotaPage.clickAddedNewRoute()
-            RotaPage.modalRouteEmptyValidade()
-            RotaPage.typeAdressRoute()
-            RotaPage.routaComplete()
-            RotaPage.infoRouteAdded()
-            TelefonePage.clickAbaPhone() 
-            TelefonePage.clickAddedNewPhone()
-            TelefonePage.modalPhoneEmptyValidade()
-            TelefonePage.typePhone()
-            TelefonePage.numberPhone()
-            TelefonePage.ramalPhone()
-            TelefonePage.clickSavePhone()
-            TelefonePage.infoPhoneAdded()
-            TelefonePage.messPhoneAddedSucess()
-            ClienteCompletoPage.abaReferences() 
-            RefBancariaPage.clickAbaRefBanking() 
-            RefBancariaPage.validateAbaRefBankingEmpty()
-            RefBancariaPage.clickAddNewRefBanking()
-            RefBancariaPage.modalRefBankingEmpty()
-            RefBancariaPage.bank()
-            RefBancariaPage.agency()
-            RefBancariaPage.account()
-            RefBancariaPage.dateOpening()
-            RefBancariaPage.phone()
-            RefBancariaPage.manager()
-            RefBancariaPage.email()
-            RefBancariaPage.cpfAccountHolder()
-            RefBancariaPage.nameAccountHolder()
-            RefBancariaPage.typeAccount()
-            RefBancariaPage.operation()
-            RefBancariaPage.formPayment()
-            RefBancariaPage.typeKeyPixCpfCnpj()
-            RefBancariaPage.typeKeyPixRandom()
-            RefBancariaPage.clickSaveRefBanking()
-            RefBancariaPage.messRefBankingAddedSucess()
-            RefBancariaPage.infoRefBankingAdded()
+            EnderecoPage.tipoEndereco();
+            EnderecoPage.modalAdressEmptyValidade();
+            EnderecoPage.clickOpenTypeAdress();
+            EnderecoPage.typeAdress();
+            EnderecoPage.cepAdress();
+            EnderecoPage.numberAdress();
+            ClienteCompletoPage.buttonSaveDisabled();
+            EnderecoPage.clickSaveAdress();
+            EnderecoPage.infoAdressAdded();
+            RotaPage.clickAbaRoute(); 
+            RotaPage.clickAddedNewRoute();
+            RotaPage.modalRouteEmptyValidade();
+            RotaPage.typeAdressRoute();
+            RotaPage.routaComplete();
+            RotaPage.infoRouteAdded();
+            TelefonePage.clickAbaPhone(); 
+            TelefonePage.clickAddedNewPhone();
+            TelefonePage.modalPhoneEmptyValidade();
+            TelefonePage.typePhone();
+            TelefonePage.numberPhone();
+            TelefonePage.ramalPhone();
+            TelefonePage.clickSavePhone();
+            TelefonePage.infoPhoneAdded();
+            TelefonePage.messPhoneAddedSucess();
+            ClienteCompletoPage.abaReferences() ;
+            RefBancariaPage.clickAbaRefBanking() ;
+            RefBancariaPage.validateAbaRefBankingEmpty();
+            RefBancariaPage.clickAddNewRefBanking();
+            RefBancariaPage.modalRefBankingEmpty();
+            RefBancariaPage.bank();
+            RefBancariaPage.agency();
+            RefBancariaPage.account();
+            RefBancariaPage.dateOpening();
+            RefBancariaPage.phone();
+            RefBancariaPage.manager();
+            RefBancariaPage.email();
+            RefBancariaPage.cpfAccountHolder();
+            RefBancariaPage.nameAccountHolder();
+            RefBancariaPage.typeAccount();
+            RefBancariaPage.operation();
+            RefBancariaPage.formPayment();
+            RefBancariaPage.typeKeyPixCpfCnpj();
+            RefBancariaPage.typeKeyPixRandom();
+            RefBancariaPage.clickSaveRefBanking();
+            RefBancariaPage.messRefBankingAddedSucess();
+            RefBancariaPage.infoRefBankingAdded();
             ClienteCompletoPage.saveClient();
-            RefBancariaPage.messRefBankingKeyPixCpfCnpjInvalid()
+            RefBancariaPage.messRefBankingKeyPixCpfCnpjInvalid();
         })  
 
         test('12.Complete customer CPF - Validate incorrect Random key type.',  async ({ page }) => {
 
             ClienteCompletoPage.iconMenuOptions();
-            ClienteCompletoPage.optionClientComplete()
-            PessoaPage.cpfClient() ;
+            ClienteCompletoPage.optionClientComplete();
+            PessoaPage.cpfClient();
             PessoaPage.nameComplete();
-            PessoaPage.nameSocial() ;
+            PessoaPage.nameSocial();
             PessoaPage.dateBirth();
             PessoaPage.sexClient();
             ClienteCompletoPage.saveClient();
             ClienteCompletoPage.messAlertAdressMandatory(); 
             EnderecoPage.clickAbaAdress(); 
             EnderecoPage.clickAddNewAdress();
-            EnderecoPage.tipoEndereco()
-            EnderecoPage.modalAdressEmptyValidade()
-            EnderecoPage.clickOpenTypeAdress()
-            EnderecoPage.typeAdress()
-            EnderecoPage.cepAdress()
-            EnderecoPage.numberAdress()
-            ClienteCompletoPage.buttonSaveDisabled()
-            EnderecoPage.clickSaveAdress()
-            EnderecoPage.infoAdressAdded()
-            RotaPage.clickAbaRoute() 
-            RotaPage.clickAddedNewRoute()
-            RotaPage.modalRouteEmptyValidade()
-            RotaPage.typeAdressRoute()
-            RotaPage.routaComplete()
-            RotaPage.infoRouteAdded()
-            TelefonePage.clickAbaPhone() 
-            TelefonePage.clickAddedNewPhone()
-            TelefonePage.modalPhoneEmptyValidade()
-            TelefonePage.typePhone()
-            TelefonePage.numberPhone()
-            TelefonePage.ramalPhone()
-            TelefonePage.clickSavePhone()
-            TelefonePage.infoPhoneAdded()
-            TelefonePage.messPhoneAddedSucess()
-            ClienteCompletoPage.abaReferences() 
-            RefBancariaPage.clickAbaRefBanking() 
-            RefBancariaPage.validateAbaRefBankingEmpty()
-            RefBancariaPage.clickAddNewRefBanking()
-            RefBancariaPage.modalRefBankingEmpty()
-            RefBancariaPage.bank()
-            RefBancariaPage.agency()
-            RefBancariaPage.account()
-            RefBancariaPage.dateOpening()
-            RefBancariaPage.phone()
-            RefBancariaPage.manager()
-            RefBancariaPage.email()
-            RefBancariaPage.cpfAccountHolder()
-            RefBancariaPage.nameAccountHolder()
-            RefBancariaPage.typeAccount()
-            RefBancariaPage.operation()
-            RefBancariaPage.formPayment()
-            RefBancariaPage.typeKeyPixRandom()
-            RefBancariaPage.clickSaveRefBanking()
-            RefBancariaPage.messRefBankingAddedSucess()
-            RefBancariaPage.infoRefBankingAdded()
+            EnderecoPage.tipoEndereco();
+            EnderecoPage.modalAdressEmptyValidade();
+            EnderecoPage.clickOpenTypeAdress();
+            EnderecoPage.typeAdress();
+            EnderecoPage.cepAdress();
+            EnderecoPage.numberAdress();
+            ClienteCompletoPage.buttonSaveDisabled();
+            EnderecoPage.clickSaveAdress();
+            EnderecoPage.infoAdressAdded();
+            RotaPage.clickAbaRoute(); 
+            RotaPage.clickAddedNewRoute();
+            RotaPage.modalRouteEmptyValidade();
+            RotaPage.typeAdressRoute();
+            RotaPage.routaComplete();
+            RotaPage.infoRouteAdded();
+            TelefonePage.clickAbaPhone(); 
+            TelefonePage.clickAddedNewPhone();
+            TelefonePage.modalPhoneEmptyValidade();
+            TelefonePage.typePhone();
+            TelefonePage.numberPhone();
+            TelefonePage.ramalPhone();
+            TelefonePage.clickSavePhone();
+            TelefonePage.infoPhoneAdded();
+            TelefonePage.messPhoneAddedSucess();
+            ClienteCompletoPage.abaReferences();
+            RefBancariaPage.clickAbaRefBanking();
+            RefBancariaPage.validateAbaRefBankingEmpty();
+            RefBancariaPage.clickAddNewRefBanking();
+            RefBancariaPage.modalRefBankingEmpty();
+            RefBancariaPage.bank();
+            RefBancariaPage.agency();
+            RefBancariaPage.account();
+            RefBancariaPage.dateOpening();
+            RefBancariaPage.phone();
+            RefBancariaPage.manager();
+            RefBancariaPage.email();
+            RefBancariaPage.cpfAccountHolder();
+            RefBancariaPage.nameAccountHolder();
+            RefBancariaPage.typeAccount();
+            RefBancariaPage.operation();
+            RefBancariaPage.formPayment();
+            RefBancariaPage.typeKeyPixRandom();
+            RefBancariaPage.clickSaveRefBanking();
+            RefBancariaPage.messRefBankingAddedSucess();
+            RefBancariaPage.infoRefBankingAdded();
             ClienteCompletoPage.saveClient();
-            RefBancariaPage.messRefBankingKeyPixRandomInvalid()
+            RefBancariaPage.messRefBankingKeyPixRandomInvalid();
         })  
     })
 })

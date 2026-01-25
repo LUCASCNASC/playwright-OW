@@ -17,54 +17,54 @@ test.describe('Register complete customer - personal reference', () => {
     test('1.Complete customer CPF - happy path',  async ({ page }) => {
 
         ClienteCompletoPage.iconMenuOptions();
-        ClienteCompletoPage.optionClientComplete()
-        PessoaPage.cpfClient()
-        PessoaPage.nameComplete()
-        PessoaPage.nameSocial()
+        ClienteCompletoPage.optionClientComplete();
+        PessoaPage.cpfClient();
+        PessoaPage.nameComplete();
+        PessoaPage.nameSocial();
         PessoaPage.dateBirth();
         PessoaPage.sexClient();
         ClienteCompletoPage.saveClient();
         ClienteCompletoPage.messAlertAdressMandatory();
         EnderecoPage.clickAbaAdress();
         EnderecoPage.clickAddNewAdress();
-        EnderecoPage.tipoEndereco()
-        EnderecoPage.modalAdressEmptyValidade()
-        EnderecoPage.clickOpenTypeAdress()
-        EnderecoPage.typeAdress()
-        EnderecoPage.cepAdress()
-        EnderecoPage.numberAdress()
+        EnderecoPage.tipoEndereco();
+        EnderecoPage.modalAdressEmptyValidade();
+        EnderecoPage.clickOpenTypeAdress();
+        EnderecoPage.typeAdress();
+        EnderecoPage.cepAdress();
+        EnderecoPage.numberAdress();
         ClienteCompletoPage.buttonSaveDisabled()
-        EnderecoPage.clickSaveAdress()
-        EnderecoPage.infoAdressAdded()
-        RotaPage.clickAbaRoute()
-        RotaPage.clickAddedNewRoute()
-        RotaPage.modalRouteEmptyValidade()
-        RotaPage.typeAdressRoute()
-        RotaPage.routaComplete()
-        RotaPage.infoRouteAdded()
-        TelefonePage.clickAbaPhone()
-        TelefonePage.clickAddedNewPhone()
-        TelefonePage.modalPhoneEmptyValidade()
-        TelefonePage.typePhone()
-        TelefonePage.numberPhone()
-        TelefonePage.ramalPhone()
-        TelefonePage.clickSavePhone()
-        TelefonePage.infoPhoneAdded()
-        TelefonePage.messPhoneAddedSucess()
-        ClienteCompletoPage.abaReferences()
-        RefFinanceiraPage.clickAbaRefGuys()
-        RefFinanceiraPage.validateAbaEmpty() 
-        RefFinanceiraPage.clickAddNew()
-        RefFinanceiraPage.modalEmpty()
-        RefFinanceiraPage.name()
-        RefFinanceiraPage.email()
-        RefFinanceiraPage.phone()
-        RefFinanceiraPage.relationship()
-        RefFinanceiraPage.clickSave()
-        RefFinanceiraPage.messRefGuysAddedSucess()
-        RefFinanceiraPage.infoAdded()
+        EnderecoPage.clickSaveAdress();
+        EnderecoPage.infoAdressAdded();
+        RotaPage.clickAbaRoute();
+        RotaPage.clickAddedNewRoute();
+        RotaPage.modalRouteEmptyValidade();
+        RotaPage.typeAdressRoute();
+        RotaPage.routaComplete();
+        RotaPage.infoRouteAdded();
+        TelefonePage.clickAbaPhone();
+        TelefonePage.clickAddedNewPhone();
+        TelefonePage.modalPhoneEmptyValidade();
+        TelefonePage.typePhone();
+        TelefonePage.numberPhone();
+        TelefonePage.ramalPhone();
+        TelefonePage.clickSavePhone();
+        TelefonePage.infoPhoneAdded();
+        TelefonePage.messPhoneAddedSucess();
+        ClienteCompletoPage.abaReferences();
+        RefFinanceiraPage.clickAbaRefGuys();
+        RefFinanceiraPage.validateAbaEmpty();
+        RefFinanceiraPage.clickAddNew();
+        RefFinanceiraPage.modalEmpty();
+        RefFinanceiraPage.name();
+        RefFinanceiraPage.email();
+        RefFinanceiraPage.phone();
+        RefFinanceiraPage.relationship();
+        RefFinanceiraPage.clickSave();
+        RefFinanceiraPage.messRefGuysAddedSucess();
+        RefFinanceiraPage.infoAdded();
         ClienteCompletoPage.saveClient();
-        ClienteCompletoPage.modalWaitingLoading()
-        ClienteCompletoPage.messRegisterSaveSucess()
+        ClienteCompletoPage.modalWaitingLoading();
+        ClienteCompletoPage.messRegisterSaveSucess();
     }) 
 })

@@ -13,25 +13,25 @@ test.describe('Search client', () => {
 
         test('1.Search by CPF number.',  async ({ page }) => {
     
-            PesquisaClientePage.fillCPF()
-            PesquisaClientePage.clickGlassPesquisaClientePage()
-            PesquisaClientePage.cardClientValidate()
-            PesquisaClientePage.typeAgainCPF()
-            PesquisaClientePage.clickCPFSearch()
-            PesquisaClientePage.messWaitLoading()
-            PesquisaClientePage.numberDescripCPFSearch()
+            PesquisaClientePage.fillCPF();
+            PesquisaClientePage.clickGlassPesquisaClientePage();
+            PesquisaClientePage.cardClientValidate();
+            PesquisaClientePage.typeAgainCPF();
+            PesquisaClientePage.clickCPFSearch();
+            PesquisaClientePage.messWaitLoading();
+            PesquisaClientePage.numberDescripCPFSearch();
         }) 
 
         test('2.Search by CNPJ number.',  async ({ page }) => {
 
-            PesquisaClientePage.fillCNPJ()
-            PesquisaClientePage.clickGlassPesquisaClientePage()
-            PesquisaClientePage.cardClientValidate()
-            PesquisaClientePage.typeAgainCNPJ()
-            PesquisaClientePage.clickGlassPesquisaClientePage()
-            PesquisaClientePage.clickCNPJSearch()
-            PesquisaClientePage.messWaitLoading()
-            PesquisaClientePage.numberDescripCNPJSearch()
+            PesquisaClientePage.fillCNPJ();
+            PesquisaClientePage.clickGlassPesquisaClientePage();
+            PesquisaClientePage.cardClientValidate();
+            PesquisaClientePage.typeAgainCNPJ();
+            PesquisaClientePage.clickGlassPesquisaClientePage();
+            PesquisaClientePage.clickCNPJSearch();
+            PesquisaClientePage.messWaitLoading();
+            PesquisaClientePage.numberDescripCNPJSearch();
         }) 
     })
 
@@ -39,24 +39,24 @@ test.describe('Search client', () => {
 
         test('3.Search by CPF description.',  async ({ page }) => {
 
-            PesquisaClientePage.fillDescripCPF()
-            PesquisaClientePage.clickGlassPesquisaClientePage()
-            PesquisaClientePage.cardClientValidate()
-            PesquisaClientePage.typeAgainCPF()
-            PesquisaClientePage.clickCPFSearch()
-            PesquisaClientePage.messWaitLoading()
-            PesquisaClientePage.numberDescripCPFSearch()
+            PesquisaClientePage.fillDescripCPF();
+            PesquisaClientePage.clickGlassPesquisaClientePage();
+            PesquisaClientePage.cardClientValidate();
+            PesquisaClientePage.typeAgainCPF();
+            PesquisaClientePage.clickCPFSearch();
+            PesquisaClientePage.messWaitLoading();
+            PesquisaClientePage.numberDescripCPFSearch();
         }) 
 
         test('4.Search by CNPJ description.',  async ({ page }) => {
 
-            PesquisaClientePage.typeAgainDescriptCNPJ()
-            PesquisaClientePage.clickGlassPesquisaClientePage()
-            PesquisaClientePage.cardClientValidate()
-            PesquisaClientePage.typeAgainCNPJ()
-            PesquisaClientePage.clickCNPJSearch()
-            PesquisaClientePage.messWaitLoading()
-            PesquisaClientePage.numberDescripCNPJSearch()
+            PesquisaClientePage.typeAgainDescriptCNPJ();
+            PesquisaClientePage.clickGlassPesquisaClientePage();
+            PesquisaClientePage.cardClientValidate();
+            PesquisaClientePage.typeAgainCNPJ();
+            PesquisaClientePage.clickCNPJSearch();
+            PesquisaClientePage.messWaitLoading();
+            PesquisaClientePage.numberDescripCNPJSearch();
         }) 
     })
 })

@@ -17,9 +17,9 @@ test.describe('Register complete client - commercial reference', () => {
     test('1.Complete customer CPF - happy path',  async ({ page }) => {
 
         ClienteCompletoPage.iconMenuOptions();
-        ClienteCompletoPage.optionClientComplete()
-        PessoaPage.cpfClient()
-        PessoaPage.nameComplete()
+        ClienteCompletoPage.optionClientComplete();
+        PessoaPage.cpfClient();
+        PessoaPage.nameComplete();
         PessoaPage.nameSocial()
         PessoaPage.dateBirth();
         PessoaPage.sexClient();
@@ -27,45 +27,45 @@ test.describe('Register complete client - commercial reference', () => {
         ClienteCompletoPage.messAlertAdressMandatory();
         EnderecoPage.clickAbaAdress();
         EnderecoPage.clickAddNewAdress();
-        EnderecoPage.tipoEndereco()
-        EnderecoPage.modalAdressEmptyValidade()
-        EnderecoPage.clickOpenTypeAdress()
-        EnderecoPage.typeAdress()
-        EnderecoPage.cepAdress()
-        EnderecoPage.numberAdress()
-        ClienteCompletoPage.buttonSaveDisabled()
-        EnderecoPage.clickSaveAdress()
-        EnderecoPage.infoAdressAdded()
-        RotaPage.clickAbaRoute()
-        RotaPage.clickAddedNewRoute()
-        RotaPage.modalRouteEmptyValidade()
-        RotaPage.typeAdressRoute()
-        RotaPage.routaComplete()
-        RotaPage.infoRouteAdded()
-        TelefonePage.clickAbaPhone()
-        TelefonePage.clickAddedNewPhone()
-        TelefonePage.modalPhoneEmptyValidade()
-        TelefonePage.typePhone()
-        TelefonePage.numberPhone()
-        TelefonePage.ramalPhone()
-        TelefonePage.clickSavePhone()
-        TelefonePage.infoPhoneAdded()
-        TelefonePage.messPhoneAddedSucess()
-        ClienteCompletoPage.abaReferences()
-        RefComercialPage.clickAbaRefCommercial()
-        RefComercialPage.validadeRefCommercialEmpty()
-        RefComercialPage.clickAddNewRefCommercial()
-        RefComercialPage.modalRefCommercialEmpty()
-        RefComercialPage.enterprise()
-        RefComercialPage.contact()
-        RefComercialPage.phone()
-        RefComercialPage.email()
-        RefComercialPage.observation()
-        RefComercialPage.clickSaveRefCommercial()
-        RefComercialPage.infoRefCommercialAdded()
-        RefComercialPage.messRefCommercialAddedSucess()
+        EnderecoPage.tipoEndereco();
+        EnderecoPage.modalAdressEmptyValidade();
+        EnderecoPage.clickOpenTypeAdress();
+        EnderecoPage.typeAdress();
+        EnderecoPage.cepAdress();
+        EnderecoPage.numberAdress();
+        ClienteCompletoPage.buttonSaveDisabled();
+        EnderecoPage.clickSaveAdress();
+        EnderecoPage.infoAdressAdded();
+        RotaPage.clickAbaRoute();
+        RotaPage.clickAddedNewRoute();
+        RotaPage.modalRouteEmptyValidade();
+        RotaPage.typeAdressRoute();
+        RotaPage.routaComplete();
+        RotaPage.infoRouteAdded();
+        TelefonePage.clickAbaPhone();
+        TelefonePage.clickAddedNewPhone();
+        TelefonePage.modalPhoneEmptyValidade();
+        TelefonePage.typePhone();
+        TelefonePage.numberPhone();
+        TelefonePage.ramalPhone();
+        TelefonePage.clickSavePhone();
+        TelefonePage.infoPhoneAdded();
+        TelefonePage.messPhoneAddedSucess();
+        ClienteCompletoPage.abaReferences();
+        RefComercialPage.clickAbaRefCommercial();
+        RefComercialPage.validadeRefCommercialEmpty();
+        RefComercialPage.clickAddNewRefCommercial();
+        RefComercialPage.modalRefCommercialEmpty();
+        RefComercialPage.enterprise();
+        RefComercialPage.contact();
+        RefComercialPage.phone();
+        RefComercialPage.email();
+        RefComercialPage.observation();
+        RefComercialPage.clickSaveRefCommercial();
+        RefComercialPage.infoRefCommercialAdded();
+        RefComercialPage.messRefCommercialAddedSucess();
         ClienteCompletoPage.saveClient();
-        ClienteCompletoPage.modalWaitingLoading()
-        ClienteCompletoPage.messRegisterSaveSucess()
+        ClienteCompletoPage.modalWaitingLoading();
+        ClienteCompletoPage.messRegisterSaveSucess();
     }) 
 })
