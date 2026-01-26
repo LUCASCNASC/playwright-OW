@@ -8,9 +8,9 @@ test.describe('User password expired.', () => {
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
-        LoginPage.validateLogoEmpresaLogin()
-        LoginPage.validateIconeComputadorLogin()
-        LoginPage.validateUsuarioTextoIcone()
+        LoginPage.validateLogoEmpresaLogin();
+        LoginPage.validateIconeComputadorLogin();
+        LoginPage.validateUsuarioTextoIcone();
     })
 
     context('Attempting to log in when the password has already expired.', () => {
@@ -22,101 +22,101 @@ test.describe('User password expired.', () => {
                 .and('have.value','')
                 .type(users.userSabium.login)
                 .invoke('attr', 'placeholder')
-                .should('equal', 'Informe seu usuário')
+                .should('equal', 'Informe seu usuário');
 
-            LoginPage.validateSenhaTextoIcone()
+            LoginPage.validateSenhaTextoIcone();
             
             cy.get('#txtpassword')
                 .should('be.visible')
                 .and('have.value','')
                 .type(users.userSabium.password)
                 .invoke('attr', 'placeholder')
-                .should('equal', 'Informe sua senha')
+                .should('equal', 'Informe sua senha');
 
-            LoginPage.validateIconeOlhosSenha()
-            LoginPage.validateEsqueciSenha()
-            LoginPage.validateBotaoEntrarHabilitado()
-            LoginPage.clickBotaoEntrar()
-            LoginPage.validateMessageSenhaUsuarioExpirada()
+            LoginPage.validateIconeOlhosSenha();
+            LoginPage.validateEsqueciSenha();
+            LoginPage.validateBotaoEntrarHabilitado();
+            LoginPage.clickBotaoEntrar();
+            LoginPage.validateMessageSenhaUsuarioExpirada();
 
             cy.get('p')
                 .contains('Altere Sua Senha Temporária')
-                .should('be.visible')
+                .should('be.visible');
 
             cy.get('.senha_nova > :nth-child(1)')
                 .should('be.visible')
-                .and('have.text','Usuário')
+                .and('have.text','Usuário');
 
             cy.get(':nth-child(2) > .ng-pristine')
                 .should('be.visible')
-                .and('have.value', users.userSabium.login)
+                .and('have.value', users.userSabium.login);
 
             cy.get('.senha_nova > :nth-child(4)')
                 .should('be.visible')
-                .and('have.text','Senha Atual')
+                .and('have.text','Senha Atual');
 
             cy.get(':nth-child(5) > .ng-pristine')
                 .should('be.visible')
                 .and('have.value','')
-                .type(users.userSabium.password, {force:true})
+                .type(users.userSabium.password, {force:true});
 
             cy.get('md-icon[ng-click="showPasswordToggle()"]')
-                .should('be.visible')
+                .should('be.visible');
 
             cy.get('a[ng-click="gerarNovaSenha($event)"]')
                 .should('be.visible')
-                .and('not.have.attr', 'disabled')
+                .and('not.have.attr', 'disabled');
 
             cy.get('p')
                 .contains('Regras para a Nova Senha')
-                .should('be.visible')
+                .should('be.visible');
 
-            LoginPage.validateNovaSenhaAntes()
+            LoginPage.validateNovaSenhaAntes();
 
             cy.get('input[name="password_new"]')
                 .should('be.visible')
                 .and('have.value','')
-                .type(users.userSabiumNovo.newPassword)
+                .type(users.userSabiumNovo.newPassword);
 
             cy.get('md-icon[ng-click="showPasswordToggle(true)"]')
-                .should('be.visible')
+                .should('be.visible');
 
-            LoginPage.validateNovaSenhaDepois()
+            LoginPage.validateNovaSenhaDepois();
 
             cy.get(':nth-child(5) > .md-raised')
                 .should('be.visible')
                 .and('have.text','Confirmar')
-                .and('not.have.attr', 'not.disabled')
+                .and('not.have.attr', 'not.disabled');
 
             cy.get('.senha_nova > :nth-child(10)')
                 .should('be.visible')
-                .and('have.text','Repetir Nova Senha')
+                .and('have.text','Repetir Nova Senha');
 
             cy.get(':nth-child(11) > .ng-pristine')
                 .should('be.visible')
                 .and('have.value','')
-                .type(users.userSabiumNovo.newPassword)
+                .type(users.userSabiumNovo.newPassword);
 
             cy.contains('span', 'As novas senhas informadas são iguais.')
                 .should('be.visible')
-                .and('have.css', 'color', 'rgb(0, 100, 0)')
+                .and('have.css', 'color', 'rgb(0, 100, 0)');
 
             cy.get(':nth-child(5) > .md-raised')
                 .should('be.visible')
                 .and('have.text','Confirmar')
-                .and('not.have.attr', 'disabled')
+                .and('not.have.attr', 'disabled');
                     
             cy.get('[ng-show="!loading"] > a')
                 .should('be.visible')
                 .and('have.text','Fechar')
-                .and('not.have.attr', 'disabled')
+                .and('not.have.attr', 'disabled');
 
             cy.get('[ng-show="!loading"] > a')
-                .click()
+                .click();
 
             cy.get('[ng-click="clienteStatsOpen()"] > .ng-binding')
                 .should('be.visible')
-                .and('not.have.attr', 'disabled')
+                .and('not.have.attr', 'disabled');
         })
 
         test('2.Attempt to log in with a user whose password has expired - click DO NOT update password - click Close password reset',  async ({ page }) => {
@@ -126,110 +126,110 @@ test.describe('User password expired.', () => {
                 .and('have.value','')
                 .type(users.userSabium.login)
                 .invoke('attr', 'placeholder')
-                .should('equal', 'Informe seu usuário')
+                .should('equal', 'Informe seu usuário');
 
-            LoginPage.validateSenhaTextoIcone()
+            LoginPage.validateSenhaTextoIcone();
 
             cy.get('#txtpassword')
                 .should('be.visible')
                 .and('have.value','')
                 .type(users.userSabium.password)
                 .invoke('attr', 'placeholder')
-                .should('equal', 'Informe sua senha')
+                .should('equal', 'Informe sua senha');
 
-            LoginPage.validateIconeOlhosSenha()
-            LoginPage.validateEsqueciSenha()
-            LoginPage.botaoEntrarHabvalidateBotaoEntrarHabilitadoilitado()
-            LoginPage.clickBotaoEntrar()
-            LoginPage.validateMessageSenhaUsuarioExpirada()
+            LoginPage.validateIconeOlhosSenha();
+            LoginPage.validateEsqueciSenha();
+            LoginPage.botaoEntrarHabvalidateBotaoEntrarHabilitadoilitado();
+            LoginPage.clickBotaoEntrar();
+            LoginPage.validateMessageSenhaUsuarioExpirada();
 
             cy.get('p')
                 .contains('Altere Sua Senha Temporária')
-                .should('be.visible')
+                .should('be.visible');
 
             cy.get('.senha_nova > :nth-child(1)')
                 .should('be.visible')
-                .and('have.text','Usuário')
+                .and('have.text','Usuário');
 
             cy.get(':nth-child(2) > .ng-pristine')
                 .should('be.visible')
-                .and('have.value', users.userSabium.login)
+                .and('have.value', users.userSabium.login);
 
             cy.get('.senha_nova > :nth-child(4)')
                 .should('be.visible')
-                .and('have.text','Senha Atual')
+                .and('have.text','Senha Atual');
 
             cy.get(':nth-child(5) > .ng-pristine')
                 .should('be.visible')
                 .and('have.value','')
-                .type(users.userSabium.password, {force:true})
+                .type(users.userSabium.password, {force:true});
 
             cy.get('md-icon[ng-click="showPasswordToggle()"]')
-                .should('be.visible')
+                .should('be.visible');
 
             cy.get('a[ng-click="gerarNovaSenha($event)"]')
                 .should('be.visible')
-                .and('not.have.attr', 'disabled')
+                .and('not.have.attr', 'disabled');
 
             cy.get('p')
                 .contains('Regras para a Nova Senha')
-                .should('be.visible')
+                .should('be.visible');
 
-            LoginPage.validateNovaSenhaAntes()
+            LoginPage.validateNovaSenhaAntes();
 
             cy.get('input[name="password_new"]')
                 .should('be.visible')
                 .and('have.value','')
-                .type(users.userSabiumNovo.newPassword)
+                .type(users.userSabiumNovo.newPassword);
 
             cy.get('md-icon[ng-click="showPasswordToggle(true)"]')
-                .should('be.visible')
+                .should('be.visible');
 
-            LoginPage.validateNovaSenhaDepois()
+            LoginPage.validateNovaSenhaDepois();
 
             cy.get(':nth-child(5) > .md-raised')
                 .should('be.visible')
                 .and('have.text','Confirmar')
-                .and('not.have.attr', 'not.disabled')
+                .and('not.have.attr', 'not.disabled');
 
             cy.get('.senha_nova > :nth-child(10)')
                 .should('be.visible')
-                .and('have.text','Repetir Nova Senha')
+                .and('have.text','Repetir Nova Senha');
 
             cy.get(':nth-child(11) > .ng-pristine')
                 .should('be.visible')
                 .and('have.value','')
-                .type(users.userSabiumNovo.newPassword)
+                .type(users.userSabiumNovo.newPassword);
 
             cy.contains('span', 'As novas senhas informadas são iguais.')
                 .should('be.visible')
-                .and('have.css', 'color', 'rgb(0, 100, 0)')
+                .and('have.css', 'color', 'rgb(0, 100, 0)');
 
             cy.get(':nth-child(5) > .md-raised')
                 .should('be.visible')
                 .and('have.text','Confirmar')
-                .and('not.have.attr', 'disabled')
+                .and('not.have.attr', 'disabled');
 
-            scrollTo()
+            scrollTo();
 
             cy.get('[ng-show="!loading"] > a')
                 .should('be.visible')
                 .and('have.text','Fechar')
-                .and('not.have.attr', 'disabled')
+                .and('not.have.attr', 'disabled');
 
             cy.get(':nth-child(5) > .md-raised')
-                .click()
+                .click();
 
             cy.get('.toast')
-                .should('be.visible')
+                .should('be.visible');
 
             cy.get('.toast-title')
                 .should('be.visible')
-                .and('have.text','Aviso')
+                .and('have.text','Aviso');
 
             cy.get('.toast-message')
                 .should('be.visible')
-                .and('have.text','Senha alterada com sucesso')
+                .and('have.text','Senha alterada com sucesso');
         })
     })
 
@@ -242,29 +242,29 @@ test.describe('User password expired.', () => {
                     .and('have.value','')
                     .type(users.userSabium.login)
                     .invoke('attr', 'placeholder')
-                    .should('equal', 'Informe seu usuário')
+                    .should('equal', 'Informe seu usuário');
         
-                LoginPage.validateSenhaTextoIcone()
+                LoginPage.validateSenhaTextoIcone();
                 
                 cy.get('#txtpassword')
                     .should('be.visible')
                     .and('have.value','')
                     .type(users.userSabiumNovo.newPassword)
                     .invoke('attr', 'placeholder')
-                    .should('equal', 'Informe sua senha')
+                    .should('equal', 'Informe sua senha');
         
-                LoginPage.validateIconeOlhosSenha()
-                LoginPage.validateEsqueciSenha()
-                LoginPage.validateBotaoEntrarHabilitado()
-                LoginPage.clickBotaoEntrar()
-                LoginPage.validateMessageEntrandoSistema()
-                LoginPage.validateSenhaSistemaExpirada()
+                LoginPage.validateIconeOlhosSenha();
+                LoginPage.validateEsqueciSenha();
+                LoginPage.validateBotaoEntrarHabilitado();
+                LoginPage.clickBotaoEntrar();
+                LoginPage.validateMessageEntrandoSistema();
+                LoginPage.validateSenhaSistemaExpirada();
 
                 cy.get('.md-cancel-button')
-                    .click()
+                    .click();
 
                 cy.get('.md-raised > .truncate')
-                    .should('be.visible')
+                    .should('be.visible');
         })
         
         test('4.Login - click YES to update password - click Close password reset',  async ({ page }) => {
@@ -274,103 +274,103 @@ test.describe('User password expired.', () => {
                 .and('have.value','')
                 .type(users.userSabium.login)
                 .invoke('attr', 'placeholder')
-                .should('equal', 'Informe seu usuário')
+                .should('equal', 'Informe seu usuário');
     
-            LoginPage.validateSenhaTextoIcone()
+            LoginPage.validateSenhaTextoIcone();
             
             cy.get('#txtpassword')
                 .should('be.visible')
                 .and('have.value','')
                 .type(users.userSabiumNovo.newPassword)
                 .invoke('attr', 'placeholder')
-                .should('equal', 'Informe sua senha')
+                .should('equal', 'Informe sua senha');
     
-            LoginPage.validateIconeOlhosSenha()
-            LoginPage.validateEsqueciSenha()
-            LoginPage.validateBotaoEntrarHabilitado()
-            LoginPage.clickBotaoEntrar()
-            LoginPage.validateMessageEntrandoSistema()
-            LoginPage.validateSenhaSistemaExpirada()
-            LoginPage.clickSIMExpirada()
+            LoginPage.validateIconeOlhosSenha();
+            LoginPage.validateEsqueciSenha();
+            LoginPage.validateBotaoEntrarHabilitado();
+            LoginPage.clickBotaoEntrar();
+            LoginPage.validateMessageEntrandoSistema();
+            LoginPage.validateSenhaSistemaExpirada();
+            LoginPage.clickSIMExpirada();
 
             cy.get('p')
                 .contains('Altere Sua Senha Temporária')
-                .should('be.visible')
+                .should('be.visible');
 
             cy.get('.senha_nova > :nth-child(1)')
                 .should('be.visible')
-                .and('have.text','Usuário')
+                .and('have.text','Usuário');
 
             cy.get(':nth-child(2) > .ng-pristine')
                 .should('be.visible')
-                .and('have.value', users.userSabium.login)
+                .and('have.value', users.userSabium.login);
 
             cy.get('.senha_nova > :nth-child(4)')
                 .should('be.visible')
-                .and('have.text','Senha Atual')
+                .and('have.text','Senha Atual');
 
             cy.get(':nth-child(5) > .ng-pristine')
                 .should('be.visible')
                 .and('have.value','')
-                .type(users.userSabiumNovo.newPassword, {force:true})
+                .type(users.userSabiumNovo.newPassword, {force:true});
 
             cy.get('md-icon[ng-click="showPasswordToggle()"]')
-                .should('be.visible')
+                .should('be.visible');
 
             cy.get('a[ng-click="gerarNovaSenha($event)"]')
                 .should('be.visible')
-                .and('not.have.attr', 'disabled')
+                .and('not.have.attr', 'disabled');
 
             cy.get('p')
                 .contains('Regras para a Nova Senha')
-                .should('be.visible')
+                .should('be.visible');
     
-            LoginPage.validateNovaSenhaAntes()
+            LoginPage.validateNovaSenhaAntes();
 
             cy.get('input[name="password_new"]')
                 .should('be.visible')
                 .and('have.value','')
-                .type(users.userSabium.password)
+                .type(users.userSabium.password);
 
             cy.get('md-icon[ng-click="showPasswordToggle(true)"]')
-                .should('be.visible')
+                .should('be.visible');
     
-            LoginPage.validateNovaSenhaDepois()
+            LoginPage.validateNovaSenhaDepois();
 
             cy.get(':nth-child(5) > .md-raised')
                 .should('be.visible')
                 .and('have.text','Confirmar')
-                .and('not.have.attr', 'not.disabled')
+                .and('not.have.attr', 'not.disabled');
 
             cy.get('.senha_nova > :nth-child(10)')
                 .should('be.visible')
-                .and('have.text','Repetir Nova Senha')
+                .and('have.text','Repetir Nova Senha');
 
             cy.get(':nth-child(11) > .ng-pristine')
                 .should('be.visible')
                 .and('have.value','')
-                .type(users.userSabium.password)
+                .type(users.userSabium.password);
 
             cy.contains('span', 'As novas senhas informadas são iguais.')
                 .should('be.visible')
-                .and('have.css', 'color', 'rgb(0, 100, 0)')
+                .and('have.css', 'color', 'rgb(0, 100, 0)');
 
             cy.get(':nth-child(5) > .md-raised')
                 .should('be.visible')
                 .and('have.text','Confirmar')
-                .and('not.have.attr', 'disabled')
+                .and('not.have.attr', 'disabled');
 
             cy.get('[ng-show="!loading"] > a')
                 .should('be.visible')
                 .and('have.text','Fechar')
-                .and('not.have.attr', 'disabled')
+                .and('not.have.attr', 'disabled');
 
             cy.get('[ng-show="!loading"] > a')
-                .click()
+                .click();
 
             cy.get('[ng-click="clienteStatsOpen()"] > .ng-binding')
                 .should('be.visible')
-                .and('not.have.attr', 'disabled')
+                .and('not.have.attr', 'disabled');
         })
     
         test('5.Login - click YES to update password - click CONFIRM to reset password',  async ({ page }) => {
@@ -380,111 +380,111 @@ test.describe('User password expired.', () => {
                 .and('have.value','')
                 .type(users.userSabium.login)
                 .invoke('attr', 'placeholder')
-                .should('equal', 'Informe seu usuário')
+                .should('equal', 'Informe seu usuário');
     
-            LoginPage.validateSenhaTextoIcone()
+            LoginPage.validateSenhaTextoIcone();
     
             cy.get('#txtpassword')
                 .should('be.visible')
                 .and('have.value','')
                 .type(users.userSabiumNovo.newPassword)
                 .invoke('attr', 'placeholder')
-                .should('equal', 'Informe sua senha')
+                .should('equal', 'Informe sua senha');
     
-            LoginPage.validateIconeOlhosSenha()
-            LoginPage.validateEsqueciSenha()
-            LoginPage.validateBotaoEntrarHabilitado()
-            LoginPage.clickBotaoEntrar()
-            LoginPage.validateMessageEntrandoSistema()
-            LoginPage.validateSenhaSistemaExpirada()
-            LoginPage.clickSIMExpirada()
+            LoginPage.validateIconeOlhosSenha();
+            LoginPage.validateEsqueciSenha();
+            LoginPage.validateBotaoEntrarHabilitado();
+            LoginPage.clickBotaoEntrar();
+            LoginPage.validateMessageEntrandoSistema();
+            LoginPage.validateSenhaSistemaExpirada();
+            LoginPage.clickSIMExpirada();
 
             cy.get('p')
                 .contains('Altere Sua Senha Temporária')
-                .should('be.visible')
+                .should('be.visible');
 
             cy.get('.senha_nova > :nth-child(1)')
                 .should('be.visible')
-                .and('have.text','Usuário')
+                .and('have.text','Usuário');
 
             cy.get(':nth-child(2) > .ng-pristine')
                 .should('be.visible')
-                .and('have.value', users.userSabium.login)
+                .and('have.value', users.userSabium.login);
 
             cy.get('.senha_nova > :nth-child(4)')
                 .should('be.visible')
-                .and('have.text','Senha Atual')
+                .and('have.text','Senha Atual');
 
             cy.get(':nth-child(5) > .ng-pristine')
                 .should('be.visible')
                 .and('have.value','')
-                .type(users.userSabiumNovo.newPassword, {force:true})
+                .type(users.userSabiumNovo.newPassword, {force:true});
 
             cy.get('md-icon[ng-click="showPasswordToggle()"]')
-                .should('exist')
+                .should('exist');
 
             cy.get('a[ng-click="gerarNovaSenha($event)"]')
                 .should('be.visible')
-                .and('not.have.attr', 'disabled')
+                .and('not.have.attr', 'disabled');
 
             cy.get('p')
                 .contains('Regras para a Nova Senha')
-                .should('be.visible')
+                .should('be.visible');
     
-            LoginPage.validateNovaSenhaAntes()
+            LoginPage.validateNovaSenhaAntes();
 
             cy.get('input[name="password_new"]')
                 .should('be.visible')
                 .and('have.value','')
-                .type(users.userSabium.password)
+                .type(users.userSabium.password);
 
             cy.get('md-icon[ng-click="showPasswordToggle(true)"]')
-                .should('be.visible')
+                .should('be.visible');
     
-            LoginPage.validateNovaSenhaDepois()
+            LoginPage.validateNovaSenhaDepois();
 
             cy.get(':nth-child(5) > .md-raised')
                 .should('be.visible')
                 .and('have.text','Confirmar')
-                .and('not.have.attr', 'not.disabled')
+                .and('not.have.attr', 'not.disabled');
 
             cy.get('.senha_nova > :nth-child(10)')
                 .should('be.visible')
-                .and('have.text','Repetir Nova Senha')
+                .and('have.text','Repetir Nova Senha');
     
             //Card Altere Sua Senha Temporária - campo para preenchimento "Repetir Nova Senha"
             cy.get(':nth-child(11) > .ng-pristine')
                 .should('be.visible')
                 .and('have.value','')
-                .type(users.userSabium.password)
+                .type(users.userSabium.password);
 
             cy.contains('span', 'As novas senhas informadas são iguais.')
                 .should('be.visible')
-                .and('have.css', 'color', 'rgb(0, 100, 0)')
+                .and('have.css', 'color', 'rgb(0, 100, 0)');
 
             cy.get(':nth-child(5) > .md-raised')
                 .should('be.visible')
                 .and('have.text','Confirmar')
-                .and('not.have.attr', 'disabled')
+                .and('not.have.attr', 'disabled');
 
             cy.get('[ng-show="!loading"] > a')
                 .should('be.visible')
                 .and('have.text','Fechar')
-                .and('not.have.attr', 'disabled')
+                .and('not.have.attr', 'disabled');
 
             cy.get(':nth-child(5) > .md-raised')
-                .click()
+                .click();
 
             cy.get('.toast')
-                .should('be.visible')
+                .should('be.visible');
 
             cy.get('.toast-title')
                 .should('be.visible')
-                .and('have.text','Aviso')
+                .and('have.text','Aviso');
 
             cy.get('.toast-message')
                 .should('be.visible')
-                .and('have.text','Senha alterada com sucesso')
+                .and('have.text','Senha alterada com sucesso');
         })
     })
 })

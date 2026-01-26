@@ -8,9 +8,9 @@ test.describe('User password expired.', () => {
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
-        LoginPage.validateLogoEmpresaLogin()
-        LoginPage.validateIconeComputadorLogin()
-        LoginPage.validateUsuarioTextoIcone()
+        LoginPage.validateLogoEmpresaLogin();
+        LoginPage.validateIconeComputadorLogin();
+        LoginPage.validateUsuarioTextoIcone();
     })
 
     test('1.Attempting to log in with a user whose password has expired.',  async ({ page }) => {
@@ -20,35 +20,35 @@ test.describe('User password expired.', () => {
             .and('have.value','')
             .type(users.userSabium.login)
             .invoke('attr', 'placeholder')
-            .should('equal', 'Informe seu usuário')
+            .should('equal', 'Informe seu usuário');
 
-        LoginPage.validateSenhaTextoIcone()
+        LoginPage.validateSenhaTextoIcone();
         
         cy.get('#txtpassword')
             .should('be.visible')
             .and('have.value','')
             .type((senhaautomacao))
             .invoke('attr', 'placeholder')
-            .should('equal', 'Informe sua senha')
+            .should('equal', 'Informe sua senha');
 
-        LoginPage.validateIconeOlhosSenha()
-        LoginPage.validateEsqueciSenha()
-        LoginPage.validateBotaoEntrarHabilitado()
-        LoginPage.clickBotaoEntrar()
-        LoginPage.validateMessageEntrandoSistema()
+        LoginPage.validateIconeOlhosSenha();
+        LoginPage.validateEsqueciSenha();
+        LoginPage.validateBotaoEntrarHabilitado();
+        LoginPage.clickBotaoEntrar();
+        LoginPage.validateMessageEntrandoSistema();
 
         cy.get('.md-dialog-content-body')
             .should('be.visible')
-            .and('have.text','Seu acesso ao sistema expirou.')
+            .and('have.text','Seu acesso ao sistema expirou.');
 
         cy.get('md-dialog-actions > .md-primary')
             .should('be.visible')
             .and('have.text','Ok')
-            .and('not.have.attr', 'disabled')
+            .and('not.have.attr', 'disabled');
 
         cy.get('md-dialog-actions > .md-primary')
-            .click()
+            .click();
 
-        LoginPage.validateIconeComputadorLogin()
+        LoginPage.validateIconeComputadorLogin();
     })
 })
