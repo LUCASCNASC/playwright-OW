@@ -20,29 +20,29 @@ test.describe('Generate normal order', () => {
         CommandsGeneral.tituloPagina();
         ProcessoVendaPage.NFe()
         ChooseCliente.withRoute();
-        Product.kitFirst()
-        ValidateBalance.withBalance() ;
-        CommandsGeneral.selectProductSearch() ;
+        Product.kitFirst();
+        ValidateBalance.withBalance();
+        CommandsGeneral.selectProductSearch();
     })
 
     context('Without delivery/ process 9860 - happy path', () => {
         
         test('1.Order: kit 1862 0 0',  async ({ page }) => {
                       
-            CommandsGeneral.clickVoltageProduct() ;
+            CommandsGeneral.clickVoltageProduct();
             GeralPedidosPage.compositionKit()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
             ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() 
-            GeralPagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.main()
-            ParcelasPage.two()
-            AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.loadingFormPayment();
+            ProcessoRecebPage.main();
+            ParcelasPage.two();
+            AdvanceNormal.final();
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
     })
 
@@ -50,20 +50,20 @@ test.describe('Generate normal order', () => {
 
         test('2.Order: kit 1862 0 0',  async ({ page }) => {
                       
-            CommandsGeneral.clickVoltageProduct() ;
+            CommandsGeneral.clickVoltageProduct();
             GeralPedido.compositionKit()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
-            AdvanceNormal.toTransporter()
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
+            AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() 
-            GeralPagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.main()
-            ParcelasPage.two()
-            AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.loadingFormPayment();
+            ProcessoRecebPage.main();
+            ParcelasPage.two();
+            AdvanceNormal.final();
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
     })
 })

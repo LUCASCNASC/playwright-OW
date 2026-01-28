@@ -32,11 +32,11 @@ test.describe('Sale of individual Host service - 104', () => {
             ServicoAvulsoPage.buttonAdvanceOrder()
             PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.main()
+            ProcessoRecebPage.main();
             ParcelasPage.one()
-            AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            AdvanceNormal.final();
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
     })
 })

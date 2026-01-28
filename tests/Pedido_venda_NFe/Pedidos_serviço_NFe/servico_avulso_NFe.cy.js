@@ -31,11 +31,11 @@ test.describe('Sale of individual services', () => {
             ServicoAvulsoPage.buttonAdvanceOrder()
             PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.main()
-            ParcelasPage.two()
-            AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            ProcessoRecebPage.main();
+            ParcelasPage.two();
+            AdvanceNormal.final();
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
     })
 })

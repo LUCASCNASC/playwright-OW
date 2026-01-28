@@ -27,70 +27,70 @@ test.describe('Generate a sales order with a discount', () => {
         test('1.Order: product 1912 0 0 with discount Sub (-) / R$',  async ({ page }) => {
 
             Product.discountNumber()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
             OrderDiscount.clickButtonDiscount() 
             OrderDiscount.validateModalSub()
             OrderDiscount.applyDiscountR$()
             ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() 
-            GeralPagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.main()
+            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.loadingFormPayment();
+            ProcessoRecebPage.main();
             ParcelasPage.one()
-            AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            AdvanceNormal.final();
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('2.Order: product 1913 0 0 with discount Sub (-) / % (Percentage)',  async ({ page }) => {
 
             Product.discountPercentage()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
             OrderDiscount.clickButtonDiscount() 
             OrderDiscount.validateModalSub()
             OrderDiscount.applyDiscountPencentage()
             ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() 
-            GeralPagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.main()
+            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.loadingFormPayment();
+            ProcessoRecebPage.main();
             ParcelasPage.one()
-            AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            AdvanceNormal.final();
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('3.Order: product 1914 0 0 with discount Sub (-) / FIXED VALUE',  async ({ page }) => {
 
             Product.discountValueFixed()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
             OrderDiscount.clickButtonDiscount() 
             OrderDiscount.validateModalSub()
             OrderDiscount.applyDiscountVF()
             ThrowDelivery.freightFirst()() 
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() 
-            GeralPagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.main()
+            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.loadingFormPayment();
+            ProcessoRecebPage.main();
             ParcelasPage.one()
-            AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            AdvanceNormal.final();
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
     })
 })

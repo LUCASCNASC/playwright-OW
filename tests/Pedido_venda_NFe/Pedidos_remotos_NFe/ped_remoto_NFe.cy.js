@@ -26,77 +26,77 @@ test.describe('Remote/process 9860 - Balance rule Parameter 36 = 4 - Parameter 1
         test('1.Remote order: product 1860 0 0 - (Remote sale of product with stock available at the billing branch)',  async ({ page }) => {
 
             Product.fisrt();
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             GeralPedidosPage.changeBranchInvoicing()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
-            AdvanceNormal.toTransporter()
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
+            AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() 
-            GeralPagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.main()
+            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.loadingFormPayment();
+            ProcessoRecebPage.main();
             ParcelasPage.duas()
-            AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            AdvanceNormal.final();
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('2.Remote order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
 
             Product.fisrt();
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             GeralPedidosPage.changeBranchInvoicing()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
             Product.freightSecond() 
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             GeralPedidosPage.changeBranchInvoicing()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            Service.clickOKServiceLinked()
-            AdvanceNormal.toTransporter()
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            Service.clickOKServiceLinked();
+            AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() 
-            GeralPagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.main()
+            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.loadingFormPayment();
+            ProcessoRecebPage.main();
             ParcelasPage.duas()
-            AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            AdvanceNormal.final();
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
         
         test('3.Remote order: kit 1877 0 0',  async ({ page }) => {
 
             Product.kitRemote()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             GeralPedidosPage.changeBranchInvoicing()
             GeralPedidosPage.compositionKit()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
-            AdvanceNormal.toTransporter()
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
+            AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() 
-            GeralPagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.main()
+            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.loadingFormPayment();
+            ProcessoRecebPage.main();
             ParcelasPage.duas()
-            AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            AdvanceNormal.final();
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
     })
 
@@ -105,32 +105,32 @@ test.describe('Remote/process 9860 - Balance rule Parameter 36 = 4 - Parameter 1
         test('4.Remote order - with stock in CD (branch 1) - should allow order creation - (Remote sale of product without stock at the billing branch, but with stock in the CD of the billing branch - with delivery)',  async ({ page }) => {
 
             Product.remoteWithCD()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             GeralPedidosPage.changeBranchInvoicing()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
-            AdvanceNormal.toTransporter()
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
+            AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() 
-            GeralPagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.main()
+            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.loadingFormPayment();
+            ProcessoRecebPage.main();
             ParcelasPage.duas()
-            AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            AdvanceNormal.final();
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })    
 
         test('5.Remote order - WITHOUT stock in CD (branch 1) - should NOT allow order creation - (Remote sale of product without stock at the billing branch, without stock in the CD of the billing branch)',  async ({ page }) => {
 
             Product.remoteWithoutCD()
             ValidateBalance.withoutBalance() 
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             GeralPedidosPage.changeBranchInvoicing()
 
             //Validando mensagem "Este produto não possui saldo na filial selecionada."

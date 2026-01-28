@@ -31,20 +31,20 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
         test('1.Order: products 1860 0 0 e 1870 0 0, inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.fisrt();
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            Service.clickOKServiceLinked() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            Service.clickOKServiceLinked(); 
             ThrowDelivery.freightFirst()
-            Product.second()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()  
-            Service.clickOKServiceLinked()
+            Product.second();
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();  
+            Service.clickOKServiceLinked();
             ThrowDelivery.freightSecond()
             AdvanceNormal.toInstallments()
             PagamentoPage.clickGenerateInstallments() 
@@ -53,29 +53,29 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() 
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('2.Order: products 1860 0 0 e 1870 0 0, inclusion 3875, lender 158, 4 installments upon receipt Present.',  async ({ page }) => {
     
             Product.fisrt();
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
             ThrowDelivery.freightFirst()
-            Product.second()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
+            Product.second();
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
             ThrowDelivery.freightSecond()
             AdvanceNormal.toInstallments()
             PagamentoPage.clickGenerateInstallments() 
@@ -84,10 +84,10 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() 
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
     })
 
@@ -96,20 +96,20 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
         test('3.Order: products 1860 0 0 e 1870 0 0, inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
     
             Product.fisrt();
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
-            Product.second()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
-            AdvanceNormal.toTransporter()
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
+            Product.second();
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
+            AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments()
             PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
@@ -117,31 +117,31 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() 
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('4.Order: products 1860 0 0 (with warranty not separated) and 1870 0 0, inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.fisrt();
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() 
-            ValidateService.servLinked() ; ValidateService.garantiaSepMesmoProc()
-            Product.second()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
-            AdvanceNormal.toTransporter()
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            ValidateService.garantiaNaoSep();
+            Service.clickOKServiceLinked(); 
+            ValidateService.servLinked() ; ValidateService.garantiaSepMesmoProc();
+            Product.second();
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
+            AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments()
             PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
@@ -149,31 +149,31 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() 
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('5.Order: products 1860 0 0 (with warranty not separated) and 1870 0 0, inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
 
             Product.fisrt();
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() 
-            ValidateService.servLinked() ; ValidateService.garantiaSepMesmoProc()
-            Product.second()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()  
-            Service.clickOKServiceLinked()
-            AdvanceNormal.toTransporter()
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            ValidateService.garantiaNaoSep();
+            Service.clickOKServiceLinked(); 
+            ValidateService.servLinked() ; ValidateService.garantiaSepMesmoProc();
+            Product.second();
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();  
+            Service.clickOKServiceLinked();
+            AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments()
             PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
@@ -181,31 +181,31 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() 
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('6.Order: products 1860 0 0 (with warranty not separated) and 1870 0 0, inclusion 3875, lender 158, 4 installments upon receipt Present without interest.',  async ({ page }) => {
     
             Product.fisrt();
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() 
-            ValidateService.servLinked() ; ValidateService.garantiaSepMesmoProc()
-            Product.second()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()  
-            Service.clickOKServiceLinked()
-            AdvanceNormal.toTransporter()
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            ValidateService.garantiaNaoSep();
+            Service.clickOKServiceLinked(); 
+            ValidateService.servLinked() ; ValidateService.garantiaSepMesmoProc();
+            Product.second();
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();  
+            Service.clickOKServiceLinked();
+            AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments()
             PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
@@ -213,10 +213,10 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() 
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
     })
 
@@ -225,15 +225,15 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
         test('7.Order: product 1918 0 0 (term promotion 167), inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPromoPage.termFutWithFeesPrest()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            Service.clickOKServiceLinked() 
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            Service.clickOKServiceLinked(); 
             ThrowDelivery.freightFirst()
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
@@ -242,24 +242,24 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() 
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('8.Order: product 1918 0 0 (term promotion 167), inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPromoPage.termFutWithoutFeesPrest()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            Service.clickOKServiceLinked() 
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            Service.clickOKServiceLinked(); 
             ThrowDelivery.freightFirst()
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
@@ -268,25 +268,25 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() 
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('9.Order: product 1918 0 0 (term promotion 167), with warranty not separated, inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPromoPage.termFutWithoutFeesPrest()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() 
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            ValidateService.garantiaNaoSep();
+            Service.clickOKServiceLinked(); 
             ThrowDelivery.freightFirst()
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
@@ -295,10 +295,10 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() 
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
     })
 
@@ -307,18 +307,18 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
         test('10.Order: product 1919 0 0 (term promotion 168), with warranty not separated, inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
 
             Product.termInstallmentPrest()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPromoPage.termFutWithoutFeesPrest()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() 
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            ValidateService.garantiaNaoSep();
+            Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
-            AdvanceNormal.toTransporter()
+            AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_pagamentoPedido')
             cy.wait('@api_pagamentoPedido', { timeout: 40000 })
@@ -332,25 +332,25 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             TicketPrestamista.added() 
             AdvanceNormal.finalarFinal()
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('11.Order: product 1919 0 0 (term promotion 168), with warranty not separated, inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
 
             Product.termInstallmentPrest()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPromoPage.termFutWithFeesPrest()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() 
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            ValidateService.garantiaNaoSep();
+            Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
-            AdvanceNormal.toTransporter()
+            AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_pagamentoPedido')
             cy.wait('@api_pagamentoPedido', { timeout: 40000 })
@@ -363,25 +363,25 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             ParcelasPage.one()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() 
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('12.Order: product 1920 0 0 (entry promotion 169), with warranty not separated, inclusion 3876, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPromoPage.entryPresentPrest()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() 
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            ValidateService.garantiaNaoSep();
+            Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
             ThrowDelivery.freightFirst()
             AdvanceNormal.toInstallments()
@@ -391,10 +391,10 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() 
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
     })
 
@@ -403,23 +403,23 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
         test('13.Order: product 1918 0 0 (term promotion 167) and 1860 0 0 (without promotion), inclusion 3874 (other receipt 3860), lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPromoPage.termFutWithFeesPrest()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            Service.clickOKServiceLinked() 
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            Service.clickOKServiceLinked(); 
             ThrowDelivery.primeiro()
-            Product.second()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            Service.clickOKServiceLinked()
+            Product.second();
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            Service.clickOKServiceLinked();
             ThrowDelivery.freightSecond()
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
@@ -430,34 +430,34 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             TicketPrestamista.added() 
             PagamentoPage.insertDateTomorrow1Due()
             PagamentoPage.clicarGerarParcAlterarVenc()
-            ProcessoRecebPage.main()
+            ProcessoRecebPage.main();
             ParcelasPage.one()
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('14.Order: product 1918 0 0 (term promotion 167) and 1860 0 0 (without promotion), inclusion 3874 (other receipt 3874 group), lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPromoPage.termFutWithFeesPrest()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            Service.clickOKServiceLinked() 
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            Service.clickOKServiceLinked(); 
             ThrowDelivery.freightFirst()
-            Product.second()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            Service.clickOKServiceLinked()
+            Product.second();
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            Service.clickOKServiceLinked();
             ThrowDelivery.freightSecond()
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
@@ -474,32 +474,32 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             ValidateService.messPrestRemoved()
             ValidateService.addInsurancePrest()
             GeralPedidosPage.adicionadoRecebAgrupado()
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('15.Order: product 1918 0 0 (term promotion 167) and 1860 0 0 (without promotion), inclusion 3876 (other receipt 3860), lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPromoPage.termFutWithoutFeesPrest()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            Service.clickOKServiceLinked() 
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            Service.clickOKServiceLinked(); 
             ThrowDelivery.freightFirst()
-            Product.second()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            Service.clickOKServiceLinked()
+            Product.second();
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            Service.clickOKServiceLinked();
             ThrowDelivery.freightSecond()
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
@@ -510,34 +510,34 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             TicketPrestamista.added() 
             PagamentoPage.insertDateTomorrow1Due()
             PagamentoPage.clicarGerarParcAlterarVenc()
-            ProcessoRecebPage.main()
+            ProcessoRecebPage.main();
             ParcelasPage.one()
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('16.Order: product 1918 0 0 (term promotion 167) and 1860 0 0 (without promotion), inclusion 3876 (other receipt 3876 group), lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPromoPage.termFutWithoutFeesPrest()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            Service.clickOKServiceLinked() 
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            Service.clickOKServiceLinked(); 
             ThrowDelivery.freightFirst()
-            Product.second()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            Service.clickOKServiceLinked()
+            Product.second();
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            Service.clickOKServiceLinked();
             ThrowDelivery.freightSecond()
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
@@ -556,24 +556,24 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             ValidateService.messPrestRemoved()
             ValidateService.addInsurancePrest()
             GeralPedidosPage.adicionadoRecebAgrupado()
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('17.Order: product 1921 0 0 (term promotion 170), inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPromoPage.termFutWithFeesPrest()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            Service.clickOKServiceLinked() 
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            Service.clickOKServiceLinked(); 
             ThrowDelivery.primeiro()
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
@@ -582,10 +582,10 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             ParcelasPage.for()
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() 
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
     })
 
@@ -594,25 +594,25 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
         test('18.Pedido: produto 1918 0 0 (promo a prazo 167) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3874 (outro recebimento 3860), prestamista 158, 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
     
             Product.termInstallmentPrest()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPromoPage.termFutWithFeesPrest()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() 
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            ValidateService.garantiaNaoSep();
+            Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
-            Product.second()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            Service.clickOKServiceLinked()
-            AdvanceNormal.toTransporter()
+            Product.second();
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            Service.clickOKServiceLinked();
+            AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
@@ -624,36 +624,36 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             PagamentoPage.clicarGerarParcAlterarVenc()
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
-            ProcessoRecebPage.main()
+            ProcessoRecebPage.main();
             ParcelasPage.one()
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('19.Pedido: produto 1918 0 0 (promo a prazo 167) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3874 (outro recebimento 3874 agrupar), prestamista 158, 4 parcelas no recebimento Futuro com juros.', async ({ page }) => {
     
             Product.termInstallmentPrest()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPromoPage.termFutWithFeesPrest()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() 
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            ValidateService.garantiaNaoSep();
+            Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
-            Product.second()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            Service.clickOKServiceLinked()
-            AdvanceNormal.toTransporter()
+            Product.second();
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            Service.clickOKServiceLinked();
+            AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
@@ -672,34 +672,34 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             ValidateService.messPrestRemoved()
             ValidateService.addInsurancePrest()
             GeralPedidosPage.adicionadoRecebAgrupado()
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('20.Pedido: produto 1918 0 0 (promo a prazo 167) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3876 (outro recebimento 3860), prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
 
             Product.termInstallmentPrest()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPromoPage.termFutWithoutFeesPrest()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() 
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            ValidateService.garantiaNaoSep();
+            Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
-            Product.second()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            Service.clickOKServiceLinked()
-            AdvanceNormal.toTransporter()
+            Product.second();
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            Service.clickOKServiceLinked();
+            AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
@@ -711,36 +711,36 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             PagamentoPage.clicarGerarParcAlterarVenc()
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
-            ProcessoRecebPage.main()
+            ProcessoRecebPage.main();
             ParcelasPage.one()
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('21.Pedido: produto 1918 0 0 (promo a prazo 167) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3876 (outro recebimento 3876 agrupar), prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
     
             Product.termInstallmentPrest()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPromoPage.termFutWithoutFeesPrest()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() )
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            ValidateService.garantiaNaoSep();
+            Service.clickOKServiceLinked(); )
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
-            Product.second()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            Service.clickOKServiceLinked()
-            AdvanceNormal.toTransporter()
+            Product.second();
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            Service.clickOKServiceLinked();
+            AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
@@ -759,35 +759,35 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             ValidateService.messPrestRemoved()
             ValidateService.addInsurancePrest()
             GeralPedidosPage.adicionadoRecebAgrupado()
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
     })
 
         test('22.Order: product 1920 0 0 (promo on credit 169) (with warranty, not separate) and 1860 0 0 (without promotion), inclusion 3875 (other receipt 3874), lender 158, 4 installments upon receipt. Gift.',  async ({ page }) => {
 
             Product.termInstallmentPrest()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPromoPage.entryPresentPrest()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() 
-            ValidateService.servLinked() ; ValidateService.garantiaNaoSep()
-            Product.second()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked()
-            AdvanceNormal.toTransporter()
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            ValidateService.garantiaNaoSep();
+            Service.clickOKServiceLinked(); 
+            ValidateService.servLinked() ; ValidateService.garantiaNaoSep();
+            Product.second();
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            ValidateService.garantiaNaoSep();
+            Service.clickOKServiceLinked();
+            AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
@@ -801,35 +801,35 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
             ProcessoRecebPage.secondForm()
             ParcelasPage.one()
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('23.Order: product 1920 0 0 (promo on credit 169) (with warranty, not separate) and 1860 0 0 (without promotion), inclusion 3875 (other receipt 3875 group), lender 158, 4 installments upon receipt Present.',  async ({ page }) => {
         
                 Product.termInstallmentPrest()
-                ValidateBalance.withBalance() ;
-                CommandsGeneral.selectProductSearch() ;
-                CommandsGeneral.clickVoltageProduct() ;
-                CommandsGeneral.clickAddProduct() 
+                ValidateBalance.withBalance();
+                CommandsGeneral.selectProductSearch();
+                CommandsGeneral.clickVoltageProduct();
+                CommandsGeneral.clickAddProduct(); 
                 Promotion.selectFirstPromoProduct()
                 ProcessoRecebPromoPage.entryPresentPrest()
-                CommandsGeneral.clickAddProduct() 
-                Service.validateModalServLinked()
-                ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked() )
+                CommandsGeneral.clickAddProduct(); 
+                Service.validateModalServLinked();
+                ValidateService.garantiaNaoSep();
+            Service.clickOKServiceLinked(); )
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
-            Product.second()
+            Product.second();
             ValidateBalance.comSwithBalancealdo()
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked()
-            ValidateService.garantiaNaoSep()
-            Service.clickOKServiceLinked()
-            AdvanceNormal.toTransporter()
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            ValidateService.garantiaNaoSep();
+            Service.clickOKServiceLinked();
+            AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments()
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
@@ -848,10 +848,10 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             ValidateService.messPrestRemoved()
             ValidateService.addInsurancePrest()
             GeralPedidosPage.adicionadoRecebAgrupado()
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
     })
 })

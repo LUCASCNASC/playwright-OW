@@ -20,28 +20,28 @@ test.describe('Generate request with credit proposal', () => {
         ProcessoVendaPage.NFe()
         ChooseCliente.withRoute();
         Product.fisrt();
-        ValidateBalance.withBalance() ;
-        CommandsGeneral.selectProductSearch() ;
+        ValidateBalance.withBalance();
+        CommandsGeneral.selectProductSearch();
     })
 
     context('Without delivery/ process 9860 - happy path', () => {
 
         test('1.Order: product 1860 0 0 - (Order without delivery, with credit proposal.)',  async ({ page }) => {
 
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
             ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() 
-            GeralPagamentoPage.loadingFormPayment()
+            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.proposalCredit()
             ParcelasPage.one()
-            AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
+            AdvanceNormal.final();
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validatePropCreditGenerated()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.validateOrderGenerated();
         })
     })
 })

@@ -21,52 +21,52 @@ test.describe('Generate a standard order with interest discount - parameters 243
         ProcessoVendaPage.NFe()
         ChooseCliente.withRoute();
         Product.roundUpDown()
-        ValidateBalance.withBalance() ;
-        CommandsGeneral.selectProductSearch() ;
+        ValidateBalance.withBalance();
+        CommandsGeneral.selectProductSearch();
     })
 
     context('Without delivery/ process 9860 - happy path - inclusion process 3860', () => {
 
         test('1.Order: product 1860 0 0 - round down',  async ({ page }) => {
 
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
             ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() 
-            GeralPagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.main()
+            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.loadingFormPayment();
+            ProcessoRecebPage.main();
             ParcelasPage.one()
             OrderDiscount.dragFormPayment()
             OrderDiscount.clickChangeValue()
             OrderDiscount.modalChangeValue()
             OrderDiscount.changeValueToLow()
-            AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage() 
-            FinalizarPedidoPage.validateOrderGenerated()
+            AdvanceNormal.final();
+            FinalizarPedidoPage.clickFinalizarPedidoPage(); 
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('2.Order: products 1860 0 0 - round up',  async ({ page }) => {
 
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked() 
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked(); 
             ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() 
-            GeralPagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.main()
+            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.loadingFormPayment();
+            ProcessoRecebPage.main();
             ParcelasPage.one()
             OrderDiscount.dragFormPayment() 
             OrderDiscount.clickChangeValue()
             OrderDiscount.modalChangeValue()
             OrderDiscount.changeValueToTop()
-            AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            AdvanceNormal.final();
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
     })
 })

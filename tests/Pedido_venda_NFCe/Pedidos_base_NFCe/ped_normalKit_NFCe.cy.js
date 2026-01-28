@@ -18,33 +18,33 @@ test.describe('Generate a standard order with delivery.', () => {
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
-        ProcessoVendaPage.NFCe()
+        ProcessoVendaPage.NFCe();
         ChooseCliente.withRoute();
-        Product.kitFirst()
-        ValidateBalance.withBalance() ;
-        CommandsGeneral.selectProductSearch() ;
+        Product.kitFirst();
+        ValidateBalance.withBalance();
+        CommandsGeneral.selectProductSearch();
     })
     
     context('With delivery/process 9890 - happy path', () => {
         
         test('1.Order: kit 1862 0 0',  async ({ page }) => {
                       
-            CommandsGeneral.clickVoltageProduct() ;
-            GeralPedidosPage.compositionKit()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
-            AdvanceNormal.toTransporter()
-            GeneralDelivery.modalInconsOnlyTransporter()
-            GeneralDelivery.chooseTransporter()
-            AdvanceNormal.installmentDelivery()
-            GeralPagamentoPage.clickGenerateInstallments() 
-            GeralPagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.main()
-            ParcelasPage.two()
-            AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated() 
+            CommandsGeneral.clickVoltageProduct();
+            GeralPedidosPage.compositionKit();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
+            AdvanceNormal.toTransporter();
+            GeneralDelivery.modalInconsOnlyTransporter();
+            GeneralDelivery.chooseTransporter();
+            AdvanceNormal.installmentDelivery();
+            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.loadingFormPayment();
+            ProcessoRecebPage.main();
+            ParcelasPage.two();
+            AdvanceNormal.final();
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated(); 
         })
     })
 })

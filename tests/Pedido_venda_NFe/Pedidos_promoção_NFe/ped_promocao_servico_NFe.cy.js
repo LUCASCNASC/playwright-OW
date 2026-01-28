@@ -27,41 +27,41 @@ test.describe('Generate orders with promotions and interest-free services', () =
         test('1.Order with promotion deadline installment (promotion 159): product 1891 0 0 with guarantee (interest-free)',  async ({ page }) => {
     
             Product.firstInstallmentDeadline()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.typeServiceFreeValidate()
             Promotion.selectFirstPromoProduct()
-            ProcessoRecebPromoPage.pagPrincipal()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.garantiaSepMesmoProc() 
-            Service.clickOKServiceLinked()
+            ProcessoRecebPromoPage.pagPrincipal();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.garantiaSepMesmoProc(); 
+            Service.clickOKServiceLinked();
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc()
             ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
-            AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            AdvanceNormal.final();
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('2.Order with promotion deadline with entry + installments (promotion 158): product 1895 0 0 with guarantee (interest-free)',  async ({ page }) => {
 
             Product.secondInstallmentDeadline()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.typeServiceFreeValidate()
             Promotion.selectFirstPromoProduct()
-            ProcessoRecebPromoPage.pagPrincipal()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.garantiaSepMesmoProc() 
-            Service.clickOKServiceLinked()
+            ProcessoRecebPromoPage.pagPrincipal();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.garantiaSepMesmoProc(); 
+            Service.clickOKServiceLinked();
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc()
             ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
@@ -85,23 +85,23 @@ test.describe('Generate orders with promotions and interest-free services', () =
                 .and('contain','Gerar pagamento')
                 .click({force:true})
 
-            AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            AdvanceNormal.final();
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('3.Order with promotion deadline installment (promotion 161): product 1893 0 0 with moneylender (interest-free)',  async ({ page }) => {
     
             Product.thirdInstallmentDeadline()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPage.withMoneylender()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc()
             ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
@@ -109,26 +109,26 @@ test.describe('Generate orders with promotions and interest-free services', () =
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
             Promotion.addPrestamista()
             TicketPrestamista.added()
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('4.Order with installment payment promotion (promotion 162): product 1894 0 0 with warranty (interest-free) and lender (with interest)',  async ({ page }) => {
     
             Product.fourthInstallmentDeadline()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.typeServiceFreeValidate()
             Promotion.selectFirstPromoProduct()
             ProcessoRecebPage.withMoneylender()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.garantiaSepMesmoProc() 
-            Service.clickOKServiceLinked()
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.garantiaSepMesmoProc(); 
+            Service.clickOKServiceLinked();
             ValidateService.servLinked() ; ValidateService.AddGarantSepMesmoProc()
             ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
@@ -136,10 +136,10 @@ test.describe('Generate orders with promotions and interest-free services', () =
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
             Promotion.addPrestamista()
             TicketPrestamista.added()
-            AdvanceNormal.final()
+            AdvanceNormal.final();
             TicketPrestamista.pageFinal()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
     })
  })

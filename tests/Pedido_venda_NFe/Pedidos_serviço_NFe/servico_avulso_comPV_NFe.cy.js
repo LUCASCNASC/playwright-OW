@@ -51,8 +51,8 @@ test.describe('Sale of a one-off service, with the product order already downloa
             ServicoAvulsoPage.buttonAddGarantias()
             ServicoAvulsoPage.clickAddGarantias()
             ServicoAvulsoPage.modalGarantiasServicesLinked()
-            Service.garantiaSepMesmoProc() //clicar na primeira garantia - Garantia Separa Mesmo Processo
-            Service.clickOKServiceLinked()()
+            Service.garantiaSepMesmoProc(); //clicar na primeira garantia - Garantia Separa Mesmo Processo
+            Service.clickOKServiceLinked();()
             ServicoAvulsoPage.messLinkedAddedSucess()
             ServicoAvulsoPage.buttonSaveService()
             ServicoAvulsoPage.messWaitLoading()
@@ -63,11 +63,11 @@ test.describe('Sale of a one-off service, with the product order already downloa
             ServicoAvulsoPage.buttonAdvanceOrder()
             PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.main()
-            ParcelasPage.two()
-            AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            ProcessoRecebPage.main();
+            ParcelasPage.two();
+            AdvanceNormal.final();
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
     })
 })

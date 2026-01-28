@@ -20,8 +20,8 @@ test.describe('Attempting to generate a sales order with an out-of-stock product
             
             Product.withoutBalance()
             ValidarSaldo.comSaldo() 
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
 
             //Validando mensagem "Este produto não possui saldo na filial selecionada."
             cy.get('[ng-if="semSaldoCD"][style=""] > p')

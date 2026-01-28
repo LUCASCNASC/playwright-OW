@@ -27,37 +27,37 @@ test.describe('Generate orders with promotion', () => {
 
         test('1.Order with promotion match (promotion 152): product 1868 0 0',  async ({ page }) => {
     
-            Product.promoMatch()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            Product.promoMatch();
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct() 
-            ProcessoRecebPromoPage.pagPrincipal()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
+            ProcessoRecebPromoPage.pagPrincipal();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
             ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pagamento_lista')
             cy.wait('@api_pagamento_lista', { timeout: 40000 })
-            AdvanceNormal.final() 
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            AdvanceNormal.final(); 
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('2.Order with promotion deadline with entry (promotion 150): product 1866 0 0',  async ({ page }) => {
 
             Product.promoDeadlineEntry()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct() 
-            ProcessoRecebPromoPage.pagPrincipal()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
+            ProcessoRecebPromoPage.pagPrincipal();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
             ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
     
@@ -68,30 +68,30 @@ test.describe('Generate orders with promotion', () => {
             //Botão "GERAR PAGAMENTO"
             cy.get('.white > .layout-align-center-center > .md-primary').click()
     
-            AdvanceNormal.final() 
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            AdvanceNormal.final(); 
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('3.Order with promotion deadline installment (promotion 151): product 1867 0 0',  async ({ page }) => {
     
-            Product.promoDeadlineInstallment()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            Product.promoDeadlineInstallment();
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct() 
-            ProcessoRecebPromoPage.pagPrincipal()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
+            ProcessoRecebPromoPage.pagPrincipal();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
             ThrowDelivery.freightFirst() 
             AdvanceNormal.toInstallments()
             cy.intercept('GET', 'images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
-            AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            AdvanceNormal.final();
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
     })
 
@@ -99,27 +99,27 @@ test.describe('Generate orders with promotion', () => {
 
         test('4.Order with promotion match (promotion 152): product 1868 0 0 and product 1870 0 0 (without promotion)',  async ({ page }) => {
     
-            Product.promoMatch()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            Product.promoMatch();
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct() 
-            ProcessoRecebPromoPage.pagPrincipal()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
+            ProcessoRecebPromoPage.pagPrincipal();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
             ThrowDelivery.freightFirst() 
-            Product.second()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
+            Product.second();
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
             ThrowDelivery.freightSecond() 
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.clickGenerateInstallments(); 
 
             //Escolher forma de pagamento
             cy.contains('3868 - T.A. A Receber PIX TEF').click({force:true})
@@ -128,31 +128,31 @@ test.describe('Generate orders with promotion', () => {
             //Escolher parcelamento
             //cy.get('.active > md-collapsible-body > .layout-column > [style="position: relative"] > :nth-child(1) > div.ng-binding').click({force:true})
 
-            // AdvanceNormal.final()
-            // FinalizarPedidoPage.clickFinalizarPedidoPage()
-            // FinalizarPedidoPage.validateOrderGenerated()
+            // AdvanceNormal.final();
+            // FinalizarPedidoPage.clickFinalizarPedidoPage();
+            // FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('5.Order with promotion deadline with entry (promotion 150): product 1866 0 0 and product 1870 0 0 (without promotion)',  async ({ page }) => {
     
             Product.promoDeadlineEntry()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct() 
-            ProcessoRecebPromoPage.pagPrincipal()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
+            ProcessoRecebPromoPage.pagPrincipal();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
             ThrowDelivery.freightFirst() 
-            Product.second()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
+            Product.second();
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
             ThrowDelivery.freightSecond() 
             AdvanceNormal.toInstallments()
 
@@ -162,9 +162,9 @@ test.describe('Generate orders with promotion', () => {
             cy.contains('div.md-text', '3861 - T.A. A Receber A Vista').click({force:true}) //Escolher forma de pagamento entrada
             cy.get('.white > .layout-align-center-center > .md-primary').click({force:true}) //clicar GERAR PAGAMENTO
     
-            AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            AdvanceNormal.final();
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
     })
 
@@ -172,17 +172,17 @@ test.describe('Generate orders with promotion', () => {
 
         test('6.Order with promotion match (promotion 152): product 1868 0 0',  async ({ page }) => {
     
-            Product.promoMatch()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            Product.promoMatch();
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct()
-            ProcessoRecebPromoPage.pagPrincipal()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
-            AdvanceNormal.toTransporter()
+            ProcessoRecebPromoPage.pagPrincipal();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
+            AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments() 
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pagamento_lista')
             cy.wait('@api_pagamento_lista', { timeout: 40000 })
@@ -190,31 +190,31 @@ test.describe('Generate orders with promotion', () => {
             GeralPagamentoPage.clicarGerarParcAlterarVenc()
             ProcessoRecebPage.principal()
             ParcelasPage.one()
-            AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            AdvanceNormal.final();
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('7.Order with promotion deadline with entry (promotion 150): product 1866 0 0',  async ({ page }) => {
     
             Product.promoDeadlineEntry()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct() 
-            ProcessoRecebPromoPage.pagPrincipal()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
-            AdvanceNormal.toTransporter()
+            ProcessoRecebPromoPage.pagPrincipal();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
+            AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments()
             cy.intercept('GET', 'images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
 
             GeralPagamentoPage.insertDateTomorrow1Due()
             cy.get('.gerar-parcelas > .layout-wrap > [style="padding: 0 5px"] > .md-primary').click({force:true})
-            ProcessoRecebPage.main()
+            ProcessoRecebPage.main();
             ParcelasPage.one()
 
             // //"GERAR PAGAMENTO"
@@ -228,35 +228,35 @@ test.describe('Generate orders with promotion', () => {
             // GeralPagamentoPage.clicarGerarParcAlterarVenc()
             // cy.wait(3000)
             // Receipt.main()
-            // ParcelasPage.two()
-            // AdvanceNormal.final()
-            // FinalizarPedidoPage.clickFinalizarPedidoPage()
-            // FinalizarPedidoPage.validateOrderGenerated()
+            // ParcelasPage.two();
+            // AdvanceNormal.final();
+            // FinalizarPedidoPage.clickFinalizarPedidoPage();
+            // FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('8.Order with promotion deadline installment (promotion 151): product 1867 0 0',  async ({ page }) => {
     
-            Product.promoDeadlineInstallment()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
+            Product.promoDeadlineInstallment();
+            ValidateBalance.withBalance();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct() 
-            ProcessoRecebPromoPage.pagPrincipal()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
-            AdvanceNormal.toTransporter()
+            ProcessoRecebPromoPage.pagPrincipal();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
+            AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.clickGenerateInstallments(); 
 
             //Escolher a forma de pagamento
             cy.get('[style=""] > md-collapsible-header.layout-row > .md-collapsible-tools > .ng-scope').click({force:true})
             //Escolher a forma de pagamento/parcelas
             cy.get('.active > md-collapsible-body > .layout-column > [style="position: relative"] > :nth-child(1) > div.ng-binding').click({force:true})
 
-            AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            AdvanceNormal.final();
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })  
     }) 
 
@@ -264,33 +264,33 @@ test.describe('Generate orders with promotion', () => {
 
         test('9.Order with promotion match (promotion 152): product 1868 0 0 and product 1870 0 0 (without promotion)',  async ({ page }) => {
     
-            Product.promoMatch()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.clickVoltageProduct() ;
+            Product.promoMatch();
+            ValidateBalance.withBalance();
+            CommandsGeneral.clickVoltageProduct();
             cy.clickAddProduc()
             Promotion.selectFirstPromoProduct() 
-            ProcessoRecebPromoPage.pagPrincipal()
-            CommandsGeneral.clickAddProduct() 
-            Service.validateModalServLinked() 
-            Service.clickOKServiceLinked()
-            Product.second()
-            ValidateBalance.withBalance() ;
-            CommandsGeneral.selectProductSearch() ;
-            CommandsGeneral.clickVoltageProduct() ;
-            CommandsGeneral.clickAddProduct() 
-            Service.clickOKServiceLinked() 
-            AdvanceNormal.toTransporter()
+            ProcessoRecebPromoPage.pagPrincipal();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked(); 
+            Service.clickOKServiceLinked();
+            Product.second();
+            ValidateBalance.withBalance();
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Service.clickOKServiceLinked(); 
+            AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments()
-            GeralPagamentoPage.clickGenerateInstallments() 
+            GeralPagamentoPage.clickGenerateInstallments(); 
 
             //Escolher forma de pagemento
             cy.get('[style=""] > md-collapsible-header.layout-row > .md-collapsible-tools > .ng-scope').click({force: true})
             //Escolher parcelamento
             cy.get('.active > md-collapsible-body > .layout-column > [style="position: relative"] > :nth-child(1) > div.ng-binding').click({force: true})
 
-            AdvanceNormal.final()
-            FinalizarPedidoPage.clickFinalizarPedidoPage()
-            FinalizarPedidoPage.validateOrderGenerated()
+            AdvanceNormal.final();
+            FinalizarPedidoPage.clickFinalizarPedidoPage();
+            FinalizarPedidoPage.validateOrderGenerated();
         })
     })
 })
