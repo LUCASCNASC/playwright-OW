@@ -18,7 +18,7 @@ test.describe('Generate orders with promotions and interest-free services', () =
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
-        ProcessoVendaPage.NFe()
+        ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
     })
 
@@ -39,8 +39,8 @@ test.describe('Generate orders with promotions and interest-free services', () =
             Service.garantiaSepMesmoProc(); 
             Service.clickOKServiceLinked();
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc()
-            ThrowDelivery.freightFirst() 
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightFirst(); 
+            AdvanceNormal.toInstallments();
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
             AdvanceNormal.final();
@@ -63,8 +63,8 @@ test.describe('Generate orders with promotions and interest-free services', () =
             Service.garantiaSepMesmoProc(); 
             Service.clickOKServiceLinked();
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc()
-            ThrowDelivery.freightFirst() 
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightFirst(); 
+            AdvanceNormal.toInstallments();
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
 
@@ -103,8 +103,8 @@ test.describe('Generate orders with promotions and interest-free services', () =
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc()
-            ThrowDelivery.freightFirst() 
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightFirst(); 
+            AdvanceNormal.toInstallments();
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
             Promotion.addPrestamista()
@@ -130,8 +130,8 @@ test.describe('Generate orders with promotions and interest-free services', () =
             Service.garantiaSepMesmoProc(); 
             Service.clickOKServiceLinked();
             ValidateService.servLinked() ; ValidateService.AddGarantSepMesmoProc()
-            ThrowDelivery.freightFirst() 
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightFirst(); 
+            AdvanceNormal.toInstallments();
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
             Promotion.addPrestamista()

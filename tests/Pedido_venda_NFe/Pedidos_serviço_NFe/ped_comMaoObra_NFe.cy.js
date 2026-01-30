@@ -17,7 +17,7 @@ test.describe('Generate orders with labor', () => {
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
-        ProcessoVendaPage.NFe()
+        ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
         Product.fisrt();
         ValidateBalance.withBalance();
@@ -34,8 +34,8 @@ test.describe('Generate orders with labor', () => {
             Service.garantiaNaoSep(); 
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addMODestNãoSepara()
-            ThrowDelivery.freightFirst() 
-            AdvanceNormal.toInstallments() 
+            ThrowDelivery.freightFirst(); 
+            AdvanceNormal.toInstallments(); 
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -50,7 +50,7 @@ test.describe('Generate orders with labor', () => {
             Service.garantiaNaoSep();  
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addMODestNãoSepara()
-            ThrowDelivery.freightFirst() 
+            ThrowDelivery.freightFirst(); 
             Product.second();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
@@ -58,8 +58,8 @@ test.describe('Generate orders with labor', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();  
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightSecond() 
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightSecond(); 
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -74,8 +74,8 @@ test.describe('Generate orders with labor', () => {
             Service.garantiaSepMesmoProc(); 
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc()
-            ThrowDelivery.freightFirst() 
-            AdvanceNormal.toInstallments()  
+            ThrowDelivery.freightFirst(); 
+            AdvanceNormal.toInstallments();  
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -90,7 +90,7 @@ test.describe('Generate orders with labor', () => {
             Service.garantiaSepMesmoProc(); 
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc()
-            ThrowDelivery.freightFirst() 
+            ThrowDelivery.freightFirst(); 
             Product.second();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
@@ -98,8 +98,8 @@ test.describe('Generate orders with labor', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();  
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightSecond() 
-            AdvanceNormal.toInstallments() 
+            ThrowDelivery.freightSecond(); 
+            AdvanceNormal.toInstallments(); 
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -114,8 +114,8 @@ test.describe('Generate orders with labor', () => {
             Service.garantiaSepTituloProcDif(); 
             Service.clickOKServiceLinked(); 
             ValidateService.servViservLinkednc() ; ValidateService.addMONaoDestSepProcDif()
-            ThrowDelivery.freightFirst() 
-            AdvanceNormal.toInstallments() 
+            ThrowDelivery.freightFirst(); 
+            AdvanceNormal.toInstallments(); 
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -130,7 +130,7 @@ test.describe('Generate orders with labor', () => {
             Service.garantiaSepTituloProcDif(); 
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepProcDif()
-            ThrowDelivery.freightFirst() 
+            ThrowDelivery.freightFirst(); 
             Product.second();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
@@ -138,8 +138,8 @@ test.describe('Generate orders with labor', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();  
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightSecond() 
-            AdvanceNormal.toInstallments() 
+            ThrowDelivery.freightSecond(); 
+            AdvanceNormal.toInstallments(); 
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -158,7 +158,7 @@ test.describe('Generate orders with labor', () => {
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addMODestNãoSepara()
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -181,7 +181,7 @@ test.describe('Generate orders with labor', () => {
             Service.validateModalServLinked();  
             Service.clickOKServiceLinked(); 
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -197,7 +197,7 @@ test.describe('Generate orders with labor', () => {
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc()
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -220,7 +220,7 @@ test.describe('Generate orders with labor', () => {
             Service.validateModalServLinked();  - SEGUNDO PRODUTP
             Service.clickOKServiceLinked(); 
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -236,7 +236,7 @@ test.describe('Generate orders with labor', () => {
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepProcDif()
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -259,7 +259,7 @@ test.describe('Generate orders with labor', () => {
             Service.validateModalServLinked();  
             Service.clickOKServiceLinked(); 
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();

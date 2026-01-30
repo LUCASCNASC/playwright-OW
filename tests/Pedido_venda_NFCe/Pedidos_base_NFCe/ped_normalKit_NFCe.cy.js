@@ -30,7 +30,7 @@ test.describe('Generate a standard order with delivery.', () => {
         test('1.Order: kit 1862 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct();
-            GeralPedidosPage.compositionKit();
+            GeralPedidosPage.compositionKit();;
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();

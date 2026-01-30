@@ -19,7 +19,7 @@ test.describe('Generate orders with Fixed Value Discount Service (161)', () => {
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
-        ProcessoVendaPage.NFe()
+        ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
     })   
 
@@ -35,7 +35,7 @@ test.describe('Generate orders with Fixed Value Discount Service (161)', () => {
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.futWithoutRebVF()
@@ -66,7 +66,7 @@ test.describe('Generate orders with Fixed Value Discount Service (161)', () => {
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.futWithoutRebVF()
@@ -95,7 +95,7 @@ test.describe('Generate orders with Fixed Value Discount Service (161)', () => {
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeralPedidosPage.clickEditInstallments()
@@ -123,7 +123,7 @@ test.describe('Generate orders with Fixed Value Discount Service (161)', () => {
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.garantiaNaoSep();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeralPedidosPage.clickEditInstallments()
@@ -151,7 +151,7 @@ test.describe('Generate orders with Fixed Value Discount Service (161)', () => {
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.garantiaNaoSep();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeralPedidosPage.clickEditInstallments()
@@ -177,7 +177,7 @@ test.describe('Generate orders with Fixed Value Discount Service (161)', () => {
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.presentMoneyRebVF()

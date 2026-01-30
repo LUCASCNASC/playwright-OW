@@ -19,7 +19,7 @@ test.describe('Generate orders with Fixed Value Discount Service - Service Origi
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
-        ProcessoVendaPage.NFe()
+        ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
     })   
 
@@ -35,7 +35,7 @@ test.describe('Generate orders with Fixed Value Discount Service - Service Origi
             Service.validateModalServLinked();
             Service.clickOKServiceLinked(); 
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.futComJurosPrestAbatOrigemPrd()
@@ -66,7 +66,7 @@ test.describe('Generate orders with Fixed Value Discount Service - Service Origi
             Service.validateModalServLinked();
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.futComJurosPrestAbatOrigemPrd()
@@ -95,7 +95,7 @@ test.describe('Generate orders with Fixed Value Discount Service - Service Origi
             Service.validateModalServLinked();
             Service.clickOKServiceLinked(); 
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeralPedidosPage.clickEditInstallments()
@@ -122,7 +122,7 @@ test.describe('Generate orders with Fixed Value Discount Service - Service Origi
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeralPedidosPage.clickEditInstallments()

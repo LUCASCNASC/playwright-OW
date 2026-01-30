@@ -17,7 +17,7 @@ test.describe('Remote/process 9860 - Balance rule Parameter 36 = 4 - Parameter 1
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
-        ProcessoVendaPage.NFe()
+        ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
     })
 
@@ -35,7 +35,7 @@ test.describe('Remote/process 9860 - Balance rule Parameter 36 = 4 - Parameter 1
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
@@ -66,7 +66,7 @@ test.describe('Remote/process 9860 - Balance rule Parameter 36 = 4 - Parameter 1
             Service.validateModalServLinked();
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
@@ -84,12 +84,12 @@ test.describe('Remote/process 9860 - Balance rule Parameter 36 = 4 - Parameter 1
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             GeralPedidosPage.changeBranchInvoicing()
-            GeralPedidosPage.compositionKit()
+            GeralPedidosPage.compositionKit();
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
@@ -114,7 +114,7 @@ test.describe('Remote/process 9860 - Balance rule Parameter 36 = 4 - Parameter 1
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();

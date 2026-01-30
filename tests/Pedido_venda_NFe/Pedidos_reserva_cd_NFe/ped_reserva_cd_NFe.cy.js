@@ -17,7 +17,7 @@ test.describe('Generate order with reservation in the CD - Balance rule Paramete
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
-        ProcessoVendaPage.NFe()
+        ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
     })
 
@@ -32,8 +32,8 @@ test.describe('Generate order with reservation in the CD - Balance rule Paramete
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightFirst() 
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightFirst(); 
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
@@ -52,7 +52,7 @@ test.describe('Generate order with reservation in the CD - Balance rule Paramete
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightFirst() 
+            ThrowDelivery.freightFirst(); 
             Product.second();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
@@ -60,8 +60,8 @@ test.describe('Generate order with reservation in the CD - Balance rule Paramete
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightSecond() 
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightSecond(); 
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
@@ -84,7 +84,7 @@ test.describe('Generate order with reservation in the CD - Balance rule Paramete
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
@@ -111,7 +111,7 @@ test.describe('Generate order with reservation in the CD - Balance rule Paramete
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();

@@ -18,7 +18,7 @@ test.describe('Generate a standard order with interest discount - parameters 243
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
-        ProcessoVendaPage.NFe()
+        ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
         Product.roundUpDown()
         ValidateBalance.withBalance();
@@ -33,8 +33,8 @@ test.describe('Generate a standard order with interest discount - parameters 243
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightFirst() 
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightFirst(); 
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
@@ -54,8 +54,8 @@ test.describe('Generate a standard order with interest discount - parameters 243
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked(); 
-            ThrowDelivery.freightFirst() 
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightFirst(); 
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();

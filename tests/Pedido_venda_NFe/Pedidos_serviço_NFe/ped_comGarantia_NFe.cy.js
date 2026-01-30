@@ -17,7 +17,7 @@ test.describe('Generate orders with Guarantee', () => {
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
-        ProcessoVendaPage.NFe()
+        ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
         Product.fisrt();
         ValidateBalance.withBalance();
@@ -34,8 +34,8 @@ test.describe('Generate orders with Guarantee', () => {
             Service.maoObraNaoDestSepMesmoProc(); 
             Service.clickOKServiceLinked();  
             ValidateService.servLinked() ; ValidateService.AddGarantSepMesmoProc()
-            ThrowDelivery.freightFirst() 
-            AdvanceNormal.toInstallments() 
+            ThrowDelivery.freightFirst(); 
+            AdvanceNormal.toInstallments(); 
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -50,7 +50,7 @@ test.describe('Generate orders with Guarantee', () => {
             Service.maoObraNaoDestSepMesmoProc(); 
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.AddGarantSepMesmoProc()
-            ThrowDelivery.freightFirst() 
+            ThrowDelivery.freightFirst(); 
             Product.second();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
@@ -58,8 +58,8 @@ test.describe('Generate orders with Guarantee', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();  
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightSecond() 
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightSecond(); 
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -74,8 +74,8 @@ test.describe('Generate orders with Guarantee', () => {
             Service.maoObraDestNãoSep(); 
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
-            ThrowDelivery.freightFirst() 
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightFirst(); 
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -90,7 +90,7 @@ test.describe('Generate orders with Guarantee', () => {
             Service.maoObraDestNãoSep(); 
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
-            ThrowDelivery.freightFirst() 
+            ThrowDelivery.freightFirst(); 
             Product.second();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
@@ -98,8 +98,8 @@ test.describe('Generate orders with Guarantee', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();  
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightSecond() 
-            AdvanceNormal.toInstallments() 
+            ThrowDelivery.freightSecond(); 
+            AdvanceNormal.toInstallments(); 
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -114,8 +114,8 @@ test.describe('Generate orders with Guarantee', () => {
             Service.maoObraNaoDestSepaProcDif(); //Marcar Garantia separa titulo em um processo diferente
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addGarantSepTituloProcDif()
-            ThrowDelivery.freightFirst() 
-            AdvanceNormal.toInstallments() 
+            ThrowDelivery.freightFirst(); 
+            AdvanceNormal.toInstallments(); 
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -130,7 +130,7 @@ test.describe('Generate orders with Guarantee', () => {
             Service.maoObraNaoDestSepaProcDif(); //Marcar Garantia separa titulo em um processo diferente
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addGarantSepTituloProcDif()
-            ThrowDelivery.freightFirst() 
+            ThrowDelivery.freightFirst(); 
             Product.second();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
@@ -138,8 +138,8 @@ test.describe('Generate orders with Guarantee', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();  
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightSecond() 
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightSecond(); 
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -158,7 +158,7 @@ test.describe('Generate orders with Guarantee', () => {
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.AddGarantSepMesmoProc()
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -181,7 +181,7 @@ test.describe('Generate orders with Guarantee', () => {
             Service.validateModalServLinked();  
             Service.clickOKServiceLinked(); 
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -197,7 +197,7 @@ test.describe('Generate orders with Guarantee', () => {
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -220,7 +220,7 @@ test.describe('Generate orders with Guarantee', () => {
             Service.validateModalServLinked();  
             Service.clickOKServiceLinked(); 
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -236,7 +236,7 @@ test.describe('Generate orders with Guarantee', () => {
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addGarantSepTituloProcDif()
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments() 
+            AdvanceNormal.toInstallments(); 
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -258,7 +258,7 @@ test.describe('Generate orders with Guarantee', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.clickOKServiceLinked(); 
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();

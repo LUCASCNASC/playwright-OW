@@ -17,7 +17,7 @@ test.describe('Generate request with credit proposal', () => {
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
-        ProcessoVendaPage.NFe()
+        ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
         Product.fisrt();
         ValidateBalance.withBalance();
@@ -32,15 +32,15 @@ test.describe('Generate request with credit proposal', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightFirst() 
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightFirst(); 
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.proposalCredit()
             ParcelasPage.one()
             AdvanceNormal.final();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
-            FinalizarPedidoPage.validatePropCreditGenerated()
+            FinalizarPedidoPage.validatePropCreditGenerated();
             FinalizarPedidoPage.validateOrderGenerated();
         })
     })

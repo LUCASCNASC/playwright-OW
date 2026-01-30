@@ -17,7 +17,7 @@ test.describe('Generate order with financial data at low level', () => {
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
-        ProcessoVendaPage.financePaymentNFe()
+        ProcessoVendaPage.financePaymentNFe();
         ChooseCliente.withRoute();
         Product.fisrt();
         ValidateBalance.withBalance();
@@ -32,8 +32,8 @@ test.describe('Generate order with financial data at low level', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightFirst() 
-            AdvanceNormal.toInstallments() 
+            ThrowDelivery.freightFirst(); 
+            AdvanceNormal.toInstallments(); 
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -49,7 +49,7 @@ test.describe('Generate order with financial data at low level', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightFirst() 
+            ThrowDelivery.freightFirst(); 
             Product.second();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
@@ -57,8 +57,8 @@ test.describe('Generate order with financial data at low level', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightSecond() 
-            AdvanceNormal.toInstallments() 
+            ThrowDelivery.freightSecond(); 
+            AdvanceNormal.toInstallments(); 
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
@@ -78,7 +78,7 @@ test.describe('Generate order with financial data at low level', () => {
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
@@ -102,7 +102,7 @@ test.describe('Generate order with financial data at low level', () => {
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();

@@ -17,7 +17,7 @@ test.describe('Generate future delivery order', () => {
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
-        ProcessoVendaPage.deliveryFutureNFe()
+        ProcessoVendaPage.deliveryFutureNFe();
         ChooseCliente.withRoute();
         Product.fisrt();
         ValidateBalance.withBalance();
@@ -32,8 +32,8 @@ test.describe('Generate future delivery order', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightFirst() 
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightFirst(); 
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main(); 
@@ -48,8 +48,8 @@ test.describe('Generate future delivery order', () => {
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
-            clicarOKServVinServico.clickOKServiceLinked()
-            ThrowDelivery.freightFirst() 
+            clicarOKServVinServico.clickOKServiceLinked();
+            ThrowDelivery.freightFirst(); 
             Product.second();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
@@ -57,9 +57,9 @@ test.describe('Generate future delivery order', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightSecond() 
-            AdvanceNormal.clickGenerateInstallments()
-            GeralPagamentoPage.clicarGerarParcelas() 
+            ThrowDelivery.freightSecond(); 
+            AdvanceNormal.clickGenerateInstallments();
+            GeralPagamentoPage.clicarGerarParcelas(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main(); 
             ParcelasPage.two();
@@ -78,7 +78,7 @@ test.describe('Generate future delivery order', () => {
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main(); 
@@ -102,7 +102,7 @@ test.describe('Generate future delivery order', () => {
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter(); //TRANSPORTADORA
-            AdvanceNormal.toInstallments() 
+            AdvanceNormal.toInstallments(); 
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main(); 

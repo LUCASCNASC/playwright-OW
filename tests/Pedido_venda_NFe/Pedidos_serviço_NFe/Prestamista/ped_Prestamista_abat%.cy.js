@@ -22,7 +22,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
-        ProcessoVendaPage.NFe()
+        ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
     })   
 
@@ -37,7 +37,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
             Service.clickOKServiceLinked(); 
-            ThrowDelivery.freightFirst()
+            ThrowDelivery.freightFirst();
             Product.second();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
@@ -45,8 +45,8 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();  
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightSecond()
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightSecond();
+            AdvanceNormal.toInstallments();
             PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.futMoneyWithFees()
@@ -68,7 +68,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightFirst()
+            ThrowDelivery.freightFirst();
             Product.second();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
@@ -76,8 +76,8 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightSecond()
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightSecond();
+            AdvanceNormal.toInstallments();
             PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.presentMoney()
@@ -110,7 +110,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.futMoneyWithoutFees()
@@ -142,7 +142,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.futMoneyWithFees()
@@ -174,7 +174,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.validateModalServLinked();  
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.futMoneyWithoutFees()
@@ -206,7 +206,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.validateModalServLinked();  
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.presentMoney()
@@ -234,8 +234,8 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
             Service.clickOKServiceLinked(); 
-            ThrowDelivery.freightFirst()
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightFirst();
+            AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeralPedidosPage.clickEditInstallments()
@@ -260,8 +260,8 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
             Service.clickOKServiceLinked(); 
-            ThrowDelivery.freightFirst()
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightFirst();
+            AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeralPedidosPage.clickEditInstallments()
@@ -287,8 +287,8 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.validateModalServLinked();
             ValidateService.garantiaNaoSep();
             Service.clickOKServiceLinked(); 
-            ThrowDelivery.freightFirst()
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightFirst();
+            AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeralPedidosPage.clickEditInstallments()
@@ -319,7 +319,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_pagamentoPedido')
             cy.wait('@api_pagamentoPedido', { timeout: 40000 })
             PagamentoPage.insertDateTomorrow1Due()
@@ -351,7 +351,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_pagamentoPedido')
             cy.wait('@api_pagamentoPedido', { timeout: 40000 })
             //TicketPrestamista.added() 
@@ -383,8 +383,8 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             ValidateService.garantiaNaoSep();
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
-            ThrowDelivery.freightFirst()
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightFirst();
+            AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeralPedidosPage.clickEditInstallments()
@@ -420,8 +420,8 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightSecond()
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightSecond();
+            AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeralPedidosPage.clickEditInstallments()
@@ -450,7 +450,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
             Service.clickOKServiceLinked(); 
-            ThrowDelivery.freightFirst()
+            ThrowDelivery.freightFirst();
             Product.second();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
@@ -458,8 +458,8 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightSecond()
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightSecond();
+            AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeralPedidosPage.clickEditInstallments()
@@ -492,7 +492,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
             Service.clickOKServiceLinked(); 
-            ThrowDelivery.freightFirst()
+            ThrowDelivery.freightFirst();
             Product.second();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
@@ -500,8 +500,8 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightSecond()
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightSecond();
+            AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeralPedidosPage.clickEditInstallments()
@@ -530,7 +530,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
             Service.clickOKServiceLinked(); 
-            ThrowDelivery.freightFirst()
+            ThrowDelivery.freightFirst();
             Product.second();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
@@ -538,8 +538,8 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightSecond()
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightSecond();
+            AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeralPedidosPage.clickEditInstallments()
@@ -575,7 +575,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.validateModalServLinked();
             Service.clickOKServiceLinked(); 
             ThrowDelivery.primeiro()
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeralPedidosPage.clickEditInstallments()
@@ -613,7 +613,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.validateModalServLinked();
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeralPedidosPage.clickEditInstallments()
@@ -654,7 +654,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.validateModalServLinked();
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             // TicketPrestamista.added() 
@@ -700,7 +700,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.validateModalServLinked();
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeralPedidosPage.clickEditInstallments()
@@ -741,7 +741,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.validateModalServLinked();
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             // TicketPrestamista.added() 
@@ -788,7 +788,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             ValidateService.garantiaNaoSep();
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             GeralPedidosPage.clickEditInstallments()
@@ -830,7 +830,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             ValidateService.garantiaNaoSep();
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
             cy.wait('@api_icons', { timeout: 40000 })
             // TicketPrestamista.added() 

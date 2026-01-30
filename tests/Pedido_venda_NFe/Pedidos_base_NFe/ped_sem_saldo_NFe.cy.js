@@ -10,7 +10,7 @@ test.describe('Attempting to generate a sales order with an out-of-stock product
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
-        ProcessoVendaPage.NFe()
+        ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
     })
 
@@ -18,8 +18,8 @@ test.describe('Attempting to generate a sales order with an out-of-stock product
 
         test('1.Order: product 1869 0 0 (Local sale of product without balance - without delivery)',  async ({ page }) => {
             
-            Product.withoutBalance()
-            ValidarSaldo.comSaldo() 
+            Product.withoutBalance();
+            ValidarSaldo.comSaldo();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
 
@@ -29,7 +29,7 @@ test.describe('Attempting to generate a sales order with an out-of-stock product
                 .and('be.visible')
                 .and('have.text','Este produto não possui saldo na filial selecionada.')
                 .invoke('css', 'color') // Obtém a cor do elemento
-                .should('equal', 'rgb(244, 67, 54)')
+                .should('equal', 'rgb(244, 67, 54)');
 
             //Validando mensagem "Este produto não possui saldo na filial selecionada, será permitido apenas a simulação da venda."
             cy.get('[ng-show="(itemGradeSelecionado && itemGradeSelecionado.valor > 0)"] > :nth-child(1) > .mensagem-erro-centralizada > p')
@@ -39,13 +39,13 @@ test.describe('Attempting to generate a sales order with an out-of-stock product
                 .and('be.visible')
                 .and('have.text','Este produto não possui saldo na filial selecionada, será permitido apenas a simulação da venda.')
                 .invoke('css', 'color') // Obtém a cor do elemento
-                .should('equal', 'rgb(244, 67, 54)')
+                .should('equal', 'rgb(244, 67, 54)');
 
             //Validando botão Adicionar para Simulação
             cy.get('[ng-if="(localSaldoSelecionado && itemGradeSelecionado && validaEstoqueFilial(itemGradeSelecionado.filial) && itemGradeSelecionado.valor > 0 && btnAdicionarLiberado) || semSaldoCD"] > .md-accent')
                 .should('exist')
                 .and('not.be.disabled')
-                .and('contain',' Adicionar para Simulação')
+                .and('contain',' Adicionar para Simulação');
         })
     })
 })

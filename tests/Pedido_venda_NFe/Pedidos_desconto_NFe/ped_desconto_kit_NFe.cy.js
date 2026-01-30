@@ -19,7 +19,7 @@ test.describe('Generate sales order for discounted kit', () => {
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
-        ProcessoVendaPage.NFe()
+        ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
     })
 
@@ -31,15 +31,15 @@ test.describe('Generate sales order for discounted kit', () => {
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
-            GeralPedidosPage.compositionKit()
+            GeralPedidosPage.compositionKit();
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             OrderDiscount.clickButtonDiscount() 
             OrderDiscount.validateModalSub()
             OrderDiscount.aplicarDescontoValorFixo()
-            ThrowDelivery.freightFirst()
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightFirst();
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();

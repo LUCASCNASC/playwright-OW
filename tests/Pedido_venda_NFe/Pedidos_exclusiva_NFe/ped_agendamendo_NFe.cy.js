@@ -19,7 +19,7 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
-        ProcessoVendaPage.NFe()
+        ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
     })
 
@@ -43,7 +43,7 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
             AdvanceNormal.toTransporter();
             GeneralDelivery.modalInconsApenasTransp()
             GeneralDelivery.escolherTransportadora()
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.carregandoFormaPagamento()
             ProcessoRecebPage.main();
@@ -70,7 +70,7 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
             AdvanceNormal.toTransporter();
             GeneralDelivery.modalInconsApenasTransp()
             GeneralDelivery.escolherTransportadora()
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.carregandoFormaPagamento()
             ProcessoRecebPage.main();
@@ -95,7 +95,7 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
             AdvanceNormal.toTransporter();
             GeneralDelivery.modalInconsApenasTransp()
             GeneralDelivery.escolherTransportadora()
-            AdvanceNormal.toInstallments()
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.carregandoFormaPagamento()
             ProcessoRecebPage.main();
@@ -131,8 +131,8 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightFirst() 
-            AdvanceNormal.toInstallments()
+            ThrowDelivery.freightFirst(); 
+            AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();

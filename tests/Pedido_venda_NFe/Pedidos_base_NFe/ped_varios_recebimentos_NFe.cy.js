@@ -18,7 +18,7 @@ test.describe('Generate an order with more than one payment method', () => {
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
-        ProcessoVendaPage.NFe()
+        ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
         Product.fisrt();
         ValidateBalance.withBalance();
@@ -33,15 +33,15 @@ test.describe('Generate an order with more than one payment method', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightFirst() 
-            AdvanceNormal.toInstallments()
-            AgruparRecebPage.firstValueInstallment() 
+            ThrowDelivery.freightFirst(); 
+            AdvanceNormal.toInstallments();
+            AgruparRecebPage.firstValueInstallment();
             GeralPagamentoPage.clickGenerateInstallments();
             GeralPagamentoPage.carregandoFormaPagamento()
             ProcessoRecebPage.debitTEF()
             ParcelasPage.one()
             GeralPagamentoPage.clickGenerateInstallments();
-            GeralPagamentoPage.carregandoFormaPagamento()
+            GeralPagamentoPage.carregandoFormaPagamento();
             ProcessoRecebPage.main();
             ParcelasPage.two();
             AdvanceNormal.final();
@@ -55,10 +55,10 @@ test.describe('Generate an order with more than one payment method', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightFirst() 
-            AdvanceNormal.toInstallments()
-            GeralPagamentoPage.chooseEntryFormPayment()
-            GeralPagamentoPage.clicarGerarPagamento()
+            ThrowDelivery.freightFirst(); 
+            AdvanceNormal.toInstallments();
+            GeralPagamentoPage.chooseEntryFormPayment();
+            GeralPagamentoPage.clicarGerarPagamento();
             GeralPagamentoPage.clickGenerateInstallments();
             GeralPagamentoPage.carregandoFormaPagamento()
             ProcessoRecebPage.main(); 
@@ -74,18 +74,18 @@ test.describe('Generate an order with more than one payment method', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightFirst() 
-            AdvanceNormal.toInstallments()
-            AgruparRecebPage.firstValueInstallment() 
+            ThrowDelivery.freightFirst(); 
+            AdvanceNormal.toInstallments();
+            AgruparRecebPage.firstValueInstallment();
             GeralPagamentoPage.clickGenerateInstallments();  
-            GeralPagamentoPage.carregandoFormaPagamento()
+            GeralPagamentoPage.carregandoFormaPagamento();
             ProcessoRecebPage.main();
-            ParcelasPage.one()
+            ParcelasPage.one();
             GeralPagamentoPage.clickGenerateInstallments();  
-            GeralPagamentoPage.carregandoFormaPagamento()
+            GeralPagamentoPage.carregandoFormaPagamento();
             ProcessoRecebPage.main(); 
-            ParcelasPage.one()
-            AgruparRecebPage.notGroupReleases()
+            ParcelasPage.one();
+            AgruparRecebPage.notGroupReleases();
             AdvanceNormal.final();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
@@ -97,18 +97,18 @@ test.describe('Generate an order with more than one payment method', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightFirst() 
-            AdvanceNormal.toInstallments()
-            AgruparRecebPage.firstValueInstallment() 
+            ThrowDelivery.freightFirst(); 
+            AdvanceNormal.toInstallments();
+            AgruparRecebPage.firstValueInstallment();
             GeralPagamentoPage.clickGenerateInstallments();  
-            GeralPagamentoPage.carregandoFormaPagamento()
+            GeralPagamentoPage.carregandoFormaPagamento();
             ProcessoRecebPage.main();
-            ParcelasPage.one()
+            ParcelasPage.one();
             GeralPagamentoPage.clickGenerateInstallments();  
-            GeralPagamentoPage.carregandoFormaPagamento()
+            GeralPagamentoPage.carregandoFormaPagamento();
             ProcessoRecebPage.main(); 
-            ParcelasPage.one()
-            AgruparRecebPage.groupReleases()
+            ParcelasPage.one();
+            AgruparRecebPage.groupReleases();
             AdvanceNormal.final();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
@@ -120,20 +120,20 @@ test.describe('Generate an order with more than one payment method', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            ThrowDelivery.freightFirst() 
-            AdvanceNormal.toInstallments()
-            AgruparRecebPage.firstValueInstallment() 
+            ThrowDelivery.freightFirst(); 
+            AdvanceNormal.toInstallments();
+            AgruparRecebPage.firstValueInstallment();
             GeralPagamentoPage.clickGenerateInstallments();  
-            GeralPagamentoPage.carregandoFormaPagamento()
+            GeralPagamentoPage.carregandoFormaPagamento();
             ProcessoRecebPage.main();
-            ParcelasPage.one()
+            ParcelasPage.one();
             GeralPagamentoPage.clickGenerateInstallments();  
-            GeralPagamentoPage.carregandoFormaPagamento()
+            GeralPagamentoPage.carregandoFormaPagamento();
             ProcessoRecebPage.main(); 
-            ParcelasPage.one()
-            AgruparRecebPage.notGroupReleases()
-            AgruparRecebPage.selectReleasesGroup()
-            AgruparRecebPage.clickGroup()
+            ParcelasPage.one();
+            AgruparRecebPage.notGroupReleases();
+            AgruparRecebPage.selectReleasesGroup();
+            AgruparRecebPage.clickGroup();
             AdvanceNormal.final();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
