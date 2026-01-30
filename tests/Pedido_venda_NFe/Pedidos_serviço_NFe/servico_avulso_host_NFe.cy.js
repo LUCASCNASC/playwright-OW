@@ -33,7 +33,7 @@ test.describe('Sale of individual Host service - 104', () => {
             PagamentoPage.clickGenerateInstallments() 
             PagamentoPage.loadingFormPayment()
             ProcessoRecebPage.main();
-            ParcelasPage.one()
+            ParcelasPage.one();
             AdvanceNormal.final();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();

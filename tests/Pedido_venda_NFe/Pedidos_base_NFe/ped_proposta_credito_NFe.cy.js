@@ -37,7 +37,7 @@ test.describe('Generate request with credit proposal', () => {
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.proposalCredit()
-            ParcelasPage.one()
+            ParcelasPage.one();
             AdvanceNormal.final();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validatePropCreditGenerated();

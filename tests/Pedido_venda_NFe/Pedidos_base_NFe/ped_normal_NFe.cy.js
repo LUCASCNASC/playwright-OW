@@ -82,7 +82,7 @@ test.describe('Generate normal order', () => {
             GeralPagamentoPage.clickGenerateInstallments();
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
-            ParcelasPage.one()
+            ParcelasPage.one();
             AdvanceNormal.final();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();

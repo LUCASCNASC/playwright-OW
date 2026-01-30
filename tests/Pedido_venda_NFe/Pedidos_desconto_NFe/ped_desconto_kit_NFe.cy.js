@@ -27,7 +27,7 @@ test.describe('Generate sales order for discounted kit', () => {
 
         test('1.Order: kit 1862 0 0 with discount Sub (-) / FIXED VALUE',  async ({ page }) => {
 
-            Product.kitDiscount()
+            Product.kitDiscount();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
@@ -35,9 +35,9 @@ test.describe('Generate sales order for discounted kit', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            OrderDiscount.clickButtonDiscount() 
-            OrderDiscount.validateModalSub()
-            OrderDiscount.aplicarDescontoValorFixo()
+            OrderDiscount.clickButtonDiscount(); 
+            OrderDiscount.validateModalSub();
+            OrderDiscount.aplicarDescontoValorFixo();
             ThrowDelivery.freightFirst();
             AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 

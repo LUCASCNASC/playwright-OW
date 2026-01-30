@@ -20,7 +20,7 @@ test.describe('Generate a standard order with interest discount - parameters 243
         CommandsGeneral.tituloPagina();
         ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
-        Product.roundUpDown()
+        Product.roundUpDown();
         ValidateBalance.withBalance();
         CommandsGeneral.selectProductSearch();
     })
@@ -38,11 +38,11 @@ test.describe('Generate a standard order with interest discount - parameters 243
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
-            ParcelasPage.one()
-            OrderDiscount.dragFormPayment()
-            OrderDiscount.clickChangeValue()
-            OrderDiscount.modalChangeValue()
-            OrderDiscount.changeValueToLow()
+            ParcelasPage.one();
+            OrderDiscount.dragFormPayment();
+            OrderDiscount.clickChangeValue();
+            OrderDiscount.modalChangeValue();
+            OrderDiscount.changeValueToLow();
             AdvanceNormal.final();
             FinalizarPedidoPage.clickFinalizarPedidoPage(); 
             FinalizarPedidoPage.validateOrderGenerated();
@@ -59,10 +59,10 @@ test.describe('Generate a standard order with interest discount - parameters 243
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
-            ParcelasPage.one()
-            OrderDiscount.dragFormPayment() 
-            OrderDiscount.clickChangeValue()
-            OrderDiscount.modalChangeValue()
+            ParcelasPage.one();
+            OrderDiscount.dragFormPayment(); 
+            OrderDiscount.clickChangeValue();
+            OrderDiscount.modalChangeValue();
             OrderDiscount.changeValueToTop()
             AdvanceNormal.final();
             FinalizarPedidoPage.clickFinalizarPedidoPage();

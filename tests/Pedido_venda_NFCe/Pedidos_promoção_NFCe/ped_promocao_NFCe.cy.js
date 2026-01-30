@@ -29,7 +29,7 @@ test.describe('Generate promotional orders with delivery', () => {
             CommandsGeneral.selectProductSearch(); ; 
             Promotion.ticketPromotion(); 
             CommandsGeneral.clickVoltageProduct();
-            Promotion.selectFirstPromoProduct()
+            Promotion.selectFirstPromoProduct();
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked(); 
@@ -51,12 +51,12 @@ test.describe('Generate promotional orders with delivery', () => {
     
         test('2.Order with installment payment promotion with down payment (promotion 150): product 1866 0 0',  async ({ page }) => {
     
-            Product.promoDeadlineEntry()
+            Product.promoDeadlineEntry();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch(); ; 
             Promotion.ticketPromotion(); 
             CommandsGeneral.clickVoltageProduct();
-            Promotion.selectFirstPromoProduct() 
+            Promotion.selectFirstPromoProduct(); 
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
@@ -77,7 +77,7 @@ test.describe('Generate promotional orders with delivery', () => {
             CommandsGeneral.selectProductSearch(); ; 
             Promotion.ticketPromotion();
             CommandsGeneral.clickVoltageProduct();
-            Promotion.selectFirstPromoProduct() 
+            Promotion.selectFirstPromoProduct(); 
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();

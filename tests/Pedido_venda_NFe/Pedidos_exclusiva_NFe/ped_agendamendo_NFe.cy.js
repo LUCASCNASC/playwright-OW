@@ -27,7 +27,7 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
 
         test('1.Order: normal product (with balance and with delivery, 15 days) and a remote kit (2 compositions, without balance and without receivable, 20 days).',  async ({ page }) => {
 
-            ProductExclusiva.firstNormal() 
+            ProductExclusiva.firstNormal(); 
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
@@ -35,17 +35,17 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             ProductExclusiva.kitWithoutBalanceScheduling() 
-            ValidateBalance.withoutBalance() 
+            ValidateBalance.withoutBalance(); 
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
-            GeralPedidosPage.trocarFilialFaturamento()
+            GeralPedidosPage.trocarFilialFaturamento();
             CommandsGeneral.clickAddProduct(); 
             AdvanceNormal.toTransporter();
-            GeneralDelivery.modalInconsApenasTransp()
-            GeneralDelivery.escolherTransportadora()
+            GeneralDelivery.modalInconsApenasTransp();
+            GeneralDelivery.escolherTransportadora();
             AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
-            GeralPagamentoPage.carregandoFormaPagamento()
+            GeralPagamentoPage.carregandoFormaPagamento();
             ProcessoRecebPage.main();
             ParcelasPage.two();
             AdvanceNormal.final();
@@ -55,24 +55,24 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
 
         test('2.Order: normal product (with balance and with delivery) and a kit with 6 compositions (current date + parameter 552/ 5 days).',  async ({ page }) => {
 
-            ProductExclusiva.firstNormal()
+            ProductExclusiva.firstNormal();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            ProductExclusiva.kitVolumes() 
+            ProductExclusiva.kitVolumes(); 
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             AdvanceNormal.toTransporter();
-            GeneralDelivery.modalInconsApenasTransp()
-            GeneralDelivery.escolherTransportadora()
+            GeneralDelivery.modalInconsApenasTransp();
+            GeneralDelivery.escolherTransportadora();
             AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
-            GeralPagamentoPage.carregandoFormaPagamento()
+            GeralPagamentoPage.carregandoFormaPagamento();
             ProcessoRecebPage.main();
             ParcelasPage.two();
             AdvanceNormal.final();
@@ -85,7 +85,7 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
 
         test('3.Order: a product (without balance and with balance to receive for 10 days, and with delivery), and have an appointment for the forecast date.',  async ({ page }) => {
 
-            ProductExclusiva.balanceReceive()
+            ProductExclusiva.balanceReceive();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
@@ -93,11 +93,11 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
-            GeneralDelivery.modalInconsApenasTransp()
-            GeneralDelivery.escolherTransportadora()
+            GeneralDelivery.modalInconsApenasTransp();
+            GeneralDelivery.escolherTransportadora();
             AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
-            GeralPagamentoPage.carregandoFormaPagamento()
+            GeralPagamentoPage.carregandoFormaPagamento();
             ProcessoRecebPage.main();
             ParcelasPage.two();
             AdvanceNormal.final();
@@ -111,20 +111,20 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
             PedExclusiva.balanceRemoteReceive()
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
-            GeralPedidosPage.trocarFilialFaturamento()
+            GeralPedidosPage.trocarFilialFaturamento();
             PedExclusiva.increaseAmountSaleFive()
             CommandsGeneral.selectProductSearch();
             ProductExclusiva.balanceReceiveTwoLines() 
             PedExclusiva.balanceRemoteReceive()
             CommandsGeneral.clickVoltageProduct(); 
             CommandsGeneral.clickAddProduct(); 
-            GeralPedidosPage.trocarFilialFaturamento()
+            GeralPedidosPage.trocarFilialFaturamento();
             PedExclusiva.increaseAmountSaleTen()
         })
 
         test('5.Order: normal sale: product 1896 0 0 (without delivery)',  async ({ page }) => {
     
-            ProductExclusiva.firstNormal() 
+            ProductExclusiva.firstNormal(); 
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();

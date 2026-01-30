@@ -26,22 +26,22 @@ test.describe('Generate a sales order with a discount', () => {
 
         test('1.Order: product 1912 0 0 with discount Sub (-) / R$',  async ({ page }) => {
 
-            Product.discountNumber()
+            Product.discountNumber();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            OrderDiscount.clickButtonDiscount() 
-            OrderDiscount.validateModalSub()
+            OrderDiscount.clickButtonDiscount(); 
+            OrderDiscount.validateModalSub();
             OrderDiscount.applyDiscountR$()
             ThrowDelivery.freightFirst(); 
             AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
-            ParcelasPage.one()
+            ParcelasPage.one();
             AdvanceNormal.final();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
@@ -49,22 +49,22 @@ test.describe('Generate a sales order with a discount', () => {
 
         test('2.Order: product 1913 0 0 with discount Sub (-) / % (Percentage)',  async ({ page }) => {
 
-            Product.discountPercentage()
+            Product.discountPercentage();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            OrderDiscount.clickButtonDiscount() 
-            OrderDiscount.validateModalSub()
-            OrderDiscount.applyDiscountPencentage()
+            OrderDiscount.clickButtonDiscount(); 
+            OrderDiscount.validateModalSub();
+            OrderDiscount.applyDiscountPencentage();
             ThrowDelivery.freightFirst(); 
             AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
-            ParcelasPage.one()
+            ParcelasPage.one();
             AdvanceNormal.final();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
@@ -79,15 +79,15 @@ test.describe('Generate a sales order with a discount', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            OrderDiscount.clickButtonDiscount() 
-            OrderDiscount.validateModalSub()
+            OrderDiscount.clickButtonDiscount(); 
+            OrderDiscount.validateModalSub();
             OrderDiscount.applyDiscountVF()
             ThrowDelivery.freightFirst();() 
             AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
-            ParcelasPage.one()
+            ParcelasPage.one();
             AdvanceNormal.final();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();

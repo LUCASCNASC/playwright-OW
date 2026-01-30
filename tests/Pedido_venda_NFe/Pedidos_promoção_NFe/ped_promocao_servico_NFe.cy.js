@@ -26,23 +26,23 @@ test.describe('Generate orders with promotions and interest-free services', () =
 
         test('1.Order with promotion deadline installment (promotion 159): product 1891 0 0 with guarantee (interest-free)',  async ({ page }) => {
     
-            Product.firstInstallmentDeadline()
+            Product.firstInstallmentDeadline();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             Promotion.typeServiceFreeValidate()
-            Promotion.selectFirstPromoProduct()
+            Promotion.selectFirstPromoProduct();
             ProcessoRecebPromoPage.pagPrincipal();
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.garantiaSepMesmoProc(); 
             Service.clickOKServiceLinked();
-            ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc()
+            ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc();
             ThrowDelivery.freightFirst(); 
             AdvanceNormal.toInstallments();
-            cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
-            cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
+            cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista');
+            cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 });
             AdvanceNormal.final();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
@@ -50,13 +50,13 @@ test.describe('Generate orders with promotions and interest-free services', () =
 
         test('2.Order with promotion deadline with entry + installments (promotion 158): product 1895 0 0 with guarantee (interest-free)',  async ({ page }) => {
 
-            Product.secondInstallmentDeadline()
+            Product.secondInstallmentDeadline();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             Promotion.typeServiceFreeValidate()
-            Promotion.selectFirstPromoProduct()
+            Promotion.selectFirstPromoProduct();
             ProcessoRecebPromoPage.pagPrincipal();
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
@@ -65,25 +65,25 @@ test.describe('Generate orders with promotions and interest-free services', () =
             ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc()
             ThrowDelivery.freightFirst(); 
             AdvanceNormal.toInstallments();
-            cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
-            cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
+            cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista');
+            cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 });
 
             //Selecionando opções de pagamento de entrada
             cy.get('md-option .md-text')
                 .contains('3861 - T.A. A Receber A Vista')
-                .click({force:true})
+                .click({force:true});
 
             //Selecionando processo de receber entrada
             cy.contains('div.md-text.ng-binding', '3861 - T.A. A Receber A Vista')
                 .should('be.visible')
-                .click({force:true})
+                .click({force:true});
 
             //Clicando no botão GERAR PAGAMENTO da entrada
             cy.get('.white > .layout-align-center-center > .md-primary')
                 .should('be.visible')
                 .and('not.be.disabled')
                 .and('contain','Gerar pagamento')
-                .click({force:true})
+                .click({force:true});
 
             AdvanceNormal.final();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
@@ -92,30 +92,30 @@ test.describe('Generate orders with promotions and interest-free services', () =
 
         test('3.Order with promotion deadline installment (promotion 161): product 1893 0 0 with moneylender (interest-free)',  async ({ page }) => {
     
-            Product.thirdInstallmentDeadline()
+            Product.thirdInstallmentDeadline();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
-            Promotion.selectFirstPromoProduct()
+            Promotion.selectFirstPromoProduct();
             ProcessoRecebPage.withMoneylender()
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
-            ValidateService.servLinked() ; ValidateService.addMONaoDestSepMesmoProc()
+            ValidateService.servLinked(); ValidateService.addMONaoDestSepMesmoProc();
             ThrowDelivery.freightFirst(); 
             AdvanceNormal.toInstallments();
-            cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
-            cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
-            Promotion.addPrestamista()
-            TicketPrestamista.added()
+            cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista');
+            cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 });
+            Promotion.addPrestamista();
+            TicketPrestamista.added();
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('4.Order with installment payment promotion (promotion 162): product 1894 0 0 with warranty (interest-free) and lender (with interest)',  async ({ page }) => {
+        test('4.Order with installment payment promotion (promotion 162): product 1894 0 0 with warranty (interest-free); and lender (with interest)',  async ({ page }) => {
     
             Product.fourthInstallmentDeadline()
             ValidateBalance.withBalance();
@@ -123,8 +123,8 @@ test.describe('Generate orders with promotions and interest-free services', () =
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             Promotion.typeServiceFreeValidate()
-            Promotion.selectFirstPromoProduct()
-            ProcessoRecebPage.withMoneylender()
+            Promotion.selectFirstPromoProduct();
+            ProcessoRecebPage.withMoneylender();
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.garantiaSepMesmoProc(); 
@@ -132,12 +132,12 @@ test.describe('Generate orders with promotions and interest-free services', () =
             ValidateService.servLinked() ; ValidateService.AddGarantSepMesmoProc()
             ThrowDelivery.freightFirst(); 
             AdvanceNormal.toInstallments();
-            cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
-            cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
-            Promotion.addPrestamista()
-            TicketPrestamista.added()
+            cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista');
+            cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 });
+            Promotion.addPrestamista();
+            TicketPrestamista.added();
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })

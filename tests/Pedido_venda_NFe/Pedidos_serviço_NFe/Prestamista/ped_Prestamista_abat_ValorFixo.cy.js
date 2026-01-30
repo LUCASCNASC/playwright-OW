@@ -89,7 +89,7 @@ test.describe('Generate orders with Fixed Value Discount Service (161)', () => {
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
-            Promotion.selectFirstPromoProduct()
+            Promotion.selectFirstPromoProduct();
             ProcessoRecebPromoPage.termFutWithFeesPrestAbatVF()
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
@@ -115,7 +115,7 @@ test.describe('Generate orders with Fixed Value Discount Service (161)', () => {
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
-            Promotion.selectFirstPromoProduct()
+            Promotion.selectFirstPromoProduct();
             ProcessoRecebPromoPage.termFutWithFeesPrestAbatVF()
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
@@ -143,7 +143,7 @@ test.describe('Generate orders with Fixed Value Discount Service (161)', () => {
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
-            Promotion.selectFirstPromoProduct()
+            Promotion.selectFirstPromoProduct();
             ProcessoRecebPromoPage.termFutWithFeesPrestAbatVF()
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();

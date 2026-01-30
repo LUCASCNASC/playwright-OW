@@ -229,7 +229,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
-            Promotion.selectFirstPromoProduct()
+            Promotion.selectFirstPromoProduct();
             ProcessoRecebPromoPage.termFutWithFeesPrest()
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
@@ -255,7 +255,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
-            Promotion.selectFirstPromoProduct()
+            Promotion.selectFirstPromoProduct();
             ProcessoRecebPromoPage.termFutWithoutFeesPrest()
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
@@ -281,7 +281,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
-            Promotion.selectFirstPromoProduct()
+            Promotion.selectFirstPromoProduct();
             ProcessoRecebPromoPage.termFutWithoutFeesPrest()
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
@@ -311,7 +311,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
-            Promotion.selectFirstPromoProduct()
+            Promotion.selectFirstPromoProduct();
             ProcessoRecebPromoPage.termFutWithoutFeesPrest()
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
@@ -327,7 +327,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             cy.contains('3876 - T.A. A Receber Futuro - para Prestamista sem juros').click()
             cy.intercept('/services/v3/pedido_forma_pagamento').as('api_pedido_forma_pagamento')
             cy.wait('@api_pedido_forma_pagamento', { timeout: 40000 })
-            ParcelasPage.one()
+            ParcelasPage.one();
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() 
             AdvanceNormal.finalarFinal()
@@ -343,7 +343,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
-            Promotion.selectFirstPromoProduct()
+            Promotion.selectFirstPromoProduct();
             ProcessoRecebPromoPage.termFutWithFeesPrest()
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
@@ -360,7 +360,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             cy.contains('3874 - T.A. A Receber Futuro - para Prestamista').click()
             cy.intercept('/services/v3/pedido_forma_pagamento').as('api_pedido_forma_pagamento')
             cy.wait('@api_pedido_forma_pagamento', { timeout: 40000 })
-            ParcelasPage.one()
+            ParcelasPage.one();
             ValidateService.okInsurancePrest()
             TicketPrestamista.added() 
             AdvanceNormal.final();
@@ -376,7 +376,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
-            Promotion.selectFirstPromoProduct()
+            Promotion.selectFirstPromoProduct();
             ProcessoRecebPromoPage.entryPresentPrest()
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
@@ -407,7 +407,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
-            Promotion.selectFirstPromoProduct()
+            Promotion.selectFirstPromoProduct();
             ProcessoRecebPromoPage.termFutWithFeesPrest()
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
@@ -431,7 +431,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             PagamentoPage.insertDateTomorrow1Due()
             PagamentoPage.clicarGerarParcAlterarVenc()
             ProcessoRecebPage.main();
-            ParcelasPage.one()
+            ParcelasPage.one();
             AdvanceNormal.final();
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage();
@@ -445,7 +445,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
-            Promotion.selectFirstPromoProduct()
+            Promotion.selectFirstPromoProduct();
             ProcessoRecebPromoPage.termFutWithFeesPrest()
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
@@ -487,7 +487,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
-            Promotion.selectFirstPromoProduct()
+            Promotion.selectFirstPromoProduct();
             ProcessoRecebPromoPage.termFutWithoutFeesPrest()
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
@@ -511,7 +511,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             PagamentoPage.insertDateTomorrow1Due()
             PagamentoPage.clicarGerarParcAlterarVenc()
             ProcessoRecebPage.main();
-            ParcelasPage.one()
+            ParcelasPage.one();
             AdvanceNormal.final();
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage();
@@ -525,7 +525,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
-            Promotion.selectFirstPromoProduct()
+            Promotion.selectFirstPromoProduct();
             ProcessoRecebPromoPage.termFutWithoutFeesPrest()
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
@@ -569,7 +569,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
-            Promotion.selectFirstPromoProduct()
+            Promotion.selectFirstPromoProduct();
             ProcessoRecebPromoPage.termFutWithFeesPrest()
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
@@ -598,7 +598,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
-            Promotion.selectFirstPromoProduct()
+            Promotion.selectFirstPromoProduct();
             ProcessoRecebPromoPage.termFutWithFeesPrest()
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
@@ -625,7 +625,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
             ProcessoRecebPage.main();
-            ParcelasPage.one()
+            ParcelasPage.one();
             AdvanceNormal.final();
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage();
@@ -639,7 +639,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
-            Promotion.selectFirstPromoProduct()
+            Promotion.selectFirstPromoProduct();
             ProcessoRecebPromoPage.termFutWithFeesPrest()
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
@@ -685,7 +685,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
-            Promotion.selectFirstPromoProduct()
+            Promotion.selectFirstPromoProduct();
             ProcessoRecebPromoPage.termFutWithoutFeesPrest()
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
@@ -712,7 +712,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
             ProcessoRecebPage.main();
-            ParcelasPage.one()
+            ParcelasPage.one();
             AdvanceNormal.final();
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage();
@@ -726,7 +726,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
-            Promotion.selectFirstPromoProduct()
+            Promotion.selectFirstPromoProduct();
             ProcessoRecebPromoPage.termFutWithoutFeesPrest()
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
@@ -772,7 +772,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
-            Promotion.selectFirstPromoProduct()
+            Promotion.selectFirstPromoProduct();
             ProcessoRecebPromoPage.entryPresentPrest()
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
@@ -800,7 +800,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
             ProcessoRecebPage.secondForm()
-            ParcelasPage.one()
+            ParcelasPage.one();
             AdvanceNormal.final();
             TicketPrestamista.pageFinal()
             FinalizarPedidoPage.clickFinalizarPedidoPage();
@@ -814,7 +814,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
                 CommandsGeneral.selectProductSearch();
                 CommandsGeneral.clickVoltageProduct();
                 CommandsGeneral.clickAddProduct(); 
-                Promotion.selectFirstPromoProduct()
+                Promotion.selectFirstPromoProduct();
                 ProcessoRecebPromoPage.entryPresentPrest()
                 CommandsGeneral.clickAddProduct(); 
                 Service.validateModalServLinked();

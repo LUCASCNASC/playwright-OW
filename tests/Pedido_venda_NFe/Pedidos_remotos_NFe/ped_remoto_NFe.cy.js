@@ -127,7 +127,7 @@ test.describe('Remote/process 9860 - Balance rule Parameter 36 = 4 - Parameter 1
         test('5.Remote order - WITHOUT stock in CD (branch 1) - should NOT allow order creation - (Remote sale of product without stock at the billing branch, without stock in the CD of the billing branch)',  async ({ page }) => {
 
             Product.remoteWithoutCD()
-            ValidateBalance.withoutBalance() 
+            ValidateBalance.withoutBalance(); 
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 

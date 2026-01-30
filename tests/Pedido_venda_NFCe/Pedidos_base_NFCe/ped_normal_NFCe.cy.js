@@ -86,7 +86,7 @@ test.describe('Generate a standard order with delivery.', () => {
             GeralPagamentoPage.clickGenerateInstallments();
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
-            ParcelasPage.one()
+            ParcelasPage.one();
             AdvanceNormal.final();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
