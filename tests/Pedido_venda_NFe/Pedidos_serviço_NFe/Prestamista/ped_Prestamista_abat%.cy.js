@@ -31,7 +31,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
         test('1.Order: products 1860 0 0 e 1870 0 0, inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.fisrt();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -39,7 +39,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked(); 
             ThrowDelivery.freightFirst();
             Product.second();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -47,14 +47,14 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked();
             ThrowDelivery.freightSecond();
             AdvanceNormal.toInstallments();
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.futMoneyWithFees()
-            ParcelasPage.for()
-            ValidateService.okInsurancePrest()
-            TicketPrestamista.added() 
+            PagamentoPage.clickGenerateInstallments(); 
+            PagamentoPage.loadingFormPayment();
+            ProcessoRecebPage.futMoneyWithFees();
+            ParcelasPage.for();
+            ValidateService.okInsurancePrest();
+            TicketPrestamista.added(); 
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })
@@ -62,7 +62,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
         test('2.Order: products 1860 0 0 e 1870 0 0, inclusion 3875, lender 158, 4 installments upon receipt Present.',  async ({ page }) => {
     
             Product.fisrt();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -70,7 +70,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked();
             ThrowDelivery.freightFirst();
             Product.second();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -78,14 +78,14 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked();
             ThrowDelivery.freightSecond();
             AdvanceNormal.toInstallments();
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.presentMoney()
-            ParcelasPage.for()
-            ValidateService.okInsurancePrest()
-            TicketPrestamista.added() 
+            PagamentoPage.clickGenerateInstallments(); 
+            PagamentoPage.loadingFormPayment();
+            ProcessoRecebPage.presentMoney();
+            ParcelasPage.for();
+            ValidateService.okInsurancePrest();
+            TicketPrestamista.added(); 
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })
@@ -96,14 +96,14 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
         test('3.Order: products 1860 0 0 e 1870 0 0, inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
     
             Product.fisrt();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             Product.second();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -111,14 +111,14 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments();
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.futMoneyWithoutFees()
-            ParcelasPage.for()
-            ValidateService.okInsurancePrest()
-            TicketPrestamista.added() 
+            PagamentoPage.clickGenerateInstallments(); 
+            PagamentoPage.loadingFormPayment();
+            ProcessoRecebPage.futMoneyWithoutFees();
+            ParcelasPage.for();
+            ValidateService.okInsurancePrest();
+            TicketPrestamista.added(); 
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })
@@ -126,16 +126,16 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
         test('4.Order: products 1860 0 0 (with warranty not separated) and 1870 0 0, inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.fisrt();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
             ValidateService.garantiaNaoSep();
             Service.clickOKServiceLinked(); 
-            ValidateService.servLinked() ; ValidateService.garantiaSepMesmoProc();
+            ValidateService.servLinked(); ValidateService.garantiaSepMesmoProc();
             Product.second();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -143,14 +143,14 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments();
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.futMoneyWithFees()
-            ParcelasPage.for()
-            ValidateService.okInsurancePrest()
-            TicketPrestamista.added() 
+            PagamentoPage.clickGenerateInstallments(); 
+            PagamentoPage.loadingFormPayment();
+            ProcessoRecebPage.futMoneyWithFees();
+            ParcelasPage.for();
+            ValidateService.okInsurancePrest();
+            TicketPrestamista.added(); 
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })
@@ -158,7 +158,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
         test('5.Order: products 1860 0 0 (with warranty not separated) and 1870 0 0, inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
 
             Product.fisrt();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -167,7 +167,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.garantiaSepMesmoProc();
             Product.second();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -175,14 +175,14 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments();
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.futMoneyWithoutFees()
-            ParcelasPage.for()
-            ValidateService.okInsurancePrest()
-            TicketPrestamista.added() 
+            PagamentoPage.clickGenerateInstallments(); 
+            PagamentoPage.loadingFormPayment();
+            ProcessoRecebPage.futMoneyWithoutFees();
+            ParcelasPage.for();
+            ValidateService.okInsurancePrest();
+            TicketPrestamista.added(); 
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })
@@ -190,7 +190,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
         test('6.Order: products 1860 0 0 (with warranty not separated) and 1870 0 0, inclusion 3875, lender 158, 4 installments upon receipt Present without interest.',  async ({ page }) => {
     
             Product.fisrt();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -199,7 +199,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.garantiaSepMesmoProc();
             Product.second();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -207,14 +207,14 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments();
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment()
-            ProcessoRecebPage.presentMoney()
-            ParcelasPage.for()
-            ValidateService.okInsurancePrest()
-            TicketPrestamista.added() 
+            PagamentoPage.clickGenerateInstallments(); 
+            PagamentoPage.loadingFormPayment();
+            ProcessoRecebPage.presentMoney();
+            ParcelasPage.for();
+            ValidateService.okInsurancePrest();
+            TicketPrestamista.added(); 
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })
@@ -225,7 +225,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
         test('7.Order: product 1918 0 0 (term promotion 167), inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest()
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -236,22 +236,22 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked(); 
             ThrowDelivery.freightFirst();
             AdvanceNormal.toInstallments();
-            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
-            cy.wait('@api_icons', { timeout: 40000 })
-            GeralPedidosPage.clickEditInstallments()
-            ParcelasPage.for()
-            ValidateService.okInsurancePrest()
-            TicketPrestamista.added() 
+            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons');
+            cy.wait('@api_icons', { timeout: 40000 });
+            GeralPedidosPage.clickEditInstallments();
+            ParcelasPage.for();
+            ValidateService.okInsurancePrest();
+            TicketPrestamista.added(); 
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('8.Order: product 1918 0 0 (term promotion 167), inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
     
-            Product.termInstallmentPrest()
-            ValidateBalance.withBalance();
+            Product.termInstallmentPrest();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -262,22 +262,22 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked(); 
             ThrowDelivery.freightFirst();
             AdvanceNormal.toInstallments();
-            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
-            cy.wait('@api_icons', { timeout: 40000 })
-            GeralPedidosPage.clickEditInstallments()
-            ParcelasPage.for()
-            ValidateService.okInsurancePrest()
-            TicketPrestamista.added() 
+            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons');
+            cy.wait('@api_icons', { timeout: 40000 });
+            GeralPedidosPage.clickEditInstallments();
+            ParcelasPage.for();
+            ValidateService.okInsurancePrest();
+            TicketPrestamista.added(); 
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('9.Order: product 1918 0 0 (term promotion 167), with warranty not separated, inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
     
-            Product.termInstallmentPrest()
-            ValidateBalance.withBalance();
+            Product.termInstallmentPrest();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -289,14 +289,14 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked(); 
             ThrowDelivery.freightFirst();
             AdvanceNormal.toInstallments();
-            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
-            cy.wait('@api_icons', { timeout: 40000 })
+            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons');
+            cy.wait('@api_icons', { timeout: 40000 });
             GeralPedidosPage.clickEditInstallments()
-            ParcelasPage.for()
-            ValidateService.okInsurancePrest()
-            TicketPrestamista.added() 
+            ParcelasPage.for();
+            ValidateService.okInsurancePrest();
+            TicketPrestamista.added(); 
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })
@@ -307,7 +307,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
         test('10.Order: product 1919 0 0 (term promotion 168), with warranty not separated, inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
 
             Product.termInstallmentPrest()
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -320,26 +320,26 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
             AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments();
-            cy.intercept('GET', '/images/icons/chain.svg').as('api_pagamentoPedido')
-            cy.wait('@api_pagamentoPedido', { timeout: 40000 })
-            PagamentoPage.insertDateTomorrow1Due()
-            PagamentoPage.clicarGerarParcAlterarVenc()
-            cy.contains('3876 - T.A. A Receber Futuro - para Prestamista sem juros').click()
-            cy.intercept('/services/v3/pedido_forma_pagamento').as('api_pedido_forma_pagamento')
-            cy.wait('@api_pedido_forma_pagamento', { timeout: 40000 })
+            cy.intercept('GET', '/images/icons/chain.svg').as('api_pagamentoPedido');
+            cy.wait('@api_pagamentoPedido', { timeout: 40000 });
+            PagamentoPage.insertDateTomorrow1Due();
+            PagamentoPage.clicarGerarParcAlterarVenc();
+            cy.contains('3876 - T.A. A Receber Futuro - para Prestamista sem juros').click();
+            cy.intercept('/services/v3/pedido_forma_pagamento').as('api_pedido_forma_pagamento');
+            cy.wait('@api_pedido_forma_pagamento', { timeout: 40000 });
             ParcelasPage.one();
-            ValidateService.okInsurancePrest()
-            TicketPrestamista.added() 
+            ValidateService.okInsurancePrest();
+            TicketPrestamista.added(); 
             AdvanceNormal.finalarFinal()
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('11.Order: product 1919 0 0 (term promotion 168), with warranty not separated, inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
 
-            Product.termInstallmentPrest()
-            ValidateBalance.withBalance();
+            Product.termInstallmentPrest();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -352,27 +352,26 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
             AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments();
-            cy.intercept('GET', '/images/icons/chain.svg').as('api_pagamentoPedido')
-            cy.wait('@api_pagamentoPedido', { timeout: 40000 })
-            //TicketPrestamista.added() 
-            PagamentoPage.insertDateTomorrow1Due()
-            PagamentoPage.clicarGerarParcAlterarVenc()
-            cy.contains('3874 - T.A. A Receber Futuro - para Prestamista').click()
-            cy.intercept('/services/v3/pedido_forma_pagamento').as('api_pedido_forma_pagamento')
-            cy.wait('@api_pedido_forma_pagamento', { timeout: 40000 })
+            cy.intercept('GET', '/images/icons/chain.svg').as('api_pagamentoPedido');
+            cy.wait('@api_pagamentoPedido', { timeout: 40000 });
+            PagamentoPage.insertDateTomorrow1Due();
+            PagamentoPage.clicarGerarParcAlterarVenc();
+            cy.contains('3874 - T.A. A Receber Futuro - para Prestamista').click();
+            cy.intercept('/services/v3/pedido_forma_pagamento').as('api_pedido_forma_pagamento');
+            cy.wait('@api_pedido_forma_pagamento', { timeout: 40000 });
             ParcelasPage.one();
-            ValidateService.okInsurancePrest()
-            TicketPrestamista.added() 
+            ValidateService.okInsurancePrest();
+            TicketPrestamista.added(); 
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('12.Order: product 1920 0 0 (entry promotion 169), with warranty not separated, inclusion 3876, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
-            Product.termInstallmentPrest()
-            ValidateBalance.withBalance();
+            Product.termInstallmentPrest();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -382,17 +381,17 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.validateModalServLinked();
             ValidateService.garantiaNaoSep();
             Service.clickOKServiceLinked(); 
-            ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
+            ValidateService.servLinked() ; ValidateService.addGarantNaoSep();
             ThrowDelivery.freightFirst();
             AdvanceNormal.toInstallments();
-            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
-            cy.wait('@api_icons', { timeout: 40000 })
-            GeralPedidosPage.clickEditInstallments()
-            ParcelasPage.for()
-            ValidateService.okInsurancePrest()
-            TicketPrestamista.added() 
+            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons');
+            cy.wait('@api_icons', { timeout: 40000 });
+            GeralPedidosPage.clickEditInstallments();
+            ParcelasPage.for();
+            ValidateService.okInsurancePrest();
+            TicketPrestamista.added(); 
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })
@@ -402,8 +401,8 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
 
         test('13.Order: product 1918 0 0 (term promotion 167) and 1860 0 0 (without promotion), inclusion 3874 (other receipt 3860), lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
-            Product.termInstallmentPrest()
-            ValidateBalance.withBalance();
+            Product.termInstallmentPrest();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -412,9 +411,9 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
             Service.clickOKServiceLinked(); 
-            ThrowDelivery.primeiro()
+            ThrowDelivery.primeiro();
             Product.second();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -422,37 +421,37 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked();
             ThrowDelivery.freightSecond();
             AdvanceNormal.toInstallments();
-            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
-            cy.wait('@api_icons', { timeout: 40000 })
-            GeralPedidosPage.clickEditInstallments()
-            ParcelasPage.for()
-            ValidateService.okInsurancePrest()
-            TicketPrestamista.added() 
-            PagamentoPage.insertDateTomorrow1Due()
-            PagamentoPage.clicarGerarParcAlterarVenc()
+            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons');
+            cy.wait('@api_icons', { timeout: 40000 });
+            GeralPedidosPage.clickEditInstallments();
+            ParcelasPage.for();
+            ValidateService.okInsurancePrest();
+            TicketPrestamista.added(); 
+            PagamentoPage.insertDateTomorrow1Due();
+            PagamentoPage.clicarGerarParcAlterarVenc();
             ProcessoRecebPage.main();
             ParcelasPage.one();
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('14.Order: product 1918 0 0 (term promotion 167) and 1860 0 0 (without promotion), inclusion 3874 (other receipt 3874 group), lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
-            Product.termInstallmentPrest()
-            ValidateBalance.withBalance();
+            Product.termInstallmentPrest();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct();
-            ProcessoRecebPromoPage.termFutWithFeesPrest()
+            ProcessoRecebPromoPage.termFutWithFeesPrest();
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
             Service.clickOKServiceLinked(); 
             ThrowDelivery.freightFirst();
             Product.second();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -460,30 +459,30 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked();
             ThrowDelivery.freightSecond();
             AdvanceNormal.toInstallments();
-            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
-            cy.wait('@api_icons', { timeout: 40000 })
-            GeralPedidosPage.clickEditInstallments()
-            ParcelasPage.for()
-            ValidateService.okInsurancePrest()
-            TicketPrestamista.added() 
+            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons');
+            cy.wait('@api_icons', { timeout: 40000 });
+            GeralPedidosPage.clickEditInstallments();
+            ParcelasPage.for();
+            ValidateService.okInsurancePrest();
+            TicketPrestamista.added(); 
             PagamentoPage.insertDate31Days1Due()
-            PagamentoPage.clicarGerarParcAlterarVenc()
-            ProcessoRecebPage.futMoneyWithFees()
-            cy.get('[style="position: relative"] > :nth-child(4) > div.ng-binding').click({force:true}) //escolher 4 parcelas
-            AgruparRecebPage.groupReleases()
-            ValidateService.messPrestRemoved()
-            ValidateService.addInsurancePrest()
-            GeralPedidosPage.adicionadoRecebAgrupado()
-            AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            PagamentoPage.clicarGerarParcAlterarVenc();
+            ProcessoRecebPage.futMoneyWithFees();
+            cy.get('[style="position: relative"] > :nth-child(4) > div.ng-binding').click({force:true}); //escolher 4 parcelas
+            AgruparRecebPage.groupReleases();
+            ValidateService.messPrestRemoved();
+            ValidateService.addInsurancePrest();
+            GeralPedidosPage.adicionadoRecebAgrupado();
+            AdvanceNormal.final();;
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('15.Order: product 1918 0 0 (term promotion 167) and 1860 0 0 (without promotion), inclusion 3876 (other receipt 3860), lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
     
-            Product.termInstallmentPrest()
-            ValidateBalance.withBalance();
+            Product.termInstallmentPrest();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -494,7 +493,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked(); 
             ThrowDelivery.freightFirst();
             Product.second();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -502,26 +501,26 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked();
             ThrowDelivery.freightSecond();
             AdvanceNormal.toInstallments();
-            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
-            cy.wait('@api_icons', { timeout: 40000 })
-            GeralPedidosPage.clickEditInstallments()
-            ParcelasPage.for()
-            ValidateService.okInsurancePrest()
-            TicketPrestamista.added() 
-            PagamentoPage.insertDateTomorrow1Due()
-            PagamentoPage.clicarGerarParcAlterarVenc()
+            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons');
+            cy.wait('@api_icons', { timeout: 40000 });
+            GeralPedidosPage.clickEditInstallments();
+            ParcelasPage.for();
+            ValidateService.okInsurancePrest();
+            TicketPrestamista.added(); 
+            PagamentoPage.insertDateTomorrow1Due();
+            PagamentoPage.clicarGerarParcAlterarVenc();
             ProcessoRecebPage.main();
             ParcelasPage.one();
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('16.Order: product 1918 0 0 (term promotion 167) and 1860 0 0 (without promotion), inclusion 3876 (other receipt 3876 group), lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
     
-            Product.termInstallmentPrest()
-            ValidateBalance.withBalance();
+            Product.termInstallmentPrest();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -532,7 +531,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked(); 
             ThrowDelivery.freightFirst();
             Product.second();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -540,50 +539,50 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked();
             ThrowDelivery.freightSecond();
             AdvanceNormal.toInstallments();
-            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
-            cy.wait('@api_icons', { timeout: 40000 })
-            GeralPedidosPage.clickEditInstallments()
-            ParcelasPage.for()
-            ValidateService.okInsurancePrest()
-            TicketPrestamista.added() 
-            PagamentoPage.insertDate31Days1Due()
-            PagamentoPage.clicarGerarParcAlterarVenc()
-            cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
-            cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
+            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons');
+            cy.wait('@api_icons', { timeout: 40000 });
+            GeralPedidosPage.clickEditInstallments();
+            ParcelasPage.for();
+            ValidateService.okInsurancePrest();
+            TicketPrestamista.added(); 
+            PagamentoPage.insertDate31Days1Due();
+            PagamentoPage.clicarGerarParcAlterarVenc();
+            cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista');
+            cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 });
             ProcessoRecebPage.futMoneyWithoutFees()
-            cy.get('[style="position: relative"] > :nth-child(4) > div.ng-binding').click({force:true}) //escolher 4 parcelas
-            AgruparRecebPage.groupReleases()
-            ValidateService.messPrestRemoved()
-            ValidateService.addInsurancePrest()
-            GeralPedidosPage.adicionadoRecebAgrupado()
+            cy.get('[style="position: relative"] > :nth-child(4) > div.ng-binding').click({force:true}); //escolher 4 parcelas
+            AgruparRecebPage.groupReleases();
+            ValidateService.messPrestRemoved();
+            ValidateService.addInsurancePrest();
+            GeralPedidosPage.adicionadoRecebAgrupado();
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('17.Order: product 1921 0 0 (term promotion 170), inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
-            Product.termInstallmentPrest()
-            ValidateBalance.withBalance();
+            Product.termInstallmentPrest();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct();
-            ProcessoRecebPromoPage.termFutWithFeesPrest()
+            ProcessoRecebPromoPage.termFutWithFeesPrest();
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
             Service.clickOKServiceLinked(); 
-            ThrowDelivery.primeiro()
+            ThrowDelivery.primeiro();
             AdvanceNormal.toInstallments();
-            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
-            cy.wait('@api_icons', { timeout: 40000 })
-            GeralPedidosPage.clickEditInstallments()
-            ParcelasPage.for()
-            ValidateService.okInsurancePrest()
-            TicketPrestamista.added() 
+            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons');
+            cy.wait('@api_icons', { timeout: 40000 });
+            GeralPedidosPage.clickEditInstallments();
+            ParcelasPage.for();
+            ValidateService.okInsurancePrest();
+            TicketPrestamista.added(); 
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })
@@ -593,8 +592,8 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
 
         test('18.Pedido: produto 1918 0 0 (promo a prazo 167) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3874 (outro recebimento 3860), prestamista 158, 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
     
-            Product.termInstallmentPrest()
-            ValidateBalance.withBalance();
+            Product.termInstallmentPrest();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -604,9 +603,9 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.validateModalServLinked();
             ValidateService.garantiaNaoSep();
             Service.clickOKServiceLinked(); 
-            ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
+            ValidateService.servLinked() ; ValidateService.addGarantNaoSep();
             Product.second();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -614,28 +613,28 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments();
-            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
-            cy.wait('@api_icons', { timeout: 40000 })
-            GeralPedidosPage.clickEditInstallments()
-            ParcelasPage.for()
-            ValidateService.okInsurancePrest()
-            TicketPrestamista.added() 
-            PagamentoPage.insertDateTomorrow1Due()
-            PagamentoPage.clicarGerarParcAlterarVenc()
-            cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
-            cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
+            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons');
+            cy.wait('@api_icons', { timeout: 40000 });
+            GeralPedidosPage.clickEditInstallments();
+            ParcelasPage.for();
+            ValidateService.okInsurancePrest();
+            TicketPrestamista.added(); 
+            PagamentoPage.insertDateTomorrow1Due();
+            PagamentoPage.clicarGerarParcAlterarVenc();
+            cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista');
+            cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 });
             ProcessoRecebPage.main();
             ParcelasPage.one();
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('19.Pedido: produto 1918 0 0 (promo a prazo 167) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3874 (outro recebimento 3874 agrupar), prestamista 158, 4 parcelas no recebimento Futuro com juros.', async ({ page }) => {
     
-            Product.termInstallmentPrest()
-            ValidateBalance.withBalance();
+            Product.termInstallmentPrest();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -647,7 +646,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked(); 
             ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
             Product.second();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -655,33 +654,32 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments();
-            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
-            cy.wait('@api_icons', { timeout: 40000 })
-            // TicketPrestamista.added() 
-            GeralPedidosPage.clickEditInstallments()
-            ParcelasPage.for()
-            ValidateService.okInsurancePrest()
-            TicketPrestamista.added() 
-            PagamentoPage.insertDate31Days1Due()
-            PagamentoPage.clicarGerarParcAlterarVenc()
-            cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
-            cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
-            ProcessoRecebPage.futMoneyWithFees()
-            cy.get('[style="position: relative"] > :nth-child(4) > div.ng-binding').click({force:true}) //escolher 4 parcelas
-            AgruparRecebPage.groupReleases()
-            ValidateService.messPrestRemoved()
-            ValidateService.addInsurancePrest()
-            GeralPedidosPage.adicionadoRecebAgrupado()
+            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons');
+            cy.wait('@api_icons', { timeout: 40000 });
+            GeralPedidosPage.clickEditInstallments();
+            ParcelasPage.for();
+            ValidateService.okInsurancePrest();
+            TicketPrestamista.added(); 
+            PagamentoPage.insertDate31Days1Due();
+            PagamentoPage.clicarGerarParcAlterarVenc();
+            cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista');
+            cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 });
+            ProcessoRecebPage.futMoneyWithFees();
+            cy.get('[style="position: relative"] > :nth-child(4) > div.ng-binding').click({force:true}); //escolher 4 parcelas
+            AgruparRecebPage.groupReleases();
+            ValidateService.messPrestRemoved();
+            ValidateService.addInsurancePrest();
+            GeralPedidosPage.adicionadoRecebAgrupado();
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('20.Pedido: produto 1918 0 0 (promo a prazo 167) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3876 (outro recebimento 3860), prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
 
-            Product.termInstallmentPrest()
-            ValidateBalance.withBalance();
+            Product.termInstallmentPrest();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -691,9 +689,9 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.validateModalServLinked();
             ValidateService.garantiaNaoSep();
             Service.clickOKServiceLinked(); 
-            ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
+            ValidateService.servLinked(); ValidateService.addGarantNaoSep()
             Product.second();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -701,28 +699,28 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments();
-            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
-            cy.wait('@api_icons', { timeout: 40000 })
-            GeralPedidosPage.clickEditInstallments()
-            ParcelasPage.for()
-            ValidateService.okInsurancePrest()
-            TicketPrestamista.added() 
-            PagamentoPage.insertDateTomorrow1Due()
-            PagamentoPage.clicarGerarParcAlterarVenc()
-            cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
-            cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
+            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons');
+            cy.wait('@api_icons', { timeout: 40000 });
+            GeralPedidosPage.clickEditInstallments();
+            ParcelasPage.for();
+            ValidateService.okInsurancePrest();
+            TicketPrestamista.added(); 
+            PagamentoPage.insertDateTomorrow1Due();
+            PagamentoPage.clicarGerarParcAlterarVenc();
+            cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista');
+            cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 });
             ProcessoRecebPage.main();
             ParcelasPage.one();
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('21.Pedido: produto 1918 0 0 (promo a prazo 167) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3876 (outro recebimento 3876 agrupar), prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
     
-            Product.termInstallmentPrest()
-            ValidateBalance.withBalance();
+            Product.termInstallmentPrest();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -732,9 +730,9 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.validateModalServLinked();
             ValidateService.garantiaNaoSep();
             Service.clickOKServiceLinked(); )
-            ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
+            ValidateService.servLinked(); ValidateService.addGarantNaoSep()
             Product.second();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -742,45 +740,44 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments();
-            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
-            cy.wait('@api_icons', { timeout: 40000 })
-            // TicketPrestamista.added() 
-            GeralPedidosPage.clickEditInstallments()
-            ParcelasPage.for()
-            ValidateService.okInsurancePrest()
-            TicketPrestamista.added() 
-            PagamentoPage.insertDate31Days1Due()
-            PagamentoPage.clicarGerarParcAlterarVenc()
-            cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
-            cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
-            ProcessoRecebPage.futMoneyWithoutFees()
-            cy.get('[style="position: relative"] > :nth-child(4) > div.ng-binding').click({force:true}) //escolher 4 parcelas
-            AgruparRecebPage.groupReleases()
-            ValidateService.messPrestRemoved()
-            ValidateService.addInsurancePrest()
-            GeralPedidosPage.adicionadoRecebAgrupado()
+            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons');
+            cy.wait('@api_icons', { timeout: 40000 });
+            GeralPedidosPage.clickEditInstallments();
+            ParcelasPage.for();
+            ValidateService.okInsurancePrest();
+            TicketPrestamista.added(); 
+            PagamentoPage.insertDate31Days1Due();
+            PagamentoPage.clicarGerarParcAlterarVenc();
+            cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista');
+            cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 });
+            ProcessoRecebPage.futMoneyWithoutFees();
+            cy.get('[style="position: relative"] > :nth-child(4) > div.ng-binding').click({force:true}); //escolher 4 parcelas
+            AgruparRecebPage.groupReleases();
+            ValidateService.messPrestRemoved();
+            ValidateService.addInsurancePrest();
+            GeralPedidosPage.adicionadoRecebAgrupado();
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
     })
 
         test('22.Order: product 1920 0 0 (promo on credit 169) (with warranty, not separate) and 1860 0 0 (without promotion), inclusion 3875 (other receipt 3874), lender 158, 4 installments upon receipt. Gift.',  async ({ page }) => {
 
-            Product.termInstallmentPrest()
-            ValidateBalance.withBalance();
+            Product.termInstallmentPrest();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct();
-            ProcessoRecebPromoPage.entryPresentPrest()
+            ProcessoRecebPromoPage.entryPresentPrest();
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
             ValidateService.garantiaNaoSep();
             Service.clickOKServiceLinked(); 
-            ValidateService.servLinked() ; ValidateService.garantiaNaoSep();
+            ValidateService.servLinked(); ValidateService.garantiaNaoSep();
             Product.second();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -789,40 +786,40 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments();
-            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
-            cy.wait('@api_icons', { timeout: 40000 })
-            GeralPedidosPage.clickEditInstallments()
-            ParcelasPage.for()
-            ValidateService.okInsurancePrest()
-            TicketPrestamista.added() 
-            PagamentoPage.insertDateTomorrow1Due()
-            PagamentoPage.clicarGerarParcAlterarVenc()
-            cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
-            cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
-            ProcessoRecebPage.secondForm()
+            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons');
+            cy.wait('@api_icons', { timeout: 40000 });
+            GeralPedidosPage.clickEditInstallments();
+            ParcelasPage.for();
+            ValidateService.okInsurancePrest();
+            TicketPrestamista.added(); 
+            PagamentoPage.insertDateTomorrow1Due();
+            PagamentoPage.clicarGerarParcAlterarVenc();
+            cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista');
+            cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 });
+            ProcessoRecebPage.secondForm();
             ParcelasPage.one();
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
         test('23.Order: product 1920 0 0 (promo on credit 169) (with warranty, not separate) and 1860 0 0 (without promotion), inclusion 3875 (other receipt 3875 group), lender 158, 4 installments upon receipt Present.',  async ({ page }) => {
         
-                Product.termInstallmentPrest()
-                ValidateBalance.withBalance();
-                CommandsGeneral.selectProductSearch();
-                CommandsGeneral.clickVoltageProduct();
-                CommandsGeneral.clickAddProduct(); 
-                Promotion.selectFirstPromoProduct();
-                ProcessoRecebPromoPage.entryPresentPrest()
-                CommandsGeneral.clickAddProduct(); 
-                Service.validateModalServLinked();
-                ValidateService.garantiaNaoSep();
-            Service.clickOKServiceLinked(); )
-            ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
+            Product.termInstallmentPrest();
+            ValidateBalance.withBalance();;
+            CommandsGeneral.selectProductSearch();
+            CommandsGeneral.clickVoltageProduct();
+            CommandsGeneral.clickAddProduct(); 
+            Promotion.selectFirstPromoProduct();
+            ProcessoRecebPromoPage.entryPresentPrest();
+            CommandsGeneral.clickAddProduct(); 
+            Service.validateModalServLinked();
+            ValidateService.garantiaNaoSep();
+            Service.clickOKServiceLinked(); 
+            ValidateService.servLinked(); ValidateService.addGarantNaoSep();
             Product.second();
-            ValidateBalance.comSwithBalancealdo()
+            ValidateBalance.comSwithBalancealdo();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -831,25 +828,24 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments();
-            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons')
-            cy.wait('@api_icons', { timeout: 40000 })
-            // TicketPrestamista.added() 
-            GeralPedidosPage.clickEditInstallments()
-            ParcelasPage.for()
-            ValidateService.okInsurancePrest()
-            TicketPrestamista.added() 
-            PagamentoPage.insertDate31Days1Due()
-            PagamentoPage.clicarGerarParcAlterarVenc()
-            cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista')
-            cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 })
-            ProcessoRecebPage.presentMoney()
-            cy.get('[style="position: relative"] > :nth-child(4) > div.ng-binding').click({force:true}) //escolher 4 parcelas
-            AgruparRecebPage.groupReleases()
-            ValidateService.messPrestRemoved()
-            ValidateService.addInsurancePrest()
-            GeralPedidosPage.adicionadoRecebAgrupado()
+            cy.intercept('GET', '/images/icons/chain.svg').as('api_icons');
+            cy.wait('@api_icons', { timeout: 40000 });
+            GeralPedidosPage.clickEditInstallments();
+            ParcelasPage.for();
+            ValidateService.okInsurancePrest();
+            TicketPrestamista.added(); 
+            PagamentoPage.insertDate31Days1Due();
+            PagamentoPage.clicarGerarParcAlterarVenc();
+            cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista');
+            cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 });
+            ProcessoRecebPage.presentMoney();
+            cy.get('[style="position: relative"] > :nth-child(4) > div.ng-binding').click({force:true}); //escolher 4 parcelas
+            AgruparRecebPage.groupReleases();
+            ValidateService.messPrestRemoved();
+            ValidateService.addInsurancePrest();
+            GeralPedidosPage.adicionadoRecebAgrupado();
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal()
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })

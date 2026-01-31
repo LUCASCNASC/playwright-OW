@@ -28,7 +28,7 @@ test.describe('Generate orders with promotion', () => {
         test('1.Order with promotion match (promotion 152): product 1868 0 0',  async ({ page }) => {
     
             Product.promoMatch();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -49,7 +49,7 @@ test.describe('Generate orders with promotion', () => {
         test('2.Order with promotion deadline with entry (promotion 150): product 1866 0 0',  async ({ page }) => {
 
             Product.promoDeadlineEntry();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -75,7 +75,7 @@ test.describe('Generate orders with promotion', () => {
         test('3.Order with promotion deadline installment (promotion 151): product 1867 0 0',  async ({ page }) => {
     
             Product.promoDeadlineInstallment();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -99,7 +99,7 @@ test.describe('Generate orders with promotion', () => {
         test('4.Order with promotion match (promotion 152): product 1868 0 0 and product 1870 0 0 (without promotion)',  async ({ page }) => {
     
             Product.promoMatch();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -110,7 +110,7 @@ test.describe('Generate orders with promotion', () => {
             Service.clickOKServiceLinked();
             ThrowDelivery.freightFirst(); 
             Product.second();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -118,7 +118,7 @@ test.describe('Generate orders with promotion', () => {
             Service.clickOKServiceLinked();
             ThrowDelivery.freightSecond(); 
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.clickGenerateInstallments();; 
 
             //Escolher forma de pagamento
             cy.contains('3868 - T.A. A Receber PIX TEF').click({force:true})
@@ -129,7 +129,7 @@ test.describe('Generate orders with promotion', () => {
         test('5.Order with promotion deadline with entry (promotion 150): product 1866 0 0 and product 1870 0 0 (without promotion)',  async ({ page }) => {
     
             Product.promoDeadlineEntry();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -140,7 +140,7 @@ test.describe('Generate orders with promotion', () => {
             Service.clickOKServiceLinked();
             ThrowDelivery.freightFirst(); 
             Product.second();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -166,7 +166,7 @@ test.describe('Generate orders with promotion', () => {
         test('6.Order with promotion match (promotion 152): product 1868 0 0',  async ({ page }) => {
     
             Product.promoMatch();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -191,7 +191,7 @@ test.describe('Generate orders with promotion', () => {
         test('7.Order with promotion deadline with entry (promotion 150): product 1866 0 0',  async ({ page }) => {
     
             Product.promoDeadlineEntry();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -214,7 +214,7 @@ test.describe('Generate orders with promotion', () => {
         test('8.Order with promotion deadline installment (promotion 151): product 1867 0 0',  async ({ page }) => {
     
             Product.promoDeadlineInstallment();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct(); 
@@ -224,7 +224,7 @@ test.describe('Generate orders with promotion', () => {
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.clickGenerateInstallments();; 
 
             //Escolher a forma de pagamento
             cy.get('[style=""] > md-collapsible-header.layout-row > .md-collapsible-tools > .ng-scope').click({force:true});
@@ -242,7 +242,7 @@ test.describe('Generate orders with promotion', () => {
         test('9.Order with promotion match (promotion 152): product 1868 0 0 and product 1870 0 0 (without promotion)',  async ({ page }) => {
     
             Product.promoMatch();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.clickVoltageProduct();
             cy.clickAddProduc();
             Promotion.selectFirstPromoProduct(); 
@@ -251,14 +251,14 @@ test.describe('Generate orders with promotion', () => {
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             Product.second();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             Service.clickOKServiceLinked(); 
             AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.clickGenerateInstallments();; 
 
             //Escolher forma de pagemento
             cy.get('[style=""] > md-collapsible-header.layout-row > .md-collapsible-tools > .ng-scope').click({force: true});

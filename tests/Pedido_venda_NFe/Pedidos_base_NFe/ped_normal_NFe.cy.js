@@ -21,7 +21,7 @@ test.describe('Generate normal order', () => {
         ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
         Product.fisrt();
-        ValidateBalance.withBalance();
+        ValidateBalance.withBalance();;
         CommandsGeneral.selectProductSearch();
     }) 
 
@@ -35,7 +35,7 @@ test.describe('Generate normal order', () => {
             Service.clickOKServiceLinked();
             ThrowDelivery.freightFirst(); 
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.clickGenerateInstallments();; 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.two();
@@ -52,7 +52,7 @@ test.describe('Generate normal order', () => {
             Service.clickOKServiceLinked();
             ThrowDelivery.freightFirst(); 
             Product.second();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -60,7 +60,7 @@ test.describe('Generate normal order', () => {
             Service.clickOKServiceLinked();
             ThrowDelivery.freightSecond(); 
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.clickGenerateInstallments();; 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.two();
@@ -79,7 +79,7 @@ test.describe('Generate normal order', () => {
             AdvanceNormal.toInstallments();
             GeralPagamentoPage.chooseEntryFormPayment() 
             GeralPagamentoPage.clickGeneratePayment()
-            GeralPagamentoPage.clickGenerateInstallments();
+            GeralPagamentoPage.clickGenerateInstallments();;
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.one();
@@ -99,7 +99,7 @@ test.describe('Generate normal order', () => {
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.clickGenerateInstallments();; 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main(); 
             ParcelasPage.two();
@@ -115,7 +115,7 @@ test.describe('Generate normal order', () => {
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             Product.second();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -123,7 +123,7 @@ test.describe('Generate normal order', () => {
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.clickGenerateInstallments();; 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main(); 
             ParcelasPage.two();
@@ -142,7 +142,7 @@ test.describe('Generate normal order', () => {
             AdvanceNormal.toInstallments();
             GeralPagamentoPage.chooseEntryFormPayment() 
             GeralPagamentoPage.clickGeneratePayment()
-            GeralPagamentoPage.clickGenerateInstallments();
+            GeralPagamentoPage.clickGenerateInstallments();;
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main(); 
             ParcelasPage.two();

@@ -21,7 +21,7 @@ test.describe('Generate a future delivery order with delivery.', () => {
         ProcessoVendaPage.deliveryFutureNFCe();
         ChooseCliente.withRoute();
         Product.fisrt();
-        ValidateBalance.withBalance();
+        ValidateBalance.withBalance();;
         CommandsGeneral.selectProductSearch();
     })
     
@@ -37,7 +37,7 @@ test.describe('Generate a future delivery order with delivery.', () => {
             GeneralDelivery.modalInconsOnlyTransporter(); 
             GeneralDelivery.chooseTransporter();
             AdvanceNormal.installmentDelivery();
-            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.clickGenerateInstallments();; 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPromoPage.pagPrincipal();
             ParcelasPage.two();
@@ -52,7 +52,7 @@ test.describe('Generate a future delivery order with delivery.', () => {
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             Product.second(); 
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -62,7 +62,7 @@ test.describe('Generate a future delivery order with delivery.', () => {
             GeneralDelivery.modalInconsOnlyTransporter(); 
             GeneralDelivery.chooseTransporter();
             AdvanceNormal.installmentDelivery(); 
-            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.clickGenerateInstallments();; 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.two();

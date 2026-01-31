@@ -27,7 +27,7 @@ test.describe('Remote/process 9890 - Balance rule Parameter 36 = 4 - Parameter 1
         test('1.Remote order: product 1860 0 0 - (Remote sale of product with stock available at the billing branch)',  async ({ page }) => {
 
             Product.fisrt();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             GeralPedidosPage.changeBranchInvoicing();
@@ -37,7 +37,7 @@ test.describe('Remote/process 9890 - Balance rule Parameter 36 = 4 - Parameter 1
             AdvanceNormal.toTransporter();
             GeneralDelivery.chooseTransporter();
             AdvanceNormal.installmentDelivery();
-            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.clickGenerateInstallments();; 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.two();
@@ -49,7 +49,7 @@ test.describe('Remote/process 9890 - Balance rule Parameter 36 = 4 - Parameter 1
         test('2.Remote order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
 
             Product.fisrt();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             GeralPedidosPage.changeBranchInvoicing();
@@ -57,7 +57,7 @@ test.describe('Remote/process 9890 - Balance rule Parameter 36 = 4 - Parameter 1
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             Product.second();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             GeralPedidosPage.changeBranchInvoicing()
@@ -67,7 +67,7 @@ test.describe('Remote/process 9890 - Balance rule Parameter 36 = 4 - Parameter 1
             AdvanceNormal.toTransporter();
             GeneralDelivery.chooseTransporter();
             AdvanceNormal.installmentDelivery();
-            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.clickGenerateInstallments();; 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.two();
@@ -78,8 +78,8 @@ test.describe('Remote/process 9890 - Balance rule Parameter 36 = 4 - Parameter 1
         
         test('3.Remote order: kit 1877 0 0',  async ({ page }) => {
 
-            Product.kitRemote();
-            ValidateBalance.withBalance();
+            Product.kitRemote();;
+            ValidateBalance.withBalance();;
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             GeralPedidosPage.changeBranchInvoicing();
@@ -90,7 +90,7 @@ test.describe('Remote/process 9890 - Balance rule Parameter 36 = 4 - Parameter 1
             AdvanceNormal.toTransporter();
             GeneralDelivery.chooseTransporter();
             AdvanceNormal.installmentDelivery();
-            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.clickGenerateInstallments();; 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.two();
@@ -104,8 +104,8 @@ test.describe('Remote/process 9890 - Balance rule Parameter 36 = 4 - Parameter 1
 
         test('4.Remote order - with balance in the DC (branch 1) - should allow placing the order - (Remote sale of product (1883 0 0) without balance in the billing branch, but with balance in the billing DC - with delivery)',  async ({ page }) => {
 
-            Product.remoteWithCD();
-            ValidateBalance.withBalance();
+            Product.remoteWithCD();;
+            ValidateBalance.withBalance();;
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             GeralPedidosPage.changeBranchInvoicing();
@@ -115,7 +115,7 @@ test.describe('Remote/process 9890 - Balance rule Parameter 36 = 4 - Parameter 1
             AdvanceNormal.toTransporter();
             GeneralDelivery.chooseTransporter();
             AdvanceNormal.installmentDelivery();
-            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.clickGenerateInstallments();; 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.two();
@@ -126,8 +126,8 @@ test.describe('Remote/process 9890 - Balance rule Parameter 36 = 4 - Parameter 1
         
         test('5.Remote order - NO balance in the DC (branch 1) - should NOT allow order placement - (Remote sale of product (1882 0 0) without balance in the billing branch, without balance in the billing DC)',  async ({ page }) => {
 
-            Product.remoteWithoutCD();
-            ValidateBalance.withBalance();
+            Product.remoteWithoutCD();;
+            ValidateBalance.withBalance();;
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             GeralPedidosPage.changeBranchInvoicing();

@@ -21,7 +21,7 @@ test.describe('Generate a standard order with delivery.', () => {
         ProcessoVendaPage.NFCe();
         ChooseCliente.withRoute();
         Product.kitFirst();
-        ValidateBalance.withBalance();
+        ValidateBalance.withBalance();;
         CommandsGeneral.selectProductSearch();
     })
     
@@ -38,7 +38,7 @@ test.describe('Generate a standard order with delivery.', () => {
             GeneralDelivery.modalInconsOnlyTransporter();
             GeneralDelivery.chooseTransporter();
             AdvanceNormal.installmentDelivery();
-            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.clickGenerateInstallments();; 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.two();

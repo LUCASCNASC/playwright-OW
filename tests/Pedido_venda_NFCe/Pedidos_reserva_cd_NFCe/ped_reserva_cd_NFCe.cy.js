@@ -26,7 +26,7 @@ test.describe('Generate order with reservation at the distribution center (with 
         test('1.Order: product 1880 0 0 - (Local sale of product with stock only at the distribution center - with delivery)', () => {
             
             Product.cdFirst();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -36,7 +36,7 @@ test.describe('Generate order with reservation at the distribution center (with 
             GeneralDelivery.modalInconsOnlyTransporter(); 
             GeneralDelivery.chooseTransporter();
             AdvanceNormal.installmentDelivery();
-            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.clickGenerateInstallments();; 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.two();
@@ -48,14 +48,14 @@ test.describe('Generate order with reservation at the distribution center (with 
         test('2.Order: products 1880 0 0 (CD reservation) and 1870 0 0 (local balance) - (Local sale of 1 product with local balance + 1 product with balance in the CD - with delivery)',  async ({ page }) => {
             
             Product.fisrt();
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             Product.second(); 
-            ValidateBalance.withBalance();
+            ValidateBalance.withBalance();;
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -65,7 +65,7 @@ test.describe('Generate order with reservation at the distribution center (with 
             GeneralDelivery.modalInconsOnlyTransporter(); 
             GeneralDelivery.chooseTransporter();
             AdvanceNormal.installmentDelivery();
-            GeralPagamentoPage.clickGenerateInstallments(); 
+            GeralPagamentoPage.clickGenerateInstallments();; 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.two();

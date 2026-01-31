@@ -15,7 +15,7 @@ test.describe('Sale of individual services', () => {
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
-        ProcessoVendaPage.saleServiceLoose()
+        ProcessoVendaPage.saleServiceLoose();
         ChooseCliente.withRoute();
     })
 
@@ -23,14 +23,14 @@ test.describe('Sale of individual services', () => {
 
         test('1.Order of labor - 144 (T.A. MO Does not Highlight and Separates Different Process)',  async ({ page }) => {
 
-            ServicoAvulsoPage.productServiceLoose()
-            ServicoAvulsoPage.chooseServiceSearch()
-            ServicoAvulsoPage.messItemAddedSucess()
-            ServicoAvulsoPage.clickCartShopping()
-            ServicoAvulsoPage.serviceAddedCart()
-            ServicoAvulsoPage.buttonAdvanceOrder()
-            PagamentoPage.clickGenerateInstallments() 
-            PagamentoPage.loadingFormPayment()
+            ServicoAvulsoPage.productServiceLoose();
+            ServicoAvulsoPage.chooseServiceSearch();
+            ServicoAvulsoPage.messItemAddedSucess();
+            ServicoAvulsoPage.clickCartShopping();
+            ServicoAvulsoPage.serviceAddedCart();
+            ServicoAvulsoPage.buttonAdvanceOrder();
+            PagamentoPage.clickGenerateInstallments(); 
+            PagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.two();
             AdvanceNormal.final();
