@@ -27,7 +27,7 @@ test.describe('Generate orders with promotions and interest-free services', () =
         test('1.Order with promotion deadline installment (promotion 159): product 1891 0 0 with guarantee (interest-free)',  async ({ page }) => {
     
             Product.firstInstallmentDeadline();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -51,7 +51,7 @@ test.describe('Generate orders with promotions and interest-free services', () =
         test('2.Order with promotion deadline with entry + installments (promotion 158): product 1895 0 0 with guarantee (interest-free)',  async ({ page }) => {
 
             Product.secondInstallmentDeadline();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -93,7 +93,7 @@ test.describe('Generate orders with promotions and interest-free services', () =
         test('3.Order with promotion deadline installment (promotion 161): product 1893 0 0 with moneylender (interest-free)',  async ({ page }) => {
     
             Product.thirdInstallmentDeadline();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -108,9 +108,9 @@ test.describe('Generate orders with promotions and interest-free services', () =
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista');
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 });
             Promotion.addPrestamista();
-            TicketPrestamista.added();;
+            TicketPrestamista.added();
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal();;
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })
@@ -118,7 +118,7 @@ test.describe('Generate orders with promotions and interest-free services', () =
         test('4.Order with installment payment promotion (promotion 162): product 1894 0 0 with warranty (interest-free); and lender (with interest)',  async ({ page }) => {
     
             Product.fourthInstallmentDeadline()
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -135,9 +135,9 @@ test.describe('Generate orders with promotions and interest-free services', () =
             cy.intercept('POST', '/services/v3/pedido_forma_pagamento_lista').as('api_pedido_forma_pagamento_lista');
             cy.wait('@api_pedido_forma_pagamento_lista', { timeout: 40000 });
             Promotion.addPrestamista();
-            TicketPrestamista.added();;
+            TicketPrestamista.added();
             AdvanceNormal.final();
-            TicketPrestamista.pageFinal();;
+            TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
         })

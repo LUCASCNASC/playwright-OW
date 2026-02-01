@@ -26,7 +26,7 @@ test.describe('Generate order with reservation in the CD - Balance rule Paramete
         test('1.Order: product 1880 0 0 - (Local sale of product with stock only in the CD - without delivery)',  async ({ page }) => {
 
             Product.cdFirst();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -34,7 +34,7 @@ test.describe('Generate order with reservation in the CD - Balance rule Paramete
             Service.clickOKServiceLinked();
             ThrowDelivery.freightFirst(); 
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.duas();
@@ -46,7 +46,7 @@ test.describe('Generate order with reservation in the CD - Balance rule Paramete
         test('2.Order: products 1880 0 0 (reservation CD) and 1870 0 0 (local stock) - (Local sale of 1 product with local stock + 1 product with stock in the CD - without delivery)',  async ({ page }) => {
 
             Product.cdFirst();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -54,7 +54,7 @@ test.describe('Generate order with reservation in the CD - Balance rule Paramete
             Service.clickOKServiceLinked();
             ThrowDelivery.freightFirst(); 
             Product.second();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -62,7 +62,7 @@ test.describe('Generate order with reservation in the CD - Balance rule Paramete
             Service.clickOKServiceLinked();
             ThrowDelivery.freightSecond(); 
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.duas();
@@ -77,7 +77,7 @@ test.describe('Generate order with reservation in the CD - Balance rule Paramete
         test('3.Order: product 1880 0 0 - (Local sale of product with stock only in the CD - with delivery)',  async ({ page }) => {
             
             Product.cdFirst();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -85,7 +85,7 @@ test.describe('Generate order with reservation in the CD - Balance rule Paramete
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.duas();
@@ -97,14 +97,14 @@ test.describe('Generate order with reservation in the CD - Balance rule Paramete
         test('4.Order: products 1880 0 0 (CD reservation) and 1870 0 0 (local balance) - (Local sale of 1 product with local balance + 1 product with balance in the CD - with delivery)',  async ({ page }) => {
             
             Product.fisrt();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             Product.second();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -112,7 +112,7 @@ test.describe('Generate order with reservation in the CD - Balance rule Paramete
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.duas();

@@ -21,7 +21,7 @@ test.describe('Generate normal order', () => {
         ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
         Product.kitFirst();
-        ValidateBalance.withBalance();;
+        ValidateBalance.withBalance();
         CommandsGeneral.selectProductSearch();
     })
 
@@ -36,7 +36,7 @@ test.describe('Generate normal order', () => {
             Service.clickOKServiceLinked();
             ThrowDelivery.freightFirst(); 
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.two();
@@ -57,7 +57,7 @@ test.describe('Generate normal order', () => {
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.two();

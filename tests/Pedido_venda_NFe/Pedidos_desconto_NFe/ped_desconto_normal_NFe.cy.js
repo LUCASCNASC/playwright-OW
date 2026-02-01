@@ -27,7 +27,7 @@ test.describe('Generate a sales order with a discount', () => {
         test('1.Order: product 1912 0 0 with discount Sub (-) / R$',  async ({ page }) => {
 
             Product.discountNumber();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -38,7 +38,7 @@ test.describe('Generate a sales order with a discount', () => {
             OrderDiscount.applyDiscountR$()
             ThrowDelivery.freightFirst(); 
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.one();
@@ -50,7 +50,7 @@ test.describe('Generate a sales order with a discount', () => {
         test('2.Order: product 1913 0 0 with discount Sub (-) / % (Percentage)',  async ({ page }) => {
 
             Product.discountPercentage();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -61,7 +61,7 @@ test.describe('Generate a sales order with a discount', () => {
             OrderDiscount.applyDiscountPencentage();
             ThrowDelivery.freightFirst(); 
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.one();
@@ -73,7 +73,7 @@ test.describe('Generate a sales order with a discount', () => {
         test('3.Order: product 1914 0 0 with discount Sub (-) / FIXED VALUE',  async ({ page }) => {
 
             Product.discountValueFixed()
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -84,7 +84,7 @@ test.describe('Generate a sales order with a discount', () => {
             OrderDiscount.applyDiscountVF()
             ThrowDelivery.freightFirst();() 
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.one();

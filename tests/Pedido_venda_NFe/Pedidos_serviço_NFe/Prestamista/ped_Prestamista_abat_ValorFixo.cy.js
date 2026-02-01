@@ -28,7 +28,7 @@ test.describe('Generate orders with Fixed Value Discount Service (161)', () => {
         test('1.Order: product 1860 0 0, inclusion 3880, lender 161 (55.90), 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.fisrt();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -59,7 +59,7 @@ test.describe('Generate orders with Fixed Value Discount Service (161)', () => {
             ValidateService.garantiaNaoSep();
             Service.clickOKServiceLinked(); 
             Product.second();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -85,7 +85,7 @@ test.describe('Generate orders with Fixed Value Discount Service (161)', () => {
         test('3.Order: product 1922 0 0 (promo on credit 171), inclusion 3880 (other receipt 3860), lender 161, 4 installments upon receipt Future with interest',  async ({ page }) => {
     
             Product.termFisrtPrestAbatVF();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -111,7 +111,7 @@ test.describe('Generate orders with Fixed Value Discount Service (161)', () => {
         test('4.Order: product 1923 0 0 + warranty not separated (promo on credit 172 - services interest free), inclusion 3880 (other receipt 3860), lender 161, 4 installments upon receipt Future with interest',  async ({ page }) => {
 
             Product.termSecondPrestAbatVF();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -139,7 +139,7 @@ test.describe('Generate orders with Fixed Value Discount Service (161)', () => {
         test('5.Order: product 1924 0 0 + warranty not separated (promo on credit 173 - services interest free), inclusion 3880 (other receipt 3860), lender 161, 4 installments upon receipt Future with interest',  async ({ page }) => {
 
             Product.termThirdPrestAbatVF();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -170,7 +170,7 @@ test.describe('Generate orders with Fixed Value Discount Service (161)', () => {
         test('6.Order: product 1860 0 0, inclusion 3878, lender 161 (55.90), 4 installments upon receipt Present with interest.',  async ({ page }) => {
     
             Product.fisrt();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 

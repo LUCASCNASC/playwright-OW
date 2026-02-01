@@ -17,7 +17,7 @@ test.describe('Sale of a one-off service, with the product order already downloa
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
-        ProcessoVendaPage.saleServiceLoose()
+        ProcessoVendaPage.saleServiceLoose();
         ChooseCliente.withRoute();
     })
 

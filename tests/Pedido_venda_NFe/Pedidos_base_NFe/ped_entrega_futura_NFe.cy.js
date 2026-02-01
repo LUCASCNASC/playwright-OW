@@ -20,7 +20,7 @@ test.describe('Generate future delivery order', () => {
         ProcessoVendaPage.deliveryFutureNFe();
         ChooseCliente.withRoute();
         Product.fisrt();
-        ValidateBalance.withBalance();;
+        ValidateBalance.withBalance();
         CommandsGeneral.selectProductSearch();
     })
 
@@ -34,7 +34,7 @@ test.describe('Generate future delivery order', () => {
             Service.clickOKServiceLinked();
             ThrowDelivery.freightFirst(); 
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main(); 
             ParcelasPage.two();
@@ -51,7 +51,7 @@ test.describe('Generate future delivery order', () => {
             clicarOKServVinServico.clickOKServiceLinked();
             ThrowDelivery.freightFirst(); 
             Product.second();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -79,7 +79,7 @@ test.describe('Generate future delivery order', () => {
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main(); 
             ParcelasPage.two();
@@ -95,7 +95,7 @@ test.describe('Generate future delivery order', () => {
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             Product.second();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -103,7 +103,7 @@ test.describe('Generate future delivery order', () => {
             Service.clickOKServiceLinked();
             AdvanceNormal.toTransporter(); //TRANSPORTADORA
             AdvanceNormal.toInstallments(); 
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main(); 
             ParcelasPage.two();

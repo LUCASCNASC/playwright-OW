@@ -20,7 +20,7 @@ test.describe('Generate a standard order with delivery.', () => {
         ProcessoVendaPage.NFCe();
         ChooseCliente.withRoute();
         Product.fisrt();
-        ValidateBalance.withBalance();;
+        ValidateBalance.withBalance();
         CommandsGeneral.selectProductSearch();
     })
 
@@ -36,7 +36,7 @@ test.describe('Generate a standard order with delivery.', () => {
             GeneralDelivery.modalInconsOnlyTransporter(); 
             GeneralDelivery.chooseTransporter();
             AdvanceNormal.installmentDelivery();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.two();
@@ -52,7 +52,7 @@ test.describe('Generate a standard order with delivery.', () => {
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             Product.second(); 
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -62,7 +62,7 @@ test.describe('Generate a standard order with delivery.', () => {
             GeneralDelivery.modalInconsOnlyTransporter(); 
             GeneralDelivery.chooseTransporter();
             AdvanceNormal.installmentDelivery();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.two();
@@ -83,7 +83,7 @@ test.describe('Generate a standard order with delivery.', () => {
             AdvanceNormal.installmentDelivery();
             GeralPagamentoPage.chooseEntryFormPayment() 
             GeralPagamentoPage.clickGeneratePayment()
-            GeralPagamentoPage.clickGenerateInstallments();;
+            GeralPagamentoPage.clickGenerateInstallments();
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.one();

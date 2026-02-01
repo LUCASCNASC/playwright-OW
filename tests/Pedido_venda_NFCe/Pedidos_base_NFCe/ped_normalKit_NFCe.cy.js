@@ -21,7 +21,7 @@ test.describe('Generate a standard order with delivery.', () => {
         ProcessoVendaPage.NFCe();
         ChooseCliente.withRoute();
         Product.kitFirst();
-        ValidateBalance.withBalance();;
+        ValidateBalance.withBalance();
         CommandsGeneral.selectProductSearch();
     })
     
@@ -30,7 +30,7 @@ test.describe('Generate a standard order with delivery.', () => {
         test('1.Order: kit 1862 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct();
-            GeralPedidosPage.compositionKit();;
+            GeralPedidosPage.compositionKit();
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
@@ -38,7 +38,7 @@ test.describe('Generate a standard order with delivery.', () => {
             GeneralDelivery.modalInconsOnlyTransporter();
             GeneralDelivery.chooseTransporter();
             AdvanceNormal.installmentDelivery();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.two();

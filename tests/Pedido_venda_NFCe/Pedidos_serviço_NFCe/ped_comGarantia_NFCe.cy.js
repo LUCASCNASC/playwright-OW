@@ -20,7 +20,7 @@ test.describe('Generate orders with warranty and delivery', () => {
         ProcessoVendaPage.NFCe();
         ChooseCliente.withRoute();
         Product.fisrt();
-        ValidateBalance.withBalance();;
+        ValidateBalance.withBalance();
         CommandsGeneral.selectProductSearch();
         CommandsGeneral.clickVoltageProduct();
         CommandsGeneral.clickAddProduct(); 
@@ -37,7 +37,7 @@ test.describe('Generate orders with warranty and delivery', () => {
             GeneralDelivery.modalInconsOnlyTransporter(); 
             GeneralDelivery.chooseTransporter();
             AdvanceNormal.installmentDelivery();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
             ParcelasPage.two();
@@ -51,7 +51,7 @@ test.describe('Generate orders with warranty and delivery', () => {
             Service.garantiaSepMesmoProc(); 
             Service.clickOKServiceLinked(); 
             Product.second();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -61,7 +61,7 @@ test.describe('Generate orders with warranty and delivery', () => {
             GeneralDelivery.modalInconsOnlyTransporter(); 
             GeneralDelivery.chooseTransporter();
             AdvanceNormal.installmentDelivery();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
             ParcelasPage.two();
@@ -78,7 +78,7 @@ test.describe('Generate orders with warranty and delivery', () => {
             GeneralDelivery.modalInconsOnlyTransporter(); 
             GeneralDelivery.chooseTransporter();
             AdvanceNormal.installmentDelivery(); 
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
             ParcelasPage.two();
@@ -92,7 +92,7 @@ test.describe('Generate orders with warranty and delivery', () => {
             Service.garantiaNaoSep(); 
             Service.clickOKServiceLinked(); 
             Product.second();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -102,7 +102,7 @@ test.describe('Generate orders with warranty and delivery', () => {
             GeneralDelivery.modalInconsOnlyTransporter(); 
             GeneralDelivery.chooseTransporter();
             AdvanceNormal.installmentDelivery();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
             ParcelasPage.two();
@@ -119,7 +119,7 @@ test.describe('Generate orders with warranty and delivery', () => {
             GeneralDelivery.modalInconsOnlyTransporter(); 
             GeneralDelivery.escolherTranspochooseTransporterrtadora()
             AdvanceNormal.installmentDelivery(); 
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
             ParcelasPage.two();
@@ -133,7 +133,7 @@ test.describe('Generate orders with warranty and delivery', () => {
             Service.garantiaSepTituloProcDif(); //Marcar Garantia separa titulo em um processo diferente
             Service.clickOKServiceLinked(); 
             Product.second();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -143,7 +143,7 @@ test.describe('Generate orders with warranty and delivery', () => {
             GeneralDelivery.modalInconsOnlyTransporter(); 
             GeneralDelivery.chooseTransporter();
             AdvanceNormal.installmentDelivery();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
             ParcelasPage.two();

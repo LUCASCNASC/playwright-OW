@@ -28,7 +28,7 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
         test('1.Order: normal product (with balance and with delivery, 15 days) and a remote kit (2 compositions, without balance and without receivable, 20 days).',  async ({ page }) => {
 
             ProductExclusiva.firstNormal(); 
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -44,7 +44,7 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
             GeneralDelivery.modalInconsApenasTransp();
             GeneralDelivery.escolherTransportadora();
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.carregandoFormaPagamento();
             ProcessoRecebPage.main();
             ParcelasPage.two();
@@ -56,14 +56,14 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
         test('2.Order: normal product (with balance and with delivery) and a kit with 6 compositions (current date + parameter 552/ 5 days).',  async ({ page }) => {
 
             ProductExclusiva.firstNormal();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             ProductExclusiva.kitVolumes(); 
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -71,7 +71,7 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
             GeneralDelivery.modalInconsApenasTransp();
             GeneralDelivery.escolherTransportadora();
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.carregandoFormaPagamento();
             ProcessoRecebPage.main();
             ParcelasPage.two();
@@ -86,7 +86,7 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
         test('3.Order: a product (without balance and with balance to receive for 10 days, and with delivery), and have an appointment for the forecast date.',  async ({ page }) => {
 
             ProductExclusiva.balanceReceive();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -96,7 +96,7 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
             GeneralDelivery.modalInconsApenasTransp();
             GeneralDelivery.escolherTransportadora();
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.carregandoFormaPagamento();
             ProcessoRecebPage.main();
             ParcelasPage.two();
@@ -125,7 +125,7 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
         test('5.Order: normal sale: product 1896 0 0 (without delivery)',  async ({ page }) => {
     
             ProductExclusiva.firstNormal(); 
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -133,7 +133,7 @@ test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
             Service.clickOKServiceLinked();
             ThrowDelivery.freightFirst(); 
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.two();

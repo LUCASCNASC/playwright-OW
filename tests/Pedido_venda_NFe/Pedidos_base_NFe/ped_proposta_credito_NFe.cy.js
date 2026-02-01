@@ -20,7 +20,7 @@ test.describe('Generate request with credit proposal', () => {
         ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
         Product.fisrt();
-        ValidateBalance.withBalance();;
+        ValidateBalance.withBalance();
         CommandsGeneral.selectProductSearch();
     })
 
@@ -34,7 +34,7 @@ test.describe('Generate request with credit proposal', () => {
             Service.clickOKServiceLinked();
             ThrowDelivery.freightFirst(); 
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.proposalCredit()
             ParcelasPage.one();

@@ -25,7 +25,7 @@ test.describe('Generate promotional orders with delivery', () => {
         test('1.Order with promotional offer (promotion 152): product 1868 0 0',  async ({ page }) => {
     
             Product.promoMatch();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch(); ; 
             Promotion.ticketPromotion(); 
             CommandsGeneral.clickVoltageProduct();
@@ -37,7 +37,7 @@ test.describe('Generate promotional orders with delivery', () => {
             GeneralDelivery.modalInconsOnlyTransporter(); 
             GeneralDelivery.chooseTransporter();
             AdvanceNormal.installmentDelivery();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
 
             //Escolher "Forma de pagamento"
             cy.get('[style=""] > md-collapsible-header.layout-row > .md-collapsible-tools > .ng-scope').click();
@@ -52,7 +52,7 @@ test.describe('Generate promotional orders with delivery', () => {
         test('2.Order with installment payment promotion with down payment (promotion 150): product 1866 0 0',  async ({ page }) => {
     
             Product.promoDeadlineEntry();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch(); ; 
             Promotion.ticketPromotion(); 
             CommandsGeneral.clickVoltageProduct();
@@ -73,7 +73,7 @@ test.describe('Generate promotional orders with delivery', () => {
         test('3.Order with installment payment promotion (promotion 151): product 1867 0 0',  async ({ page }) => {
     
             Product.promoDeadlineInstallment();
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch(); ; 
             Promotion.ticketPromotion();
             CommandsGeneral.clickVoltageProduct();
@@ -85,7 +85,7 @@ test.describe('Generate promotional orders with delivery', () => {
             GeneralDelivery.modalInconsOnlyTransporter(); 
             GeneralDelivery.chooseTransporter();
             AdvanceNormal.installmentDelivery();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
 
             //Escolher a forma de pagamento
             cy.get('[style=""] > md-collapsible-header.layout-row > .md-collapsible-tools > .ng-scope').click({force:true});

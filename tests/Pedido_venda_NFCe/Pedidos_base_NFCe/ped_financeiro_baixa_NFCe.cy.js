@@ -20,7 +20,7 @@ test.describe('Generate order with financial terms upon delivery.', () => {
         ProcessoVendaPage.financePaymentNFCe(); 
         ChooseCliente.withRoute();
         Product.fisrt();
-        ValidateBalance.withBalance();;
+        ValidateBalance.withBalance();
         CommandsGeneral.selectProductSearch();
     })
     
@@ -36,7 +36,7 @@ test.describe('Generate order with financial terms upon delivery.', () => {
             GeneralDelivery.modalInconsOnlyTransporter();
             GeneralDelivery.chooseTransporter();
             AdvanceNormal.installmentDelivery();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
             ParcelasPage.two();
@@ -52,7 +52,7 @@ test.describe('Generate order with financial terms upon delivery.', () => {
             Service.validateModalServLinked(); 
             Service.clickOKServiceLinked();
             Product.second(); 
-            ValidateBalance.withBalance();;
+            ValidateBalance.withBalance();
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             CommandsGeneral.selectProductSearch();
@@ -62,7 +62,7 @@ test.describe('Generate order with financial terms upon delivery.', () => {
             GeneralDelivery.modalInconsOnlyTransporter();
             GeneralDelivery.chooseTransporter();
             AdvanceNormal.installmentDelivery();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment(); 
             ProcessoRecebPage.main();
             ParcelasPage.two();

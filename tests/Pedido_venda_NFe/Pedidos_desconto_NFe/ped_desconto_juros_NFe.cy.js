@@ -21,7 +21,7 @@ test.describe('Generate a standard order with interest discount - parameters 243
         ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
         Product.roundUpDown();
-        ValidateBalance.withBalance();;
+        ValidateBalance.withBalance();
         CommandsGeneral.selectProductSearch();
     })
 
@@ -35,7 +35,7 @@ test.describe('Generate a standard order with interest discount - parameters 243
             Service.clickOKServiceLinked();
             ThrowDelivery.freightFirst(); 
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.one();
@@ -56,7 +56,7 @@ test.describe('Generate a standard order with interest discount - parameters 243
             Service.clickOKServiceLinked(); 
             ThrowDelivery.freightFirst(); 
             AdvanceNormal.toInstallments();
-            GeralPagamentoPage.clickGenerateInstallments();; 
+            GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();
             ProcessoRecebPage.main();
             ParcelasPage.one();
