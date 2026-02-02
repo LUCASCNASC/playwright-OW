@@ -19,6 +19,7 @@ import { ChooseCliente } from '../../../../pages/pedido/ClientePage.js';
 test.describe('Generate orders with Lender Discount % (158)', () => {
 
     test.beforeEach(async ({ page }) => {
+
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
@@ -317,7 +318,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.validateModalServLinked();
             ValidateService.garantiaNaoSep();
             Service.clickOKServiceLinked(); 
-            ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
+            ValidateService.servLinked(); ValidateService.addGarantNaoSep();
             AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_pagamentoPedido');
@@ -330,7 +331,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             ParcelasPage.one();
             ValidateService.okInsurancePrest();
             TicketPrestamista.added(); 
-            AdvanceNormal.finalarFinal()
+            AdvanceNormal.finalarFinal();
             TicketPrestamista.pageFinal();
             FinalizarPedidoPage.clickFinalizarPedidoPage();
             FinalizarPedidoPage.validateOrderGenerated();
@@ -349,7 +350,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.validateModalServLinked();
             ValidateService.garantiaNaoSep();
             Service.clickOKServiceLinked(); 
-            ValidateService.servLinked() ; ValidateService.addGarantNaoSep()
+            ValidateService.servLinked(); ValidateService.addGarantNaoSep();
             AdvanceNormal.toTransporter();
             AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_pagamentoPedido');
@@ -376,12 +377,12 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct();
-            ProcessoRecebPromoPage.entryPresentPrest()
+            ProcessoRecebPromoPage.entryPresentPrest();
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
             ValidateService.garantiaNaoSep();
             Service.clickOKServiceLinked(); 
-            ValidateService.servLinked() ; ValidateService.addGarantNaoSep();
+            ValidateService.servLinked(); ValidateService.addGarantNaoSep();
             ThrowDelivery.freightFirst();
             AdvanceNormal.toInstallments();
             cy.intercept('GET', '/images/icons/chain.svg').as('api_icons');
@@ -525,7 +526,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct();
-            ProcessoRecebPromoPage.termFutWithoutFeesPrest()
+            ProcessoRecebPromoPage.termFutWithoutFeesPrest();
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
             Service.clickOKServiceLinked(); 
@@ -689,7 +690,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             Service.validateModalServLinked();
             ValidateService.garantiaNaoSep();
             Service.clickOKServiceLinked(); 
-            ValidateService.servLinked(); ValidateService.addGarantNaoSep()
+            ValidateService.servLinked(); ValidateService.addGarantNaoSep();
             Product.second();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();
@@ -725,12 +726,12 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
             Promotion.selectFirstPromoProduct();
-            ProcessoRecebPromoPage.termFutWithoutFeesPrest()
+            ProcessoRecebPromoPage.termFutWithoutFeesPrest();
             CommandsGeneral.clickAddProduct(); 
             Service.validateModalServLinked();
             ValidateService.garantiaNaoSep();
-            Service.clickOKServiceLinked(); )
-            ValidateService.servLinked(); ValidateService.addGarantNaoSep()
+            Service.clickOKServiceLinked();
+            ValidateService.servLinked(); ValidateService.addGarantNaoSep();
             Product.second();
             ValidateBalance.withBalance();
             CommandsGeneral.selectProductSearch();

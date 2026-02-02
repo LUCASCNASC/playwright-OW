@@ -14,6 +14,7 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Generate a standard order with delivery.', () => {
 
     test.beforeEach(async ({ page }) => {
+        
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();

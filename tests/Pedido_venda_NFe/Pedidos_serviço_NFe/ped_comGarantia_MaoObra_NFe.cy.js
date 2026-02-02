@@ -15,6 +15,7 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Generate orders with warranty and labor', () => {
 
     test.beforeEach(async ({ page }) => {
+        
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();

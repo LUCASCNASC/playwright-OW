@@ -15,6 +15,7 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Generate an order with more than one payment method', () => {
 
     test.beforeEach(async ({ page }) => {
+        
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();

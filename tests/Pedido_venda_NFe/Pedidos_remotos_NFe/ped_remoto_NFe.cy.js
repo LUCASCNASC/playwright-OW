@@ -14,6 +14,7 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Remote/process 9860 - Balance rule Parameter 36 = 4 - Parameter 139 = 4 - Trial 653 not configured', () => {
 
     test.beforeEach(async ({ page }) => {
+        
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();

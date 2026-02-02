@@ -16,6 +16,7 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Generate sales order for discounted kit', () => {
 
     test.beforeEach(async ({ page }) => {
+        
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();

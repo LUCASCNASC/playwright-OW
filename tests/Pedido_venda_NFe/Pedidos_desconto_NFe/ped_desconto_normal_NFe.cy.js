@@ -15,6 +15,7 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Generate a sales order with a discount', () => {
 
     test.beforeEach(async ({ page }) => {
+
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
@@ -82,7 +83,7 @@ test.describe('Generate a sales order with a discount', () => {
             OrderDiscount.clickButtonDiscount(); 
             OrderDiscount.validateModalSub();
             OrderDiscount.applyDiscountVF()
-            ThrowDelivery.freightFirst();() 
+            ThrowDelivery.freightFirst();
             AdvanceNormal.toInstallments();
             GeralPagamentoPage.clickGenerateInstallments(); 
             GeralPagamentoPage.loadingFormPayment();

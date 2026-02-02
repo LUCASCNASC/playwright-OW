@@ -5,6 +5,7 @@ import users from '../../tests/users.json';
 test.describe('Inactive user', () => {
 
     test.beforeEach(async ({ page }) => {
+        
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();

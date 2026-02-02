@@ -14,6 +14,7 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Sale of a one-off service, with the product order already downloaded', () => {
 
     test.beforeEach(async ({ page }) => {
+        
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();

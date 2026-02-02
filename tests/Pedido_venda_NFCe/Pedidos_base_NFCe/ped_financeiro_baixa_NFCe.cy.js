@@ -14,7 +14,8 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Generate order with financial terms upon delivery.', () => {
 
     test.beforeEach(async ({ page }) => {
-        CommandsGeneral.login();//login
+
+        CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
         ProcessoVendaPage.financePaymentNFCe(); 

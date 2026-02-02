@@ -7,6 +7,7 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Attempting to generate a sales order with an out-of-stock product - Stock rule Parameter 36 = 4 - Parameter 139 = 4 - Trial 653 not configured', () => {
 
     test.beforeEach(async ({ page }) => {
+        
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();

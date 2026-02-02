@@ -9,6 +9,7 @@ import { RefComercialPage,RefComercialPage } from '../../../pages/cadastro_clien
 test.describe('Register complete client - commercial reference', () => {
 
     test.beforeEach(async ({ page }) => {
+        
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();

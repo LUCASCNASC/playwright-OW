@@ -14,6 +14,7 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Generate orders with warranty and labor with delivery', () => {
 
     test.beforeEach(async ({ page }) => {
+
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
@@ -47,7 +48,7 @@ test.describe('Generate orders with warranty and labor with delivery', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-            test('2.Order: product 1860 0 0 (with Warranty that separates title in the same process and Labor that detaches and does not separate) and product 1870 0 0 (without service)',  async ({ page }) => {
+        test('2.Order: product 1860 0 0 (with Warranty that separates title in the same process and Labor that detaches and does not separate) and product 1870 0 0 (without service)',  async ({ page }) => {
 
             Service.garantiaSepMesmoProc(); 
             Service.maoObraDestNãoSep(); 

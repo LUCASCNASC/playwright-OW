@@ -12,6 +12,7 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Sale of individual services', () => {
 
     test.beforeEach(async ({ page }) => {
+        
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();

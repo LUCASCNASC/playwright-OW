@@ -16,6 +16,7 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Exclusive Orders - Company parameter 1019 checked', () => {
 
     test.beforeEach(async ({ page }) => {
+        
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();

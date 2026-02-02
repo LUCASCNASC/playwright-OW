@@ -9,6 +9,7 @@ import { EnderecoPage, EnderecoPage } from '../../../pages/cadastro_cliente/clie
 test.describe('Register complete customer - personal reference', () => {
 
     test.beforeEach(async ({ page }) => {
+        
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();

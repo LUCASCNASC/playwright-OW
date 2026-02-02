@@ -5,6 +5,7 @@ import users from '../../tests/users.json';
 test.describe('Login hapy path - regular user with password enabled', () => {
 
     test.beforeEach(async ({ page }) => {
+        
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();

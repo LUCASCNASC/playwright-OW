@@ -12,6 +12,7 @@ import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 test.describe('Sale of individual Host service - 104', () => {
 
     test.beforeEach(async ({ page }) => {
+        
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.tituloPagina();
