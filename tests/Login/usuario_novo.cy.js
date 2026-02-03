@@ -8,7 +8,7 @@ test.describe('Log in with new user.', () => {
         
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
-        CommandsGeneral.tituloPagina();
+        CommandsGeneral.validateTitlePage();
         LoginPage.validateLogoEmpresaLogin();
         LoginPage.validateIconeComputadorLogin();
         LoginPage.validateUsuarioTextoIcone();

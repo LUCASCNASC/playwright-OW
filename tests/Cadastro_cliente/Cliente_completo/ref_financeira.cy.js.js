@@ -12,7 +12,7 @@ test.describe('Register complete customer - financial reference', () => {
         
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
-        CommandsGeneral.tituloPagina();
+        CommandsGeneral.validateTitlePage();
     })
 
     test('1.Complete customer CPF - happy path',  async ({ page }) => {

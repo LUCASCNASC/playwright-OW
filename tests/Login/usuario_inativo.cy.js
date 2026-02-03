@@ -8,7 +8,7 @@ test.describe('Inactive user', () => {
         
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
-        CommandsGeneral.tituloPagina();
+        CommandsGeneral.validateTitlePage();
         LoginPage.validateLogoEmpresaLogin();
         LoginPage.validateIconeComputadorLogin();
         LoginPage.validateUsuarioTextoIcone();

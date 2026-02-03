@@ -18,7 +18,7 @@ test.describe('Remote/process 9890 - Balance rule Parameter 36 = 4 - Parameter 1
         
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
-        CommandsGeneral.tituloPagina();
+        CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFCe();
         ChooseCliente.withRoute();
     })

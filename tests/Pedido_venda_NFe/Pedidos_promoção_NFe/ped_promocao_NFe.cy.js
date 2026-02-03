@@ -19,7 +19,7 @@ test.describe('Generate orders with promotion', () => {
         
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
-        CommandsGeneral.tituloPagina();
+        CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
     })

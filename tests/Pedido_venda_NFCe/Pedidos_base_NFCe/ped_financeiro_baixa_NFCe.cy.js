@@ -17,7 +17,7 @@ test.describe('Generate order with financial terms upon delivery.', () => {
 
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
-        CommandsGeneral.tituloPagina();
+        CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.financePaymentNFCe(); 
         ChooseCliente.withRoute();
         Product.fisrt();

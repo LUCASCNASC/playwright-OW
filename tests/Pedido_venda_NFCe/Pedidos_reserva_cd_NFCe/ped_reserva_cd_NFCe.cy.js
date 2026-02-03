@@ -17,7 +17,7 @@ test.describe('Generate order with reservation at the distribution center (with 
         
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
-        CommandsGeneral.tituloPagina();
+        CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFCe();
         ChooseCliente.withRoute();
     })

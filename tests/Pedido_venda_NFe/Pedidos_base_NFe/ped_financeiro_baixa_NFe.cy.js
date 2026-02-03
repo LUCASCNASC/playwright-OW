@@ -17,7 +17,7 @@ test.describe('Generate order with financial data at low level', () => {
         
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
-        CommandsGeneral.tituloPagina();
+        CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.financePaymentNFe();
         ChooseCliente.withRoute();
         Product.fisrt();

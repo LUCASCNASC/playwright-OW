@@ -9,7 +9,7 @@ test.describe('Register simple custumer', () => {
         
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
-        CommandsGeneral.tituloPagina();
+        CommandsGeneral.validateTitlePage();
     })
   
     context('Simple customer registration.', () => {

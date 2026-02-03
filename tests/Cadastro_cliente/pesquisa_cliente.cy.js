@@ -7,7 +7,7 @@ test.describe('Search client', () => {
         
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
-        CommandsGeneral.tituloPagina();
+        CommandsGeneral.validateTitlePage();
     })
 
     context('Search customer by number.', () => {

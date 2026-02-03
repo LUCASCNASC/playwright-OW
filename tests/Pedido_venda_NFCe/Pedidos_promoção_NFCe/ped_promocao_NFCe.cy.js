@@ -16,7 +16,7 @@ test.describe('Generate promotional orders with delivery', () => {
         
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
-        CommandsGeneral.tituloPagina();
+        CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFCe();
         ChooseCliente.withRoute();
     })

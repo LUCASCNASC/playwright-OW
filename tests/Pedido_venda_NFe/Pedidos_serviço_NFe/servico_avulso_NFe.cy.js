@@ -15,7 +15,7 @@ test.describe('Sale of individual services', () => {
         
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
-        CommandsGeneral.tituloPagina();
+        CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.saleServiceLoose();
         ChooseCliente.withRoute();
     })

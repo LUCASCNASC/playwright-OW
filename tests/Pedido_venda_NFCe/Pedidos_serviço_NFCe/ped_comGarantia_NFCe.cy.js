@@ -17,7 +17,7 @@ test.describe('Generate orders with warranty and delivery', () => {
         
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
-        CommandsGeneral.tituloPagina();
+        CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFCe();
         ChooseCliente.withRoute();
         Product.fisrt();

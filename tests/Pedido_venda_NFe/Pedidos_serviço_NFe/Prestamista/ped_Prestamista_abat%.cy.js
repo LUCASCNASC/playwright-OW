@@ -22,7 +22,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
 
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
-        CommandsGeneral.tituloPagina();
+        CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
     })   

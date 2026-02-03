@@ -27,7 +27,7 @@ export class CommandsGeneral {
   }
 
   //Valida o título da página.
-  async tituloPagina() {
+  async validateTitlePage() {
     await expect(this.page).toHaveTitle('Sabium Mobile');
   }
 

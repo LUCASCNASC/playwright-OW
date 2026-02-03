@@ -18,7 +18,7 @@ test.describe('Generate a standard order with interest discount - parameters 243
         
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
-        CommandsGeneral.tituloPagina();
+        CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
         Product.roundUpDown();
