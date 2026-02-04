@@ -14,14 +14,14 @@ test.describe('Register complete customer', () => {
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.validateTitlePage();
+        ClienteCompletoPage.iconMenuOptions();
+        ClienteCompletoPage.optionClientComplete();
     })
 
     context('Register complete customer - basic.', () => {
 
         test('1.Complete customer CPF.',  async ({ page }) => {
 
-            ClienteCompletoPage.iconMenuOptions();
-            GeralClienteCompletoPage.optionClientComplete();
             PessoaPage.cpfClient();
             PessoaPage.nameComplete();
             PessoaPage.nameSocial();
@@ -60,8 +60,6 @@ test.describe('Register complete customer', () => {
 
         test('2.Complete customer CPF - Required fields message.',  async ({ page }) => {
     
-            ClienteCompletoPage.iconMenuOptions();
-            ClienteCompletoPage.optionClientComplete();
             ClienteCompletoPage.saveClient(); 
             ClienteCompletoPage.messAlertAdressMandatory(); 
             PessoaPage.cpfClient();
@@ -105,9 +103,7 @@ test.describe('Register complete customer', () => {
         })  
 
         test('3.Complete customer CNPJ.',  async ({ page }) => {
-    
-            ClienteCompletoPage.iconMenuOptions();
-            ClienteCompletoPage.optionClientComplete();
+
             PessoaPage.cnpjClient();
             PessoaPage.nameCNPJ();
             PessoaPage.nameFantasyCNPJ();
@@ -150,8 +146,6 @@ test.describe('Register complete customer', () => {
 
         test('4.Complete customer CPF - happy path.',  async ({ page }) => {
 
-            ClienteCompletoPage.iconMenuOptions();
-            ClienteCompletoPage.optionClientComplete();
             PessoaPage.cpfClient();
             PessoaPage.nameComplete();
             PessoaPage.nameSocial();
@@ -204,8 +198,6 @@ test.describe('Register complete customer', () => {
 
         test('5.Complete customer CPF - PIX key type Correct phone number.',  async ({ page }) => {
 
-            ClienteCompletoPage.iconMenuOptions();
-            ClienteCompletoPage.optionClientComplete();
             PessoaPage.cpfClient();
             PessoaPage.nameComplete();
             PessoaPage.nameSocial();
@@ -268,8 +260,6 @@ test.describe('Register complete customer', () => {
 
         test('6.Complete customer CPF - PIX key type Correct email.',  async ({ page }) => {
 
-            ClienteCompletoPage.iconMenuOptions();
-            ClienteCompletoPage.optionClientComplete();
             PessoaPage.cpfClient();
             PessoaPage.nameComplete();
             PessoaPage.nameSocial();
@@ -332,8 +322,6 @@ test.describe('Register complete customer', () => {
 
         test('7.Complete customer CPF - PIX key type, correct CPF/CNPJ.',  async ({ page }) => {
 
-            ClienteCompletoPage.iconMenuOptions();
-            ClienteCompletoPage.optionClientComplete();
             PessoaPage.cpfClient();
             PessoaPage.nameComplete();
             PessoaPage.nameSocial();
@@ -396,8 +384,6 @@ test.describe('Register complete customer', () => {
 
         test('8.Complete customer CPF - PIX key type, correct CPF/CNPJ.',  async ({ page }) => {
 
-            ClienteCompletoPage.iconMenuOptions();
-            ClienteCompletoPage.optionClientComplete();
             PessoaPage.cpfClient();
             PessoaPage.nameComplete();
             PessoaPage.nameSocial();
@@ -460,8 +446,6 @@ test.describe('Register complete customer', () => {
 
         test('9.Complete customer CPF - Validate PIX key type. Incorrect phone number.',  async ({ page }) => {
 
-            ClienteCompletoPage.iconMenuOptions();
-            ClienteCompletoPage.optionClientComplete();
             PessoaPage.cpfClient();
             PessoaPage.nameComplete();
             PessoaPage.nameSocial();
@@ -480,7 +464,6 @@ test.describe('Register complete customer', () => {
             ClienteCompletoPage.buttonSaveDisabled();
             EnderecoPage.clickSaveAdress();
             EnderecoPage.infoAdressAdded();
-
             RotaPage.clickAbaRoute(); 
             RotaPage.clickAddedNewRoute();
             RotaPage.modalRouteEmptyValidade();
@@ -524,8 +507,6 @@ test.describe('Register complete customer', () => {
 
         test('10.Complete customer CPF - Validate PIX key type. Incorrect email.',  async ({ page }) => {
 
-            ClienteCompletoPage.iconMenuOptions();
-            ClienteCompletoPage.optionClientComplete();
             PessoaPage.cpfClient();
             PessoaPage.nameComplete();
             PessoaPage.nameSocial();
@@ -587,8 +568,6 @@ test.describe('Register complete customer', () => {
 
         test('11.Complete customer CPF - Validate CPF key type. Incorrect CNPJ.',  async ({ page }) => {
 
-            ClienteCompletoPage.iconMenuOptions();
-            ClienteCompletoPage.optionClientComplete();
             PessoaPage.cpfClient();
             PessoaPage.nameComplete();
             PessoaPage.nameSocial();
@@ -650,8 +629,6 @@ test.describe('Register complete customer', () => {
 
         test('12.Complete customer CPF - Validate incorrect Random key type.',  async ({ page }) => {
 
-            ClienteCompletoPage.iconMenuOptions();
-            ClienteCompletoPage.optionClientComplete();
             PessoaPage.cpfClient();
             PessoaPage.nameComplete();
             PessoaPage.nameSocial();
