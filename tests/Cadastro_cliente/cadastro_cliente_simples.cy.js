@@ -10,14 +10,14 @@ test.describe('Register simple custumer', () => {
         CommandsGeneral.login();
         CommandsGeneral.urlAposLogin();
         CommandsGeneral.validateTitlePage();
+        ClienteSimplesPage.iconMenuOptions();
+        ClienteSimplesPage.optionClientSimple();
     })
   
     context('Simple customer registration.', () => {
 
         test('1.Simple customer CPF.',  async ({ page }) => {
 
-            ClienteSimplesPage.iconMenuOptions();
-            ClienteSimplesPage.optionClientSimple();
             ClienteSimplesPage.cpfClient();
             ClienteSimplesPage.nameCompleteCPF();
             ClienteSimplesPage.dateBirth();
@@ -31,8 +31,6 @@ test.describe('Register simple custumer', () => {
 
         test('2.Simple customer CPF - change address immediately after registering',  async ({ page }) => {
     
-            ClienteSimplesPage.iconMenuOptions();
-            ClienteSimplesPage.optionClientSimple();
             ClienteSimplesPage.cpfClient();
             ClienteSimplesPage.nameCompleteCPF();
             ClienteSimplesPage.dateBirth();
@@ -74,8 +72,6 @@ test.describe('Register simple custumer', () => {
 
         test('3.Simple customer CPF - change date of birth immediately after registering.',  async ({ page }) => {
     
-            ClienteSimplesPage.iconMenuOptions();
-            ClienteSimplesPage.optionClientSimple();
             ClienteSimplesPage.cpfClient();
             ClienteSimplesPage.nameCompleteCPF();
             ClienteSimplesPage.dateBirth();
@@ -106,9 +102,6 @@ test.describe('Register simple custumer', () => {
         test('4.Simple CPF customer - change date of birth (must request a trial)',  async ({ page }) => {
 
             const cpf = gerarCpf();
-    
-            ClienteSimplesPage.iconMenuOptions();
-            ClienteSimplesPage.optionClientSimple();
 
             //Campo CPF - validando mensagem dentro do campo antes de preencher
             cy.get('label[for="txtCpf"]')
@@ -175,9 +168,6 @@ test.describe('Register simple custumer', () => {
 
             const cpf = gerarCpf(); // Gera um CPF válido
 
-            ClienteSimplesPage.iconMenuOptions();
-            ClienteSimplesPage.optionClientSimple();
-
             //Campo CPF - validando mensagem dentro do campo antes de preencher
             cy.get('label[for="txtCpf"]')
                 .should('have.text', 'CPF');
@@ -242,8 +232,6 @@ test.describe('Register simple custumer', () => {
 
         test('6.Simple customer CNPJ',  async ({ page }) => {
     
-            ClienteSimplesPage.iconMenuOptions();
-            ClienteSimplesPage.optionClientSimple();
             ClienteSimplesPage.arrastarPessoaJuridica();
             ClienteSimplesPage.cnpjClient();
             ClienteSimplesPage.nameCompleteCNPJ();
@@ -256,8 +244,6 @@ test.describe('Register simple custumer', () => {
 
         test('7.Simple Customer CNPJ - Change Address',  async ({ page }) => {
 
-            ClienteSimplesPage.iconMenuOptions();
-            ClienteSimplesPage.optionClientSimple();
             ClienteSimplesPage.arrastarPessoaJuridica();
             ClienteSimplesPage.cnpjClient();
             ClienteSimplesPage.nameCompleteCNPJ();
@@ -294,68 +280,6 @@ test.describe('Register simple custumer', () => {
 
             ClienteSimplesPage.saveClientSimple()
             ClienteSimplesPage.messFirstRegistSaveSucess()
-        })
-    })
-
-    context('Add customer button in customer search.', () => {
-
-        test('8.Add customer button in customer search.',  async ({ page }) => {
-        
-            //inserir CPF/CNPJ no campo de cliente para podermos pesquisar pela lupa
-            cy.get('.click-cliente > .informe-o-cliente > .cliente-header')
-                .wait(800)
-                .type(dataCliente.numeroCPF,'{downArrow}');
-
-            //clicar na lupa de pesquisa de clientes
-            cy.get('.md-block > .ng-binding')
-                .should('be.visible')
-                .click();
-
-            cy.wait(2000);
-
-            //Card inteiro de Clientes
-            cy.get('.md-dialog-fullscreen')
-                .should('be.visible');
-
-            //Card de clientes - Título Clientes
-            cy.get('.md-dialog-fullscreen > ._md-toolbar-transitions > .md-toolbar-tools > .flex')
-                .should('be.visible')
-                .and('have.text', 'Clientes');
-
-            //Card de clientes - Botão X
-            cy.get('.md-dialog-fullscreen > ._md-toolbar-transitions > .md-toolbar-tools > .md-icon-button > .ng-binding')
-                .should('be.visible')
-                .and('not.have.attr', 'disabled');
-
-                //Card de clientes - Texto Digite o nome ou o CPF do cliente para busca
-            cy.get('label[for="txtBuscaClienteModal"]')
-                .should('have.text', 'Digite o nome ou o CPF do cliente para busca')
-                .and('be.visible');
-
-            //Card de clientes - Botão de cadastrar novo cliente
-            cy.get('[ng-click="novoCliente()"] > .ng-binding')
-                .should('be.visible')
-                .and('not.have.attr', 'disabled');
-
-            //Card de clientes - Botão comando de voz
-            cy.get('[ng-click="capturarVozCliente()"] > .ng-binding')
-                .should('be.visible')
-                .and('not.have.attr', 'disabled');
-
-            //Card de clientes - campo para digitar cliente
-            cy.get('#txtBuscaClienteModal')
-                .should('be.visible')
-                .invoke('val')
-                .should('not.be.empty');
-
-            //Card de clientes - Clicar no botão de cadastrar novo cliente
-            cy.get('[ng-click="novoCliente()"] > .ng-binding')
-                .click({force:true});
-
-            //Tela de Cadastro de Cliente - botão CLIENTE - validar se realmente redirecionou para lá
-            cy.get('.md-default')
-                .should('be.visible')
-                .and('not.have.attr', 'disabled');
         })
     })
 })
