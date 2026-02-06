@@ -1,4 +1,5 @@
 import { test } from '@playwright/test';
+import { CommandsGeneral } from '../../../page/commands.js';
 import { PesquisaClientePage } from '../../pages/cadastro_cliente/PesquisaClientePage.js';
 
 test.describe('Search client', () => {

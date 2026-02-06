@@ -1,4 +1,5 @@
 import { test } from '@playwright/test';
+import { CommandsGeneral } from '../../../page/commands.js';
 import { ClienteCompletoPage, ClienteCompletoPage } from '../../../pages/cadastro_cliente/cliente_completo/ClienteCompletoPage.js';
 import { RefFinanceiraPage, RefFinanceiraPage } from '../../../pages/cadastro_cliente/cliente_completo/aba_Referencia/RefPessoalPage.js';
 import { PessoaPage } from '../../../pages/cadastro_cliente/cliente_completo/PessoaPage.js';
