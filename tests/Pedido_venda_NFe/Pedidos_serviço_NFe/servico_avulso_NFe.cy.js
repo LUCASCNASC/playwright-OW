@@ -15,7 +15,6 @@ test.describe('Sale of individual services', () => {
     test.beforeEach(async ({ page }) => {
         
         CommandsGeneral.login();
-        CommandsGeneral.urlAposLogin();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.saleServiceLoose();
         ChooseCliente.withRoute();

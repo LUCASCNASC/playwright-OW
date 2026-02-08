@@ -17,7 +17,6 @@ test.describe('Generate orders with labor', () => {
     test.beforeEach(async ({ page }) => {
         
         CommandsGeneral.login();
-        CommandsGeneral.urlAposLogin();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();

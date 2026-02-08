@@ -17,7 +17,7 @@ test.describe('Generate a standard order with delivery.', () => {
     test.beforeEach(async ({ page }) => {
         
         CommandsGeneral.login();
-        CommandsGeneral.urlAposLogin();
+        
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFCe();
         ChooseCliente.withRoute();

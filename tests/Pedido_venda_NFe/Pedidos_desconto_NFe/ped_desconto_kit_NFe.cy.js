@@ -19,7 +19,6 @@ test.describe('Generate sales order for discounted kit', () => {
     test.beforeEach(async ({ page }) => {
         
         CommandsGeneral.login();
-        CommandsGeneral.urlAposLogin();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();

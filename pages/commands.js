@@ -19,10 +19,8 @@ export class CommandsGeneral {
     await expect(this.page.locator('.ng-scope > .ng-binding')).toContainText('Entrando no sistema');
     await apiDiscountPromise;
     await expect(this.page.locator('.click-cliente > .informe-o-cliente > .cliente-header')).toContainText('Cliente');
-  }
 
-  //Valida se a URL contém '/' após login.
-  async urlAposLogin() {
+    //URL pós login
     await expect(this.page).toHaveURL(/\//);
   }
 

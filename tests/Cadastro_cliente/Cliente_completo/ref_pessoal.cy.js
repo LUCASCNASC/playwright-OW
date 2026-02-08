@@ -12,7 +12,6 @@ test.describe('Register complete customer - personal reference', () => {
     test.beforeEach(async ({ page }) => {
         
         CommandsGeneral.login();
-        CommandsGeneral.urlAposLogin();
         CommandsGeneral.validateTitlePage();
     })
 

@@ -17,7 +17,6 @@ test.describe('Generate future delivery order', () => {
     test.beforeEach(async ({ page }) => {
         
         CommandsGeneral.login();
-        CommandsGeneral.urlAposLogin();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.deliveryFutureNFe();
         ChooseCliente.withRoute();

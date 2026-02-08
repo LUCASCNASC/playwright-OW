@@ -7,8 +7,6 @@ test.describe('Log in with new user.', () => {
 
     test.beforeEach(async ({ page }) => {
         
-        CommandsGeneral.login();
-        CommandsGeneral.urlAposLogin();
         CommandsGeneral.validateTitlePage();
         LoginPage.validateLogoEmpresaLogin();
         LoginPage.validateIconeComputadorLogin();

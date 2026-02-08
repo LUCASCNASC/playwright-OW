@@ -18,7 +18,6 @@ test.describe('Generate a sales order with a discount', () => {
     test.beforeEach(async ({ page }) => {
 
         CommandsGeneral.login();
-        CommandsGeneral.urlAposLogin();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();

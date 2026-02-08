@@ -17,7 +17,6 @@ test.describe('Generate orders with warranty and labor with delivery', () => {
     test.beforeEach(async ({ page }) => {
 
         CommandsGeneral.login();
-        CommandsGeneral.urlAposLogin();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFCe();
         ChooseCliente.withRoute();

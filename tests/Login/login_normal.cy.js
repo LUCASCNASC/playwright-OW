@@ -7,8 +7,6 @@ test.describe('Login hapy path - regular user with password enabled', () => {
 
     test.beforeEach(async ({ page }) => {
         
-        CommandsGeneral.login();
-        CommandsGeneral.urlAposLogin();
         CommandsGeneral.validateTitlePage();
         LoginPage.validateLogoEmpresaLogin();
         LoginPage.validateIconeComputadorLogin();

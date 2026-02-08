@@ -13,7 +13,6 @@ test.describe('Register complete customer', () => {
     test.beforeEach(async ({ page }) => {
         
         CommandsGeneral.login();
-        CommandsGeneral.urlAposLogin();
         CommandsGeneral.validateTitlePage();
         ClienteCompletoPage.iconMenuOptions();
         ClienteCompletoPage.optionClientComplete();

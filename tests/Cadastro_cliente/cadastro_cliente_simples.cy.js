@@ -9,7 +9,6 @@ test.describe('Register simple custumer', () => {
     test.beforeEach(async ({ page }) => {
         
         CommandsGeneral.login();
-        CommandsGeneral.urlAposLogin();
         CommandsGeneral.validateTitlePage();
         ClienteSimplesPage.iconMenuOptions();
         ClienteSimplesPage.optionClientSimple();

@@ -7,8 +7,6 @@ test.describe('User password expired.', () => {
 
     test.beforeEach(async ({ page }) => {
         
-        CommandsGeneral.login();
-        CommandsGeneral.urlAposLogin();
         CommandsGeneral.validateTitlePage();
         LoginPage.validateLogoEmpresaLogin();
         LoginPage.validateIconeComputadorLogin();

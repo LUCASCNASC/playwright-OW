@@ -12,7 +12,6 @@ test.describe('Register complete customer - financial reference', () => {
     test.beforeEach(async ({ page }) => {
         
         CommandsGeneral.login();
-        CommandsGeneral.urlAposLogin();
         CommandsGeneral.validateTitlePage();
     })
 

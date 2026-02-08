@@ -7,8 +7,6 @@ test.describe('Inactive user', () => {
 
     test.beforeEach(async ({ page }) => {
         
-        CommandsGeneral.login();
-        CommandsGeneral.urlAposLogin();
         CommandsGeneral.validateTitlePage();
         LoginPage.validateLogoEmpresaLogin();
         LoginPage.validateIconeComputadorLogin();
