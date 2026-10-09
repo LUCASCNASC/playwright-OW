@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
 import { CommandsGeneral } from '../../../page/commands.js';
-import { LoginPage } from '../../pages/login/LoginPage';
-import users from '../../tests/users.json';
+import { LoginPage } from '../../pages/login/LoginPage.js';
+import users from '../users.json';
 
 test.describe('Inactive user', () => {
 
