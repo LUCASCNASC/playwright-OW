@@ -13,10 +13,9 @@ import { Service } from '../../../pages/pedido/ServicosPage.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Generate a standard order with interest discount - parameters 243 and 244 defined in the inclusion process', () => {
+test.describe('generate a standard order with interest discount - parameters 243 and 244 defined in the inclusion process', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.login();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFe();
@@ -26,9 +25,9 @@ test.describe('Generate a standard order with interest discount - parameters 243
         CommandsGeneral.selectProductSearch();
     })
 
-    context('Without delivery/ process 9860 - happy path - inclusion process 3860', () => {
+    context('without delivery/ process 9860 - happy path - inclusion process 3860', () => {
 
-        test('1.Order: product 1860 0 0 - round down',  async ({ page }) => {
+        test('order: product 1860 0 0 - round down',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -49,7 +48,7 @@ test.describe('Generate a standard order with interest discount - parameters 243
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('2.Order: products 1860 0 0 - round up',  async ({ page }) => {
+        test('order: products 1860 0 0 - round up',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 

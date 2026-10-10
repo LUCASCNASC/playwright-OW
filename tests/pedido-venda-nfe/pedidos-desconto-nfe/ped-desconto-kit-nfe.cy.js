@@ -14,19 +14,18 @@ import { Service } from '../../../pages/pedido/ServicosPage.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Generate sales order for discounted kit', () => {
+test.describe('generate sales order for discounted kit', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.login();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
     })
 
-    context('Without delivery/ process 9862 - happy path', () => {
+    context('without delivery/ process 9862 - happy path', () => {
 
-        test('1.Order: kit 1862 0 0 with discount Sub (-) / FIXED VALUE',  async ({ page }) => {
+        test('order: kit 1862 0 0 with discount Sub (-) / FIXED VALUE',  async ({ page }) => {
 
             Product.kitDiscount();
             ValidateBalance.withBalance();

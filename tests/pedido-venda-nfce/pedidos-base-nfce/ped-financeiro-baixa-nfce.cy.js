@@ -12,10 +12,9 @@ import { CommandsGeneral } from '../../../../pages/commands.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Generate order with financial terms upon delivery.', () => {
+test.describe('generate order with financial terms upon delivery.', () => {
 
     test.beforeEach(async ({ page }) => {
-
         CommandsGeneral.login();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.financePaymentNFCe(); 
@@ -25,9 +24,9 @@ test.describe('Generate order with financial terms upon delivery.', () => {
         CommandsGeneral.selectProductSearch();
     })
     
-    context('With delivery/process 9892 - happy path', () => {
+    context('with delivery/process 9892 - happy path', () => {
 
-        test('1.Order: product 1860 0 0',  async ({ page }) => {
+        test('order: product 1860 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -46,7 +45,7 @@ test.describe('Generate order with financial terms upon delivery.', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('2.Order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
+        test('order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 

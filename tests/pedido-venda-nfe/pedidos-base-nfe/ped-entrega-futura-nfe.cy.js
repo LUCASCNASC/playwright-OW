@@ -12,10 +12,9 @@ import { Service } from '../../../pages/pedido/ServicosPage.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Generate future delivery order', () => {
+test.describe('generate future delivery order', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.login();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.deliveryFutureNFe();
@@ -25,9 +24,9 @@ test.describe('Generate future delivery order', () => {
         CommandsGeneral.selectProductSearch();
     })
 
-    context('Without delivery/ process 9862 - happy path', () => {
+    context('without delivery/ process 9862 - happy path', () => {
 
-        test('1.Order: product 1860 0 0',  async ({ page }) => {
+        test('order: product 1860 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -44,7 +43,7 @@ test.describe('Generate future delivery order', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('2.Order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
+        test('order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -70,9 +69,9 @@ test.describe('Generate future delivery order', () => {
         })
     })
     
-    context('With delivery/process 9862 - happy path', () => {
+    context('with delivery/process 9862 - happy path', () => {
 
-        test('3.Order: product 1860 0 0',  async ({ page }) => {
+        test('order: product 1860 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -89,7 +88,7 @@ test.describe('Generate future delivery order', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })    
 
-        test('4.Order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
+        test('order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 

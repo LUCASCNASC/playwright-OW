@@ -13,19 +13,18 @@ import { Service } from '../../../pages/pedido/ServicosPage.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Generate a sales order with a discount', () => {
+test.describe('generate a sales order with a discount', () => {
 
     test.beforeEach(async ({ page }) => {
-
         CommandsGeneral.login();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
     })
 
-    context('Without delivery/ process 9860 - happy path',  async ({ page }) => {
+    context('without delivery/ process 9860 - happy path',  async ({ page }) => {
 
-        test('1.Order: product 1912 0 0 with discount Sub (-) / R$',  async ({ page }) => {
+        test('order: product 1912 0 0 with discount Sub (-) / R$',  async ({ page }) => {
 
             Product.discountNumber();
             ValidateBalance.withBalance();
@@ -48,7 +47,7 @@ test.describe('Generate a sales order with a discount', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('2.Order: product 1913 0 0 with discount Sub (-) / % (Percentage)',  async ({ page }) => {
+        test('order: product 1913 0 0 with discount Sub (-) / % (Percentage)',  async ({ page }) => {
 
             Product.discountPercentage();
             ValidateBalance.withBalance();
@@ -71,7 +70,7 @@ test.describe('Generate a sales order with a discount', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('3.Order: product 1914 0 0 with discount Sub (-) / FIXED VALUE',  async ({ page }) => {
+        test('order: product 1914 0 0 with discount Sub (-) / FIXED VALUE',  async ({ page }) => {
 
             Product.discountValueFixed()
             ValidateBalance.withBalance();

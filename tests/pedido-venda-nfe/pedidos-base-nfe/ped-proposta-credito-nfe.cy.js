@@ -12,10 +12,9 @@ import { Service } from '../../../pages/pedido/ServicosPage.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Generate request with credit proposal', () => {
+test.describe('generate request with credit proposal', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.login();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFe();
@@ -25,9 +24,9 @@ test.describe('Generate request with credit proposal', () => {
         CommandsGeneral.selectProductSearch();
     })
 
-    context('Without delivery/ process 9860 - happy path', () => {
+    context('without delivery/ process 9860 - happy path', () => {
 
-        test('1.Order: product 1860 0 0 - (Order without delivery, with credit proposal.)',  async ({ page }) => {
+        test('order: product 1860 0 0 - (Order without delivery, with credit proposal.)',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 

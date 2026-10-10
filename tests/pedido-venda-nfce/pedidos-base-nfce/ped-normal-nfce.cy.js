@@ -12,12 +12,10 @@ import { CommandsGeneral } from '../../../../pages/commands.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Generate a standard order with delivery.', () => {
+test.describe('generate a standard order with delivery.', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.login();
-        
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFCe();
         ChooseCliente.withRoute();
@@ -26,9 +24,9 @@ test.describe('Generate a standard order with delivery.', () => {
         CommandsGeneral.selectProductSearch();
     })
 
-    context('With delivery/process 9890 - happy path', () => {
+    context('with delivery/process 9890 - happy path', () => {
 
-        test('1.Order: product 1860 0 0 - (Local sale of stock item - with delivery)',  async ({ page }) => {
+        test('order: product 1860 0 0 - (Local sale of stock item - with delivery)',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -47,7 +45,7 @@ test.describe('Generate a standard order with delivery.', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('2.Order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
+        test('order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -73,7 +71,7 @@ test.describe('Generate a standard order with delivery.', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('3.Order: product 1860 0 0 - (Sales order with delivery. With down payment + installments.)',  async ({ page }) => {
+        test('order: product 1860 0 0 - (Sales order with delivery. With down payment + installments.)',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 

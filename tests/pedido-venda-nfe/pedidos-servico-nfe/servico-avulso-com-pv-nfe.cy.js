@@ -12,19 +12,18 @@ import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
 
-test.describe('Sale of a one-off service, with the product order already downloaded', () => {
+test.describe('sale of a one-off service, with the product order already downloaded', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.login();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.saleServiceLoose();
         ChooseCliente.withRoute();
     })
 
-    context('Process 9888 - happy path', () => {
+    context('process 9888 - happy path', () => {
 
-        test('1.Order of guarantee - 139 (T.A. Guarantee Separates Same Process)',  async ({ page }) => {
+        test('order of guarantee - 139 (T.A. Guarantee Separates Same Process)',  async ({ page }) => {
 
             const numero_pedido = '8605'
             

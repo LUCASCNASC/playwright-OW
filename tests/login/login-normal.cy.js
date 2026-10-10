@@ -3,19 +3,18 @@ import { CommandsGeneral } from '../../../page/commands.js';
 import { LoginPage } from '../../pages/login/LoginPage.js';
 import users from '../users.json';
 
-test.describe('Login hapy path - regular user with password enabled', () => {
+test.describe('login hapy path - regular user with password enabled', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.validateTitlePage();
         LoginPage.validateLogoEmpresaLogin();
         LoginPage.validateIconeComputadorLogin();
         LoginPage.validateUsuarioTextoIcone();
     })
 
-    context('User context 1', () => {
+    context('user context 1', () => {
 
-        test('1.Login - happy path',  async ({ page }) => {
+        test('login - happy path',  async ({ page }) => {
 
             cy.get('#txtusername')
                 .should('be.visible')
@@ -41,7 +40,7 @@ test.describe('Login hapy path - regular user with password enabled', () => {
             LoginPage.validateBotaoIniciarServico();
         })
     
-        test('2.Login - pass user strong (should display a message saying "User login or password is incorrect.")',  async ({ page }) => {
+        test('login - pass user strong (should display a message saying "User login or password is incorrect.")',  async ({ page }) => {
         
             cy.get('#txtusername')
                 .should('be.visible')
@@ -67,7 +66,7 @@ test.describe('Login hapy path - regular user with password enabled', () => {
             LoginPage.validateIconeComputadorLogin();
         })
     
-        test('3.Login - pass user strong (should display a message saying "User login or password is incorrect.")',  async ({ page }) => {
+        test('login - pass user strong (should display a message saying "User login or password is incorrect.")',  async ({ page }) => {
         
             cy.get('#txtusername')
                 .should('be.visible')
@@ -93,7 +92,7 @@ test.describe('Login hapy path - regular user with password enabled', () => {
             LoginPage.validateIconeComputadorLogin();
         })
     
-        test('4.Login - allow login only (the ENTER button should be disabled)',  async ({ page }) => {
+        test('login - allow login only (the ENTER button should be disabled)',  async ({ page }) => {
         
             cy.get('#txtusername')
                 .should('be.visible')
@@ -117,7 +116,7 @@ test.describe('Login hapy path - regular user with password enabled', () => {
             LoginPage.validateIconeComputadorLogin() ;
         })
     
-        test('5.Login - allow login only (the ENTER button should be disabled)',  async ({ page }) => {
+        test('login - allow login only (the ENTER button should be disabled)',  async ({ page }) => {
         
             cy.get('#txtusername')
                 .should('be.visible')
@@ -141,7 +140,7 @@ test.describe('Login hapy path - regular user with password enabled', () => {
             LoginPage.validateIconeComputadorLogin();
         })  
     
-        test('6.Login - without entering login and password (the ENTER button should be disabled)',  async ({ page }) => {
+        test('login - without entering login and password (the ENTER button should be disabled)',  async ({ page }) => {
         
             cy.get('#txtusername')
                 .should('be.visible')
@@ -165,9 +164,9 @@ test.describe('Login hapy path - regular user with password enabled', () => {
         })
     })
 
-    context('User context 3', () => {
+    context('user context 3', () => {
 
-        test('7.Login - without entering login and password (the ENTER button should be disabled)',  async ({ page }) => {
+        test('login - without entering login and password (the ENTER button should be disabled)',  async ({ page }) => {
         
             cy.get('#txtusername')
                 .should('be.visible')
@@ -193,7 +192,7 @@ test.describe('Login hapy path - regular user with password enabled', () => {
             LoginPage.validateBotaoIniciarServico();
         })
     
-        test('8.Login - incorrect username (should display a message saying "User login or password is incorrect").',  async ({ page }) => {
+        test('login - incorrect username (should display a message saying "User login or password is incorrect").',  async ({ page }) => {
         
             cy.get('#txtusername')
                 .should('be.visible')
@@ -219,7 +218,7 @@ test.describe('Login hapy path - regular user with password enabled', () => {
             LoginPage.validateIconeComputadorLogin();
         })
     
-        test('9.Login - Incorrect password (should display a message saying "User login or password is incorrect").',  async ({ page }) => {
+        test('login - incorrect password (should display a message saying "User login or password is incorrect").',  async ({ page }) => {
 
             cy.get('#txtusername')
                 .should('be.visible')
@@ -245,7 +244,7 @@ test.describe('Login hapy path - regular user with password enabled', () => {
             LoginPage.validateIconeComputadorLogin();
         })
     
-        test('10.Login - allow login only (the ENTER button should be disabled)',  async ({ page }) => {
+        test('login - allow login only (the ENTER button should be disabled)',  async ({ page }) => {
         
             cy.get('#txtusername')
                 .should('be.visible')
@@ -269,7 +268,7 @@ test.describe('Login hapy path - regular user with password enabled', () => {
             LoginPage.validateIconeComputadorLogin();
         })
     
-        test('11.Login - enter password only (the ENTER button should be disabled)',  async ({ page }) => {
+        test('login - enter password only (the ENTER button should be disabled)',  async ({ page }) => {
         
             cy.get('#txtusername')
                 .should('be.visible')
@@ -293,7 +292,7 @@ test.describe('Login hapy path - regular user with password enabled', () => {
             LoginPage.validateIconeComputadorLogin();
         })  
     
-        test('12.Login - without entering login and password (the ENTER button should be disabled)',  async ({ page }) => {
+        test('login - without entering login and password (the ENTER button should be disabled)',  async ({ page }) => {
 
             cy.get('#txtusername')
                 .should('be.visible')

@@ -8,19 +8,18 @@ import { RotaPage, RotaPage } from '../../../pages/cadastro_cliente/cliente_comp
 import { TelefonePage, TelefonePage } from '../../../pages/cadastro_cliente/cliente_completo/TelefonePage.js';
 import { EnderecoPage, EnderecoPage } from '../../../pages/cadastro_cliente/cliente_completo/EnderecoPage.js';
 
-test.describe('Register complete customer', () => {
+test.describe('register complete customer', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.login();
         CommandsGeneral.validateTitlePage();
         ClienteCompletoPage.iconMenuOptions();
         ClienteCompletoPage.optionClientComplete();
     })
 
-    context('Register complete customer - basic.', () => {
+    context('register complete customer - basic.', () => {
 
-        test('1.Complete customer CPF.',  async ({ page }) => {
+        test('complete customer CPF.',  async ({ page }) => {
 
             PessoaPage.cpfClient();
             PessoaPage.nameComplete();
@@ -58,7 +57,7 @@ test.describe('Register complete customer', () => {
             ClienteCompletoPage.messRegisterSaveSucess();
         })  
 
-        test('2.Complete customer CPF - Required fields message.',  async ({ page }) => {
+        test('complete customer CPF - Required fields message.',  async ({ page }) => {
     
             ClienteCompletoPage.saveClient(); 
             ClienteCompletoPage.messAlertAdressMandatory(); 
@@ -102,7 +101,7 @@ test.describe('Register complete customer', () => {
             ClienteCompletoPage.messRegisterSaveSucess();
         })  
 
-        test('3.Complete customer CNPJ.',  async ({ page }) => {
+        test('complete customer CNPJ.',  async ({ page }) => {
 
             PessoaPage.cnpjClient();
             PessoaPage.nameCNPJ();
@@ -142,9 +141,9 @@ test.describe('Register complete customer', () => {
         }) 
     })
 
-    context('Register complete customer - Including attachment after saving the customer registration.', () => {
+    context('register complete customer - Including attachment after saving the customer registration.', () => {
 
-        test('4.Complete customer CPF - happy path.',  async ({ page }) => {
+        test('complete customer CPF - happy path.',  async ({ page }) => {
 
             PessoaPage.cpfClient();
             PessoaPage.nameComplete();
@@ -194,9 +193,9 @@ test.describe('Register complete customer', () => {
         })
     })
 
-    context('Register complete customer - including bank reference.', () => {
+    context('register complete customer - including bank reference.', () => {
 
-        test('5.Complete customer CPF - PIX key type Correct phone number.',  async ({ page }) => {
+        test('complete customer CPF - PIX key type Correct phone number.',  async ({ page }) => {
 
             PessoaPage.cpfClient();
             PessoaPage.nameComplete();
@@ -258,7 +257,7 @@ test.describe('Register complete customer', () => {
             ClienteCompletoPage.messRegisterSaveSucess();
         })  
 
-        test('6.Complete customer CPF - PIX key type Correct email.',  async ({ page }) => {
+        test('complete customer CPF - PIX key type Correct email.',  async ({ page }) => {
 
             PessoaPage.cpfClient();
             PessoaPage.nameComplete();
@@ -320,7 +319,7 @@ test.describe('Register complete customer', () => {
             ClienteCompletoPage.messRegisterSaveSucess();
         }) 
 
-        test('7.Complete customer CPF - PIX key type, correct CPF/CNPJ.',  async ({ page }) => {
+        test('complete customer CPF - PIX key type, correct CPF/CNPJ.',  async ({ page }) => {
 
             PessoaPage.cpfClient();
             PessoaPage.nameComplete();
@@ -382,7 +381,7 @@ test.describe('Register complete customer', () => {
             ClienteCompletoPage.messRegisterSaveSucess();
         }) 
 
-        test('8.Complete customer CPF - PIX key type, correct CPF/CNPJ.',  async ({ page }) => {
+        test('complete customer CPF - PIX key type, correct CPF/CNPJ.',  async ({ page }) => {
 
             PessoaPage.cpfClient();
             PessoaPage.nameComplete();
@@ -444,7 +443,7 @@ test.describe('Register complete customer', () => {
             ClienteCompletoPage.messRegisterSaveSucess();
         }) 
 
-        test('9.Complete customer CPF - Validate PIX key type. Incorrect phone number.',  async ({ page }) => {
+        test('complete customer CPF - Validate PIX key type. Incorrect phone number.',  async ({ page }) => {
 
             PessoaPage.cpfClient();
             PessoaPage.nameComplete();
@@ -505,7 +504,7 @@ test.describe('Register complete customer', () => {
             RefBancariaPage.messRefBankingKeyPixPhoneInvalid();
         })  
 
-        test('10.Complete customer CPF - Validate PIX key type. Incorrect email.',  async ({ page }) => {
+        test('complete customer CPF - Validate PIX key type. Incorrect email.',  async ({ page }) => {
 
             PessoaPage.cpfClient();
             PessoaPage.nameComplete();
@@ -566,7 +565,7 @@ test.describe('Register complete customer', () => {
             RefBancariaPage.messRefBankingKeyPixEmailInvalid();
         })  
 
-        test('11.Complete customer CPF - Validate CPF key type. Incorrect CNPJ.',  async ({ page }) => {
+        test('complete customer CPF - Validate CPF key type. Incorrect CNPJ.',  async ({ page }) => {
 
             PessoaPage.cpfClient();
             PessoaPage.nameComplete();
@@ -627,7 +626,7 @@ test.describe('Register complete customer', () => {
             RefBancariaPage.messRefBankingKeyPixCpfCnpjInvalid();
         })  
 
-        test('12.Complete customer CPF - Validate incorrect Random key type.',  async ({ page }) => {
+        test('complete customer CPF - Validate incorrect Random key type.',  async ({ page }) => {
 
             PessoaPage.cpfClient();
             PessoaPage.nameComplete();

@@ -13,10 +13,9 @@ import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
 
-test.describe('Generate normal order', () => {
+test.describe('generate normal order', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.login();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFe();
@@ -26,9 +25,9 @@ test.describe('Generate normal order', () => {
         CommandsGeneral.selectProductSearch();
     }) 
 
-    context('Without delivery/ process 9860 - happy path', () => {
+    context('without delivery/ process 9860 - happy path', () => {
 
-        test('1.Order: product 1860 0 0 - (Local sale of product with balance - without delivery)',  async ({ page }) => {
+        test('order: product 1860 0 0 - (Local sale of product with balance - without delivery)',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -45,7 +44,7 @@ test.describe('Generate normal order', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('2.Order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
+        test('order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -70,7 +69,7 @@ test.describe('Generate normal order', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('3.Order: product 1860 0 0 - (Order without delivery. With Entry + Installments.)',  async ({ page }) => {
+        test('order: product 1860 0 0 - (Order without delivery. With Entry + Installments.)',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -90,9 +89,9 @@ test.describe('Generate normal order', () => {
         })
     })
 
-    context('With delivery/process 9860 - happy path', () => {
+    context('with delivery/process 9860 - happy path', () => {
 
-        test('4.Order: product 1860 0 0 - (Local sale of product with balance - with delivery)',  async ({ page }) => {
+        test('order: product 1860 0 0 - (Local sale of product with balance - with delivery)',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -109,7 +108,7 @@ test.describe('Generate normal order', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('5.Order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
+        test('order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -133,7 +132,7 @@ test.describe('Generate normal order', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('6.Order: product 1860 0 0 - (Order with delivery. With Entry + Installments.)',  async ({ page }) => {
+        test('order: product 1860 0 0 - (Order with delivery. With Entry + Installments.)',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 

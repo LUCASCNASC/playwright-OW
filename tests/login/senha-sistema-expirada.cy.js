@@ -3,17 +3,16 @@ import { CommandsGeneral } from '../../../page/commands.js';
 import { LoginPage } from '../../pages/login/LoginPage.js';
 import users from '../users.json';
 
-test.describe('User password expired.', () => {
+test.describe('user password expired.', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.validateTitlePage();
         LoginPage.validateLogoEmpresaLogin();
         LoginPage.validateIconeComputadorLogin();
         LoginPage.validateUsuarioTextoIcone();
     })
 
-    test('1.Attempting to log in with a user whose password has expired.',  async ({ page }) => {
+    test('attempting to log in with a user whose password has expired.',  async ({ page }) => {
     
         cy.get('#txtusername')
             .should('be.visible')

@@ -7,15 +7,14 @@ import { RotaPage, RotaPage } from '../../../pages/cadastro_cliente/cliente_comp
 import { TelefonePage, TelefonePage } from '../../../pages/cadastro_cliente/cliente_completo/TelefonePage.js';
 import { EnderecoPage, EnderecoPage } from '../../../pages/cadastro_cliente/cliente_completo/EnderecoPage.js';
 
-test.describe('Register complete customer - employment reference', () => {
+test.describe('register complete customer - employment reference', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.login();
         CommandsGeneral.validateTitlePage();
     })
 
-    test('1.Complete customer CPF - happy path',  async ({ page }) => {
+    test('complete customer CPF - happy path',  async ({ page }) => {
 
         ClienteCompletoPage.iconMenuOptions();
         ClienteCompletoPage.optionClientComplete();

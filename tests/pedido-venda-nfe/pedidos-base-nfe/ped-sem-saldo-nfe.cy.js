@@ -5,20 +5,18 @@ import { Product } from '../../../pages/ProdutoPage.js';
 import { CommandsGeneral } from '../../../../pages/commands.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Attempting to generate a sales order with an out-of-stock product - Stock rule Parameter 36 = 4 - Parameter 139 = 4 - Trial 653 not configured', () => {
+test.describe('attempting to generate a sales order with an out-of-stock product - Stock rule Parameter 36 = 4 - Parameter 139 = 4 - Trial 653 not configured', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.login();
-        
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
     })
 
-    context('Process 9860 - do not allow making the sale - at the moment of adding the product, warning messages should appear', () => {
+    context('process 9860 - do not allow making the sale - at the moment of adding the product, warning messages should appear', () => {
 
-        test('1.Order: product 1869 0 0 (Local sale of product without balance - without delivery)',  async ({ page }) => {
+        test('order: product 1869 0 0 (Local sale of product without balance - without delivery)',  async ({ page }) => {
             
             Product.withoutBalance();
             ValidarSaldo.comSaldo();

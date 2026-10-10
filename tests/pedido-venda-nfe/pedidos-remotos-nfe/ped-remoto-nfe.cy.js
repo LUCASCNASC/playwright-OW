@@ -12,19 +12,18 @@ import { Service } from '../../../pages/pedido/ServicosPage.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Remote/process 9860 - Balance rule Parameter 36 = 4 - Parameter 139 = 4 - Trial 653 not configured', () => {
+test.describe('remote/process 9860 - Balance rule Parameter 36 = 4 - Parameter 139 = 4 - Trial 653 not configured', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.login();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
     })
 
-    context('Remote order normal', () => {
+    context('remote order normal', () => {
 
-        test('1.Remote order: product 1860 0 0 - (Remote sale of product with stock available at the billing branch)',  async ({ page }) => {
+        test('remote order: product 1860 0 0 - (Remote sale of product with stock available at the billing branch)',  async ({ page }) => {
 
             Product.fisrt();
             ValidateBalance.withBalance();
@@ -46,7 +45,7 @@ test.describe('Remote/process 9860 - Balance rule Parameter 36 = 4 - Parameter 1
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('2.Remote order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
+        test('remote order: products 1860 0 0 and 1870 0 0',  async ({ page }) => {
 
             Product.fisrt();
             ValidateBalance.withBalance();
@@ -77,7 +76,7 @@ test.describe('Remote/process 9860 - Balance rule Parameter 36 = 4 - Parameter 1
             FinalizarPedidoPage.validateOrderGenerated();
         })
         
-        test('3.Remote order: kit 1877 0 0',  async ({ page }) => {
+        test('remote order: kit 1877 0 0',  async ({ page }) => {
 
             Product.kitRemote();
             ValidateBalance.withBalance();
@@ -101,9 +100,9 @@ test.describe('Remote/process 9860 - Balance rule Parameter 36 = 4 - Parameter 1
         })
     })
 
-    context('Remote order without remote stock, get CD', () => {
+    context('remote order without remote stock, get CD', () => {
 
-        test('4.Remote order - with stock in CD (branch 1) - should allow order creation - (Remote sale of product without stock at the billing branch, but with stock in the CD of the billing branch - with delivery)',  async ({ page }) => {
+        test('remote order - with stock in CD (branch 1) - should allow order creation - (Remote sale of product without stock at the billing branch, but with stock in the CD of the billing branch - with delivery)',  async ({ page }) => {
 
             Product.remoteWithCD();
             ValidateBalance.withBalance();
@@ -125,7 +124,7 @@ test.describe('Remote/process 9860 - Balance rule Parameter 36 = 4 - Parameter 1
             FinalizarPedidoPage.validateOrderGenerated();
         })    
 
-        test('5.Remote order - WITHOUT stock in CD (branch 1) - should NOT allow order creation - (Remote sale of product without stock at the billing branch, without stock in the CD of the billing branch)',  async ({ page }) => {
+        test('remote order - WITHOUT stock in CD (branch 1) - should NOT allow order creation - (Remote sale of product without stock at the billing branch, without stock in the CD of the billing branch)',  async ({ page }) => {
 
             Product.remoteWithoutCD();
             ValidateBalance.withoutBalance(); 

@@ -2,17 +2,16 @@ import { test } from '@playwright/test';
 import { CommandsGeneral } from '../../../page/commands.js';
 import { PesquisaClientePage } from '../../pages/cadastro_cliente/PesquisaClientePage.js';
 
-test.describe('Search client', () => {
+test.describe('search client', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.login();
         CommandsGeneral.validateTitlePage();
     })
 
-    context('Search customer by number.', () => {
+    context('search customer by number.', () => {
 
-        test('1.Search by CPF number.',  async ({ page }) => {
+        test('search by CPF number.',  async ({ page }) => {
     
             PesquisaClientePage.fillCPF();
             PesquisaClientePage.clickGlassPesquisaClientePage();
@@ -23,7 +22,7 @@ test.describe('Search client', () => {
             PesquisaClientePage.numberDescripCPFSearch();
         }) 
 
-        test('2.Search by CNPJ number.',  async ({ page }) => {
+        test('search by CNPJ number.',  async ({ page }) => {
 
             PesquisaClientePage.fillCNPJ();
             PesquisaClientePage.clickGlassPesquisaClientePage();
@@ -36,9 +35,9 @@ test.describe('Search client', () => {
         }) 
     })
 
-    context('Search customer by description.', () => {
+    context('search customer by description.', () => {
 
-        test('3.Search by CPF description.',  async ({ page }) => {
+        test('search by CPF description.',  async ({ page }) => {
 
             PesquisaClientePage.fillDescripCPF();
             PesquisaClientePage.clickGlassPesquisaClientePage();
@@ -49,7 +48,7 @@ test.describe('Search client', () => {
             PesquisaClientePage.numberDescripCPFSearch();
         }) 
 
-        test('4.Search by CNPJ description.',  async ({ page }) => {
+        test('search by CNPJ description.',  async ({ page }) => {
 
             PesquisaClientePage.typeAgainDescriptCNPJ();
             PesquisaClientePage.clickGlassPesquisaClientePage();

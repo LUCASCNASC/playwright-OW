@@ -13,10 +13,9 @@ import { ProcessoRecebPage } from '../../../pages/pedido/ProcessoRecebPage.js';
 import { ProcessoRecebPromoPage } from '../../../../pages/pedido/processo_recebimento_promo.js';
 import { CommandsGeneral } from '../../../../pages/commands.js';
 
-test.describe('Generate a future delivery order with delivery.', () => {
+test.describe('generate a future delivery order with delivery.', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.login();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.deliveryFutureNFCe();
@@ -26,9 +25,9 @@ test.describe('Generate a future delivery order with delivery.', () => {
         CommandsGeneral.selectProductSearch();
     })
     
-    context('With delivery/process 9891 - happy path', () => {
+    context('with delivery/process 9891 - happy path', () => {
 
-        test('1.Order: product 1860 0 0', async ({ page }) => {
+        test('order: product 1860 0 0', async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -47,7 +46,7 @@ test.describe('Generate a future delivery order with delivery.', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })    
         
-        test('2.Order: products 1860 0 0 and 1870 0 0', async ({ page }) => {
+        test('order: products 1860 0 0 and 1870 0 0', async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct();
             Service.validateModalServLinked(); 

@@ -13,10 +13,9 @@ import { CommandsGeneral } from '../../../../pages/commands.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Generate a standard order with delivery.', () => {
+test.describe('generate a standard order with delivery.', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.login();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFCe();
@@ -26,9 +25,9 @@ test.describe('Generate a standard order with delivery.', () => {
         CommandsGeneral.selectProductSearch();
     })
     
-    context('With delivery/process 9890 - happy path', () => {
+    context('with delivery/process 9890 - happy path', () => {
         
-        test('1.Order: kit 1862 0 0',  async ({ page }) => {
+        test('order: kit 1862 0 0',  async ({ page }) => {
                       
             CommandsGeneral.clickVoltageProduct();
             GeralPedidosPage.compositionKit();
