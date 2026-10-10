@@ -12,10 +12,9 @@ import { Service } from '../../../pages/pedido/ServicosPage.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Generate orders with warranty and delivery', () => {
+test.describe('generate orders with warranty and delivery', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.login();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFCe();
@@ -28,9 +27,9 @@ test.describe('Generate orders with warranty and delivery', () => {
         Service.validateModalServLinked(); 
     })   
 
-    context('With delivery/process 9890 - happy path', () => {
+    context('with delivery/process 9890 - happy path', () => {
 
-        test('1.Order: product 1860 0 0 (with Warranty that separates title in the same process)',  async ({ page }) => {
+        test('order: product 1860 0 0 (with Warranty that separates title in the same process)',  async ({ page }) => {
     
             Service.garantiaSepMesmoProc(); 
             Service.clickOKServiceLinked();
@@ -47,7 +46,7 @@ test.describe('Generate orders with warranty and delivery', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('2.Order: product 1860 0 0 (with Warranty that separates title in the same process) and product 1870 0 0 (without service)',  async ({ page }) => {
+        test('order: product 1860 0 0 (with Warranty that separates title in the same process) and product 1870 0 0 (without service)',  async ({ page }) => {
     
             Service.garantiaSepMesmoProc(); 
             Service.clickOKServiceLinked(); 
@@ -71,7 +70,7 @@ test.describe('Generate orders with warranty and delivery', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('3.Order: product 1860 0 0 (with Warranty that does not separate title)',  async ({ page }) => {
+        test('order: product 1860 0 0 (with Warranty that does not separate title)',  async ({ page }) => {
     
             Service.garantiaNaoSep(); 
             Service.clickOKServiceLinked();
@@ -88,7 +87,7 @@ test.describe('Generate orders with warranty and delivery', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('4.Order: product 1860 0 0 (with Warranty that does not separate title) and product 1870 0 0 (without service)',  async ({ page }) => {
+        test('order: product 1860 0 0 (with Warranty that does not separate title) and product 1870 0 0 (without service)',  async ({ page }) => {
     
             Service.garantiaNaoSep(); 
             Service.clickOKServiceLinked(); 
@@ -112,7 +111,7 @@ test.describe('Generate orders with warranty and delivery', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('5.Order: product 1860 0 0 (with Warranty that separates title in a different process)',  async ({ page }) => {
+        test('order: product 1860 0 0 (with Warranty that separates title in a different process)',  async ({ page }) => {
     
             Service.garantiaSepTituloProcDif(); //Marcar Garantia separa titulo em um processo diferente
             Service.clickOKServiceLinked();
@@ -129,7 +128,7 @@ test.describe('Generate orders with warranty and delivery', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('6.Order: product 1860 0 0 (with Warranty that separates title in a different process) and product 1870 0 0 (without service)',  async ({ page }) => {
+        test('order: product 1860 0 0 (with Warranty that separates title in a different process) and product 1870 0 0 (without service)',  async ({ page }) => {
     
             Service.garantiaSepTituloProcDif(); //Marcar Garantia separa titulo em um processo diferente
             Service.clickOKServiceLinked(); 

@@ -14,19 +14,18 @@ import { Service, ValidateService } from '../../../../pages/pedido/ServicosPage.
 import { AdvanceNormal } from '../../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../../pages/pedido/ClientePage.js';
 
-test.describe('Generate orders with Fixed Value Discount Service - Service Origin (162)', () => {
+test.describe('generate orders with Fixed Value Discount Service - Service Origin (162)', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.login();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
     })   
 
-    context('With delivery / Products without promotion - Fixed Value Discount Service - Service Origin (162)', () => {
+    context('with delivery / Products without promotion - Fixed Value Discount Service - Service Origin (162)', () => {
 
-        test('1.Order: product 1860 0 0, inclusion 3881, lender 162 (99.30), 4 installments upon receipt Future with interest.',  async ({ page }) => {
+        test('order: product 1860 0 0, inclusion 3881, lender 162 (99.30), 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.fisrt();
             ValidateBalance.withBalance();
@@ -49,7 +48,7 @@ test.describe('Generate orders with Fixed Value Discount Service - Service Origi
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('2.Order: product 1860 0 0 e 1870 0 0, inclusion 3881 e 3860, lender 162 (99.30), 4 installments upon receipt Future with interest.',  async ({ page }) => {
+        test('order: product 1860 0 0 e 1870 0 0, inclusion 3881 e 3860, lender 162 (99.30), 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.fisrt();
             ValidateBalance.withBalance();
@@ -81,9 +80,9 @@ test.describe('Generate orders with Fixed Value Discount Service - Service Origi
         })
     })
 
-    context('With delivery / Products with promotion - Fixed Value Discount Service - Product Origin (162)', () => {
+    context('with delivery / Products with promotion - Fixed Value Discount Service - Product Origin (162)', () => {
 
-        test('3.Order: product 1922 0 0 (promo a prazo 171), inclusion 3881, lender 162, 4 installments upon receipt Future with interest',  async ({ page }) => {
+        test('order: product 1922 0 0 (promo a prazo 171), inclusion 3881, lender 162, 4 installments upon receipt Future with interest',  async ({ page }) => {
     
             Product.termFisrtPrestAbatVF();
             ValidateBalance.withBalance();
@@ -109,7 +108,7 @@ test.describe('Generate orders with Fixed Value Discount Service - Service Origi
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('4.Order: product 1923 0 0 + warranty. Does not separate (promo on term 172 - exempt interest on services), inclusion 3881, lender 162, 4 installments upon receipt. Future with interest',  async ({ page }) => {
+        test('order: product 1923 0 0 + warranty. Does not separate (promo on term 172 - exempt interest on services), inclusion 3881, lender 162, 4 installments upon receipt. Future with interest',  async ({ page }) => {
 
             Product.termSecondPrestAbatVF();
             ValidateBalance.withBalance();
@@ -136,7 +135,7 @@ test.describe('Generate orders with Fixed Value Discount Service - Service Origi
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('5.Order: product 1924 0 0 + warranty. Does not separate (promo on term 173 - exempt interest on warranty), inclusion 3882, lender 162, 4 installments upon receipt Future with interest',  async ({ page }) => {
+        test('order: product 1924 0 0 + warranty. Does not separate (promo on term 173 - exempt interest on warranty), inclusion 3882, lender 162, 4 installments upon receipt Future with interest',  async ({ page }) => {
 
             Product.prazoPrestTercAbatVF();
             ValidateBalance.withBalance();

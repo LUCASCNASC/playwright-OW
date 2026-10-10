@@ -10,19 +10,18 @@ import { CommandsGeneral } from '../../../../pages/commands.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Sale of individual Host service - 104', () => {
+test.describe('sale of individual Host service - 104', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.login();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.saleServiceLoose();
         ChooseCliente.withRoute();
     })
 
-    context('Process 9888 - happy path', () => {
+    context('process 9888 - happy path', () => {
 
-        test('1.Order of labor - 144 (T.A. MO Does not Highlight and Separates Different Process)',  async ({ page }) => {
+        test('order of labor - 144 (T.A. MO Does not Highlight and Separates Different Process)',  async ({ page }) => {
 
             ServicoAvulsoPage.iconMenuOptions();
             ServicoAvulsoPage.clickServiceMenu();

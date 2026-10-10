@@ -3,19 +3,18 @@ import { CommandsGeneral } from '../../../page/commands.js';
 import { LoginPage } from '../../pages/login/LoginPage.js';
 import users from '../users.json';
 
-test.describe('User password expired.', () => {
+test.describe('user password expired.', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.validateTitlePage();
         LoginPage.validateLogoEmpresaLogin();
         LoginPage.validateIconeComputadorLogin();
         LoginPage.validateUsuarioTextoIcone();
     })
 
-    context('Attempting to log in when the password has already expired.', () => {
+    context('attempting to log in when the password has already expired.', () => {
 
-        test('1.Try logging in with a user whose password has expired - click YES to update password - click Close password reset',  async ({ page }) => {
+        test('try logging in with a user whose password has expired - click YES to update password - click Close password reset',  async ({ page }) => {
         
             cy.get('#txtusername')
                 .should('be.visible')
@@ -119,7 +118,7 @@ test.describe('User password expired.', () => {
                 .and('not.have.attr', 'disabled');
         })
 
-        test('2.Attempt to log in with a user whose password has expired - click DO NOT update password - click Close password reset',  async ({ page }) => {
+        test('attempt to log in with a user whose password has expired - click DO NOT update password - click Close password reset',  async ({ page }) => {
         
             cy.get('#txtusername')
                 .should('be.visible')
@@ -233,9 +232,9 @@ test.describe('User password expired.', () => {
         })
     })
 
-    context('Log in when the password has been changed and there is 1 day left before it expires, as defined in this users group.', () => {
+    context('log in when the password has been changed and there is 1 day left before it expires, as defined in this users group.', () => {
 
-        test('3.Login - click on DO NOT update password',  async ({ page }) => {
+        test('login - click on DO NOT update password',  async ({ page }) => {
 
                 cy.get('#txtusername')
                     .should('be.visible')
@@ -267,7 +266,7 @@ test.describe('User password expired.', () => {
                     .should('be.visible');
         })
         
-        test('4.Login - click YES to update password - click Close password reset',  async ({ page }) => {
+        test('login - click YES to update password - click Close password reset',  async ({ page }) => {
 
             cy.get('#txtusername')
                 .should('be.visible')
@@ -373,7 +372,7 @@ test.describe('User password expired.', () => {
                 .and('not.have.attr', 'disabled');
         })
     
-        test('5.Login - click YES to update password - click CONFIRM to reset password',  async ({ page }) => {
+        test('login - click YES to update password - click CONFIRM to reset password',  async ({ page }) => {
         
             cy.get('#txtusername')
                 .should('be.visible')

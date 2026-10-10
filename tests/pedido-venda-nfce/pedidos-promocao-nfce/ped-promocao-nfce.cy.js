@@ -11,19 +11,18 @@ import { Service } from '../../../pages/pedido/ServicosPage.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Generate promotional orders with delivery', () => {
+test.describe('generate promotional orders with delivery', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.login();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFCe();
         ChooseCliente.withRoute();
     })
 
-    context('With delivery / with promotion / process 9890 - happy path', () => {
+    context('with delivery / with promotion / process 9890 - happy path', () => {
 
-        test('1.Order with promotional offer (promotion 152): product 1868 0 0',  async ({ page }) => {
+        test('order with promotional offer (promotion 152): product 1868 0 0',  async ({ page }) => {
     
             Product.promoMatch();
             ValidateBalance.withBalance();
@@ -50,7 +49,7 @@ test.describe('Generate promotional orders with delivery', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
     
-        test('2.Order with installment payment promotion with down payment (promotion 150): product 1866 0 0',  async ({ page }) => {
+        test('order with installment payment promotion with down payment (promotion 150): product 1866 0 0',  async ({ page }) => {
     
             Product.promoDeadlineEntry();
             ValidateBalance.withBalance();
@@ -71,7 +70,7 @@ test.describe('Generate promotional orders with delivery', () => {
             cy.contains('.md-select-value', 'Forma de pagamento').click()
         })
 
-        test('3.Order with installment payment promotion (promotion 151): product 1867 0 0',  async ({ page }) => {
+        test('order with installment payment promotion (promotion 151): product 1867 0 0',  async ({ page }) => {
     
             Product.promoDeadlineInstallment();
             ValidateBalance.withBalance();

@@ -7,16 +7,14 @@ import { TelefonePage, TelefonePage } from '../../../pages/cadastro_cliente/clie
 import { EnderecoPage, EnderecoPage } from '../../../pages/cadastro_cliente/cliente_completo/EnderecoPage.js';
 import { RefComercialPage,RefComercialPage } from '../../../pages/cadastro_cliente/cliente_completo/aba_Referencia/RefComercialPage.js';
 
-test.describe('Register complete client - commercial reference', () => {
+test.describe('register complete client - commercial reference', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.login();
-        
         CommandsGeneral.validateTitlePage();
     })
 
-    test('1.Complete customer CPF - happy path',  async ({ page }) => {
+    test('complete customer CPF - happy path',  async ({ page }) => {
 
         ClienteCompletoPage.iconMenuOptions();
         ClienteCompletoPage.optionClientComplete();

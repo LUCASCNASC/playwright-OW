@@ -3,17 +3,16 @@ import { CommandsGeneral } from '../../../page/commands.js';
 import { LoginPage } from '../../pages/login/LoginPage.js';
 import users from '../users.json';
 
-test.describe('Log in with new user.', () => {
+test.describe('log in with new user.', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.validateTitlePage();
         LoginPage.validateLogoEmpresaLogin();
         LoginPage.validateIconeComputadorLogin();
         LoginPage.validateUsuarioTextoIcone();
     })
 
-    test('1.New user - click Close, do not change password.',  async ({ page }) => {
+    test('new user - click Close, do not change password.',  async ({ page }) => {
     
         cy.get('#txtusername')
             .should('be.visible')
@@ -192,7 +191,7 @@ test.describe('Log in with new user.', () => {
         LoginPage.validateIconeComputadorLogin() ;
     })
 
-    test('2.New user - click CONFIRM, change your password.',  async ({ page }) => {
+    test('new user - click CONFIRM, change your password.',  async ({ page }) => {
     
         //Validando campo "informe seu usuário"
         cy.get('#txtusername')

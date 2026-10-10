@@ -13,10 +13,9 @@ import { Service } from '../../../pages/pedido/ServicosPage.js';
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Generate an order with more than one payment method', () => {
+test.describe('generate an order with more than one payment method', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.login();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFe();
@@ -26,9 +25,9 @@ test.describe('Generate an order with more than one payment method', () => {
         CommandsGeneral.selectProductSearch();
     })
 
-    context('Without delivery/ process 9860 - happy path', () => {
+    context('without delivery/ process 9860 - happy path', () => {
 
-        test('1.Order: product 1860 0 0 - two payment methods 3871 and 3860',  async ({ page }) => {
+        test('order: product 1860 0 0 - two payment methods 3871 and 3860',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -50,7 +49,7 @@ test.describe('Generate an order with more than one payment method', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('2.Order: product 1860 0 0 - with entry (3861) and another payment method (3860)',  async ({ page }) => {
+        test('order: product 1860 0 0 - with entry (3861) and another payment method (3860)',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -69,7 +68,7 @@ test.describe('Generate an order with more than one payment method', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('3.Order: product 1860 0 0 - two payment methods (3860) - click to NOT group',  async ({ page }) => {
+        test('order: product 1860 0 0 - two payment methods (3860) - click to NOT group',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -92,7 +91,7 @@ test.describe('Generate an order with more than one payment method', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('4.Order: product 1860 0 0 - two identical payment methods (3860) - click to group YES',  async ({ page }) => {
+        test('order: product 1860 0 0 - two identical payment methods (3860) - click to group YES',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 
@@ -115,7 +114,7 @@ test.describe('Generate an order with more than one payment method', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('5.Order: product 1860 0 0 - two identical payment methods (3860) - click to NOT group, but then group by selecting both.',  async ({ page }) => {
+        test('order: product 1860 0 0 - two identical payment methods (3860) - click to NOT group, but then group by selecting both.',  async ({ page }) => {
 
             CommandsGeneral.clickVoltageProduct();
             CommandsGeneral.clickAddProduct(); 

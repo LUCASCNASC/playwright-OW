@@ -17,19 +17,18 @@ import { AdvanceNormal } from '../../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../../pages/pedido/ClientePage.js';
 
 
-test.describe('Generate orders with Lender Discount % (158)', () => {
+test.describe('generate orders with Lender Discount % (158)', () => {
 
     test.beforeEach(async ({ page }) => {
-
         CommandsGeneral.login();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFe();
         ChooseCliente.withRoute();
     })   
 
-    context('No delivery / Products without promotion - Lender with discount %', () => {
+    context('no delivery / Products without promotion - Lender with discount %', () => {
 
-        test('1.Order: products 1860 0 0 e 1870 0 0, inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
+        test('order: products 1860 0 0 e 1870 0 0, inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.fisrt();
             ValidateBalance.withBalance();
@@ -60,7 +59,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('2.Order: products 1860 0 0 e 1870 0 0, inclusion 3875, lender 158, 4 installments upon receipt Present.',  async ({ page }) => {
+        test('order: products 1860 0 0 e 1870 0 0, inclusion 3875, lender 158, 4 installments upon receipt Present.',  async ({ page }) => {
     
             Product.fisrt();
             ValidateBalance.withBalance();
@@ -92,9 +91,9 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
         })
     })
 
-    context('With delivery / Products without promotion - Lender with discount %', () => {
+    context('without delivery / Products without promotion - Lender with discount %', () => {
 
-        test('3.Order: products 1860 0 0 e 1870 0 0, inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
+        test('order: products 1860 0 0 e 1870 0 0, inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
     
             Product.fisrt();
             ValidateBalance.withBalance();
@@ -124,7 +123,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('4.Order: products 1860 0 0 (with warranty not separated) and 1870 0 0, inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
+        test('order: products 1860 0 0 (with warranty not separated) and 1870 0 0, inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.fisrt();
             ValidateBalance.withBalance();
@@ -156,7 +155,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('5.Order: products 1860 0 0 (with warranty not separated) and 1870 0 0, inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
+        test('order: products 1860 0 0 (with warranty not separated) and 1870 0 0, inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
 
             Product.fisrt();
             ValidateBalance.withBalance();
@@ -188,7 +187,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('6.Order: products 1860 0 0 (with warranty not separated) and 1870 0 0, inclusion 3875, lender 158, 4 installments upon receipt Present without interest.',  async ({ page }) => {
+        test('order: products 1860 0 0 (with warranty not separated) and 1870 0 0, inclusion 3875, lender 158, 4 installments upon receipt Present without interest.',  async ({ page }) => {
     
             Product.fisrt();
             ValidateBalance.withBalance();
@@ -221,9 +220,9 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
         })
     })
 
-    context('Without delivery / Products with promotion - Lender with discount %', () => {
+    context('without delivery / Products with promotion - Lender with discount %', () => {
 
-        test('7.Order: product 1918 0 0 (term promotion 167), inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
+        test('order: product 1918 0 0 (term promotion 167), inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest()
             ValidateBalance.withBalance();
@@ -249,7 +248,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('8.Order: product 1918 0 0 (term promotion 167), inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
+        test('order: product 1918 0 0 (term promotion 167), inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest();
             ValidateBalance.withBalance();
@@ -275,7 +274,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('9.Order: product 1918 0 0 (term promotion 167), with warranty not separated, inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
+        test('order: product 1918 0 0 (term promotion 167), with warranty not separated, inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest();
             ValidateBalance.withBalance();
@@ -303,9 +302,9 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
         })
     })
 
-    context('With delivery / Products with promotion - Lender with discount %', () => {
+    context('with delivery / Products with promotion - Lender with discount %', () => {
 
-        test('10.Order: product 1919 0 0 (term promotion 168), with warranty not separated, inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
+        test('order: product 1919 0 0 (term promotion 168), with warranty not separated, inclusion 3876, lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
 
             Product.termInstallmentPrest()
             ValidateBalance.withBalance();
@@ -337,7 +336,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('11.Order: product 1919 0 0 (term promotion 168), with warranty not separated, inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
+        test('order: product 1919 0 0 (term promotion 168), with warranty not separated, inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
 
             Product.termInstallmentPrest();
             ValidateBalance.withBalance();
@@ -369,7 +368,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('12.Order: product 1920 0 0 (entry promotion 169), with warranty not separated, inclusion 3876, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
+        test('order: product 1920 0 0 (entry promotion 169), with warranty not separated, inclusion 3876, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest();
             ValidateBalance.withBalance();
@@ -398,9 +397,9 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
         })
     })
 
-    context('Without delivery / Mixed with and without Promotion - Lender with discount %', () => {
+    context('without delivery / Mixed with and without Promotion - Lender with discount %', () => {
 
-        test('13.Order: product 1918 0 0 (term promotion 167) and 1860 0 0 (without promotion), inclusion 3874 (other receipt 3860), lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
+        test('order: product 1918 0 0 (term promotion 167) and 1860 0 0 (without promotion), inclusion 3874 (other receipt 3860), lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest();
             ValidateBalance.withBalance();
@@ -438,7 +437,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('14.Order: product 1918 0 0 (term promotion 167) and 1860 0 0 (without promotion), inclusion 3874 (other receipt 3874 group), lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
+        test('order: product 1918 0 0 (term promotion 167) and 1860 0 0 (without promotion), inclusion 3874 (other receipt 3874 group), lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest();
             ValidateBalance.withBalance();
@@ -480,7 +479,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('15.Order: product 1918 0 0 (term promotion 167) and 1860 0 0 (without promotion), inclusion 3876 (other receipt 3860), lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
+        test('order: product 1918 0 0 (term promotion 167) and 1860 0 0 (without promotion), inclusion 3876 (other receipt 3860), lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest();
             ValidateBalance.withBalance();
@@ -518,7 +517,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('16.Order: product 1918 0 0 (term promotion 167) and 1860 0 0 (without promotion), inclusion 3876 (other receipt 3876 group), lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
+        test('order: product 1918 0 0 (term promotion 167) and 1860 0 0 (without promotion), inclusion 3876 (other receipt 3876 group), lender 158, 4 installments upon receipt Future without interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest();
             ValidateBalance.withBalance();
@@ -562,7 +561,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('17.Order: product 1921 0 0 (term promotion 170), inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
+        test('order: product 1921 0 0 (term promotion 170), inclusion 3874, lender 158, 4 installments upon receipt Future with interest.',  async ({ page }) => {
     
             Product.termInstallmentPrest();
             ValidateBalance.withBalance();
@@ -589,9 +588,9 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
         })
     })
 
-    context('With delivery / Mixed with and without Promotion - Lender with discount %', () => {
+    context('with delivery / Mixed with and without Promotion - Lender with discount %', () => {
 
-        test('18.Pedido: produto 1918 0 0 (promo a prazo 167) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3874 (outro recebimento 3860), prestamista 158, 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
+        test('18.Order: product 1918 0 0 (promo a prazo 167) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3874 (outro recebimento 3860), prestamista 158, 4 parcelas no recebimento Futuro com juros.',  async ({ page }) => {
     
             Product.termInstallmentPrest();
             ValidateBalance.withBalance();
@@ -632,7 +631,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('19.Pedido: produto 1918 0 0 (promo a prazo 167) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3874 (outro recebimento 3874 agrupar), prestamista 158, 4 parcelas no recebimento Futuro com juros.', async ({ page }) => {
+        test('order: produto 1918 0 0 (promo a prazo 167) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3874 (outro recebimento 3874 agrupar), prestamista 158, 4 parcelas no recebimento Futuro com juros.', async ({ page }) => {
     
             Product.termInstallmentPrest();
             ValidateBalance.withBalance();
@@ -677,7 +676,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('20.Pedido: produto 1918 0 0 (promo a prazo 167) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3876 (outro recebimento 3860), prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
+        test('order: produto 1918 0 0 (promo a prazo 167) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3876 (outro recebimento 3860), prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
 
             Product.termInstallmentPrest();
             ValidateBalance.withBalance();
@@ -718,7 +717,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('21.Pedido: produto 1918 0 0 (promo a prazo 167) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3876 (outro recebimento 3876 agrupar), prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
+        test('order: produto 1918 0 0 (promo a prazo 167) (com garantia não separa) e 1860 0 0 (sem promoção), inclusão 3876 (outro recebimento 3876 agrupar), prestamista 158, 4 parcelas no recebimento Futuro sem juros.',  async ({ page }) => {
     
             Product.termInstallmentPrest();
             ValidateBalance.withBalance();
@@ -763,7 +762,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             FinalizarPedidoPage.validateOrderGenerated();
     })
 
-        test('22.Order: product 1920 0 0 (promo on credit 169) (with warranty, not separate) and 1860 0 0 (without promotion), inclusion 3875 (other receipt 3874), lender 158, 4 installments upon receipt. Gift.',  async ({ page }) => {
+        test('order: product 1920 0 0 (promo on credit 169) (with warranty, not separate) and 1860 0 0 (without promotion), inclusion 3875 (other receipt 3874), lender 158, 4 installments upon receipt. Gift.',  async ({ page }) => {
 
             Product.termInstallmentPrest();
             ValidateBalance.withBalance();
@@ -805,7 +804,7 @@ test.describe('Generate orders with Lender Discount % (158)', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('23.Order: product 1920 0 0 (promo on credit 169) (with warranty, not separate) and 1860 0 0 (without promotion), inclusion 3875 (other receipt 3875 group), lender 158, 4 installments upon receipt Present.',  async ({ page }) => {
+        test('order: product 1920 0 0 (promo on credit 169) (with warranty, not separate) and 1860 0 0 (without promotion), inclusion 3875 (other receipt 3875 group), lender 158, 4 installments upon receipt Present.',  async ({ page }) => {
         
             Product.termInstallmentPrest();
             ValidateBalance.withBalance();

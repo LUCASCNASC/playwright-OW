@@ -12,10 +12,9 @@ import { Service, ValidateService } from '../../../pages/pedido/ServicosPage.js'
 import { AdvanceNormal } from '../../../pages/pedido/AvancarPage.js';
 import { ChooseCliente } from '../../../pages/pedido/ClientePage.js';
 
-test.describe('Generate orders with labor', () => {
+test.describe('generate orders with labor', () => {
 
     test.beforeEach(async ({ page }) => {
-        
         CommandsGeneral.login();
         CommandsGeneral.validateTitlePage();
         ProcessoVendaPage.NFe();
@@ -28,9 +27,9 @@ test.describe('Generate orders with labor', () => {
         Service.validateModalServLinked();
     })
 
-    context('Without delivery/process 9860 - happy path', () => {
+    context('without delivery/process 9860 - happy path', () => {
 
-        test('1.Order: product 1860 0 0 (with Labor that Highlights and does not separate title',  async ({ page }) => {
+        test('order: product 1860 0 0 (with Labor that Highlights and does not separate title',  async ({ page }) => {
     
             Service.garantiaNaoSep(); 
             Service.clickOKServiceLinked(); 
@@ -46,7 +45,7 @@ test.describe('Generate orders with labor', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('2.Order: product 1860 0 0 (with Labor that Highlights and does not separate title) and product 1870 0 0 (without service)',  async ({ page }) => {
+        test('order: product 1860 0 0 (with Labor that Highlights and does not separate title) and product 1870 0 0 (without service)',  async ({ page }) => {
 
             Service.garantiaNaoSep();  
             Service.clickOKServiceLinked(); 
@@ -70,7 +69,7 @@ test.describe('Generate orders with labor', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('3.Order: product 1860 0 0 (with Labor that does not highlight and separates title in the same process)',  async ({ page }) => {
+        test('order: product 1860 0 0 (with Labor that does not highlight and separates title in the same process)',  async ({ page }) => {
     
             Service.garantiaSepMesmoProc(); 
             Service.clickOKServiceLinked(); 
@@ -86,7 +85,7 @@ test.describe('Generate orders with labor', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('4.Order: product 1860 0 0 (with Labor that does not highlight and separates title in the same process) and product 1870 0 0 (without service)',  async ({ page }) => {
+        test('order: product 1860 0 0 (with Labor that does not highlight and separates title in the same process) and product 1870 0 0 (without service)',  async ({ page }) => {
     
             Service.garantiaSepMesmoProc(); 
             Service.clickOKServiceLinked(); 
@@ -110,7 +109,7 @@ test.describe('Generate orders with labor', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('5.Order: product 1860 0 0 (with Labor that does not highlight and separates title in a different process)',  async ({ page }) => {
+        test('order: product 1860 0 0 (with Labor that does not highlight and separates title in a different process)',  async ({ page }) => {
 
             Service.garantiaSepTituloProcDif(); 
             Service.clickOKServiceLinked(); 
@@ -126,7 +125,7 @@ test.describe('Generate orders with labor', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('6.Order: product 1860 0 0 (with Labor that does not highlight and separates title in a different process) and product 1870 0 0 (without service)',  async ({ page }) => {
+        test('order: product 1860 0 0 (with Labor that does not highlight and separates title in a different process) and product 1870 0 0 (without service)',  async ({ page }) => {
 
             Service.garantiaSepTituloProcDif(); 
             Service.clickOKServiceLinked(); 
@@ -151,9 +150,9 @@ test.describe('Generate orders with labor', () => {
         })
     })
 
-    context('With delivery/process 9860 - happy path', () => {
+    context('with delivery/process 9860 - happy path', () => {
 
-        test('7.Order: product 1860 0 0 (with Labor that Highlights and does not separate title)',  async ({ page }) => {
+        test('order: product 1860 0 0 (with Labor that Highlights and does not separate title)',  async ({ page }) => {
     
             Service.garantiaNaoSep();  
             Service.clickOKServiceLinked(); 
@@ -169,7 +168,7 @@ test.describe('Generate orders with labor', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('8.Order: product 1860 0 0 (with Labor that Highlights and does not separate title) and product 1870 0 0 (without service)',  async ({ page }) => {
+        test('order: product 1860 0 0 (with Labor that Highlights and does not separate title) and product 1870 0 0 (without service)',  async ({ page }) => {
     
             Service.garantiaNaoSep();  
             Service.clickOKServiceLinked(); 
@@ -192,7 +191,7 @@ test.describe('Generate orders with labor', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('9.Order: product 1860 0 0 (with Labor that does not highlight and separates title in the same process)',  async ({ page }) => {
+        test('order: product 1860 0 0 (with Labor that does not highlight and separates title in the same process)',  async ({ page }) => {
     
             Service.garantiaSepMesmoProc(); 
             Service.clickOKServiceLinked(); 
@@ -208,7 +207,7 @@ test.describe('Generate orders with labor', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('10.Order: product 1860 0 0 (with Labor that does not highlight and separates title in the same process) and product 1870 0 0 (without service)',  async ({ page }) => {
+        test('order: product 1860 0 0 (with Labor that does not highlight and separates title in the same process) and product 1870 0 0 (without service)',  async ({ page }) => {
     
             Service.garantiaSepMesmoProc(); 
             Service.clickOKServiceLinked(); 
@@ -231,7 +230,7 @@ test.describe('Generate orders with labor', () => {
             FinalizarPedidoPage.validateOrderGenerated();
         })
 
-        test('11.Order: product 1860 0 0 (with Labor that does not highlight and separates title in a different process)',  async ({ page }) => {
+        test('order: product 1860 0 0 (with Labor that does not highlight and separates title in a different process)',  async ({ page }) => {
     
             Service.garantiaSepTituloProcDif(); 
             Service.clickOKServiceLinked(); 
@@ -247,7 +246,7 @@ test.describe('Generate orders with labor', () => {
             FinalizarPedidoPage.validarPedvalidateOrderGeneratedGerado()
         })   
 
-        test('12.Order: product 1860 0 0 (with Labor that does not highlight and separates title in a different process) and product 1870 0 0 (without service)',  async ({ page }) => {
+        test('order: product 1860 0 0 (with Labor that does not highlight and separates title in a different process) and product 1870 0 0 (without service)',  async ({ page }) => {
     
             Service.garantiaSepTituloProcDif(); 
             Service.clickOKServiceLinked(); 
