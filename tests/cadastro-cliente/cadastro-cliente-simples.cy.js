@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { CommandsGeneral } from '../../../page/commands.js';
+import { CommandsGeneral } from '../../../pages/commands.js';
 import { ClienteSimplesPage, ClienteSimplesPage } from '../../pages/cadastro_cliente/ClienteSimplesPage.js';
 import { gerarCpf }  from '../../support/gerarDados/gerarCpf.js';
 import dataCliente from './data.cliente.json';

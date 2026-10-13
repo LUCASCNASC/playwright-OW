@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { CommandsGeneral } from '../../../page/commands.js';
+import { CommandsGeneral } from '../../../pages/commands.js';
 import { LoginPage } from '../../pages/login/LoginPage.js';
 import users from '../users.json';
 
