@@ -13,8 +13,6 @@ test.describe('register complete customer', () => {
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login();
         CommandsGeneral.validateTitlePage();
-        ClienteCompletoPage.iconMenuOptions();
-        ClienteCompletoPage.optionClientComplete();
     })
 
     context('register complete customer - basic.', () => {

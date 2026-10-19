@@ -9,8 +9,6 @@ test.describe('register simple custumer', () => {
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.login();
         CommandsGeneral.validateTitlePage();
-        ClienteSimplesPage.iconMenuOptions();
-        ClienteSimplesPage.optionClientSimple();
     })
   
     context('simple customer registration.', () => {
