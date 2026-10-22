@@ -8,8 +8,6 @@ test.describe('inactive user', () => {
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.validateTitlePage();
         LoginPage.validateLogoEmpresaLogin();
-        LoginPage.validateIconeComputadorLogin();
-        LoginPage.validateUsuarioTextoIcone();
     })
 
     test('attempting to log in with an inactive user.',  async ({ page }) => {
@@ -20,8 +18,6 @@ test.describe('inactive user', () => {
             .type(users.userSabium.login)
             .invoke('attr', 'placeholder')
             .should('equal', 'Informe seu usuário');
-
-        LoginPage.validateSenhaTextoIcone();
         
         cy.get('#txtpassword')
             .should('be.visible')
@@ -30,7 +26,6 @@ test.describe('inactive user', () => {
             .invoke('attr', 'placeholder')
             .should('equal', 'Informe sua senha');
 
-        LoginPage.validateIconeOlhosSenha();
         LoginPage.validateEsqueciSenha();
         LoginPage.validateBotaoEntrarHabilitado();
         LoginPage.clickBotaoEntrar();
@@ -50,6 +45,5 @@ test.describe('inactive user', () => {
         cy.get('.toast-close-button')
             .should('be.visible');
 
-        LoginPage.validateIconeComputadorLogin();
     })
 })

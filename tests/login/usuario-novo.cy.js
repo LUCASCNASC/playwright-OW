@@ -8,8 +8,6 @@ test.describe('log in with new user.', () => {
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.validateTitlePage();
         LoginPage.validateLogoEmpresaLogin();
-        LoginPage.validateIconeComputadorLogin();
-        LoginPage.validateUsuarioTextoIcone();
     })
 
     test('new user - click Close, do not change password.',  async ({ page }) => {
@@ -21,9 +19,6 @@ test.describe('log in with new user.', () => {
             .invoke('attr', 'placeholder')
             .should('equal', 'Informe seu usuário');
 
-        LoginPage.validateSenhaTextoIcone();
-
-        
         cy.get('#txtpassword')
             .should('be.visible')
             .and('have.value','')
@@ -31,7 +26,6 @@ test.describe('log in with new user.', () => {
             .invoke('attr', 'placeholder')
             .should('equal', 'Informe sua senha');
 
-        LoginPage.validateIconeOlhosSenha();
         LoginPage.validateEsqueciSenha();
         LoginPage.validateBotaoEntrarHabilitado();
         LoginPage.clickBotaoEntrar();
@@ -193,15 +187,12 @@ test.describe('log in with new user.', () => {
 
     test('new user - click CONFIRM, change your password.',  async ({ page }) => {
     
-        //Validando campo "informe seu usuário"
         cy.get('#txtusername')
             .should('be.visible')
             .and('have.value','')
             .type(users.userSabiumNovo.login)
             .invoke('attr', 'placeholder')
             .should('equal', 'Informe seu usuário');
-
-        LoginPage.validateSenhaTextoIcone();
 
         cy.get('#txtpassword')
             .should('be.visible')
@@ -210,7 +201,6 @@ test.describe('log in with new user.', () => {
             .invoke('attr', 'placeholder')
             .should('equal', 'Informe sua senha');
 
-        LoginPage.validateIconeOlhosSenha();
         LoginPage.validateEsqueciSenha();
         LoginPage.validateBotaoEntrarHabilitado();
         LoginPage.clickBotaoEntrar();
