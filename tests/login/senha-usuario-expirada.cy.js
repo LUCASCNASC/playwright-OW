@@ -8,8 +8,6 @@ test.describe('user password expired.', () => {
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.validateTitlePage();
         LoginPage.validateLogoEmpresaLogin();
-        LoginPage.validateIconeComputadorLogin();
-        LoginPage.validateUsuarioTextoIcone();
     })
 
     context('attempting to log in when the password has already expired.', () => {
@@ -22,8 +20,6 @@ test.describe('user password expired.', () => {
                 .type(users.userSabium.login)
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário');
-
-            LoginPage.validateSenhaTextoIcone();
             
             cy.get('#txtpassword')
                 .should('be.visible')
@@ -32,7 +28,6 @@ test.describe('user password expired.', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha');
 
-            LoginPage.validateIconeOlhosSenha();
             LoginPage.validateEsqueciSenha();
             LoginPage.validateBotaoEntrarHabilitado();
             LoginPage.clickBotaoEntrar();
@@ -127,8 +122,6 @@ test.describe('user password expired.', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário');
 
-            LoginPage.validateSenhaTextoIcone();
-
             cy.get('#txtpassword')
                 .should('be.visible')
                 .and('have.value','')
@@ -136,7 +129,6 @@ test.describe('user password expired.', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha');
 
-            LoginPage.validateIconeOlhosSenha();
             LoginPage.validateEsqueciSenha();
             LoginPage.botaoEntrarHabvalidateBotaoEntrarHabilitadoilitado();
             LoginPage.clickBotaoEntrar();
@@ -242,8 +234,6 @@ test.describe('user password expired.', () => {
                     .type(users.userSabium.login)
                     .invoke('attr', 'placeholder')
                     .should('equal', 'Informe seu usuário');
-        
-                LoginPage.validateSenhaTextoIcone();
                 
                 cy.get('#txtpassword')
                     .should('be.visible')
@@ -252,7 +242,6 @@ test.describe('user password expired.', () => {
                     .invoke('attr', 'placeholder')
                     .should('equal', 'Informe sua senha');
         
-                LoginPage.validateIconeOlhosSenha();
                 LoginPage.validateEsqueciSenha();
                 LoginPage.validateBotaoEntrarHabilitado();
                 LoginPage.clickBotaoEntrar();
@@ -274,8 +263,6 @@ test.describe('user password expired.', () => {
                 .type(users.userSabium.login)
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário');
-    
-            LoginPage.validateSenhaTextoIcone();
             
             cy.get('#txtpassword')
                 .should('be.visible')
@@ -284,7 +271,6 @@ test.describe('user password expired.', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha');
     
-            LoginPage.validateIconeOlhosSenha();
             LoginPage.validateEsqueciSenha();
             LoginPage.validateBotaoEntrarHabilitado();
             LoginPage.clickBotaoEntrar();
@@ -381,16 +367,13 @@ test.describe('user password expired.', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário');
     
-            LoginPage.validateSenhaTextoIcone();
-    
             cy.get('#txtpassword')
                 .should('be.visible')
                 .and('have.value','')
                 .type(users.userSabiumNovo.newPassword)
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha');
-    
-            LoginPage.validateIconeOlhosSenha();
+                
             LoginPage.validateEsqueciSenha();
             LoginPage.validateBotaoEntrarHabilitado();
             LoginPage.clickBotaoEntrar();

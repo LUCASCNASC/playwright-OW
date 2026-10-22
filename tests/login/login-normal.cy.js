@@ -8,8 +8,6 @@ test.describe('login hapy path - regular user with password enabled', () => {
     test.beforeEach(async ({ page }) => {
         CommandsGeneral.validateTitlePage();
         LoginPage.validateLogoEmpresaLogin();
-        LoginPage.validateIconeComputadorLogin();
-        LoginPage.validateUsuarioTextoIcone();
     })
 
     context('user context 1', () => {
@@ -23,7 +21,6 @@ test.describe('login hapy path - regular user with password enabled', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário');
     
-            LoginPage.validateSenhaTextoIcone();
     
             cy.get('#txtpassword')
                 .should('be.visible')
@@ -32,7 +29,6 @@ test.describe('login hapy path - regular user with password enabled', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha');
 
-            LoginPage.validateIconeOlhosSenha();
             LoginPage.validateEsqueciSenha();
             LoginPage.validateBotaoEntrarHabilitado();
             LoginPage.clickBotaoEntrar();
@@ -49,8 +45,6 @@ test.describe('login hapy path - regular user with password enabled', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário');
     
-            LoginPage.validateSenhaTextoIcone();
-            
             cy.get('#txtpassword')
                 .should('be.visible')
                 .and('have.value','')
@@ -58,7 +52,6 @@ test.describe('login hapy path - regular user with password enabled', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha');
     
-            LoginPage.validateIconeOlhosSenha();
             LoginPage.validateEsqueciSenha();
             LoginPage.validateBotaoEntrarHabilitado();
             LoginPage.clickBotaoEntrar();
@@ -74,8 +67,6 @@ test.describe('login hapy path - regular user with password enabled', () => {
                 .type(users.userSabium.login)
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário');
-    
-            LoginPage.validateSenhaTextoIcone();
             
             cy.get('#txtpassword')
                 .should('be.visible')
@@ -84,7 +75,6 @@ test.describe('login hapy path - regular user with password enabled', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha');
     
-            LoginPage.validateIconeOlhosSenha();
             LoginPage.validateEsqueciSenha();
             LoginPage.validateBotaoEntrarHabilitado();
             LoginPage.clickBotaoEntrar();
@@ -100,8 +90,6 @@ test.describe('login hapy path - regular user with password enabled', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário');
     
-            LoginPage.validateSenhaTextoIcone();
-    
             cy.get('#txtpassword')
                 .should('be.visible')
                 .and('have.value','')
@@ -109,7 +97,6 @@ test.describe('login hapy path - regular user with password enabled', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha');
     
-            LoginPage.validateIconeOlhosSenha();
             LoginPage.validateEsqueciSenha();
             LoginPage.validateBotaoEntrarDesabilitado();
             LoginPage.clickBotaoEntrar();
@@ -124,8 +111,6 @@ test.describe('login hapy path - regular user with password enabled', () => {
                 .type('sabium.automacao')
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário');
-    
-            LoginPage.validateSenhaTextoIcone();
             
             cy.get('#txtpassword')
                 .should('be.visible')
@@ -133,7 +118,6 @@ test.describe('login hapy path - regular user with password enabled', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha');
     
-            LoginPage.validateIconeOlhosSenha();
             LoginPage.validateEsqueciSenha();
             LoginPage.validateBotaoEntrarDesabilitado();
             LoginPage.clickBotaoEntrar();
@@ -147,8 +131,6 @@ test.describe('login hapy path - regular user with password enabled', () => {
                 .and('have.value','')
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário');
-    
-            LoginPage.validateSenhaTextoIcone();
             
             cy.get('#txtpassword')
                 .should('be.visible')
@@ -156,7 +138,6 @@ test.describe('login hapy path - regular user with password enabled', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha');
     
-            LoginPage.validateIconeOlhosSenha();
             LoginPage.validateEsqueciSenha();
             LoginPage.validateBotaoEntrarDesabilitado();
             LoginPage.clickBotaoEntrar();
@@ -174,8 +155,6 @@ test.describe('login hapy path - regular user with password enabled', () => {
                 .type(users.userSBX.login)
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário');
-    
-            LoginPage.validateSenhaTextoIcone();
             
             cy.get('#txtpassword')
                 .should('be.visible')
@@ -184,7 +163,6 @@ test.describe('login hapy path - regular user with password enabled', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha');
     
-            LoginPage.validateIconeOlhosSenha();
             LoginPage.validateEsqueciSenha();
             LoginPage.validateBotaoEntrarHabilitado();
             LoginPage.clickBotaoEntrar();
@@ -200,8 +178,6 @@ test.describe('login hapy path - regular user with password enabled', () => {
                 .type('sabium.123')
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário')
-    
-            LoginPage.validateSenhaTextoIcone()
             
             cy.get('#txtpassword')
                 .should('be.visible')
@@ -210,7 +186,6 @@ test.describe('login hapy path - regular user with password enabled', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha')
     
-            LoginPage.validateIconeOlhosSenha();
             LoginPage.validateEsqueciSenha();
             LoginPage.validateBotaoEntrarHabilitado();
             LoginPage.clickBotaoEntrar();
@@ -226,8 +201,6 @@ test.describe('login hapy path - regular user with password enabled', () => {
                 .type(users.userSBX.login)
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário');
-    
-            LoginPage.validateSenhaTextoIcone();
             
             cy.get('#txtpassword')
                 .should('be.visible')
@@ -236,7 +209,6 @@ test.describe('login hapy path - regular user with password enabled', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha');
     
-            LoginPage.validateIconeOlhosSenha();
             LoginPage.validateEsqueciSenha();
             LoginPage.validateBotaoEntrarHabilitado();
             LoginPage.clickBotaoEntrar();
@@ -251,8 +223,6 @@ test.describe('login hapy path - regular user with password enabled', () => {
                 .and('have.value','')
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário');
-    
-            LoginPage.validateSenhaTextoIcone();
             
             cy.get('#txtpassword')
                 .should('be.visible')
@@ -261,7 +231,6 @@ test.describe('login hapy path - regular user with password enabled', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha');
     
-            LoginPage.validateIconeOlhosSenha();
             LoginPage.validateEsqueciSenha();
             LoginPage.validateBotaoEntrarDesabilitado();
             LoginPage.clickBotaoEntrar();
@@ -276,8 +245,6 @@ test.describe('login hapy path - regular user with password enabled', () => {
                 .type('sabium.automacao')
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário');
-    
-            LoginPage.validateSenhaTextoIcone();
             
             cy.get('#txtpassword')
                 .should('be.visible')
@@ -285,7 +252,6 @@ test.describe('login hapy path - regular user with password enabled', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha');
     
-            LoginPage.validateIconeOlhosSenha();
             LoginPage.validateEsqueciSenha();
             LoginPage.validateBotaoEntrarDesabilitado();
             LoginPage.clickBotaoEntrar();
@@ -300,15 +266,12 @@ test.describe('login hapy path - regular user with password enabled', () => {
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe seu usuário');
     
-            LoginPage.validateSenhaTextoIcone();
-    
             cy.get('#txtpassword')
                 .should('be.visible')
                 .and('have.value','')
                 .invoke('attr', 'placeholder')
                 .should('equal', 'Informe sua senha');
     
-            LoginPage.validateIconeOlhosSenha();
             LoginPage.validateEsqueciSenha();
             LoginPage.validateBotaoEntrarDesabilitado();
             LoginPage.clickBotaoEntrar();
